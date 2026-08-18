@@ -1,0 +1,174 @@
+@import "tailwindcss";
+
+:root {
+  /* Brand — FIRSTS citrus palette */
+  --neon-pink: #ff1199;
+  --fuchsia-blast: #ff2daa;
+  --berry-burst: #b8006e;
+  --juicy-plum: #7b007a;
+  --lime-zest: #c8ff00;
+  --citrus-lime: #a6e600;
+  --sunshine-orange: #ff8a00;
+  --tropical-mango: #ffc600;
+  --pink-grapefruit: #ff4d83;
+  --sweet-tangerine: #ffb3d6;
+
+  --ink: #0b0410;
+  --ink-soft: #150a1d;
+  --paper: #fffaf4;
+  --paper-dim: #f6ede2;
+
+  --background: var(--paper);
+  --foreground: var(--ink);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+
+  --color-ink: var(--ink);
+  --color-ink-soft: var(--ink-soft);
+  --color-paper: var(--paper);
+  --color-paper-dim: var(--paper-dim);
+
+  --color-neon-pink: var(--neon-pink);
+  --color-fuchsia-blast: var(--fuchsia-blast);
+  --color-berry-burst: var(--berry-burst);
+  --color-juicy-plum: var(--juicy-plum);
+  --color-lime-zest: var(--lime-zest);
+  --color-citrus-lime: var(--citrus-lime);
+  --color-sunshine-orange: var(--sunshine-orange);
+  --color-tropical-mango: var(--tropical-mango);
+  --color-pink-grapefruit: var(--pink-grapefruit);
+  --color-sweet-tangerine: var(--sweet-tangerine);
+
+  --font-display: var(--font-bricolage);
+  --font-sans: var(--font-inter);
+
+  --animate-marquee: marquee 32s linear infinite;
+  --animate-blob-drift: blob-drift 22s ease-in-out infinite;
+  --animate-blob-drift-slow: blob-drift 34s ease-in-out infinite reverse;
+  --animate-grain: grain 8s steps(8) infinite;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: var(--ink);
+    --foreground: var(--paper);
+  }
+}
+
+* {
+  border-color: color-mix(in oklab, var(--foreground) 12%, transparent);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+}
+
+::selection {
+  background: var(--neon-pink);
+  color: var(--paper);
+}
+
+/* Custom scrollbar — thin, brand-tinted */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(var(--neon-pink), var(--sunshine-orange));
+  border-radius: 999px;
+  border: 2px solid var(--ink);
+}
+
+/* ---------- Utilities ---------- */
+
+.font-display {
+  font-family: var(--font-display);
+}
+
+.text-gradient-citrus {
+  background-image: linear-gradient(
+    100deg,
+    var(--neon-pink) 0%,
+    var(--fuchsia-blast) 22%,
+    var(--sunshine-orange) 55%,
+    var(--tropical-mango) 75%,
+    var(--lime-zest) 100%
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.bg-mesh-dark {
+  background-color: var(--ink);
+  background-image:
+    radial-gradient(45% 55% at 12% 8%, color-mix(in oklab, var(--neon-pink) 55%, transparent) 0%, transparent 60%),
+    radial-gradient(40% 45% at 88% 12%, color-mix(in oklab, var(--tropical-mango) 45%, transparent) 0%, transparent 60%),
+    radial-gradient(55% 60% at 50% 100%, color-mix(in oklab, var(--juicy-plum) 60%, transparent) 0%, transparent 65%),
+    radial-gradient(35% 40% at 95% 90%, color-mix(in oklab, var(--lime-zest) 30%, transparent) 0%, transparent 60%);
+}
+
+.glass-dark {
+  background: color-mix(in oklab, var(--ink) 55%, transparent);
+  backdrop-filter: blur(18px) saturate(140%);
+  -webkit-backdrop-filter: blur(18px) saturate(140%);
+  border: 1px solid color-mix(in oklab, white 12%, transparent);
+}
+
+.glow-pink {
+  box-shadow: 0 0 0 1px color-mix(in oklab, var(--neon-pink) 40%, transparent),
+    0 8px 40px -8px color-mix(in oklab, var(--neon-pink) 65%, transparent);
+}
+
+.noise-layer {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.05;
+  mix-blend-mode: overlay;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes blob-drift {
+  0%,
+  100% {
+    transform: translate(0, 0) scale(1);
+  }
+  33% {
+    transform: translate(4%, 6%) scale(1.08);
+  }
+  66% {
+    transform: translate(-5%, 3%) scale(0.95);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
