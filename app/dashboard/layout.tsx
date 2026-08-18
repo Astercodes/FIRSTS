@@ -5,7 +5,7 @@ import { MobileNav } from "@/components/dashboard/MobileNav";
 
 export default function DashboardLayout({ children }: { children: ReactNode }) {
   return (
-    <div className="min-h-[100svh] bg-paper-dim">
+    <div className="min-h-[100svh] bg-paper-dim print:bg-white">
       <Sidebar />
       <div className="lg:pl-64 print:pl-0">
         <Topbar />

@@ -18,6 +18,16 @@ const CORE_VALUES_DEFAULTS = {
 
 export const PORTFOLIO_PIECES: PortfolioPiece[] = [
   {
+    moduleId: 4,
+    label: "Professional Summary",
+    render: (a) => (a.narrativeDraft as string) ?? "",
+  },
+  {
+    moduleId: 20,
+    label: "Elevator Pitch",
+    render: (a) => (a.recruiterVersion as string) ?? "",
+  },
+  {
     moduleId: 1,
     label: "Core Values",
     render: (a) => {
@@ -35,7 +45,7 @@ export const PORTFOLIO_PIECES: PortfolioPiece[] = [
   },
   {
     moduleId: 3,
-    label: "Personal Purpose",
+    label: "Purpose",
     render: (a) => {
       const commitment = (a.purposeCommitment as string) ?? "";
       const soThat = (a.purposeSoThat as string) ?? "";
@@ -43,19 +53,9 @@ export const PORTFOLIO_PIECES: PortfolioPiece[] = [
     },
   },
   {
-    moduleId: 4,
-    label: "Personal Brand Narrative",
-    render: (a) => (a.narrativeDraft as string) ?? "",
-  },
-  {
     moduleId: 12,
-    label: "Career SWOT: Strengths",
+    label: "Key Strengths",
     render: (a) => (a.strengths as string) ?? "",
-  },
-  {
-    moduleId: 20,
-    label: "Elevator Pitch",
-    render: (a) => (a.recruiterVersion as string) ?? "",
   },
   {
     moduleId: 21,
@@ -64,12 +64,12 @@ export const PORTFOLIO_PIECES: PortfolioPiece[] = [
   },
   {
     moduleId: 31,
-    label: "LinkedIn About",
+    label: "Online Presence",
     render: (a) => (a.sectionDraft as string) ?? "",
   },
   {
     moduleId: 53,
-    label: "Resume Bullet",
+    label: "Resume Highlight",
     render: (a) => {
       const bullets = a.bullets as { rewritten?: string }[] | undefined;
       return bullets?.[0]?.rewritten ?? "";

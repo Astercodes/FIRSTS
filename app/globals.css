@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 :root {
-  /* Brand — FIRSTS citrus palette */
+  /* Brand: FIRSTS citrus palette */
   --neon-pink: #ff1199;
   --fuchsia-blast: #ff2daa;
   --berry-burst: #b8006e;
@@ -77,7 +77,22 @@ body {
   color: var(--paper);
 }
 
-/* Custom scrollbar — thin, brand-tinted */
+@media print {
+  @page {
+    margin: 0.6in;
+  }
+  html,
+  body {
+    background: white;
+  }
+  .portfolio-page {
+    color-adjust: exact;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+}
+
+/* Custom scrollbar, thin, brand-tinted */
 ::-webkit-scrollbar {
   width: 10px;
 }
