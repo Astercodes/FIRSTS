@@ -2,19 +2,43 @@
 
 import { useState, type FormEvent } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { coachRespond, EXPLAIN_MESSAGE, STUCK_MESSAGE } from "@/lib/coachScript";
+import { coachRespond, explainMessage, STUCK_MESSAGE } from "@/lib/coachScript";
+import type { CoachMode } from "@/lib/moduleContent";
 
 type Message = { role: "coach" | "user"; text: string };
 
-const INITIAL: Message[] = [
-  {
-    role: "coach",
-    text: "I'm your Reflective Coach for this FIRST. I'll ask questions — I won't hand you a finished values list. Where do you want to start?",
+const MODE_META: Record<CoachMode, { label: string; intro: string }> = {
+  reflective: {
+    label: "Reflective Socratic Coach",
+    intro: "I'll ask questions here — I won't hand you a finished answer. Where do you want to start?",
   },
-];
+  research: {
+    label: "Research Analyst",
+    intro: "I'll cross-check sources and cite everything I hand back. What do you want researched first?",
+  },
+  hybrid: {
+    label: "Reflective + light research",
+    intro: "Mostly reflection, with research on tap if you want it. Where should we start?",
+  },
+  synthesis: {
+    label: "Synthesis Coach",
+    intro: "I can pull from your completed FIRSTS automatically. Want me to summarize what I'm seeing so far?",
+  },
+};
 
-export function CoachTab({ color }: { color: string }) {
-  const [messages, setMessages] = useState<Message[]>(INITIAL);
+export function CoachTab({
+  color,
+  mode = "reflective",
+  moduleTitle,
+  moduleDefinition,
+}: {
+  color: string;
+  mode?: CoachMode;
+  moduleTitle: string;
+  moduleDefinition: string;
+}) {
+  const meta = MODE_META[mode];
+  const [messages, setMessages] = useState<Message[]>([{ role: "coach", text: meta.intro }]);
   const [input, setInput] = useState("");
   const [thinking, setThinking] = useState(false);
 
@@ -40,11 +64,17 @@ export function CoachTab({ color }: { color: string }) {
       ...prev,
       { role: "user", text: kind === "explain" ? "Explain this FIRST to me" : "I'm stuck" },
     ]);
-    pushCoach(kind === "explain" ? EXPLAIN_MESSAGE : STUCK_MESSAGE);
+    pushCoach(kind === "explain" ? explainMessage(moduleTitle, moduleDefinition) : STUCK_MESSAGE);
   }
 
   return (
     <div className="rounded-3xl border border-ink/8 bg-white p-6 sm:p-7">
+      <span
+        className="mb-4 inline-block rounded-full px-3 py-1 text-[11px] font-bold uppercase tracking-wider"
+        style={{ color, background: `color-mix(in oklab, ${color} 14%, white)` }}
+      >
+        {meta.label}
+      </span>
       <p className="mb-5 rounded-2xl bg-paper-dim px-4 py-3 text-xs leading-relaxed text-ink/50">
         This Coach is a guidance tool, not a licensed counselor — for career,
         legal, or financial decisions, loop in a human advisor too.

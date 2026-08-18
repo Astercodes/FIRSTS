@@ -24,8 +24,9 @@ export function coachRespond(userMessage: string): string {
   return reply;
 }
 
-export const EXPLAIN_MESSAGE =
-  "Core Values Audit is about naming the handful of values you'd actually defend under pressure — not the ones that sound good on a resume. You'll brainstorm broadly, narrow to your top 5, then to your top 3 non-negotiables, and define what a violation of each would look like. I'll push you toward specifics the whole way — I won't hand you a finished list.";
+export function explainMessage(title: string, definition: string): string {
+  return `${title} is about ${definition.charAt(0).toLowerCase()}${definition.slice(1)} I'll push you toward specifics the whole way through — I won't hand you a finished answer.`;
+}
 
 export const STUCK_MESSAGE =
   "No problem — let's start smaller. Think of a moment at work, school, or home when you felt genuinely frustrated or disrespected. What was actually happening in that moment? That reaction is usually a value talking.";
