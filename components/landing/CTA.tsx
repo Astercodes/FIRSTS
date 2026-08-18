@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { Reveal } from "@/components/ui/Reveal";
 
 export function CTA() {
@@ -24,18 +25,18 @@ export function CTA() {
           Values Audit, and a coach that asks better questions.
         </p>
         <div className="mt-9 flex flex-col items-center gap-4 sm:flex-row">
-          <a
-            href="#"
+          <Link
+            href="/onboarding"
             className="rounded-full bg-ink px-8 py-3.5 text-sm font-semibold text-paper transition-transform duration-300 hover:scale-[1.04] active:scale-[0.98]"
           >
             Start free
-          </a>
-          <a
-            href="#"
+          </Link>
+          <Link
+            href="/onboarding#advisor"
             className="rounded-full border border-paper/40 px-8 py-3.5 text-sm font-semibold text-paper backdrop-blur transition-colors hover:bg-white/10"
           >
             I&apos;m a career center
-          </a>
+          </Link>
         </div>
       </Reveal>
     </section>

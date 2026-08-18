@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import Link from "next/link";
 import { motion } from "framer-motion";
 
 const LINKS = [
@@ -56,19 +57,19 @@ export function Nav() {
         </div>
 
         <div className="flex items-center gap-2">
-          <a
-            href="#login"
+          <Link
+            href="/login"
             className="hidden text-sm font-medium text-paper/80 transition-colors hover:text-paper sm:block px-3 py-2"
           >
             Log in
-          </a>
-          <a
-            href="#get-started"
+          </Link>
+          <Link
+            href="/onboarding"
             className="group relative overflow-hidden rounded-full bg-paper px-4 py-2 text-sm font-semibold text-ink transition-transform duration-300 hover:scale-[1.04] active:scale-[0.98]"
           >
             <span className="relative z-10">Get started</span>
             <span className="absolute inset-0 -translate-x-full bg-gradient-to-r from-[var(--neon-pink)] to-[var(--tropical-mango)] transition-transform duration-300 group-hover:translate-x-0" />
-          </a>
+          </Link>
         </div>
       </nav>
     </motion.header>

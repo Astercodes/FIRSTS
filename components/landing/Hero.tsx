@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { motion, type Variants } from "framer-motion";
 
 const FADE_UP: Variants = {
@@ -155,8 +156,8 @@ export function Hero() {
           variants={FADE_UP}
           className="mt-9 flex flex-col items-center gap-4 sm:flex-row"
         >
-          <a
-            href="#get-started"
+          <Link
+            href="/onboarding"
             className="group relative overflow-hidden rounded-full px-7 py-3.5 text-sm font-semibold text-ink shadow-[0_0_0_1px_rgba(255,255,255,0.1)] transition-transform duration-300 hover:scale-[1.03] active:scale-[0.98]"
             style={{
               background:
@@ -164,7 +165,7 @@ export function Hero() {
             }}
           >
             Start Stage One
-          </a>
+          </Link>
           <a
             href="#stages"
             className="rounded-full border border-white/20 px-7 py-3.5 text-sm font-semibold text-paper/90 backdrop-blur transition-colors hover:border-white/40 hover:bg-white/5"
