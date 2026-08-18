@@ -1,7 +1,11 @@
+"use client";
+
 import Link from "next/link";
 import { CATEGORY_META, type FirstModule } from "@/lib/dashboardData";
+import { useModuleProgress } from "@/lib/progressStore";
 
-export function ModuleHeader({ module: m }: { module: FirstModule }) {
+export function ModuleHeader({ module: initialModule }: { module: FirstModule }) {
+  const m = useModuleProgress(initialModule.id);
   const color = CATEGORY_META[m.category].color;
 
   return (
@@ -26,6 +30,14 @@ export function ModuleHeader({ module: m }: { module: FirstModule }) {
         <span className="text-[11px] font-semibold uppercase tracking-wide text-ink/35">
           {CATEGORY_META[m.category].label}
         </span>
+        {m.status === "complete" && (
+          <span
+            className="flex items-center gap-1.5 rounded-full px-3 py-1 text-[11px] font-bold"
+            style={{ color, background: `color-mix(in oklab, ${color} 14%, white)` }}
+          >
+            ✓ Complete
+          </span>
+        )}
       </div>
 
       <h1 className="mt-3 font-display text-3xl font-semibold tracking-tight text-ink sm:text-4xl">

@@ -2,10 +2,12 @@
 
 import { useState } from "react";
 import { Switch } from "@/components/ui/Switch";
+import { MarkCompleteButton } from "@/components/module/MarkCompleteButton";
+import { useModuleProgress } from "@/lib/progressStore";
 import type { FirstModule } from "@/lib/dashboardData";
 
 export function TrackTab({
-  module: m,
+  module: initialModule,
   successSignal,
   color,
 }: {
@@ -14,6 +16,7 @@ export function TrackTab({
   color: string;
 }) {
   const [shared, setShared] = useState(false);
+  const m = useModuleProgress(initialModule.id);
   const isComplete = m.status === "complete";
 
   const stats = [
@@ -24,6 +27,8 @@ export function TrackTab({
 
   return (
     <div className="space-y-6">
+      <MarkCompleteButton moduleId={m.id} color={color} />
+
       <section className="grid gap-4 sm:grid-cols-3">
         {stats.map((s) => (
           <div key={s.label} className="rounded-2xl border border-ink/8 bg-white p-5">

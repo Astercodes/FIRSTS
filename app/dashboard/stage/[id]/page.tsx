@@ -37,9 +37,9 @@ export default async function ModulePage({ params }: { params: Params }) {
           learn: <LearnTab content={content} color={color} />,
           do:
             m.id === 1 ? (
-              <DoTab color={color} />
+              <DoTab color={color} moduleId={m.id} />
             ) : (
-              <SchemaDoTab fields={WORKSHEET_SCHEMAS[m.id]} color={color} />
+              <SchemaDoTab fields={WORKSHEET_SCHEMAS[m.id]} color={color} moduleId={m.id} />
             ),
           coach: (
             <CoachTab

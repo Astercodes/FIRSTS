@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import type { WorksheetField } from "@/lib/worksheetSchemas";
+import { MarkCompleteButton } from "@/components/module/MarkCompleteButton";
 
 type FieldValue = string | string[] | number | Record<string, string | number>[];
 
@@ -19,7 +20,7 @@ function initialState(fields: WorksheetField[]): Record<string, FieldValue> {
   return state;
 }
 
-export function SchemaDoTab({ fields, color }: { fields: WorksheetField[]; color: string }) {
+export function SchemaDoTab({ fields, color, moduleId }: { fields: WorksheetField[]; color: string; moduleId: number }) {
   const [state, setState] = useState(() => initialState(fields));
   const [saveState, setSaveState] = useState<"saving" | "saved">("saved");
   const first = useRef(true);
@@ -73,6 +74,8 @@ export function SchemaDoTab({ fields, color }: { fields: WorksheetField[]; color
           </div>
         );
       })}
+
+      <MarkCompleteButton moduleId={moduleId} color={color} />
     </div>
   );
 }

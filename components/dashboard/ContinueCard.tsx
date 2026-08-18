@@ -4,6 +4,7 @@ import { CATEGORY_META } from "@/lib/dashboardData";
 
 export function ContinueCard({ module: m }: { module: FirstModule }) {
   const color = CATEGORY_META[m.category].color;
+  const isInProgress = m.status === "in-progress";
 
   return (
     <div
@@ -18,19 +19,20 @@ export function ContinueCard({ module: m }: { module: FirstModule }) {
         style={{ background: color }}
       />
       <p className="relative text-xs font-semibold uppercase tracking-[0.2em] text-paper/60">
-        Continue where you left off
+        {isInProgress ? "Continue where you left off" : "Start your next FIRST"}
       </p>
       <h2 className="relative mt-3 font-display text-2xl font-semibold sm:text-3xl">
         First {String(m.id).padStart(2, "0")} · {m.title}
       </h2>
       <p className="relative mt-2 text-sm text-paper/60">
-        {m.time} · {m.difficulty} · last touched {m.lastUpdated}
+        {m.time} · {m.difficulty}
+        {isInProgress && m.lastUpdated ? ` · last touched ${m.lastUpdated}` : ""}
       </p>
       <Link
         href={`/dashboard/stage/${m.id}`}
         className="relative mt-6 inline-flex items-center gap-2 rounded-full bg-paper px-6 py-3 text-sm font-semibold text-ink transition-transform duration-300 hover:scale-[1.03]"
       >
-        Resume worksheet →
+        {isInProgress ? "Resume worksheet →" : "Start worksheet →"}
       </Link>
     </div>
   );

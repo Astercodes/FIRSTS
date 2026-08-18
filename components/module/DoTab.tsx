@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import { MarkCompleteButton } from "@/components/module/MarkCompleteButton";
 
 const VALUE_BANK = [
   "Achievement", "Autonomy", "Stability", "Wealth", "Recognition", "Impact", "Service", "Faith",
@@ -42,7 +43,7 @@ const SEED_FILTERS: Record<string, ValueFilter> = {
 
 const SEED_INDUSTRY = "Fintech / fraud analytics";
 
-export function DoTab({ color }: { color: string }) {
+export function DoTab({ color, moduleId }: { color: string; moduleId: number }) {
   const [values, setValues] = useState<string[]>([...SEED_TOP5, "Excellence", "Learning"]);
   const [draft, setDraft] = useState("");
   const [top5, setTop5] = useState<string[]>(SEED_TOP5);
@@ -288,6 +289,8 @@ export function DoTab({ color }: { color: string }) {
           <textarea value={conflictWhy} onChange={(e) => setConflictWhy(e.target.value)} rows={2} className="w-full resize-none rounded-2xl border border-ink/10 bg-paper-dim px-4 py-2.5 text-sm text-ink outline-none focus:border-ink/25" />
         </label>
       </section>
+
+      <MarkCompleteButton moduleId={moduleId} color={color} />
     </div>
   );
 }
