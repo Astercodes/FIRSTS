@@ -1,11 +1,18 @@
-import { ComingSoon } from "@/components/onboarding/ComingSoon";
+import type { Metadata } from "next";
+import { AuthShell } from "@/components/auth/AuthShell";
+import { AdvisorSignupForm } from "@/components/auth/AdvisorSignupForm";
+
+export const metadata: Metadata = { title: "Advisor sign-up — FIRSTS" };
 
 export default function AdvisorSignup() {
   return (
-    <ComingSoon
-      eyebrow="Path C · Advisor / institution"
-      title="Institution verification is next up."
+    <AuthShell
+      tag="Path C · Advisor / institution"
+      title="Verify your institution."
+      subtitle="For career center staff, advisors, and mentors at partner schools."
       color="var(--citrus-lime)"
-    />
+    >
+      <AdvisorSignupForm />
+    </AuthShell>
   );
 }
