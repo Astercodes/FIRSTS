@@ -23,6 +23,6 @@ export function saveProfile(profile: Partial<Profile>) {
   try {
     window.localStorage.setItem(KEY, JSON.stringify(profile));
   } catch {
-    // localStorage unavailable (private browsing, quota) — profile just won't persist
+    // localStorage unavailable (private browsing, quota), profile just won't persist
   }
 }

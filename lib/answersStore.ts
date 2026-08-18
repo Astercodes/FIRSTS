@@ -15,6 +15,6 @@ export function saveAnswers(moduleId: number, answers: Record<string, unknown>) 
   try {
     window.localStorage.setItem(PREFIX + moduleId, JSON.stringify(answers));
   } catch {
-    // localStorage unavailable (private browsing, quota) — answers just won't persist
+    // localStorage unavailable (private browsing, quota), answers just won't persist
   }
 }

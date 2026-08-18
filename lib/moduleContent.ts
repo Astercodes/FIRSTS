@@ -71,6 +71,26 @@ export const COACH_MODE: Record<number, CoachMode> = {
   56: "reflective",
   57: "hybrid",
   58: "reflective",
+  59: "reflective",
+  60: "hybrid",
+  61: "hybrid",
+  62: "reflective",
+  63: "research",
+  64: "reflective",
+  65: "reflective",
+  66: "hybrid",
+  67: "hybrid",
+  68: "reflective",
+  69: "research",
+  70: "reflective",
+  71: "hybrid",
+  72: "reflective",
+  73: "reflective",
+  74: "reflective",
+  75: "reflective",
+  76: "research",
+  77: "research",
+  78: "synthesis",
 };
 
 export const LEARN_CONTENT: Record<number, LearnContent> = {
@@ -1820,5 +1840,576 @@ export const LEARN_CONTENT: Record<number, LearnContent> = {
     successSignal:
       "Anyone encountering you across LinkedIn, your website, your portfolio, and your resume gets the same clear, consistent story, no matter where they start.",
     milestoneTies: [31, 35, 53],
+  },
+
+  59: {
+    definition:
+      "A Job Application Tracker is a single organized system, usually a spreadsheet, that records every company, role, deadline, and response status across your job search. It replaces scattered memory and browser tabs with one reliable source of truth.",
+    whyItMatters:
+      "A serious search often means juggling fifteen, thirty, or more applications at once. Without a tracker it becomes impossible to remember which resume version went where, when you last followed up, or which deadlines are approaching, and missed follow-ups quietly cost real opportunities.",
+    whenWhoWhere: [
+      { label: "When", body: "Build this before you send your first application, not after you have already lost track of the first five." },
+      { label: "Who", body: "No collaborator required, though a career advisor can suggest useful columns based on what they have seen students forget to track." },
+      { label: "Where", body: "A spreadsheet tool like Google Sheets or Excel, kept open and updated in the same sitting you submit each application." },
+    ],
+    howItWorks: [
+      "Create columns for company, role, date applied, resume and cover letter version used, application source, deadline, current status, and next action.",
+      "Update it the moment you apply, not days later from memory.",
+      "Review it weekly to catch anything that needs a follow-up.",
+    ],
+    tools: ["Google Sheets or Excel", "A dedicated job tracker app like Teal or Huntr"],
+    scenario: {
+      title: "The lost resume version",
+      body: "A student applying to twenty roles across three weeks lost track of which resume version she had sent to a top-choice company. When they called for a follow-up interview, she could not remember which bullet points they would have seen. She started logging the exact file name and version with every entry, and never faced that confusion again.",
+    },
+    pitfalls: [
+      "Only updating the tracker sporadically",
+      "Tracking applications but never actually reviewing it to catch overdue follow-ups",
+    ],
+    successSignal:
+      "You can answer, at a glance, exactly where every application stands without checking your email or memory.",
+    milestoneTies: [60, 75],
+  },
+
+  60: {
+    definition:
+      "An Application Strategy is a deliberate plan for which roles you will target and how you will tailor each application, replacing a scattershot apply-to-everything approach with focused, higher-conversion effort.",
+    whyItMatters:
+      "Applying broadly to loosely matched roles with an identical resume typically produces a lower response rate than applying to fewer, well-matched roles with tailored materials. Strategy turns a stressful numbers game into a more controllable, confidence-building process.",
+    whenWhoWhere: [
+      { label: "When", body: "Build this before your first big application push of a season, and revisit it if your response rate stays low after 15 to 20 applications." },
+      { label: "Who", body: "A career advisor to sanity check whether your target list is realistic given your current experience level." },
+      { label: "Where", body: "Planned in a single focused session, then referenced every time you consider adding a new role to your list." },
+    ],
+    howItWorks: [
+      "Define your must-have criteria (industry, location, role type) and your nice-to-have criteria separately.",
+      "Build a target list of 15 to 25 companies that fit your must-haves.",
+      "Decide your tailoring depth per tier: heavy customization for top-choice companies, moderate for the rest.",
+    ],
+    tools: ["Your Career Path and Role Research worksheets from Stage One"],
+    scenario: {
+      title: "Fewer applications, more responses",
+      body: "A student applying broadly to fifty generic postings got almost no responses. After narrowing to twenty carefully chosen companies and tailoring each application specifically, her response rate roughly tripled, even with far fewer applications overall.",
+    },
+    pitfalls: [
+      "Spreading effort so thin across too many applications that none gets a real chance",
+      "Narrowing so much that too few opportunities remain in the pipeline",
+    ],
+    successSignal:
+      "Your response rate noticeably improves compared to your untailored, unfocused applications.",
+    milestoneTies: [9, 10],
+  },
+
+  61: {
+    definition:
+      "A Resume Version A/B Test compares two different resume formats or framings against each other by tracking which one produces more responses, replacing guesswork with actual evidence about what works for you specifically.",
+    whyItMatters:
+      "Advice about resume formatting varies widely and does not apply equally to every field or candidate. Testing two real versions against real employers gives you data specific to your situation instead of relying on generic rules that may not fit.",
+    whenWhoWhere: [
+      { label: "When", body: "Run this once you have at least two credible resume format options and a large enough application volume, typically 10 or more, to produce a meaningful comparison." },
+      { label: "Who", body: "A career advisor to help design two genuinely different versions worth comparing, not two versions that are nearly identical." },
+      { label: "Where", body: "Applied across your normal application pipeline, tracked in your Job Application Tracker (C1)." },
+    ],
+    howItWorks: [
+      "Create two resume versions that differ in one meaningful way, such as a skills-first layout versus an experience-first layout.",
+      "Alternate which version you send, and log which version went where.",
+      "After 10 to 15 applications per version, compare response rates.",
+    ],
+    tools: ["Your Job Application Tracker (C1)", "A resume builder tool for creating both versions cleanly"],
+    scenario: {
+      title: "Skills-first won",
+      body: "A student tested a traditional chronological resume against a skills-first format for the same batch of marketing roles. The skills-first version got noticeably more callbacks, showing her that leading with skills was more persuasive than leading with a thin work history.",
+    },
+    pitfalls: [
+      "Testing two versions that are too similar to produce a meaningful difference",
+      "Changing multiple variables at once so you cannot tell which change actually mattered",
+    ],
+    successSignal:
+      "You can point to a real, evidence-based reason for choosing your final resume format, rather than a guess.",
+    milestoneTies: [53, 59],
+  },
+
+  62: {
+    definition:
+      "Cover Letter Customization is the practiced skill of efficiently tweaking a strong base cover letter for each specific role and company, rather than sending an identical generic letter or rewriting one from scratch every time.",
+    whyItMatters:
+      "A fully generic cover letter is easy to spot and rarely persuasive, but rewriting one entirely for every application is not sustainable at real application volume. Efficient customization keeps quality high without burning out.",
+    whenWhoWhere: [
+      { label: "When", body: "Build your customization process once your base cover letter from Stage Two is finalized, before your main application push." },
+      { label: "Who", body: "No collaborator required, though a mentor's read on two or three customized versions can confirm the tailoring reads as genuine." },
+      { label: "Where", body: "Applied to every cover letter you send from your target list in Application Strategy (C2)." },
+    ],
+    howItWorks: [
+      "Keep your strong base letter's structure fixed, but identify three swappable elements: the opening hook, the specific example you tell, and the closing detail about the company.",
+      "For each application, spend 15 to 20 minutes updating just those three elements with something specific to that company.",
+    ],
+    tools: ["Your base cover letter from Stage Two", "The company's own website or recent news for specific details to swap in"],
+    scenario: {
+      title: "From an hour to twenty minutes",
+      body: "A student initially spent over an hour rewriting each cover letter from scratch and burned out after five applications. After identifying the three swappable elements in her base letter, she cut her time to twenty minutes per letter while keeping the same level of genuine customization.",
+    },
+    pitfalls: [
+      "Swapping in the company name but leaving generic language everywhere else",
+      "Over-customizing to the point where it takes too long to sustain at volume",
+    ],
+    successSignal:
+      "Each cover letter reads as genuinely written for that specific company, and you can produce one in under 30 minutes.",
+    milestoneTies: [54],
+  },
+
+  63: {
+    definition:
+      "Job Listing Analysis is the practice of carefully reading a job posting to extract its actual priorities, repeated keywords, and required skills, rather than skimming it and applying based on the job title alone.",
+    whyItMatters:
+      "Job postings often reveal exactly what a hiring manager cares about most, through repeated language and the order requirements appear in, but most candidates skim past these signals. Reading closely lets you tailor your materials to what is actually being asked for.",
+    whenWhoWhere: [
+      { label: "When", body: "Do this for every role before you tailor your resume or cover letter to it, not after you have already submitted a generic version." },
+      { label: "Who", body: "No collaborator required, though comparing notes with a peer applying to similar roles can reveal patterns you missed alone." },
+      { label: "Where", body: "Done directly against the job posting itself, ideally saved or screenshotted since postings sometimes get taken down." },
+    ],
+    howItWorks: [
+      "Read the posting twice. On the first pass, highlight every repeated word or phrase.",
+      "On the second pass, separate requirements into must-have and nice-to-have based on the language used (required versus preferred).",
+      "List the top five keywords you will make sure appear somewhere in your tailored resume.",
+    ],
+    tools: ["A highlighter tool if reading digitally", "A simple notes document to log keywords per posting"],
+    scenario: {
+      title: "The posting she almost skipped",
+      body: "A student almost skipped a posting because the title sounded junior, but a close read revealed the company was actually looking for the exact consumer research experience she had built in a class project. Tailoring her resume around that overlap led to an interview she almost missed entirely.",
+    },
+    pitfalls: [
+      "Skimming only the job title and first sentence",
+      "Treating every listed skill as equally required when the posting's own language distinguishes must-haves from nice-to-haves",
+    ],
+    successSignal:
+      "You can list the posting's top five priorities from memory after reading it once closely, and your tailored resume reflects them.",
+    milestoneTies: [61, 62],
+  },
+
+  64: {
+    definition:
+      "STAR Answer Prep is the practice of building interview answers using the Situation, Task, Action, Result structure, which turns a vague personal anecdote into a clear, compelling, and easy-to-follow story.",
+    whyItMatters:
+      "Without a structure, candidates under interview pressure often ramble, bury the actual point, or forget to mention the outcome entirely. The STAR structure keeps answers concise and ensures the result does not get lost.",
+    whenWhoWhere: [
+      { label: "When", body: "Build your STAR bank before your first real interview, ideally as soon as you start applying, not the night before your first callback." },
+      { label: "Who", body: "A mentor, career advisor, or peer to review your drafts for clarity and help you spot where the result is unclear or missing." },
+      { label: "Where", body: "Drafted in a quiet planning session, then practiced out loud before any interview." },
+    ],
+    howItWorks: [
+      "Choose five to seven of your strongest experiences.",
+      "For each, write one to two sentences per STAR component: the Situation, the Task you were responsible for, the Action you specifically took, and the Result, ideally with a number attached.",
+      "Practice saying each story out loud in under two minutes.",
+    ],
+    tools: ["A simple document or set of index cards, one per story, organized by which common interview themes each could answer"],
+    scenario: {
+      title: "From rambling to a tight 90 seconds",
+      body: "A student used to answer tell me about a time you solved a problem with a rambling, unstructured story that trailed off. After rewriting it in STAR format, the same story became a tight 90-second answer that consistently landed well, because the interviewer could clearly hear the result.",
+    },
+    pitfalls: [
+      "Spending most of the answer on the Situation and Task while rushing or forgetting the Result",
+      "Memorizing the story so rigidly that it sounds robotic rather than conversational",
+    ],
+    successSignal:
+      "You can tell any of your core stories in under two minutes with a clear, specific result, without sounding memorized.",
+    milestoneTies: [65, 68],
+  },
+
+  65: {
+    definition:
+      "Behavioral Interview Prep is focused practice answering soft-skill interview questions, such as those about teamwork, conflict, and failure, using your STAR story bank to respond with clarity under pressure.",
+    whyItMatters:
+      "Behavioral questions appear in nearly every interview process regardless of industry, and candidates who have not practiced often freeze or default to generic, forgettable answers even when they have great real experiences to draw from.",
+    whenWhoWhere: [
+      { label: "When", body: "Practice this in the week before any interview, and refresh it whenever you add new stories to your STAR bank." },
+      { label: "Who", body: "A peer, mentor, or career advisor to ask you questions cold, since practicing alone does not replicate the pressure of an unexpected question." },
+      { label: "Where", body: "Practiced in mock settings: a career center session, a video call with a friend, or recorded solo." },
+    ],
+    howItWorks: [
+      "Compile a list of the ten most common behavioral questions (teamwork, conflict, failure, leadership, a mistake you made).",
+      "Match each to the strongest story from your STAR bank (C6), even if you have to adapt the same story for multiple questions.",
+      "Practice answering out loud, timed, for each.",
+    ],
+    tools: ["A list of common behavioral questions from your career center or a reputable career site", "Your STAR bank from C6"],
+    scenario: {
+      title: "Adapting one story three ways",
+      body: "A student froze when asked about a conflict with a teammate, even though she had a good story from a group project she had never practiced from that angle. After building out behavioral practice around her existing STAR bank, she adapted the same story confidently to conflict, teamwork, and leadership questions in her next three interviews.",
+    },
+    pitfalls: [
+      "Preparing stories but never practicing them out loud under any time pressure",
+      "Having only one story that gets awkwardly forced into every answer",
+    ],
+    successSignal:
+      "You can answer an unexpected behavioral question smoothly using an adapted story from your bank, without long pauses or visible panic.",
+    milestoneTies: [64],
+  },
+
+  66: {
+    definition:
+      "Technical Interview Prep is focused, deliberate practice on the coding, analytical, or role-specific skills your target roles will actually test, rather than generic studying disconnected from the real interview format.",
+    whyItMatters:
+      "Technical interviews test applied skill under time pressure and observation, a very different experience from solving the same problem alone with no time limit. Without simulated practice, even genuinely skilled candidates can underperform relative to their real ability.",
+    whenWhoWhere: [
+      { label: "When", body: "Start this well before your first technical interview, ideally 3 to 4 weeks ahead, since these skills build gradually rather than overnight." },
+      { label: "Who", body: "A study group, mentor, or online practice community for review and accountability." },
+      { label: "Where", body: "Practiced using dedicated platforms, then simulated in mock settings that replicate real time pressure and observation." },
+    ],
+    howItWorks: [
+      "Identify the specific technical format your target roles use, such as coding challenges, Excel modeling, or analytics case questions.",
+      "Practice a consistent volume of problems weekly, and review every mistake for the underlying concept rather than just the answer.",
+      "Simulate timed, observed conditions at least once before a real interview.",
+    ],
+    tools: ["Field-specific practice platforms such as LeetCode for coding, or a case bank for analytics or consulting-style problems"],
+    scenario: {
+      title: "Practicing under real pressure",
+      body: "A student preparing for data analyst interviews practiced SQL problems alone for weeks, always untimed and unobserved. In her first real technical interview, the added pressure of someone watching caused her to blank on syntax she knew well. After practicing several timed, observed mock sessions, her next interview went far more smoothly.",
+    },
+    pitfalls: [
+      "Practicing only in comfortable, untimed, solo conditions that do not resemble the actual interview experience",
+      "Reviewing answers without understanding the underlying concept",
+    ],
+    successSignal:
+      "You can solve a representative practice problem correctly under time pressure while someone else watches, without your performance collapsing under the added stress.",
+    milestoneTies: [68],
+  },
+
+  67: {
+    definition:
+      "Case/Problem-Solving Prep builds fluency with structured frameworks used to break down open-ended business problems, commonly required in consulting, strategy, and analytical interview processes.",
+    whyItMatters:
+      "Case interviews test how you think under ambiguity, not just whether you reach a correct answer, and candidates without a structured approach often either freeze or wander unproductively through the problem.",
+    whenWhoWhere: [
+      { label: "When", body: "Begin this 3 to 4 weeks before any case-interview-heavy process, such as consulting or strategy roles." },
+      { label: "Who", body: "A case practice partner or club, since case interviews are inherently interactive and hard to practice realistically alone." },
+      { label: "Where", body: "Practiced through structured case books and live practice sessions with a partner acting as interviewer." },
+    ],
+    howItWorks: [
+      "Learn two or three core frameworks (such as profitability, market entry, and general problem structuring).",
+      "Practice cases out loud with a partner, narrating your thinking rather than solving silently.",
+      "After each practice case, get feedback specifically on your structure, not just your final answer.",
+    ],
+    tools: ["A case practice book or guide", "A case club or practice partner for live sessions"],
+    scenario: {
+      title: "Narrating her way to clearer structure",
+      body: "A student trying case prep alone kept getting stuck jumping straight to answers without a clear structure. After joining a weekly case practice group and narrating her thinking out loud to a partner, her structure noticeably improved, and she started reaching more defensible conclusions under time pressure.",
+    },
+    pitfalls: [
+      "Memorizing framework templates so rigidly that you apply them mechanically instead of adapting to the specific case",
+      "Practicing only silently instead of narrating your thought process aloud",
+    ],
+    successSignal:
+      "You can structure an unfamiliar business problem clearly within the first two minutes, and narrate your reasoning in a way a partner can follow.",
+    milestoneTies: [68],
+  },
+
+  68: {
+    definition:
+      "A Mock Interview is a full, realistic practice interview conducted with a mentor, peer, or career advisor, simulating the actual format, pressure, and feedback loop of a real interview.",
+    whyItMatters:
+      "Reading about interview technique and actually performing under real conversational pressure are very different experiences, and mock interviews are the closest simulation available before the real thing.",
+    whenWhoWhere: [
+      { label: "When", body: "Schedule at least one mock interview before any high-stakes real interview, ideally with enough time left to act on the feedback." },
+      { label: "Who", body: "A career advisor, mentor, or peer willing to ask realistic questions and give honest, specific feedback afterward." },
+      { label: "Where", body: "Conducted over video call or in person, ideally in a similarly formal setting to the real interview." },
+    ],
+    howItWorks: [
+      "Choose a mock partner unfamiliar with your prepared answers if possible, so their questions feel less predictable.",
+      "Treat it as a real interview: dress accordingly, do not pause, and save all questions for the end.",
+      "Ask for specific feedback on structure, filler words, and overall impression afterward.",
+    ],
+    tools: ["A video call platform", "A recording tool if your partner is comfortable being recorded", "A feedback template to structure the debrief"],
+    scenario: {
+      title: "Surfacing the gap safely",
+      body: "A student who felt fully prepared on paper was caught off guard in her first mock interview by a follow-up question she had not anticipated. That stumble, safely surfaced in practice rather than in a real interview, led her to prepare a stronger response before her actual interview a week later.",
+    },
+    pitfalls: [
+      "Choosing a mock partner who already knows all your answers, which removes the realistic unpredictability",
+      "Skipping the honest feedback conversation afterward",
+    ],
+    successSignal:
+      "You receive specific, actionable feedback that you can visibly apply and improve on in a follow-up practice round.",
+    milestoneTies: [64, 73],
+  },
+
+  69: {
+    definition:
+      "Job Offer Negotiation Prep is the research and practice needed to negotiate salary, benefits, and perks confidently once you receive an offer, rather than accepting the first number presented out of uncertainty or discomfort.",
+    whyItMatters:
+      "Most first offers have room built in for negotiation, and candidates who do not negotiate, often out of fear of seeming ungrateful, can leave meaningful compensation on the table over the course of a career, not just one offer.",
+    whenWhoWhere: [
+      { label: "When", body: "Prepare this before you receive your first offer, not after, so you are not researching under time pressure with a deadline looming." },
+      { label: "Who", body: "A mentor or someone in a similar role who can share realistic salary ranges, and a friend to practice the actual negotiation conversation with." },
+      { label: "Where", body: "Research done using salary benchmarking tools, negotiation practiced over phone or video call role-play." },
+    ],
+    howItWorks: [
+      "Research a realistic salary range for the specific role, location, and experience level using your Salary Benchmarking worksheet from Stage One.",
+      "Decide your target number and your walk-away number in advance.",
+      "Practice the actual negotiation conversation out loud, including how you will respond if they say no.",
+    ],
+    tools: ["Your Salary Benchmarking worksheet from Stage One", "Glassdoor or Levels.fyi for updated data", "A practice partner for role-play"],
+    scenario: {
+      title: "Asking without tension",
+      body: "A student almost accepted her first offer immediately out of relief and gratitude. After a mentor encouraged her to research the range and simply ask, she requested a modest increase and received it without any tension, something she would not have gotten by staying silent.",
+    },
+    pitfalls: [
+      "Not researching a realistic range beforehand and negotiating blind",
+      "Being too aggressive without acknowledging genuine enthusiasm for the role",
+    ],
+    successSignal:
+      "You can make a specific, well-reasoned counter-request without significant anxiety, and you know your walk-away point in advance.",
+    milestoneTies: [11],
+  },
+
+  70: {
+    definition:
+      "A Follow-Up Email After Interview is a timely, professional, and specific message sent shortly after an interview, thanking the interviewer and reinforcing why you are a strong fit for the role.",
+    whyItMatters:
+      "A well-written follow-up email can reinforce a strong impression and occasionally tip a close decision in your favor, while a missing or generic one is a small, easily avoidable missed opportunity.",
+    whenWhoWhere: [
+      { label: "When", body: "Send this within 24 hours of every interview, without exception." },
+      { label: "Who", body: "No collaborator required, though a mentor can review your draft the first few times until the format becomes second nature." },
+      { label: "Where", body: "Sent directly to the interviewer's email, ideally to each person you spoke with if you interviewed with multiple people." },
+    ],
+    howItWorks: [
+      "Thank them specifically for their time.",
+      "Reference one particular detail from the actual conversation to prove you were engaged.",
+      "Briefly reaffirm your interest and fit, keep it under 150 words, and send it the same day if possible.",
+    ],
+    tools: ["Your notes taken during or immediately after the interview"],
+    scenario: {
+      title: "The detail that made her memorable",
+      body: "A student sent a generic thank you for your time email after every interview and rarely heard back further. After starting to reference a specific detail from each actual conversation, one interviewer mentioned in a later round that her follow-up was what made the team remember her distinctly from other candidates.",
+    },
+    pitfalls: [
+      "Sending a generic template with no reference to the actual conversation",
+      "Waiting several days to send it",
+    ],
+    successSignal:
+      "You send a specific, well-timed follow-up after every single interview, without exception, regardless of how the interview felt.",
+    milestoneTies: [74],
+  },
+
+  71: {
+    definition:
+      "Test/Assessment Prep is targeted practice for whatever aptitude, psychometric, or role-specific assessment your target companies use as part of their hiring process, so the format itself does not cost you points you would otherwise earn.",
+    whyItMatters:
+      "Many companies use standardized assessments as an early screening step, and candidates unfamiliar with the specific format, timing, or question style can underperform relative to their actual ability simply due to unfamiliarity.",
+    whenWhoWhere: [
+      { label: "When", body: "Prepare as soon as you know which companies in your pipeline use assessments, ideally with at least a week of practice time." },
+      { label: "Who", body: "No collaborator required, though comparing notes with peers who have taken the same company's assessment can be valuable if available." },
+      { label: "Where", body: "Practiced using official or reputable third-party practice platforms that mirror the real test format." },
+    ],
+    howItWorks: [
+      "Identify which specific assessment type your target company uses, by researching candidate forums or asking your recruiter directly.",
+      "Find practice materials in that exact format and timing.",
+      "Take at least one full timed practice test under realistic conditions before the real one.",
+    ],
+    tools: ["Company-specific candidate forums", "Official practice platforms if the assessment provider offers them", "A timer for realistic practice conditions"],
+    scenario: {
+      title: "Beating the clock the second time",
+      body: "A student was surprised by the strict time pressure of a numerical reasoning test she had not practiced under timed conditions, and ran out of time on the final section. Before her next assessment with a different company, she practiced under a strict timer and completed the real test with time to spare.",
+    },
+    pitfalls: [
+      "Practicing only untimed",
+      "Assuming all assessments from different companies are the same format",
+    ],
+    successSignal:
+      "You finish a real timed practice test within the time limit with a reasonable accuracy rate before ever taking the actual assessment.",
+    milestoneTies: [66],
+  },
+
+  72: {
+    definition:
+      "A Mock Presentation is practiced delivery of a structured idea presentation, of the kind increasingly used in interviews for roles that require presenting to clients, stakeholders, or leadership.",
+    whyItMatters:
+      "Some interview processes now include a presentation component specifically to evaluate how you organize and deliver ideas under time pressure, a different skill than answering conversational questions.",
+    whenWhoWhere: [
+      { label: "When", body: "Prepare this as soon as you know a presentation is part of an interview process, typically with one to two weeks' notice." },
+      { label: "Who", body: "A mentor or peer to watch a full run-through and give feedback on both content and delivery." },
+      { label: "Where", body: "Practiced in a space similar to where you will present, with any tools (slides, whiteboard) you will actually use in the real setting." },
+    ],
+    howItWorks: [
+      "Structure your presentation with a clear opening, three main points, and a strong close.",
+      "Time a full run-through and cut content until it comfortably fits the allotted time with a buffer.",
+      "Practice handling likely follow-up questions after the formal presentation ends.",
+    ],
+    tools: ["Presentation software such as Google Slides or PowerPoint", "A timer for practice runs"],
+    scenario: {
+      title: "Cutting to the strongest three points",
+      body: "A student preparing for a case-study presentation interview ran her first practice attempt 50% over the time limit. After cutting content down to her three strongest points and practicing twice more, she delivered confidently within time during the real interview and handled the follow-up questions smoothly.",
+    },
+    pitfalls: [
+      "Cramming too much content into the time limit",
+      "Never practicing the follow-up question portion that typically comes after a formal presentation",
+    ],
+    successSignal:
+      "You can deliver your full presentation within the time limit, and field a follow-up question afterward without losing composure.",
+    milestoneTies: [44, 56],
+  },
+
+  73: {
+    definition:
+      "An Interview Mindset Routine is a short, repeatable pre-interview practice combining confidence-building, visualization, and focus techniques, used to enter each interview in a calm, prepared state rather than a reactive, anxious one.",
+    whyItMatters:
+      "Even well-prepared candidates can underperform if nerves take over in the moments right before an interview. A consistent routine gives you something reliable to lean on regardless of how nervous you feel that day.",
+    whenWhoWhere: [
+      { label: "When", body: "Build this routine before your first real interview, and use it consistently every time afterward so it becomes automatic." },
+      { label: "Who", body: "No collaborator required, though your Professional Confidence Mindset worksheet from Stage Two is a useful foundation to build from." },
+      { label: "Where", body: "Practiced in the minutes immediately before any interview, wherever you happen to be waiting." },
+    ],
+    howItWorks: [
+      "Design a routine combining three elements: a brief breathing exercise, a visualization of the interview going well, and a review of your one or two strongest talking points.",
+      "Practice this same routine before lower-stakes situations first so it feels familiar by the time a real interview arrives.",
+    ],
+    tools: ["A short private space to run through the routine", "Your Professional Confidence Mindset worksheet from Stage Two"],
+    scenario: {
+      title: "Replacing anxious rereading with breathing",
+      body: "A student used to spend the ten minutes before every interview anxiously rereading her resume, which left her more nervous, not less. After replacing that habit with a short breathing and visualization routine, she reported walking into interviews noticeably calmer and more present.",
+    },
+    pitfalls: [
+      "Using cramming or last-minute rereading as your pre-interview routine instead of a calming, focus-building one",
+    ],
+    successSignal:
+      "You can walk into an interview feeling grounded and prepared, even when nervous, because the routine itself is familiar and repeatable.",
+    milestoneTies: [23],
+  },
+
+  74: {
+    definition:
+      "The Thank-You Email Habit is the consistent practice of sending a genuine thank-you message after every interview, without exception, building on the Follow-Up Email (C12) into a reliable, repeated professional habit.",
+    whyItMatters:
+      "A single good follow-up email is useful. A consistent habit of sending one after every interview, even ones that went poorly or ended in rejection, builds a reputation for professionalism that can pay off in unexpected ways, including referrals to other roles.",
+    whenWhoWhere: [
+      { label: "When", body: "Apply this after every single interview for the rest of your career, not just the ones you think went well." },
+      { label: "Who", body: "No collaborator required, this is a personal consistency habit built on the template from C12." },
+      { label: "Where", body: "Sent via email within 24 hours of any interview, interview stage, or informational conversation." },
+    ],
+    howItWorks: [
+      "Treat this as a non-negotiable habit rather than a case-by-case decision.",
+      "Keep your template from C12 easily accessible so there is no friction to sending it even when you are busy, tired, or discouraged after an interview that did not feel great.",
+    ],
+    tools: ["Your follow-up email template from C12, saved somewhere quick to access"],
+    scenario: {
+      title: "The referral, months later",
+      body: "A student sent a genuine thank-you email even after an interview she was sure had gone badly. Months later, that same interviewer reached out with a referral to a different role at another company, remembering her professionalism even though the original role had not worked out.",
+    },
+    pitfalls: [
+      "Only sending thank-you emails after interviews that felt successful, which misses the relationship-building value of the ones that did not",
+    ],
+    successSignal:
+      "Sending a thank-you email becomes automatic, something you do without having to decide each time, regardless of how the interview felt.",
+    milestoneTies: [70],
+  },
+
+  75: {
+    definition:
+      "An Application Deadline Calendar is a dedicated calendar system tracking every application deadline, interview date, and follow-up reminder, ensuring nothing slips through the cracks during a busy job search.",
+    whyItMatters:
+      "A job search often overlaps with a full course load or existing job, and deadlines can easily get lost among academic and personal commitments if they are not tracked somewhere separate and visible.",
+    whenWhoWhere: [
+      { label: "When", body: "Set this up alongside your Job Application Tracker (C1), before your search picks up real volume." },
+      { label: "Who", body: "No collaborator required, though sharing key dates with a study partner or roommate can create helpful accountability." },
+      { label: "Where", body: "A dedicated calendar, either a separate color in your existing calendar app or a fully separate tracking calendar." },
+    ],
+    howItWorks: [
+      "Every time you find a role you plan to apply to, immediately add its deadline to your calendar, along with a reminder two to three days before.",
+      "Add interview dates and follow-up reminders the moment they are scheduled, not after you get back to your desk.",
+    ],
+    tools: ["Google Calendar or a similar app with reminder functionality, color-coded separately from your academic calendar"],
+    scenario: {
+      title: "Never missing another deadline",
+      body: "A student missed a strong-fit role's deadline entirely because she had only noted it in her tracker spreadsheet and did not check it during a particularly busy exam week. After that, she started adding every deadline directly to her phone's calendar with reminders, and never missed another one.",
+    },
+    pitfalls: [
+      "Tracking deadlines only in a spreadsheet you do not check daily, rather than a calendar with active reminders",
+    ],
+    successSignal:
+      "You have never missed an application deadline or interview because it was not on your calendar with enough advance warning.",
+    milestoneTies: [59],
+  },
+
+  76: {
+    definition:
+      "A Career-Focused LinkedIn Application is the deliberate practice of applying to roles through warm network connections on LinkedIn rather than exclusively through cold online applications, since referred candidates are statistically more likely to get interviews.",
+    whyItMatters:
+      "Cold applications, especially at larger companies, often get filtered by automated systems before a human ever reads them. A referral or warm introduction through LinkedIn can route your application directly to a hiring manager instead.",
+    whenWhoWhere: [
+      { label: "When", body: "Use this approach for your top-priority target companies from your Application Strategy (C2), where a referral would meaningfully improve your odds." },
+      { label: "Who", body: "Any first, second, or third-degree LinkedIn connection at your target company, even one you have not spoken to before." },
+      { label: "Where", body: "Conducted entirely on LinkedIn, using the platform's search and messaging features." },
+    ],
+    howItWorks: [
+      "Search your target company on LinkedIn and identify anyone in your network, even a distant connection, currently working there.",
+      "Send a genuine, specific message explaining your interest and asking if they would be willing to refer you or share insight about the role, rather than immediately asking for a referral outright.",
+    ],
+    tools: ["LinkedIn's search and messaging features", "Your existing network built through Stage Two's visibility and engagement FIRSTS"],
+    scenario: {
+      title: "The distant connection who referred her",
+      body: "A student applied cold to a competitive role and heard nothing for three weeks. She then found a distant LinkedIn connection at the same company, sent a genuine message about her interest, and was referred internally within days, leading to an interview her cold application never surfaced.",
+    },
+    pitfalls: [
+      "Asking a stranger for a referral immediately with no context, which often gets ignored",
+      "Only using this approach after already submitting many cold applications with no results",
+    ],
+    successSignal:
+      "At least one of your target companies results in a warm introduction or referral instead of a purely cold application.",
+    milestoneTies: [31, 48],
+  },
+
+  77: {
+    definition:
+      "A Job Research Sheet is a structured summary of a target company's values, culture, and key people, prepared before an interview so you can speak knowledgeably and ask genuinely informed questions.",
+    whyItMatters:
+      "Interviewers can easily tell the difference between a candidate who did real research and one who skimmed the homepage five minutes before the call, and the difference shows up directly in the quality of questions you ask.",
+    whenWhoWhere: [
+      { label: "When", body: "Complete this for every company before its first interview, not just the ones you are most excited about." },
+      { label: "Who", body: "No collaborator required, though a current or former employee, if you can find one, is a valuable additional source beyond public information." },
+      { label: "Where", body: "Researched using the company's website, recent news, Glassdoor, and LinkedIn profiles of your specific interviewers if known." },
+    ],
+    howItWorks: [
+      "Fill in sections covering the company's mission and values, recent news or product launches, your interviewers' backgrounds if known, and the company's competitive position.",
+      "Draft two or three specific, informed questions to ask based on what you find.",
+    ],
+    tools: ["The company's website and press page", "Glassdoor for culture insight", "LinkedIn for researching specific interviewers"],
+    scenario: {
+      title: "The connection that built instant rapport",
+      body: "A student who researched her interviewer's LinkedIn background before a call noticed they had both attended the same regional case competition years apart, and mentioning it created an immediate, genuine rapport that carried through the rest of the conversation.",
+    },
+    pitfalls: [
+      "Only reading the homepage about us page",
+      "Preparing generic questions that could apply to any company rather than ones specific to what you actually found",
+    ],
+    successSignal:
+      "You can ask at least one question during the interview that clearly reflects specific research, not something generic.",
+    milestoneTies: [64],
+  },
+
+  78: {
+    definition:
+      "An Offer Comparison Matrix is a structured tool for comparing multiple job offers objectively across the factors that actually matter to you, rather than deciding based on gut feeling or salary number alone.",
+    whyItMatters:
+      "When real offers arrive, especially more than one at once, the pressure and excitement of the moment can make it hard to think clearly. A structured comparison keeps the decision grounded in your actual priorities from Stage One and Two rather than in the moment's emotion.",
+    whenWhoWhere: [
+      { label: "When", body: "Build the empty matrix before you have any offers in hand, so it is ready the moment you need it rather than assembled under decision pressure." },
+      { label: "Who", body: "A mentor or trusted advisor to sanity check your weighting of different factors, since it is easy to overweight salary in the moment." },
+      { label: "Where", body: "Built as a simple spreadsheet, referenced any time you are comparing two or more real offers." },
+    ],
+    howItWorks: [
+      "List the factors that matter most to you: salary, benefits, growth potential, culture fit, location, and anything else from your Stage One Core Values Audit.",
+      "Weight each factor by importance, then score each offer against every factor.",
+      "Let the weighted totals inform, not dictate, your final decision.",
+    ],
+    tools: ["A spreadsheet template", "Your Core Values Audit and Career Vision worksheets from Stage One"],
+    scenario: {
+      title: "Choosing growth over the bigger number",
+      body: "A student with two offers was initially drawn to the higher salary until she scored both offers against her actual priorities, including a value she had flagged in Stage One around mentorship and growth. The lower-salary offer scored higher overall, and she ultimately chose it, a decision she later said she would not have made under pure salary pressure alone.",
+    },
+    pitfalls: [
+      "Building the matrix but then ignoring it in favor of the highest number anyway",
+      "Forgetting to weight factors by actual importance to you specifically",
+    ],
+    successSignal:
+      "You can explain your final decision with specific reference to your own weighted priorities, not just it felt right or it paid more.",
+    milestoneTies: [1, 2],
   },
 };

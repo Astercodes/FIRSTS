@@ -1,12 +1,12 @@
 export type ModuleStatus = "complete" | "in-progress" | "available" | "locked";
-export type StageId = "one" | "two";
+export type StageId = "one" | "two" | "three";
 
 export type FirstModule = {
   id: number;
   code: string;
   stage: StageId;
   title: string;
-  category: "A" | "B" | "C" | "D" | "E" | "F" | "G" | "H" | "I" | "J";
+  category: "A" | "B" | "C" | "D" | "E" | "F" | "G" | "H" | "I" | "J" | "K" | "L" | "M";
   time: string;
   difficulty: "Easy" | "Moderate" | "Deep";
   status: ModuleStatus;
@@ -25,11 +25,15 @@ export const CATEGORY_META = {
   H: { label: "Professional Communication", color: "var(--pink-grapefruit)" },
   I: { label: "Professional Visibility", color: "var(--lime-zest)" },
   J: { label: "Professional Materials", color: "var(--citrus-lime)" },
+  K: { label: "Application Systems & Materials", color: "var(--sunshine-orange)" },
+  L: { label: "Interview Preparation", color: "var(--fuchsia-blast)" },
+  M: { label: "Closing the Loop & Offers", color: "var(--lime-zest)" },
 } as const;
 
 export const STAGES: { id: StageId; label: string; shortLabel: string; href: string }[] = [
   { id: "one", label: "Stage One · Self-Awareness & Career Clarity", shortLabel: "Stage One", href: "/dashboard/stage" },
   { id: "two", label: "Stage Two · Professional Identity & Personal Brand", shortLabel: "Stage Two", href: "/dashboard/stage/two" },
+  { id: "three", label: "Stage Three · Job Application & Interview Skills", shortLabel: "Stage Three", href: "/dashboard/stage/three" },
 ];
 
 const STAGE_ONE_FIRSTS: FirstModule[] = [
@@ -96,7 +100,30 @@ const STAGE_TWO_FIRSTS: FirstModule[] = [
   { id: 58, code: "B40", stage: "two", title: "Digital Presence Plan", category: "J", time: "1 hr", difficulty: "Easy", status: "locked" },
 ];
 
-export const FIRSTS: FirstModule[] = [...STAGE_ONE_FIRSTS, ...STAGE_TWO_FIRSTS];
+const STAGE_THREE_FIRSTS: FirstModule[] = [
+  { id: 59, code: "C1", stage: "three", title: "Job Application Tracker", category: "K", time: "30 min", difficulty: "Easy", status: "locked" },
+  { id: 60, code: "C2", stage: "three", title: "Application Strategy", category: "K", time: "2 to 3 hrs", difficulty: "Moderate", status: "locked" },
+  { id: 61, code: "C3", stage: "three", title: "Resume Version A/B Test", category: "K", time: "Ongoing", difficulty: "Deep", status: "locked" },
+  { id: 62, code: "C4", stage: "three", title: "Cover Letter Customization", category: "K", time: "15 to 20 min", difficulty: "Moderate", status: "locked" },
+  { id: 63, code: "C5", stage: "three", title: "Job Listing Analysis", category: "K", time: "10 to 15 min", difficulty: "Easy", status: "locked" },
+  { id: 64, code: "C6", stage: "three", title: "STAR Answer Prep", category: "L", time: "3 to 4 hrs", difficulty: "Moderate", status: "locked" },
+  { id: 65, code: "C7", stage: "three", title: "Behavioral Interview Prep", category: "L", time: "2 to 3 hrs", difficulty: "Moderate", status: "locked" },
+  { id: 66, code: "C8", stage: "three", title: "Technical Interview Prep", category: "L", time: "3 to 4 wks", difficulty: "Deep", status: "locked" },
+  { id: 67, code: "C9", stage: "three", title: "Case/Problem-Solving Prep", category: "L", time: "3 to 4 wks", difficulty: "Deep", status: "locked" },
+  { id: 68, code: "C10", stage: "three", title: "Mock Interview", category: "L", time: "45 min to 1 hr", difficulty: "Moderate", status: "locked" },
+  { id: 69, code: "C11", stage: "three", title: "Job Offer Negotiation Prep", category: "M", time: "2 to 3 hrs", difficulty: "Moderate", status: "locked" },
+  { id: 70, code: "C12", stage: "three", title: "Follow-Up Email After Interview", category: "M", time: "10 to 15 min", difficulty: "Easy", status: "locked" },
+  { id: 71, code: "C13", stage: "three", title: "Test/Assessment Prep", category: "L", time: "3 to 5 hrs", difficulty: "Moderate", status: "locked" },
+  { id: 72, code: "C14", stage: "three", title: "Mock Presentation", category: "L", time: "3 to 4 hrs", difficulty: "Moderate", status: "locked" },
+  { id: 73, code: "C15", stage: "three", title: "Interview Mindset Routine", category: "L", time: "30 min", difficulty: "Easy", status: "locked" },
+  { id: 74, code: "C16", stage: "three", title: "Thank-You Email Habit", category: "M", time: "10 min", difficulty: "Easy", status: "locked" },
+  { id: 75, code: "C17", stage: "three", title: "Application Deadline Calendar", category: "K", time: "15 min", difficulty: "Easy", status: "locked" },
+  { id: 76, code: "C18", stage: "three", title: "Career-Focused LinkedIn Application", category: "M", time: "30 min", difficulty: "Moderate", status: "locked" },
+  { id: 77, code: "C19", stage: "three", title: "Job Research Sheet", category: "K", time: "45 min to 1 hr", difficulty: "Moderate", status: "locked" },
+  { id: 78, code: "C20", stage: "three", title: "Offer Comparison Matrix", category: "M", time: "1 hr", difficulty: "Moderate", status: "locked" },
+];
+
+export const FIRSTS: FirstModule[] = [...STAGE_ONE_FIRSTS, ...STAGE_TWO_FIRSTS, ...STAGE_THREE_FIRSTS];
 
 export const MOCK_USER = {
   firstName: "Ada",

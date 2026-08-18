@@ -2,7 +2,12 @@
 
 import Link from "next/link";
 import { Reveal } from "@/components/ui/Reveal";
-import { FIRSTS as ALL_FIRSTS } from "@/lib/dashboardData";
+import { FIRSTS as ALL_FIRSTS, STAGES } from "@/lib/dashboardData";
+
+const STAGE_BLURBS: Record<string, string> = {
+  two: "Professional Identity & Personal Brand",
+  three: "Job Application & Interview Skills",
+};
 
 const MARQUEE_FIRSTS = [
   "Core Values Audit",
@@ -68,7 +73,10 @@ const CATEGORIES = [
 
 export function StagesPreview() {
   const stageOneCount = ALL_FIRSTS.filter((m) => m.stage === "one").length;
-  const stageTwoCount = ALL_FIRSTS.filter((m) => m.stage === "two").length;
+  const laterStages = STAGES.filter((s) => s.id !== "one").map((s) => ({
+    ...s,
+    count: ALL_FIRSTS.filter((m) => m.stage === s.id).length,
+  }));
 
   return (
     <section id="stages" className="relative overflow-hidden bg-paper-dim py-28">
@@ -140,24 +148,28 @@ export function StagesPreview() {
         ))}
       </div>
 
-      <Reveal delay={0.2} className="mx-auto mt-6 max-w-6xl px-6">
-        <div className="flex flex-col items-center justify-between gap-4 rounded-3xl border border-ink/10 bg-white p-7 sm:flex-row">
-          <div>
-            <p className="text-xs font-semibold uppercase tracking-[0.2em] text-berry-burst">
-              Stage Two is live
-            </p>
-            <p className="mt-1.5 text-[15px] text-ink/60">
-              Professional Identity &amp; Personal Brand adds {stageTwoCount}{" "}
-              more FIRSTS, and more stages are on the way.
-            </p>
-          </div>
-          <Link
-            href="/dashboard/stage/two"
-            className="shrink-0 rounded-full bg-ink px-5 py-2.5 text-sm font-semibold text-paper transition-colors hover:bg-ink/85"
+      <Reveal delay={0.2} className="mx-auto mt-6 max-w-6xl space-y-3 px-6">
+        {laterStages.map((stage) => (
+          <div
+            key={stage.id}
+            className="flex flex-col items-center justify-between gap-4 rounded-3xl border border-ink/10 bg-white p-7 sm:flex-row"
           >
-            See Stage Two →
-          </Link>
-        </div>
+            <div>
+              <p className="text-xs font-semibold uppercase tracking-[0.2em] text-berry-burst">
+                {stage.shortLabel} is live
+              </p>
+              <p className="mt-1.5 text-[15px] text-ink/60">
+                {STAGE_BLURBS[stage.id] ?? stage.shortLabel} adds {stage.count} more FIRSTS.
+              </p>
+            </div>
+            <Link
+              href={stage.href}
+              className="shrink-0 rounded-full bg-ink px-5 py-2.5 text-sm font-semibold text-paper transition-colors hover:bg-ink/85"
+            >
+              See {stage.shortLabel} →
+            </Link>
+          </div>
+        ))}
       </Reveal>
     </section>
   );

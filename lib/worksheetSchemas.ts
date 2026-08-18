@@ -763,4 +763,290 @@ export const WORKSHEET_SCHEMAS: Record<number, WorksheetField[]> = {
     { type: "textarea", key: "inconsistenciesFound", label: "Inconsistencies found", rows: 2, seed: "Resume lists my newest internship but LinkedIn still shows the old role, needs updating." },
     { type: "text", key: "nextReviewDate", label: "Next review date", seed: "Start of next semester" },
   ],
+
+  59: [
+    { type: "checklist", key: "coreColumns", label: "Core columns", section: "Core columns", items: ["Company", "Role", "Date Applied", "Resume/Cover Letter Version Used", "Application Source", "Deadline", "Current Status", "Next Action"], seedChecked: ["Company", "Role", "Date Applied"] },
+    { type: "table", key: "activeApplications", label: "Active applications log", section: "Active applications log", columns: [
+      { key: "companyRole", label: "Company / Role", kind: "text" },
+      { key: "dateApplied", label: "Date applied", kind: "text" },
+      { key: "versionUsed", label: "Version used", kind: "text" },
+      { key: "status", label: "Status", kind: "text" },
+      { key: "nextAction", label: "Next action", kind: "text" },
+    ], seedRows: [
+      { companyRole: "Acme Corp, Fraud Analyst", dateApplied: "Mar 3", versionUsed: "Skills-first v2", status: "Awaiting response", nextAction: "Follow up Mar 10" },
+    ] },
+    { type: "textarea", key: "weeklyFollowUps", label: "Which applications need a follow-up this week?", section: "Weekly review", rows: 2, seed: "Acme Corp (past the 7-day mark), Northwind (interview scheduled, needs prep)." },
+    { type: "textarea", key: "responsePattern", label: "What pattern am I noticing in response rates so far?", rows: 2, seed: "Tailored applications are getting more replies than quick-apply ones." },
+    { type: "text", key: "setupDate", label: "Tracker set up on (date)", section: "Sign-off", seed: "This week" },
+    { type: "text", key: "reviewDay", label: "Weekly review day I'll commit to", seed: "Sunday evenings" },
+  ],
+
+  60: [
+    { type: "text", key: "targetTitles", label: "Target job titles", section: "Target role criteria", seed: "Fraud Analyst, Risk Analyst" },
+    { type: "text", key: "targetIndustries", label: "Target industries", seed: "Fintech, banking" },
+    { type: "textarea", key: "mustHave", label: "Must-have criteria (non-negotiable)", rows: 2, seed: "Remote-friendly, entry-level or new-grad track" },
+    { type: "textarea", key: "niceToHave", label: "Nice-to-have criteria (flexible)", rows: 2, seed: "Mentorship program, name-brand company" },
+    { type: "text", key: "weeklyTarget", label: "Applications per week I'm committing to", section: "Weekly application targets", seed: "5 tailored applications" },
+    { type: "text", key: "tailoredRatio", label: "Tailored vs. quick-apply ratio", seed: "3 tailored to 2 quick-apply" },
+    { type: "checklist", key: "tailoringChecklist", label: "Tailoring checklist", section: "Tailoring checklist", items: ["Resume keywords matched to posting", "Cover letter references something specific about the company", "Application source noted in tracker", "Application logged same day"], seedChecked: [] },
+    { type: "textarea", key: "strategyStatement", label: "Strategy statement", section: "Strategy statement", rows: 2, seed: "I'm targeting fraud and risk analyst roles at fintech companies that value mentorship, applying to 5 tailored roles a week." },
+  ],
+
+  61: [
+    { type: "textarea", key: "versionADesc", label: "Version A description", section: "What you're testing", rows: 2, seed: "Chronological format, one page, summary at top." },
+    { type: "textarea", key: "versionBDesc", label: "Version B description", rows: 2, seed: "Skills-first format, one page, no summary." },
+    { type: "text", key: "variableTested", label: "The one variable being tested", seed: "Chronological vs. skills-first layout" },
+    { type: "table", key: "resultsTracker", label: "Results tracker", section: "Results tracker", columns: [
+      { key: "appNum", label: "Application #", kind: "text" },
+      { key: "version", label: "Version used (A/B)", kind: "text" },
+      { key: "companyType", label: "Company type", kind: "text" },
+      { key: "callback", label: "Callback? (Y/N)", kind: "text" },
+    ], seedRows: [{ appNum: "1", version: "B", companyType: "Fintech startup", callback: "Y" }] },
+    { type: "textarea", key: "whichWon", label: "Which version got more callbacks?", section: "Analysis", rows: 2, seed: "Version B, the skills-first layout, got noticeably more callbacks." },
+    { type: "text", key: "sampleSizeOk", label: "Was the sample size large enough to trust the result?", seed: "Close, 12 applications per version so far" },
+    { type: "textarea", key: "standardizeOn", label: "What will I standardize on going forward?", rows: 2, seed: "Skills-first layout for all future applications." },
+    { type: "text", key: "winningVersion", label: "Winning version", seed: "Version B" },
+  ],
+
+  62: [
+    { type: "textarea", key: "baseLetter", label: "Base letter", section: "Base letter", hint: "Draft a strong base version you can adapt, not a rigid template.", rows: 5, seed: "I'm writing to apply for the Fraud Analyst role at [Company]. In my coursework and internship, I've built a habit of catching patterns others miss." },
+    { type: "table", key: "customizationLog", label: "Customization log", section: "Customization log", columns: [
+      { key: "companyRole", label: "Company / Role", kind: "text" },
+      { key: "detail", label: "Specific detail referenced", kind: "text" },
+      { key: "sectionChanged", label: "Section changed", kind: "text" },
+      { key: "timeSpent", label: "Time spent", kind: "text" },
+    ], seedRows: [{ companyRole: "Acme Corp, Fraud Analyst", detail: "Their Q3 fraud-prevention blog post", sectionChanged: "Opening hook", timeSpent: "18 min" }] },
+    { type: "checklist", key: "qualityCheck", label: "Quality check", section: "Quality check", items: ["References something specific about the company", "Not just a resume repeated in paragraph form", "Opens with a real hook, not a generic line", "Under one page"], seedChecked: ["Under one page"] },
+  ],
+
+  63: [
+    { type: "text", key: "companyRole", label: "Company / role", section: "The listing", seed: "Acme Corp, Fraud Analyst" },
+    { type: "text", key: "listingSource", label: "Listing link or source", seed: "Company careers page" },
+    { type: "table", key: "keywordExtraction", label: "Keyword extraction", section: "Keyword extraction", columns: [
+      { key: "keyword", label: "Keyword / phrase", kind: "text" },
+      { key: "frequency", label: "Frequency", kind: "text" },
+      { key: "whereInResume", label: "Where it appears in my resume", kind: "text" },
+    ], seedRows: [{ keyword: "pattern detection", frequency: "3x", whereInResume: "Summary and bullet 2" }] },
+    { type: "textarea", key: "priorityOrder", label: "What does the order of requirements suggest about real priorities?", section: "Reading between the lines", rows: 2, seed: "SQL and pattern detection are listed first, before any degree requirement." },
+    { type: "textarea", key: "preferredToAddress", label: "What's listed as preferred that I should still address?", rows: 2, seed: "Experience with case management software, I'll mention my adjacent tool experience." },
+    { type: "textarea", key: "whatToAsk", label: "What does the listing not say that I should ask about?", rows: 2, seed: "Whether the role is hybrid or fully in-office." },
+    { type: "chipList", key: "topKeywords", label: "Top 3 keywords to emphasize", section: "Application notes", seed: ["pattern detection", "SQL", "investigation write-ups"] },
+  ],
+
+  64: [
+    { type: "textarea", key: "story1Situation", label: "Situation", section: "STAR story 1", rows: 2, seed: "Our club's sign-up system was silently failing under load before a big event." },
+    { type: "textarea", key: "story1Task", label: "Task", rows: 2, seed: "I was the only one with backend access, so fixing it fell to me." },
+    { type: "textarea", key: "story1Action", label: "Action", rows: 2, seed: "I audited the failure logs, redesigned the queue, and added retry logic." },
+    { type: "textarea", key: "story1Result", label: "Result", rows: 2, seed: "Processing errors dropped 50% and we had zero silent failures at the event." },
+    { type: "chipList", key: "story1Questions", label: "Questions this story could answer", seed: ["Tell me about a technical problem you solved", "Tell me about a time you worked independently"] },
+    { type: "textarea", key: "story2Situation", label: "Situation", section: "STAR story 2", rows: 2, seed: "A group project teammate stopped responding two weeks before the deadline." },
+    { type: "textarea", key: "story2Task", label: "Task", rows: 2, seed: "I needed to redistribute their work without blowing up the timeline." },
+    { type: "textarea", key: "story2Action", label: "Action", rows: 2, seed: "I split their section between the rest of us and set daily check-ins." },
+    { type: "textarea", key: "story2Result", label: "Result", rows: 2, seed: "We submitted on time and the teammate rejoined for the presentation." },
+    { type: "chipList", key: "story2Questions", label: "Questions this story could answer", seed: ["Tell me about a conflict on a team", "Tell me about a time you showed leadership"] },
+    { type: "textarea", key: "story3Situation", label: "Situation", section: "STAR story 3", rows: 2, seed: "I misjudged a project timeline and delivered a first draft two days late." },
+    { type: "textarea", key: "story3Task", label: "Task", rows: 2, seed: "I needed to own the mistake and rebuild trust with my team lead." },
+    { type: "textarea", key: "story3Action", label: "Action", rows: 2, seed: "I flagged it as soon as I knew, proposed a revised timeline, and delivered early on the next milestone." },
+    { type: "textarea", key: "story3Result", label: "Result", rows: 2, seed: "My team lead gave me more ownership on the next project." },
+    { type: "chipList", key: "story3Questions", label: "Questions this story could answer", seed: ["Tell me about a mistake you made", "Tell me about a time you missed a deadline"] },
+    { type: "table", key: "practiceLog", label: "Practice log", section: "Practice log", columns: [
+      { key: "storyUsed", label: "Story used", kind: "text" },
+      { key: "question", label: "Question asked", kind: "text" },
+      { key: "notes", label: "Delivery notes", kind: "text" },
+    ], seedRows: [{ storyUsed: "Story 1", question: "Tell me about a problem you solved", notes: "Ran 15 seconds too long, tighten the Situation." }] },
+  ],
+
+  65: [
+    { type: "table", key: "questionsBank", label: "Common questions bank", section: "Common questions bank", hint: "Match each question to one of your STAR stories from C6.", columns: [
+      { key: "question", label: "Behavioral question", kind: "text" },
+      { key: "storyMatched", label: "STAR story matched", kind: "text" },
+      { key: "confidence", label: "Confidence (1 to 10)", kind: "rating" },
+    ], seedRows: [{ question: "Tell me about a time you dealt with conflict", storyMatched: "Story 2, the unresponsive teammate", confidence: 3 }] },
+    { type: "textarea", key: "leastPrepared", label: "Which question type do I feel least prepared for?", section: "Weak spots", rows: 2, seed: "Questions about handling failure or being told no." },
+    { type: "textarea", key: "storyToDevelop", label: "What story could I develop to cover that gap?", rows: 2, seed: "The time my first draft was rejected and I had to rework it under a tighter deadline." },
+    { type: "table", key: "practiceLog", label: "Practice log", section: "Practice log", columns: [
+      { key: "practicedWith", label: "Practiced with", kind: "text" },
+      { key: "question", label: "Question", kind: "text" },
+      { key: "feedback", label: "Feedback", kind: "text" },
+    ], seedRows: [{ practicedWith: "Career center advisor", question: "Tell me about a conflict", feedback: "Good structure, land the result faster." }] },
+  ],
+
+  66: [
+    { type: "table", key: "skillAreas", label: "Skill areas to cover", section: "Skill areas", columns: [
+      { key: "skill", label: "Skill / topic area", kind: "text" },
+      { key: "confidence", label: "Current confidence (1 to 10)", kind: "rating" },
+      { key: "resource", label: "Practice resource", kind: "text" },
+    ], seedRows: [{ skill: "SQL joins and window functions", confidence: 3, resource: "LeetCode SQL track" }] },
+    { type: "table", key: "practiceSchedule", label: "Practice schedule", section: "Practice schedule", columns: [
+      { key: "day", label: "Day", kind: "text" },
+      { key: "topic", label: "Topic", kind: "text" },
+      { key: "timeBlock", label: "Time block", kind: "text" },
+    ], seedRows: [{ day: "Tuesday", topic: "SQL joins", timeBlock: "7 to 8 PM" }] },
+    { type: "table", key: "mockProblemLog", label: "Mock problem log", section: "Mock problem log", columns: [
+      { key: "problem", label: "Problem / question", kind: "text" },
+      { key: "solved", label: "Solved? (Y/N)", kind: "text" },
+      { key: "different", label: "What I'd do differently", kind: "text" },
+    ], seedRows: [{ problem: "Flag duplicate transactions", solved: "Y", different: "Would use a window function instead of a subquery." }] },
+    { type: "textarea", key: "shakiestArea", label: "What technical area still feels shakiest?", section: "Reflection", rows: 2, seed: "Window functions under time pressure." },
+    { type: "textarea", key: "planToClose", label: "What's my plan to close that gap before the interview?", rows: 2, seed: "Ten focused problems this week, timed." },
+  ],
+
+  67: [
+    { type: "chipList", key: "frameworkSteps", label: "My case-solving steps", section: "My framework", hint: "Write out the structure you'll default to when given an open-ended case.", seed: ["Clarify the objective", "Structure the problem into branches", "Ask for or estimate the data I need", "Work through each branch out loud", "Synthesize a recommendation"] },
+    { type: "table", key: "practiceCaseLog", label: "Practice case log", section: "Practice case log", columns: [
+      { key: "prompt", label: "Case prompt", kind: "text" },
+      { key: "framework", label: "Framework used", kind: "text" },
+      { key: "stuck", label: "Where I got stuck", kind: "text" },
+      { key: "time", label: "Time taken", kind: "text" },
+    ], seedRows: [{ prompt: "Should a coffee chain enter a new city?", framework: "Market entry", stuck: "Sizing the addressable market", time: "25 min" }] },
+    { type: "textarea", key: "consistentlyStuck", label: "Where do I consistently get stuck?", section: "Reflection", rows: 2, seed: "Sizing and estimation, I jump to a number too fast." },
+    { type: "textarea", key: "nextTimeChange", label: "What's one thing I'll do differently next practice case?", rows: 2, seed: "Narrate my estimation logic step by step instead of guessing out loud." },
+  ],
+
+  68: [
+    { type: "text", key: "mockPartner", label: "Mock partner", section: "Setup", seed: "Career center advisor" },
+    { type: "text", key: "dateTime", label: "Date / time", seed: "Thursday, 4 PM" },
+    { type: "text", key: "format", label: "Format (video / in person / phone)", seed: "Video call" },
+    { type: "scale", key: "overallConfidence", label: "Overall confidence", section: "Self-assessment (immediately after)", seed: 60 },
+    { type: "scale", key: "clarityOfAnswers", label: "Clarity of answers", seed: 70 },
+    { type: "scale", key: "composure", label: "Composure under pressure", seed: 50 },
+    { type: "textarea", key: "whatWorked", label: "What structure or delivery worked well?", section: "Partner feedback", rows: 2, seed: "STAR stories landed clearly and the results stood out." },
+    { type: "textarea", key: "whatUnclear", label: "Where did answers feel unclear or unfocused?", rows: 2, seed: "The technical walkthrough rambled before getting to the point." },
+    { type: "textarea", key: "biggestFix", label: "What's the single biggest thing to fix before the real interview?", rows: 2, seed: "Lead with the result, then explain how I got there." },
+    { type: "chipList", key: "actionItems", label: "What I'll adjust before the next round", section: "Action items", seed: ["Lead with the result first", "Trim the technical walkthrough to 90 seconds"] },
+  ],
+
+  69: [
+    { type: "text", key: "marketRange", label: "Market salary range for this role (researched)", section: "Know your numbers", seed: "$58K to $68K" },
+    { type: "text", key: "targetNumber", label: "My target number", seed: "$64K" },
+    { type: "text", key: "walkAway", label: "My walk-away minimum", seed: "$58K" },
+    { type: "table", key: "beyondSalary", label: "Beyond salary", section: "Beyond salary", columns: [
+      { key: "factor", label: "Factor (benefits, start date, remote, etc.)", kind: "text" },
+      { key: "priority", label: "Priority (H/M/L)", kind: "text" },
+      { key: "flexible", label: "Flexible?", kind: "text" },
+    ], seedRows: [{ factor: "Remote flexibility", priority: "H", flexible: "Somewhat" }] },
+    { type: "textarea", key: "howOpen", label: "How I'll open the conversation", section: "Talking points", rows: 2, seed: "Thank them for the offer, then ask if there's room to discuss the number." },
+    { type: "textarea", key: "ifAskedFirst", label: "My response if they ask for a number first", rows: 2, seed: "I'll share my researched range and let them respond within it." },
+    { type: "textarea", key: "ifFinal", label: "My response if they say the offer is final", rows: 2, seed: "I'll ask if there's flexibility elsewhere, like start date or a signing bonus." },
+    { type: "textarea", key: "finalResult", label: "Final result", section: "Outcome log", rows: 2, seed: "Not yet negotiated." },
+  ],
+
+  70: [
+    { type: "text", key: "interviewerNames", label: "Interviewer name(s)", section: "Draft", seed: "Jordan Reyes" },
+    { type: "textarea", key: "specificDetail", label: "One specific detail from the conversation to reference", rows: 2, seed: "Their mention of the team's new fraud-pattern dashboard launching next quarter." },
+    { type: "table", key: "sendTracker", label: "Send tracker", section: "Send tracker", columns: [
+      { key: "interview", label: "Interview", kind: "text" },
+      { key: "sentWithin24", label: "Sent within 24 hrs? (Y/N)", kind: "text" },
+      { key: "response", label: "Response received", kind: "text" },
+    ], seedRows: [{ interview: "Acme Corp, first round", sentWithin24: "Y", response: "Not yet" }] },
+  ],
+
+  71: [
+    { type: "text", key: "assessmentType", label: "Assessment name / type", section: "Assessment details", seed: "Numerical reasoning test" },
+    { type: "text", key: "assessmentFormat", label: "Format (timed, multiple choice, etc.)", seed: "Timed, 25 questions, 20 minutes" },
+    { type: "text", key: "assessmentDate", label: "Date scheduled", seed: "Next Friday" },
+    { type: "table", key: "practiceLog", label: "Practice log", section: "Practice log", columns: [
+      { key: "round", label: "Practice round", kind: "text" },
+      { key: "score", label: "Score / result", kind: "text" },
+      { key: "weakAreas", label: "Weak areas noticed", kind: "text" },
+    ], seedRows: [{ round: "Round 1", score: "14/25", weakAreas: "Ran out of time on data tables" }] },
+    { type: "textarea", key: "biggestWeakArea", label: "What's my biggest weak area based on practice rounds?", section: "Prep plan", rows: 2, seed: "Reading data tables quickly under time pressure." },
+    { type: "textarea", key: "strengthenPlan", label: "What's my plan to strengthen it before the real assessment?", rows: 2, seed: "Two more timed practice sets focused on table-reading questions." },
+  ],
+
+  72: [
+    { type: "text", key: "topic", label: "Topic / assignment", section: "Presentation plan", seed: "Case study walkthrough for the final-round interview" },
+    { type: "text", key: "timeLimit", label: "Time limit", seed: "5 minutes" },
+    { type: "chipList", key: "keyPoints", label: "Key points I want to land", seed: ["The problem framing", "My recommended approach", "The expected impact"] },
+    { type: "table", key: "practiceLog", label: "Practice log", section: "Practice log", columns: [
+      { key: "attempt", label: "Attempt", kind: "text" },
+      { key: "length", label: "Length", kind: "text" },
+      { key: "feedback", label: "Feedback", kind: "text" },
+    ], seedRows: [{ attempt: "1", length: "7:30", feedback: "Cut the background section, it ran long." }] },
+    { type: "checklist", key: "finalCheck", label: "Final check", section: "Final check", items: ["Stays within time limit", "Opens with a clear point, not a slow warm-up", "Visuals (if any) are simple, not cluttered", "Practiced out loud at least twice"], seedChecked: ["Practiced out loud at least twice"] },
+  ],
+
+  73: [
+    { type: "textarea", key: "breathingStep", label: "Breathing / grounding step", section: "Routine design", rows: 2, seed: "Four slow breaths, in for four counts, out for six." },
+    { type: "textarea", key: "visualization", label: "Visualization: what I picture before walking in", rows: 2, seed: "Walking out of the interview feeling like I represented myself accurately." },
+    { type: "text", key: "phrase", label: "One phrase I tell myself right before starting", seed: "I already know this material, I just need to say it out loud." },
+    { type: "checklist", key: "preInterviewChecklist", label: "Pre-interview checklist", section: "Pre-interview checklist", items: ["Reviewed the job listing and my notes", "Reviewed 2 to 3 STAR stories", "Did the grounding routine", "Arrived or logged on 10 minutes early"], seedChecked: [] },
+    { type: "scale", key: "howComposed", label: "How composed I felt", section: "Post-interview debrief", seed: 60 },
+    { type: "textarea", key: "whatHelped", label: "What helped the most this time?", rows: 2, seed: "The breathing exercise, it actually slowed my heart rate down." },
+    { type: "textarea", key: "adjustNextTime", label: "What will I adjust in the routine next time?", rows: 2, seed: "Do the visualization earlier, not in the last 2 minutes." },
+  ],
+
+  74: [
+    { type: "textarea", key: "defaultTemplate", label: "My default template", section: "My default template", rows: 4, seed: "Thank you for taking the time to speak with me about [role] today. I especially enjoyed hearing about [specific detail]. I'm even more excited about the opportunity after our conversation, and I look forward to hearing about next steps." },
+    { type: "table", key: "habitTracker", label: "Habit tracker", section: "Habit tracker", columns: [
+      { key: "date", label: "Interview date", kind: "text" },
+      { key: "sent", label: "Thank-you sent? (Y/N)", kind: "text" },
+      { key: "within24", label: "Sent within 24 hrs?", kind: "text" },
+    ], seedRows: [{ date: "Mar 3", sent: "Y", within24: "Y" }] },
+    { type: "text", key: "sendRate", label: "My send rate this month", section: "Consistency check", seed: "100%, 3 for 3" },
+  ],
+
+  75: [
+    { type: "checklist", key: "systemSetup", label: "System setup", section: "System setup", items: ["Calendar app chosen", "Reminder set for 3 days before each deadline", "Reminder set for day-of", "Synced with phone notifications"], seedChecked: ["Calendar app chosen"] },
+    { type: "table", key: "upcomingDeadlines", label: "Upcoming deadlines", section: "Upcoming deadlines", columns: [
+      { key: "companyRole", label: "Company / role", kind: "text" },
+      { key: "deadline", label: "Deadline", kind: "text" },
+      { key: "daysUntil", label: "Days until due", kind: "text" },
+      { key: "status", label: "Status", kind: "text" },
+    ], seedRows: [{ companyRole: "Acme Corp, Fraud Analyst", deadline: "Mar 15", daysUntil: "6", status: "Not yet submitted" }] },
+    { type: "textarea", key: "missedAny", label: "Have I missed any deadlines so far?", section: "Missed deadline review", rows: 2, seed: "Not yet." },
+    { type: "textarea", key: "whatCaused", label: "What caused it, and what will prevent it next time?", rows: 2, seed: "Not applicable so far, reminders are set 3 days out to stay ahead." },
+  ],
+
+  76: [
+    { type: "table", key: "networkMap", label: "Network map", section: "Network map", hint: "List connections at companies you're targeting.", columns: [
+      { key: "connection", label: "Connection", kind: "text" },
+      { key: "company", label: "Company", kind: "text" },
+      { key: "relationship", label: "Relationship", kind: "text" },
+      { key: "asked", label: "Asked for referral? (Y/N)", kind: "text" },
+    ], seedRows: [{ connection: "Priya M.", company: "Acme Corp", relationship: "Alum from my program", asked: "N" }] },
+    { type: "textarea", key: "referralDraft", label: "Referral request draft", section: "Referral request draft", rows: 3, seed: "Hi Priya, I saw you're on the fraud team at Acme. I just applied for the Fraud Analyst role and would love to hear a bit about what the team's working on, no pressure at all if you're busy." },
+    { type: "table", key: "networkVsCold", label: "Network vs. cold comparison", section: "Network vs. cold comparison", columns: [
+      { key: "application", label: "Application", kind: "text" },
+      { key: "method", label: "Method (network / cold)", kind: "text" },
+      { key: "outcome", label: "Outcome", kind: "text" },
+    ], seedRows: [{ application: "Acme Corp", method: "Network", outcome: "Referred within 3 days" }] },
+    { type: "textarea", key: "whichPerforms", label: "What I'm noticing about which method performs better", rows: 2, seed: "Warm intros are getting faster responses than cold applications so far." },
+  ],
+
+  77: [
+    { type: "text", key: "company", label: "Company", section: "Company basics", seed: "Acme Corp" },
+    { type: "textarea", key: "missionValues", label: "Mission / stated values", rows: 2, seed: "Making fraud detection fast enough that honest customers never feel it." },
+    { type: "textarea", key: "recentNews", label: "Recent news or developments", rows: 2, seed: "Just launched a new real-time fraud-pattern dashboard." },
+    { type: "table", key: "cultureSignals", label: "Culture signals", section: "Culture signals", columns: [
+      { key: "source", label: "Source (Glassdoor, LinkedIn, etc.)", kind: "text" },
+      { key: "whatItTells", label: "What it tells me", kind: "text" },
+    ], seedRows: [{ source: "Glassdoor", whatItTells: "Reviewers mention strong onboarding and mentorship for new analysts." }] },
+    { type: "table", key: "keyPeople", label: "Key people", section: "Key people", columns: [
+      { key: "name", label: "Name", kind: "text" },
+      { key: "role", label: "Role", kind: "text" },
+      { key: "background", label: "Relevant background", kind: "text" },
+    ], seedRows: [{ name: "Jordan Reyes", role: "Hiring manager", background: "Former auditor, 6 years on the fraud team" }] },
+    { type: "textarea", key: "myAngle", label: "How I'll connect my background to their specific mission", section: "My angle", rows: 2, seed: "My coursework in pattern detection lines up directly with their real-time dashboard work." },
+  ],
+
+  78: [
+    { type: "table", key: "weightedFactors", label: "Weighted factors", section: "Weighted factors", hint: "List and weight the factors that matter most, drawing on your Stage One Core Values Audit.", columns: [
+      { key: "factor", label: "Factor", kind: "text" },
+      { key: "weight", label: "Weight (1 to 10)", kind: "rating" },
+    ], seedRows: [
+      { factor: "Growth and mentorship", weight: 9 },
+      { factor: "Salary", weight: 6 },
+    ] },
+    { type: "table", key: "offerScoring", label: "Offer scoring", section: "Offer scoring", columns: [
+      { key: "factor", label: "Factor", kind: "text" },
+      { key: "offerA", label: "Offer A score", kind: "rating" },
+      { key: "offerB", label: "Offer B score", kind: "rating" },
+    ], seedRows: [{ factor: "Growth and mentorship", offerA: 4, offerB: 5 }] },
+    { type: "text", key: "offerATotal", label: "Offer A weighted total", section: "Totals & decision", seed: "" },
+    { type: "text", key: "offerBTotal", label: "Offer B weighted total", seed: "" },
+    { type: "textarea", key: "matchesGut", label: "Does the highest-scoring offer match my gut instinct?", rows: 2, seed: "" },
+    { type: "textarea", key: "ifNot", label: "If not, what does that tell me?", rows: 2, seed: "" },
+    { type: "text", key: "finalDecision", label: "Final decision", seed: "" },
+  ],
 };
