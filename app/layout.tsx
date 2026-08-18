@@ -15,7 +15,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "FIRSTS — Career Launch & Foundation",
+  title: "FIRSTS: Career Launch & Foundation",
   description:
     "The guided, AI-assisted path from self-awareness to career clarity. FIRSTS turns reflection into a career you actually chose.",
 };

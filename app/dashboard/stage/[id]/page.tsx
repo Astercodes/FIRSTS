@@ -16,7 +16,7 @@ type Params = Promise<{ id: string }>;
 export async function generateMetadata({ params }: { params: Params }): Promise<Metadata> {
   const { id } = await params;
   const m = FIRSTS.find((f) => f.id === Number(id));
-  return { title: m ? `${m.title} — FIRSTS` : "FIRSTS" };
+  return { title: m ? `${m.title} | FIRSTS` : "FIRSTS" };
 }
 
 export default async function ModulePage({ params }: { params: Params }) {

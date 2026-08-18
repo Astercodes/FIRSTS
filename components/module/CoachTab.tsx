@@ -10,7 +10,7 @@ type Message = { role: "coach" | "user"; text: string };
 const MODE_META: Record<CoachMode, { label: string; intro: string }> = {
   reflective: {
     label: "Reflective Socratic Coach",
-    intro: "I'll ask questions here — I won't hand you a finished answer. Where do you want to start?",
+    intro: "I'll ask questions here. I won't hand you a finished answer. Where do you want to start?",
   },
   research: {
     label: "Research Analyst",
@@ -76,7 +76,7 @@ export function CoachTab({
         {meta.label}
       </span>
       <p className="mb-5 rounded-2xl bg-paper-dim px-4 py-3 text-xs leading-relaxed text-ink/50">
-        This Coach is a guidance tool, not a licensed counselor — for career,
+        This Coach is a guidance tool, not a licensed counselor. For career,
         legal, or financial decisions, loop in a human advisor too.
       </p>
 

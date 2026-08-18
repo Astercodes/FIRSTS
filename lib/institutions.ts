@@ -4,7 +4,7 @@ export type Institution = {
   sso: boolean;
 };
 
-// Demo partner roster — stands in for the real institution directory /
+// Demo partner roster, stands in for the real institution directory /
 // SSO config service until that backend exists.
 export const PARTNER_INSTITUTIONS: Institution[] = [
   { name: "Stanford University", domain: "stanford.edu", sso: true },

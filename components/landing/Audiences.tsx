@@ -6,7 +6,7 @@ const AUDIENCES = [
   {
     tag: "Path A",
     title: "I'm a student at a partner school",
-    body: "SSO or roster invite, auto-joined to your cohort, your advisor sees your progress — never your raw reflections, unless you share.",
+    body: "SSO or roster invite, auto-joined to your cohort, your advisor sees your progress, never your raw reflections, unless you share.",
     color: "var(--neon-pink)",
   },
   {
@@ -18,7 +18,7 @@ const AUDIENCES = [
   {
     tag: "Path C",
     title: "I'm an advisor or career center",
-    body: "Cohort dashboards, at-risk flags, roster sync, and completion analytics — without ever seeing a student's private reflection.",
+    body: "Cohort dashboards, at-risk flags, roster sync, and completion analytics, all without ever seeing a student's private reflection.",
     color: "var(--citrus-lime)",
   },
 ];

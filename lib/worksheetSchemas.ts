@@ -18,20 +18,20 @@ export type WorksheetField =
 
 export const WORKSHEET_SCHEMAS: Record<number, WorksheetField[]> = {
   2: [
-    { type: "textarea", key: "visionStatement", label: "Vision statement", hint: "“In the next 5–10 years, I see myself…”", rows: 3, seed: "Leading a small product team building tools that make messy operations legible for non-technical people, working from a place with real seasons, mentoring at least one person junior to me." },
+    { type: "textarea", key: "visionStatement", label: "Vision statement", hint: "“In the next 5 to 10 years, I see myself…”", rows: 3, seed: "Leading a small product team building tools that make messy operations legible for non-technical people, working from a place with real seasons, mentoring at least one person junior to me." },
     { type: "textarea", key: "passions", label: "My passions", hint: "“I feel most alive when I am…”", rows: 2, seed: "Untangling a confusing process until it clicks for someone else." },
     { type: "textarea", key: "coreValues", label: "Core values", hint: "“These are the principles I refuse to compromise in my work and life…”", rows: 2, seed: "Honesty even when it's inconvenient, and protecting time for the people closest to me." },
-    { type: "textarea", key: "longTermGoals", label: "Long-term goals (5–10 years)", hint: "“By Year X, I aim to have achieved…”", rows: 2, seed: "By year 8, leading a small team and known for shipping things that actually get used." },
-    { type: "textarea", key: "midTermGoals", label: "Mid-term goals (2–3 years)", hint: "“In the next 2–3 years, I will accomplish…”", rows: 2, seed: "Own one project end-to-end and build a track record I can point to in interviews." },
-    { type: "textarea", key: "shortTermGoals", label: "Short-term goals (6–12 months)", hint: "“Within the next year, I will…”", rows: 2, seed: "Finish my Skill Growth Plan's top skill and complete two informational interviews." },
-    { type: "table", key: "steppingStones", label: "Stepping stones — actions", columns: [
+    { type: "textarea", key: "longTermGoals", label: "Long-term goals (5 to 10 years)", hint: "“By Year X, I aim to have achieved…”", rows: 2, seed: "By year 8, leading a small team and known for shipping things that actually get used." },
+    { type: "textarea", key: "midTermGoals", label: "Mid-term goals (2 to 3 years)", hint: "“In the next 2 to 3 years, I will accomplish…”", rows: 2, seed: "Own one project end-to-end and build a track record I can point to in interviews." },
+    { type: "textarea", key: "shortTermGoals", label: "Short-term goals (6 to 12 months)", hint: "“Within the next year, I will…”", rows: 2, seed: "Finish my Skill Growth Plan's top skill and complete two informational interviews." },
+    { type: "table", key: "steppingStones", label: "Stepping stones: actions", columns: [
       { key: "goal", label: "Short-term goal", kind: "text" },
       { key: "action", label: "Supporting action", kind: "text" },
       { key: "timeline", label: "Timeline", kind: "text" },
     ], seedRows: [
       { goal: "Finish top skill from growth plan", action: "30 min practice, 3x/week", timeline: "Next quarter" },
     ] },
-    { type: "textarea", key: "barriers", label: "Potential barriers & solutions", hint: "“I may face these challenges… I can address them by…”", rows: 2, seed: "Time is the biggest risk — I'll protect two fixed evenings a week for this." },
+    { type: "textarea", key: "barriers", label: "Potential barriers & solutions", hint: "“I may face these challenges… I can address them by…”", rows: 2, seed: "Time is the biggest risk, I'll protect two fixed evenings a week for this." },
     { type: "text", key: "reviewDate", label: "Review & update", hint: "“On [date], I will revisit this page to update my vision and goals.”", seed: "In 12 months" },
   ],
 
@@ -40,7 +40,7 @@ export const WORKSHEET_SCHEMAS: Record<number, WorksheetField[]> = {
     { type: "textarea", key: "recurringThemes", label: "Recurring themes", hint: "“The problem that consistently moves me is…”", section: "Discovering your purpose", rows: 2, seed: "People who are capable but stuck because no one gave them a map." },
     { type: "textarea", key: "naturalStrengths", label: "Natural strengths in service", hint: "“The type of people I feel drawn to support are…”", section: "Discovering your purpose", rows: 2, seed: "People one or two steps behind me who just need someone to go first." },
     { type: "textarea", key: "impactVision", label: "Impact vision", hint: "“If I had unlimited resources, I would devote my life to…”", section: "Discovering your purpose", rows: 2, seed: "Building free, honest guides for the firsts nobody explains clearly." },
-    { type: "chipList", key: "themes", label: "Recurring themes across your answers", hint: "3–5 patterns you notice above.", section: "Patterns & insights", seed: ["Making confusing things clear", "Helping people who are one step behind me", "Building systems, not just giving advice"] },
+    { type: "chipList", key: "themes", label: "Recurring themes across your answers", hint: "3 to 5 patterns you notice above.", section: "Patterns & insights", seed: ["Making confusing things clear", "Helping people who are one step behind me", "Building systems, not just giving advice"] },
     { type: "text", key: "purposeCommitment", label: "My life is committed to", section: "Draft your purpose statement", seed: "turning confusion into a clear next step" },
     { type: "text", key: "purposeSoThat", label: "So that", section: "Draft your purpose statement", seed: "people don't have to figure out their firsts alone" },
     { type: "textarea", key: "internshipApplication", label: "Internship / job selection", hint: "How does this purpose guide which opportunities you accept?", section: "Contextual application", rows: 2, seed: "I lean toward roles where I'm building something others will actually use, not just internal reports." },
@@ -50,24 +50,24 @@ export const WORKSHEET_SCHEMAS: Record<number, WorksheetField[]> = {
 
   4: [
     { type: "text", key: "currentIdentity", label: "Current identity", hint: "“I am a/an…”", section: "Identity foundation builder", seed: "Computer science student focused on backend systems" },
-    { type: "chipList", key: "coreStrengths", label: "Core strengths (3–5)", hint: "My strongest abilities are…", section: "Identity foundation builder", seed: ["Systems thinking", "Calm under ambiguity", "Explaining technical detail simply"] },
-    { type: "text", key: "signatureStrength", label: "Condensed into 1–2 signature strengths", section: "Identity foundation builder", seed: "Turning messy systems into ones people can trust" },
+    { type: "chipList", key: "coreStrengths", label: "Core strengths (3 to 5)", hint: "My strongest abilities are…", section: "Identity foundation builder", seed: ["Systems thinking", "Calm under ambiguity", "Explaining technical detail simply"] },
+    { type: "text", key: "signatureStrength", label: "Condensed into 1 to 2 signature strengths", section: "Identity foundation builder", seed: "Turning messy systems into ones people can trust" },
     { type: "textarea", key: "focusArea", label: "Focus area / direction", hint: "The industry, function, or problem space I'm moving toward.", section: "Identity foundation builder", rows: 2, seed: "Backend and data infrastructure for small, fast-moving product teams." },
     { type: "text", key: "valuePropHelp", label: "I help / aim to help", section: "Identity foundation builder", seed: "fast-moving teams" },
     { type: "text", key: "valuePropBy", label: "By", section: "Identity foundation builder", seed: "building systems they can trust without babysitting" },
     { type: "text", key: "valuePropSoThat", label: "So that", section: "Identity foundation builder", seed: "they can focus on the product, not the plumbing" },
     { type: "textarea", key: "differentiator", label: "Differentiator", hint: "What makes me distinct at this stage?", section: "Identity foundation builder", rows: 2, seed: "I've already rebuilt one broken system from scratch, most peers my level haven't." },
-    { type: "textarea", key: "narrativeDraft", label: "3–5 sentence narrative", section: "Narrative draft", rows: 4, seed: "I'm a computer science student focused on backend systems. I specialize in turning fragile, undocumented processes into ones a team can actually trust. I'm currently developing experience in distributed systems and observability. My goal is to contribute to a small infrastructure team where reliability is treated as a feature, not an afterthought." },
+    { type: "textarea", key: "narrativeDraft", label: "3 to 5 sentence narrative", section: "Narrative draft", rows: 4, seed: "I'm a computer science student focused on backend systems. I specialize in turning fragile, undocumented processes into ones a team can actually trust. I'm currently developing experience in distributed systems and observability. My goal is to contribute to a small infrastructure team where reliability is treated as a feature, not an afterthought." },
     { type: "checklist", key: "clarityChecklist", label: "Clarity & strength checklist", section: "Clarity & strength checklist", items: ["Is it specific (not generic)?", "Does it reflect my real strengths?", "Does it show direction, not confusion?", "Can I say it naturally without reading?", "Does it align with my Core Values?"], seedChecked: ["Is it specific (not generic)?", "Does it reflect my real strengths?"] },
     { type: "textarea", key: "linkedinVersion", label: "LinkedIn summary (professional tone)", section: "Adaptation versions", rows: 2, seed: "Backend-focused CS student turning fragile systems into ones teams can trust." },
-    { type: "textarea", key: "interviewVersion", label: "Interview introduction (conversational tone)", section: "Adaptation versions", rows: 2, seed: "I'm a CS student who really likes fixing things that are quietly broken — I rebuilt one of our club's core systems last year and haven't stopped since." },
-    { type: "textarea", key: "networkingVersion", label: "Networking event (30-second version)", section: "Adaptation versions", rows: 2, seed: "I fix broken backend systems — did it once for real last year, cut error rates by half." },
+    { type: "textarea", key: "interviewVersion", label: "Interview introduction (conversational tone)", section: "Adaptation versions", rows: 2, seed: "I'm a CS student who really likes fixing things that are quietly broken, I rebuilt one of our club's core systems last year and haven't stopped since." },
+    { type: "textarea", key: "networkingVersion", label: "Networking event (30-second version)", section: "Adaptation versions", rows: 2, seed: "I fix broken backend systems: did it once for real last year, cut error rates by half." },
   ],
 
   5: [
     { type: "chipList", key: "hardSkills", label: "Hard skills identified", seed: ["SQL / data querying", "Python scripting", "Financial modeling"] },
     { type: "chipList", key: "softSkills", label: "Soft skills identified", seed: ["Stakeholder communication", "Conflict mediation"] },
-    { type: "table", key: "skillTable", label: "Skill inventory table", hint: "Confidence 1–5 (1 = novice, 5 = expert).", columns: [
+    { type: "table", key: "skillTable", label: "Skill inventory table", hint: "Confidence 1 to 5 (1 = novice, 5 = expert).", columns: [
       { key: "skill", label: "Skill", kind: "text" },
       { key: "category", label: "Category (Hard/Soft)", kind: "text" },
       { key: "confidence", label: "Confidence", kind: "rating" },
@@ -94,10 +94,10 @@ export const WORKSHEET_SCHEMAS: Record<number, WorksheetField[]> = {
       { key: "action", label: "Action to improve", kind: "text" },
       { key: "support", label: "Support needed", kind: "text" },
     ], seedRows: [
-      { weakness: "Following up after meetings", category: "Soft", impact: "Loses momentum on group projects", evidence: "Two group projects stalled waiting on my recap", priority: "H", action: "Send a 3-line recap within 1 hour", support: "None — just discipline" },
+      { weakness: "Following up after meetings", category: "Soft", impact: "Loses momentum on group projects", evidence: "Two group projects stalled waiting on my recap", priority: "H", action: "Send a 3-line recap within 1 hour", support: "None: just discipline" },
     ] },
-    { type: "textarea", key: "reflection", label: "Reflection", hint: "When have I noticed this gap limiting my performance? What patterns emerge?", rows: 2, seed: "It shows up most when I'm tired — I close my laptop instead of sending the recap." },
-    { type: "textarea", key: "feedback", label: "Feedback & external perspective", hint: "What blind spots might I not notice? How can others help me improve?", rows: 2, seed: "A teammate mentioned I go quiet in disagreements instead of pushing back — I hadn't noticed that pattern." },
+    { type: "textarea", key: "reflection", label: "Reflection", hint: "When have I noticed this gap limiting my performance? What patterns emerge?", rows: 2, seed: "It shows up most when I'm tired, I close my laptop instead of sending the recap." },
+    { type: "textarea", key: "feedback", label: "Feedback & external perspective", hint: "What blind spots might I not notice? How can others help me improve?", rows: 2, seed: "A teammate mentioned I go quiet in disagreements instead of pushing back, I hadn't noticed that pattern." },
     { type: "textarea", key: "progressReview", label: "Progress review & update", hint: "Which gaps have reduced? Which require continued effort? Have new gaps emerged?", rows: 2, seed: "Follow-ups are more consistent now that I set a phone reminder." },
   ],
 
@@ -144,7 +144,7 @@ export const WORKSHEET_SCHEMAS: Record<number, WorksheetField[]> = {
     ], seedRows: [
       { theme: "Organizing people around a shared goal", action: "Volunteer to co-run one campus event", timeline: "This semester" },
     ] },
-    { type: "textarea", key: "reflectionSurprise", label: "What surprised me about my interests?", rows: 2, seed: "That the common thread wasn't a subject at all — it was the feeling of a plan working." },
+    { type: "textarea", key: "reflectionSurprise", label: "What surprised me about my interests?", rows: 2, seed: "That the common thread wasn't a subject at all, it was the feeling of a plan working." },
     { type: "text", key: "reflectionStrongest", label: "Which passion feels strongest right now?", seed: "Organizing people around a shared goal" },
     { type: "text", key: "reflectionNextStep", label: "What is one step I will take to explore it further?", seed: "Ask to co-lead the next campus event" },
     { type: "text", key: "summaryAreas", label: "The areas I'm most excited to explore professionally are", seed: "program coordination and event operations" },
@@ -155,7 +155,7 @@ export const WORKSHEET_SCHEMAS: Record<number, WorksheetField[]> = {
     { type: "research", key: "researchNotes", label: "Live industry research", sources: [
       { title: "Occupational Outlook Handbook", domain: "bls.gov", snippet: "Employment in this sector is projected to grow faster than average over the next decade, driven by digital adoption." },
       { title: "State of the Industry Report", domain: "glassdoor.com", snippet: "Reported culture scores skew high on flexibility, lower on advancement clarity for early-career hires." },
-    ], synthesisSeed: "Growth is real and sourced (BLS), but advancement clarity is a known weak point (Glassdoor) — worth asking about directly in interviews." },
+    ], synthesisSeed: "Growth is real and sourced (BLS), but advancement clarity is a known weak point (Glassdoor), worth asking about directly in interviews." },
     { type: "table", key: "industryId", label: "Industry identification", hint: "Which industries seem connected to my interests, strengths, or career vision?", columns: [
       { key: "industry", label: "Industry", kind: "text" },
       { key: "why", label: "Why it interests me", kind: "text" },
@@ -197,20 +197,20 @@ export const WORKSHEET_SCHEMAS: Record<number, WorksheetField[]> = {
       { key: "source", label: "Professional / source", kind: "text" },
       { key: "insight", label: "Key insight about the industry", kind: "text" },
     ], seedRows: [{ source: "Alumni fraud analyst", insight: "Most entry roles start in manual review before moving to modeling" }] },
-    { type: "textarea", key: "fitExcites", label: "Which industry excites me the most, and why?", rows: 2, seed: "Fintech — it's fast-moving and the impact of catching fraud is immediate and measurable." },
-    { type: "textarea", key: "fitLeast", label: "Which industry seems least aligned with my interests or values?", rows: 2, seed: "Traditional retail banking — too slow-moving for the pace I want." },
+    { type: "textarea", key: "fitExcites", label: "Which industry excites me the most, and why?", rows: 2, seed: "Fintech, it's fast-moving and the impact of catching fraud is immediate and measurable." },
+    { type: "textarea", key: "fitLeast", label: "Which industry seems least aligned with my interests or values?", rows: 2, seed: "Traditional retail banking, too slow-moving for the pace I want." },
     { type: "text", key: "summaryAligned", label: "Industries most aligned with my goals", seed: "Fintech, specifically fraud and risk" },
     { type: "text", key: "summaryBecause", label: "Because", seed: "the growth is sourced and real, and the skill demand matches my strengths" },
   ],
 
   9: [
     { type: "research", key: "pathwayResearch", label: "Live pathway research", sources: [
-      { title: "Career trajectories in this field", domain: "linkedin.com", snippet: "Most people reach the target role after 2–3 years in an adjacent analytics or coordination role, not directly." },
-    ], synthesisSeed: "Direct entry is rare — most real trajectories route through an adjacent role first." },
+      { title: "Career trajectories in this field", domain: "linkedin.com", snippet: "Most people reach the target role after 2 to 3 years in an adjacent analytics or coordination role, not directly." },
+    ], synthesisSeed: "Direct entry is rare, most real trajectories route through an adjacent role first." },
     { type: "table", key: "targetIndustry", label: "Target industry selection", columns: [
       { key: "industry", label: "Industry", kind: "text" },
       { key: "why", label: "Why I am interested", kind: "text" },
-    ], seedRows: [{ industry: "Fintech — fraud & risk", why: "Matches my analytical strengths and Industry Insight research" }] },
+    ], seedRows: [{ industry: "Fintech: fraud & risk", why: "Matches my analytical strengths and Industry Insight research" }] },
     { type: "table", key: "pathwayMapping", label: "Career pathway mapping", columns: [
       { key: "industry", label: "Industry", kind: "text" },
       { key: "internship", label: "Internship", kind: "text" },
@@ -245,17 +245,17 @@ export const WORKSHEET_SCHEMAS: Record<number, WorksheetField[]> = {
       { key: "action", label: "Exploration action", kind: "text" },
       { key: "timeline", label: "Timeline", kind: "text" },
     ], seedRows: [{ path: "Fraud Analyst track", action: "Informational interview with an alumnus in the role", timeline: "This month" }] },
-    { type: "textarea", key: "reflectionAligned", label: "Which career path currently feels most aligned?", rows: 2, seed: "The Fraud Analyst track — it's the clearest match to what I'm already good at." },
+    { type: "textarea", key: "reflectionAligned", label: "Which career path currently feels most aligned?", rows: 2, seed: "The Fraud Analyst track, it's the clearest match to what I'm already good at." },
     { type: "text", key: "summaryStatement", label: "Career path summary statement", hint: "The path I'm most interested in exploring right now is…", seed: "the Fraud Analyst track, because it aligns with my strengths in pattern recognition and my interest in fintech" },
   ],
 
   10: [
-    { type: "table", key: "targetRoles", label: "Target role identification", hint: "List 1–3 internships or entry-level roles that interest you.", columns: [
+    { type: "table", key: "targetRoles", label: "Target role identification", hint: "List 1 to 3 internships or entry-level roles that interest you.", columns: [
       { key: "title", label: "Job title", kind: "text" },
       { key: "industry", label: "Industry", kind: "text" },
       { key: "why", label: "Why this role interests me", kind: "text" },
     ], seedRows: [{ title: "Fraud Analyst", industry: "Fintech", why: "Matches my Career Path hypothesis" }] },
-    { type: "table", key: "roleComparison", label: "Role research (compare up to 3 roles)", hint: "One row per role — responsibilities, skills, qualifications, and gaps.", columns: [
+    { type: "table", key: "roleComparison", label: "Role research (compare up to 3 roles)", hint: "One row per role: responsibilities, skills, qualifications, and gaps.", columns: [
       { key: "role", label: "Role title", kind: "text" },
       { key: "responsibilities", label: "Core responsibilities", kind: "text" },
       { key: "keySkills", label: "Key skills", kind: "text" },
@@ -269,7 +269,7 @@ export const WORKSHEET_SCHEMAS: Record<number, WorksheetField[]> = {
       { key: "name", label: "Name", kind: "text" },
       { key: "contact", label: "Contact details", kind: "text" },
       { key: "meetingDate", label: "Meeting date", kind: "text" },
-    ], seedRows: [{ name: "—", contact: "—", meetingDate: "Not yet scheduled" }] },
+    ], seedRows: [{ name: "Not yet", contact: "Not yet", meetingDate: "Not yet scheduled" }] },
     { type: "table", key: "actionPlan", label: "Action plan", columns: [
       { key: "step", label: "Immediate action step", kind: "text" },
       { key: "timeline", label: "Timeline", kind: "text" },
@@ -279,9 +279,9 @@ export const WORKSHEET_SCHEMAS: Record<number, WorksheetField[]> = {
 
   11: [
     { type: "research", key: "salaryResearch", label: "Live salary research", sources: [
-      { title: "Compensation report", domain: "levels.fyi", snippet: "$70–78K reported for this title at larger tech employers." },
-      { title: "Salary estimates", domain: "glassdoor.com", snippet: "$58–65K reported, skewed toward smaller companies in the same sample." },
-    ], synthesisSeed: "The gap tracks with company size, not inconsistent data — larger employers cluster near the Levels.fyi range." },
+      { title: "Compensation report", domain: "levels.fyi", snippet: "$70 to 78K reported for this title at larger tech employers." },
+      { title: "Salary estimates", domain: "glassdoor.com", snippet: "$58 to 65K reported, skewed toward smaller companies in the same sample." },
+    ], synthesisSeed: "The gap tracks with company size, not inconsistent data, larger employers cluster near the Levels.fyi range." },
     { type: "table", key: "benchmarkTable", label: "Your benchmarking table", columns: [
       { key: "role", label: "Role", kind: "text" },
       { key: "location", label: "Location", kind: "text" },
@@ -290,7 +290,7 @@ export const WORKSHEET_SCHEMAS: Record<number, WorksheetField[]> = {
       { key: "target", label: "My target range", kind: "text" },
       { key: "fit", label: "Fit", kind: "text" },
     ], seedRows: [
-      { role: "Fraud Analyst", location: "Atlanta, GA", source: "Glassdoor", range: "$58K–$65K", target: "$60K–$64K", fit: "Aligns with cost of living, room to grow" },
+      { role: "Fraud Analyst", location: "Atlanta, GA", source: "Glassdoor", range: "$58K to $65K", target: "$60K to $64K", fit: "Aligns with cost of living, room to grow" },
     ] },
     { type: "table", key: "remoteComparison", label: "International / remote comparison", columns: [
       { key: "role", label: "Role", kind: "text" },
@@ -299,13 +299,13 @@ export const WORKSHEET_SCHEMAS: Record<number, WorksheetField[]> = {
       { key: "source", label: "Source", kind: "text" },
       { key: "range", label: "Salary range", kind: "text" },
       { key: "target", label: "My target range", kind: "text" },
-    ], seedRows: [{ role: "Fraud Analyst", country: "USA", location: "Remote", source: "Levels.fyi", range: "$70K–$78K", target: "$68K–$72K" }] },
+    ], seedRows: [{ role: "Fraud Analyst", country: "USA", location: "Remote", source: "Levels.fyi", range: "$70K to $78K", target: "$68K to $72K" }] },
   ],
 
   12: [
     { type: "textarea", key: "strengths", label: "Strengths", rows: 3, seed: "I'm analytically strong and consistently deliver high-quality work others rely on." },
     { type: "textarea", key: "weaknesses", label: "Weaknesses", rows: 3, seed: "I avoid speaking up in group settings and feel intimidated presenting to a room." },
-    { type: "textarea", key: "opportunities", label: "Opportunities", rows: 3, seed: "Roles I'm interested in increasingly value communication and storytelling — a skill I can practice deliberately." },
+    { type: "textarea", key: "opportunities", label: "Opportunities", rows: 3, seed: "Roles I'm interested in increasingly value communication and storytelling, a skill I can practice deliberately." },
     { type: "textarea", key: "threats", label: "Threats", rows: 3, seed: "Competition for these roles is real, and my quietness in interviews could work against me if I don't address it." },
     { type: "text", key: "focusWill", label: "Over the next three months, I will", seed: "join a student organization where I practice speaking in low-pressure settings" },
     { type: "text", key: "focusAnd", label: "And", seed: "volunteer to present at least once a month" },
@@ -320,7 +320,7 @@ export const WORKSHEET_SCHEMAS: Record<number, WorksheetField[]> = {
     ], seedRows: [{ skill: "Professional writing", category: "Communication" }] },
     { type: "textarea", key: "whyMatters", label: "Why this skill matters", rows: 2, seed: "It repeats across almost every posting I've researched for my target role." },
     { type: "textarea", key: "currentLevel", label: "Current level (honest baseline)", rows: 2, seed: "I can write a clear email but struggle with longer structured reports." },
-    { type: "textarea", key: "desiredLevel", label: "Desired level (6–12 month outcome)", rows: 2, seed: "Able to write a polished investigation summary without heavy editing." },
+    { type: "textarea", key: "desiredLevel", label: "Desired level (6 to 12 month outcome)", rows: 2, seed: "Able to write a polished investigation summary without heavy editing." },
     { type: "table", key: "developmentApproach", label: "Development approach", columns: [
       { key: "skill", label: "Skill", kind: "text" },
       { key: "method", label: "Learning method", kind: "text" },
@@ -353,11 +353,11 @@ export const WORKSHEET_SCHEMAS: Record<number, WorksheetField[]> = {
   ],
 
   15: [
-    { type: "textarea", key: "workflowPreference", label: "Workflow preference mapping", hint: "When starting a new task, what is the first thing I naturally do?", rows: 2, seed: "I outline the whole task before touching any of it — I can't start in the middle." },
+    { type: "textarea", key: "workflowPreference", label: "Workflow preference mapping", hint: "When starting a new task, what is the first thing I naturally do?", rows: 2, seed: "I outline the whole task before touching any of it, I can't start in the middle." },
     { type: "textarea", key: "executionStyle", label: "Execution style reflection", hint: "How do I move from planning to actual completion?", rows: 2, seed: "I need a firm deadline or I'll keep refining the plan instead of executing it." },
     { type: "textarea", key: "collaborationStyle", label: "Collaboration style reflection", hint: "What role do I naturally take in a group without trying?", rows: 2, seed: "I default to organizing the group's tasks, even when I didn't ask to." },
-    { type: "textarea", key: "energyManagement", label: "Energy management awareness", hint: "What conditions increase my clarity and momentum?", rows: 2, seed: "Long, uninterrupted blocks in the morning — afternoons are much weaker for deep work." },
-    { type: "table", key: "observationLog", label: "Structured observation log (1–2 weeks)", columns: [
+    { type: "textarea", key: "energyManagement", label: "Energy management awareness", hint: "What conditions increase my clarity and momentum?", rows: 2, seed: "Long, uninterrupted blocks in the morning, afternoons are much weaker for deep work." },
+    { type: "table", key: "observationLog", label: "Structured observation log (1 to 2 weeks)", columns: [
       { key: "day", label: "Day", kind: "text" },
       { key: "task", label: "Task worked on", kind: "text" },
       { key: "environment", label: "Environment", kind: "text" },
@@ -366,8 +366,8 @@ export const WORKSHEET_SCHEMAS: Record<number, WorksheetField[]> = {
       { key: "helped", label: "What helped", kind: "text" },
       { key: "disrupted", label: "What disrupted my workflow", kind: "text" },
     ], seedRows: [
-      { day: "Mon", task: "Problem set", environment: "Library, quiet", energyBefore: "M", energyAfter: "H", helped: "No phone nearby", disrupted: "—" },
-      { day: "Wed", task: "Group project", environment: "Open study room", energyBefore: "M", energyAfter: "L", helped: "—", disrupted: "Constant interruptions from the group chat" },
+      { day: "Mon", task: "Problem set", environment: "Library, quiet", energyBefore: "M", energyAfter: "H", helped: "No phone nearby", disrupted: "None" },
+      { day: "Wed", task: "Group project", environment: "Open study room", energyBefore: "M", energyAfter: "L", helped: "None", disrupted: "Constant interruptions from the group chat" },
     ] },
     { type: "textarea", key: "thrivingConditions", label: "Thriving conditions", rows: 2, seed: "Quiet space, clear deadline, morning hours." },
     { type: "textarea", key: "stretchConditions", label: "Stretch conditions", rows: 2, seed: "Loosely defined group work with no clear owner." },
@@ -379,13 +379,13 @@ export const WORKSHEET_SCHEMAS: Record<number, WorksheetField[]> = {
       { key: "worked", label: "What worked", kind: "text" },
       { key: "friction", label: "What created friction", kind: "text" },
     ], seedRows: [{ experience: "Capstone project", structure: "4-person, no assigned lead", role: "De facto organizer", performance: "M", worked: "Clear task list I built", friction: "Ambiguity over who decided what" }] },
-    { type: "chipList", key: "adaptationCommitments", label: "Adaptation strategy — behavioral commitments", hint: "“When working in unstructured teams, I will…”", seed: ["Create a mini-task outline for myself within the first 24 hours"] },
+    { type: "chipList", key: "adaptationCommitments", label: "Adaptation strategy: behavioral commitments", hint: "“When working in unstructured teams, I will…”", seed: ["Create a mini-task outline for myself within the first 24 hours"] },
     { type: "text", key: "idealConditions", label: "My ideal work conditions", seed: "Quiet, morning hours, one clear deadline" },
     { type: "text", key: "adaptWhenNotIdeal", label: "How I will adapt when conditions aren't ideal", seed: "Build my own mini-structure inside someone else's loose plan" },
   ],
 
   16: [
-    { type: "table", key: "decisionAudit", label: "Decision pattern identification", hint: "One row per decision — audit three real cases.", columns: [
+    { type: "table", key: "decisionAudit", label: "Decision pattern identification", hint: "One row per decision, audit three real cases.", columns: [
       { key: "situation", label: "Situation / context", kind: "text" },
       { key: "stakes", label: "Stakes (L/M/H)", kind: "text" },
       { key: "timePressure", label: "Time pressure (L/M/H)", kind: "text" },
@@ -414,7 +414,7 @@ export const WORKSHEET_SCHEMAS: Record<number, WorksheetField[]> = {
   ],
 
   17: [
-    { type: "table", key: "experienceAudit", label: "Learning experience audit", hint: "Two effective cases, one ineffective — one row each.", columns: [
+    { type: "table", key: "experienceAudit", label: "Learning experience audit", hint: "Two effective cases, one ineffective, one row each.", columns: [
       { key: "topic", label: "Topic / skill", kind: "text" },
       { key: "method", label: "Method used", kind: "text" },
       { key: "retention", label: "Retention after 1 week (H/M/L)", kind: "text" },
@@ -440,7 +440,7 @@ export const WORKSHEET_SCHEMAS: Record<number, WorksheetField[]> = {
     ] },
     { type: "scale", key: "retentionScore", label: "Retention score (revisit after 1 week)", section: "Retention measurement", seed: 70 },
     { type: "scale", key: "applicationScore", label: "Application score", section: "Retention measurement", seed: 60 },
-    { type: "textarea", key: "conversionAnalysis", label: "Knowledge-to-skill conversion analysis", hint: "Do I apply concepts immediately, or delay practice? Do I need repetition or teaching to fully understand?", rows: 2, seed: "I delay practice more than I should — teaching someone else is what actually locks it in." },
+    { type: "textarea", key: "conversionAnalysis", label: "Knowledge-to-skill conversion analysis", hint: "Do I apply concepts immediately, or delay practice? Do I need repetition or teaching to fully understand?", rows: 2, seed: "I delay practice more than I should, teaching someone else is what actually locks it in." },
     { type: "textarea", key: "frictionIdentification", label: "Friction identification", hint: "When does learning feel slow or draining? What triggers procrastination?", rows: 2, seed: "Learning feels slowest when the material is presented as pure theory with no way to apply it right away." },
     { type: "text", key: "mostEffectiveMethod", label: "My most effective learning method", section: "Integration", seed: "Teaching the material to someone else within 24 hours of first encountering it" },
     { type: "text", key: "adaptWhenDifficult", label: "How I will adapt when learning feels difficult", section: "Integration", seed: "Find one person to explain it to, even informally, before moving on" },
@@ -467,10 +467,10 @@ export const WORKSHEET_SCHEMAS: Record<number, WorksheetField[]> = {
     { type: "text", key: "breakLength", label: "Break length", section: "Focus block architecture", seed: "15 minutes" },
     { type: "text", key: "environmentRequirements", label: "Environment requirements", section: "Focus block architecture", seed: "Quiet room, phone in another room" },
     { type: "text", key: "distractionPolicy", label: "Phone / distraction policy", section: "Focus block architecture", seed: "Phone on do-not-disturb, out of reach" },
-    { type: "text", key: "deepWorkHours", label: "Deep work hours (time of day)", section: "Focus block architecture", seed: "8–10am" },
+    { type: "text", key: "deepWorkHours", label: "Deep work hours (time of day)", section: "Focus block architecture", seed: "8 to 10am" },
     { type: "checklist", key: "trackingSystem", label: "Progress visibility & tracking system", section: "Tracking system", items: ["Written planner", "Digital task manager", "Visual board", "Habit tracker"], seedChecked: ["Digital task manager"] },
     { type: "textarea", key: "weeklyReview", label: "Weekly review & reset ritual", hint: "What moved my goals forward? What consumed time without value? Where did focus break down?", rows: 3, seed: "Every Friday at 4pm: review the week's log, name the top distraction, adjust one rule for next week." },
-    { type: "textarea", key: "frictionRecovery", label: "Friction & recovery strategy", hint: "What usually causes me to fall off track? How quickly do I recover?", rows: 2, seed: "A bad night's sleep is my biggest predictor of a lost day — I recover fastest by doing one small task to rebuild momentum." },
+    { type: "textarea", key: "frictionRecovery", label: "Friction & recovery strategy", hint: "What usually causes me to fall off track? How quickly do I recover?", rows: 2, seed: "A bad night's sleep is my biggest predictor of a lost day, I recover fastest by doing one small task to rebuild momentum." },
     { type: "text", key: "productivityNonNegotiable", label: "My productivity non-negotiable", section: "Integration", seed: "The Friday weekly review happens no matter what" },
     { type: "text", key: "resetWhenOffTrack", label: "How I will reset when I fall off track", section: "Integration", seed: "Do one small, easy task first to rebuild momentum instead of tackling the hardest thing" },
   ],
@@ -479,14 +479,14 @@ export const WORKSHEET_SCHEMAS: Record<number, WorksheetField[]> = {
     { type: "text", key: "who", label: "Who you are", hint: "Name, year, major.", seed: "Ada, junior, Computer Science" },
     { type: "text", key: "focus", label: "What you focus on", hint: "Interests, direction, one credential.", seed: "Backend systems and data infrastructure" },
     { type: "text", key: "headed", label: "Where you're headed", hint: "The kind of opportunity you want.", seed: "A summer internship building real backend features on a small team" },
-    { type: "textarea", key: "fullIntro", label: "Full 30–60 second introduction", rows: 4, seed: "I'm Ada, a junior studying Computer Science focused on backend systems and data infrastructure. I've spent the last year rebuilding a club's broken sign-up system from scratch. I'm looking for a summer internship where I can build real backend features on a small team." },
+    { type: "textarea", key: "fullIntro", label: "Full 30 to 60 second introduction", rows: 4, seed: "I'm Ada, a junior studying Computer Science focused on backend systems and data infrastructure. I've spent the last year rebuilding a club's broken sign-up system from scratch. I'm looking for a summer internship where I can build real backend features on a small team." },
   ],
 
   20: [
     { type: "textarea", key: "hook", label: "Specific hook", hint: "A project, a skill, or a goal.", rows: 2, seed: "I rebuilt our club's sign-up system last year and cut processing errors by half." },
     { type: "text", key: "ask", label: "Low-pressure ask or close", seed: "Would you be open to connecting on LinkedIn?" },
-    { type: "textarea", key: "recruiterVersion", label: "Version for a recruiter", rows: 2, seed: "I'm a CS junior focused on backend systems — I rebuilt our club's sign-up flow and cut errors in half. I'd love to hear what backend problems your team is tackling right now." },
-    { type: "textarea", key: "professorVersion", label: "Version for a professor", rows: 2, seed: "I'm in your systems course and have been applying what we're learning to a real rebuild for my club — I'd love your thoughts on where to take it next." },
+    { type: "textarea", key: "recruiterVersion", label: "Version for a recruiter", rows: 2, seed: "I'm a CS junior focused on backend systems, I rebuilt our club's sign-up flow and cut errors in half. I'd love to hear what backend problems your team is tackling right now." },
+    { type: "textarea", key: "professorVersion", label: "Version for a professor", rows: 2, seed: "I'm in your systems course and have been applying what we're learning to a real rebuild for my club, I'd love your thoughts on where to take it next." },
   ],
 
   21: [
@@ -494,7 +494,7 @@ export const WORKSHEET_SCHEMAS: Record<number, WorksheetField[]> = {
     { type: "text", key: "signatureStrength", label: "Signature strength", seed: "Turning fragile, undocumented systems into ones people trust" },
     { type: "text", key: "outcome", label: "Outcome you create", seed: "Fewer errors, less firefighting for the team" },
     { type: "textarea", key: "statement", label: "One-to-two sentence brand statement", rows: 2, seed: "I turn fragile backend systems into ones teams can trust. I specialize in finding the undocumented failure points before they become outages." },
-    { type: "text", key: "testerFeedback", label: "What one person thought you do, after reading it", seed: "\"You fix things before they break — got it.\"" },
+    { type: "text", key: "testerFeedback", label: "What one person thought you do, after reading it", seed: "\"You fix things before they break: got it.\"" },
   ],
 
   22: [
@@ -503,7 +503,7 @@ export const WORKSHEET_SCHEMAS: Record<number, WorksheetField[]> = {
       { key: "tone", label: "Tone (too casual / fine / too stiff)", kind: "text" },
       { key: "fix", label: "Fix", kind: "text" },
     ], seedRows: [
-      { context: "Follow-up to a professor", tone: "Too casual — no greeting", fix: "Add greeting, close with full name" },
+      { context: "Follow-up to a professor", tone: "Too casual: no greeting", fix: "Add greeting, close with full name" },
     ] },
     { type: "textarea", key: "structureNotes", label: "Your professional email structure", hint: "Greeting, purpose, ask, closing.", rows: 3, seed: "Greeting → one-line purpose → specific ask → professional close with my name and program." },
   ],
@@ -511,7 +511,7 @@ export const WORKSHEET_SCHEMAS: Record<number, WorksheetField[]> = {
   23: [
     { type: "text", key: "lowStakesSituation", label: "One low-stakes situation this week", seed: "Raising my hand first in tomorrow's group project meeting" },
     { type: "textarea", key: "preparation", label: "How you're preparing", rows: 2, seed: "Reviewing the agenda beforehand and preparing one specific point to raise early." },
-    { type: "textarea", key: "debrief", label: "Debrief after", hint: "What went well? What would you adjust?", rows: 2, seed: "Went well — speaking first meant less overthinking. Next time I'll slow my pace slightly." },
+    { type: "textarea", key: "debrief", label: "Debrief after", hint: "What went well? What would you adjust?", rows: 2, seed: "Went well, speaking first meant less overthinking. Next time I'll slow my pace slightly." },
   ],
 
   24: [
@@ -522,7 +522,7 @@ export const WORKSHEET_SCHEMAS: Record<number, WorksheetField[]> = {
   ],
 
   25: [
-    { type: "chipList", key: "themes", label: "3–5 themes you want associated with your name", seed: ["Strategic thinking", "Follow-through", "Clear communication"] },
+    { type: "chipList", key: "themes", label: "3 to 5 themes you want associated with your name", seed: ["Strategic thinking", "Follow-through", "Clear communication"] },
     { type: "table", key: "gapActions", label: "Gap-closing actions", columns: [
       { key: "theme", label: "Theme", kind: "text" },
       { key: "reality", label: "Current reality", kind: "text" },
@@ -533,8 +533,8 @@ export const WORKSHEET_SCHEMAS: Record<number, WorksheetField[]> = {
   ],
 
   26: [
-    { type: "chipList", key: "interestAreas", label: "Top 2–3 areas of genuine interest or skill", seed: ["Sustainability", "Consumer marketing"] },
-    { type: "textarea", key: "intersection", label: "Where they intersect", hint: "In a way most peers in your major don't combine.", rows: 2, seed: "Marketing for mission-driven consumer brands — sustainability-minded companies that still need sharp go-to-market thinking." },
+    { type: "chipList", key: "interestAreas", label: "Top 2 to 3 areas of genuine interest or skill", seed: ["Sustainability", "Consumer marketing"] },
+    { type: "textarea", key: "intersection", label: "Where they intersect", hint: "In a way most peers in your major don't combine.", rows: 2, seed: "Marketing for mission-driven consumer brands, sustainability-minded companies that still need sharp go-to-market thinking." },
     { type: "text", key: "positioningStatement", label: "Positioning statement", hint: "\"I'm the [role/major] who focuses on [intersection].\"", seed: "I'm the marketing student who focuses on mission-driven consumer brands." },
   ],
 
@@ -543,7 +543,7 @@ export const WORKSHEET_SCHEMAS: Record<number, WorksheetField[]> = {
       { key: "person", label: "Person", kind: "text" },
       { key: "words", label: "Three words they used", kind: "text" },
     ], seedRows: [{ person: "Club co-lead", words: "Reliable, quiet, thorough" }] },
-    { type: "textarea", key: "gapReflection", label: "Gap reflection", hint: "How does this compare to your intended brand themes?", rows: 2, seed: "\"Quiet\" wasn't on my list — worth watching whether that's read as reserved or disengaged." },
+    { type: "textarea", key: "gapReflection", label: "Gap reflection", hint: "How does this compare to your intended brand themes?", rows: 2, seed: "\"Quiet\" wasn't on my list, worth watching whether that's read as reserved or disengaged." },
   ],
 
   28: [
@@ -566,7 +566,7 @@ export const WORKSHEET_SCHEMAS: Record<number, WorksheetField[]> = {
 
   30: [
     { type: "text", key: "overCommitment", label: "One current commitment stretching you too thin", seed: "Leading two club events in the same week" },
-    { type: "textarea", key: "proposedAdjustment", label: "Respectful adjustment message", rows: 3, seed: "\"I can take the second event on if we move the planning deadline for the first to next week — that keeps both on track without rushing either.\"" },
+    { type: "textarea", key: "proposedAdjustment", label: "Respectful adjustment message", rows: 3, seed: "\"I can take the second event on if we move the planning deadline for the first to next week: that keeps both on track without rushing either.\"" },
   ],
 
   31: [
@@ -579,7 +579,7 @@ export const WORKSHEET_SCHEMAS: Record<number, WorksheetField[]> = {
     { type: "text", key: "role", label: "Role or major", seed: "CS student" },
     { type: "text", key: "focus", label: "Specific focus", seed: "backend systems" },
     { type: "text", key: "value", label: "Value or outcome", seed: "builds systems teams trust" },
-    { type: "text", key: "headlineDraft", label: "Headline draft", seed: "CS Student Focused on Backend Systems — I Build Things Teams Trust" },
+    { type: "text", key: "headlineDraft", label: "Headline draft", seed: "CS Student Focused on Backend Systems: I Build Things Teams Trust" },
   ],
 
   33: [
@@ -588,7 +588,7 @@ export const WORKSHEET_SCHEMAS: Record<number, WorksheetField[]> = {
   ],
 
   34: [
-    { type: "textarea", key: "searchResults", label: "What came up searching your name", rows: 2, seed: "Mostly LinkedIn and a five-year-old public tweet — nothing concerning but the tweet is outdated." },
+    { type: "textarea", key: "searchResults", label: "What came up searching your name", rows: 2, seed: "Mostly LinkedIn and a five-year-old public tweet, nothing concerning but the tweet is outdated." },
     { type: "checklist", key: "platformsChecked", label: "Platforms checked", items: ["LinkedIn", "Instagram", "X / Twitter", "Facebook", "TikTok", "Other public posts"], seedChecked: ["LinkedIn", "Instagram"] },
     { type: "textarea", key: "cleanupActions", label: "Cleanup actions taken", rows: 2, seed: "Archived the old tweet, set Instagram to private, double-checked Facebook's audience settings." },
   ],
@@ -600,7 +600,7 @@ export const WORKSHEET_SCHEMAS: Record<number, WorksheetField[]> = {
   ],
 
   36: [
-    { type: "table", key: "projects", label: "Portfolio project case studies", hint: "3–5 of your strongest projects.", columns: [
+    { type: "table", key: "projects", label: "Portfolio project case studies", hint: "3 to 5 of your strongest projects.", columns: [
       { key: "project", label: "Project", kind: "text" },
       { key: "problem", label: "Problem", kind: "text" },
       { key: "role", label: "My role", kind: "text" },
@@ -611,7 +611,7 @@ export const WORKSHEET_SCHEMAS: Record<number, WorksheetField[]> = {
 
   37: [
     { type: "checklist", key: "shotChecklist", label: "Headshot checklist", items: ["Dressed for target field", "Natural light, facing a window", "Simple, neutral background", "Multiple expressions tried"], seedChecked: ["Natural light, facing a window"] },
-    { type: "text", key: "chosenPhotoNotes", label: "Notes on the photo you chose", seed: "Third shot — looked most approachable, good lighting, no distractions in the background." },
+    { type: "text", key: "chosenPhotoNotes", label: "Notes on the photo you chose", seed: "Third shot: looked most approachable, good lighting, no distractions in the background." },
   ],
 
   38: [
@@ -627,13 +627,13 @@ export const WORKSHEET_SCHEMAS: Record<number, WorksheetField[]> = {
 
   40: [
     { type: "textarea", key: "coldIntroTemplate", label: "Cold introduction template", rows: 2, seed: "Hi [Name], I'm [year/major] focused on [area]. I came across your work on [specific thing] and would love to hear how you got started in [field]." },
-    { type: "textarea", key: "followUpTemplate", label: "Follow-up after meeting someone", rows: 2, seed: "Hi [Name], great meeting you at [event] — I really appreciated your point about [specific topic]. Would love to stay in touch." },
-    { type: "textarea", key: "thankYouTemplate", label: "Thank-you after an interview", rows: 2, seed: "Hi [Name], thank you for the conversation today — I especially enjoyed hearing about [specific detail]. Looking forward to next steps." },
+    { type: "textarea", key: "followUpTemplate", label: "Follow-up after meeting someone", rows: 2, seed: "Hi [Name], great meeting you at [event], I really appreciated your point about [specific topic]. Would love to stay in touch." },
+    { type: "textarea", key: "thankYouTemplate", label: "Thank-you after an interview", rows: 2, seed: "Hi [Name], thank you for the conversation today, I especially enjoyed hearing about [specific detail]. Looking forward to next steps." },
   ],
 
   41: [
     { type: "text", key: "preparedQuestion", label: "One prepared question or contribution point", seed: "\"Should we lock the event date before or after we confirm the venue?\"" },
-    { type: "textarea", key: "reflection", label: "What happened when you raised it", rows: 2, seed: "It reframed the discussion — we ended up confirming the venue first, which the team hadn't considered." },
+    { type: "textarea", key: "reflection", label: "What happened when you raised it", rows: 2, seed: "It reframed the discussion: we ended up confirming the venue first, which the team hadn't considered." },
   ],
 
   42: [
@@ -644,7 +644,7 @@ export const WORKSHEET_SCHEMAS: Record<number, WorksheetField[]> = {
 
   43: [
     { type: "textarea", key: "conversationNotes", label: "What you paraphrased back", rows: 2, seed: "\"So what I'm hearing is the delay was really about unclear ownership, not about the timeline itself.\"" },
-    { type: "textarea", key: "reflection", label: "Reflection", rows: 2, seed: "Paraphrasing first slowed me down in a good way — the follow-up question I asked was sharper because of it." },
+    { type: "textarea", key: "reflection", label: "Reflection", rows: 2, seed: "Paraphrasing first slowed me down in a good way, the follow-up question I asked was sharper because of it." },
   ],
 
   44: [
@@ -655,23 +655,23 @@ export const WORKSHEET_SCHEMAS: Record<number, WorksheetField[]> = {
       { key: "notes", label: "Notes", kind: "text" },
     ], seedRows: [
       { attempt: "1", fillerCount: "14 \"ums\"", notes: "Rushed the middle section" },
-      { attempt: "2", fillerCount: "4 \"ums\"", notes: "Paused instead of filling silence — much steadier" },
+      { attempt: "2", fillerCount: "4 \"ums\"", notes: "Paused instead of filling silence: much steadier" },
     ] },
     { type: "textarea", key: "improvement", label: "What you'll adjust next", rows: 2, seed: "Keep pausing instead of filling silence, and slow down the opening line specifically." },
   ],
 
   45: [
-    { type: "checklist", key: "setupChecklist", label: "Recording setup checklist", items: ["Good natural lighting", "Simple, uncluttered background", "Script adapted for video (warmer tone)", "2–3 takes recorded"], seedChecked: ["Good natural lighting"] },
-    { type: "textarea", key: "script", label: "Video script", rows: 3, seed: "Hi, I'm Ada — a CS junior focused on backend systems. Last year I rebuilt my club's sign-up system from scratch and cut errors in half. I'm looking for a summer internship where I can build real backend features on a small team." },
+    { type: "checklist", key: "setupChecklist", label: "Recording setup checklist", items: ["Good natural lighting", "Simple, uncluttered background", "Script adapted for video (warmer tone)", "2 to 3 takes recorded"], seedChecked: ["Good natural lighting"] },
+    { type: "textarea", key: "script", label: "Video script", rows: 3, seed: "Hi, I'm Ada, a CS junior focused on backend systems. Last year I rebuilt my club's sign-up system from scratch and cut errors in half. I'm looking for a summer internship where I can build real backend features on a small team." },
   ],
 
   46: [
-    { type: "checklist", key: "platforms", label: "Platform strategy", items: ["LinkedIn — professional", "Instagram — private", "X / Twitter — professional", "TikTok — private", "Other"], seedChecked: ["LinkedIn — professional", "Instagram — private"] },
+    { type: "checklist", key: "platforms", label: "Platform strategy", items: ["LinkedIn, professional", "Instagram, private", "X / Twitter, professional", "TikTok, private", "Other"], seedChecked: ["LinkedIn, professional", "Instagram, private"] },
     { type: "text", key: "weeklyCommitment", label: "Realistic weekly commitment", seed: "One comment or share per week, no more" },
   ],
 
   47: [
-    { type: "chipList", key: "accountsToFollow", label: "10–15 accounts to follow in your field", seed: ["Stripe Engineering", "A target-company CTO", "An alumnus in your field"] },
+    { type: "chipList", key: "accountsToFollow", label: "10 to 15 accounts to follow in your field", seed: ["Stripe Engineering", "A target-company CTO", "An alumnus in your field"] },
     { type: "table", key: "commentLog", label: "Comment log", columns: [
       { key: "post", label: "Post / person", kind: "text" },
       { key: "comment", label: "Your comment", kind: "text" },
@@ -682,7 +682,7 @@ export const WORKSHEET_SCHEMAS: Record<number, WorksheetField[]> = {
   48: [
     { type: "table", key: "shares", label: "Content shares", columns: [
       { key: "source", label: "Article / post", kind: "text" },
-      { key: "reflection", label: "My reflection (2–3 sentences)", kind: "text" },
+      { key: "reflection", label: "My reflection (2 to 3 sentences)", kind: "text" },
       { key: "date", label: "Date", kind: "text" },
     ], seedRows: [{ source: "Industry report on fraud trends", reflection: "Connected it to a project I'd worked on and asked a follow-up question", date: "This month" }] },
   ],
@@ -690,29 +690,29 @@ export const WORKSHEET_SCHEMAS: Record<number, WorksheetField[]> = {
   49: [
     { type: "text", key: "topic", label: "Specific, narrow topic", seed: "The mistake I made in my first internship's first week" },
     { type: "textarea", key: "outline", label: "Rough outline", rows: 3, seed: "1. The mistake (assumed instead of asked) 2. What it cost 3. What I changed 4. What I'd tell someone starting their first internship" },
-    { type: "textarea", key: "draft", label: "First draft", rows: 4, seed: "In my first week, I assumed I understood a request instead of asking a clarifying question — and redid two days of work as a result..." },
+    { type: "textarea", key: "draft", label: "First draft", rows: 4, seed: "In my first week, I assumed I understood a request instead of asking a clarifying question, and redid two days of work as a result..." },
   ],
 
   50: [
     { type: "text", key: "theme", label: "Common theme across your posts", seed: "Things no one tells you about your first internship" },
-    { type: "chipList", key: "futureTopics", label: "3–5 future topics", seed: ["Asking clarifying questions", "How to handle your first mistake", "Reading team dynamics fast"] },
+    { type: "chipList", key: "futureTopics", label: "3 to 5 future topics", seed: ["Asking clarifying questions", "How to handle your first mistake", "Reading team dynamics fast"] },
     { type: "text", key: "cadence", label: "Realistic publishing cadence", seed: "Monthly" },
   ],
 
   51: [
     { type: "research", key: "trendResearch", label: "Live trend research", sources: [
       { title: "Industry trend brief", domain: "industry-report.com", snippet: "Sustainable packaging regulation is tightening across major markets, reshaping vendor requirements." },
-    ], synthesisSeed: "This shifts hiring toward roles that can navigate both compliance and vendor relationships — worth naming directly in outreach." },
-    { type: "textarea", key: "analysis", label: "Your analysis", hint: "Why does it matter, and what might it mean for someone entering the field?", rows: 4, seed: "The regulation shift means new hires who understand both compliance and vendor sourcing will be unusually valuable over the next two years — most programs don't teach that intersection yet." },
+    ], synthesisSeed: "This shifts hiring toward roles that can navigate both compliance and vendor relationships, worth naming directly in outreach." },
+    { type: "textarea", key: "analysis", label: "Your analysis", hint: "Why does it matter, and what might it mean for someone entering the field?", rows: 4, seed: "The regulation shift means new hires who understand both compliance and vendor sourcing will be unusually valuable over the next two years, most programs don't teach that intersection yet." },
   ],
 
   52: [
-    { type: "chipList", key: "openers", label: "3–4 prepared conversation openers", seed: ["\"I saw your team's recent product launch — what's been the reaction internally?\""] },
+    { type: "chipList", key: "openers", label: "3 to 4 prepared conversation openers", seed: ["\"I saw your team's recent product launch, what's been the reaction internally?\""] },
     { type: "text", key: "eventContext", label: "Event these are tailored to", seed: "Spring career fair" },
   ],
 
   53: [
-    { type: "text", key: "targetJobListing", label: "Job listing you're tailoring to", seed: "Backend Engineering Intern — target company" },
+    { type: "text", key: "targetJobListing", label: "Job listing you're tailoring to", seed: "Backend Engineering Intern: target company" },
     { type: "table", key: "bullets", label: "Bullet rewrites", columns: [
       { key: "original", label: "Original bullet", kind: "text" },
       { key: "rewritten", label: "Rewritten (action verb + outcome)", kind: "text" },
@@ -733,18 +733,18 @@ export const WORKSHEET_SCHEMAS: Record<number, WorksheetField[]> = {
 
   56: [
     { type: "text", key: "project1", label: "Strongest project", seed: "Club sign-up system rebuild" },
-    { type: "textarea", key: "walkthrough1", label: "2–3 minute spoken walkthrough", rows: 4, seed: "The problem was silent failures under load. My role was sole engineer on the rebuild. I audited the failure logs, redesigned the queue, and added retry logic. The outcome was a 50% drop in processing errors and zero silent failures since." },
+    { type: "textarea", key: "walkthrough1", label: "2 to 3 minute spoken walkthrough", rows: 4, seed: "The problem was silent failures under load. My role was sole engineer on the rebuild. I audited the failure logs, redesigned the queue, and added retry logic. The outcome was a 50% drop in processing errors and zero silent failures since." },
   ],
 
   57: [
     { type: "chipList", key: "questionsToAsk", label: "Specific questions to ask your reviewer", seed: ["Does this project selection make sense for the roles I'm targeting?", "Is anything here reading as generic?"] },
-    { type: "textarea", key: "feedbackReceived", label: "Feedback received", rows: 3, seed: "Reviewer flagged that my second project didn't clearly show my individual role versus the team's — suggested swapping it for the sign-up rebuild instead." },
+    { type: "textarea", key: "feedbackReceived", label: "Feedback received", rows: 3, seed: "Reviewer flagged that my second project didn't clearly show my individual role versus the team's, suggested swapping it for the sign-up rebuild instead." },
     { type: "textarea", key: "changesApplied", label: "Changes you applied", rows: 2, seed: "Swapped the second project and added a one-line \"my role\" callout to every case study." },
   ],
 
   58: [
     { type: "checklist", key: "consistencyChecklist", label: "Consistency checklist", items: ["Photo matches everywhere", "Brand statement / headline matches", "Key achievements match", "Contact info matches"], seedChecked: ["Photo matches everywhere"] },
-    { type: "textarea", key: "inconsistenciesFound", label: "Inconsistencies found", rows: 2, seed: "Resume lists my newest internship but LinkedIn still shows the old role — needs updating." },
+    { type: "textarea", key: "inconsistenciesFound", label: "Inconsistencies found", rows: 2, seed: "Resume lists my newest internship but LinkedIn still shows the old role, needs updating." },
     { type: "text", key: "nextReviewDate", label: "Next review date", seed: "Start of next semester" },
   ],
 };

@@ -25,10 +25,10 @@ export function CoachPreview() {
           </h2>
           <p className="mt-5 max-w-md text-[15px] leading-relaxed text-paper/65">
             For values, purpose, and personality work, the Coach is
-            Socratic — it pushes past vague answers instead of handing you
+            Socratic. It pushes past vague answers instead of handing you
             a finished statement. For Industry Insight, Role Research, and
             Salary Benchmarking, it becomes a Research Analyst: cross-checking
-            2–3 sources and citing every fact it hands back.
+            2 to 3 sources and citing every fact it hands back.
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
             <span className="rounded-full border border-white/15 bg-white/5 px-4 py-2 text-xs font-medium text-paper/80">
@@ -55,13 +55,13 @@ export function CoachPreview() {
             <div className="space-y-3">
               <ChatBubble align="left" delay={0.3}>
                 What does &ldquo;growth&rdquo; look like on a random Tuesday
-                at work — not in a mission statement?
+                at work, not in a mission statement?
               </ChatBubble>
               <ChatBubble align="right" delay={0.55} tone="user">
                 I guess... learning new things from people around me?
               </ChatBubble>
               <ChatBubble align="left" delay={0.8}>
-                Good start — that&apos;s still a little general. Whose
+                Good start. That&apos;s still a little general. Whose
                 growth: yours, or the people you&apos;re learning from? What
                 would a week with zero growth actually feel like to you?
               </ChatBubble>

@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { AuthShell } from "@/components/auth/AuthShell";
 import { AdvisorSignupForm } from "@/components/auth/AdvisorSignupForm";
 
-export const metadata: Metadata = { title: "Advisor sign-up — FIRSTS" };
+export const metadata: Metadata = { title: "Advisor sign-up | FIRSTS" };
 
 export default function AdvisorSignup() {
   return (

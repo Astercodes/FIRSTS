@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { AuthShell } from "@/components/auth/AuthShell";
 import { SchoolSignupForm } from "@/components/auth/SchoolSignupForm";
 
-export const metadata: Metadata = { title: "School sign-in — FIRSTS" };
+export const metadata: Metadata = { title: "School sign-in | FIRSTS" };
 
 export default function SchoolSignup() {
   return (

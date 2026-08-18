@@ -14,7 +14,7 @@ export function Footer() {
         </div>
         <p className="text-xs text-ink/45">
           Based on <em>FIRSTS: Career Launch &amp; Foundation</em> by Ayomide
-          Ayeni. A guidance tool — not a licensed counselor.
+          Ayeni. A guidance tool, not a licensed counselor.
         </p>
         <p className="text-xs text-ink/45">
           © {new Date().getFullYear()} FIRSTS

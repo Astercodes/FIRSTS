@@ -214,7 +214,7 @@ export function SchoolSignupForm() {
         >
           <p className="text-sm leading-relaxed text-paper/70">
             We couldn&apos;t match <strong className="text-paper">{email}</strong>{" "}
-            to a partner school yet. Tell us your school and we&apos;ll reach out —
+            to a partner school yet. Tell us your school and we&apos;ll reach out,
             or continue on your own for now.
           </p>
           <TextField
@@ -250,7 +250,7 @@ export function SchoolSignupForm() {
             ✓
           </div>
           <h2 className="font-display text-xl font-semibold text-paper">
-            {match ? "You're all set." : "Thanks — we'll be in touch."}
+            {match ? "You're all set." : "Thanks, we'll be in touch."}
           </h2>
           <p className="mt-2 text-sm leading-relaxed text-paper/60">
             {match

@@ -1,7 +1,8 @@
-# FIRSTS — Career Launch & Foundation
+# FIRSTS: Career Launch & Foundation
 
-The guided, AI-assisted app version of *FIRSTS: Career Launch & Foundation*
-(Stage One — Self-Awareness & Career Clarity) by Ayomide Ayeni.
+The guided, AI-assisted app version of *FIRSTS: Career Launch & Foundation*,
+spanning Stage One (Self-Awareness & Career Clarity), Stage Two (Professional
+Identity & Personal Brand), and more to come, by Ayomide Ayeni.
 
 Built with Next.js (App Router), TypeScript, Tailwind CSS, and Framer Motion.
 

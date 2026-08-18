@@ -11,7 +11,7 @@ import { SubmitButton } from "@/components/auth/SubmitButton";
 
 const COLOR = "var(--sunshine-orange)";
 const STATUS_OPTIONS = ["Student", "Recent grad", "Early professional", "Career-changer"];
-const HORIZON_OPTIONS = ["Not sure yet", "0–6 months", "6–12 months", "1–2 years"];
+const HORIZON_OPTIONS = ["Not sure yet", "0 to 6 months", "6 to 12 months", "1 to 2 years"];
 
 export function IndependentSignupForm() {
   const [status, setStatus] = useState<string | null>(null);
@@ -46,7 +46,7 @@ export function IndependentSignupForm() {
           </h2>
           <p className="mt-2 text-sm leading-relaxed text-paper/60">
             {status ? `Set up for a ${status.toLowerCase()}. ` : ""}
-            First up: Core Values Audit — about 30 minutes.
+            First up: Core Values Audit, about 30 minutes.
           </p>
           <Link
             href="/dashboard"

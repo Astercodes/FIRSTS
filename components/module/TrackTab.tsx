@@ -21,7 +21,7 @@ export function TrackTab({
 
   const stats = [
     { label: "Completion", value: isComplete ? "100%" : m.status === "in-progress" ? "60%" : "0%" },
-    { label: "Time spent", value: isComplete ? "38 min" : m.status === "in-progress" ? "22 min" : "—" },
+    { label: "Time spent", value: isComplete ? "38 min" : m.status === "in-progress" ? "22 min" : "Not yet" },
     { label: "Last updated", value: m.lastUpdated ?? "Not started" },
   ];
 
@@ -57,7 +57,7 @@ export function TrackTab({
             <p className="text-sm font-semibold text-ink">Share with my advisor</p>
             <p className="mt-1.5 max-w-md text-sm leading-relaxed text-ink/55">
               Off by default. Your advisor always sees your completion
-              status — turning this on also shares your written answers for
+              status. Turning this on also shares your written answers for
               this FIRST specifically.
             </p>
           </div>
@@ -72,7 +72,7 @@ export function TrackTab({
         <div className="space-y-2">
           <div className="flex items-center justify-between rounded-xl bg-paper-dim px-4 py-2.5 text-sm">
             <span className="font-medium text-ink/75">Current version</span>
-            <span className="text-ink/45">{m.lastUpdated ?? "—"}</span>
+            <span className="text-ink/45">{m.lastUpdated ?? "Not yet"}</span>
           </div>
           {isComplete && (
             <div className="flex items-center justify-between rounded-xl bg-paper-dim px-4 py-2.5 text-sm">

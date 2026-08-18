@@ -56,13 +56,13 @@ export function DoTab({ color, moduleId }: { color: string; moduleId: number }) 
   const [successWithout, setSuccessWithout] = useState("Integrity is failure to me, no matter the title or pay.");
 
   const [alignmentIndustry, setAlignmentIndustry] = useState(SEED_INDUSTRY);
-  const [alignmentSupports, setAlignmentSupports] = useState("Impact and Autonomy — the work is analytical and largely self-directed.");
+  const [alignmentSupports, setAlignmentSupports] = useState("Impact and Autonomy: the work is analytical and largely self-directed.");
   const [alignmentStrained, setAlignmentStrained] = useState("Balance, since fraud teams sometimes run lean during incident spikes.");
-  const [alignmentTension, setAlignmentTension] = useState("Temporary — a growth season, not a permanent pattern, based on what alumni told me.");
+  const [alignmentTension, setAlignmentTension] = useState("Temporary, a growth season, not a permanent pattern, based on what alumni told me.");
 
   const [conflictPair, setConflictPair] = useState("Autonomy vs. Balance");
   const [conflictPriority, setConflictPriority] = useState("Balance");
-  const [conflictWhy, setConflictWhy] = useState("Full autonomy sometimes means more hours, not fewer — I'd rather have less control than no evenings.");
+  const [conflictWhy, setConflictWhy] = useState("Full autonomy sometimes means more hours, not fewer. I'd rather have less control than no evenings.");
 
   const [saveState, setSaveState] = useState<"saving" | "saved">("saved");
   const first = useRef(true);

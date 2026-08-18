@@ -20,7 +20,7 @@ export function Institutions() {
             See who&apos;s engaged, stuck, or ready for outreach.
           </h2>
           <p className="mt-5 max-w-lg text-[15px] leading-relaxed text-ink/60">
-            Roster sync, SSO, cohort dashboards, and advisor tools — without
+            Roster sync, SSO, cohort dashboards, and advisor tools, all without
             ever exposing a student&apos;s raw reflection. Advisors see
             completion status by default; students opt in per module to
             share more.

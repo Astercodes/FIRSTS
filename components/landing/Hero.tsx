@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { motion, type Variants } from "framer-motion";
+import { FIRSTS, STAGES } from "@/lib/dashboardData";
 
 const FADE_UP: Variants = {
   hidden: { opacity: 0, y: 28 },
@@ -15,7 +16,7 @@ const FADE_UP: Variants = {
 const FLOAT_CARDS = [
   {
     label: "Core Values Audit",
-    meta: "First 01 · 30–45 min",
+    meta: "First 01 · 30 to 45 min",
     color: "var(--neon-pink)",
     top: "12%",
     left: "3%",
@@ -79,7 +80,7 @@ export function Hero() {
       />
       <div className="noise-layer" aria-hidden />
 
-      {/* floating module cards — desktop only */}
+      {/* floating module cards, desktop only */}
       <div className="pointer-events-none absolute inset-0 hidden lg:block">
         {FLOAT_CARDS.map((c) => (
           <motion.div
@@ -121,7 +122,7 @@ export function Hero() {
           className="mb-6 inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-4 py-1.5 text-xs font-medium text-paper/80 backdrop-blur"
         >
           <span className="h-1.5 w-1.5 rounded-full bg-[var(--lime-zest)]" />
-          Stage One · Self-Awareness &amp; Career Clarity — 18 guided FIRSTS
+          {FIRSTS.length} guided FIRSTS across {STAGES.length} stages, and counting
         </motion.div>
 
         <motion.h1
@@ -145,7 +146,7 @@ export function Hero() {
           className="mt-6 max-w-xl text-balance text-lg text-paper/70"
         >
           FIRSTS turns a career-clarity manual into a living, AI-guided
-          practice — values, purpose, strengths, and market research, in one
+          practice: values, purpose, strengths, and market research, in one
           place, with a coach that never writes your answers for you.
         </motion.p>
 
@@ -170,7 +171,7 @@ export function Hero() {
             href="#stages"
             className="rounded-full border border-white/20 px-7 py-3.5 text-sm font-semibold text-paper/90 backdrop-blur transition-colors hover:border-white/40 hover:bg-white/5"
           >
-            See the 18 FIRSTS
+            Explore the FIRSTS
           </a>
         </motion.div>
 

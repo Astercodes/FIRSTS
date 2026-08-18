@@ -14,7 +14,7 @@ export function StageTwoTeaser({ modules }: { modules: FirstModule[] }) {
         Stage Two
       </p>
       <p className="mt-1 text-sm leading-relaxed text-ink/60">
-        Professional Identity &amp; Personal Brand — {stats.total} FIRSTS covering your
+        Professional Identity &amp; Personal Brand: {stats.total} FIRSTS covering your
         pitch, LinkedIn, resume, and portfolio.
       </p>
       <Link

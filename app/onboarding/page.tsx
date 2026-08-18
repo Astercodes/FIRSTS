@@ -4,7 +4,7 @@ import { PathCard } from "@/components/onboarding/PathCard";
 import { SchoolIcon, CompassIcon, BriefcaseIcon } from "@/components/onboarding/PathIcons";
 
 export const metadata: Metadata = {
-  title: "Who are you? — FIRSTS",
+  title: "Who are you? | FIRSTS",
 };
 
 export default function OnboardingSelector() {
@@ -48,7 +48,7 @@ export default function OnboardingSelector() {
             Who are you?
           </h1>
           <p className="mt-4 text-[15px] leading-relaxed text-paper/60">
-            This decides how you sign in and what your home looks like —
+            This decides how you sign in and what your home looks like,
             nothing else. You can always tell us more later.
           </p>
         </div>
@@ -58,7 +58,7 @@ export default function OnboardingSelector() {
             href="/onboarding/school"
             tag="Path A"
             title="I'm a student at a partner school"
-            body="Sign in with your school email. If your school uses SSO you're in instantly — otherwise we'll match your roster invite."
+            body="Sign in with your school email. If your school uses SSO you're in instantly. Otherwise we'll match your roster invite."
             meta="Auto-joined to your cohort"
             color="var(--neon-pink)"
             icon={<SchoolIcon className="h-6 w-6" />}
@@ -68,7 +68,7 @@ export default function OnboardingSelector() {
             href="/onboarding/independent"
             tag="Path B"
             title="I'm exploring on my own"
-            body="Student, recent grad, career-changer — no institution required. Sign up in under a minute and start with Core Values Audit."
+            body="Student, recent grad, career-changer, no institution required. Sign up in under a minute and start with Core Values Audit."
             meta="Email, Google, Apple, or LinkedIn"
             color="var(--sunshine-orange)"
             icon={<CompassIcon className="h-6 w-6" />}
@@ -79,7 +79,7 @@ export default function OnboardingSelector() {
             href="/onboarding/advisor"
             tag="Path C"
             title="I'm an advisor or career center"
-            body="Institution-domain email required. Get a cohort dashboard, roster tools, and advisor visibility — never raw student reflections."
+            body="Institution-domain email required. Get a cohort dashboard, roster tools, and advisor visibility, never raw student reflections."
             meta="Requires institution verification"
             color="var(--citrus-lime)"
             icon={<BriefcaseIcon className="h-6 w-6" />}
