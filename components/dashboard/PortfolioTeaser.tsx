@@ -14,7 +14,7 @@ export function PortfolioTeaser() {
         href="/dashboard/portfolio"
         className="mt-4 inline-flex items-center gap-1.5 text-sm font-semibold text-ink underline decoration-ink/20 underline-offset-4 transition-colors hover:decoration-ink"
       >
-        Preview portfolio →
+        Open portfolio →
       </Link>
     </div>
   );

@@ -16,6 +16,22 @@ export type WorksheetField =
       synthesisSeed?: string;
     });
 
+export type FieldValue = string | string[] | number | Record<string, string | number>[];
+
+export function defaultAnswers(fields: WorksheetField[]): Record<string, FieldValue> {
+  const state: Record<string, FieldValue> = {};
+  for (const f of fields) {
+    if (f.type === "textarea" || f.type === "text") state[f.key] = f.seed ?? "";
+    else if (f.type === "chipList") state[f.key] = f.seed;
+    else if (f.type === "table") state[f.key] = f.seedRows;
+    else if (f.type === "checklist") state[f.key] = f.seedChecked ?? [];
+    else if (f.type === "research") state[f.key] = f.synthesisSeed ?? "";
+    else if (f.type === "wordBank") state[f.key] = f.seed ?? [];
+    else if (f.type === "scale") state[f.key] = f.seed ?? 50;
+  }
+  return state;
+}
+
 export const WORKSHEET_SCHEMAS: Record<number, WorksheetField[]> = {
   2: [
     { type: "textarea", key: "visionStatement", label: "Vision statement", hint: "“In the next 5 to 10 years, I see myself…”", rows: 3, seed: "Leading a small product team building tools that make messy operations legible for non-technical people, working from a place with real seasons, mentoring at least one person junior to me." },

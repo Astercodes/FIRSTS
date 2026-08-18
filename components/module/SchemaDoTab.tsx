@@ -1,39 +1,33 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import type { WorksheetField } from "@/lib/worksheetSchemas";
+import { defaultAnswers, type FieldValue, type WorksheetField } from "@/lib/worksheetSchemas";
+import { loadAnswers, saveAnswers } from "@/lib/answersStore";
 import { MarkCompleteButton } from "@/components/module/MarkCompleteButton";
 
-type FieldValue = string | string[] | number | Record<string, string | number>[];
-
-function initialState(fields: WorksheetField[]): Record<string, FieldValue> {
-  const state: Record<string, FieldValue> = {};
-  for (const f of fields) {
-    if (f.type === "textarea" || f.type === "text") state[f.key] = f.seed ?? "";
-    else if (f.type === "chipList") state[f.key] = f.seed;
-    else if (f.type === "table") state[f.key] = f.seedRows;
-    else if (f.type === "checklist") state[f.key] = f.seedChecked ?? [];
-    else if (f.type === "research") state[f.key] = f.synthesisSeed ?? "";
-    else if (f.type === "wordBank") state[f.key] = f.seed ?? [];
-    else if (f.type === "scale") state[f.key] = f.seed ?? 50;
-  }
-  return state;
-}
-
 export function SchemaDoTab({ fields, color, moduleId }: { fields: WorksheetField[]; color: string; moduleId: number }) {
-  const [state, setState] = useState(() => initialState(fields));
+  const [state, setState] = useState(() => defaultAnswers(fields));
   const [saveState, setSaveState] = useState<"saving" | "saved">("saved");
   const first = useRef(true);
+
+  useEffect(() => {
+    function sync() {
+      const saved = loadAnswers<Record<string, FieldValue>>(moduleId);
+      if (saved) setState((prev) => ({ ...prev, ...saved }));
+    }
+    sync();
+  }, [moduleId]);
 
   useEffect(() => {
     if (first.current) {
       first.current = false;
       return;
     }
+    saveAnswers(moduleId, state);
     setSaveState("saving");
     const t = setTimeout(() => setSaveState("saved"), 700);
     return () => clearTimeout(t);
-  }, [state]);
+  }, [state, moduleId]);
 
   function set(key: string, value: FieldValue) {
     setState((prev) => ({ ...prev, [key]: value }));

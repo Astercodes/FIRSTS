@@ -5,7 +5,7 @@ export function Topbar() {
   const initial = MOCK_USER.firstName[0];
 
   return (
-    <header className="sticky top-0 z-20 flex items-center justify-between border-b border-ink/8 bg-paper/80 px-6 py-4 backdrop-blur-md lg:px-10">
+    <header className="sticky top-0 z-20 flex items-center justify-between border-b border-ink/8 bg-paper/80 px-6 py-4 backdrop-blur-md lg:px-10 print:hidden">
       <Link href="/dashboard" className="flex items-center gap-2 lg:hidden">
         <span className="relative flex h-7 w-7 items-center justify-center rounded-full bg-gradient-to-br from-[var(--neon-pink)] via-[var(--sunshine-orange)] to-[var(--lime-zest)]">
           <span className="font-display text-xs font-bold text-ink">F</span>

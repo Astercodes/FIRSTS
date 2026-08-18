@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import { MarkCompleteButton } from "@/components/module/MarkCompleteButton";
+import { loadAnswers, saveAnswers } from "@/lib/answersStore";
 
 const VALUE_BANK = [
   "Achievement", "Autonomy", "Stability", "Wealth", "Recognition", "Impact", "Service", "Faith",
@@ -68,14 +69,43 @@ export function DoTab({ color, moduleId }: { color: string; moduleId: number }) 
   const first = useRef(true);
 
   useEffect(() => {
+    function sync() {
+      const saved = loadAnswers(moduleId);
+      if (!saved) return;
+      if (saved.values) setValues(saved.values as string[]);
+      if (saved.top5) setTop5(saved.top5 as string[]);
+      if (saved.top3) setTop3(saved.top3 as string[]);
+      if (saved.filters) setFilters(saved.filters as Record<string, ValueFilter>);
+      if (typeof saved.neverIndustry === "string") setNeverIndustry(saved.neverIndustry);
+      if (typeof saved.neverCompromise === "string") setNeverCompromise(saved.neverCompromise);
+      if (typeof saved.leaveImmediately === "string") setLeaveImmediately(saved.leaveImmediately);
+      if (typeof saved.successWithout === "string") setSuccessWithout(saved.successWithout);
+      if (typeof saved.alignmentIndustry === "string") setAlignmentIndustry(saved.alignmentIndustry);
+      if (typeof saved.alignmentSupports === "string") setAlignmentSupports(saved.alignmentSupports);
+      if (typeof saved.alignmentStrained === "string") setAlignmentStrained(saved.alignmentStrained);
+      if (typeof saved.alignmentTension === "string") setAlignmentTension(saved.alignmentTension);
+      if (typeof saved.conflictPair === "string") setConflictPair(saved.conflictPair);
+      if (typeof saved.conflictPriority === "string") setConflictPriority(saved.conflictPriority);
+      if (typeof saved.conflictWhy === "string") setConflictWhy(saved.conflictWhy);
+    }
+    sync();
+  }, [moduleId]);
+
+  useEffect(() => {
     if (first.current) {
       first.current = false;
       return;
     }
+    saveAnswers(moduleId, {
+      values, top5, top3, filters,
+      neverIndustry, neverCompromise, leaveImmediately, successWithout,
+      alignmentIndustry, alignmentSupports, alignmentStrained, alignmentTension,
+      conflictPair, conflictPriority, conflictWhy,
+    });
     setSaveState("saving");
     const t = setTimeout(() => setSaveState("saved"), 700);
     return () => clearTimeout(t);
-  }, [values, top5, top3, filters, neverIndustry, neverCompromise, leaveImmediately, successWithout, alignmentIndustry, alignmentSupports, alignmentStrained, alignmentTension, conflictPair, conflictPriority, conflictWhy]);
+  }, [moduleId, values, top5, top3, filters, neverIndustry, neverCompromise, leaveImmediately, successWithout, alignmentIndustry, alignmentSupports, alignmentStrained, alignmentTension, conflictPair, conflictPriority, conflictWhy]);
 
   function toggleValue(v: string) {
     setValues((prev) => (prev.includes(v) ? prev.filter((x) => x !== v) : [...prev, v]));
