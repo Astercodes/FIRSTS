@@ -3,7 +3,7 @@
 import { useEffect, useRef, useState } from "react";
 import type { WorksheetField } from "@/lib/worksheetSchemas";
 
-type FieldValue = string | string[] | Record<string, string | number>[];
+type FieldValue = string | string[] | number | Record<string, string | number>[];
 
 function initialState(fields: WorksheetField[]): Record<string, FieldValue> {
   const state: Record<string, FieldValue> = {};
@@ -13,6 +13,8 @@ function initialState(fields: WorksheetField[]): Record<string, FieldValue> {
     else if (f.type === "table") state[f.key] = f.seedRows;
     else if (f.type === "checklist") state[f.key] = f.seedChecked ?? [];
     else if (f.type === "research") state[f.key] = f.synthesisSeed ?? "";
+    else if (f.type === "wordBank") state[f.key] = f.seed ?? [];
+    else if (f.type === "scale") state[f.key] = f.seed ?? 50;
   }
   return state;
 }
@@ -36,6 +38,8 @@ export function SchemaDoTab({ fields, color }: { fields: WorksheetField[]; color
     setState((prev) => ({ ...prev, [key]: value }));
   }
 
+  const showSectionHeaders = fields.map((field, i) => field.section !== undefined && field.section !== fields[i - 1]?.section);
+
   return (
     <div className="space-y-6">
       <div className="flex items-center justify-end">
@@ -49,19 +53,26 @@ export function SchemaDoTab({ fields, color }: { fields: WorksheetField[]; color
         </span>
       </div>
 
-      {fields.map((field, i) => (
-        <section key={field.key} className="rounded-3xl border border-ink/8 bg-white p-7 sm:p-8">
-          <p className="mb-1 text-xs font-semibold uppercase tracking-[0.15em] text-ink/45">
-            Step {i + 1} · {field.label}
-          </p>
-          {"hint" in field && field.hint && (
-            <p className="mb-4 text-sm text-ink/55">{field.hint}</p>
-          )}
-          <div className={"hint" in field && field.hint ? "" : "mt-4"}>
-            <FieldRenderer field={field} value={state[field.key]} onChange={(v) => set(field.key, v)} color={color} />
+      {fields.map((field, i) => {
+        const showSectionHeader = showSectionHeaders[i];
+
+        return (
+          <div key={field.key}>
+            {showSectionHeader && (
+              <p className="mb-3 mt-2 text-xs font-bold uppercase tracking-[0.2em] text-ink/35">
+                {field.section}
+              </p>
+            )}
+            <section className="rounded-3xl border border-ink/8 bg-white p-7 sm:p-8">
+              <p className="mb-1 text-sm font-semibold text-ink">{field.label}</p>
+              {field.hint && <p className="mb-4 text-sm text-ink/55">{field.hint}</p>}
+              <div className={field.hint ? "" : "mt-4"}>
+                <FieldRenderer field={field} value={state[field.key]} onChange={(v) => set(field.key, v)} color={color} />
+              </div>
+            </section>
           </div>
-        </section>
-      ))}
+        );
+      })}
     </div>
   );
 }
@@ -108,6 +119,14 @@ function FieldRenderer({
 
   if (field.type === "checklist") {
     return <ChecklistInput items={field.items} value={value as string[]} onChange={onChange} color={color} />;
+  }
+
+  if (field.type === "wordBank") {
+    return <WordBankInput words={field.words} pickCount={field.pickCount} value={value as string[]} onChange={onChange} color={color} />;
+  }
+
+  if (field.type === "scale") {
+    return <ScaleInput value={value as number} onChange={onChange} color={color} />;
   }
 
   if (field.type === "research") {
@@ -185,6 +204,105 @@ function ChipListInput({
           Add
         </button>
       </div>
+    </div>
+  );
+}
+
+function WordBankInput({
+  words,
+  pickCount,
+  value,
+  onChange,
+  color,
+}: {
+  words: string[];
+  pickCount: number;
+  value: string[];
+  onChange: (v: string[]) => void;
+  color: string;
+}) {
+  const [draft, setDraft] = useState("");
+
+  function toggle(word: string) {
+    if (value.includes(word)) {
+      onChange(value.filter((x) => x !== word));
+    } else {
+      onChange([...value, word]);
+    }
+  }
+
+  function addCustom() {
+    const v = draft.trim();
+    if (!v || value.includes(v)) return;
+    onChange([...value, v]);
+    setDraft("");
+  }
+
+  return (
+    <div>
+      <p className="mb-3 text-xs font-medium text-ink/40">
+        {value.length} selected {pickCount ? `· aim for around ${pickCount}` : ""}
+      </p>
+      <div className="mb-4 flex flex-wrap gap-2">
+        {words.map((word) => {
+          const active = value.includes(word);
+          return (
+            <button
+              key={word}
+              onClick={() => toggle(word)}
+              className="rounded-full border px-3.5 py-1.5 text-sm font-medium transition-all"
+              style={
+                active
+                  ? { borderColor: color, color, background: `color-mix(in oklab, ${color} 14%, white)` }
+                  : { borderColor: "rgba(11,4,16,0.1)", color: "rgba(11,4,16,0.55)" }
+              }
+            >
+              {word}
+            </button>
+          );
+        })}
+      </div>
+      <div className="flex gap-2">
+        <input
+          value={draft}
+          onChange={(e) => setDraft(e.target.value)}
+          onKeyDown={(e) => e.key === "Enter" && (e.preventDefault(), addCustom())}
+          placeholder="Add your own…"
+          className="flex-1 rounded-2xl border border-ink/10 bg-paper-dim px-4 py-2.5 text-sm text-ink outline-none focus:border-ink/25"
+        />
+        <button onClick={addCustom} className="rounded-2xl px-5 py-2.5 text-sm font-semibold text-white" style={{ background: color }}>
+          Add
+        </button>
+      </div>
+    </div>
+  );
+}
+
+const SCALE_STEPS = [10, 20, 30, 40, 50, 60, 70, 80, 90, 100];
+
+function ScaleInput({
+  value,
+  onChange,
+  color,
+}: {
+  value: number;
+  onChange: (v: number) => void;
+  color: string;
+}) {
+  return (
+    <div>
+      <div className="flex gap-1.5">
+        {SCALE_STEPS.map((step) => (
+          <button
+            key={step}
+            onClick={() => onChange(step)}
+            className="h-8 flex-1 rounded-lg transition-colors"
+            style={{ background: value >= step ? color : "var(--paper-dim)" }}
+            aria-label={`${step}%`}
+          />
+        ))}
+      </div>
+      <p className="mt-2 text-right text-xs font-semibold text-ink/45">{value}%</p>
     </div>
   );
 }
