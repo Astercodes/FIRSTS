@@ -28,7 +28,7 @@ export function ModuleCard({
       <StatusIcon status={effectiveStatus} color={color} />
       <div className="min-w-0 flex-1">
         <p className="truncate text-sm font-semibold text-ink">
-          <span className="mr-1.5 text-ink/35">{String(m.id).padStart(2, "0")}</span>
+          <span className="mr-1.5 text-ink/35">{m.code}</span>
           {m.title}
         </p>
         <p className="mt-0.5 text-xs text-ink/45">

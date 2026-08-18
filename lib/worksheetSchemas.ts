@@ -474,4 +474,277 @@ export const WORKSHEET_SCHEMAS: Record<number, WorksheetField[]> = {
     { type: "text", key: "productivityNonNegotiable", label: "My productivity non-negotiable", section: "Integration", seed: "The Friday weekly review happens no matter what" },
     { type: "text", key: "resetWhenOffTrack", label: "How I will reset when I fall off track", section: "Integration", seed: "Do one small, easy task first to rebuild momentum instead of tackling the hardest thing" },
   ],
+
+  19: [
+    { type: "text", key: "who", label: "Who you are", hint: "Name, year, major.", seed: "Ada, junior, Computer Science" },
+    { type: "text", key: "focus", label: "What you focus on", hint: "Interests, direction, one credential.", seed: "Backend systems and data infrastructure" },
+    { type: "text", key: "headed", label: "Where you're headed", hint: "The kind of opportunity you want.", seed: "A summer internship building real backend features on a small team" },
+    { type: "textarea", key: "fullIntro", label: "Full 30–60 second introduction", rows: 4, seed: "I'm Ada, a junior studying Computer Science focused on backend systems and data infrastructure. I've spent the last year rebuilding a club's broken sign-up system from scratch. I'm looking for a summer internship where I can build real backend features on a small team." },
+  ],
+
+  20: [
+    { type: "textarea", key: "hook", label: "Specific hook", hint: "A project, a skill, or a goal.", rows: 2, seed: "I rebuilt our club's sign-up system last year and cut processing errors by half." },
+    { type: "text", key: "ask", label: "Low-pressure ask or close", seed: "Would you be open to connecting on LinkedIn?" },
+    { type: "textarea", key: "recruiterVersion", label: "Version for a recruiter", rows: 2, seed: "I'm a CS junior focused on backend systems — I rebuilt our club's sign-up flow and cut errors in half. I'd love to hear what backend problems your team is tackling right now." },
+    { type: "textarea", key: "professorVersion", label: "Version for a professor", rows: 2, seed: "I'm in your systems course and have been applying what we're learning to a real rebuild for my club — I'd love your thoughts on where to take it next." },
+  ],
+
+  21: [
+    { type: "text", key: "focusArea", label: "Focus area / field", seed: "Backend systems" },
+    { type: "text", key: "signatureStrength", label: "Signature strength", seed: "Turning fragile, undocumented systems into ones people trust" },
+    { type: "text", key: "outcome", label: "Outcome you create", seed: "Fewer errors, less firefighting for the team" },
+    { type: "textarea", key: "statement", label: "One-to-two sentence brand statement", rows: 2, seed: "I turn fragile backend systems into ones teams can trust. I specialize in finding the undocumented failure points before they become outages." },
+    { type: "text", key: "testerFeedback", label: "What one person thought you do, after reading it", seed: "\"You fix things before they break — got it.\"" },
+  ],
+
+  22: [
+    { type: "table", key: "emailAudit", label: "Week-long email tone audit", hint: "Review a week of your own emails or messages.", columns: [
+      { key: "context", label: "Email / message", kind: "text" },
+      { key: "tone", label: "Tone (too casual / fine / too stiff)", kind: "text" },
+      { key: "fix", label: "Fix", kind: "text" },
+    ], seedRows: [
+      { context: "Follow-up to a professor", tone: "Too casual — no greeting", fix: "Add greeting, close with full name" },
+    ] },
+    { type: "textarea", key: "structureNotes", label: "Your professional email structure", hint: "Greeting, purpose, ask, closing.", rows: 3, seed: "Greeting → one-line purpose → specific ask → professional close with my name and program." },
+  ],
+
+  23: [
+    { type: "text", key: "lowStakesSituation", label: "One low-stakes situation this week", seed: "Raising my hand first in tomorrow's group project meeting" },
+    { type: "textarea", key: "preparation", label: "How you're preparing", rows: 2, seed: "Reviewing the agenda beforehand and preparing one specific point to raise early." },
+    { type: "textarea", key: "debrief", label: "Debrief after", hint: "What went well? What would you adjust?", rows: 2, seed: "Went well — speaking first meant less overthinking. Next time I'll slow my pace slightly." },
+  ],
+
+  24: [
+    { type: "text", key: "capability", label: "I bring [specific capability]", seed: "catching scheduling conflicts before they become problems" },
+    { type: "text", key: "helped", label: "Which helped [team or project]", seed: "our club's four-event semester" },
+    { type: "text", key: "result", label: "Achieve [result]", seed: "run without a single double-booking" },
+    { type: "textarea", key: "statement", label: "Full value statement", rows: 2, seed: "I catch scheduling conflicts before they become problems, which kept our club's four-event semester running without a single double-booking." },
+  ],
+
+  25: [
+    { type: "chipList", key: "themes", label: "3–5 themes you want associated with your name", seed: ["Strategic thinking", "Follow-through", "Clear communication"] },
+    { type: "table", key: "gapActions", label: "Gap-closing actions", columns: [
+      { key: "theme", label: "Theme", kind: "text" },
+      { key: "reality", label: "Current reality", kind: "text" },
+      { key: "action", label: "Action to close the gap", kind: "text" },
+    ], seedRows: [
+      { theme: "Strategic thinking", reality: "Mostly doing administrative club tasks", action: "Propose and lead one strategic initiative this semester" },
+    ] },
+  ],
+
+  26: [
+    { type: "chipList", key: "interestAreas", label: "Top 2–3 areas of genuine interest or skill", seed: ["Sustainability", "Consumer marketing"] },
+    { type: "textarea", key: "intersection", label: "Where they intersect", hint: "In a way most peers in your major don't combine.", rows: 2, seed: "Marketing for mission-driven consumer brands — sustainability-minded companies that still need sharp go-to-market thinking." },
+    { type: "text", key: "positioningStatement", label: "Positioning statement", hint: "\"I'm the [role/major] who focuses on [intersection].\"", seed: "I'm the marketing student who focuses on mission-driven consumer brands." },
+  ],
+
+  27: [
+    { type: "table", key: "feedback", label: "Reputation check-in", hint: "Ask two or three trusted people to describe you in three words.", columns: [
+      { key: "person", label: "Person", kind: "text" },
+      { key: "words", label: "Three words they used", kind: "text" },
+    ], seedRows: [{ person: "Club co-lead", words: "Reliable, quiet, thorough" }] },
+    { type: "textarea", key: "gapReflection", label: "Gap reflection", hint: "How does this compare to your intended brand themes?", rows: 2, seed: "\"Quiet\" wasn't on my list — worth watching whether that's read as reserved or disengaged." },
+  ],
+
+  28: [
+    { type: "table", key: "signals", label: "Current signals vs. target industry standard", columns: [
+      { key: "signal", label: "Signal", kind: "text" },
+      { key: "current", label: "Current", kind: "text" },
+      { key: "target", label: "Target standard", kind: "text" },
+    ], seedRows: [{ signal: "Event dress", current: "Class-casual", target: "Business casual" }] },
+    { type: "textarea", key: "adjustment", label: "Adjustment you're making", rows: 2, seed: "Switching to business casual for career fairs and networking events specifically." },
+  ],
+
+  29: [
+    { type: "table", key: "commitmentTracker", label: "Two-week commitment tracker", columns: [
+      { key: "commitment", label: "Commitment", kind: "text" },
+      { key: "deadline", label: "Deadline", kind: "text" },
+      { key: "completed", label: "Completed on time?", kind: "text" },
+    ], seedRows: [{ commitment: "Send meeting notes", deadline: "Thu noon", completed: "Yes" }] },
+    { type: "textarea", key: "vagueToSpecific", label: "Vague → specific rewrite", hint: "Replace \"I'll try to get to it\" with a real deadline.", rows: 2, seed: "\"I'll try to get to it\" → \"I'll send it by Thursday at noon.\"" },
+  ],
+
+  30: [
+    { type: "text", key: "overCommitment", label: "One current commitment stretching you too thin", seed: "Leading two club events in the same week" },
+    { type: "textarea", key: "proposedAdjustment", label: "Respectful adjustment message", rows: 3, seed: "\"I can take the second event on if we move the planning deadline for the first to next week — that keeps both on track without rushing either.\"" },
+  ],
+
+  31: [
+    { type: "checklist", key: "sections", label: "Profile completeness checklist", items: ["Professional photo", "Headline", "About section", "Experience with quantified achievements", "Skills", "Education", "Recommendations"], seedChecked: ["Professional photo", "Education"] },
+    { type: "text", key: "blankSection", label: "Section that's currently blank or outdated", seed: "About section" },
+    { type: "textarea", key: "sectionDraft", label: "Draft for that section", rows: 3, seed: "Backend-focused CS student who rebuilt a fragile club system from scratch. Looking for a summer internship on a small engineering team." },
+  ],
+
+  32: [
+    { type: "text", key: "role", label: "Role or major", seed: "CS student" },
+    { type: "text", key: "focus", label: "Specific focus", seed: "backend systems" },
+    { type: "text", key: "value", label: "Value or outcome", seed: "builds systems teams trust" },
+    { type: "text", key: "headlineDraft", label: "Headline draft", seed: "CS Student Focused on Backend Systems — I Build Things Teams Trust" },
+  ],
+
+  33: [
+    { type: "textarea", key: "thirdPersonBio", label: "Third-person bio (formal use)", rows: 3, seed: "Ada is a Computer Science student focused on backend systems and data infrastructure. She rebuilt her club's fragile sign-up system from scratch, cutting processing errors in half. She is currently seeking a summer internship on a small engineering team." },
+    { type: "textarea", key: "firstPersonBio", label: "First-person bio (LinkedIn)", rows: 3, seed: "I'm a CS student focused on backend systems and data infrastructure. I rebuilt my club's fragile sign-up system from scratch, cutting processing errors in half. I'm looking for a summer internship on a small engineering team." },
+  ],
+
+  34: [
+    { type: "textarea", key: "searchResults", label: "What came up searching your name", rows: 2, seed: "Mostly LinkedIn and a five-year-old public tweet — nothing concerning but the tweet is outdated." },
+    { type: "checklist", key: "platformsChecked", label: "Platforms checked", items: ["LinkedIn", "Instagram", "X / Twitter", "Facebook", "TikTok", "Other public posts"], seedChecked: ["LinkedIn", "Instagram"] },
+    { type: "textarea", key: "cleanupActions", label: "Cleanup actions taken", rows: 2, seed: "Archived the old tweet, set Instagram to private, double-checked Facebook's audience settings." },
+  ],
+
+  35: [
+    { type: "checklist", key: "pages", label: "Pages built", items: ["Homepage", "Projects / portfolio page", "Resume download", "Contact method"], seedChecked: ["Homepage"] },
+    { type: "text", key: "siteBuilder", label: "Site builder", seed: "Carrd" },
+    { type: "text", key: "url", label: "Site URL (once live)", seed: "ada-builds.carrd.co" },
+  ],
+
+  36: [
+    { type: "table", key: "projects", label: "Portfolio project case studies", hint: "3–5 of your strongest projects.", columns: [
+      { key: "project", label: "Project", kind: "text" },
+      { key: "problem", label: "Problem", kind: "text" },
+      { key: "role", label: "My role", kind: "text" },
+      { key: "outcome", label: "Outcome", kind: "text" },
+    ], seedRows: [{ project: "Club sign-up rebuild", problem: "Sign-ups silently failed under load", role: "Sole engineer", outcome: "Cut processing errors in half" }] },
+    { type: "textarea", key: "caseStudyDraft", label: "Full case study draft for your strongest project", rows: 4, seed: "Problem: our club's sign-up system silently dropped submissions during peak traffic. My role: I rebuilt it solo over one summer. Process: audited the failure logs, redesigned the queue, added retry logic. Outcome: processing errors dropped by half and sign-ups became fully reliable." },
+  ],
+
+  37: [
+    { type: "checklist", key: "shotChecklist", label: "Headshot checklist", items: ["Dressed for target field", "Natural light, facing a window", "Simple, neutral background", "Multiple expressions tried"], seedChecked: ["Natural light, facing a window"] },
+    { type: "text", key: "chosenPhotoNotes", label: "Notes on the photo you chose", seed: "Third shot — looked most approachable, good lighting, no distractions in the background." },
+  ],
+
+  38: [
+    { type: "text", key: "colorsChosen", label: "Colors chosen", seed: "Deep plum + warm mango accent" },
+    { type: "text", key: "logoIdea", label: "Simple wordmark or initials mark", seed: "Lowercase \"ada\" in a rounded sans-serif" },
+    { type: "textarea", key: "whereApplied", label: "Where you've applied it", rows: 2, seed: "Portfolio site header and resume header so far." },
+  ],
+
+  39: [
+    { type: "textarea", key: "before", label: "Original email", rows: 3, seed: "hey can you help me with something when you get a chance" },
+    { type: "textarea", key: "after", label: "Restructured version", hint: "Greeting, purpose, ask, closing.", rows: 3, seed: "Hi Professor Diaz,\n\nI'm working on my capstone proposal and have a specific question about the data pipeline section. Could we find 15 minutes this week to talk it through?\n\nThank you,\nAda" },
+  ],
+
+  40: [
+    { type: "textarea", key: "coldIntroTemplate", label: "Cold introduction template", rows: 2, seed: "Hi [Name], I'm [year/major] focused on [area]. I came across your work on [specific thing] and would love to hear how you got started in [field]." },
+    { type: "textarea", key: "followUpTemplate", label: "Follow-up after meeting someone", rows: 2, seed: "Hi [Name], great meeting you at [event] — I really appreciated your point about [specific topic]. Would love to stay in touch." },
+    { type: "textarea", key: "thankYouTemplate", label: "Thank-you after an interview", rows: 2, seed: "Hi [Name], thank you for the conversation today — I especially enjoyed hearing about [specific detail]. Looking forward to next steps." },
+  ],
+
+  41: [
+    { type: "text", key: "preparedQuestion", label: "One prepared question or contribution point", seed: "\"Should we lock the event date before or after we confirm the venue?\"" },
+    { type: "textarea", key: "reflection", label: "What happened when you raised it", rows: 2, seed: "It reframed the discussion — we ended up confirming the venue first, which the team hadn't considered." },
+  ],
+
+  42: [
+    { type: "text", key: "question1", label: "Prepared question 1", seed: "What's one thing about this role that surprised you after you started?" },
+    { type: "text", key: "question2", label: "Prepared question 2", seed: "What do new hires usually struggle to learn?" },
+    { type: "textarea", key: "researchNotes", label: "Research done beforehand", rows: 2, seed: "Read the company's last two product announcements and their engineering blog's most recent post." },
+  ],
+
+  43: [
+    { type: "textarea", key: "conversationNotes", label: "What you paraphrased back", rows: 2, seed: "\"So what I'm hearing is the delay was really about unclear ownership, not about the timeline itself.\"" },
+    { type: "textarea", key: "reflection", label: "Reflection", rows: 2, seed: "Paraphrasing first slowed me down in a good way — the follow-up question I asked was sharper because of it." },
+  ],
+
+  44: [
+    { type: "text", key: "topic", label: "Topic recorded", seed: "Elevator pitch" },
+    { type: "table", key: "attempts", label: "Recording attempts", columns: [
+      { key: "attempt", label: "Attempt", kind: "text" },
+      { key: "fillerCount", label: "Filler word count", kind: "text" },
+      { key: "notes", label: "Notes", kind: "text" },
+    ], seedRows: [
+      { attempt: "1", fillerCount: "14 \"ums\"", notes: "Rushed the middle section" },
+      { attempt: "2", fillerCount: "4 \"ums\"", notes: "Paused instead of filling silence — much steadier" },
+    ] },
+    { type: "textarea", key: "improvement", label: "What you'll adjust next", rows: 2, seed: "Keep pausing instead of filling silence, and slow down the opening line specifically." },
+  ],
+
+  45: [
+    { type: "checklist", key: "setupChecklist", label: "Recording setup checklist", items: ["Good natural lighting", "Simple, uncluttered background", "Script adapted for video (warmer tone)", "2–3 takes recorded"], seedChecked: ["Good natural lighting"] },
+    { type: "textarea", key: "script", label: "Video script", rows: 3, seed: "Hi, I'm Ada — a CS junior focused on backend systems. Last year I rebuilt my club's sign-up system from scratch and cut errors in half. I'm looking for a summer internship where I can build real backend features on a small team." },
+  ],
+
+  46: [
+    { type: "checklist", key: "platforms", label: "Platform strategy", items: ["LinkedIn — professional", "Instagram — private", "X / Twitter — professional", "TikTok — private", "Other"], seedChecked: ["LinkedIn — professional", "Instagram — private"] },
+    { type: "text", key: "weeklyCommitment", label: "Realistic weekly commitment", seed: "One comment or share per week, no more" },
+  ],
+
+  47: [
+    { type: "chipList", key: "accountsToFollow", label: "10–15 accounts to follow in your field", seed: ["Stripe Engineering", "A target-company CTO", "An alumnus in your field"] },
+    { type: "table", key: "commentLog", label: "Comment log", columns: [
+      { key: "post", label: "Post / person", kind: "text" },
+      { key: "comment", label: "Your comment", kind: "text" },
+      { key: "response", label: "Response?", kind: "text" },
+    ], seedRows: [{ post: "Alumnus's post on fraud detection", comment: "Asked a specific follow-up about their model's false-positive rate", response: "They replied with detail" }] },
+  ],
+
+  48: [
+    { type: "table", key: "shares", label: "Content shares", columns: [
+      { key: "source", label: "Article / post", kind: "text" },
+      { key: "reflection", label: "My reflection (2–3 sentences)", kind: "text" },
+      { key: "date", label: "Date", kind: "text" },
+    ], seedRows: [{ source: "Industry report on fraud trends", reflection: "Connected it to a project I'd worked on and asked a follow-up question", date: "This month" }] },
+  ],
+
+  49: [
+    { type: "text", key: "topic", label: "Specific, narrow topic", seed: "The mistake I made in my first internship's first week" },
+    { type: "textarea", key: "outline", label: "Rough outline", rows: 3, seed: "1. The mistake (assumed instead of asked) 2. What it cost 3. What I changed 4. What I'd tell someone starting their first internship" },
+    { type: "textarea", key: "draft", label: "First draft", rows: 4, seed: "In my first week, I assumed I understood a request instead of asking a clarifying question — and redid two days of work as a result..." },
+  ],
+
+  50: [
+    { type: "text", key: "theme", label: "Common theme across your posts", seed: "Things no one tells you about your first internship" },
+    { type: "chipList", key: "futureTopics", label: "3–5 future topics", seed: ["Asking clarifying questions", "How to handle your first mistake", "Reading team dynamics fast"] },
+    { type: "text", key: "cadence", label: "Realistic publishing cadence", seed: "Monthly" },
+  ],
+
+  51: [
+    { type: "research", key: "trendResearch", label: "Live trend research", sources: [
+      { title: "Industry trend brief", domain: "industry-report.com", snippet: "Sustainable packaging regulation is tightening across major markets, reshaping vendor requirements." },
+    ], synthesisSeed: "This shifts hiring toward roles that can navigate both compliance and vendor relationships — worth naming directly in outreach." },
+    { type: "textarea", key: "analysis", label: "Your analysis", hint: "Why does it matter, and what might it mean for someone entering the field?", rows: 4, seed: "The regulation shift means new hires who understand both compliance and vendor sourcing will be unusually valuable over the next two years — most programs don't teach that intersection yet." },
+  ],
+
+  52: [
+    { type: "chipList", key: "openers", label: "3–4 prepared conversation openers", seed: ["\"I saw your team's recent product launch — what's been the reaction internally?\""] },
+    { type: "text", key: "eventContext", label: "Event these are tailored to", seed: "Spring career fair" },
+  ],
+
+  53: [
+    { type: "text", key: "targetJobListing", label: "Job listing you're tailoring to", seed: "Backend Engineering Intern — target company" },
+    { type: "table", key: "bullets", label: "Bullet rewrites", columns: [
+      { key: "original", label: "Original bullet", kind: "text" },
+      { key: "rewritten", label: "Rewritten (action verb + outcome)", kind: "text" },
+    ], seedRows: [{ original: "Responsible for club website", rewritten: "Rebuilt club sign-up system, cutting processing errors by 50%" }] },
+  ],
+
+  54: [
+    { type: "text", key: "companyDetail", label: "Specific, recent company detail", seed: "Their engineering blog post on reliability culture" },
+    { type: "textarea", key: "openingHook", label: "Opening hook", rows: 2, seed: "Your engineering blog's recent post on reliability culture is exactly the mindset I built my own system rebuild around." },
+    { type: "textarea", key: "bodyStory", label: "One concrete story", rows: 3, seed: "Last year I rebuilt my club's fragile sign-up system after repeated silent failures, cutting processing errors in half through better queue design and retry logic." },
+    { type: "textarea", key: "closing", label: "Closing", rows: 2, seed: "I'd welcome the chance to bring that same care for reliability to your team this summer." },
+  ],
+
+  55: [
+    { type: "textarea", key: "signatureDraft", label: "Email signature draft", rows: 3, seed: "Ada Lovelace\nComputer Science, Class of 2027\nlinkedin.com/in/adalovelace" },
+    { type: "text", key: "digitalCardMethod", label: "Digital card method", seed: "QR code linking to LinkedIn, saved to phone home screen" },
+  ],
+
+  56: [
+    { type: "text", key: "project1", label: "Strongest project", seed: "Club sign-up system rebuild" },
+    { type: "textarea", key: "walkthrough1", label: "2–3 minute spoken walkthrough", rows: 4, seed: "The problem was silent failures under load. My role was sole engineer on the rebuild. I audited the failure logs, redesigned the queue, and added retry logic. The outcome was a 50% drop in processing errors and zero silent failures since." },
+  ],
+
+  57: [
+    { type: "chipList", key: "questionsToAsk", label: "Specific questions to ask your reviewer", seed: ["Does this project selection make sense for the roles I'm targeting?", "Is anything here reading as generic?"] },
+    { type: "textarea", key: "feedbackReceived", label: "Feedback received", rows: 3, seed: "Reviewer flagged that my second project didn't clearly show my individual role versus the team's — suggested swapping it for the sign-up rebuild instead." },
+    { type: "textarea", key: "changesApplied", label: "Changes you applied", rows: 2, seed: "Swapped the second project and added a one-line \"my role\" callout to every case study." },
+  ],
+
+  58: [
+    { type: "checklist", key: "consistencyChecklist", label: "Consistency checklist", items: ["Photo matches everywhere", "Brand statement / headline matches", "Key achievements match", "Contact info matches"], seedChecked: ["Photo matches everywhere"] },
+    { type: "textarea", key: "inconsistenciesFound", label: "Inconsistencies found", rows: 2, seed: "Resume lists my newest internship but LinkedIn still shows the old role — needs updating." },
+    { type: "text", key: "nextReviewDate", label: "Next review date", seed: "Start of next semester" },
+  ],
 };

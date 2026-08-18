@@ -31,6 +31,46 @@ export const COACH_MODE: Record<number, CoachMode> = {
   16: "reflective",
   17: "reflective",
   18: "reflective",
+  19: "reflective",
+  20: "reflective",
+  21: "reflective",
+  22: "reflective",
+  23: "reflective",
+  24: "reflective",
+  25: "reflective",
+  26: "reflective",
+  27: "reflective",
+  28: "reflective",
+  29: "reflective",
+  30: "reflective",
+  31: "reflective",
+  32: "reflective",
+  33: "reflective",
+  34: "reflective",
+  35: "reflective",
+  36: "reflective",
+  37: "reflective",
+  38: "reflective",
+  39: "reflective",
+  40: "reflective",
+  41: "reflective",
+  42: "reflective",
+  43: "reflective",
+  44: "reflective",
+  45: "reflective",
+  46: "reflective",
+  47: "reflective",
+  48: "reflective",
+  49: "reflective",
+  50: "reflective",
+  51: "hybrid",
+  52: "reflective",
+  53: "reflective",
+  54: "reflective",
+  55: "reflective",
+  56: "reflective",
+  57: "hybrid",
+  58: "reflective",
 };
 
 export const LEARN_CONTENT: Record<number, LearnContent> = {
@@ -617,5 +657,1168 @@ export const LEARN_CONTENT: Record<number, LearnContent> = {
     successSignal:
       "You can name your single biggest real distraction from a week of honest data, and you have a weekly review slot already on your calendar to keep adjusting the system.",
     milestoneTies: [15, 6, 16],
+  },
+
+  19: {
+    definition:
+      "A clear, natural 30-to-60-second self-description that explains who you are, what you study or do, and where you are headed professionally. It's the spoken version of your personal brand, used the moment someone asks \"tell me about yourself.\"",
+    whyItMatters:
+      "Most students either freeze or ramble when asked to introduce themselves, which costs them credibility in the first ten seconds of an interview, a networking event, or a career fair. A rehearsed, natural introduction lets you control the first impression instead of leaving it to chance.",
+    whenWhoWhere: [
+      { label: "When", body: "Build this before your first networking event, career fair, or interview, and revise it every semester as your experience grows." },
+      { label: "Who", body: "A career center advisor, a trusted friend to rehearse with, and mentors or professors who can react honestly to how it lands." },
+      { label: "Where", body: "Practiced in the mirror, recorded on your phone, tested at career fairs, and refined after every networking conversation." },
+    ],
+    howItWorks: [
+      "Draft the three components: who you are (name, year, major).",
+      "What you focus on (interests, direction, one credential).",
+      "Where you are headed (the kind of opportunity you want).",
+      "Say it out loud, time it, cut anything over 60 seconds.",
+      "Practice until it sounds conversational rather than memorized.",
+    ],
+    tools: ["Voice memo app", "A mirror", "One-page cheat sheet"],
+    scenario: {
+      title: "\"I don't really know what I do yet\"",
+      body: "A sophomore kept saying that when asked to introduce herself at a career fair. After drafting a 40-second introduction anchored on her marketing coursework and one class project, recruiters started asking productive follow-up questions instead of ending the conversation.",
+    },
+    pitfalls: [
+      "Reciting a memorized script word for word",
+      "Going over 60 seconds",
+      "Listing every class and club instead of a focused story",
+    ],
+    successSignal:
+      "You can deliver it naturally without sounding rehearsed, and the person you're speaking with asks a specific follow-up question afterward.",
+    milestoneTies: [20, 32],
+  },
+
+  20: {
+    definition:
+      "A concise, persuasive explanation of who you are, what you study, and where you're headed, delivered in the time it takes to ride an elevator with someone important. It goes one step further than your introduction by including a clear ask or hook.",
+    whyItMatters:
+      "Opportunities often appear in short, unplanned windows: a chance encounter with an alum, a recruiter walking the career fair floor, a professor's guest speaker after class. Without a pitch ready, those windows close before you can use them.",
+    whenWhoWhere: [
+      { label: "When", body: "Have a version ready before any event where you might meet someone who can open a door for you, and update it each time your focus shifts." },
+      { label: "Who", body: "Career services staff for structure feedback, and peers or mentors to practice the delivery and tone with." },
+      { label: "Where", body: "Career fairs, alumni events, conferences, LinkedIn messages, and casual encounters on campus." },
+    ],
+    howItWorks: [
+      "Start from your introduction.",
+      "Add a specific hook — a project, a skill, or a goal.",
+      "End with a light, low-pressure ask, such as a question or a request to connect.",
+      "Practice adapting the pitch to different audiences: a recruiter, a professor, a stranger at a mixer.",
+    ],
+    tools: ["Notes app draft", "Business card or LinkedIn QR code"],
+    scenario: {
+      title: "The tailored hook that landed",
+      body: "A student used the same flat pitch with every recruiter at a career fair and got no follow-ups. After tailoring the hook to each company's focus area beforehand, three of five conversations turned into actual interview invitations.",
+    },
+    pitfalls: [
+      "Making the pitch too long or too generic",
+      "Making it entirely about yourself with no natural close or ask",
+    ],
+    successSignal:
+      "The listener responds with a next step, such as a business card exchange, a LinkedIn connection, or an invitation to follow up.",
+    milestoneTies: [19, 52],
+  },
+
+  21: {
+    definition:
+      "A one-to-two-sentence positioning statement that captures who you are professionally, what you're known for, and the value you bring. It's the written anchor behind your introduction, resume, and LinkedIn profile.",
+    whyItMatters:
+      "Without a clear statement, your professional materials tend to drift and contradict each other. A single, well-crafted sentence keeps your resume, LinkedIn, and conversations consistent and memorable.",
+    whenWhoWhere: [
+      { label: "When", body: "Draft this after completing your Personal Brand Narrative worksheet in Stage One, since it depends on knowing your strengths and direction." },
+      { label: "Who", body: "A mentor or career advisor to sanity-check that it sounds authentic rather than generic." },
+      { label: "Where", body: "Written during a focused planning session, then placed at the top of your resume, LinkedIn About section, and personal website." },
+    ],
+    howItWorks: [
+      "Combine your focus area, your signature strength, and the outcome you aim to create into one or two sentences.",
+      "Test it by reading it aloud.",
+      "If it could describe five other students equally well, sharpen it further.",
+    ],
+    tools: ["Your Stage One Personal Brand Narrative worksheet", "A document to draft and revise versions"],
+    scenario: {
+      title: "\"Hardworking student\" to a real sentence",
+      body: "A computer science student's first draft read, \"I am a hardworking student who loves technology.\" After revision it became, \"I build accessible mobile tools that help small businesses reach customers they'd otherwise miss.\" The second version got noticeably more interview callbacks.",
+    },
+    pitfalls: [
+      "Writing something so broad it applies to anyone",
+      "Packing in every skill instead of picking one clear angle",
+    ],
+    successSignal:
+      "People who read or hear it can accurately describe what you do and what makes you different, without you having to explain further.",
+    milestoneTies: [53, 32, 33],
+  },
+
+  22: {
+    definition:
+      "The deliberate development of clarity, tone, and professionalism across how you speak and write in academic and workplace settings. It covers everything from email tone to how you phrase disagreement in a meeting.",
+    whyItMatters:
+      "Communication style is often judged faster than competence. A capable student who writes overly casual emails or interrupts in meetings can be overlooked for opportunities that a more polished communicator receives instead.",
+    whenWhoWhere: [
+      { label: "When", body: "Start developing this as soon as you begin emailing professors, applying for internships, or joining student organizations with real responsibilities." },
+      { label: "Who", body: "Professors and internship supervisors, whose responses (or lack of response) are honest feedback on your communication clarity." },
+      { label: "Where", body: "Email threads, class discussions, team meetings, and any written communication with someone outside your close friend group." },
+    ],
+    howItWorks: [
+      "Audit a week of your own emails and messages for tone and clarity.",
+      "Adopt a simple structure for professional emails: greeting, purpose, ask, closing.",
+      "Practice pausing before responding in tense conversations rather than reacting immediately.",
+    ],
+    tools: ["Grammarly or a similar writing checker", "A saved folder of well-written professional emails"],
+    scenario: {
+      title: "From one-line lowercase to strategic conversations",
+      body: "A student's early internship emails were one-line and lowercase, and her manager quietly stopped looping her into decisions. After adopting a clear three-part email structure, her manager began cc'ing her on more strategic conversations within a month.",
+    },
+    pitfalls: [
+      "Writing emails too casual for the context",
+      "Overcorrecting into stiff, jargon-heavy language that sounds unnatural",
+    ],
+    successSignal:
+      "People respond to your messages promptly and take your questions and requests seriously without needing clarification.",
+    milestoneTies: [54, 41, 47],
+  },
+
+  23: {
+    definition:
+      "The intentional practice of showing up in professional settings with self-assurance grounded in preparation, not bravado. It's less about eliminating nerves and more about acting effectively despite them.",
+    whyItMatters:
+      "Confidence, even more than raw qualifications, often determines who gets remembered after an interview or networking event. Students frequently underestimate themselves and let that show in body language, tone, and hesitation.",
+    whenWhoWhere: [
+      { label: "When", body: "Build this gradually, starting with low-stakes settings like class discussions before moving to higher-stakes ones like interviews." },
+      { label: "Who", body: "A mock interview coach, a public speaking club, or a trusted peer who will give direct feedback on how you come across." },
+      { label: "Where", body: "Classroom discussions, mock interviews, networking events, and any first-time professional interaction." },
+    ],
+    howItWorks: [
+      "Prepare thoroughly for high-stakes moments so confidence has a real foundation.",
+      "Practice power-posture and steady breathing before entering a room.",
+      "Reframe nervousness as energy rather than a warning sign.",
+      "Debrief after each event: what went well, what you'd adjust.",
+    ],
+    tools: ["Mock interview service or career center session", "A short pre-event routine"],
+    scenario: {
+      title: "One question per class",
+      body: "A quiet engineering student used to avoid raising his hand in class discussions. After committing to answer one question per class for a month, he noticed both his classroom confidence and his interview performance improved together.",
+    },
+    pitfalls: [
+      "Confusing confidence with overconfidence and dismissing feedback",
+      "Avoiding practice opportunities because they feel uncomfortable",
+    ],
+    successSignal:
+      "You walk into unfamiliar professional settings without visible hesitation, and recover smoothly when something doesn't go as planned.",
+    milestoneTies: [20, 53],
+  },
+
+  24: {
+    definition:
+      "A clear articulation of the specific value you bring to a team, project, or organization, stated in terms of outcomes rather than traits. It answers the question every employer is silently asking: \"why should we want you?\"",
+    whyItMatters:
+      "Listing personality traits like \"hardworking\" or \"team player\" doesn't differentiate you, since nearly every candidate claims the same. A value statement grounded in real outcomes gives employers something concrete to remember.",
+    whenWhoWhere: [
+      { label: "When", body: "Draft this once you have at least one project, internship, or leadership experience to point to as evidence." },
+      { label: "Who", body: "A mentor or supervisor who witnessed your actual contribution and can help you name it accurately." },
+      { label: "Where", body: "Used in interviews, cover letters, and team introductions when a new group needs to understand your role quickly." },
+    ],
+    howItWorks: [
+      "Identify one to three moments where your specific contribution changed an outcome.",
+      "Translate each into a value statement: \"I bring [specific capability], which helped [team or project] achieve [result].\"",
+    ],
+    tools: ["Your Stage One Strength Inventory worksheet", "Notes from performance feedback"],
+    scenario: {
+      title: "From \"reliable\" to a remembered detail",
+      body: "A student initially described herself as \"reliable and detail-oriented.\" Reworked, her value statement became, \"I catch scheduling conflicts before they become problems, which kept our club's four-event semester running without a single double-booking.\" Interviewers remembered the second version.",
+    },
+    pitfalls: [
+      "Staying abstract (\"I'm a hard worker\") instead of naming a concrete, provable outcome",
+    ],
+    successSignal:
+      "You can state your value in one sentence backed by a real example, and the listener remembers the specific detail afterward.",
+    milestoneTies: [53, 54],
+  },
+
+  25: {
+    definition:
+      "A deliberate plan defining the strengths, themes, and reputation you want associated with your name across every professional context. It moves personal branding from an accidental byproduct to an intentional choice.",
+    whyItMatters:
+      "Without a strategy, your professional identity forms passively and inconsistently, shaped by whoever happens to interact with you rather than by your own intention. A defined strategy lets you build a reputation deliberately over time.",
+    whenWhoWhere: [
+      { label: "When", body: "Build this early in your professional development, ideally at the start of the academic year so you can apply it consistently across the months ahead." },
+      { label: "Who", body: "A mentor who has watched your work over time, and peers whose perception of you can act as a reality check." },
+      { label: "Where", body: "Developed in a private planning session, then applied across your resume, LinkedIn, class participation, and networking conversations." },
+    ],
+    howItWorks: [
+      "List the three to five themes you want people to associate with you.",
+      "Cross-check them against your actual strengths and values from Stage One.",
+      "Identify the gap between how you want to be seen and how you're currently showing up.",
+      "Name one action per theme to close that gap.",
+    ],
+    tools: ["Your Stage One Strength Inventory", "Your Stage One Core Values Audit", "A one-page brand strategy document"],
+    scenario: {
+      title: "From administrative tasks to strategic initiatives",
+      body: "A student wanted to be known for strategic thinking, but her actual visible activity was mostly administrative club tasks. She restructured her involvement to lead one strategic initiative per semester, and within a year, professors and peers began describing her that way unprompted.",
+    },
+    pitfalls: [
+      "Choosing themes that sound impressive but don't match your actual strengths or interests",
+    ],
+    successSignal:
+      "When people describe you to others, their description matches the themes you intentionally chose.",
+    milestoneTies: [1, 5, 31],
+  },
+
+  26: {
+    definition:
+      "Your unique professional angle: the specific intersection of skills, interests, and perspective that differentiates you from otherwise similar candidates.",
+    whyItMatters:
+      "In competitive fields, most candidates share similar coursework and credentials. Positioning is what makes a hiring manager remember you specifically instead of filing you under \"qualified but generic.\"",
+    whenWhoWhere: [
+      { label: "When", body: "Develop this after you've explored a few directions in Stage One and have enough experience to identify a genuine intersection, not a forced one." },
+      { label: "Who", body: "Someone in your target industry who can tell you honestly whether your intended positioning is actually differentiated or just common." },
+      { label: "Where", body: "Refined through informational interviews, competitor research on peers' LinkedIn profiles, and reflection on your own project history." },
+    ],
+    howItWorks: [
+      "List your top two or three areas of genuine interest or skill.",
+      "Identify where they intersect in a way most peers in your major don't combine.",
+      "Test the positioning by describing it to someone outside your field and checking whether it's clear and distinct.",
+    ],
+    tools: ["LinkedIn search of peers in your target field, for contrast rather than imitation"],
+    scenario: {
+      title: "From \"general marketing\" to a specific niche",
+      body: "A marketing student initially positioned herself as \"general marketing,\" identical to dozens of classmates. After noticing her consistent interest in sustainability, she repositioned as \"marketing for mission-driven consumer brands,\" which made her instantly more memorable to recruiters at values-aligned companies.",
+    },
+    pitfalls: [
+      "Positioning yourself too narrowly around a trend that may fade",
+      "Positioning too broadly so it fails to differentiate you at all",
+    ],
+    successSignal:
+      "When you describe your positioning, people can name one or two specific types of roles or companies that would be a strong fit for you.",
+    milestoneTies: [32, 53],
+  },
+
+  27: {
+    definition:
+      "An honest understanding of how your professional perception actually forms among peers, professors, and colleagues, based on patterns of behavior rather than intentions.",
+    whyItMatters:
+      "Reputation forms whether or not you're paying attention to it, and by the time you notice a negative pattern, it may already be shaping who recommends you and who doesn't.",
+    whenWhoWhere: [
+      { label: "When", body: "Check in on this each semester, especially after group projects, internships, or leadership roles where more people have observed your behavior." },
+      { label: "Who", body: "A mentor or trusted peer willing to give you honest, sometimes uncomfortable feedback about how others perceive you." },
+      { label: "Where", body: "Formed in classrooms, group projects, student organizations, and internships, often through small repeated behaviors rather than single events." },
+    ],
+    howItWorks: [
+      "Ask two or three people you trust how they'd describe your reputation in three words.",
+      "Compare their answers to your intended brand from Personal Brand Strategy.",
+      "Identify any consistent gaps and name one behavior change to address the largest one.",
+    ],
+    tools: ["A short, direct feedback conversation — no special tool required"],
+    scenario: {
+      title: "The pattern he hadn't noticed",
+      body: "A student assumed he was seen as reliable, but informal feedback revealed peers saw him as often late to group meetings. He hadn't noticed the pattern himself. After deliberately arriving early for a semester, his reputation among that same peer group visibly shifted.",
+    },
+    pitfalls: [
+      "Only asking people who will tell you what you want to hear",
+      "Becoming defensive instead of curious when the feedback is uncomfortable",
+    ],
+    successSignal:
+      "The words people use to describe you match the reputation you're intentionally building, and that alignment holds up when you ask different people.",
+    milestoneTies: [25],
+  },
+
+  28: {
+    definition:
+      "A structured evaluation of the signals you send through appearance, behavior, and communication in professional settings, checked against the standards of your target industry.",
+    whyItMatters:
+      "Image is one of the fastest signals people use to judge competence and fit, often before you've said a word. Misaligned signals, however unfair, can create doubt that takes far longer to undo through actual performance.",
+    whenWhoWhere: [
+      { label: "When", body: "Conduct this before a major event like a career fair or interview season, and revisit it whenever you're entering a new professional context." },
+      { label: "Who", body: "A career advisor or someone already working in your target industry who can tell you what's actually expected there." },
+      { label: "Where", body: "Assessed by reviewing recent photos, recalling recent professional interactions, and researching your specific target industry's norms." },
+    ],
+    howItWorks: [
+      "Research the typical professional appearance and behavior norms in your target industry — they vary widely between fields.",
+      "List your current signals (dress, punctuality, communication habits).",
+      "Compare them honestly to that standard.",
+      "Adjust the two or three signals with the largest gap.",
+    ],
+    tools: ["LinkedIn photos of professionals in your target field", "A trusted second opinion"],
+    scenario: {
+      title: "Noticing the mismatch before the next event",
+      body: "A finance-track student showed up to a networking event in the same casual clothes he wore to class, while his peers wore business casual. He wasn't underdressed by his own standard, but he noticed the mismatch and adjusted before his next event, where conversations felt noticeably more natural.",
+    },
+    pitfalls: [
+      "Assuming one universal standard exists across all industries",
+      "Over-investing in appearance while neglecting behavioral signals like punctuality",
+    ],
+    successSignal:
+      "You walk into a professional setting in your target field and blend in appropriately rather than standing out for the wrong reasons.",
+    milestoneTies: [19, 41],
+  },
+
+  29: {
+    definition:
+      "A practice that identifies and strengthens the specific markers that communicate competence and reliability to others, such as follow-through, specificity in speech, and consistency between words and actions.",
+    whyItMatters:
+      "Credibility is built or eroded in small moments: whether you follow up when you say you will, whether your claims are specific or vague, whether your behavior matches your stated values. These signals accumulate into whether people trust you with real responsibility.",
+    whenWhoWhere: [
+      { label: "When", body: "Strengthen this continuously, but pay particular attention during your first internship or leadership role, when your credibility signals are evaluated closely for the first time." },
+      { label: "Who", body: "A supervisor or team lead whose trust you're actively earning, and who will notice these signals whether or not you're conscious of them." },
+      { label: "Where", body: "Demonstrated in every commitment you make: deadlines, follow-up emails, meeting attendance, and how specifically you speak about your own work." },
+    ],
+    howItWorks: [
+      "Track your commitments for two weeks and note your completion rate.",
+      "Replace vague language (\"I'll try to get to it\") with specific commitments (\"I'll send it by Thursday at noon\").",
+      "Follow up proactively rather than waiting to be asked.",
+    ],
+    tools: ["A simple task tracker or calendar"],
+    scenario: {
+      title: "\"I'll have an answer by Wednesday\"",
+      body: "An intern who said \"I'll look into it\" to every request was quietly given less responsibility over time. A peer who instead said \"I'll have an answer by Wednesday\" and delivered consistently was handed a client-facing task within a month.",
+    },
+    pitfalls: [
+      "Overpromising to sound impressive in the moment, then under-delivering",
+    ],
+    successSignal:
+      "People start giving you responsibility without double-checking your work, and your stated timelines are trusted at face value.",
+    milestoneTies: [27, 41],
+  },
+
+  30: {
+    definition:
+      "The practice of communicating limits, especially around time, workload, and availability, clearly and respectfully in professional environments without damaging relationships.",
+    whyItMatters:
+      "Students who never set boundaries often become known as easy to overload rather than reliable, which leads to burnout and, ironically, less respect rather than more. Clear boundaries, communicated well, actually increase professional credibility.",
+    whenWhoWhere: [
+      { label: "When", body: "Practice this as soon as you take on your first real professional or leadership responsibility, before overcommitment becomes a habit." },
+      { label: "Who", body: "A supervisor, team lead, or club officer you report to, since boundary conversations are primarily about managing that relationship well." },
+      { label: "Where", body: "Group project negotiations, internship workload conversations, and any moment when a request exceeds your realistic capacity." },
+    ],
+    howItWorks: [
+      "Before responding to a new request, check it against your actual current commitments.",
+      "If it doesn't fit, respond with a clear alternative rather than a flat no.",
+      "Propose a different deadline, a smaller scope, or someone else who might help.",
+      "Practice saying this calmly and without over-apologizing.",
+    ],
+    tools: ["A visible calendar or task list you can reference honestly"],
+    scenario: {
+      title: "\"I can take that on if we move X to next week\"",
+      body: "A club treasurer said yes to every additional task asked of her until she missed a filing deadline. The next semester, she began responding to new requests with, \"I can take that on if we move X to next week,\" and both her stress and her reputation for reliability improved.",
+    },
+    pitfalls: [
+      "Setting boundaries too aggressively, which can read as inflexibility",
+      "Not setting them at all out of fear of seeming difficult",
+    ],
+    successSignal:
+      "You can decline or renegotiate a request without damaging the relationship, and people continue to respect and rely on you afterward.",
+    milestoneTies: [29],
+  },
+
+  31: {
+    definition:
+      "A complete, professional profile that accurately represents your experience, skills, and direction, structured so recruiters and connections can quickly understand your value.",
+    whyItMatters:
+      "LinkedIn is often the first place a recruiter or potential connection looks after meeting you, and an incomplete or generic profile undercuts every other effort you make in networking and job searching.",
+    whenWhoWhere: [
+      { label: "When", body: "Build a complete profile before your first networking event or internship application season, then update it every semester." },
+      { label: "Who", body: "A career advisor for structural feedback, and a few trusted peers or mentors for endorsements once the profile is live." },
+      { label: "Where", body: "Built and maintained entirely on LinkedIn, with content drawn from your resume, brand statement, and project work." },
+    ],
+    howItWorks: [
+      "Complete every section: professional photo, headline, About section, experience with quantified achievements, skills, and education.",
+      "Request a small number of genuine recommendations rather than generic ones.",
+      "Turn on \"open to work\" settings appropriately for your search stage.",
+    ],
+    tools: ["LinkedIn's profile strength indicator", "Your finalized resume and brand statement"],
+    scenario: {
+      title: "A complete profile out-performed an equally strong resume",
+      body: "A student with a mostly blank LinkedIn profile got far fewer responses to connection requests than a classmate with a complete profile and two specific recommendations, even though their resumes were comparably strong.",
+    },
+    pitfalls: [
+      "Leaving the profile half-finished",
+      "Using a casual or outdated photo",
+      "Copying resume bullet points verbatim without adapting them",
+    ],
+    successSignal:
+      "LinkedIn shows your profile as \"all-star\" or fully complete, and people you message respond because your profile gave them enough context to trust the conversation.",
+    milestoneTies: [32, 47, 36],
+  },
+
+  32: {
+    definition:
+      "The short text under your name on LinkedIn, crafted to communicate your focus and value at a glance, rather than defaulting to your current job or school title alone.",
+    whyItMatters:
+      "The headline is the single most visible piece of text on LinkedIn, appearing in every search result and comment you make. A generic headline like \"Student at University\" wastes that visibility.",
+    whenWhoWhere: [
+      { label: "When", body: "Update this as soon as your Personal Brand Statement is finalized, and revise it each time your focus shifts." },
+      { label: "Who", body: "No formal collaborator needed, though a mentor can sanity-check whether the headline is clear to someone outside your field." },
+      { label: "Where", body: "Edited directly in LinkedIn's profile settings, visible everywhere your name appears on the platform." },
+    ],
+    howItWorks: [
+      "Combine your role or major with your specific focus and, if space allows, the value you bring.",
+      "Follow a pattern like \"[Role] focused on [specific area] — [value or outcome].\"",
+      "Keep it under LinkedIn's character limit and avoid buzzwords that don't say anything concrete.",
+    ],
+    tools: ["Your Personal Brand Statement draft as source material"],
+    scenario: {
+      title: "From default title to relevant connection requests",
+      body: "A student changed her headline from \"Student at State University\" to \"Marketing Student Focused on Sustainable Consumer Brands | Ross School of Business,\" and began receiving significantly more relevant connection requests from recruiters in that niche.",
+    },
+    pitfalls: [
+      "Stuffing the headline with unrelated keywords to game search",
+      "Leaving the LinkedIn default title with no customization at all",
+    ],
+    successSignal:
+      "People who view your profile understand your focus within three seconds, without needing to scroll to the About section.",
+    milestoneTies: [21],
+  },
+
+  33: {
+    definition:
+      "A short, well-written biography, typically 3 to 5 sentences, used across LinkedIn, personal websites, speaker introductions, and professional applications.",
+    whyItMatters:
+      "A polished bio saves you from writing a rushed, inconsistent version each time one is requested, and ensures your story is told the way you intend across every platform.",
+    whenWhoWhere: [
+      { label: "When", body: "Draft this once your brand statement and value statement are finalized, since the bio expands on both." },
+      { label: "Who", body: "A mentor or writing center advisor to review clarity and tone." },
+      { label: "Where", body: "Used on LinkedIn About sections, personal websites, conference or club speaker bios, and application forms that request one." },
+    ],
+    howItWorks: [
+      "Open with your current role or focus.",
+      "Add one or two specific achievements or areas of expertise.",
+      "Close with your direction or what you're currently building toward.",
+      "Write in third person for formal use and first person for platforms like LinkedIn.",
+    ],
+    tools: ["Your Personal Brand Statement and Value Statement drafts"],
+    scenario: {
+      title: "Five minutes instead of an hour of scrambling",
+      body: "A student was asked last-minute to submit a bio for a panel and sent a rushed, unfocused paragraph. After that experience, he kept a polished bio on hand, and the next request took five minutes instead of an hour of scrambling.",
+    },
+    pitfalls: [
+      "Writing a bio that's just a list of activities with no throughline",
+      "Making it so long that no one reads past the first sentence",
+    ],
+    successSignal:
+      "You can submit a polished bio within minutes whenever one is requested, without needing to draft from scratch each time.",
+    milestoneTies: [21, 24],
+  },
+
+  34: {
+    definition:
+      "A thorough review and cleanup of your online presence across search results and social platforms to ensure it supports, rather than undermines, your professional image.",
+    whyItMatters:
+      "The majority of employers now search candidates online before or after an interview. Content posted years ago in a different context can resurface and create doubt that outweighs a strong resume.",
+    whenWhoWhere: [
+      { label: "When", body: "Conduct this before your first serious job or internship search, and repeat it once a year." },
+      { label: "Who", body: "No collaborator required, though a trusted friend can offer a second perspective on what an outsider would see." },
+      { label: "Where", body: "Conducted by searching your own name across search engines and reviewing the privacy and content settings on every social platform you use." },
+    ],
+    howItWorks: [
+      "Search your name in an incognito browser and review the first few pages of results.",
+      "Check privacy settings on personal social accounts and consider making them private or curating them.",
+      "Delete or archive posts that could be misread out of context.",
+    ],
+    tools: ["An incognito or private browser window", "Each platform's privacy and archive settings"],
+    scenario: {
+      title: "One afternoon before the next round of applications",
+      body: "A student assumed her old social accounts were irrelevant to her job search until a recruiter mentioned finding an old post during a background check. She spent one afternoon auditing and privatizing her accounts before her next round of applications.",
+    },
+    pitfalls: [
+      "Assuming privacy settings alone are enough without checking what's publicly indexed",
+      "Auditing once and never revisiting it",
+    ],
+    successSignal:
+      "Searching your own name returns results you'd be comfortable with an employer seeing, with no unpleasant surprises.",
+    milestoneTies: [31, 53],
+  },
+
+  35: {
+    definition:
+      "A simple, self-owned site showcasing your resume, projects, and contact information in one place you fully control, independent of any single platform.",
+    whyItMatters:
+      "A personal website signals initiative and gives you a space to showcase work in more depth than LinkedIn or a resume allow, particularly valuable in creative, technical, or entrepreneurial fields.",
+    whenWhoWhere: [
+      { label: "When", body: "Build this once you have at least two or three projects worth showcasing, typically by your junior year." },
+      { label: "Who", body: "A peer with basic web design experience if you want help, though many modern tools require no coding at all." },
+      { label: "Where", body: "Hosted on a simple site builder, linked from your LinkedIn, resume, and email signature." },
+    ],
+    howItWorks: [
+      "Choose a simple site builder.",
+      "Include a homepage with your brand statement, a projects or portfolio page, a resume download, and a contact method.",
+      "Keep the design clean and prioritize easy navigation over visual complexity.",
+    ],
+    tools: ["No-code site builder (Carrd, Wix, or Notion)", "A custom domain if budget allows"],
+    scenario: {
+      title: "The first link recruiters clicked",
+      body: "A design student's personal website, built in an afternoon with a free site builder, became the first link recruiters clicked after her LinkedIn, and directly led to two interview requests that mentioned specific projects from the site.",
+    },
+    pitfalls: [
+      "Over-engineering the site with unnecessary complexity",
+      "Launching it and then never updating it as new projects come in",
+    ],
+    successSignal:
+      "You can confidently share the link in any professional context, and it accurately reflects your most current work.",
+    milestoneTies: [36, 33],
+  },
+
+  36: {
+    definition:
+      "A curated collection of your best projects and achievements, presented with enough context that someone unfamiliar with your work can understand what you did and why it mattered.",
+    whyItMatters:
+      "A resume tells an employer what you claim to have done; a portfolio shows them. For many fields, especially creative, technical, and project-based ones, a strong portfolio outweighs a resume in hiring decisions.",
+    whenWhoWhere: [
+      { label: "When", body: "Start collecting portfolio-worthy work as early as freshman year, and formally build the portfolio once you have three to five strong pieces." },
+      { label: "Who", body: "A mentor or professor in your field to help you select which projects actually demonstrate the skills employers care about." },
+      { label: "Where", body: "Hosted on your personal website or a platform suited to your field, such as Behance for design or GitHub for code." },
+    ],
+    howItWorks: [
+      "Select three to five projects that best represent your range and strongest skills.",
+      "For each, write a short case study: the problem, your specific role, your process, and the outcome.",
+      "Prioritize depth on a few strong pieces over breadth across many weak ones.",
+    ],
+    tools: ["Field-appropriate hosting (Behance, GitHub, personal website)", "A simple case-study template"],
+    scenario: {
+      title: "Three strong pieces beat eight mediocre ones",
+      body: "A student included eight mediocre projects in his first portfolio draft. After cutting it down to his three strongest, with a clear case study for each, feedback from mentors and interviewers noticeably improved.",
+    },
+    pitfalls: [
+      "Including too many projects without context",
+      "Presenting only the final output without explaining your role and process",
+    ],
+    successSignal:
+      "Someone reviewing your portfolio can clearly explain what you did and why it was difficult or valuable, without you being in the room to narrate it.",
+    milestoneTies: [53, 56],
+  },
+
+  37: {
+    definition:
+      "A strong, consistent visual identity across LinkedIn, your resume, and your personal website through one well-composed, professional photo.",
+    whyItMatters:
+      "Your photo is often the first thing people notice on your LinkedIn profile, and a casual or low-quality image can undercut an otherwise strong profile before anyone reads a word.",
+    whenWhoWhere: [
+      { label: "When", body: "Get this done before you begin actively networking or applying for internships, since it appears everywhere your professional identity does." },
+      { label: "Who", body: "A campus photography service, a friend with a good camera, or a professional photographer if budget allows." },
+      { label: "Where", body: "Taken against a simple, neutral background with good natural lighting, then used consistently across every platform." },
+    ],
+    howItWorks: [
+      "Dress as you would for an interview in your target field.",
+      "Use natural light facing a window if shooting yourself.",
+      "Take several shots with slightly different expressions.",
+      "Choose the one that looks approachable and confident, then use it everywhere for consistency.",
+    ],
+    tools: ["A smartphone camera and natural lighting", "Campus career center headshot sessions"],
+    scenario: {
+      title: "A window and a friend beats a cropped party photo",
+      body: "A student replaced a blurry, cropped party photo on LinkedIn with a simple headshot taken by a friend near a window, and reported a noticeable increase in profile views within weeks.",
+    },
+    pitfalls: [
+      "Using a cropped group photo or poor lighting",
+      "An overly casual setting that doesn't match your target industry's norms",
+    ],
+    successSignal:
+      "The same professional photo appears consistently across your LinkedIn, resume, and website, and it looks like a genuine, approachable version of you.",
+    milestoneTies: [31, 35],
+  },
+
+  38: {
+    definition:
+      "An optional visual identity, a simple color palette and mark, used to create consistency across your personal website, portfolio, and presentation materials.",
+    whyItMatters:
+      "For students in creative, design, or entrepreneurial paths, a consistent visual identity signals professionalism and design sensibility even before someone reviews your actual work.",
+    whenWhoWhere: [
+      { label: "When", body: "Consider this only after your personal website and portfolio are functional, as a polish step rather than a starting point." },
+      { label: "Who", body: "A design-savvy peer or a free design tool's built-in templates if you don't have design training yourself." },
+      { label: "Where", body: "Applied across your personal website, portfolio headers, resume design accents, and any presentation materials." },
+    ],
+    howItWorks: [
+      "Choose two to three colors that feel consistent with your personal brand themes.",
+      "Add a simple wordmark or initials-based logo if you want one.",
+      "Apply the palette consistently rather than using it once and abandoning it.",
+    ],
+    tools: ["Canva or a similar design tool with color palette generators"],
+    scenario: {
+      title: "A palette that made the whole application feel intentional",
+      body: "A design student created a simple two-color palette and initials mark for her portfolio site, and used the same palette on her resume header. Reviewers specifically commented on how polished and intentional the whole application felt.",
+    },
+    pitfalls: [
+      "Over-investing time in visual branding at the expense of actual portfolio content",
+      "Choosing a look that doesn't match your target industry's norms",
+    ],
+    successSignal:
+      "Your materials feel visually cohesive and intentional without the visual design distracting from the substance of your work.",
+    milestoneTies: [35, 36],
+  },
+
+  39: {
+    definition:
+      "A structured, effective approach to email communication covering tone, clarity, and appropriate formality for academic and workplace contexts.",
+    whyItMatters:
+      "Email is often the first and most frequent written communication a professor, recruiter, or manager receives from you, and a poorly structured email can create a negative impression before any relationship is established.",
+    whenWhoWhere: [
+      { label: "When", body: "Establish this before your first email to a professor, internship contact, or recruiter, since first impressions in writing are hard to undo." },
+      { label: "Who", body: "No collaborator required, though reviewing emails from professionals you respect can offer useful models." },
+      { label: "Where", body: "Practiced in every email sent to professors, internship contacts, recruiters, and professional organizations." },
+    ],
+    howItWorks: [
+      "Use a clear subject line, a proper greeting, a concise purpose statement in the first two sentences, a specific ask, and a professional closing.",
+      "Proofread before sending.",
+      "Match formality to the relationship without being overly stiff.",
+    ],
+    tools: ["Grammarly or a built-in spelling and grammar checker", "A saved template for common email types"],
+    scenario: {
+      title: "A response within a day instead of being ignored",
+      body: "A student's first email to a potential mentor had no subject line and jumped straight into a request with no context. After restructuring with a clear subject and a two-sentence introduction before the ask, he received a response within a day instead of being ignored.",
+    },
+    pitfalls: [
+      "Skipping the subject line",
+      "Burying the actual request several paragraphs in",
+      "Using an overly casual tone with someone you don't know well",
+    ],
+    successSignal:
+      "Your emails get read and responded to promptly, without the recipient needing to ask for clarification on what you're requesting.",
+    milestoneTies: [40],
+  },
+
+  40: {
+    definition:
+      "A set of reusable, adaptable formats for common professional emails, such as introductions, follow-ups, and thank-you notes, that save time while maintaining quality.",
+    whyItMatters:
+      "Writing every professional email from scratch is slow and increases the chance of forgetting a key element under time pressure. Templates ensure consistency and speed without sacrificing quality.",
+    whenWhoWhere: [
+      { label: "When", body: "Build these once your general email style is established, ideally before a busy season like internship application deadlines." },
+      { label: "Who", body: "No collaborator required, though templates can be improved by studying well-written emails others have sent you." },
+      { label: "Where", body: "Stored in a notes app or drafts folder for quick access whenever a relevant situation arises." },
+    ],
+    howItWorks: [
+      "Draft templates for your three or four most common email types: a cold introduction, a follow-up after meeting someone, a thank-you after an interview, and a check-in with a mentor.",
+      "Leave clear placeholders for personalization so each email still feels genuine.",
+    ],
+    tools: ["A notes app or email drafts folder"],
+    scenario: {
+      title: "Twenty minutes down to five",
+      body: "A student who used to spend 20 minutes drafting each thank-you email built a simple template with placeholders, cutting that time to five minutes while actually improving consistency and never forgetting a key detail again.",
+    },
+    pitfalls: [
+      "Sending a template without personalizing the placeholders, which reads as impersonal",
+    ],
+    successSignal:
+      "You can send a polished, appropriate email within minutes for any common professional situation, and it never feels copy-pasted to the recipient.",
+    milestoneTies: [39],
+  },
+
+  41: {
+    definition:
+      "The practiced skill of participating professionally and visibly in discussions and meetings, contributing meaningfully without dominating or disappearing into the background.",
+    whyItMatters:
+      "How you show up in meetings, whether you contribute, how you frame disagreement, whether you follow up, shapes your reputation as much as your actual output does, especially early in a career when your work product is less visible.",
+    whenWhoWhere: [
+      { label: "When", body: "Practice this in any group project, club meeting, or internship team meeting, starting as early as freshman year group work." },
+      { label: "Who", body: "A team lead or supervisor whose meetings you attend regularly, since their observations of your presence directly shape their trust in you." },
+      { label: "Where", body: "Group project meetings, club leadership meetings, and internship or job team meetings." },
+    ],
+    howItWorks: [
+      "Prepare one specific point or question before each meeting so you have something concrete to contribute.",
+      "Practice active listening by referencing what others said before adding your point.",
+      "Follow up on action items you commit to during the meeting.",
+    ],
+    tools: ["A simple pre-meeting note with one question or contribution point"],
+    scenario: {
+      title: "From silent to sought-out",
+      body: "A student who used to stay silent in team meetings began preparing one question in advance for each one. Within a few meetings, teammates started directing follow-up questions to her specifically, a clear signal her presence had shifted.",
+    },
+    pitfalls: [
+      "Staying silent throughout, which reads as disengagement",
+      "Dominating the conversation without leaving space for others",
+    ],
+    successSignal:
+      "Team members reference your contributions afterward, and you leave meetings having actually influenced the direction of the conversation.",
+    milestoneTies: [42, 43],
+  },
+
+  42: {
+    definition:
+      "The ability to ask thoughtful, well-timed questions that demonstrate genuine engagement and often reveal more insight than confident statements would.",
+    whyItMatters:
+      "Good questions are frequently remembered more than good answers, particularly in interviews, networking conversations, and classroom discussions, where they signal genuine curiosity rather than rehearsed performance.",
+    whenWhoWhere: [
+      { label: "When", body: "Practice this continuously, but pay particular attention before interviews and informational interviews, where the questions you ask are directly evaluated." },
+      { label: "Who", body: "No specific collaborator required, though reviewing questions asked by strong interviewers or moderators can help you build a mental library." },
+      { label: "Where", body: "Classroom discussions, interviews, informational interviews, and networking conversations." },
+    ],
+    howItWorks: [
+      "Prepare two or three specific, researched questions before any important conversation.",
+      "Avoid questions easily answered by a basic search, and favor ones that invite a real story or opinion.",
+      "Practice active listening so follow-up questions build naturally on what the other person just said.",
+    ],
+    tools: ["A notes app to prepare questions in advance"],
+    scenario: {
+      title: "\"What's one thing that surprised you?\"",
+      body: "A student asked a generic question in an informational interview (\"what's it like working there?\") and got a generic answer. In her next interview, she asked, \"what's one thing about this role that surprised you after you started?\" and the richer answer led to a genuine, memorable conversation.",
+    },
+    pitfalls: [
+      "Asking questions that are easily searchable online",
+      "Asking so many that the conversation feels like an interrogation",
+    ],
+    successSignal:
+      "The person you're speaking with visibly pauses to think before answering, and the conversation goes somewhere neither of you expected.",
+    milestoneTies: [41, 43],
+  },
+
+  43: {
+    definition:
+      "The deliberate development of active listening: fully attending to what someone says, reflecting it back, and responding to their actual point rather than to what you planned to say next.",
+    whyItMatters:
+      "Most people listen to respond rather than to understand, which shows in conversations that feel disjointed or self-focused. Genuine listening builds trust faster than almost any other communication skill.",
+    whenWhoWhere: [
+      { label: "When", body: "Practice this in every professional conversation, but it's especially important during feedback sessions, mentor meetings, and interviews." },
+      { label: "Who", body: "A friend or mentor willing to give you honest feedback on whether you actually listen or just wait to talk." },
+      { label: "Where", body: "One-on-one mentor meetings, feedback conversations, interviews, and team discussions." },
+    ],
+    howItWorks: [
+      "In your next few conversations, practice paraphrasing what the other person said before adding your own point.",
+      "Resist the urge to plan your response while they're still speaking.",
+      "Ask a follow-up question based on their actual words rather than pivoting to your own agenda.",
+    ],
+    tools: ["No specific tool — a practiced behavior reinforced through deliberate attention"],
+    scenario: {
+      title: "From defending to receiving better feedback",
+      body: "A student receiving critical feedback from a professor used to immediately explain or defend, which shut down the conversation. After practicing paraphrasing the feedback back before responding, professors began giving him more detailed, useful feedback over time.",
+    },
+    pitfalls: [
+      "Interrupting to share your own related story",
+      "Nodding along without actually processing what's being said",
+    ],
+    successSignal:
+      "People comment that you're easy to talk to, and conversations with you tend to go deeper rather than staying surface-level.",
+    milestoneTies: [41, 42],
+  },
+
+  44: {
+    definition:
+      "A practiced, recorded attempt at presenting ideas clearly out loud, used to identify and correct filler words, pacing issues, and unclear structure before a real audience sees them.",
+    whyItMatters:
+      "Most people underestimate how many filler words or unclear transitions they use until they watch themselves on video. A recording turns invisible habits into visible, fixable ones.",
+    whenWhoWhere: [
+      { label: "When", body: "Do this before any presentation, interview, or speaking opportunity with real stakes, and periodically even without a specific event coming up." },
+      { label: "Who", body: "No collaborator required for the recording itself, though a mentor's feedback on the playback adds valuable outside perspective." },
+      { label: "Where", body: "Recorded privately using your phone, ideally practicing the actual content you'll present in the real setting." },
+    ],
+    howItWorks: [
+      "Choose a short topic, such as your elevator pitch or a class presentation.",
+      "Record yourself delivering it without stopping.",
+      "Watch it back and note filler words, pacing, and clarity.",
+      "Re-record after adjusting, and compare the two versions.",
+    ],
+    tools: ["A smartphone camera or voice recorder"],
+    scenario: {
+      title: "Fourteen \"ums\" in ninety seconds",
+      body: "A student preparing for a case competition recorded her pitch and was startled to count fourteen \"ums\" in ninety seconds. After three re-recorded attempts with conscious pausing instead of filler words, her final live pitch was noticeably more polished.",
+    },
+    pitfalls: [
+      "Skipping the playback review, which is where the actual learning happens",
+      "Recording once and assuming that's sufficient practice",
+    ],
+    successSignal:
+      "Your filler word count drops noticeably between your first and final recorded attempt, and your delivery feels steadier under real pressure.",
+    milestoneTies: [45, 56],
+  },
+
+  45: {
+    definition:
+      "A polished 60-second recorded self-introduction, increasingly requested by employers and useful for LinkedIn, applications, and virtual networking.",
+    whyItMatters:
+      "Video introductions are now a common part of applications for internships and remote roles, and having one prepared in advance prevents scrambling under a tight submission deadline.",
+    whenWhoWhere: [
+      { label: "When", body: "Prepare this once your professional introduction is solid, ideally before internship application season begins." },
+      { label: "Who", body: "No collaborator required for recording, though feedback from a mentor or career advisor improves the final cut." },
+      { label: "Where", body: "Recorded in a quiet, well-lit space with a simple, uncluttered background." },
+    ],
+    howItWorks: [
+      "Adapt your 30-to-60-second introduction script for video delivery, slightly warmer and more expressive than a purely verbal pitch.",
+      "Record in good natural lighting facing a window.",
+      "Keep the background simple, and do two or three takes before selecting the strongest one.",
+    ],
+    tools: ["A smartphone camera, natural lighting", "A simple free video editor"],
+    scenario: {
+      title: "Twenty-four hours' notice, already prepared",
+      body: "A student was asked to submit a video introduction with only 24 hours' notice for an internship application. Because she had already recorded and refined one months earlier, she simply updated the details and submitted a polished version instead of a rushed one.",
+    },
+    pitfalls: [
+      "Recording in poor lighting or a cluttered background",
+      "Reading visibly off a script instead of speaking naturally",
+    ],
+    successSignal:
+      "You can submit a polished video introduction on short notice, and it comes across as natural rather than rehearsed or read.",
+    milestoneTies: [19, 44],
+  },
+
+  46: {
+    definition:
+      "The intentional, professional use of social platforms to support your career direction rather than letting your online presence form passively or work against you.",
+    whyItMatters:
+      "Recruiters increasingly view public social profiles as part of a candidate's overall impression, and an intentional, professional presence can actively support your job search rather than merely avoiding harm.",
+    whenWhoWhere: [
+      { label: "When", body: "Begin developing this once your Digital Footprint Audit is complete and your accounts are already clean." },
+      { label: "Who", body: "No collaborator required, though following professionals in your target field is a useful way to calibrate appropriate tone." },
+      { label: "Where", body: "Applied across LinkedIn primarily, and selectively on other platforms depending on your industry's norms." },
+    ],
+    howItWorks: [
+      "Decide which platforms will carry a professional presence versus stay fully private.",
+      "On professional platforms, post or share content aligned with your brand themes at a sustainable, realistic frequency rather than forcing daily posts.",
+    ],
+    tools: ["A content calendar or simple reminder system"],
+    scenario: {
+      title: "One comment a week, recognized by name",
+      body: "A student who previously used LinkedIn only to accept connection requests started sharing one thoughtful comment or repost per week related to her field. Within a semester, several recruiters mentioned recognizing her name from her consistent, relevant activity.",
+    },
+    pitfalls: [
+      "Trying to maintain a posting frequency that isn't sustainable",
+      "Posting content that doesn't connect to any clear professional theme",
+    ],
+    successSignal:
+      "Your visible online activity, however modest, is recognizable as connected to a consistent professional direction rather than random or absent.",
+    milestoneTies: [47],
+  },
+
+  47: {
+    definition:
+      "The practice of thoughtfully commenting on and engaging with others' posts in your field, building visibility and relationships before you're ready to post original content yourself.",
+    whyItMatters:
+      "Engaging thoughtfully with others' content is lower-pressure than posting original content and still builds real visibility, since your name and insight appear in front of that person's entire network.",
+    whenWhoWhere: [
+      { label: "When", body: "Start this as soon as your LinkedIn profile is complete, well before you're ready to publish original posts." },
+      { label: "Who", body: "No collaborator required, though following a handful of active voices in your target field gives you consistent content to engage with." },
+      { label: "Where", body: "Practiced directly in the comment sections of posts from professionals, companies, and organizations in your target field." },
+    ],
+    howItWorks: [
+      "Follow ten to fifteen relevant accounts in your field.",
+      "When something resonates, comment with a genuine, specific reaction or question rather than a generic \"great post.\"",
+      "Aim for a small, sustainable number of thoughtful comments per week.",
+    ],
+    tools: ["LinkedIn's follow and notification features"],
+    scenario: {
+      title: "One comment, one direct message",
+      body: "A student began leaving one specific, thoughtful comment per week on posts from professionals in her target industry. One comment led to a direct message from a hiring manager who remembered her insight weeks later during a recruiting push.",
+    },
+    pitfalls: [
+      "Leaving generic comments like \"great post!\" that add no value",
+      "Engaging so rarely that no pattern of visibility builds",
+    ],
+    successSignal:
+      "People in your target field start recognizing your name in their notifications, and some respond directly to your comments.",
+    milestoneTies: [48, 49],
+  },
+
+  48: {
+    definition:
+      "The practice of sharing an article, post, or resource relevant to your field along with your own brief, genuine reflection, rather than sharing with no added commentary.",
+    whyItMatters:
+      "Sharing content with your own perspective attached demonstrates that you engage critically with your field, not just passively consume it, which is a small but meaningful signal to anyone reviewing your profile.",
+    whenWhoWhere: [
+      { label: "When", body: "Begin this once you're comfortable with commenting, typically a few weeks into building that habit." },
+      { label: "Who", body: "No collaborator required, though noticing what respected voices in your field choose to share can inform your own choices." },
+      { label: "Where", body: "Shared on LinkedIn primarily, timed around content that's genuinely relevant to your specific brand themes." },
+    ],
+    howItWorks: [
+      "When you read something genuinely interesting in your field, share it with two to three sentences explaining why it matters to you.",
+      "Keep the reflection specific rather than a generic \"interesting read.\"",
+    ],
+    tools: ["A habit of saving interesting articles as you encounter them"],
+    scenario: {
+      title: "A two-sentence reflection that started a conversation",
+      body: "A student shared an industry report with a two-sentence reflection connecting it to a project she'd worked on, and a professional in that field commented, leading to a genuine conversation and eventually an informational interview.",
+    },
+    pitfalls: [
+      "Sharing content with no commentary at all, which reads as low-effort",
+      "Sharing so frequently that it feels like noise rather than genuine insight",
+    ],
+    successSignal:
+      "Your shares generate real comments or discussion rather than passing likes, showing your reflection actually resonated with your audience.",
+    milestoneTies: [49, 50],
+  },
+
+  49: {
+    definition:
+      "Your first piece of original written content, typically 400 to 800 words, published to demonstrate genuine thinking and expertise in your area of focus.",
+    whyItMatters:
+      "Original writing demonstrates a level of thinking and initiative that sharing others' content cannot. It's also one of the most durable pieces of evidence you can point to in an interview or portfolio.",
+    whenWhoWhere: [
+      { label: "When", body: "Write your first post once you've built a habit of engagement and sharing, and have a specific idea worth developing." },
+      { label: "Who", body: "A mentor or peer to review a draft before publishing, since a second set of eyes catches unclear reasoning you might miss." },
+      { label: "Where", body: "Published on LinkedIn's article feature, Medium, or your personal website's blog section." },
+    ],
+    howItWorks: [
+      "Choose a specific, narrow topic rather than a broad one, ideally something you have direct experience with.",
+      "Draft an outline, write a full first draft without over-editing.",
+      "Revise for clarity and cut anything that doesn't serve the main point.",
+    ],
+    tools: ["LinkedIn Articles, Medium, or your personal website's blog feature", "Grammarly or Hemingway"],
+    scenario: {
+      title: "The mistake post that outperformed the tips post",
+      body: "A student wrote her first post about a specific mistake she made during her first internship and what she learned from it. It got more genuine engagement than any generic \"top 5 tips\" post, because it was specific and honest rather than generic advice.",
+    },
+    pitfalls: [
+      "Choosing a topic so broad it says nothing new",
+      "Over-polishing to the point where the piece loses your authentic voice",
+    ],
+    successSignal:
+      "Readers leave substantive comments or reach out directly in response, indicating the piece actually resonated rather than being skimmed and forgotten.",
+    milestoneTies: [50],
+  },
+
+  50: {
+    definition:
+      "A recurring, connected set of posts or content pieces around a consistent theme, building on a single published piece into an ongoing, recognizable body of insight.",
+    whyItMatters:
+      "A single post shows you can write; a series shows sustained expertise and commitment to a specific area, which is significantly more compelling to employers and networks over time.",
+    whenWhoWhere: [
+      { label: "When", body: "Start a series once you have two or three individual posts that share a common thread worth continuing intentionally." },
+      { label: "Who", body: "No collaborator required, though feedback on your first post can help you refine the theme for the rest of the series." },
+      { label: "Where", body: "Published consistently on the same platform where your first post lived, ideally on a predictable schedule." },
+    ],
+    howItWorks: [
+      "Identify the common theme across your best individual posts.",
+      "Outline three to five future topics that build on it.",
+      "Commit to a realistic, sustainable publishing cadence, such as monthly rather than weekly.",
+    ],
+    tools: ["A simple content calendar"],
+    scenario: {
+      title: "A five-part series people started anticipating",
+      body: "After one well-received post about internship mistakes, a student outlined a five-part series on \"things no one tells you about your first internship,\" publishing one per month. By the third post, classmates and even a few professionals were actively anticipating the next installment.",
+    },
+    pitfalls: [
+      "Committing to an unsustainable publishing frequency and abandoning the series after one or two posts",
+    ],
+    successSignal:
+      "You have a recognizable, connected body of content that people reference back to, and your publishing rhythm is sustainable rather than a one-time burst.",
+    milestoneTies: [49, 51],
+  },
+
+  51: {
+    definition:
+      "A researched, well-organized summary and analysis of a current trend in your target industry, shared to demonstrate genuine market awareness beyond classroom material.",
+    whyItMatters:
+      "Employers value candidates who follow their industry proactively rather than only knowing what's covered in coursework. A trend report demonstrates that awareness concretely and shareably.",
+    whenWhoWhere: [
+      { label: "When", body: "Write this once you've completed your Industry Insight worksheet from Stage One and have a genuine trend worth analyzing." },
+      { label: "Who", body: "A professional in your target industry to sanity-check your analysis before you share it publicly." },
+      { label: "Where", body: "Researched using industry publications and reports, then shared as a LinkedIn post, article, or portfolio piece." },
+    ],
+    howItWorks: [
+      "Choose one specific, current trend rather than a broad industry overview.",
+      "Research it using two or three credible sources.",
+      "Write your own analysis of why it matters and what it might mean for someone entering the field.",
+      "Cite your sources.",
+    ],
+    tools: ["Industry publications", "LinkedIn's trend reports", "Google Alerts for key terms"],
+    scenario: {
+      title: "The piece a recruiter had already read",
+      body: "A student wrote a short analysis of a shift she'd noticed in sustainable packaging regulations relevant to her target industry, citing two industry reports. A recruiter later referenced the piece specifically during her interview, having found it while researching her profile.",
+    },
+    pitfalls: [
+      "Simply summarizing a single article without adding your own analysis",
+      "Choosing a trend too broad or too outdated to feel current",
+    ],
+    successSignal:
+      "The piece demonstrates genuine understanding beyond surface-level summary, and someone in the industry could learn something from your specific angle on it.",
+    milestoneTies: [8, 41],
+  },
+
+  52: {
+    definition:
+      "A small set of prepared, genuine ways to initiate meaningful conversations with professionals, mentors, or peers in professional settings, rather than relying on small talk alone.",
+    whyItMatters:
+      "Many students avoid networking events because they don't know how to start conversations beyond surface-level small talk, which limits the actual value of attending.",
+    whenWhoWhere: [
+      { label: "When", body: "Prepare these before any networking event, career fair, or conference, refreshing them based on the specific event or audience." },
+      { label: "Who", body: "No collaborator required, though observing skilled networkers' opening lines can inform your own approach." },
+      { label: "Where", body: "Used at career fairs, conferences, alumni events, and any setting where you're meeting new professional contacts." },
+    ],
+    howItWorks: [
+      "Prepare three or four openers tied to the specific event or shared context — a recent industry event, a company's latest project, a genuine question about someone's path into the field.",
+      "Avoid generic openers like \"how's it going\" that don't invite a substantive answer.",
+    ],
+    tools: ["A short notes list to review right before the event"],
+    scenario: {
+      title: "From the snack table to three real conversations",
+      body: "A student who used to hover awkwardly near the snack table at career fairs prepared three specific openers tied to each company's recent news before attending. He had three genuine conversations that event instead of his usual zero.",
+    },
+    pitfalls: [
+      "Relying entirely on generic small talk",
+      "Preparing openers so scripted they don't adapt naturally to the actual conversation",
+    ],
+    successSignal:
+      "Your conversations move past small talk into a genuine exchange within the first minute or two, rather than staying surface-level throughout.",
+    milestoneTies: [20],
+  },
+
+  53: {
+    definition:
+      "A tailored, impact-driven resume that communicates your strengths, achievements, and potential clearly, rather than simply listing responsibilities and course titles.",
+    whyItMatters:
+      "Without a strong resume, even the most talented candidate may never get noticed. Most resumes are skimmed for six to ten seconds, so clarity and impact in that window matter more than completeness.",
+    whenWhoWhere: [
+      { label: "When", body: "Build your first draft early in your academic career, not just before graduation, so you can keep strengthening it with each new experience." },
+      { label: "Who", body: "A career center advisor, a mentor, or a peer for structural and content feedback before finalizing." },
+      { label: "Where", body: "Refined at the career center, through LinkedIn examples for formatting ideas, and in feedback sessions with people further along in your field." },
+    ],
+    howItWorks: [
+      "Choose a clean, ATS-friendly template, then draft your first version listing every relevant experience.",
+      "Rewrite each bullet point to lead with an action verb and end with a measurable outcome wherever possible.",
+      "Get feedback, then tailor the final version's keywords to each specific job posting.",
+    ],
+    tools: ["A clean resume template", "Canva or Google Docs", "The specific job posting for keyword tailoring"],
+    scenario: {
+      title: "Callbacks within the first ten applications",
+      body: "A student's resume was a plain list of course titles and club memberships. After rewriting it around specific, measurable project outcomes, like \"increased club event attendance by 40 percent through a redesigned outreach strategy,\" she started getting callbacks within her first ten applications.",
+    },
+    pitfalls: [
+      "Submitting the same generic resume to every job posting",
+      "Listing responsibilities instead of quantified achievements",
+    ],
+    successSignal:
+      "You start getting callbacks within your first ten applications, a sign the resume is clearing the initial screening bar.",
+    milestoneTies: [21, 36],
+  },
+
+  54: {
+    definition:
+      "A compelling, story-driven letter that goes beyond restating your resume to explain specifically why you and this particular opportunity are a strong match.",
+    whyItMatters:
+      "Many candidates skip the cover letter or write a generic one that repeats the resume, missing a real opportunity to tell a specific story that a bullet-pointed resume can't capture.",
+    whenWhoWhere: [
+      { label: "When", body: "Write this whenever an application specifically requests one, and consider including a brief version even when it's optional for a strong-priority role." },
+      { label: "Who", body: "A career advisor or mentor to review the draft, ideally someone who knows the target company or role." },
+      { label: "Where", body: "Written specifically for each application, referencing the company's actual mission, product, or recent work." },
+    ],
+    howItWorks: [
+      "Open with a specific hook connecting you to the company, not a generic \"I am writing to apply.\"",
+      "Use the body to tell one concrete story that demonstrates a key qualification, rather than restating your whole resume.",
+      "Close with genuine enthusiasm and a clear next step.",
+    ],
+    tools: ["The company's own website and recent news for specific details"],
+    scenario: {
+      title: "One sentence that got remembered in the interview",
+      body: "A student's generic cover letter opener, \"I am excited to apply for this position,\" became, \"Your team's recent shift toward community-based marketing is exactly the kind of honest storytelling I built my capstone campaign around.\" The specific version got a noticeably better response rate.",
+    },
+    pitfalls: [
+      "Restating the resume in paragraph form",
+      "Using a generic template with no specific reference to the company or role",
+    ],
+    successSignal:
+      "A recruiter or hiring manager mentions something specific from your cover letter during the interview, showing it actually got read and remembered.",
+    milestoneTies: [53],
+  },
+
+  55: {
+    definition:
+      "A consistent, professional contact identity, whether a physical or digital business card, or a well-formatted email signature used across all your professional correspondence.",
+    whyItMatters:
+      "A polished contact identity makes it easy for people to remember and reach you after a conversation, and its absence can mean a promising connection is lost simply because no one wrote your information down.",
+    whenWhoWhere: [
+      { label: "When", body: "Set up an email signature immediately, since you send professional emails constantly; consider a business card before networking-heavy events like career fairs." },
+      { label: "Who", body: "No collaborator required, though a design-savvy peer can help polish a physical card if you choose to have one made." },
+      { label: "Where", body: "The email signature appears in every professional email you send; business cards are exchanged at networking events and career fairs." },
+    ],
+    howItWorks: [
+      "Build an email signature including your name, program and expected graduation, and one professional link.",
+      "For a business card, consider a simple digital option — a QR code linking to your LinkedIn — before investing in a printed one.",
+    ],
+    tools: ["Your email client's signature settings", "A free QR code generator"],
+    scenario: {
+      title: "From a napkin to a QR code",
+      body: "A student who used to write her LinkedIn URL on a napkin at networking events switched to a QR code saved to her phone's home screen, making every exchange faster and more professional.",
+    },
+    pitfalls: [
+      "An email signature cluttered with too many links and quotes",
+      "Relying on verbally repeating your contact information instead of having something to hand over",
+    ],
+    successSignal:
+      "People you meet at events can easily save your contact information on the spot, without you needing to spell out an email address aloud.",
+    milestoneTies: [20],
+  },
+
+  56: {
+    definition:
+      "Presenting your key projects and case studies in a format suited for live presentation, such as an interview or a portfolio review, building on the written portfolio.",
+    whyItMatters:
+      "Being able to walk someone through your work verbally, clearly and confidently, is a distinct skill from writing a strong case study, and interviewers often specifically ask you to present a project live.",
+    whenWhoWhere: [
+      { label: "When", body: "Prepare this once your written portfolio exists, ideally before interview season when you may be asked to present live." },
+      { label: "Who", body: "A mentor or peer to practice presenting to, since live delivery reveals gaps that a written case study doesn't." },
+      { label: "Where", body: "Practiced in mock interviews, actual interviews, and portfolio review sessions with mentors or career advisors." },
+    ],
+    howItWorks: [
+      "Choose your two strongest projects.",
+      "Prepare a two-to-three-minute verbal walkthrough of each: the problem, your process, and the outcome.",
+      "Practice out loud until you can present without reading from notes, and prepare for likely follow-up questions.",
+    ],
+    tools: ["Your written portfolio case studies, adapted for spoken delivery"],
+    scenario: {
+      title: "From freezing to flowing naturally",
+      body: "A student who wrote strong portfolio case studies froze when asked to \"walk me through this project\" live in an interview. After practicing a timed verbal version with a mentor, her next interview presentation flowed naturally and led to a strong offer.",
+    },
+    pitfalls: [
+      "Reading directly from written notes during a live presentation",
+      "Going too long without checking whether the listener wants more detail",
+    ],
+    successSignal:
+      "You can present any of your top projects clearly and confidently without notes, adapting the depth based on the listener's questions.",
+    milestoneTies: [36],
+  },
+
+  57: {
+    definition:
+      "A structured session where you get direct feedback on your portfolio and application materials from mentors, professionals, or career advisors, before they reach a real employer.",
+    whyItMatters:
+      "It's easy to become blind to your own portfolio's weaknesses after staring at it for weeks. Outside feedback, especially from someone in your target industry, often catches gaps that would otherwise surface for the first time in a real interview.",
+    whenWhoWhere: [
+      { label: "When", body: "Schedule this once your portfolio, resume, and LinkedIn are all in a reasonably complete state, ideally a few weeks before you start actively applying." },
+      { label: "Who", body: "A career advisor, a mentor in your target field, or a professional you've built a relationship with through earlier networking FIRSTS." },
+      { label: "Where", body: "Conducted over a video call or in-person meeting where you can screen-share or walk through materials together." },
+    ],
+    howItWorks: [
+      "Reach out to request a specific, time-bound review (30 minutes, not open-ended).",
+      "Come with specific questions rather than just \"what do you think.\"",
+      "Take notes and follow up with a thank-you and what you changed.",
+    ],
+    tools: ["Your completed portfolio, resume, and LinkedIn profile", "A specific list of prepared questions"],
+    scenario: {
+      title: "From vague \"looks good\" to actionable feedback",
+      body: "A student asked a mentor for portfolio feedback with no specific questions and got a vague \"looks good.\" The next time, she asked three specific questions about project selection and got detailed, actionable feedback that led her to swap out a weaker piece.",
+    },
+    pitfalls: [
+      "Asking for feedback too broadly, which tends to produce vague, unhelpful responses",
+      "Not following up to show you actually applied the input",
+    ],
+    successSignal:
+      "You leave the review with at least two or three specific, actionable changes, and your materials are noticeably stronger afterward.",
+    milestoneTies: [36, 53],
+  },
+
+  58: {
+    definition:
+      "A final consistency check across your LinkedIn, personal website, and portfolio, verifying that your brand statement, photo, and story align everywhere someone might encounter you online.",
+    whyItMatters:
+      "Inconsistent information across platforms, an outdated photo on one, a different focus statement on another, creates doubt and makes you look less put-together than a candidate whose presence is fully aligned.",
+    whenWhoWhere: [
+      { label: "When", body: "Conduct this final check once every material in this stage is built, and repeat it each time you make a significant update to any single platform." },
+      { label: "Who", body: "No collaborator required, though a second pair of eyes can catch inconsistencies you've become blind to." },
+      { label: "Where", body: "Reviewed by opening your LinkedIn, personal website, portfolio, and resume side by side and comparing them directly." },
+    ],
+    howItWorks: [
+      "Create a simple checklist covering your photo, brand statement or headline, key achievements, and contact information.",
+      "Go through each platform and confirm all four are consistent.",
+      "Update whichever platform is out of sync, and note a recurring reminder to repeat this check each semester.",
+    ],
+    tools: ["A simple checklist", "All of your platforms open simultaneously for comparison"],
+    scenario: {
+      title: "The mismatch a recruiter noticed",
+      body: "A student updated her resume with a new internship but forgot to update her LinkedIn for three months. A recruiter noticed the mismatch and asked about it directly in an interview, an avoidable moment of doubt that a five-minute cross-check would have prevented.",
+    },
+    pitfalls: [
+      "Updating one platform and assuming the others are automatically current",
+      "Treating this as a one-time task instead of a recurring check",
+    ],
+    successSignal:
+      "Anyone encountering you across LinkedIn, your website, your portfolio, and your resume gets the same clear, consistent story, no matter where they start.",
+    milestoneTies: [31, 35, 53],
   },
 };

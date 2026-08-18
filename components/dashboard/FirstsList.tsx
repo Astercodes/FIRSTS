@@ -5,26 +5,34 @@ import { Switch } from "@/components/ui/Switch";
 import { ModuleCard } from "@/components/dashboard/ModuleCard";
 import { CATEGORY_META, type FirstModule } from "@/lib/dashboardData";
 
-export function FirstsList({ modules }: { modules: FirstModule[] }) {
+export function FirstsList({
+  modules,
+  eyebrow = "Stage One",
+  title = "All 18 FIRSTS",
+}: {
+  modules: FirstModule[];
+  eyebrow?: string;
+  title?: string;
+}) {
   const [freeExplore, setFreeExplore] = useState(false);
 
-  const byCategory = (Object.keys(CATEGORY_META) as Array<keyof typeof CATEGORY_META>).map(
-    (key) => ({
+  const byCategory = (Object.keys(CATEGORY_META) as Array<keyof typeof CATEGORY_META>)
+    .map((key) => ({
       key,
       meta: CATEGORY_META[key],
       items: modules.filter((m) => m.category === key),
-    })
-  );
+    }))
+    .filter((c) => c.items.length > 0);
 
   return (
     <div className="rounded-3xl border border-ink/8 bg-white p-6 sm:p-7">
       <div className="mb-6 flex flex-wrap items-center justify-between gap-4">
         <div>
           <p className="text-xs font-semibold uppercase tracking-[0.15em] text-ink/45">
-            Stage One
+            {eyebrow}
           </p>
           <h2 className="mt-1 font-display text-xl font-semibold text-ink">
-            All 18 FIRSTS
+            {title}
           </h2>
         </div>
         <Switch checked={freeExplore} onChange={setFreeExplore} label="Free Explore Mode" />

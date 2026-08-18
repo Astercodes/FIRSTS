@@ -22,7 +22,7 @@ export function ContinueCard({ module: m }: { module: FirstModule }) {
         {isInProgress ? "Continue where you left off" : "Start your next FIRST"}
       </p>
       <h2 className="relative mt-3 font-display text-2xl font-semibold sm:text-3xl">
-        First {String(m.id).padStart(2, "0")} · {m.title}
+        First {m.code} · {m.title}
       </h2>
       <p className="relative mt-2 text-sm text-paper/60">
         {m.time} · {m.difficulty}

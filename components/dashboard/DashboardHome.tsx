@@ -5,11 +5,14 @@ import { ContinueCard } from "@/components/dashboard/ContinueCard";
 import { DueForReview } from "@/components/dashboard/DueForReview";
 import { FirstsList } from "@/components/dashboard/FirstsList";
 import { PortfolioTeaser } from "@/components/dashboard/PortfolioTeaser";
+import { StageTwoTeaser } from "@/components/dashboard/StageTwoTeaser";
 import { useFirstsWithProgress } from "@/lib/progressStore";
 import { MOCK_USER, completionStats } from "@/lib/dashboardData";
 
 export function DashboardHome() {
-  const modules = useFirstsWithProgress();
+  const allModules = useFirstsWithProgress();
+  const modules = allModules.filter((m) => m.stage === "one");
+  const stageTwoModules = allModules.filter((m) => m.stage === "two");
   const stats = completionStats(modules);
   const continueModule =
     modules.find((m) => m.status === "in-progress") ?? modules.find((m) => m.status === "available");
@@ -46,6 +49,7 @@ export function DashboardHome() {
         </div>
         <div className="space-y-6">
           <DueForReview modules={dueForReview} />
+          <StageTwoTeaser modules={stageTwoModules} />
           <PortfolioTeaser />
         </div>
       </div>
