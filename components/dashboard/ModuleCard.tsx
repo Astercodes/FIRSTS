@@ -1,3 +1,5 @@
+import Link from "next/link";
+import type { ElementType } from "react";
 import type { FirstModule, ModuleStatus } from "@/lib/dashboardData";
 import { CATEGORY_META } from "@/lib/dashboardData";
 
@@ -13,8 +15,12 @@ export function ModuleCard({
     m.status === "locked" && unlocked ? "available" : m.status;
   const isLocked = effectiveStatus === "locked";
 
+  const Wrapper: ElementType = isLocked ? "div" : Link;
+  const wrapperProps = isLocked ? {} : { href: `/dashboard/stage/${m.id}` };
+
   return (
-    <div
+    <Wrapper
+      {...wrapperProps}
       className={`group relative flex items-center gap-4 rounded-2xl border border-ink/8 bg-white px-4 py-4 transition-all duration-300 ${
         isLocked ? "opacity-50" : "cursor-pointer hover:-translate-y-0.5 hover:shadow-lg"
       }`}
@@ -40,7 +46,7 @@ export function ModuleCard({
           In progress
         </span>
       )}
-    </div>
+    </Wrapper>
   );
 }
 
