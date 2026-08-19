@@ -1671,4 +1671,564 @@ export const WORKSHEET_SCHEMAS: Record<number, WorksheetField[]> = {
     { type: "textarea", key: "goalWithNoAction", label: "Any goal with no connected action", section: "Gaps", rows: 2, seed: "Leading a small product team, nothing I'm doing right now builds toward that directly." },
     { type: "textarea", key: "actionWithNoGoal", label: "Any current action with no connected goal", rows: 2, seed: "None right now, everything on my plate ties to at least one goal." },
   ],
+  134: [
+    { type: "text", key: "subjectLine", label: "Subject line", section: "Draft", seed: "Quick question about your Thursday office hours" },
+    { type: "textarea", key: "recipientPurpose", label: "Recipient and purpose", rows: 2, seed: "Professor Alvarez, asking to confirm office hours before I stop by with a question about the midterm." },
+    { type: "checklist", key: "preSendChecklist", label: "Pre-send checklist", section: "Pre-send checklist", items: ["Subject line is clear", "Purpose stated in first two sentences", "One specific ask included", "Proofread once"], seedChecked: ["Subject line is clear", "Proofread once"] },
+    { type: "text", key: "responseTime", label: "Response time", section: "Result", seed: "Within 3 hours" },
+    { type: "textarea", key: "gotOutcome", label: "Did it get the outcome I wanted?", rows: 2, seed: "Yes, confirmed office hours and got a specific time to stop by." },
+  ],
+
+  135: [
+    { type: "table", key: "agenda", label: "Agenda", section: "Agenda", columns: [
+      { key: "topic", label: "Topic", kind: "text" },
+      { key: "time", label: "Time allotted", kind: "text" },
+      { key: "objective", label: "Objective (Decide/Inform/Brainstorm)", kind: "text" },
+    ], seedRows: [{ topic: "Budget approval", time: "10 min", objective: "Decide" }] },
+    { type: "text", key: "sharedInAdvance", label: "Sent to attendees on (date/time)", section: "Shared in advance?", seed: "Monday, 6pm, day before the meeting" },
+    { type: "textarea", key: "postMeetingCheck", label: "Did the meeting stay on time and on topic?", section: "Post-meeting check", rows: 2, seed: "Yes, wrapped in 45 minutes with all three topics covered." },
+  ],
+
+  136: [
+    { type: "textarea", key: "introduction", label: "Introduction (what and why)", section: "Outline", rows: 2, seed: "This report evaluates three vendor options for the club's spring event." },
+    { type: "text", key: "bodyPoint1", label: "Body, key point 1", seed: "Vendor A: lowest cost, limited availability" },
+    { type: "text", key: "bodyPoint2", label: "Body, key point 2", seed: "Vendor B: mid-range cost, strong reviews" },
+    { type: "text", key: "bodyPoint3", label: "Body, key point 3", seed: "Vendor C: highest cost, full service package" },
+    { type: "textarea", key: "conclusion", label: "Conclusion (so what)", rows: 2, seed: "Vendor B offers the best balance of cost and reliability for our budget." },
+    { type: "textarea", key: "draft", label: "Draft", section: "Draft", rows: 6, seed: "" },
+  ],
+
+  137: [
+    { type: "textarea", key: "structurePass", label: "Does the structure flow logically? Note any fix needed", section: "Structure pass", rows: 2, seed: "The conclusion repeats the intro almost word for word, needs to actually add a takeaway." },
+    { type: "textarea", key: "grammarPass", label: "Common issues found", section: "Grammar & word choice pass", rows: 2, seed: "Overuse of 'in order to' where 'to' works fine." },
+    { type: "textarea", key: "readAloudPass", label: "What sounded awkward when read aloud", section: "Read-aloud pass", rows: 2, seed: "The second paragraph's second sentence is a run-on, hard to say in one breath." },
+    { type: "table", key: "beforeAfter", label: "Before & after", section: "Before & after", columns: [
+      { key: "original", label: "Original sentence", kind: "text" },
+      { key: "edited", label: "Edited version", kind: "text" },
+    ], seedRows: [{ original: "In order to achieve the goal of increasing engagement, we did outreach.", edited: "We increased engagement through direct outreach." }] },
+  ],
+
+  138: [
+    { type: "text", key: "processDocumented", label: "Process or finding being documented", section: "Setup", seed: "Cleaning and merging the club's membership spreadsheet" },
+    { type: "textarea", key: "prerequisites", label: "Prerequisites the reader needs", rows: 2, seed: "Access to the shared drive and basic spreadsheet familiarity." },
+    { type: "chipList", key: "steps", label: "Steps, in order", section: "Step-by-step", seed: ["Export both spreadsheets as CSV", "Standardize column headers", "Remove duplicate emails", "Merge into one master file", "Spot-check 10 random rows", "Share the cleaned file"] },
+    { type: "text", key: "reviewedBy", label: "Who reviewed it, and could they follow it unassisted?", section: "Test", seed: "A teammate unfamiliar with the process, yes, no questions asked" },
+  ],
+
+  139: [
+    { type: "text", key: "theAsk", label: "The ask", section: "Framing", seed: "Approve a $200 budget increase for the spring showcase" },
+    { type: "textarea", key: "whyMatters", label: "Why it matters to the recipient (not just to me)", rows: 2, seed: "It directly improves turnout and member satisfaction, which reflects on the whole club's standing." },
+    { type: "textarea", key: "objectionAddressed", label: "Likely objection, addressed in advance", rows: 2, seed: "Cost, addressed by showing it's a one-time expense covered by existing sponsorship funds." },
+    { type: "textarea", key: "draft", label: "Draft", section: "Draft", rows: 4, seed: "" },
+    { type: "text", key: "outcome", label: "Outcome", section: "Result", seed: "Approved on first try" },
+  ],
+
+  140: [
+    { type: "textarea", key: "problem", label: "Problem", section: "Problem", rows: 2, seed: "Our club's spring showcase has had declining attendance for two years running." },
+    { type: "textarea", key: "proposedSolution", label: "Proposed solution", section: "Proposed solution", rows: 2, seed: "Move the showcase to a weekday evening and add a co-sponsor to expand reach." },
+    { type: "table", key: "benefitsTradeoffs", label: "Benefits & trade-offs", section: "Benefits & trade-offs", columns: [
+      { key: "benefit", label: "Benefit", kind: "text" },
+      { key: "tradeoff", label: "Cost or trade-off", kind: "text" },
+    ], seedRows: [{ benefit: "Wider audience reach", tradeoff: "Requires coordinating with a second organization" }] },
+    { type: "text", key: "theAsk", label: "Specific ask", section: "The ask", seed: "Approval to reach out to the co-sponsor and shift the date" },
+  ],
+
+  141: [
+    { type: "text", key: "meetingDate", label: "Meeting / date", section: "Meeting details", seed: "Club officers, Sept 10" },
+    { type: "textarea", key: "decisionsMade", label: "Decisions made", section: "Decisions made", rows: 2, seed: "Approved moving the showcase to a weekday evening." },
+    { type: "table", key: "actionItems", label: "Action items", section: "Action items", columns: [
+      { key: "actionItem", label: "Action item", kind: "text" },
+      { key: "owner", label: "Owner", kind: "text" },
+      { key: "deadline", label: "Deadline", kind: "text" },
+    ], seedRows: [{ actionItem: "Reach out to co-sponsor", owner: "Jordan", deadline: "Friday" }] },
+    { type: "text", key: "sentWithin24h", label: "Sent within 24 hours? (Y/N)", section: "Shared with attendees?", seed: "Y" },
+  ],
+
+  142: [
+    { type: "text", key: "meetingConversation", label: "Meeting / conversation", section: "Draft", seed: "Call with the print vendor" },
+    { type: "textarea", key: "draft", label: "Draft", rows: 4, seed: "Thanks for the call today. To confirm: we're going with the 500-flyer package at $80, delivered by the 15th. Let me know if I got anything wrong." },
+    { type: "textarea", key: "corrections", label: "Any corrections received?", section: "Result", rows: 2, seed: "Yes, the vendor corrected the delivery date to the 17th." },
+  ],
+
+  143: [
+    { type: "text", key: "whoIMet", label: "Who I met", section: "Context", seed: "A recruiter from Acme Corp at the career fair" },
+    { type: "textarea", key: "specificDetail", label: "Specific detail from our conversation", rows: 2, seed: "She mentioned Acme's new sustainability product line launching this fall." },
+    { type: "textarea", key: "draft", label: "Draft", section: "Draft", rows: 4, seed: "" },
+    { type: "text", key: "responseReceived", label: "Response received?", section: "Result", seed: "Yes, same day" },
+  ],
+
+  144: [
+    { type: "textarea", key: "coreTakeaway", label: "The one thing a non-expert actually needs to know", section: "Core takeaway", rows: 2, seed: "Our model predicts which students are at risk of dropping a class before it happens, so advisors can step in early." },
+    { type: "textarea", key: "draft", label: "Draft", section: "Draft", rows: 4, seed: "" },
+    { type: "text", key: "nonExpertReader", label: "Non-expert reader", section: "Test", seed: "My roommate, who studies history" },
+    { type: "textarea", key: "couldExplainBack", label: "Could they explain it back accurately?", rows: 2, seed: "Yes, she summarized the core idea correctly on the first try." },
+  ],
+
+  145: [
+    { type: "table", key: "emailReview", label: "Review", section: "Review", columns: [
+      { key: "email", label: "Email", kind: "text" },
+      { key: "issue", label: "Issue noticed", kind: "text" },
+    ], seedRows: [{ email: "Email to Professor Alvarez", issue: "No subject line" }] },
+    { type: "text", key: "mostCommonIssue", label: "Most common issue across all of them", section: "Pattern", seed: "Missing or vague subject lines" },
+    { type: "text", key: "oneFix", label: "One fix I'll apply going forward", seed: "Always write a specific subject line before anything else" },
+  ],
+
+  146: [
+    { type: "text", key: "reviewer", label: "Reviewer", section: "Questions asked", seed: "My mentor, Dana" },
+    { type: "textarea", key: "isAskClear", label: "Is the ask clear?", rows: 2, seed: "Mostly, but she said it wasn't obvious until the final paragraph." },
+    { type: "textarea", key: "benefitsConvince", label: "Does the benefits section actually convince you?", rows: 2, seed: "Yes, once she saw actual numbers instead of general claims." },
+    { type: "table", key: "changesMade", label: "Changes made", section: "Changes made", columns: [
+      { key: "feedback", label: "Feedback", kind: "text" },
+      { key: "change", label: "Change made", kind: "text" },
+    ], seedRows: [{ feedback: "Ask buried in final paragraph", change: "Moved the ask to the second paragraph" }] },
+  ],
+
+  147: [
+    { type: "text", key: "recruiterCompany", label: "Recruiter / company", section: "Research", seed: "Jordan Reyes, Acme Corp" },
+    { type: "text", key: "specificRole", label: "Specific role of interest", seed: "Marketing Analyst, req #4021" },
+    { type: "textarea", key: "draft", label: "Draft", section: "Draft", rows: 4, seed: "" },
+    { type: "text", key: "responseReceived", label: "Response received?", section: "Result", seed: "Yes, within a day" },
+  ],
+
+  148: [
+    { type: "text", key: "documentProject", label: "Document / project", section: "The document", seed: "Group project final report" },
+    { type: "table", key: "commentsLeft", label: "Comments left", section: "Comments left", columns: [
+      { key: "comment", label: "Comment", kind: "text" },
+      { key: "specific", label: "Specific & actionable? (Y/N)", kind: "text" },
+    ], seedRows: [{ comment: "This paragraph's argument would be clearer with a specific number", specific: "Y" }] },
+    { type: "textarea", key: "reflection", label: "Did explaining edits speed up revisions?", section: "Reflection", rows: 2, seed: "Yes, the team stopped re-asking what I meant by each comment." },
+  ],
+
+  149: [
+    { type: "text", key: "reportSummarized", label: "Report being summarized", section: "Source report", seed: "Semester-end research report on student engagement" },
+    { type: "textarea", key: "coreFinding", label: "Core finding or recommendation", rows: 2, seed: "Students who join a club within their first month are twice as likely to stay enrolled year over year." },
+    { type: "textarea", key: "draft", label: "Draft", section: "Draft", rows: 4, seed: "" },
+    { type: "textarea", key: "readerUnderstood", label: "Did a reader who only read the summary understand the core point?", section: "Test", rows: 2, seed: "Yes, she repeated the core finding accurately." },
+  ],
+
+  150: [
+    { type: "text", key: "template1Type", label: "Email type", section: "Template 1", seed: "Networking follow-up" },
+    { type: "textarea", key: "template1Body", label: "Template", rows: 3, seed: "Hi [Name], great meeting you at [event]. I really enjoyed hearing about [specific detail]. Would you be open to a quick 15-minute call sometime in the next couple weeks?" },
+    { type: "text", key: "template2Type", label: "Email type", section: "Template 2", seed: "Cold outreach to recruiter" },
+    { type: "textarea", key: "template2Body", label: "Template", rows: 3, seed: "Hi [Name], I'm applying to [role] and wanted to reach out directly. I have [one relevant qualification]. Is there anything specific you'd want to know before I apply?" },
+    { type: "text", key: "template3Type", label: "Email type", section: "Template 3", seed: "Meeting follow-up summary" },
+    { type: "textarea", key: "template3Body", label: "Template", rows: 3, seed: "Thanks for the time today. To confirm what we agreed: [1-2 key points]. Let me know if I got anything wrong." },
+  ],
+  151: [
+    { type: "text", key: "openingHook", label: "Opening hook", section: "Structure", seed: "Last year, our club almost shut down. Here's what saved it." },
+    { type: "text", key: "mainPoint1", label: "Main point 1", seed: "The problem: declining membership" },
+    { type: "text", key: "mainPoint2", label: "Main point 2", seed: "What we changed: a referral incentive" },
+    { type: "text", key: "mainPoint3", label: "Main point 3", seed: "The result: membership up 40%" },
+    { type: "text", key: "closingTakeaway", label: "Closing takeaway", seed: "Small, specific incentives beat generic outreach every time." },
+    { type: "textarea", key: "fullScript", label: "Full script or outline", section: "Full script or outline", rows: 5, seed: "" },
+  ],
+
+  152: [
+    { type: "text", key: "audience", label: "Audience", section: "Delivery log", seed: "Two roommates" },
+    { type: "text", key: "timeTargetActual", label: "Time (target vs. actual)", seed: "5 min target, 6:20 actual" },
+    { type: "textarea", key: "whereStumbled", label: "Where did I stumble or lose the thread?", section: "Feedback", rows: 2, seed: "Lost my place transitioning from point 2 to point 3." },
+    { type: "textarea", key: "whatLandedWell", label: "What landed well?", rows: 2, seed: "The opening story got genuine laughs and attention." },
+  ],
+
+  153: [
+    { type: "text", key: "recording1Length", label: "Length", section: "Recording 1", seed: "90 seconds" },
+    { type: "text", key: "recording1Fillers", label: "Filler word count", seed: "14" },
+    { type: "text", key: "recording2Length", label: "Length", section: "Recording 2", seed: "85 seconds" },
+    { type: "text", key: "recording2Fillers", label: "Filler word count", seed: "4" },
+    { type: "textarea", key: "improvement", label: "What changed between recordings", section: "Improvement", rows: 2, seed: "Paused silently instead of saying 'um' when I needed a beat to think." },
+  ],
+
+  154: [
+    { type: "table", key: "practiceLog", label: "Practice log", section: "Practice log", columns: [
+      { key: "day", label: "Day", kind: "text" },
+      { key: "practiced", label: "Practiced aloud? (Y/N)", kind: "text" },
+      { key: "notes", label: "Notes", kind: "text" },
+    ], seedRows: [{ day: "Mon", practiced: "Y", notes: "Still sounds a bit stiff at the opening" }] },
+    { type: "text", key: "testedOn", label: "Tested on (person)", section: "Real test", seed: "A friend outside my major" },
+    { type: "textarea", key: "theirReaction", label: "Their reaction", rows: 2, seed: "Asked a genuine follow-up question about my capstone project." },
+  ],
+
+  155: [
+    { type: "textarea", key: "setup", label: "The situation", section: "Setup", rows: 2, seed: "Our club's spring showcase had lost momentum for two years straight." },
+    { type: "textarea", key: "challenge", label: "What went wrong or was at stake", section: "Challenge", rows: 2, seed: "Attendance had dropped so low we were at risk of losing university funding." },
+    { type: "textarea", key: "resolution", label: "How it was resolved", section: "Resolution", rows: 2, seed: "We redesigned outreach around a referral incentive, and attendance rebounded 40%." },
+    { type: "textarea", key: "fullStoryDraft", label: "Full story draft", section: "Full story draft", rows: 5, seed: "" },
+  ],
+
+  156: [
+    { type: "textarea", key: "toneObservation", label: "Observation", section: "Tone", rows: 2, seed: "Tone stayed warm and confident throughout, even during the tricky question." },
+    { type: "textarea", key: "paceObservation", label: "Observation", section: "Pace", rows: 2, seed: "Pace sped up noticeably in the last third, right when I got nervous." },
+    { type: "textarea", key: "clarityObservation", label: "Observation", section: "Clarity", rows: 2, seed: "Clear overall, but one technical term went undefined." },
+  ],
+
+  157: [
+    { type: "table", key: "slideOutline", label: "Slide outline", section: "Slide outline", columns: [
+      { key: "slideNum", label: "Slide #", kind: "text" },
+      { key: "coreIdea", label: "Core idea", kind: "text" },
+      { key: "visual", label: "Visual used", kind: "text" },
+    ], seedRows: [{ slideNum: "1", coreIdea: "The problem", visual: "Single stat, large text" }] },
+    { type: "textarea", key: "simplifyCheck", label: "Slide with too much text, and how I simplified it", section: "Simplify check", rows: 2, seed: "Slide 4 had six bullet points, cut to one phrase and a chart." },
+  ],
+
+  158: [
+    { type: "text", key: "position", label: "Position I'm arguing", section: "Position", seed: "Remote internships are as valuable as in-person ones" },
+    { type: "text", key: "evidence1", label: "Strongest evidence 1", section: "Evidence", seed: "Study showing comparable skill-building outcomes" },
+    { type: "text", key: "evidence2", label: "Strongest evidence 2", seed: "Access to a wider range of companies and roles" },
+    { type: "text", key: "evidence3", label: "Strongest evidence 3", seed: "Lower cost of participation for students" },
+    { type: "table", key: "counterarguments", label: "Counterarguments", section: "Counterarguments", columns: [
+      { key: "counter", label: "Likely counterargument", kind: "text" },
+      { key: "response", label: "My response", kind: "text" },
+    ], seedRows: [{ counter: "You miss out on in-person mentorship", response: "Structured virtual check-ins can close most of that gap" }] },
+  ],
+
+  159: [
+    { type: "table", key: "rolesTiming", label: "Roles & timing", section: "Roles & timing", columns: [
+      { key: "presenter", label: "Presenter", kind: "text" },
+      { key: "section", label: "Section", kind: "text" },
+      { key: "time", label: "Time allotted", kind: "text" },
+    ], seedRows: [{ presenter: "Maya", section: "Problem statement", time: "2 min" }] },
+    { type: "textarea", key: "transitions", label: "How each handoff will happen", section: "Transitions", rows: 2, seed: "Each presenter names the next speaker and their section by title before sitting down." },
+    { type: "text", key: "fullRehearsal", label: "Date held, and how it went", section: "Full rehearsal", seed: "Tuesday, ran long by 3 minutes, tightened the middle section" },
+  ],
+
+  160: [
+    { type: "text", key: "round1Topic", label: "Topic given", section: "Round 1", seed: "Your favorite failed project" },
+    { type: "textarea", key: "round1Result", label: "How it went", rows: 2, seed: "Rambled a bit before finding a point." },
+    { type: "text", key: "round2Topic", label: "Topic given", section: "Round 2", seed: "A skill you want to learn" },
+    { type: "textarea", key: "round2Result", label: "How it went", rows: 2, seed: "Better structure, stated the point up front." },
+    { type: "text", key: "round3Topic", label: "Topic given", section: "Round 3", seed: "The best advice you've received" },
+    { type: "textarea", key: "round3Result", label: "How it went", rows: 2, seed: "Clean point-reason-example structure, finished with time to spare." },
+  ],
+
+  161: [
+    { type: "text", key: "recommendation", label: "My recommendation, stated in one sentence", section: "Recommendation", seed: "We should move the showcase to a weekday evening and add a co-sponsor." },
+    { type: "text", key: "evidence1", label: "Strongest evidence 1", section: "Supporting evidence", seed: "Weekday evenings had 30% higher attendance in comparable events" },
+    { type: "text", key: "evidence2", label: "Strongest evidence 2", seed: "Co-sponsorship doubles our outreach list at no added cost" },
+    { type: "text", key: "evidence3", label: "Strongest evidence 3", seed: "Two other clubs have used this model successfully" },
+    { type: "textarea", key: "objectionAddressed", label: "Most likely objection, addressed", section: "Objection & ask", rows: 2, seed: "Splitting credit with a co-sponsor, addressed by proposing clear joint branding." },
+    { type: "text", key: "askClose", label: "Specific ask / close", seed: "Approve reaching out to the co-sponsor this week" },
+  ],
+
+  162: [
+    { type: "textarea", key: "coreIdeaNonExpert", label: "Core idea, non-expert version", section: "What they actually need to know", rows: 2, seed: "Our tool flags students who might need extra support before they fall behind." },
+    { type: "text", key: "analogy", label: "Analogy I'll use", seed: "Like a smoke detector for coursework, it warns you early, not after the fire." },
+    { type: "text", key: "nonExpertTester", label: "Non-expert tester", section: "Test", seed: "My roommate, a history major" },
+    { type: "textarea", key: "wasntClear", label: "What wasn't clear the first time", rows: 2, seed: "She didn't understand what 'flagging' actually meant until I used the smoke detector analogy." },
+  ],
+
+  163: [
+    { type: "textarea", key: "patternFromDeliveries", label: "Part that consistently causes confusion", section: "Pattern from past deliveries", rows: 2, seed: "Mentioning my minor draws a confused follow-up question every time." },
+    { type: "textarea", key: "revisedPitch", label: "Revised pitch", section: "Revised pitch", rows: 4, seed: "" },
+    { type: "textarea", key: "reTestReaction", label: "New reaction after revision", section: "Re-test", rows: 2, seed: "Got an interested follow-up question instead of a confused one." },
+  ],
+
+  164: [
+    { type: "text", key: "conceptTeaching", label: "Concept I'm teaching", section: "Topic", seed: "How to build a simple decision matrix" },
+    { type: "textarea", key: "informalNotes", label: "Informal notes", section: "Informal notes", rows: 4, seed: "" },
+    { type: "textarea", key: "gapRevealed", label: "Gap in my own understanding this revealed", section: "What I learned from teaching it", rows: 2, seed: "I couldn't clearly explain why weighting matters until someone asked directly." },
+  ],
+
+  165: [
+    { type: "table", key: "practiceLog", label: "Practice log", section: "Practice log", columns: [
+      { key: "day", label: "Day", kind: "text" },
+      { key: "material", label: "Material read", kind: "text" },
+      { key: "paceNotes", label: "Pace notes", kind: "text" },
+    ], seedRows: [{ day: "Mon", material: "A news article", paceNotes: "Rushed through the second paragraph" }] },
+    { type: "textarea", key: "reflection", label: "Has my natural speaking pace changed?", section: "Reflection", rows: 2, seed: "Yes, I catch myself slowing down naturally in conversation now." },
+  ],
+
+  166: [
+    { type: "table", key: "conversationLog", label: "Conversation log", section: "Conversation log", columns: [
+      { key: "conversation", label: "Conversation", kind: "text" },
+      { key: "summarized", label: "Summarized before responding? (Y/N)", kind: "text" },
+      { key: "result", label: "Result", kind: "text" },
+    ], seedRows: [{ conversation: "Group project planning meeting", summarized: "Y", result: "Caught a misunderstanding about the deadline" }] },
+    { type: "textarea", key: "reflection", label: "Did summarizing ever catch a misunderstanding?", section: "Reflection", rows: 2, seed: "Yes, once, and it would have caused real confusion if it went uncaught." },
+  ],
+
+  167: [
+    { type: "text", key: "articleSource", label: "Article / source", section: "Article", seed: "\"The Real Cost of Multitasking\", a workplace psychology article" },
+    { type: "textarea", key: "summaryFromMemory", label: "Summary from memory", section: "Summary from memory", rows: 4, seed: "" },
+    { type: "textarea", key: "accuracyCheck", label: "How accurate was my summary against the original?", section: "Accuracy check", rows: 2, seed: "Mostly accurate, missed one supporting statistic." },
+  ],
+
+  168: [
+    { type: "text", key: "entry1Content", label: "Podcast / video", section: "Entry 1", seed: "A marketing podcast episode on brand positioning" },
+    { type: "text", key: "entry1Takeaway", label: "Main takeaway", seed: "Positioning is about the one thing you own in the customer's mind, not everything you do well." },
+    { type: "text", key: "entry1Apply", label: "How I might apply it", seed: "Narrow my portfolio's headline to one clear specialty instead of listing everything." },
+    { type: "text", key: "entry2Content", label: "Podcast / video", section: "Entry 2", seed: "A talk on effective feedback" },
+    { type: "text", key: "entry2Takeaway", label: "Main takeaway", seed: "Specific feedback tied to one example beats general praise or criticism." },
+    { type: "text", key: "entry2Apply", label: "How I might apply it", seed: "Use one concrete example every time I give peer feedback." },
+  ],
+
+  169: [
+    { type: "text", key: "articlePaper", label: "Article / paper", section: "The piece", seed: "A dense academic paper on decision fatigue" },
+    { type: "textarea", key: "notesSecondPass", label: "Notes on second pass", section: "Notes on second pass", rows: 4, seed: "" },
+    { type: "text", key: "coreThesis", label: "Stated in one sentence", section: "Core thesis", seed: "Repeated decision-making depletes mental resources, so structuring fewer, better decisions matters more than willpower." },
+  ],
+
+  170: [
+    { type: "table", key: "recommendationsGathered", label: "Recommendations gathered", section: "Recommendations gathered", columns: [
+      { key: "recommendedBy", label: "Recommended by", kind: "text" },
+      { key: "bookArticle", label: "Book / article", kind: "text" },
+      { key: "why", label: "Why they recommended it", kind: "text" },
+    ], seedRows: [{ recommendedBy: "Dana, marketing manager", bookArticle: "Positioning by Ries & Trout", why: "Foundational for how she thinks about brand strategy" }] },
+    { type: "chipList", key: "priorityOrder", label: "Reading list, in priority order", section: "My priority order", seed: ["Positioning by Ries & Trout", "Made to Stick", "Building a StoryBrand"] },
+  ],
+
+  171: [
+    { type: "text", key: "entry1Source", label: "Source", section: "Entry 1", seed: "Chapter 3 of a leadership textbook" },
+    { type: "text", key: "entry1Insight", label: "Key insight", seed: "Delegation fails most often from unclear expectations, not lack of trust." },
+    { type: "textarea", key: "entry1Reaction", label: "My reaction or question", rows: 2, seed: "Makes me realize I've been vague about deadlines when asking others for help." },
+    { type: "text", key: "entry2Source", label: "Source", section: "Entry 2", seed: "An article on effective one-on-ones" },
+    { type: "text", key: "entry2Insight", label: "Key insight", seed: "The best one-on-ones are led by questions, not status updates." },
+    { type: "textarea", key: "entry2Reaction", label: "My reaction or question", rows: 2, seed: "I want to try opening my next check-in with a question instead of a status report." },
+  ],
+
+  172: [
+    { type: "table", key: "skimPractice", label: "Skim practice", section: "Skim practice", columns: [
+      { key: "document", label: "Document", kind: "text" },
+      { key: "skimmedFirst", label: "Skimmed first? (Y/N)", kind: "text" },
+      { key: "neededFullRead", label: "Needed full read? (Y/N)", kind: "text" },
+    ], seedRows: [{ document: "Weekly team update email", skimmedFirst: "Y", neededFullRead: "N" }] },
+    { type: "textarea", key: "reflection", label: "How much time did triaging save this week?", section: "Reflection", rows: 2, seed: "Probably 20 to 30 minutes across the week, mostly on emails I didn't need to read fully." },
+  ],
+
+  173: [
+    { type: "text", key: "lecturePodcast", label: "Lecture / podcast", section: "Content", seed: "Guest lecture on negotiation tactics" },
+    { type: "textarea", key: "summaryFromMemory", label: "Summary from memory (within 1 hour)", section: "Summary from memory", rows: 4, seed: "" },
+    { type: "textarea", key: "gapCheck", label: "What did I miss compared to my notes (if any)?", section: "Gap check", rows: 2, seed: "Missed the specific example about anchoring, only recalled the general concept." },
+  ],
+  174: [
+    { type: "text", key: "whoISpokeWith", label: "Who I spoke with", section: "The conversation", seed: "An alum working in product marketing" },
+    { type: "text", key: "openingQuestion", label: "My opening question", seed: "What's changed most about your job since you started?" },
+    { type: "text", key: "followUp1", label: "Follow-up question 1", section: "Follow-up questions asked", seed: "What made you switch teams last year?" },
+    { type: "text", key: "followUp2", label: "Follow-up question 2", seed: "What's a skill you wish you'd built earlier?" },
+    { type: "text", key: "followUp3", label: "Follow-up question 3", seed: "Who else would you suggest I talk to?" },
+    { type: "textarea", key: "reflection", label: "How long did the conversation genuinely sustain?", section: "Reflection", rows: 2, seed: "About 12 minutes, longer than any networking conversation I've had before." },
+  ],
+
+  175: [
+    { type: "text", key: "practicePartner", label: "Practice partner", section: "Setup", seed: "My career advisor" },
+    { type: "table", key: "deliveryFeedback", label: "Delivery feedback", section: "Delivery feedback", columns: [
+      { key: "question", label: "Question", kind: "text" },
+      { key: "clear", label: "Was answer clear/concise? (Y/N)", kind: "text" },
+      { key: "feedback", label: "Feedback", kind: "text" },
+    ], seedRows: [{ question: "Tell me about a time you led a project", clear: "N", feedback: "Ran long, point got lost halfway through" }] },
+    { type: "textarea", key: "adjustment", label: "What I'll tighten for next round", section: "Adjustment", rows: 2, seed: "State the outcome in the first sentence, then back it up." },
+  ],
+
+  176: [
+    { type: "text", key: "discussionTopic", label: "Discussion topic", section: "Setup", seed: "How should we split the project roles" },
+    { type: "text", key: "openingQuestion", label: "Opening question", seed: "What part of this project are you most excited to own?" },
+    { type: "table", key: "participationCheck", label: "Participation check", section: "Participation check", columns: [
+      { key: "participant", label: "Participant", kind: "text" },
+      { key: "invited", label: "Invited to speak? (Y/N)", kind: "text" },
+    ], seedRows: [{ participant: "Sam", invited: "Y" }] },
+    { type: "textarea", key: "reflection", label: "Did more people participate than usual?", section: "Reflection", rows: 2, seed: "Yes, two normally-quiet members shared ideas we ended up using." },
+  ],
+
+  177: [
+    { type: "text", key: "whoICommunicatedWith", label: "Who I communicated with", section: "The interaction", seed: "An international classmate on a group project" },
+    { type: "checklist", key: "adjustmentsMade", label: "Adjustments made", section: "Adjustments made", items: ["Avoided idioms", "Checked explicitly for understanding", "Asked about communication preferences rather than assuming"], seedChecked: ["Avoided idioms", "Checked explicitly for understanding"] },
+    { type: "textarea", key: "result", label: "Did they confirm they understood clearly?", section: "Result", rows: 2, seed: "Yes, and they said the direct phrasing was actually easier to follow than usual." },
+  ],
+
+  178: [
+    { type: "textarea", key: "memorableDetail", label: "One specific, memorable detail I'll add to my introduction", section: "The memorable detail", rows: 2, seed: "The exact percentage my capstone campaign increased engagement by." },
+    { type: "text", key: "event", label: "Event", section: "Result", seed: "Spring career fair" },
+    { type: "textarea", key: "detailReferenced", label: "Did anyone reference the detail later?", rows: 2, seed: "Yes, a recruiter brought it up specifically when I followed up." },
+  ],
+
+  179: [
+    { type: "text", key: "forumGroup", label: "Forum / group", section: "The discussion", seed: "A LinkedIn group for early-career marketers" },
+    { type: "textarea", key: "genuineContribution", label: "My genuine contribution (question or specific perspective)", rows: 3, seed: "Asked how others handle measuring brand awareness when budgets are too small for formal surveys." },
+    { type: "textarea", key: "engagementReceived", label: "Engagement received", section: "Result", rows: 2, seed: "Three replies, one turned into a direct message conversation." },
+  ],
+
+  180: [
+    { type: "text", key: "seniorPerson", label: "Senior person", section: "Prep", seed: "My internship's VP of Marketing" },
+    { type: "text", key: "question1", label: "Specific question 1", seed: "What's a decision you'd make differently earlier in your career?" },
+    { type: "text", key: "question2", label: "Specific question 2", seed: "What separates people who get promoted quickly on this team?" },
+    { type: "text", key: "thankYouSent", label: "Thank-you sent, referencing something specific? (Y/N)", section: "Follow-up", seed: "Y" },
+  ],
+
+  181: [
+    { type: "textarea", key: "disagreement", label: "The disagreement", section: "The issue", rows: 2, seed: "A teammate missed three deadlines in a row without a heads-up." },
+    { type: "textarea", key: "iStatementOpening", label: "My 'I' statement opening", rows: 2, seed: "I've felt stressed trying to plan around deadlines that keep shifting without notice." },
+    { type: "textarea", key: "whatIHeard", label: "What I heard when I genuinely listened", section: "Their perspective", rows: 2, seed: "He'd been overwhelmed with a family issue and didn't know how to bring it up." },
+    { type: "textarea", key: "resolution", label: "The specific resolution agreed on", section: "Resolution", rows: 2, seed: "He'll flag any at-risk deadline 48 hours in advance, and I'll check in midweek." },
+  ],
+
+  182: [
+    { type: "text", key: "meetingGroup", label: "Meeting / group", section: "Agenda used", seed: "Class project group meeting" },
+    { type: "textarea", key: "closingSummary", label: "Closing summary", section: "Closing summary", rows: 3, seed: "" },
+    { type: "textarea", key: "clearNextSteps", label: "Did the group leave with clear next steps?", section: "Result", rows: 2, seed: "Yes, everyone confirmed their task and deadline before leaving." },
+  ],
+
+  183: [
+    { type: "text", key: "coursePlatform", label: "Course / platform", section: "Course", seed: "Google Analytics certification, Coursera" },
+    { type: "textarea", key: "questionInsightPosted", label: "My genuine question or insight posted", rows: 3, seed: "Asked how others handle attribution when a customer touches multiple channels before converting." },
+    { type: "textarea", key: "valueReceived", label: "Did another learner's response add real value?", section: "Value received", rows: 2, seed: "Yes, someone linked a walkthrough that clarified a concept the course itself glossed over." },
+  ],
+
+  184: [
+    { type: "table", key: "commentsLeft", label: "Comments left", section: "Comments left", columns: [
+      { key: "postAuthor", label: "Post / author", kind: "text" },
+      { key: "myComment", label: "My comment", kind: "text" },
+      { key: "response", label: "Response received", kind: "text" },
+    ], seedRows: [{ postAuthor: "A marketing director's post on brand voice", myComment: "Asked how they balance consistency with a fast-moving industry", response: "The author replied directly with a real example" }] },
+    { type: "textarea", key: "reflection", label: "Which comment generated the most genuine engagement?", section: "Reflection", rows: 2, seed: "The one where I asked a specific question instead of just agreeing." },
+  ],
+
+  185: [
+    { type: "textarea", key: "realisticSituation", label: "The realistic situation", section: "The scenario", rows: 2, seed: "Telling my team lead I'm overcommitted and need to hand off a task." },
+    { type: "text", key: "rolePlayPartner", label: "Role-play partner", seed: "My roommate" },
+    { type: "textarea", key: "whatIDidWell", label: "What did I do well in the role-play?", section: "What I noticed", rows: 2, seed: "Stated the issue clearly without over-explaining." },
+    { type: "textarea", key: "whatIllAdjust", label: "What will I adjust before the real conversation?", rows: 2, seed: "Stop over-apologizing before getting to the actual point." },
+  ],
+
+  186: [
+    { type: "text", key: "eventForum", label: "Event / forum", section: "The forum", seed: "Campus town hall on career services" },
+    { type: "textarea", key: "questionPrepared", label: "Question or comment prepared in advance", rows: 2, seed: "Asked whether the career center plans to expand evening advising hours." },
+    { type: "textarea", key: "responseReceived", label: "Response or follow-up received", section: "Result", rows: 2, seed: "Got a direct answer, and the director followed up by email a week later." },
+  ],
+
+  187: [
+    { type: "textarea", key: "feedbackReceived", label: "Feedback received", section: "The feedback", rows: 2, seed: "My presentation's ending felt rushed and didn't land the point." },
+    { type: "text", key: "whoGaveIt", label: "Who gave it", seed: "My professor" },
+    { type: "text", key: "stayedNonDefensive", label: "Did I stay non-defensive? (Y/N)", section: "My response in the moment", seed: "Y" },
+    { type: "textarea", key: "followThrough", label: "Specific change I made afterward", section: "Follow-through", rows: 2, seed: "Timed my next practice run to leave room for a real closing statement." },
+  ],
+
+  188: [
+    { type: "text", key: "peerTeammate", label: "Peer / teammate", section: "Prep", seed: "A teammate on my capstone project" },
+    { type: "text", key: "genuineStrength", label: "Genuine strength I'll lead with", seed: "His research section was thorough and well-cited." },
+    { type: "textarea", key: "specificSuggestion", label: "Specific, actionable suggestion", rows: 2, seed: "The presentation section runs about 2 minutes long, cutting the middle example would tighten it." },
+    { type: "textarea", key: "howReceived", label: "How was it received?", section: "Result", rows: 2, seed: "Well, he thanked me for catching it before the real presentation." },
+  ],
+
+  189: [
+    { type: "text", key: "experienceType", label: "Course / workshop / project", section: "The experience", seed: "A semester-long marketing analytics course" },
+    { type: "textarea", key: "whatLearned", label: "What I learned", section: "Reflection", rows: 2, seed: "How to read a funnel report and identify where users actually drop off." },
+    { type: "textarea", key: "questionUnresolved", label: "What question remains unresolved", rows: 2, seed: "I still don't know how to prioritize which drop-off point to fix first." },
+    { type: "textarea", key: "howIllApply", label: "How I'll apply this going forward", rows: 2, seed: "Use funnel analysis in my next project instead of just looking at overall conversion rate." },
+  ],
+
+  190: [
+    { type: "scale", key: "writingRating", label: "Writing", section: "Ratings", seed: 60 },
+    { type: "scale", key: "speakingRating", label: "Speaking", seed: 50 },
+    { type: "scale", key: "listeningRating", label: "Listening", seed: 40 },
+    { type: "table", key: "evidence", label: "Evidence", section: "Evidence", columns: [
+      { key: "area", label: "Area", kind: "text" },
+      { key: "evidence", label: "Specific evidence for rating", kind: "text" },
+    ], seedRows: [{ area: "Listening", evidence: "I frequently realize I was thinking about my response instead of actually listening" }] },
+    { type: "textarea", key: "priorityArea", label: "My genuine weakest area, and why", section: "Priority", rows: 2, seed: "Listening, it's the one I've never deliberately practiced or tracked before." },
+  ],
+
+  191: [
+    { type: "table", key: "instances", label: "Instances", section: "Instances", columns: [
+      { key: "situation", label: "Speaking situation", kind: "text" },
+      { key: "trigger", label: "What triggered nervousness", kind: "text" },
+    ], seedRows: [{ situation: "Unscripted Q&A after a presentation", trigger: "Not knowing the question in advance" }] },
+    { type: "textarea", key: "commonThread", label: "What these situations have in common", section: "Common thread", rows: 2, seed: "All of them involve responding without any prep time, not the prepared remarks themselves." },
+    { type: "textarea", key: "targetedStrategy", label: "Strategy specific to this trigger", section: "Targeted strategy", rows: 2, seed: "Practice the point-reason-example structure from the Impromptu Speaking Drill before any Q&A." },
+  ],
+
+  192: [
+    { type: "text", key: "peerAssignment", label: "Peer / assignment", section: "The work", seed: "A classmate's first draft of a cover letter" },
+    { type: "textarea", key: "strengthWithExample", label: "Specific strength, with example", section: "Feedback", rows: 2, seed: "The opening line about her research project immediately grabbed attention." },
+    { type: "textarea", key: "suggestionWithExample", label: "Specific suggestion, with example", rows: 2, seed: "The second paragraph lists three skills without evidence, add one concrete example instead." },
+    { type: "textarea", key: "didTheyChange", label: "Did they make a change based on it?", section: "Result", rows: 2, seed: "Yes, she added a specific project example in her next draft." },
+  ],
+
+  193: [
+    { type: "text", key: "entry1WentWell", label: "What went well", section: "Entry 1", seed: "Stayed calm through an unexpected follow-up question" },
+    { type: "text", key: "entry1Adjust", label: "What to adjust", seed: "Slow down at the start, I rush the first sentence" },
+    { type: "text", key: "entry2WentWell", label: "What went well", section: "Entry 2", seed: "Clear point-reason-example structure throughout" },
+    { type: "text", key: "entry2Adjust", label: "What to adjust", seed: "Still rushing the opening line" },
+    { type: "text", key: "entry3WentWell", label: "What went well", section: "Entry 3", seed: "Opening line finally landed at a natural pace" },
+    { type: "text", key: "entry3Adjust", label: "What to adjust", seed: "Watch pacing during the closing, it speeds up when I'm relieved to be almost done" },
+    { type: "textarea", key: "patternAcrossEntries", label: "What's genuinely improved", section: "Pattern across entries", rows: 2, seed: "The opening pace issue is basically resolved, closing pace is the new thing to watch." },
+  ],
+
+  194: [
+    { type: "text", key: "mentor", label: "Mentor", section: "Shared self-assessment", seed: "My internship supervisor" },
+    { type: "textarea", key: "whatTheyAgreed", label: "What they agreed with", section: "Their input", rows: 2, seed: "Agreed that listening is a real growth area, especially in fast-moving meetings." },
+    { type: "textarea", key: "whatTheyAdded", label: "What they added or challenged", rows: 2, seed: "Pointed out my writing is strong in structure but sometimes buries the actual point." },
+    { type: "textarea", key: "updatedGrowthPlan", label: "What I'll focus on based on this conversation", section: "Updated growth plan", rows: 2, seed: "State my main point in the first sentence of emails and reports, not the third." },
+  ],
+
+  195: [
+    { type: "text", key: "speechArticle", label: "Speech / article / presentation", section: "The piece", seed: "A TED talk on career reinvention" },
+    { type: "textarea", key: "techniqueIdentified", label: "Specific technique identified (evidence, structure, emotional appeal, etc.)", section: "What made it work", rows: 2, seed: "Opened with a specific personal story before any data or general claims." },
+    { type: "textarea", key: "whereApplied", label: "Where I applied this technique in my own communication", section: "My application", rows: 2, seed: "Opened my own presentation with a specific moment instead of a general topic overview." },
+    { type: "text", key: "result", label: "Result", seed: "Noticeably stronger audience engagement from the first minute" },
+  ],
+  196: [
+    { type: "table", key: "goals", label: "Goals", section: "Goals", columns: [
+      { key: "goal", label: "Goal", kind: "text" },
+      { key: "target", label: "Measurable target", kind: "text" },
+      { key: "date", label: "Target date", kind: "text" },
+    ], seedRows: [{ goal: "Reduce filler words", target: "Under 3 per minute", date: "In 4 weeks" }] },
+    { type: "text", key: "reviewDate", label: "Review date", section: "Review", seed: "In 4 weeks" },
+    { type: "textarea", key: "progressSoFar", label: "Progress so far", rows: 2, seed: "" },
+  ],
+
+  197: [
+    { type: "text", key: "conceptVisualized", label: "Concept or process being visualized", section: "The idea", seed: "Our club's 4-step new-member onboarding process" },
+    { type: "text", key: "visualFormat", label: "Visual format chosen (chart, flow diagram, etc.)", seed: "A simple horizontal flow diagram" },
+    { type: "textarea", key: "readerUnderstoodFaster", label: "Did a reader understand it faster than the text version?", section: "Test", rows: 2, seed: "Yes, a new officer understood the process in under a minute versus several minutes reading the text version." },
+  ],
+
+  198: [
+    { type: "text", key: "structureChosen", label: "Structure chosen (e.g. Cornell method)", section: "My system", seed: "Cornell method: notes, cues, summary" },
+    { type: "text", key: "lectureMeetingUsedOn", label: "Lecture / meeting used on", section: "Applied test", seed: "Weekly team standup" },
+    { type: "textarea", key: "couldFindInfoLater", label: "Could I quickly find and use info from these notes later?", rows: 2, seed: "Yes, found the action item I needed in seconds using the cues column." },
+  ],
+
+  199: [
+    { type: "text", key: "projectInitiative", label: "Project / initiative", section: "Project", seed: "Spring showcase planning" },
+    { type: "table", key: "stakeholderMap", label: "Stakeholder map", section: "Stakeholder map", columns: [
+      { key: "stakeholder", label: "Stakeholder", kind: "text" },
+      { key: "needsToKnow", label: "What they need to know", kind: "text" },
+      { key: "channelFrequency", label: "Channel & frequency", kind: "text" },
+    ], seedRows: [{ stakeholder: "Club advisor", needsToKnow: "Budget status and timeline", channelFrequency: "Email, biweekly" }] },
+  ],
+
+  200: [
+    { type: "table", key: "storyboard", label: "Storyboard", section: "Storyboard", columns: [
+      { key: "sceneNum", label: "Section / scene #", kind: "text" },
+      { key: "description", label: "One-line description", kind: "text" },
+    ], seedRows: [{ sceneNum: "1", description: "Open with the problem: declining attendance" }] },
+    { type: "textarea", key: "structuralCheck", label: "Any logic gap caught before production?", section: "Structural check", rows: 2, seed: "Realized scene 3 referenced data that hadn't been introduced yet, moved it earlier." },
+  ],
+
+  201: [
+    { type: "text", key: "metricChosen", label: "Metric (response rate, engagement, callback rate, etc.)", section: "Metric chosen", seed: "Networking email response rate" },
+    { type: "table", key: "weeklyLog", label: "Weekly log", section: "Weekly log", columns: [
+      { key: "weekOf", label: "Week of", kind: "text" },
+      { key: "value", label: "Metric value", kind: "text" },
+      { key: "notes", label: "Notes", kind: "text" },
+    ], seedRows: [{ weekOf: "Sept 1", value: "40%", notes: "Used the new follow-up template this week" }] },
+    { type: "textarea", key: "trend", label: "What the trend shows so far", section: "Trend", rows: 2, seed: "Response rate has been flat, worth revisiting the actual email content next." },
+  ],
+
+  202: [
+    { type: "text", key: "question1", label: "Question", section: "Question 1", seed: "Tell me about a time you handled conflict on a team." },
+    { type: "textarea", key: "question1Answer", label: "Answer", rows: 3, seed: "" },
+    { type: "text", key: "question2", label: "Question", section: "Question 2", seed: "Why do you want to work here specifically?" },
+    { type: "textarea", key: "question2Answer", label: "Answer", rows: 3, seed: "" },
+    { type: "text", key: "question3", label: "Question", section: "Question 3", seed: "Describe a time you failed and what you learned." },
+    { type: "textarea", key: "question3Answer", label: "Answer", rows: 3, seed: "" },
+  ],
+
+  203: [
+    { type: "text", key: "week1Challenge", label: "This week's specific challenge", section: "Week 1", seed: "Ask a follow-up question in every conversation this week" },
+    { type: "textarea", key: "week1MetLearned", label: "Met it? (Y/N) + what I learned", rows: 2, seed: "Y, noticed people opened up more once I asked a genuine follow-up." },
+    { type: "text", key: "week2Challenge", label: "This week's specific challenge", section: "Week 2", seed: "State my recommendation first in every meeting" },
+    { type: "textarea", key: "week2MetLearned", label: "Met it? (Y/N) + what I learned", rows: 2, seed: "Mostly, forgot once in a fast-moving meeting but caught myself the next time." },
+    { type: "text", key: "week3Challenge", label: "This week's specific challenge", section: "Week 3", seed: "Summarize before responding in every disagreement" },
+    { type: "textarea", key: "week3MetLearned", label: "Met it? (Y/N) + what I learned", rows: 2, seed: "Y, it's becoming close to automatic now." },
+  ],
 };

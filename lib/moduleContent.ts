@@ -146,6 +146,76 @@ export const COACH_MODE: Record<number, CoachMode> = {
   131: "synthesis",
   132: "hybrid",
   133: "synthesis",
+  134: "reflective",
+  135: "reflective",
+  136: "reflective",
+  137: "reflective",
+  138: "reflective",
+  139: "hybrid",
+  140: "hybrid",
+  141: "reflective",
+  142: "reflective",
+  143: "reflective",
+  144: "reflective",
+  145: "reflective",
+  146: "hybrid",
+  147: "reflective",
+  148: "reflective",
+  149: "reflective",
+  150: "reflective",
+  151: "reflective",
+  152: "reflective",
+  153: "reflective",
+  154: "reflective",
+  155: "reflective",
+  156: "reflective",
+  157: "reflective",
+  158: "research",
+  159: "reflective",
+  160: "reflective",
+  161: "hybrid",
+  162: "reflective",
+  163: "reflective",
+  164: "reflective",
+  165: "reflective",
+  166: "reflective",
+  167: "reflective",
+  168: "reflective",
+  169: "reflective",
+  170: "research",
+  171: "reflective",
+  172: "reflective",
+  173: "reflective",
+  174: "reflective",
+  175: "hybrid",
+  176: "reflective",
+  177: "reflective",
+  178: "reflective",
+  179: "reflective",
+  180: "reflective",
+  181: "reflective",
+  182: "reflective",
+  183: "reflective",
+  184: "reflective",
+  185: "hybrid",
+  186: "reflective",
+  187: "reflective",
+  188: "reflective",
+  189: "reflective",
+  190: "synthesis",
+  191: "reflective",
+  192: "reflective",
+  193: "reflective",
+  194: "synthesis",
+  195: "reflective",
+  196: "hybrid",
+  197: "reflective",
+  198: "reflective",
+  199: "reflective",
+  200: "reflective",
+  201: "hybrid",
+  202: "hybrid",
+  203: "reflective",
 };
 
 export const LEARN_CONTENT: Record<number, LearnContent> = {
@@ -4020,5 +4090,1889 @@ export const LEARN_CONTENT: Record<number, LearnContent> = {
     successSignal:
       "Every long-term goal has at least one connected current action, and every current major action connects to a real long-term goal, not just busywork.",
     milestoneTies: [102],
+  },
+  134: {
+    definition:
+      "A Professional Email Sent is a concise, polite, actionable message that clearly states its purpose and request within the first few sentences, without unnecessary preamble or ambiguity.",
+    whyItMatters:
+      "Email is the default communication channel for most professional relationships, and a poorly structured one can undercut a strong candidate before any other impression forms.",
+    whenWhoWhere: [
+      { label: "When", body: "Send your first genuinely professional email as early as possible, such as reaching out to a professor or internship contact, so the habit forms before high-stakes situations arise." },
+      { label: "Who", body: "No collaborator required, though a mentor's review of an early draft can catch tone issues you might miss." },
+      { label: "Where", body: "Written for any professional context: professors, internship contacts, recruiters, or campus organizations." },
+    ],
+    howItWorks: [
+      "Use a clear subject line, state your purpose in the first two sentences, make one specific ask, and close professionally.",
+      "Proofread before sending.",
+    ],
+    tools: ["Grammarly or your email client's built-in spelling and grammar checker"],
+    scenario: {
+      title: "A reply within hours, not a week",
+      body: "A student's rambling first email to a professor got no response for a week. His rewritten version, with a clear subject line and the request stated up front, got a reply within hours.",
+    },
+    pitfalls: [
+      "Burying the actual request several paragraphs in",
+      "Using an overly casual tone with someone you don't know well",
+    ],
+    successSignal:
+      "You get a timely, relevant response without the recipient needing to ask for clarification.",
+    milestoneTies: [],
+  },
+
+  135: {
+    definition:
+      "A Meeting Agenda Prepared is a structured outline of a meeting's topics, timing, and objectives, shared with attendees in advance so the meeting has clear direction.",
+    whyItMatters:
+      "Meetings without agendas tend to drift, run long, and leave people unsure what was actually decided, wasting everyone's time.",
+    whenWhoWhere: [
+      { label: "When", body: "Prepare one before leading or co-leading any meeting with more than two or three attendees." },
+      { label: "Who", body: "Whoever else is attending, ideally consulted briefly beforehand on what needs covering." },
+      { label: "Where", body: "Drafted the day before a meeting and shared in advance via email or a shared document." },
+    ],
+    howItWorks: [
+      "List each topic with an estimated time allotment and a clear objective: decide, inform, brainstorm.",
+      "Share it 24 hours ahead when possible.",
+    ],
+    tools: ["A simple shared document or a meeting-specific template"],
+    scenario: {
+      title: "From 90 minutes to 45",
+      body: "A club's meetings used to run 90 minutes with no clear outcomes. After the treasurer started sharing a three-item agenda with time boxes, meetings consistently wrapped in 45 minutes with clear action items.",
+    },
+    pitfalls: [
+      "Packing in too many topics without realistic time estimates",
+      "Writing an agenda but never actually following it during the meeting",
+    ],
+    successSignal:
+      "The meeting stays on topic, ends on time, and everyone leaves knowing what was decided.",
+    milestoneTies: [141, 182],
+  },
+
+  136: {
+    definition:
+      "A Written Report Drafted is a structured document with a clear introduction, body, and conclusion, organized so a reader can follow your findings or argument without getting lost.",
+    whyItMatters:
+      "Reports are a core deliverable in nearly every field, and a disorganized one undermines even strong underlying analysis.",
+    whenWhoWhere: [
+      { label: "When", body: "Practice this on a class assignment or project before you need to produce one under real workplace pressure." },
+      { label: "Who", body: "A writing center tutor or professor for structural feedback." },
+      { label: "Where", body: "Drafted over multiple sittings, since strong reports rarely come together in one pass." },
+    ],
+    howItWorks: [
+      "Outline your introduction (what and why), body (findings organized logically), and conclusion (so what) before writing full sentences.",
+      "Draft, then revise separately for structure and clarity.",
+    ],
+    tools: ["A simple outline template", "A style guide relevant to your field if one exists"],
+    scenario: {
+      title: "The structure that made a wall of text readable",
+      body: "A student's first report draft was a wall of text with no clear sections. After outlining first, her second draft's structure alone made the same content dramatically easier to follow.",
+    },
+    pitfalls: [
+      "Starting to write full sentences before outlining, which often produces a report that reads more like a stream of consciousness than a structured argument",
+    ],
+    successSignal:
+      "A reader unfamiliar with the topic can follow your logic from introduction to conclusion without re-reading sections.",
+    milestoneTies: [137, 149],
+  },
+
+  137: {
+    definition:
+      "A Report Edited for Clarity is a dedicated revision pass on a written report focused specifically on grammar, flow, and professionalism, separate from the initial drafting process.",
+    whyItMatters:
+      "First drafts are for getting ideas down; a separate editing pass is what actually makes a report read as polished and professional.",
+    whenWhoWhere: [
+      { label: "When", body: "Do this after a full first draft exists, ideally with at least a few hours of distance from writing it." },
+      { label: "Who", body: "A peer or writing center tutor to read it with fresh eyes." },
+      { label: "Where", body: "Done in a focused editing session, reading the report aloud if possible to catch awkward phrasing." },
+    ],
+    howItWorks: [
+      "Read through once for structure and flow, once for grammar and word choice, and once reading aloud to catch anything that sounds unnatural.",
+    ],
+    tools: ["Grammarly or the Hemingway Editor for clarity checks", "A fresh set of human eyes if possible"],
+    scenario: {
+      title: "Reading aloud, once, before submission",
+      body: "A student who submitted reports straight from a first draft started adding a dedicated editing pass, reading each report aloud once before submission. Professors began commenting specifically on how polished her writing had become.",
+    },
+    pitfalls: [
+      "Editing and drafting in the same sitting, which makes it hard to catch issues since you're still too close to your own reasoning",
+    ],
+    successSignal:
+      "A reader doesn't stumble over grammar or unclear phrasing, and the report reads as intentional rather than rushed.",
+    milestoneTies: [],
+  },
+
+  138: {
+    definition:
+      "A Technical Document Created documents a process, piece of code, or research finding clearly enough that someone unfamiliar with it could follow or reproduce it.",
+    whyItMatters:
+      "Technical work that isn't documented is effectively invisible to anyone who wasn't directly involved, and undocumented processes are a common source of errors when someone else has to pick up the work.",
+    whenWhoWhere: [
+      { label: "When", body: "Create this for any process or finding you expect others might need to reference or reproduce later." },
+      { label: "Who", body: "Ideally reviewed by someone unfamiliar with the process, who can flag steps you've assumed are obvious." },
+      { label: "Where", body: "Written as a standalone document, stored somewhere the intended audience will actually find it." },
+    ],
+    howItWorks: [
+      "State the purpose, list prerequisites, walk through the process or finding step by step, and note any caveats or edge cases.",
+    ],
+    tools: ["A shared document or wiki tool, depending on where your team keeps documentation"],
+    scenario: {
+      title: "Followed without a single clarifying question",
+      body: "A student documented a data-cleaning process for a research project assuming it was obvious. A teammate unfamiliar with the process followed the document successfully without needing to ask a single clarifying question, confirming it actually worked.",
+    },
+    pitfalls: [
+      "Assuming steps are obvious because they're obvious to you, which is exactly the assumption that makes documentation fail for anyone else",
+    ],
+    successSignal:
+      "Someone unfamiliar with the process can follow your document and successfully complete or understand it without additional explanation.",
+    milestoneTies: [144],
+  },
+
+  139: {
+    definition:
+      "A Persuasive Email Sent professionally requests action or approval, structured to make the ask easy to say yes to rather than just stating a need.",
+    whyItMatters:
+      "Many professional requests, budget approval, a meeting, a favor, require genuine persuasion, not just a polite ask; structure and framing meaningfully affect the response rate.",
+    whenWhoWhere: [
+      { label: "When", body: "Use this whenever you need someone to actually do something, not just receive information." },
+      { label: "Who", body: "No collaborator required, though a second read from someone who knows the recipient can sharpen your framing." },
+      { label: "Where", body: "Applied to any request-driven professional email: budget asks, favor requests, approval requests." },
+    ],
+    howItWorks: [
+      "State the ask clearly, briefly explain why it matters to them, not just to you, address one likely objection, and make the next step easy: a specific yes or no question, or a simple confirmation.",
+    ],
+    tools: ["A notes app to draft and refine your framing before sending"],
+    scenario: {
+      title: "Approved on the first try",
+      body: "A club officer's budget request email was denied when it just listed costs. Her revised version, which framed the request around the specific member benefit and pre-addressed the why not just do it cheaper objection, was approved on the first try.",
+    },
+    pitfalls: [
+      "Focusing only on what you need rather than framing it in terms the recipient will care about",
+    ],
+    successSignal:
+      "The recipient says yes, or gives a clear, specific reason why not, rather than leaving your request unanswered.",
+    milestoneTies: [146, 147],
+  },
+
+  140: {
+    definition:
+      "A Business Proposal Drafted is a short, structured document presenting an idea or request with a clear problem statement, proposed solution, and key supporting points.",
+    whyItMatters:
+      "A well-structured proposal is far more likely to get approved than an idea presented verbally or in a scattered message, since it forces you to think through the case before asking for buy-in.",
+    whenWhoWhere: [
+      { label: "When", body: "Draft one whenever you want approval or resources for an idea, project, or initiative." },
+      { label: "Who", body: "A mentor or the actual decision-maker, if you can get early informal feedback before submitting formally." },
+      { label: "Where", body: "Written as a standalone document, structured for a specific decision-maker's actual priorities." },
+    ],
+    howItWorks: [
+      "State the problem, propose your solution, outline key benefits and any costs or trade-offs, and end with a clear, specific ask.",
+    ],
+    tools: ["A simple proposal template with problem, solution, benefits, and ask as headers"],
+    scenario: {
+      title: "One page beats a verbal pitch",
+      body: "A student's verbal pitch for a new campus initiative went nowhere. A one-page written proposal with the same idea, structured with a clear problem statement and specific ask, got approved within a week.",
+    },
+    pitfalls: [
+      "Writing a proposal that's all enthusiasm and no structure",
+      "Missing a clear ask, or failing to address obvious costs or objections",
+    ],
+    successSignal:
+      "The decision-maker can evaluate and respond to your proposal without needing to ask you to restate or clarify the core idea.",
+    milestoneTies: [],
+  },
+
+  141: {
+    definition:
+      "A Meeting Minutes Documented is a written record capturing the decisions made, action items assigned, and responsibilities clarified during a meeting, distributed afterward so nothing gets lost.",
+    whyItMatters:
+      "Without written minutes, meeting decisions and commitments tend to fade or get remembered differently by different attendees, creating confusion and dropped follow-through.",
+    whenWhoWhere: [
+      { label: "When", body: "Take minutes for any meeting where real decisions or action items come up, especially recurring team meetings." },
+      { label: "Who", body: "No collaborator required for taking them, though confirming accuracy with the meeting lead afterward is good practice." },
+      { label: "Where", body: "Written during the meeting itself, then cleaned up and shared within 24 hours." },
+    ],
+    howItWorks: [
+      "Note key decisions, action items with owners, and deadlines as they happen.",
+      "Clean up and share a concise summary afterward, not a verbatim transcript.",
+    ],
+    tools: ["A shared document or notes app, structured with clear headers for decisions, action items, and owners"],
+    scenario: {
+      title: "Fewer repeat debates",
+      body: "A team kept having the same debate repeatedly because no one remembered what had already been decided. Once one member started sharing brief minutes after each meeting, repeat debates dropped noticeably.",
+    },
+    pitfalls: [
+      "Trying to write down everything verbatim, which turns minutes into an unreadable transcript instead of a useful summary",
+    ],
+    successSignal:
+      "Someone who missed the meeting can read the minutes and understand exactly what was decided and who owns what.",
+    milestoneTies: [135],
+  },
+
+  142: {
+    definition:
+      "A Summary Email Sent After Meeting is a brief follow-up message capturing the key points and agreed-upon actions from a conversation or meeting, sent to confirm shared understanding.",
+    whyItMatters:
+      "A quick summary email prevents miscommunication by giving everyone a chance to correct any misunderstanding before it causes a problem later.",
+    whenWhoWhere: [
+      { label: "When", body: "Send this after any meeting or conversation with real decisions or commitments, especially with external contacts." },
+      { label: "Who", body: "Sent to everyone who was part of the conversation." },
+      { label: "Where", body: "Sent within a few hours of the meeting, while details are still fresh." },
+    ],
+    howItWorks: [
+      "Briefly restate the key points discussed and any agreed-upon next steps, and invite corrections if anyone remembers something differently.",
+    ],
+    tools: ["No special tool required beyond your email client"],
+    scenario: {
+      title: "One correction, one avoided mismatch",
+      body: "After a client call, a student sent a two-line summary of what was agreed. The client corrected one detail that had been misunderstood, avoiding a mismatched deliverable a week later.",
+    },
+    pitfalls: [
+      "Skipping this for internal meetings because it feels unnecessary, even though internal miscommunication is just as costly as external",
+    ],
+    successSignal:
+      "No one is surprised or confused about what was agreed to when the actual work begins.",
+    milestoneTies: [141],
+  },
+
+  143: {
+    definition:
+      "A Follow-Up Email After Networking reinforces a new professional connection and adds genuine value, sent within a day or two of meeting someone.",
+    whyItMatters:
+      "Most networking connections fade without a follow-up; a thoughtful message shortly after meeting is what actually turns a brief conversation into a real relationship.",
+    whenWhoWhere: [
+      { label: "When", body: "Send this within 24 to 48 hours of meeting someone, while the conversation is still fresh for both of you." },
+      { label: "Who", body: "The specific person you met, referencing something particular from your conversation." },
+      { label: "Where", body: "Sent via email or LinkedIn message, whichever the person seems more likely to use." },
+    ],
+    howItWorks: [
+      "Reference something specific from your conversation, briefly restate your interest or ask, and suggest a clear, low-pressure next step.",
+    ],
+    tools: ["LinkedIn or email", "A note taken shortly after the conversation so you don't forget the specific detail to reference"],
+    scenario: {
+      title: "A same-day reply, once it got specific",
+      body: "A student met a recruiter at a career fair and sent a generic nice to meet you message that got no reply. At the next event, referencing the recruiter's specific comment about a new product line got a same-day response.",
+    },
+    pitfalls: [
+      "Sending a generic message with no specific reference, which reads as a template rather than genuine interest",
+    ],
+    successSignal:
+      "The person responds, and the relationship continues beyond the single initial conversation.",
+    milestoneTies: [52],
+  },
+
+  144: {
+    definition:
+      "A Written Technical Summary translates complex, technical information into simple, accessible language for a non-expert audience.",
+    whyItMatters:
+      "The ability to explain technical work simply is what lets your work actually be understood and valued by people outside your specific function, including decision-makers who control resources.",
+    whenWhoWhere: [
+      { label: "When", body: "Practice this whenever you need to explain technical work to someone outside your immediate team or field." },
+      { label: "Who", body: "Ideally tested on someone genuinely unfamiliar with the technical details, to check whether it actually simplified." },
+      { label: "Where", body: "Written for a specific non-expert audience: a manager, a client, a general reader." },
+    ],
+    howItWorks: [
+      "Identify the core takeaway a non-expert actually needs.",
+      "Cut jargon or define it immediately when unavoidable.",
+      "Use a concrete analogy if it helps make an abstract concept tangible.",
+    ],
+    tools: ["A test reader unfamiliar with the technical details, if available"],
+    scenario: {
+      title: "From glazed eyes to real questions",
+      body: "A student's technical project summary was full of jargon that made her advisor's eyes glaze over. Her rewritten version, using a simple analogy for the core mechanism, got genuine engagement and follow-up questions instead of polite nodding.",
+    },
+    pitfalls: [
+      "Removing so much detail that the summary becomes inaccurate, rather than simplified",
+    ],
+    successSignal:
+      "A genuinely non-expert reader can accurately explain the core idea back to you after reading your summary.",
+    milestoneTies: [162],
+  },
+
+  145: {
+    definition:
+      "An Email Etiquette Audit is a review of your own past emails to identify patterns worth improving in tone, structure, or professionalism.",
+    whyItMatters:
+      "Most people never look back at their own sent emails as a group, missing patterns that are obvious in aggregate but invisible email by email.",
+    whenWhoWhere: [
+      { label: "When", body: "Conduct this periodically, especially before a season of increased professional communication like internship or job applications." },
+      { label: "Who", body: "No collaborator required, though a mentor's read of a few samples can offer useful outside perspective." },
+      { label: "Where", body: "Done by reviewing your own sent folder." },
+    ],
+    howItWorks: [
+      "Review your last 10 to 15 sent professional emails.",
+      "Note recurring issues: tone, length, missing subject lines, unclear asks.",
+      "Pick the single most common issue to fix first.",
+    ],
+    tools: ["Your own email sent folder as the raw material"],
+    scenario: {
+      title: "Invisible in one, glaring across fifteen",
+      body: "Reviewing her sent folder, a student noticed she almost never used clear subject lines, a pattern invisible in any single email but glaring across fifteen of them. Fixing just that one habit measurably increased her response rate.",
+    },
+    pitfalls: [
+      "Reviewing only a couple of emails, which isn't enough to reveal a genuine pattern versus a one-off issue",
+    ],
+    successSignal:
+      "You identify a real, specific pattern in your own communication and can name the one fix that would improve it most.",
+    milestoneTies: [39],
+  },
+
+  146: {
+    definition:
+      "A Written Proposal Feedback exercise involves soliciting genuine review on a proposal you've drafted and revising it based on that input before it goes to its real audience.",
+    whyItMatters:
+      "A proposal that's never been reviewed by anyone but its author often has blind spots the author can't see, since they already understand their own reasoning implicitly.",
+    whenWhoWhere: [
+      { label: "When", body: "Do this after a full first draft of a proposal, before sending it to the actual decision-maker." },
+      { label: "Who", body: "A mentor, peer, or someone who thinks differently from you, since a reviewer too similar to you may share the same blind spots." },
+      { label: "Where", body: "Shared in a focused review session, ideally with time to actually revise afterward." },
+    ],
+    howItWorks: [
+      "Ask specific questions when requesting feedback, is the ask clear, does the benefit section convince you, rather than a vague what do you think.",
+      "Revise based on what you hear, not just what confirms your existing draft.",
+    ],
+    tools: ["The draft proposal itself", "A reviewer's calendar time"],
+    scenario: {
+      title: "Moving the ask out of the final paragraph",
+      body: "A student's proposal draft felt complete to her, but a reviewer immediately flagged that the actual ask wasn't clear until the final paragraph. Moving it earlier made the whole proposal noticeably stronger.",
+    },
+    pitfalls: [
+      "Asking for feedback too late to actually act on it",
+      "Dismissing feedback that's uncomfortable rather than genuinely considering it",
+    ],
+    successSignal:
+      "The revised proposal is measurably clearer or more persuasive than the version before feedback.",
+    milestoneTies: [140],
+  },
+
+  147: {
+    definition:
+      "An Email to Recruiter professionally inquires about job or internship opportunities, structured to be easy to respond to and clearly differentiated from generic outreach.",
+    whyItMatters:
+      "Recruiters receive high volumes of generic outreach; a specific, well-structured email stands out and is more likely to get a genuine response.",
+    whenWhoWhere: [
+      { label: "When", body: "Send this when you have a specific role or company in mind, not as a mass generic outreach effort." },
+      { label: "Who", body: "A specific recruiter or hiring contact, ideally identified through research rather than a generic inbox." },
+      { label: "Where", body: "Sent via email or LinkedIn, tailored to the specific role and company." },
+    ],
+    howItWorks: [
+      "State your specific interest, briefly note one relevant qualification, and ask a specific, easy-to-answer question rather than a vague let me know if anything opens up.",
+    ],
+    tools: ["LinkedIn and the company's careers page for research before writing"],
+    scenario: {
+      title: "A reply within a day, once it got specific",
+      body: "A student's generic any opportunities available message to a recruiter got no response. A specific follow-up naming an actual open role and one relevant qualification got a reply within a day.",
+    },
+    pitfalls: [
+      "Being too vague about what you're actually asking for, which makes it easy for a busy recruiter to skip past",
+    ],
+    successSignal:
+      "The recruiter responds with real information or a next step, rather than silence or a generic auto-reply.",
+    milestoneTies: [59],
+  },
+
+  148: {
+    definition:
+      "A Collaborative Document Editing exercise involves working on a shared document with others and providing clear, constructive comments rather than silent edits or vague notes.",
+    whyItMatters:
+      "Most real professional writing happens collaboratively, and unclear comments or unexplained edits create confusion and slow down the actual revision process.",
+    whenWhoWhere: [
+      { label: "When", body: "Practice this on any group project or shared document, especially before a real workplace collaboration." },
+      { label: "Who", body: "Whoever else is contributing to the shared document." },
+      { label: "Where", body: "Done directly in a shared document tool with commenting features." },
+    ],
+    howItWorks: [
+      "Use specific, actionable comments rather than vague ones: this sentence is unclear because X, rather than just unclear.",
+      "Explain significant edits rather than silently changing text.",
+    ],
+    tools: ["Google Docs, Microsoft Word with track changes, or a similar collaborative tool"],
+    scenario: {
+      title: "Faster revision cycles once comments got specific",
+      body: "A group project's shared doc was full of unexplained deletions that caused repeated confusion and re-edits. Once the team switched to specific, explained comments instead, revision cycles got noticeably faster.",
+    },
+    pitfalls: [
+      "Making silent edits to someone else's writing without explanation, which can feel presumptuous and creates confusion about what changed and why",
+    ],
+    successSignal:
+      "Collaborators understand exactly what changed and why, without needing a separate conversation to clarify.",
+    milestoneTies: [],
+  },
+
+  149: {
+    definition:
+      "A Written Executive Summary distills a longer report or piece of research into a concise, one-page overview capturing the essential findings and recommendations.",
+    whyItMatters:
+      "Busy decision-makers often only read the executive summary, not the full report; a weak summary can mean strong underlying work never gets the attention it deserves.",
+    whenWhoWhere: [
+      { label: "When", body: "Write this after completing a longer report or research project, as the final step before sharing it broadly." },
+      { label: "Who", body: "No collaborator required, though testing it on someone who hasn't read the full report is a good check." },
+      { label: "Where", body: "Written as the first page of a longer report, or as a standalone document." },
+    ],
+    howItWorks: [
+      "State the purpose, the key finding or recommendation, and the most important supporting evidence, all within about one page.",
+      "Cut anything that isn't essential to the core message.",
+    ],
+    tools: ["The completed full report as source material to distill from"],
+    scenario: {
+      title: "Understood by people who never read past page one",
+      body: "A student's 15-page research report went largely unread by her internship team until she added a one-page executive summary up front. Team members who never read past the summary still understood and acted on the core recommendation.",
+    },
+    pitfalls: [
+      "Trying to include too much detail, which defeats the purpose of a summary meant for someone with limited time",
+    ],
+    successSignal:
+      "Someone who only reads the summary walks away with an accurate understanding of your core finding or recommendation.",
+    milestoneTies: [],
+  },
+
+  150: {
+    definition:
+      "An Email Draft Templates Library is a personal collection of reusable, adaptable templates for the professional emails you send most often, built to save time without sacrificing quality.",
+    whyItMatters:
+      "Writing every professional email from scratch is slow and increases the risk of forgetting a key element under time pressure; a small library of adaptable templates fixes both problems.",
+    whenWhoWhere: [
+      { label: "When", body: "Build this once you notice you're writing similar emails repeatedly, such as during a busy application or networking season." },
+      { label: "Who", body: "No collaborator required, though studying well-written emails you've received can improve your own templates." },
+      { label: "Where", body: "Stored in a notes app, drafts folder, or shared document for quick access." },
+    ],
+    howItWorks: [
+      "Identify your three or four most common email types.",
+      "Draft a template for each with clear placeholders for personalization, keeping the core structure but adaptable content.",
+    ],
+    tools: ["A notes app or email drafts folder to store and quickly access templates"],
+    scenario: {
+      title: "From twenty minutes to five",
+      body: "A student who used to spend twenty minutes drafting each networking follow-up built a simple template with placeholders, cutting that time to five minutes while keeping every message feeling genuinely personal.",
+    },
+    pitfalls: [
+      "Sending a template without personalizing the placeholders, which reads as impersonal and can undermine the relationship you're trying to build",
+    ],
+    successSignal:
+      "You can send a polished, appropriate email within minutes for any common professional situation, and it never reads as copy-pasted.",
+    milestoneTies: [40],
+  },
+  151: {
+    definition:
+      "A Presentation Script Written is a drafted outline or script for a short presentation, covering the core content and structure before any live delivery practice begins.",
+    whyItMatters:
+      "Presentations delivered without a written structure tend to ramble or lose the thread; scripting first, even loosely, makes the actual delivery far more focused.",
+    whenWhoWhere: [
+      { label: "When", body: "Write this as the first step whenever you have a presentation to give, before practicing delivery." },
+      { label: "Who", body: "No collaborator required, though a peer's read of the script can catch unclear logic before you're in front of an audience." },
+      { label: "Where", body: "Drafted well before the presentation date, leaving room for revision and practice." },
+    ],
+    howItWorks: [
+      "Outline your opening hook, three main points, and closing takeaway.",
+      "Write out key transitions, but avoid scripting every word if you'll be speaking rather than reading.",
+    ],
+    tools: ["A simple outline template or slide deck as a scripting structure"],
+    scenario: {
+      title: "Tighter delivery from a script she didn't read verbatim",
+      body: "A student used to improvise presentations loosely from a bullet list and often ran over time or lost her thread. Writing a full script first, even one she didn't read verbatim, made her live delivery noticeably tighter.",
+    },
+    pitfalls: [
+      "Scripting every single word for a live presentation, which often produces a stiff, read-aloud delivery instead of natural speech",
+    ],
+    successSignal:
+      "You can explain your presentation's structure, opening, three points, closing, without looking at notes.",
+    milestoneTies: [152, 72],
+  },
+
+  152: {
+    definition:
+      "A Presentation Delivered is live practice presenting your content to peers or mentors, moving from a written script to actual spoken delivery under real (if low-stakes) conditions.",
+    whyItMatters:
+      "Writing a strong script and delivering it live are different skills; practicing the live delivery specifically is what actually builds presentation confidence.",
+    whenWhoWhere: [
+      { label: "When", body: "Practice this once your script or outline is solid, ideally with real time pressure similar to the actual presentation." },
+      { label: "Who", body: "Peers, a study group, or a mentor willing to watch and give feedback." },
+      { label: "Where", body: "Practiced in a room resembling the real presentation setting when possible." },
+    ],
+    howItWorks: [
+      "Deliver the full presentation out loud to a real audience, even a small one.",
+      "Time yourself and note where you stumbled or lost the thread.",
+    ],
+    tools: ["A timer", "Ideally a phone camera to record for later review"],
+    scenario: {
+      title: "Nerves that dropped after practicing on roommates",
+      body: "A student who only ever rehearsed presentations alone in her room was thrown off by a real audience's presence during her first graded presentation. After practicing live in front of roommates a few times, that same nervousness dropped significantly by her next one.",
+    },
+    pitfalls: [
+      "Only ever practicing silently in your head, which doesn't build the same muscle as actually speaking the words aloud under mild real pressure",
+    ],
+    successSignal:
+      "You finish within your time limit and can recall your key points without needing to read them.",
+    milestoneTies: [],
+  },
+
+  153: {
+    definition:
+      "A Public Speaking Recording is a recorded and reviewed practice session, used to identify and correct filler words, pacing issues, and unclear delivery before a real audience sees them.",
+    whyItMatters:
+      "Most people underestimate how many filler words or pacing issues they have until they watch themselves on video; a recording turns invisible habits into visible, fixable ones.",
+    whenWhoWhere: [
+      { label: "When", body: "Do this before any speaking opportunity with real stakes, and periodically even without one coming up." },
+      { label: "Who", body: "No collaborator required for recording, though feedback on the playback adds valuable outside perspective." },
+      { label: "Where", body: "Recorded privately using a phone camera." },
+    ],
+    howItWorks: [
+      "Record yourself delivering real content, not a hypothetical topic.",
+      "Watch it back and count filler words, note pacing, and check clarity.",
+      "Re-record after adjusting.",
+    ],
+    tools: ["A smartphone camera, no special equipment needed"],
+    scenario: {
+      title: "Fourteen ums in ninety seconds",
+      body: "A student recording her elevator pitch was startled to count fourteen ums in ninety seconds. After three re-recorded attempts with conscious pausing instead of filler words, her final version was noticeably more polished.",
+    },
+    pitfalls: [
+      "Skipping the playback review, which is where the actual learning happens",
+    ],
+    successSignal:
+      "Your filler word count drops noticeably between your first and final recorded attempt.",
+    milestoneTies: [44],
+  },
+
+  154: {
+    definition:
+      "An Elevator Pitch Practiced is repeated, deliberate rehearsal of your concise 30 to 60 second personal introduction, until it sounds natural rather than memorized.",
+    whyItMatters:
+      "A pitch that's only ever been written, never practiced aloud, tends to sound stiff and rehearsed the first time you actually need it under real pressure.",
+    whenWhoWhere: [
+      { label: "When", body: "Practice this regularly, especially before any networking event or interview season." },
+      { label: "Who", body: "Friends, family, or mentors willing to listen and react honestly." },
+      { label: "Where", body: "Practiced in the mirror, recorded on your phone, and tested on real people." },
+    ],
+    howItWorks: [
+      "Say your pitch out loud daily for a week, adjusting based on what feels awkward.",
+      "Test it on at least two real people and note their reaction.",
+    ],
+    tools: ["A mirror", "A voice recorder", "Willing practice listeners"],
+    scenario: {
+      title: "Choppy in the moment, smooth after a week",
+      body: "A student's elevator pitch felt smooth in her head but came out choppy the first time she said it aloud to a stranger. After a week of daily practice, it flowed naturally even under the real pressure of a career fair.",
+    },
+    pitfalls: [
+      "Only ever rehearsing silently in your head, which doesn't reveal how the pitch actually sounds spoken aloud",
+    ],
+    successSignal:
+      "You can deliver your pitch smoothly to a stranger without sounding memorized or rehearsed.",
+    milestoneTies: [19, 20],
+  },
+
+  155: {
+    definition:
+      "A Storytelling Exercise presents an idea or project using narrative techniques, structuring information as a story with a beginning, tension, and resolution rather than a flat list of facts.",
+    whyItMatters:
+      "Stories are dramatically more memorable than lists of facts; the same information framed as a narrative lands with far more impact on a listener or reader.",
+    whenWhoWhere: [
+      { label: "When", body: "Practice this for any presentation, pitch, or written piece where you want the content to actually be remembered afterward." },
+      { label: "Who", body: "No collaborator required, though testing the story on someone unfamiliar with the content shows whether it actually lands." },
+      { label: "Where", body: "Applied to presentations, interview answers, or written pieces." },
+    ],
+    howItWorks: [
+      "Identify the tension or problem at the heart of your content.",
+      "Structure it as: setup, challenge, resolution, rather than a flat list of features or facts.",
+    ],
+    tools: ["Your existing STAR stories from Stage Three as raw material to restructure narratively"],
+    scenario: {
+      title: "The moment things almost went wrong",
+      body: "A student's project presentation, originally a flat list of steps taken, became far more engaging once restructured around the specific moment things almost went wrong and how the team recovered.",
+    },
+    pitfalls: [
+      "Adding narrative flourishes that obscure the actual substance, rather than using story structure to clarify it",
+    ],
+    successSignal:
+      "A listener remembers and can retell your story's core arc days later, not just a vague impression that you did a project.",
+    milestoneTies: [64],
+  },
+
+  156: {
+    definition:
+      "A Voice Recording Review is a focused analysis of a recording of yourself speaking, specifically examining tone, pace, and clarity as distinct dimensions rather than a general impression.",
+    whyItMatters:
+      "Breaking how did I sound into specific dimensions, tone, pace, clarity, makes feedback actionable instead of just a vague sense of good or bad.",
+    whenWhoWhere: [
+      { label: "When", body: "Do this periodically, comparing recordings over time to track real, specific improvement." },
+      { label: "Who", body: "No collaborator required, though a second opinion can validate your self-assessment." },
+      { label: "Where", body: "Reviewed privately after any recorded speaking practice." },
+    ],
+    howItWorks: [
+      "Listen to a recording three separate times, focusing on just tone the first time, just pace the second, and just clarity the third.",
+      "Note one specific observation per dimension.",
+    ],
+    tools: ["Any recording from a public speaking or interview practice session"],
+    scenario: {
+      title: "A pattern invisible without a dedicated pass",
+      body: "A student reviewing a mock interview recording realized her pace sped up dramatically whenever she got nervous, a pattern invisible without a dedicated pace-only review pass.",
+    },
+    pitfalls: [
+      "Reviewing for a general impression only, which misses specific, fixable patterns that a dimension-by-dimension review reveals",
+    ],
+    successSignal:
+      "You can name one specific, actionable observation about your tone, pace, and clarity separately, not just a general reaction.",
+    milestoneTies: [],
+  },
+
+  157: {
+    definition:
+      "A Presentation Slide Deck Created visually supports spoken content with clean, uncluttered slides that reinforce rather than compete with what you're actually saying.",
+    whyItMatters:
+      "Slides packed with text compete with the speaker for attention, while well-designed slides reinforce the spoken message and give the audience something clear to anchor on.",
+    whenWhoWhere: [
+      { label: "When", body: "Create this after your script or outline is solid, so the slides support an already-clear structure rather than trying to create one." },
+      { label: "Who", body: "No collaborator required, though a design-savvy peer can help polish visual choices." },
+      { label: "Where", body: "Built in a slide tool, designed for the specific room and audience it will be presented to." },
+    ],
+    howItWorks: [
+      "One core idea per slide.",
+      "Minimal text, using visuals or short phrases rather than full sentences.",
+      "Consistent, simple formatting throughout.",
+    ],
+    tools: ["Google Slides, PowerPoint, or Canva"],
+    scenario: {
+      title: "Attention back on the speaker, not the slide",
+      body: "A student's first slide deck had six bullet points of dense text per slide, and her audience read the slides instead of listening to her. Her revised deck, with one phrase and one visual per slide, kept attention on her actual talking.",
+    },
+    pitfalls: [
+      "Treating slides as a teleprompter with full sentences, which pulls audience attention away from the speaker",
+    ],
+    successSignal:
+      "Your audience is looking at you, not reading dense text off the screen, during your presentation.",
+    milestoneTies: [151, 152],
+  },
+
+  158: {
+    definition:
+      "A Debate Participation exercise involves arguing a position with evidence and structured persuasion, practicing the discipline of building a case rather than just stating an opinion.",
+    whyItMatters:
+      "Debate forces you to anticipate counterarguments and support claims with evidence, a discipline that strengthens persuasive writing and speaking well beyond the debate format itself.",
+    whenWhoWhere: [
+      { label: "When", body: "Participate in any structured debate opportunity, formal or informal, ideally arguing a position you don't personally hold to build genuine argumentative flexibility." },
+      { label: "Who", body: "A debate club, class discussion, or even an informal structured debate with friends." },
+      { label: "Where", body: "Any setting with a clear opposing position and structured turns to speak." },
+    ],
+    howItWorks: [
+      "Research your position's strongest evidence beforehand.",
+      "Anticipate the two or three most likely counterarguments and prepare responses.",
+      "Focus on evidence, not just assertion.",
+    ],
+    tools: ["Research sources relevant to your debate topic"],
+    scenario: {
+      title: "Useful even outside the debate format",
+      body: "A student assigned to argue a position she personally disagreed with found the exercise sharpened her ability to see the strongest version of an opposing view, which she found genuinely useful in later team disagreements at work.",
+    },
+    pitfalls: [
+      "Relying on assertion and rhetorical force instead of actual evidence, which weakens the argument under real scrutiny",
+    ],
+    successSignal:
+      "You can present a structured case with evidence and respond to at least one counterargument on the spot.",
+    milestoneTies: [161, 195],
+  },
+
+  159: {
+    definition:
+      "A Group Presentation Coordinated manages roles, timing, and cohesion across multiple presenters, ensuring the group's presentation feels unified rather than like disconnected individual segments.",
+    whyItMatters:
+      "Group presentations often fail not because any individual section is weak, but because the pieces don't connect into a coherent whole; coordination is a distinct skill from individual presenting.",
+    whenWhoWhere: [
+      { label: "When", body: "Use this whenever you're part of, or leading, a multi-person presentation." },
+      { label: "Who", body: "All co-presenters, ideally coordinated well before the actual presentation date." },
+      { label: "Where", body: "Coordinated through a planning meeting and a shared outline or script." },
+    ],
+    howItWorks: [
+      "Assign clear sections and transitions between speakers.",
+      "Rehearse the full group presentation together at least once, not just individual sections separately.",
+    ],
+    tools: ["A shared outline document showing who speaks when and how transitions work"],
+    scenario: {
+      title: "One coherent talk, not four separate ones",
+      body: "A group's presentation had each member's section be individually strong but disconnected, since no one had rehearsed the transitions. After one full group rehearsal focused specifically on handoffs, the presentation felt like one coherent talk instead of four separate ones.",
+    },
+    pitfalls: [
+      "Only rehearsing individual sections separately, never the full group flow together",
+    ],
+    successSignal:
+      "Transitions between speakers feel smooth, and the presentation reads as one coherent talk rather than disconnected segments.",
+    milestoneTies: [],
+  },
+
+  160: {
+    definition:
+      "An Impromptu Speaking Drill practices responding confidently and coherently with minimal preparation, building the ability to organize thoughts quickly under real time pressure.",
+    whyItMatters:
+      "Not every speaking moment allows for preparation; interview follow-ups, unexpected questions in meetings, and on-the-spot updates all require the ability to think and speak clearly with no notice.",
+    whenWhoWhere: [
+      { label: "When", body: "Practice this regularly in low-stakes settings, so the skill is available when a real unprepared moment arises." },
+      { label: "Who", body: "A friend or study group willing to give you random prompts." },
+      { label: "Where", body: "Practiced anywhere, even informally during downtime with friends." },
+    ],
+    howItWorks: [
+      "Have someone give you a random topic.",
+      "Speak for 60 seconds using a simple structure: state your point, give one reason, give one example, restate your point.",
+    ],
+    tools: ["A timer", "A list of random prompts, or a friend willing to generate them"],
+    scenario: {
+      title: "No longer derailed by the unexpected",
+      body: "A student who always froze on unexpected interview follow-up questions practiced impromptu speaking drills weekly with a friend. By her next real interview, an unexpected question no longer derailed her composure the way it used to.",
+    },
+    pitfalls: [
+      "Avoiding the discomfort of practicing this because it feels awkward, which is exactly the discomfort real impromptu moments require you to handle",
+    ],
+    successSignal:
+      "You can speak coherently for 60 seconds on a random topic with no preparation, using a simple point-reason-example structure.",
+    milestoneTies: [68],
+  },
+
+  161: {
+    definition:
+      "A Persuasive Presentation is a structured talk designed specifically to convince an audience of an idea or recommendation, distinct from a purely informational presentation.",
+    whyItMatters:
+      "Persuasive presentations require a different structure than informational ones: they need a clear ask, addressed objections, and a call to action, not just information transfer.",
+    whenWhoWhere: [
+      { label: "When", body: "Use this whenever your goal is a decision or action from your audience, not just their understanding." },
+      { label: "Who", body: "The actual decision-makers in your audience, if you can identify them ahead of time." },
+      { label: "Where", body: "Delivered in the real setting where the decision will actually be made." },
+    ],
+    howItWorks: [
+      "State your recommendation early, not just at the end.",
+      "Support it with your strongest two or three pieces of evidence.",
+      "Address the most likely objection directly.",
+      "End with a specific, clear ask.",
+    ],
+    tools: ["Your Business Proposal Drafted as source material if the presentation covers the same idea"],
+    scenario: {
+      title: "The recommendation nobody caught until it moved up front",
+      body: "A student's persuasive presentation for a class project buried her recommendation until the final slide, and the class discussion afterward revealed most people didn't register what she was actually asking for. Restructuring to state the recommendation upfront fixed this immediately in her next presentation.",
+    },
+    pitfalls: [
+      "Structuring a persuasive presentation like an informational one, building up to a conclusion instead of stating it early and supporting it",
+    ],
+    successSignal:
+      "Your audience can accurately state your recommendation and ask, not just the general topic you covered.",
+    milestoneTies: [],
+  },
+
+  162: {
+    definition:
+      "A Presentation to Non-Expert Audience simplifies complex ideas for genuine understanding by an audience without your specific background or expertise.",
+    whyItMatters:
+      "The ability to present clearly to non-experts, not just peers in your own field, dramatically widens who can understand and value your work, including senior decision-makers outside your specific function.",
+    whenWhoWhere: [
+      { label: "When", body: "Practice this whenever your actual audience won't share your specific technical or field-specific background." },
+      { label: "Who", body: "Ideally tested on a genuinely non-expert audience, such as friends or family outside your field." },
+      { label: "Where", body: "Applied to any presentation for a general or cross-functional audience." },
+    ],
+    howItWorks: [
+      "Identify what a non-expert genuinely needs to understand versus what's just technical detail for its own sake.",
+      "Use concrete analogies.",
+      "Test your explanation on someone truly unfamiliar with the topic first.",
+    ],
+    tools: ["A non-expert test audience, even just friends or family"],
+    scenario: {
+      title: "Landing with family before the real audience",
+      body: "A student's presentation using field-specific jargon lost her family completely when she practiced it on them beforehand. Simplifying it around one clear analogy made the same content land clearly with both her family and, later, her actual cross-functional audience.",
+    },
+    pitfalls: [
+      "Assuming your audience shares more background knowledge than they actually do, a common blind spot within any specialized field",
+    ],
+    successSignal:
+      "A genuinely non-expert test audience can accurately explain your core point back to you afterward.",
+    milestoneTies: [144],
+  },
+
+  163: {
+    definition:
+      "An Elevator Pitch Refinement adjusts the wording, tone, and clarity of your elevator pitch based on real feedback, rather than treating your first version as final.",
+    whyItMatters:
+      "A pitch drafted once and never revisited tends to drift out of date as your experience grows, or simply never improves past its first, roughest version.",
+    whenWhoWhere: [
+      { label: "When", body: "Revisit this periodically, especially after gathering real feedback from how people react when you deliver it." },
+      { label: "Who", body: "Anyone who's heard your pitch and can give honest reaction, ideally including someone outside your immediate field." },
+      { label: "Where", body: "Refined based on real delivery experience, not just abstract editing." },
+    ],
+    howItWorks: [
+      "After delivering your pitch several times, note which parts consistently land well and which get confused reactions.",
+      "Revise specifically based on that pattern, not just personal preference.",
+    ],
+    tools: ["Your existing pitch draft", "Notes on real reactions from your practice sessions"],
+    scenario: {
+      title: "Cutting the detail that kept confusing people",
+      body: "A student noticed her pitch's mention of her minor consistently drew a confused follow-up question rather than the interested one she wanted. Cutting that detail and replacing it with a clearer connection to her actual direction sharpened the whole pitch.",
+    },
+    pitfalls: [
+      "Revising based on how the pitch reads on paper rather than how it's actually landing when delivered aloud to real people",
+    ],
+    successSignal:
+      "Your pitch consistently produces engaged follow-up questions rather than confused ones.",
+    milestoneTies: [154, 20],
+  },
+
+  164: {
+    definition:
+      "A Peer Learning Circle Presentation shares ideas or knowledge with classmates or a study group in a low-stakes, collaborative teaching format.",
+    whyItMatters:
+      "Teaching material to peers is one of the most effective ways to deepen your own understanding, while also building genuine presentation reps in a lower-pressure setting than a formal presentation.",
+    whenWhoWhere: [
+      { label: "When", body: "Use this whenever you have an opportunity to share knowledge with a study group or peer circle, ideally on a topic you're still solidifying yourself." },
+      { label: "Who", body: "A study group, class peer circle, or club." },
+      { label: "Where", body: "Done in an informal, collaborative setting rather than a formal presentation room." },
+    ],
+    howItWorks: [
+      "Prepare a short, informal explanation of your topic, leaving room for questions and discussion rather than a fully scripted talk.",
+    ],
+    tools: ["A whiteboard or simple notes, kept informal rather than a polished slide deck"],
+    scenario: {
+      title: "Gaps a student found by explaining, not just reading",
+      body: "A student volunteered to explain a confusing concept to her study group, and the process of preparing to teach it revealed two gaps in her own understanding she hadn't noticed just reading about it alone.",
+    },
+    pitfalls: [
+      "Over-preparing a fully scripted talk for what should be an informal, discussion-friendly format",
+    ],
+    successSignal:
+      "Your peers leave with a clearer understanding, and you've identified at least one gap in your own knowledge through the process of explaining it.",
+    milestoneTies: [],
+  },
+
+  165: {
+    definition:
+      "A Read-Aloud Exercise practices clarity, tone, and pacing by reading written material aloud, building the same muscles used in live presenting through a lower-stakes format.",
+    whyItMatters:
+      "Reading aloud regularly builds vocal clarity and pacing control in a low-pressure setting, muscles that transfer directly to presentations and interviews.",
+    whenWhoWhere: [
+      { label: "When", body: "Practice this regularly, even just a few minutes a day, as a low-effort way to build speaking fluency over time." },
+      { label: "Who", body: "No collaborator required, though reading aloud to someone else adds useful real-time feedback." },
+      { label: "Where", body: "Practiced anywhere quiet, using any written material: an article, a report you've drafted, a book." },
+    ],
+    howItWorks: [
+      "Read a paragraph or page aloud at a deliberately measured pace, focusing on clear enunciation and natural pauses at punctuation.",
+    ],
+    tools: ["Any written material", "A quiet space"],
+    scenario: {
+      title: "A slower pace that carried into ordinary conversation",
+      body: "A student who spoke very quickly when nervous started reading aloud for five minutes each morning, deliberately pacing herself. The habit measurably slowed her natural speaking pace even in unrelated, unscripted conversations.",
+    },
+    pitfalls: [
+      "Rushing through the exercise the same way you rush when nervous, defeating the purpose of deliberately practicing a measured pace",
+    ],
+    successSignal:
+      "Your natural speaking pace, even in unscripted conversation, becomes noticeably more measured over time.",
+    milestoneTies: [],
+  },
+
+  166: {
+    definition:
+      "An Active Listening Drill practices summarizing a conversation back to the speaker to confirm genuine understanding, rather than just waiting for your turn to talk.",
+    whyItMatters:
+      "Most people listen to respond rather than to understand, which shows in conversations that feel disjointed; genuine listening builds trust faster than almost any other communication skill.",
+    whenWhoWhere: [
+      { label: "When", body: "Practice this in any real conversation, but especially in feedback sessions or conversations with real stakes." },
+      { label: "Who", body: "Anyone you're in conversation with; no special collaborator needed." },
+      { label: "Where", body: "Applied in real, live conversations, not a hypothetical exercise." },
+    ],
+    howItWorks: [
+      "After the other person finishes a point, briefly summarize what you heard before responding with your own point.",
+      "Adjust if they clarify you misunderstood.",
+    ],
+    tools: ["No special tool; this is a practiced behavior reinforced through deliberate attention"],
+    scenario: {
+      title: "The misunderstanding caught before it caused wasted work",
+      body: "A student practicing active listening in a group project meeting summarized a teammate's idea before responding, and the teammate corrected a small but important misunderstanding that would have caused wasted work if it had gone unnoticed.",
+    },
+    pitfalls: [
+      "Summarizing so mechanically it feels performative rather than genuine",
+      "Only doing it in obviously high-stakes conversations rather than building it as a real habit",
+    ],
+    successSignal:
+      "People notice you're easy to talk to, and misunderstandings get caught and corrected before they cause real problems.",
+    milestoneTies: [43],
+  },
+
+  167: {
+    definition:
+      "A Reading Summary Exercise involves reading an article or report and summarizing its key insights concisely, practicing the skill of extracting what actually matters from a longer piece.",
+    whyItMatters:
+      "Being able to quickly extract the core insight from a longer piece of reading is essential for staying current in any field without drowning in information.",
+    whenWhoWhere: [
+      { label: "When", body: "Practice this regularly with articles relevant to your field, building the habit before you need to process large volumes of reading professionally." },
+      { label: "Who", body: "No collaborator required, though sharing your summary with someone else is a good check on accuracy." },
+      { label: "Where", body: "Applied to any article, report, or research piece you read." },
+    ],
+    howItWorks: [
+      "Read the piece once fully, then write a three to four sentence summary from memory, capturing the core argument or finding without re-reading.",
+      "Check your summary against the original for accuracy.",
+    ],
+    tools: ["Any article or report relevant to your field"],
+    scenario: {
+      title: "Retention that improved within weeks",
+      body: "A student who used to highlight entire articles without retaining much started writing a short summary from memory after each read. Her retention and ability to discuss the material improved noticeably within a few weeks.",
+    },
+    pitfalls: [
+      "Writing the summary while still looking at the original, which tests your copying ability rather than your actual comprehension and retention",
+    ],
+    successSignal:
+      "Your from-memory summary captures the core argument accurately when checked against the original.",
+    milestoneTies: [51],
+  },
+
+  168: {
+    definition:
+      "A Podcast or Video Commentary summarizes or analyzes a podcast, video, or talk for learning, going beyond passive consumption into active engagement with the content.",
+    whyItMatters:
+      "Passive listening or watching often leads to poor retention; actively summarizing and analyzing what you consume converts it into genuine, usable learning.",
+    whenWhoWhere: [
+      { label: "When", body: "Practice this with content genuinely relevant to your field or growth areas, not just anything you happen to consume." },
+      { label: "Who", body: "No collaborator required, though sharing your commentary with someone else adds accountability." },
+      { label: "Where", body: "Applied after listening to or watching any substantive podcast episode, talk, or video." },
+    ],
+    howItWorks: [
+      "After consuming the content, write or say out loud a short summary of the main argument or insight, plus your own reaction or one way you might apply it.",
+    ],
+    tools: ["Any podcast or video relevant to your field", "A notes app"],
+    scenario: {
+      title: "From vague impression to a real running log",
+      body: "A student who listened to marketing podcasts during commutes but retained little started writing a two-sentence takeaway after each episode. Within a month, she had a genuinely useful running log of applicable ideas instead of a vague sense of having listened to a lot of podcasts.",
+    },
+    pitfalls: [
+      "Consuming content passively without ever pausing to actively process or record what you took from it",
+    ],
+    successSignal:
+      "You have a specific, applicable takeaway you can point to, not just a vague memory of having consumed the content.",
+    milestoneTies: [91],
+  },
+
+  169: {
+    definition:
+      "A Reading Comprehension Challenge involves extracting the main ideas from genuinely complex material, practicing comprehension at the edge of your current skill level rather than easy material.",
+    whyItMatters:
+      "Comprehension skills, like any skill, improve fastest when challenged just beyond your current comfort level, not when practiced exclusively on material that's already easy.",
+    whenWhoWhere: [
+      { label: "When", body: "Do this periodically with material noticeably more complex than your usual reading, such as a dense academic paper or technical report." },
+      { label: "Who", body: "No collaborator required, though discussing the material with someone who's also read it can validate your comprehension." },
+      { label: "Where", body: "Applied to any genuinely challenging piece relevant to your field." },
+    ],
+    howItWorks: [
+      "Read a complex piece once for a general sense, then a second time taking notes on the main argument and key supporting points.",
+      "Try to state the core thesis in one sentence.",
+    ],
+    tools: ["A genuinely challenging article, paper, or report in your field"],
+    scenario: {
+      title: "One paper a week, over a semester",
+      body: "A student intimidated by dense academic papers in her field forced herself through one per week, taking structured notes each time. Within a semester, material that once felt impenetrable became noticeably more approachable.",
+    },
+    pitfalls: [
+      "Giving up after one pass through genuinely difficult material, rather than accepting that a second, more careful pass is often necessary",
+    ],
+    successSignal:
+      "You can state the core thesis of a genuinely complex piece in one clear sentence.",
+    milestoneTies: [],
+  },
+
+  170: {
+    definition:
+      "A Reading List for Career Growth is a curated selection of books or articles chosen specifically to strengthen your professional vocabulary and critical thinking in your target field.",
+    whyItMatters:
+      "Deliberate, targeted reading builds field-specific fluency and vocabulary faster than passive, undirected consumption.",
+    whenWhoWhere: [
+      { label: "When", body: "Build this list once you have real clarity on your target field or role, so the reading is genuinely targeted rather than generic." },
+      { label: "Who", body: "A mentor or professional in your target field, who can recommend genuinely useful sources rather than just popular ones." },
+      { label: "Where", body: "Curated based on research and recommendations, then tracked in a simple running document." },
+    ],
+    howItWorks: [
+      "Ask two or three people in your target field for their most influential book or article recommendation.",
+      "Build a list of five to ten sources, prioritized by relevance.",
+    ],
+    tools: ["A simple document or reading tracker app"],
+    scenario: {
+      title: "The same title, named independently",
+      body: "A student asked three marketing professionals for their one most influential book recommendation, and two named the same title independently, which became the clear starting point for her reading list rather than a random online best marketing books list.",
+    },
+    pitfalls: [
+      "Building a generic list from online best books roundups instead of getting recommendations from real people in your specific target field",
+    ],
+    successSignal:
+      "You have a short, specifically targeted reading list built from real recommendations, not a generic internet search.",
+    milestoneTies: [],
+  },
+
+  171: {
+    definition:
+      "A Reflective Reading Journal tracks insights from textbooks, research papers, or articles over time, building a running record of what you've actually learned and thought about.",
+    whyItMatters:
+      "Without a running record, insights from reading tend to fade quickly; a reflective journal turns scattered reading into a cumulative, referenceable body of knowledge.",
+    whenWhoWhere: [
+      { label: "When", body: "Start this once you're doing regular professional or academic reading worth tracking over time." },
+      { label: "Who", body: "No collaborator required, though sharing entries with a mentor occasionally can deepen the reflection." },
+      { label: "Where", body: "Kept in a dedicated notebook or document, updated after any substantive reading." },
+    ],
+    howItWorks: [
+      "After reading something substantive, write a few sentences on the key insight and your own reaction or question about it, not just a summary.",
+    ],
+    tools: ["A dedicated notebook or notes app section"],
+    scenario: {
+      title: "A resource she couldn't have retrieved from memory alone",
+      body: "A student's reflective reading journal, kept consistently over a semester, became a genuinely useful resource when she needed to recall a specific insight for a job interview months later, something she never could have retrieved from memory alone.",
+    },
+    pitfalls: [
+      "Writing pure summaries without any personal reaction or question, which misses the actual reflective value of the exercise",
+    ],
+    successSignal:
+      "You can look back at entries from months ago and find genuinely useful, specific insights, not vague summaries.",
+    milestoneTies: [91],
+  },
+
+  172: {
+    definition:
+      "A Reading Speed & Comprehension Drill practices skimming, scanning, and summarizing key information efficiently, building the ability to process high volumes of material without sacrificing genuine understanding.",
+    whyItMatters:
+      "Professional roles often require processing large volumes of material quickly; skimming and scanning are distinct, learnable skills from deep reading, and knowing when to use each matters.",
+    whenWhoWhere: [
+      { label: "When", body: "Practice this with lower-stakes material first, building the skill before you need to apply it under real time pressure." },
+      { label: "Who", body: "No collaborator required." },
+      { label: "Where", body: "Applied to any material where speed matters more than deep, careful analysis: emails, news articles, quick reference material." },
+    ],
+    howItWorks: [
+      "Practice skimming for structure first: headers, first sentences of paragraphs.",
+      "Then scan for specific information, before deciding whether the piece warrants a full careful read.",
+    ],
+    tools: ["Any article or document", "A timer to track your practice speed over time"],
+    scenario: {
+      title: "Seconds instead of minutes to triage an inbox",
+      body: "A student who read every email in full, regardless of importance, was falling behind during a busy internship. Practicing skim-first triage let her identify which messages actually needed a careful read within seconds instead of minutes.",
+    },
+    pitfalls: [
+      "Applying skimming to material that actually requires careful, deep reading, missing important nuance in the process",
+    ],
+    successSignal:
+      "You can accurately judge, within seconds, whether a piece of material needs a full careful read or just a quick skim.",
+    milestoneTies: [],
+  },
+
+  173: {
+    definition:
+      "A Listening and Summarization Exercise involves summarizing a podcast, webinar, or lecture's content shortly after consuming it, testing and building genuine retention.",
+    whyItMatters:
+      "The act of summarizing shortly after listening reveals how much you actually retained versus how much felt understood in the moment but faded quickly.",
+    whenWhoWhere: [
+      { label: "When", body: "Practice this after any substantive podcast, webinar, or lecture you want to genuinely retain." },
+      { label: "Who", body: "No collaborator required, though summarizing to another person is an even stronger retention test." },
+      { label: "Where", body: "Done shortly after listening, while the content is still fresh." },
+    ],
+    howItWorks: [
+      "Within an hour of finishing, summarize the content's main points from memory, without replaying or checking notes.",
+      "Compare against any notes you did take.",
+    ],
+    tools: ["Any podcast, webinar, or lecture", "A notes app for the summary"],
+    scenario: {
+      title: "The gap between feeling understood and actually retaining",
+      body: "A student who attended a guest lecture and felt she understood it well was surprised how little she could summarize from memory an hour later. The gap between feeling understood and actually retaining information became a wake-up call that changed how she engaged with lectures afterward.",
+    },
+    pitfalls: [
+      "Waiting too long after consuming the content, by which point genuine memory has faded and you're reconstructing rather than recalling",
+    ],
+    successSignal:
+      "Your from-memory summary captures the actual main points, not just a vague impression of the topic.",
+    milestoneTies: [168, 198],
+  },
+  174: {
+    definition:
+      "A Networking Conversation involves initiating and sustaining a genuine professional dialogue with someone new, moving beyond a brief introduction into real, substantive exchange.",
+    whyItMatters:
+      "Many students can introduce themselves but struggle to sustain a conversation past the first minute; genuine networking value comes from the sustained exchange, not just the opening line.",
+    whenWhoWhere: [
+      { label: "When", body: "Practice this at any networking event, informational interview, or professional gathering." },
+      { label: "Who", body: "Anyone new in a professional context: a recruiter, an alum, a guest speaker." },
+      { label: "Where", body: "Applied at career fairs, conferences, alumni events, or any professional gathering." },
+    ],
+    howItWorks: [
+      "Open with a genuine question about them, listen actively, and follow up with questions building on what they say rather than pivoting immediately to talking about yourself.",
+    ],
+    tools: ["A few prepared conversation starters from Stage Two as a fallback"],
+    scenario: {
+      title: "From 30 seconds to several genuine minutes",
+      body: "A student used to run out of things to say after her opening line at networking events. Practicing genuine follow-up questions based on what the other person actually said extended her conversations from 30 seconds to several genuine minutes.",
+    },
+    pitfalls: [
+      "Turning the conversation into a monologue about yourself instead of a genuine back-and-forth exchange",
+    ],
+    successSignal:
+      "The conversation naturally sustains for several minutes, with both people asking and answering questions.",
+    milestoneTies: [52],
+  },
+
+  175: {
+    definition:
+      "A Mock Interview practices answering questions clearly, concisely, and confidently in a realistic simulation of interview conditions, building on the mock interview practice from Stage Three with a focus specifically on communication delivery.",
+    whyItMatters:
+      "Interview content, what you say, and interview delivery, how clearly and confidently you say it, are distinct skills; this FIRST focuses specifically on the communication dimension.",
+    whenWhoWhere: [
+      { label: "When", body: "Practice this before any real interview, ideally more than once with feedback incorporated between rounds." },
+      { label: "Who", body: "A mentor, career advisor, or peer willing to ask real questions and give honest delivery feedback." },
+      { label: "Where", body: "Simulated as closely as possible to the real interview format and setting." },
+    ],
+    howItWorks: [
+      "Answer real interview questions out loud, focusing specifically on clarity and conciseness.",
+      "Ask your practice partner to flag any answer that rambled or lacked a clear point.",
+    ],
+    tools: ["A list of common interview questions", "A willing practice partner"],
+    scenario: {
+      title: "The same substance, delivered tighter",
+      body: "A student's mock interview feedback consistently flagged that her answers, while substantively strong, ran too long and lost their point partway through. Practicing a tighter, more concise delivery specifically, separate from the content itself, sharpened her actual interview performance.",
+    },
+    pitfalls: [
+      "Focusing mock interview practice only on content, what to say, while ignoring delivery, how clearly you say it",
+    ],
+    successSignal:
+      "Your practice partner can follow your answers clearly without needing you to restate or clarify your point.",
+    milestoneTies: [68],
+  },
+
+  176: {
+    definition:
+      "A Discussion Facilitation guides a small group discussion or meeting, ensuring balanced participation and a productive outcome rather than letting the loudest voices dominate.",
+    whyItMatters:
+      "Facilitation is a distinct skill from simply participating; a good facilitator draws out quieter voices and keeps the group focused on a productive outcome.",
+    whenWhoWhere: [
+      { label: "When", body: "Practice this whenever you're leading a discussion, formal or informal." },
+      { label: "Who", body: "The group you're facilitating, ideally with a mix of participation styles." },
+      { label: "Where", body: "Applied to class discussions, team meetings, or club gatherings." },
+    ],
+    howItWorks: [
+      "Open with a clear question or topic.",
+      "Actively invite quieter participants (what do you think, [name]) and gently redirect if one voice dominates.",
+      "Summarize periodically to keep the group oriented.",
+    ],
+    tools: ["A simple discussion outline or list of guiding questions"],
+    scenario: {
+      title: "More voices, once she invited them by name",
+      body: "A student facilitating a study group discussion noticed the same two people always spoke first and loudest. By directly inviting quieter members by name, she got noticeably more varied and higher-quality input into the discussion.",
+    },
+    pitfalls: [
+      "Letting the loudest voices dominate without actively creating space for others to contribute",
+    ],
+    successSignal:
+      "More than two or three people genuinely participate in the discussion, not just the naturally most talkative ones.",
+    milestoneTies: [41],
+  },
+
+  177: {
+    definition:
+      "A Cross-Cultural Communication Exercise practices clarity and sensitivity when communicating with audiences from different cultural or linguistic backgrounds than your own.",
+    whyItMatters:
+      "Increasingly diverse and global workplaces require genuine cross-cultural communication skill, not just an assumption that your default communication style works universally.",
+    whenWhoWhere: [
+      { label: "When", body: "Practice this whenever you're communicating with someone from a notably different cultural or linguistic background." },
+      { label: "Who", body: "A classmate, colleague, or contact from a different cultural background, approached with genuine curiosity rather than assumption." },
+      { label: "Where", body: "Applied in any genuinely cross-cultural professional or academic interaction." },
+    ],
+    howItWorks: [
+      "Avoid idioms and culturally specific references that might not translate.",
+      "Check for understanding more explicitly than you might with someone who shares your background.",
+      "Ask genuine questions about communication preferences rather than assuming.",
+    ],
+    tools: ["No special tool; this is a practiced sensitivity and adjustment"],
+    scenario: {
+      title: "A sports idiom that lost the room",
+      body: "A student's casual use of American sports idioms in a group project with international classmates caused genuine confusion until she noticed and adjusted her language to be more literal and direct.",
+    },
+    pitfalls: [
+      "Assuming your own default communication style translates universally without checking or adjusting",
+    ],
+    successSignal:
+      "A cross-cultural conversation partner confirms they understood you clearly, without the confusion that idioms or unstated cultural assumptions can cause.",
+    milestoneTies: [],
+  },
+
+  178: {
+    definition:
+      "A Professional Networking Introduction makes a genuinely lasting first impression in a networking context, distinct from a routine elevator pitch by its focus specifically on memorability.",
+    whyItMatters:
+      "In a room full of people giving similar introductions, a genuinely memorable one is what actually gets remembered and followed up on afterward.",
+    whenWhoWhere: [
+      { label: "When", body: "Use this specifically for larger networking events where you're one of many people introducing themselves." },
+      { label: "Who", body: "Anyone new you're meeting in a networking context." },
+      { label: "Where", body: "Applied at career fairs, conferences, and larger networking events specifically." },
+    ],
+    howItWorks: [
+      "Include one specific, memorable detail beyond your standard pitch, a distinctive project, an unusual connection to the field, something that gives the listener a genuine hook to remember you by.",
+    ],
+    tools: ["Your existing elevator pitch as the base, with one memorable addition"],
+    scenario: {
+      title: "The detail recruiters remembered later that day",
+      body: "A student's standard introduction blended in with dozens of others at a career fair. Adding one specific, memorable detail, the exact sustainability statistic her capstone campaign was built around, made recruiters specifically remember and reference her later in the day.",
+    },
+    pitfalls: [
+      "Making the memorable detail about something irrelevant or gimmicky rather than genuinely connected to your professional value",
+    ],
+    successSignal:
+      "Someone you met briefly remembers a specific detail about you when you follow up days later.",
+    milestoneTies: [154, 19],
+  },
+
+  179: {
+    definition:
+      "An Online Discussion Participation engages meaningfully in forums, LinkedIn groups, or class discussion boards, contributing genuine value rather than surface-level comments.",
+    whyItMatters:
+      "Online discussion participation is often the first, lowest-pressure way to build visibility in a professional community before higher-stakes in-person engagement.",
+    whenWhoWhere: [
+      { label: "When", body: "Practice this regularly in any online professional or academic community you're part of." },
+      { label: "Who", body: "No specific collaborator; applied to any online discussion community." },
+      { label: "Where", body: "LinkedIn groups, class discussion boards, professional forums relevant to your field." },
+    ],
+    howItWorks: [
+      "Read the existing discussion fully before contributing.",
+      "Add a genuine perspective, question, or piece of evidence, not just agreement or a restatement of what's already been said.",
+    ],
+    tools: ["LinkedIn, class discussion platforms, or field-specific forums"],
+    scenario: {
+      title: "A direct message after switching away from generic agreement",
+      body: "A student's early online discussion posts were generic agreement, great point, that added nothing. Shifting to genuine questions and specific additions got noticeably more engagement and even a direct message from someone in her field.",
+    },
+    pitfalls: [
+      "Contributing generic agreement or surface-level comments that don't actually add anything to the discussion",
+    ],
+    successSignal:
+      "Your contributions generate real responses or engagement, not just passing likes.",
+    milestoneTies: [47],
+  },
+
+  180: {
+    definition:
+      "A Professional Chat with Senior practices formal dialogue with a superior or senior industry professional, building comfort with the specific dynamics of talking to someone more senior than you.",
+    whyItMatters:
+      "Conversations with senior professionals carry a different dynamic than peer conversations, and practicing this specifically builds comfort that pure peer interaction doesn't provide.",
+    whenWhoWhere: [
+      { label: "When", body: "Use this whenever you have a genuine opportunity to speak with someone significantly senior to you, a professor, a manager, an industry veteran." },
+      { label: "Who", body: "A professor, manager, mentor, or any senior professional willing to engage." },
+      { label: "Where", body: "Office hours, informational interviews, or any structured senior conversation." },
+    ],
+    howItWorks: [
+      "Prepare a few genuine, specific questions in advance.",
+      "Listen more than you speak.",
+      "Follow up afterward with a thank-you referencing something specific from the conversation.",
+    ],
+    tools: ["A short list of prepared questions specific to that person's actual background"],
+    scenario: {
+      title: "Anxiety turned into an engaged conversation",
+      body: "A student intimidated by her internship's VP-level leadership prepared three specific questions before a scheduled check-in, which transformed her anxiety into a genuinely engaged, productive conversation once she had something concrete to lead with.",
+    },
+    pitfalls: [
+      "Either staying too silent out of intimidation, or over-talking to compensate for nervousness",
+    ],
+    successSignal:
+      "You leave the conversation having learned something genuine, and the senior person remembers you positively afterward.",
+    milestoneTies: [],
+  },
+
+  181: {
+    definition:
+      "A Conflict Resolution Conversation navigates a genuine disagreement with professionalism and tact, resolving tension directly rather than avoiding it or letting it fester.",
+    whyItMatters:
+      "Avoided conflict doesn't disappear, it tends to resurface worse later; the ability to address disagreement directly and professionally is a distinct, learnable skill that most people never practice deliberately.",
+    whenWhoWhere: [
+      { label: "When", body: "Use this whenever a genuine, unresolved disagreement arises, ideally addressed relatively soon rather than left to fester." },
+      { label: "Who", body: "The specific person you're in disagreement with." },
+      { label: "Where", body: "In a private, calm setting, not in front of a group or in the heat of the original moment." },
+    ],
+    howItWorks: [
+      "State your perspective using I statements rather than accusations.",
+      "Genuinely listen to their perspective.",
+      "Focus the conversation on a specific resolution, not on who was right.",
+    ],
+    tools: ["No special tool; a calm setting and genuine willingness to hear the other perspective"],
+    scenario: {
+      title: "A direct conversation instead of weeks of silent frustration",
+      body: "A student avoided addressing a group project teammate's missed deadlines for weeks, letting resentment build. A direct, calm conversation focused on a specific go-forward plan resolved the tension far more effectively than the weeks of silent frustration had.",
+    },
+    pitfalls: [
+      "Avoiding the conversation entirely, which tends to make the underlying issue worse rather than better over time",
+    ],
+    successSignal:
+      "The specific issue gets resolved, and the working relationship continues functionally afterward.",
+    milestoneTies: [],
+  },
+
+  182: {
+    definition:
+      "A Meeting Facilitation in Class/Group leads a discussion or meeting in an academic or club setting, guiding the group toward a summarized outcome.",
+    whyItMatters:
+      "Academic and club settings are lower-stakes environments to practice real facilitation before you need the skill in a higher-stakes workplace meeting.",
+    whenWhoWhere: [
+      { label: "When", body: "Volunteer for this whenever the opportunity arises in a class group project or club setting." },
+      { label: "Who", body: "Your class group or club members." },
+      { label: "Where", body: "Applied in any class or club meeting you're leading or co-leading." },
+    ],
+    howItWorks: [
+      "Set a clear agenda beforehand, keep the discussion on track, and summarize decisions and next steps at the end.",
+    ],
+    tools: ["A simple agenda", "A way to capture summarized outcomes"],
+    scenario: {
+      title: "Clear next steps, the second time around",
+      body: "A student's first attempt at facilitating a class group meeting ran long with no clear outcome. After deliberately setting an agenda and summarizing at the end for her next meeting, the group left with clear, agreed next steps.",
+    },
+    pitfalls: [
+      "Letting the discussion wander without redirecting back to the agenda or summarizing decisions along the way",
+    ],
+    successSignal:
+      "The group leaves the meeting with clear, summarized next steps that everyone agrees on.",
+    milestoneTies: [176, 135],
+  },
+
+  183: {
+    definition:
+      "An Online Course Discussion Participation actively contributes to online learning community discussions, whether in a MOOC, certification course, or other online learning environment.",
+    whyItMatters:
+      "Online learning communities are increasingly common professional development spaces, and genuine participation, not just course completion, is what builds real connections and deeper learning within them.",
+    whenWhoWhere: [
+      { label: "When", body: "Practice this in any online course or certification program you're completing." },
+      { label: "Who", body: "Other learners in the course's discussion community." },
+      { label: "Where", body: "The course's built-in discussion forum or associated community platform." },
+    ],
+    howItWorks: [
+      "Post genuine questions or insights related to the course material, and respond substantively to at least one other learner's post rather than just reading passively.",
+    ],
+    tools: ["The online course platform's discussion feature"],
+    scenario: {
+      title: "The clarifying answer the course material didn't give",
+      body: "A student completing a Google Analytics certification skipped the discussion forum entirely at first. Once she started posting genuine questions, another learner's response clarified a concept the course material itself hadn't made clear.",
+    },
+    pitfalls: [
+      "Treating online courses as purely solitary, completion-focused exercises and skipping the community engagement entirely",
+    ],
+    successSignal:
+      "You get genuine value, a clarified concept, a useful connection, from the discussion community, not just the course content itself.",
+    milestoneTies: [101],
+  },
+
+  184: {
+    definition:
+      "A Professional Social Media Commenting engages thoughtfully on platforms like LinkedIn, Medium, or professional Twitter/X, building visibility through genuine, substantive engagement.",
+    whyItMatters:
+      "Thoughtful commenting is a low-friction way to build visibility and relationships in your professional community, without the higher effort of original content creation.",
+    whenWhoWhere: [
+      { label: "When", body: "Practice this regularly as part of your ongoing professional social media presence." },
+      { label: "Who", body: "Professionals and organizations in your target field whose content you follow." },
+      { label: "Where", body: "LinkedIn, Medium, or professional social platforms." },
+    ],
+    howItWorks: [
+      "Comment with a genuine, specific reaction or question tied to what the person actually said, not a generic great post.",
+    ],
+    tools: ["The relevant social platform", "A habit of engaging thoughtfully rather than scrolling passively"],
+    scenario: {
+      title: "A comment a hiring manager remembered",
+      body: "A student's generic comments on LinkedIn posts got no engagement. Switching to specific, thoughtful reactions tied to the actual content led to one comment that a hiring manager later remembered and referenced during her interview.",
+    },
+    pitfalls: [
+      "Leaving generic comments that could apply to any post, which reads as low-effort and rarely generates real engagement",
+    ],
+    successSignal:
+      "Your comments generate genuine responses or connections, not just passing likes.",
+    milestoneTies: [47],
+  },
+
+  185: {
+    definition:
+      "A Scenario-Based Communication Drill practices handling realistic workplace communication situations through role-play, building readiness for situations before they happen for real.",
+    whyItMatters:
+      "Practicing a difficult communication scenario in a low-stakes role-play setting builds real readiness that pure hypothetical thinking doesn't provide.",
+    whenWhoWhere: [
+      { label: "When", body: "Use this to prepare for any communication situation you anticipate might be difficult: delivering bad news, pushing back on a request, navigating an awkward ask." },
+      { label: "Who", body: "A friend or mentor willing to role-play the other side of the scenario." },
+      { label: "Where", body: "Practiced in a low-stakes setting before the real situation arises." },
+    ],
+    howItWorks: [
+      "Describe the realistic scenario to your practice partner.",
+      "Role-play it out loud, then discuss what worked and what to adjust.",
+    ],
+    tools: ["A willing practice partner", "A clearly described realistic scenario"],
+    scenario: {
+      title: "Catching the over-apologizing before the real conversation",
+      body: "A student anticipating a difficult conversation about being overcommitted role-played it with a roommate first. The practice run revealed she kept over-apologizing, which she consciously cut from the real conversation days later.",
+    },
+    pitfalls: [
+      "Skipping this preparation for scenarios that feel too uncomfortable to even role-play, which are often exactly the ones that benefit most from practice",
+    ],
+    successSignal:
+      "The real conversation, when it happens, feels noticeably more familiar and manageable because you've already rehearsed it once.",
+    milestoneTies: [30, 181],
+  },
+
+  186: {
+    definition:
+      "A Public Forum Participation contributes to discussions in school, community, or online public events, practicing communication in front of a broader, less familiar audience.",
+    whyItMatters:
+      "Public forums, town halls, Q&A sessions, community discussions, require a distinct comfort with speaking in front of a broader, often unfamiliar audience than a classroom or team meeting.",
+    whenWhoWhere: [
+      { label: "When", body: "Participate whenever a genuine public forum opportunity arises that's relevant to your interests or field." },
+      { label: "Who", body: "The broader public audience of the specific forum." },
+      { label: "Where", body: "School events, community meetings, public Q&A sessions, or online public forums." },
+    ],
+    howItWorks: [
+      "Prepare a specific question or comment in advance if possible.",
+      "Speak clearly and concisely when your turn comes, respecting the shared time of a public setting.",
+    ],
+    tools: ["No special tool; genuine willingness to speak up in a public setting"],
+    scenario: {
+      title: "One question, a useful answer, and a follow-up",
+      body: "A student attended a public Q&A with an industry speaker and prepared one specific question in advance. Asking it publicly not only got a useful answer but led to the speaker following up with her directly afterward.",
+    },
+    pitfalls: [
+      "Preparing a comment so long or rambling that it doesn't respect the shared time of a public forum setting",
+    ],
+    successSignal:
+      "You contribute clearly and concisely, and at least occasionally get a genuine, useful response or follow-up.",
+    milestoneTies: [],
+  },
+
+  187: {
+    definition:
+      "A Feedback Response practices receiving feedback professionally and adjusting your communication accordingly, distinct from simply hearing feedback without genuine follow-through.",
+    whyItMatters:
+      "How you respond to feedback in the moment, especially critical feedback, shapes whether people feel comfortable giving you honest input in the future.",
+    whenWhoWhere: [
+      { label: "When", body: "Practice this whenever you receive any substantive feedback on your communication." },
+      { label: "Who", body: "Whoever gives you the feedback: a professor, manager, or peer." },
+      { label: "Where", body: "Applied in the moment feedback is given, ideally followed up afterward with a genuine change." },
+    ],
+    howItWorks: [
+      "Listen fully without interrupting or explaining.",
+      "Thank the person genuinely.",
+      "Ask a clarifying question if needed.",
+      "Follow up later with the specific change you made.",
+    ],
+    tools: ["No special tool; a practiced, non-defensive response in the moment"],
+    scenario: {
+      title: "More detailed feedback, once she stopped explaining herself",
+      body: "A student used to immediately explain or justify her writing whenever a professor gave critical feedback, which visibly discouraged the professor from giving detailed input in later assignments. Practicing a simple thank you, that's helpful instead led to noticeably more detailed, useful feedback over the following semester.",
+    },
+    pitfalls: [
+      "Becoming defensive or immediately explaining your reasoning, which discourages the person from giving you honest feedback again",
+    ],
+    successSignal:
+      "The person who gave you feedback continues to give you honest, detailed input in the future rather than softening or withholding it.",
+    milestoneTies: [114],
+  },
+
+  188: {
+    definition:
+      "A Professional Feedback Given shares constructive insights with a peer, practicing the skill of delivering feedback clearly and kindly rather than avoiding it or delivering it poorly.",
+    whyItMatters:
+      "Giving feedback well is just as important a skill as receiving it, and most people avoid it entirely out of discomfort, which deprives peers of genuinely useful input.",
+    whenWhoWhere: [
+      { label: "When", body: "Practice this whenever you have genuine, constructive feedback to offer a peer, in a setting where it would actually be welcome." },
+      { label: "Who", body: "A peer, teammate, or classmate whose work or approach you have genuine insight on." },
+      { label: "Where", body: "Delivered privately and directly, not in front of a group unless the setting specifically calls for it." },
+    ],
+    howItWorks: [
+      "Lead with something genuine you appreciated, then offer one specific, actionable piece of constructive input, framed around the work or behavior rather than the person.",
+    ],
+    tools: ["No special tool; a genuine, specific observation to share"],
+    scenario: {
+      title: "Feedback given kindly, before the real presentation",
+      body: "A student avoided telling a teammate that his presentation section ran too long, until a mutual deadline forced the conversation. Delivered kindly and specifically, the feedback was received well and the teammate thanked her for saying something before the real presentation.",
+    },
+    pitfalls: [
+      "Avoiding giving feedback entirely out of discomfort, which deprives your peer of genuinely useful input they could have used",
+    ],
+    successSignal:
+      "The person receives your feedback well and makes a genuine adjustment based on it.",
+    milestoneTies: [187],
+  },
+
+  189: {
+    definition:
+      "A Written Reflection on Learning documents insights, questions, and areas for improvement after a learning experience, turning passive learning into active, retained growth.",
+    whyItMatters:
+      "Without deliberate reflection, lessons from a learning experience often fade quickly, especially the specific, nuanced insights that a vague memory of it was a good class doesn't capture.",
+    whenWhoWhere: [
+      { label: "When", body: "Practice this after any substantive learning experience: a course, a workshop, a significant project." },
+      { label: "Who", body: "No collaborator required, though sharing reflections with a mentor can deepen them." },
+      { label: "Where", body: "Written in a dedicated journal or notes section shortly after the learning experience concludes." },
+    ],
+    howItWorks: [
+      "Write what you learned, what question remains unresolved, and one specific way you'll apply the learning going forward.",
+    ],
+    tools: ["A dedicated reflection journal or notes app section"],
+    scenario: {
+      title: "Specific examples ready for the interview, months later",
+      body: "A student who never reflected on completed courses struggled to articulate specific takeaways in interviews. After adopting a habit of writing a short reflection at the end of each course, she had specific, ready examples to draw on months later.",
+    },
+    pitfalls: [
+      "Writing only a summary of course content rather than genuine personal reflection on what you learned and how you'll apply it",
+    ],
+    successSignal:
+      "Months later, you can recall specific, genuine insights from the learning experience, not just a vague positive impression.",
+    milestoneTies: [81],
+  },
+
+  190: {
+    definition:
+      "A Communication Self-Assessment identifies your genuine strengths and weaknesses across writing, speaking, and listening, providing an honest baseline to guide targeted improvement.",
+    whyItMatters:
+      "Without an honest baseline assessment, improvement efforts tend to be scattered rather than targeted at your actual weakest areas.",
+    whenWhoWhere: [
+      { label: "When", body: "Conduct this at the start of this stage, and periodically afterward to track real change." },
+      { label: "Who", body: "A mentor or trusted peer who can offer honest outside perspective alongside your self-assessment." },
+      { label: "Where", body: "Done in a dedicated reflection session." },
+    ],
+    howItWorks: [
+      "Rate yourself honestly across writing, speaking, and listening.",
+      "Identify specific evidence for each rating, not just a gut feeling.",
+      "Name your single weakest area as a priority focus.",
+    ],
+    tools: ["A simple three-category self-rating template"],
+    scenario: {
+      title: "A genuine surprise about her weakest area",
+      body: "A student assumed writing was her weakest area, but an honest self-assessment, backed by specific evidence, revealed listening was actually her biggest gap, a genuine surprise that redirected her focus for the rest of this stage.",
+    },
+    pitfalls: [
+      "Rating yourself based on vague impressions rather than specific evidence from real recent instances",
+    ],
+    successSignal:
+      "You can name your genuine weakest communication area, backed by specific evidence, not just assumption.",
+    milestoneTies: [],
+  },
+
+  191: {
+    definition:
+      "A Reflection on Public Speaking Anxiety identifies your specific triggers for speaking-related nerves and builds concrete strategies to manage them, rather than treating anxiety as a fixed, unchangeable trait.",
+    whyItMatters:
+      "Public speaking anxiety is extremely common but rarely examined specifically; understanding your own particular triggers makes it far more manageable than treating it as one undifferentiated feeling.",
+    whenWhoWhere: [
+      { label: "When", body: "Reflect on this after a few real speaking experiences, once you have specific instances to examine rather than just a general sense of nervousness." },
+      { label: "Who", body: "No collaborator required, though discussing patterns with a mentor or counselor can help if anxiety feels significant." },
+      { label: "Where", body: "Reflected on in a private journaling session." },
+    ],
+    howItWorks: [
+      "Recall two or three specific speaking situations that triggered real nervousness.",
+      "Identify what they had in common: audience size, stakes, unfamiliarity, and name one strategy specific to that trigger.",
+    ],
+    tools: ["A journal", "Your own recent speaking experiences as material to examine"],
+    scenario: {
+      title: "Not all public speaking, just unscripted Q&A",
+      body: "A student assumed she was nervous about all public speaking equally, until reflection revealed her anxiety spiked specifically around unscripted Q&A, not prepared remarks. That specific insight let her focus her Impromptu Speaking Drill practice exactly where it mattered most.",
+    },
+    pitfalls: [
+      "Treating anxiety as one undifferentiated feeling rather than examining specific triggers that might call for different strategies",
+    ],
+    successSignal:
+      "You can name your specific anxiety trigger, not just I get nervous speaking, and have one strategy targeted at that specific trigger.",
+    milestoneTies: [73, 79],
+  },
+
+  192: {
+    definition:
+      "A Peer Review Feedback critiques a peer's work constructively, practicing the specific discipline of written, structured feedback rather than informal verbal comments.",
+    whyItMatters:
+      "Written peer review requires more precision and care than casual verbal feedback, and the discipline of doing it well is valuable both for the peer receiving it and for sharpening your own critical eye.",
+    whenWhoWhere: [
+      { label: "When", body: "Practice this whenever a genuine peer review opportunity arises, in class or in a professional setting." },
+      { label: "Who", body: "A peer whose work you're reviewing." },
+      { label: "Where", body: "Written feedback, typically on a shared document or dedicated review form." },
+    ],
+    howItWorks: [
+      "Note specific strengths first.",
+      "Give specific, actionable suggestions for improvement, tied to concrete examples in the work rather than vague impressions.",
+    ],
+    tools: ["The peer's actual work", "A structured review template if one exists"],
+    scenario: {
+      title: "Feedback peers could actually act on",
+      body: "A student's early peer reviews were vague, good job, maybe make it clearer, and unhelpful. Learning to cite specific examples, the second paragraph's argument would be clearer if, made her feedback something peers could actually act on.",
+    },
+    pitfalls: [
+      "Giving vague, general feedback that isn't tied to specific, actionable examples in the actual work",
+    ],
+    successSignal:
+      "The peer can point to a specific change they made based directly on your feedback.",
+    milestoneTies: [188, 148],
+  },
+
+  193: {
+    definition:
+      "A Reflective Speaking Log journals insights after practicing verbal communication daily, building a running record of speaking growth over time.",
+    whyItMatters:
+      "Speaking improvement often happens gradually enough that it's hard to notice day to day; a running log makes the real progress visible in a way daily experience alone doesn't.",
+    whenWhoWhere: [
+      { label: "When", body: "Keep this during any focused period of speaking practice, such as while working through this stage's other verbal FIRSTS." },
+      { label: "Who", body: "No collaborator required." },
+      { label: "Where", body: "Kept in a dedicated journal, updated after any deliberate speaking practice session." },
+    ],
+    howItWorks: [
+      "After any speaking practice, write one sentence on what went well and one on what to adjust next time.",
+      "Review entries periodically to see real patterns of growth.",
+    ],
+    tools: ["A dedicated journal or notes app section"],
+    scenario: {
+      title: "A trajectory visible only in hindsight",
+      body: "A student's reflective speaking log, kept over two months of interview prep, revealed a clear trajectory: early entries repeatedly noted rambling answers, while later entries increasingly noted clear, concise delivery, tangible evidence of real growth she couldn't have seen day to day.",
+    },
+    pitfalls: [
+      "Skipping entries on days when practice felt unremarkable, which are often exactly the days worth tracking for a complete picture of progress",
+    ],
+    successSignal:
+      "Reviewing entries over time reveals a clear, real trajectory of improvement, not just isolated good and bad days.",
+    milestoneTies: [],
+  },
+
+  194: {
+    definition:
+      "A Communication Reflection with Mentor discusses your communication strengths, weaknesses, and growth plan directly with a mentor, adding outside perspective to your self-assessment.",
+    whyItMatters:
+      "Self-assessment alone has blind spots; a mentor who has observed your communication in real situations can offer perspective you genuinely can't see from the inside.",
+    whenWhoWhere: [
+      { label: "When", body: "Have this conversation once you've done your own Communication Self-Assessment, so you have something concrete to compare against outside input." },
+      { label: "Who", body: "A mentor who has genuinely observed your communication in real settings." },
+      { label: "Where", body: "A dedicated conversation, in person or over video call." },
+    ],
+    howItWorks: [
+      "Share your self-assessment first, then ask specifically whether they agree, and what they'd add or challenge based on what they've actually observed.",
+    ],
+    tools: ["Your completed Communication Self-Assessment as a starting point for the conversation"],
+    scenario: {
+      title: "The blind spot she couldn't have surfaced alone",
+      body: "A student's self-assessment rated her writing as her strongest area, but her mentor's honest input revealed a blind spot: her writing was strong in structure but often buried the actual point, feedback she wouldn't have surfaced on her own.",
+    },
+    pitfalls: [
+      "Only sharing your self-assessment without genuinely asking for disagreement or additions, which limits the value of getting outside perspective at all",
+    ],
+    successSignal:
+      "The mentor adds or challenges at least one part of your self-assessment with a specific, real observation.",
+    milestoneTies: [190],
+  },
+
+  195: {
+    definition:
+      "A Reflection on Persuasion Techniques analyzes effective persuasive methods observed in speeches, articles, or presentations, building a genuine, applied understanding of what actually persuades.",
+    whyItMatters:
+      "Studying persuasion abstractly is less useful than analyzing specific, real examples of it working, since the concrete mechanics become visible in a way theory alone doesn't provide.",
+    whenWhoWhere: [
+      { label: "When", body: "Do this after encountering a genuinely persuasive piece of communication, a speech, article, or pitch that actually changed your mind or moved you to action." },
+      { label: "Who", body: "No collaborator required, though discussing the analysis with someone else can sharpen it." },
+      { label: "Where", body: "Applied to any real speech, article, or presentation you found genuinely persuasive." },
+    ],
+    howItWorks: [
+      "Identify specifically what made the piece persuasive: was it evidence, emotional appeal, structure, credibility.",
+      "Note one technique you could apply to your own communication.",
+    ],
+    tools: ["A genuinely persuasive piece of communication you've recently encountered"],
+    scenario: {
+      title: "A structural choice worth stealing",
+      body: "A student analyzing a TED talk that genuinely changed her thinking noticed the speaker opened with a specific, personal story before any data, a structural choice she then deliberately applied to her own next presentation with noticeably stronger audience engagement.",
+    },
+    pitfalls: [
+      "Analyzing persuasion only in the abstract, without grounding the analysis in a specific real example that actually worked on you",
+    ],
+    successSignal:
+      "You can name one specific persuasion technique from your analysis and describe how you applied it to your own communication.",
+    milestoneTies: [],
+  },
+  196: {
+    definition:
+      "A Documented Communication Goals is a written record tracking specific improvements you're targeting in writing, speaking, and comprehension, providing a clear reference point for progress.",
+    whyItMatters:
+      "Vague intentions to communicate better rarely lead to real improvement; specific, documented goals give you something concrete to actually work toward and measure.",
+    whenWhoWhere: [
+      { label: "When", body: "Set these once you've completed your Communication Self-Assessment and know your genuine priority areas." },
+      { label: "Who", body: "No collaborator required, though sharing goals with a mentor adds accountability." },
+      { label: "Where", body: "Written in a dedicated document, reviewed periodically." },
+    ],
+    howItWorks: [
+      "Based on your self-assessment, write two or three specific, measurable communication goals with target dates, not vague aspirations.",
+    ],
+    tools: ["Your Communication Self-Assessment as the basis for setting targeted goals"],
+    scenario: {
+      title: "A vague goal replaced by a trackable one",
+      body: "A student's vague goal to be a better speaker never led anywhere. A specific, documented goal, reduce filler words to under 3 per minute by using Public Speaking Recording weekly for a month, gave her something concrete to actually track and achieve.",
+    },
+    pitfalls: [
+      "Setting vague, unmeasurable goals that don't give you any way to know whether you've actually achieved them",
+    ],
+    successSignal:
+      "You can look back at a documented goal and objectively assess whether you met it.",
+    milestoneTies: [86],
+  },
+
+  197: {
+    definition:
+      "A Visual Communication Exercise creates charts, infographics, or diagrams to convey complex ideas, practicing communication through visual rather than purely verbal or written means.",
+    whyItMatters:
+      "Some ideas, especially data-heavy or process-heavy ones, communicate far more clearly through a well-designed visual than through paragraphs of text alone.",
+    whenWhoWhere: [
+      { label: "When", body: "Use this whenever a concept involves comparison, process, or data that would genuinely benefit from visual structure." },
+      { label: "Who", body: "No collaborator required, though testing the visual on someone unfamiliar with the content is a good clarity check." },
+      { label: "Where", body: "Applied to reports, presentations, or any communication involving data or process." },
+    ],
+    howItWorks: [
+      "Identify the core relationship or process you're conveying.",
+      "Choose the simplest visual format that captures it, a simple chart, a flow diagram, rather than defaulting to text.",
+    ],
+    tools: ["Canva, PowerPoint, or a simple charting tool like Google Sheets"],
+    scenario: {
+      title: "One flowchart instead of three paragraphs",
+      body: "A student's written explanation of a multi-step process confused her team repeatedly. A single simple flowchart replacing three paragraphs of text made the same process immediately clear.",
+    },
+    pitfalls: [
+      "Over-designing a visual with unnecessary complexity or decoration that obscures rather than clarifies the core information",
+    ],
+    successSignal:
+      "A reader understands the concept faster from your visual than they would have from an equivalent amount of text.",
+    milestoneTies: [157],
+  },
+
+  198: {
+    definition:
+      "An Active Note-Taking System organizes information from lectures, webinars, or meetings using a consistent, deliberate structure, rather than unstructured transcription.",
+    whyItMatters:
+      "Unstructured note-taking, essentially trying to write down everything, produces notes that are hard to review and often reflects passive rather than active engagement with the material.",
+    whenWhoWhere: [
+      { label: "When", body: "Build this system before a semester or work period with heavy lecture, meeting, or webinar volume." },
+      { label: "Who", body: "No collaborator required, though comparing your system to a peer's can reveal useful adjustments." },
+      { label: "Where", body: "Applied to any lecture, meeting, or webinar you attend." },
+    ],
+    howItWorks: [
+      "Choose a consistent structure, such as the Cornell method: notes, cues, and summary sections, and apply it consistently rather than switching approaches each time.",
+    ],
+    tools: ["A notebook or notes app supporting a structured template"],
+    scenario: {
+      title: "Notes she actually referenced again",
+      body: "A student's meeting notes were a disorganized wall of text that she rarely reviewed afterward. Switching to a consistent structure with a dedicated action-items section made her notes something she actually referenced and used.",
+    },
+    pitfalls: [
+      "Trying to write down everything verbatim rather than actively selecting and structuring the genuinely important points",
+    ],
+    successSignal:
+      "You can quickly find and use specific information from notes taken weeks earlier, rather than notes that are functionally unreadable after the fact.",
+    milestoneTies: [],
+  },
+
+  199: {
+    definition:
+      "A Communication Flow Mapping outlines the steps for clear messaging or project updates, ensuring the right information reaches the right people at the right time.",
+    whyItMatters:
+      "Without a deliberate flow, project updates and important messages often reach some stakeholders and miss others entirely, or arrive too late to be useful.",
+    whenWhoWhere: [
+      { label: "When", body: "Use this for any project or initiative involving multiple stakeholders who need to stay informed." },
+      { label: "Who", body: "The stakeholders who need to be kept informed throughout the project or initiative." },
+      { label: "Where", body: "Mapped out at a project's start, before communication gaps have a chance to occur." },
+    ],
+    howItWorks: [
+      "List every stakeholder who needs updates.",
+      "For each, note what they need to know, how often, and through what channel.",
+      "Build this into your regular workflow rather than improvising each time.",
+    ],
+    tools: ["A simple stakeholder communication grid or table"],
+    scenario: {
+      title: "The gap that didn't recur",
+      body: "A team's project stalled when a key stakeholder was accidentally left out of a critical update loop. Mapping communication flow explicitly at the start of the next project prevented the same gap from recurring.",
+    },
+    pitfalls: [
+      "Assuming information will naturally reach everyone who needs it without a deliberate plan, which often leaves gaps in more complex projects",
+    ],
+    successSignal:
+      "Every relevant stakeholder receives the information they need without you having to remember and improvise each time.",
+    milestoneTies: [113],
+  },
+
+  200: {
+    definition:
+      "A Storyboard Creation plans communication visually for a presentation or video, mapping out the sequence of content before producing the final piece.",
+    whyItMatters:
+      "Planning the visual and narrative sequence before producing content saves significant rework and ensures the final piece flows logically from start to finish.",
+    whenWhoWhere: [
+      { label: "When", body: "Use this before creating any presentation or video with more than a few sequential points to convey." },
+      { label: "Who", body: "No collaborator required, though a peer's read of the storyboard can catch logical gaps before production begins." },
+      { label: "Where", body: "Sketched out before opening any actual slide or video editing tool." },
+    ],
+    howItWorks: [
+      "Sketch each major section or scene as a simple box with a one-line description, in sequence, before building out full content for any of them.",
+    ],
+    tools: ["Paper and pen, or a simple digital storyboard template"],
+    scenario: {
+      title: "Five minutes instead of hours of wasted filming",
+      body: "A student jumped straight into building a video without planning, and realized halfway through filming that her sequence didn't make logical sense. Storyboarding first for her next video caught the same issue in five minutes instead of after hours of wasted filming.",
+    },
+    pitfalls: [
+      "Skipping storyboarding and jumping straight into production, only to discover structural problems after significant work is already done",
+    ],
+    successSignal:
+      "You catch structural or sequencing problems in the storyboard stage, before investing time in full production.",
+    milestoneTies: [151],
+  },
+
+  201: {
+    definition:
+      "A Communication Metrics Tracking system tracks real, quantifiable improvement in areas like response rate, clarity, and engagement over time, rather than relying on subjective impression alone.",
+    whyItMatters:
+      "Subjective impressions of your own communication improvement are unreliable; tracked metrics give you objective evidence of what's actually working and what isn't.",
+    whenWhoWhere: [
+      { label: "When", body: "Set this up once you have a consistent communication habit worth tracking, such as networking outreach or content sharing." },
+      { label: "Who", body: "No collaborator required." },
+      { label: "Where", body: "Tracked in a simple spreadsheet alongside your other habit and KPI tracking systems." },
+    ],
+    howItWorks: [
+      "Choose one or two genuinely trackable metrics, email response rate, LinkedIn engagement, interview callback rate, and log them consistently over time.",
+    ],
+    tools: ["A simple spreadsheet, potentially the same one used for your Stage Four KPI Tracker"],
+    scenario: {
+      title: "Flat, once she actually tracked it",
+      body: "A student assumed her networking outreach was improving based on vague impression, but tracking her actual response rate revealed it had been flat for weeks, prompting her to revisit her Follow-Up Email approach specifically.",
+    },
+    pitfalls: [
+      "Tracking too many metrics at once, which becomes a burden rather than a useful, sustainable system",
+    ],
+    successSignal:
+      "You have objective, tracked evidence of real improvement, or lack of it, in a specific communication metric over time.",
+    milestoneTies: [86],
+  },
+
+  202: {
+    definition:
+      "An Interview Question Bank Created drafts a library of common interview questions with articulated answers, building a ready reference rather than improvising fresh each time.",
+    whyItMatters:
+      "Having answers already thought through and refined means you're not starting from scratch under the real pressure of an actual interview.",
+    whenWhoWhere: [
+      { label: "When", body: "Build this before an active interview season, and continue adding to it as new questions come up in real interviews." },
+      { label: "Who", body: "No collaborator required, though testing answers on a mentor sharpens them." },
+      { label: "Where", body: "Kept in a dedicated document, organized by question category: behavioral, technical, situational." },
+    ],
+    howItWorks: [
+      "List the most common questions in your field.",
+      "Draft a genuine, specific answer for each, drawing on your STAR stories from Stage Three where relevant.",
+    ],
+    tools: ["Your Stage Three STAR Answer Prep worksheets as source material", "A running document"],
+    scenario: {
+      title: "Consistent instead of wildly variable",
+      body: "A student who improvised interview answers fresh each time found her quality varied wildly. Building a question bank with genuinely refined answers in advance made her performance consistently strong regardless of which questions came up.",
+    },
+    pitfalls: [
+      "Memorizing answers so rigidly that they sound robotic rather than genuinely conversational when delivered live",
+    ],
+    successSignal:
+      "You walk into interviews with genuine, refined answers ready for the most likely questions, rather than improvising under pressure.",
+    milestoneTies: [64, 65],
+  },
+
+  203: {
+    definition:
+      "A Communication Challenge Goal sets a specific weekly target to improve one aspect of writing, speaking, or reading, building momentum through small, consistent stretch goals.",
+    whyItMatters:
+      "A single weekly stretch goal is more sustainable and trackable than a vague, ongoing intention to improve communication broadly.",
+    whenWhoWhere: [
+      { label: "When", body: "Set a new one each week, building on what you've learned from the previous week's challenge." },
+      { label: "Who", body: "No collaborator required, though sharing your weekly goal with an accountability partner from Stage Four adds follow-through." },
+      { label: "Where", body: "Set at the start of each week, reviewed at the end." },
+    ],
+    howItWorks: [
+      "Choose one specific, achievable stretch goal for the week, such as ask a follow-up question in every conversation this week.",
+      "Review at week's end: did you do it, what did you learn.",
+    ],
+    tools: ["A simple weekly tracker, potentially combined with your Stage Four accountability check-ins"],
+    scenario: {
+      title: "A natural default by week four",
+      body: "A student's weekly challenge to state my recommendation first in every meeting built directly on feedback she'd received, and by the fourth week of consistent practice, it had become her natural default rather than something she had to consciously remember.",
+    },
+    pitfalls: [
+      "Choosing a goal too vague to actually assess at week's end, undermining the accountability the exercise is meant to provide",
+    ],
+    successSignal:
+      "By week's end, you can clearly say whether you met the specific goal, and you've built one small, real habit improvement.",
+    milestoneTies: [90],
   },
 };

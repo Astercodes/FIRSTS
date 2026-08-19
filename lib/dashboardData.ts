@@ -1,12 +1,12 @@
 export type ModuleStatus = "complete" | "in-progress" | "available" | "locked";
-export type StageId = "one" | "two" | "three" | "four" | "five";
+export type StageId = "one" | "two" | "three" | "four" | "five" | "six";
 
 export type FirstModule = {
   id: number;
   code: string;
   stage: StageId;
   title: string;
-  category: "A" | "B" | "C" | "D" | "E" | "F" | "G" | "H" | "I" | "J" | "K" | "L" | "M" | "N" | "O" | "P" | "Q";
+  category: "A" | "B" | "C" | "D" | "E" | "F" | "G" | "H" | "I" | "J" | "K" | "L" | "M" | "N" | "O" | "P" | "Q" | "R" | "S" | "T" | "U" | "V" | "W";
   time: string;
   difficulty: "Easy" | "Moderate" | "Deep";
   status: ModuleStatus;
@@ -32,6 +32,12 @@ export const CATEGORY_META = {
   O: { label: "Extra Edge & Standout Factor", color: "var(--juicy-plum)" },
   P: { label: "Thinking, Reasoning & Mental Models", color: "var(--tropical-mango)" },
   Q: { label: "Thinking Frameworks", color: "var(--juicy-plum)" },
+  R: { label: "Written Communication", color: "var(--neon-pink)" },
+  S: { label: "Verbal & Presentation Skills", color: "var(--sunshine-orange)" },
+  T: { label: "Listening, Reading & Comprehension", color: "var(--citrus-lime)" },
+  U: { label: "Interpersonal & Networking Communication", color: "var(--fuchsia-blast)" },
+  V: { label: "Feedback, Reflection & Self-Assessment", color: "var(--berry-burst)" },
+  W: { label: "Communication Systems & Tools", color: "var(--juicy-plum)" },
 } as const;
 
 export const STAGES: { id: StageId; label: string; shortLabel: string; href: string }[] = [
@@ -40,6 +46,7 @@ export const STAGES: { id: StageId; label: string; shortLabel: string; href: str
   { id: "three", label: "Stage Three · Job Application & Interview Skills", shortLabel: "Stage Three", href: "/dashboard/stage/three" },
   { id: "four", label: "Stage Four · Mindset, Productivity & Habits", shortLabel: "Stage Four", href: "/dashboard/stage/four" },
   { id: "five", label: "Stage Five · Thinking, Reasoning & Mental Models", shortLabel: "Stage Five", href: "/dashboard/stage/five" },
+  { id: "six", label: "Stage Six · Communication: Speaking, Reading, Writing", shortLabel: "Stage Six", href: "/dashboard/stage/six" },
 ];
 
 const STAGE_ONE_FIRSTS: FirstModule[] = [
@@ -190,7 +197,80 @@ const STAGE_FIVE_FIRSTS: FirstModule[] = [
   { id: 133, code: "H30", stage: "five", title: "Strategic Mapping", category: "Q", time: "1 hr", difficulty: "Moderate", status: "locked" },
 ];
 
-export const FIRSTS: FirstModule[] = [...STAGE_ONE_FIRSTS, ...STAGE_TWO_FIRSTS, ...STAGE_THREE_FIRSTS, ...STAGE_FOUR_FIRSTS, ...STAGE_FIVE_FIRSTS];
+const STAGE_SIX_FIRSTS: FirstModule[] = [
+  { id: 134, code: "I1", stage: "six", title: "Professional Email Sent", category: "R", time: "15 to 20 min", difficulty: "Easy", status: "locked" },
+  { id: 135, code: "I2", stage: "six", title: "Meeting Agenda Prepared", category: "R", time: "15 min", difficulty: "Easy", status: "locked" },
+  { id: 136, code: "I8", stage: "six", title: "Written Report Drafted", category: "R", time: "Several hrs", difficulty: "Moderate", status: "locked" },
+  { id: 137, code: "I9", stage: "six", title: "Report Edited for Clarity", category: "R", time: "30 to 45 min", difficulty: "Easy", status: "locked" },
+  { id: 138, code: "I10", stage: "six", title: "Technical Document Created", category: "R", time: "1 to 2 hrs", difficulty: "Moderate", status: "locked" },
+  { id: 139, code: "I15", stage: "six", title: "Persuasive Email Sent", category: "R", time: "20 to 30 min", difficulty: "Easy", status: "locked" },
+  { id: 140, code: "I18", stage: "six", title: "Business Proposal Drafted", category: "R", time: "1 to 2 hrs", difficulty: "Moderate", status: "locked" },
+  { id: 141, code: "I19", stage: "six", title: "Meeting Minutes Documented", category: "R", time: "20 min", difficulty: "Easy", status: "locked" },
+  { id: 142, code: "I24", stage: "six", title: "Summary Email Sent After Meeting", category: "R", time: "5 to 10 min", difficulty: "Easy", status: "locked" },
+  { id: 143, code: "I33", stage: "six", title: "Follow-Up Email After Networking", category: "R", time: "10 min", difficulty: "Easy", status: "locked" },
+  { id: 144, code: "I38", stage: "six", title: "Written Technical Summary", category: "R", time: "30 to 45 min", difficulty: "Moderate", status: "locked" },
+  { id: 145, code: "I39", stage: "six", title: "Email Etiquette Audit", category: "R", time: "30 min", difficulty: "Easy", status: "locked" },
+  { id: 146, code: "I44", stage: "six", title: "Written Proposal Feedback", category: "R", time: "30 min + revision", difficulty: "Moderate", status: "locked" },
+  { id: 147, code: "I46", stage: "six", title: "Email to Recruiter", category: "R", time: "20 min", difficulty: "Easy", status: "locked" },
+  { id: 148, code: "I50", stage: "six", title: "Collaborative Document Editing", category: "R", time: "Ongoing", difficulty: "Easy", status: "locked" },
+  { id: 149, code: "I62", stage: "six", title: "Written Executive Summary", category: "R", time: "30 to 45 min", difficulty: "Moderate", status: "locked" },
+  { id: 150, code: "I65", stage: "six", title: "Email Draft Templates Library", category: "R", time: "1 to 2 hrs", difficulty: "Easy", status: "locked" },
+  { id: 151, code: "I3", stage: "six", title: "Presentation Script Written", category: "S", time: "30 to 45 min", difficulty: "Easy", status: "locked" },
+  { id: 152, code: "I4", stage: "six", title: "Presentation Delivered", category: "S", time: "30 min", difficulty: "Moderate", status: "locked" },
+  { id: 153, code: "I5", stage: "six", title: "Public Speaking Recording", category: "S", time: "45 min", difficulty: "Easy", status: "locked" },
+  { id: 154, code: "I11", stage: "six", title: "Elevator Pitch Practiced", category: "S", time: "5 min/day, 1 wk", difficulty: "Easy", status: "locked" },
+  { id: 155, code: "I20", stage: "six", title: "Storytelling Exercise", category: "S", time: "30 to 45 min", difficulty: "Moderate", status: "locked" },
+  { id: 156, code: "I21", stage: "six", title: "Voice Recording Review", category: "S", time: "15 min", difficulty: "Easy", status: "locked" },
+  { id: 157, code: "I22", stage: "six", title: "Presentation Slide Deck Created", category: "S", time: "1 to 2 hrs", difficulty: "Moderate", status: "locked" },
+  { id: 158, code: "I23", stage: "six", title: "Debate Participation", category: "S", time: "1 hr prep + debate", difficulty: "Moderate", status: "locked" },
+  { id: 159, code: "I28", stage: "six", title: "Group Presentation Coordinated", category: "S", time: "30 to 45 min", difficulty: "Moderate", status: "locked" },
+  { id: 160, code: "I29", stage: "six", title: "Impromptu Speaking Drill", category: "S", time: "10 min", difficulty: "Easy", status: "locked" },
+  { id: 161, code: "I31", stage: "six", title: "Persuasive Presentation", category: "S", time: "Several hrs", difficulty: "Deep", status: "locked" },
+  { id: 162, code: "I51", stage: "six", title: "Presentation to Non-Expert Audience", category: "S", time: "45 min", difficulty: "Moderate", status: "locked" },
+  { id: 163, code: "I57", stage: "six", title: "Elevator Pitch Refinement", category: "S", time: "20 min", difficulty: "Easy", status: "locked" },
+  { id: 164, code: "I63", stage: "six", title: "Peer Learning Circle Presentation", category: "S", time: "30 min", difficulty: "Easy", status: "locked" },
+  { id: 165, code: "I66", stage: "six", title: "Read-Aloud Exercise", category: "S", time: "5 min", difficulty: "Easy", status: "locked" },
+  { id: 166, code: "I6", stage: "six", title: "Active Listening Drill", category: "T", time: "Ongoing", difficulty: "Easy", status: "locked" },
+  { id: 167, code: "I14", stage: "six", title: "Reading Summary Exercise", category: "T", time: "15 to 20 min", difficulty: "Easy", status: "locked" },
+  { id: 168, code: "I26", stage: "six", title: "Podcast or Video Commentary", category: "T", time: "10 min", difficulty: "Easy", status: "locked" },
+  { id: 169, code: "I27", stage: "six", title: "Reading Comprehension Challenge", category: "T", time: "30 to 60 min", difficulty: "Moderate", status: "locked" },
+  { id: 170, code: "I35", stage: "six", title: "Reading List for Career Growth", category: "T", time: "30 min", difficulty: "Easy", status: "locked" },
+  { id: 171, code: "I47", stage: "six", title: "Reflective Reading Journal", category: "T", time: "10 min", difficulty: "Easy", status: "locked" },
+  { id: 172, code: "I49", stage: "six", title: "Reading Speed & Comprehension Drill", category: "T", time: "Ongoing", difficulty: "Easy", status: "locked" },
+  { id: 173, code: "I55", stage: "six", title: "Listening and Summarization Exercise", category: "T", time: "10 min", difficulty: "Easy", status: "locked" },
+  { id: 174, code: "I12", stage: "six", title: "Networking Conversation", category: "U", time: "Ongoing", difficulty: "Easy", status: "locked" },
+  { id: 175, code: "I13", stage: "six", title: "Mock Interview", category: "U", time: "45 min to 1 hr", difficulty: "Moderate", status: "locked" },
+  { id: 176, code: "I16", stage: "six", title: "Discussion Facilitation", category: "U", time: "Ongoing", difficulty: "Moderate", status: "locked" },
+  { id: 177, code: "I17", stage: "six", title: "Cross-Cultural Communication Exercise", category: "U", time: "Ongoing", difficulty: "Moderate", status: "locked" },
+  { id: 178, code: "I32", stage: "six", title: "Professional Networking Introduction", category: "U", time: "15 min", difficulty: "Easy", status: "locked" },
+  { id: 179, code: "I37", stage: "six", title: "Online Discussion Participation", category: "U", time: "10 min", difficulty: "Easy", status: "locked" },
+  { id: 180, code: "I41", stage: "six", title: "Professional Chat with Senior", category: "U", time: "Ongoing", difficulty: "Moderate", status: "locked" },
+  { id: 181, code: "I42", stage: "six", title: "Conflict Resolution Conversation", category: "U", time: "15 to 30 min", difficulty: "Deep", status: "locked" },
+  { id: 182, code: "I45", stage: "six", title: "Meeting Facilitation in Class/Group", category: "U", time: "Ongoing", difficulty: "Moderate", status: "locked" },
+  { id: 183, code: "I48", stage: "six", title: "Online Course Discussion Participation", category: "U", time: "10 min", difficulty: "Easy", status: "locked" },
+  { id: 184, code: "I53", stage: "six", title: "Professional Social Media Commenting", category: "U", time: "15 min/wk", difficulty: "Easy", status: "locked" },
+  { id: 185, code: "I64", stage: "six", title: "Scenario-Based Communication Drill", category: "U", time: "20 to 30 min", difficulty: "Moderate", status: "locked" },
+  { id: 186, code: "I69", stage: "six", title: "Public Forum Participation", category: "U", time: "Opportunity-dependent", difficulty: "Easy", status: "locked" },
+  { id: 187, code: "I7", stage: "six", title: "Feedback Response", category: "V", time: "Ongoing", difficulty: "Easy", status: "locked" },
+  { id: 188, code: "I25", stage: "six", title: "Professional Feedback Given", category: "V", time: "10 to 15 min", difficulty: "Easy", status: "locked" },
+  { id: 189, code: "I30", stage: "six", title: "Written Reflection on Learning", category: "V", time: "15 to 20 min", difficulty: "Easy", status: "locked" },
+  { id: 190, code: "I36", stage: "six", title: "Communication Self-Assessment", category: "V", time: "30 min", difficulty: "Easy", status: "locked" },
+  { id: 191, code: "I40", stage: "six", title: "Reflection on Public Speaking Anxiety", category: "V", time: "20 min", difficulty: "Easy", status: "locked" },
+  { id: 192, code: "I54", stage: "six", title: "Peer Review Feedback", category: "V", time: "20 to 30 min", difficulty: "Moderate", status: "locked" },
+  { id: 193, code: "I60", stage: "six", title: "Reflective Speaking Log", category: "V", time: "5 min", difficulty: "Easy", status: "locked" },
+  { id: 194, code: "I67", stage: "six", title: "Communication Reflection with Mentor", category: "V", time: "30 min", difficulty: "Moderate", status: "locked" },
+  { id: 195, code: "I70", stage: "six", title: "Reflection on Persuasion Techniques", category: "V", time: "20 to 30 min", difficulty: "Easy", status: "locked" },
+  { id: 196, code: "I34", stage: "six", title: "Documented Communication Goals", category: "W", time: "20 min", difficulty: "Easy", status: "locked" },
+  { id: 197, code: "I43", stage: "six", title: "Visual Communication Exercise", category: "W", time: "30 to 45 min", difficulty: "Moderate", status: "locked" },
+  { id: 198, code: "I52", stage: "six", title: "Active Note-Taking System", category: "W", time: "15 min setup", difficulty: "Easy", status: "locked" },
+  { id: 199, code: "I56", stage: "six", title: "Communication Flow Mapping", category: "W", time: "30 min", difficulty: "Moderate", status: "locked" },
+  { id: 200, code: "I58", stage: "six", title: "Storyboard Creation", category: "W", time: "20 to 30 min", difficulty: "Easy", status: "locked" },
+  { id: 201, code: "I59", stage: "six", title: "Communication Metrics Tracking", category: "W", time: "10 min/wk", difficulty: "Easy", status: "locked" },
+  { id: 202, code: "I61", stage: "six", title: "Interview Question Bank Created", category: "W", time: "2 to 3 hrs", difficulty: "Moderate", status: "locked" },
+  { id: 203, code: "I68", stage: "six", title: "Communication Challenge Goal", category: "W", time: "10 min/wk", difficulty: "Easy", status: "locked" },
+];
+
+export const FIRSTS: FirstModule[] = [...STAGE_ONE_FIRSTS, ...STAGE_TWO_FIRSTS, ...STAGE_THREE_FIRSTS, ...STAGE_FOUR_FIRSTS, ...STAGE_FIVE_FIRSTS, ...STAGE_SIX_FIRSTS];
 
 export const MOCK_USER = {
   firstName: "Ada",
