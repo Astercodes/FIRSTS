@@ -1,8 +1,27 @@
+"use client";
+
+import { useEffect, useState } from "react";
 import Link from "next/link";
 import { MOCK_USER } from "@/lib/dashboardData";
+import { loadProfile, PROFILE_CHANGE_EVENT, type Profile } from "@/lib/profileStore";
 
 export function Topbar() {
-  const initial = MOCK_USER.firstName[0];
+  const [profile, setProfile] = useState<Partial<Profile> | null>(null);
+
+  useEffect(() => {
+    const sync = () => setProfile(loadProfile());
+    sync();
+    window.addEventListener(PROFILE_CHANGE_EVENT, sync);
+    window.addEventListener("storage", sync);
+    return () => {
+      window.removeEventListener(PROFILE_CHANGE_EVENT, sync);
+      window.removeEventListener("storage", sync);
+    };
+  }, []);
+
+  const displayName = profile?.name || MOCK_USER.firstName;
+  const firstName = displayName.split(" ")[0];
+  const initial = displayName.charAt(0).toUpperCase();
 
   return (
     <header className="sticky top-0 z-20 flex items-center justify-between border-b border-ink/8 bg-paper/80 px-6 py-4 backdrop-blur-md lg:px-10 print:hidden">
@@ -16,7 +35,7 @@ export function Topbar() {
       </Link>
 
       <p className="hidden font-display text-lg font-semibold text-ink lg:block">
-        Good to see you, {MOCK_USER.firstName}.
+        Good to see you, {firstName}.
       </p>
 
       <div className="flex items-center gap-3">
@@ -24,15 +43,23 @@ export function Topbar() {
           <FlameIcon className="h-3.5 w-3.5 text-[var(--sunshine-orange)]" />
           {MOCK_USER.streakDays}-day streak
         </div>
-        <div
-          className="flex h-9 w-9 items-center justify-center rounded-full font-display text-sm font-bold text-ink"
-          style={{
-            background:
-              "linear-gradient(135deg, var(--neon-pink), var(--tropical-mango))",
-          }}
+        <Link
+          href="/dashboard/profile"
+          className="flex h-9 w-9 shrink-0 items-center justify-center overflow-hidden rounded-full font-display text-sm font-bold text-ink transition-transform hover:scale-105"
+          style={
+            profile?.photo
+              ? undefined
+              : { background: "linear-gradient(135deg, var(--neon-pink), var(--tropical-mango))" }
+          }
+          aria-label="Your profile"
         >
-          {initial}
-        </div>
+          {profile?.photo ? (
+            // eslint-disable-next-line @next/next/no-img-element
+            <img src={profile.photo} alt={displayName} className="h-full w-full object-cover" />
+          ) : (
+            initial
+          )}
+        </Link>
       </div>
     </header>
   );

@@ -5,7 +5,7 @@ import Link from "next/link";
 import { useFirstsWithProgress } from "@/lib/progressStore";
 import { CATEGORY_META, MOCK_USER, completionStats } from "@/lib/dashboardData";
 import { PORTFOLIO_PIECES, effectiveAnswers } from "@/lib/portfolioContent";
-import { loadProfile, saveProfile, type Profile } from "@/lib/profileStore";
+import { loadProfile, saveProfile, processPhoto, type Profile } from "@/lib/profileStore";
 
 type ResolvedPiece = {
   moduleId: number;
@@ -20,6 +20,8 @@ type ResolvedPiece = {
 const EMPTY_PROFILE: Profile = {
   name: MOCK_USER.firstName,
   headline: "",
+  status: "",
+  bio: "",
   email: "",
   phone: "",
   location: "",
@@ -34,33 +36,6 @@ const VALUE_CHIP_COLORS = [
   "var(--fuchsia-blast)",
   "var(--tropical-mango)",
 ];
-
-/** Downscale + square-crop an uploaded image so it stores compactly and fills the avatar circle. */
-function processPhoto(file: File): Promise<string> {
-  return new Promise((resolve, reject) => {
-    const reader = new FileReader();
-    reader.onerror = () => reject(reader.error);
-    reader.onload = () => {
-      const img = new Image();
-      img.onerror = reject;
-      img.onload = () => {
-        const size = 480;
-        const canvas = document.createElement("canvas");
-        canvas.width = size;
-        canvas.height = size;
-        const ctx = canvas.getContext("2d");
-        if (!ctx) return reject(new Error("no canvas context"));
-        const side = Math.min(img.width, img.height);
-        const sx = (img.width - side) / 2;
-        const sy = (img.height - side) / 2;
-        ctx.drawImage(img, sx, sy, side, side, 0, 0, size, size);
-        resolve(canvas.toDataURL("image/jpeg", 0.88));
-      };
-      img.src = reader.result as string;
-    };
-    reader.readAsDataURL(file);
-  });
-}
 
 export function PortfolioView() {
   const modules = useFirstsWithProgress();
