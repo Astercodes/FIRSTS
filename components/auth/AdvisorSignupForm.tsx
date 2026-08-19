@@ -7,17 +7,19 @@ import { TextField } from "@/components/ui/TextField";
 import { PillSelect } from "@/components/auth/PillSelect";
 import { SubmitButton } from "@/components/auth/SubmitButton";
 import { findInstitutionByDomain, type Institution } from "@/lib/institutions";
+import { saveAdvisor, type AdvisorRole } from "@/lib/advisorStore";
 
 const COLOR = "var(--citrus-lime)";
-const ROLES = ["Advisor / Mentor", "Institution Admin"];
+const ROLES: AdvisorRole[] = ["Advisor / Mentor", "Institution Admin"];
 
 type Step = "entry" | "verified" | "not-approved" | "requested" | "done";
 
 export function AdvisorSignupForm() {
+  const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [step, setStep] = useState<Step>("entry");
   const [match, setMatch] = useState<Institution | undefined>();
-  const [role, setRole] = useState<string | null>(null);
+  const [role, setRole] = useState<AdvisorRole | null>(null);
   const [orgName, setOrgName] = useState("");
 
   function handleEntrySubmit(e: FormEvent<HTMLFormElement>) {
@@ -29,6 +31,9 @@ export function AdvisorSignupForm() {
 
   function handleVerifiedSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
+    if (role) {
+      saveAdvisor({ name, email, institution: match?.name ?? "", role });
+    }
     setStep("done");
   }
 
@@ -76,7 +81,21 @@ export function AdvisorSignupForm() {
             ✓ <strong className="text-paper">{match?.name}</strong> is a FIRSTS
             partner institution
           </div>
-          <PillSelect label="Your role" options={ROLES} value={role} onChange={setRole} color={COLOR} />
+          <TextField
+            id="advisor-name"
+            label="Full name"
+            placeholder="Priya Nandakumar"
+            required
+            value={name}
+            onChange={(e) => setName(e.target.value)}
+          />
+          <PillSelect
+            label="Your role"
+            options={ROLES}
+            value={role}
+            onChange={(v) => setRole(v as AdvisorRole)}
+            color={COLOR}
+          />
           <TextField
             id="password"
             type="password"
@@ -154,7 +173,7 @@ export function AdvisorSignupForm() {
           </p>
           {step === "done" && (
             <Link
-              href="/dashboard"
+              href="/advisor"
               className="mt-6 inline-block w-full rounded-2xl px-6 py-3.5 text-sm font-semibold text-ink transition-transform duration-300 hover:scale-[1.015]"
               style={{ background: COLOR }}
             >

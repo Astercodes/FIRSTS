@@ -9,6 +9,8 @@ export function AuthShell({
   width = "md",
   children,
   footer,
+  backHref = "/onboarding",
+  backLabel = "← Choose a different path",
 }: {
   tag: string;
   title: string;
@@ -17,6 +19,8 @@ export function AuthShell({
   width?: "md" | "lg";
   children: ReactNode;
   footer?: ReactNode;
+  backHref?: string;
+  backLabel?: string;
 }) {
   return (
     <main className="relative isolate flex min-h-[100svh] flex-col overflow-hidden bg-mesh-dark px-6 py-8 text-paper">
@@ -37,10 +41,10 @@ export function AuthShell({
           </span>
         </Link>
         <Link
-          href="/onboarding"
+          href={backHref}
           className="text-sm font-medium text-paper/60 transition-colors hover:text-paper"
         >
-          ← Choose a different path
+          {backLabel}
         </Link>
       </header>
 

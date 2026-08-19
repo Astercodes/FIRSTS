@@ -230,6 +230,7 @@ export const AUDIENCES: Record<string, AudienceConfig> = {
       "Every FIRSTS graduate builds a portfolio as they go: a Core Values Audit, a STAR-method interview bank, a Strategic Goal Sheet, real artifacts, not just adjectives on a resume. It's evidence behind the resume, not a replacement for your own interview process.",
     primaryCta: { label: "Request a demo", href: "/request-demo?for=employers" },
     secondaryCta: { label: "Sponsor a cohort or school", href: "/request-demo?for=employer-sponsor" },
+    tertiaryCta: { label: "Preview the employer portal", href: "/employer/login" },
     color: "var(--pink-grapefruit)",
     colorSecondary: "var(--sunshine-orange)",
     stats: [
