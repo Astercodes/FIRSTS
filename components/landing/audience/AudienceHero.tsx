@@ -92,6 +92,17 @@ export function AudienceHero({ config }: { config: AudienceConfig }) {
           </Link>
         </motion.div>
 
+        {config.tertiaryCta && (
+          <motion.div initial="hidden" animate="show" custom={3.5} variants={FADE_UP}>
+            <Link
+              href={config.tertiaryCta.href}
+              className="mt-5 inline-block text-sm font-semibold text-paper/60 underline decoration-paper/30 underline-offset-4 transition-colors hover:text-paper hover:decoration-paper/60"
+            >
+              {config.tertiaryCta.label} →
+            </Link>
+          </motion.div>
+        )}
+
         <motion.div
           initial="hidden"
           animate="show"

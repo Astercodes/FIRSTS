@@ -81,6 +81,10 @@ export function StagesPreview() {
   return (
     <section id="stages" className="relative overflow-hidden bg-paper-dim py-28">
       <Reveal className="mx-auto mb-14 max-w-2xl px-6">
+        <span className="mb-5 inline-flex items-center gap-2 rounded-full border border-ink/10 bg-white px-4 py-1.5 text-xs font-medium text-ink/70">
+          <span className="h-1.5 w-1.5 rounded-full bg-neon-pink" />
+          {ALL_FIRSTS.length} guided FIRSTS across {STAGES.length} stages, and counting
+        </span>
         <p className="mb-3 text-xs font-semibold uppercase tracking-[0.2em] text-berry-burst">
           Start here: Stage One
         </p>
@@ -163,10 +167,10 @@ export function StagesPreview() {
               </p>
             </div>
             <Link
-              href={stage.href}
+              href="/onboarding"
               className="shrink-0 rounded-full bg-ink px-5 py-2.5 text-sm font-semibold text-paper transition-colors hover:bg-ink/85"
             >
-              See {stage.shortLabel} →
+              Start {stage.shortLabel} →
             </Link>
           </div>
         ))}

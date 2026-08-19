@@ -4,6 +4,13 @@ export type AudienceCta = { label: string; href: string };
 export type AudienceStep = { title: string; body: string };
 export type AudienceFeature = { title: string; body: string };
 export type AudienceStat = { value: string; label: string };
+export type AudiencePartnerSection = {
+  kicker: string;
+  title: string;
+  body: string;
+  bullets: string[];
+  cta: AudienceCta;
+};
 
 export type AudienceConfig = {
   slug: string;
@@ -14,6 +21,7 @@ export type AudienceConfig = {
   subheadline: string;
   primaryCta: AudienceCta;
   secondaryCta: AudienceCta;
+  tertiaryCta?: AudienceCta;
   color: string;
   colorSecondary: string;
   stats: AudienceStat[];
@@ -23,6 +31,7 @@ export type AudienceConfig = {
   scenarioBody: string;
   ctaHeadline: string;
   ctaBody: string;
+  partnerSection?: AudiencePartnerSection;
 };
 
 const TOTAL_FIRSTS = FIRSTS.length;
@@ -147,6 +156,7 @@ export const AUDIENCES: Record<string, AudienceConfig> = {
       "Roster sync, SSO, and a cohort dashboard built around completion status, not surveillance. You see progress. Students control how much of their actual work you see.",
     primaryCta: { label: "Verify your institution", href: "/onboarding/advisor" },
     secondaryCta: { label: "Talk to us about your campus", href: "/for/institutions" },
+    tertiaryCta: { label: "Request a demo", href: "/request-demo?for=career-centers" },
     color: "var(--juicy-plum)",
     colorSecondary: "var(--berry-burst)",
     stats: [
@@ -183,6 +193,7 @@ export const AUDIENCES: Record<string, AudienceConfig> = {
       "FIRSTS gives every student a sequenced, guided practice for career clarity, and gives your institution the completion data to show it's working, semester over semester.",
     primaryCta: { label: "Verify your institution", href: "/onboarding/advisor" },
     secondaryCta: { label: "See the career center view", href: "/for/career-centers" },
+    tertiaryCta: { label: "Request a demo", href: "/request-demo?for=institutions" },
     color: "var(--berry-burst)",
     colorSecondary: "var(--neon-pink)",
     stats: [
@@ -217,8 +228,8 @@ export const AUDIENCES: Record<string, AudienceConfig> = {
     highlight: "already done the work.",
     subheadline:
       "Every FIRSTS graduate builds a portfolio as they go: a Core Values Audit, a STAR-method interview bank, a Strategic Goal Sheet, real artifacts, not just adjectives on a resume. It's evidence behind the resume, not a replacement for your own interview process.",
-    primaryCta: { label: "See a sample portfolio", href: "/dashboard/portfolio" },
-    secondaryCta: { label: "Partner with us at scale", href: "/for/institutions" },
+    primaryCta: { label: "Request a demo", href: "/request-demo?for=employers" },
+    secondaryCta: { label: "Sponsor a cohort or school", href: "/request-demo?for=employer-sponsor" },
     color: "var(--pink-grapefruit)",
     colorSecondary: "var(--sunshine-orange)",
     stats: [
@@ -243,6 +254,18 @@ export const AUDIENCES: Record<string, AudienceConfig> = {
       "A hiring manager reviewing two similar resumes asked one candidate for her FIRSTS portfolio. The STAR bank made the phone screen faster, both sides already knew which stories to dig into.",
     ctaHeadline: "Ask your next candidate for their FIRSTS portfolio.",
     ctaBody: "It's free for candidates to build, there's nothing for you to sign up for.",
+    partnerSection: {
+      kicker: "Beyond hiring",
+      title: "Sponsor access for a cohort, a school, or your own workforce.",
+      body: "Some employers don't just want better candidates, they want to fund the pipeline. FIRSTS can be sponsored for a specific cohort, a student group, a school or department, or rolled out to your own employees as a professional development benefit.",
+      bullets: [
+        "Sponsor a cohort at a partner school",
+        "Sponsor a student group or department",
+        "Partner directly with a school to bring FIRSTS to their students",
+        "Make FIRSTS accessible to your own employees",
+      ],
+      cta: { label: "Talk to us about sponsorship", href: "/request-demo?for=employer-sponsor" },
+    },
   },
 };
 

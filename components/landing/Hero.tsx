@@ -2,7 +2,6 @@
 
 import Link from "next/link";
 import { motion, type Variants } from "framer-motion";
-import { FIRSTS, STAGES } from "@/lib/dashboardData";
 
 const FADE_UP: Variants = {
   hidden: { opacity: 0, y: 28 },
@@ -119,21 +118,10 @@ export function Hero() {
           animate="show"
           custom={0}
           variants={FADE_UP}
-          className="mb-5 text-xs font-semibold uppercase tracking-[0.25em] text-[var(--lime-zest)]"
+          className="mb-6 text-xs font-semibold uppercase tracking-[0.25em] text-[var(--lime-zest)]"
         >
           Structured career readiness infrastructure
         </motion.p>
-
-        <motion.div
-          initial="hidden"
-          animate="show"
-          custom={0.5}
-          variants={FADE_UP}
-          className="mb-6 inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-4 py-1.5 text-xs font-medium text-paper/80 backdrop-blur"
-        >
-          <span className="h-1.5 w-1.5 rounded-full bg-[var(--lime-zest)]" />
-          {FIRSTS.length} guided FIRSTS across {STAGES.length} stages, and counting
-        </motion.div>
 
         <motion.h1
           initial="hidden"
