@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { Reveal } from "@/components/ui/Reveal";
 
 const STATS = [
@@ -37,6 +38,21 @@ export function Institutions() {
                 </p>
               </div>
             ))}
+          </div>
+
+          <div className="mt-8 flex flex-wrap gap-x-6 gap-y-2">
+            <Link
+              href="/for/career-centers"
+              className="text-sm font-semibold text-berry-burst underline decoration-berry-burst/30 underline-offset-4 transition-colors hover:decoration-berry-burst"
+            >
+              See it for career centers →
+            </Link>
+            <Link
+              href="/for/institutions"
+              className="text-sm font-semibold text-berry-burst underline decoration-berry-burst/30 underline-offset-4 transition-colors hover:decoration-berry-burst"
+            >
+              See it for institutions →
+            </Link>
           </div>
         </Reveal>
 

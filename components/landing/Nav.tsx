@@ -5,9 +5,9 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 
 const LINKS = [
-  { label: "The Stages", href: "#stages" },
-  { label: "AI Coach", href: "#coach" },
-  { label: "For Institutions", href: "#institutions" },
+  { label: "The Stages", href: "/#stages" },
+  { label: "AI Coach", href: "/#coach" },
+  { label: "For Institutions", href: "/for/institutions" },
 ];
 
 export function Nav() {

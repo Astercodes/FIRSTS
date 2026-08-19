@@ -114,10 +114,20 @@ export function Hero() {
       </div>
 
       <div className="relative z-10 flex max-w-4xl flex-col items-center text-center">
-        <motion.div
+        <motion.p
           initial="hidden"
           animate="show"
           custom={0}
+          variants={FADE_UP}
+          className="mb-5 text-xs font-semibold uppercase tracking-[0.25em] text-[var(--lime-zest)]"
+        >
+          Structured career readiness infrastructure
+        </motion.p>
+
+        <motion.div
+          initial="hidden"
+          animate="show"
+          custom={0.5}
           variants={FADE_UP}
           className="mb-6 inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-4 py-1.5 text-xs font-medium text-paper/80 backdrop-blur"
         >
@@ -145,9 +155,9 @@ export function Hero() {
           variants={FADE_UP}
           className="mt-6 max-w-xl text-balance text-lg text-paper/70"
         >
-          FIRSTS turns a career-clarity manual into a living, AI-guided
-          practice: values, purpose, strengths, and market research, in one
-          place, with a coach that never writes your answers for you.
+          FIRSTS turns career readiness from a vague checklist into a
+          visible, sequenced system: built for the student, and for the
+          institution that has to prove it&apos;s working.
         </motion.p>
 
         <motion.div
@@ -182,7 +192,8 @@ export function Hero() {
           variants={FADE_UP}
           className="mt-8 text-xs uppercase tracking-[0.2em] text-paper/40"
         >
-          For students · early professionals · career centers
+          For students · recent grads · career centers · institutions ·
+          employers
         </motion.p>
       </div>
     </section>
