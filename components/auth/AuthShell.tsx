@@ -8,6 +8,7 @@ export function AuthShell({
   color,
   width = "md",
   children,
+  footer,
 }: {
   tag: string;
   title: string;
@@ -15,6 +16,7 @@ export function AuthShell({
   color: string;
   width?: "md" | "lg";
   children: ReactNode;
+  footer?: ReactNode;
 }) {
   return (
     <main className="relative isolate flex min-h-[100svh] flex-col overflow-hidden bg-mesh-dark px-6 py-8 text-paper">
@@ -66,15 +68,17 @@ export function AuthShell({
 
           <div className="glass-dark rounded-[28px] p-7 sm:p-8">{children}</div>
 
-          <p className="mt-6 text-center text-sm text-paper/50">
-            Already have an account?{" "}
-            <Link
-              href="/login"
-              className="font-semibold text-paper underline decoration-white/30 underline-offset-4 transition-colors hover:decoration-white"
-            >
-              Log in
-            </Link>
-          </p>
+          {footer ?? (
+            <p className="mt-6 text-center text-sm text-paper/50">
+              Already have an account?{" "}
+              <Link
+                href="/login"
+                className="font-semibold text-paper underline decoration-white/30 underline-offset-4 transition-colors hover:decoration-white"
+              >
+                Log in
+              </Link>
+            </p>
+          )}
         </div>
       </div>
     </main>
