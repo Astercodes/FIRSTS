@@ -1,12 +1,12 @@
 export type ModuleStatus = "complete" | "in-progress" | "available" | "locked";
-export type StageId = "one" | "two" | "three";
+export type StageId = "one" | "two" | "three" | "four";
 
 export type FirstModule = {
   id: number;
   code: string;
   stage: StageId;
   title: string;
-  category: "A" | "B" | "C" | "D" | "E" | "F" | "G" | "H" | "I" | "J" | "K" | "L" | "M";
+  category: "A" | "B" | "C" | "D" | "E" | "F" | "G" | "H" | "I" | "J" | "K" | "L" | "M" | "N" | "O";
   time: string;
   difficulty: "Easy" | "Moderate" | "Deep";
   status: ModuleStatus;
@@ -28,12 +28,15 @@ export const CATEGORY_META = {
   K: { label: "Application Systems & Materials", color: "var(--sunshine-orange)" },
   L: { label: "Interview Preparation", color: "var(--fuchsia-blast)" },
   M: { label: "Closing the Loop & Offers", color: "var(--lime-zest)" },
+  N: { label: "Mindset, Productivity & Habits", color: "var(--pink-grapefruit)" },
+  O: { label: "Extra Edge & Standout Factor", color: "var(--juicy-plum)" },
 } as const;
 
 export const STAGES: { id: StageId; label: string; shortLabel: string; href: string }[] = [
   { id: "one", label: "Stage One · Self-Awareness & Career Clarity", shortLabel: "Stage One", href: "/dashboard/stage" },
   { id: "two", label: "Stage Two · Professional Identity & Personal Brand", shortLabel: "Stage Two", href: "/dashboard/stage/two" },
   { id: "three", label: "Stage Three · Job Application & Interview Skills", shortLabel: "Stage Three", href: "/dashboard/stage/three" },
+  { id: "four", label: "Stage Four · Mindset, Productivity & Habits", shortLabel: "Stage Four", href: "/dashboard/stage/four" },
 ];
 
 const STAGE_ONE_FIRSTS: FirstModule[] = [
@@ -123,7 +126,35 @@ const STAGE_THREE_FIRSTS: FirstModule[] = [
   { id: 78, code: "C20", stage: "three", title: "Offer Comparison Matrix", category: "M", time: "1 hr", difficulty: "Moderate", status: "locked" },
 ];
 
-export const FIRSTS: FirstModule[] = [...STAGE_ONE_FIRSTS, ...STAGE_TWO_FIRSTS, ...STAGE_THREE_FIRSTS];
+const STAGE_FOUR_FIRSTS: FirstModule[] = [
+  { id: 79, code: "E1", stage: "four", title: "Confidence Routine", category: "N", time: "15 min", difficulty: "Easy", status: "locked" },
+  { id: 80, code: "E2", stage: "four", title: "Morning Productivity Ritual", category: "N", time: "15 min", difficulty: "Easy", status: "locked" },
+  { id: 81, code: "E3", stage: "four", title: "Reflection Journal", category: "N", time: "5 min", difficulty: "Easy", status: "locked" },
+  { id: 82, code: "E4", stage: "four", title: "Resilience Drill", category: "N", time: "20 min", difficulty: "Easy", status: "locked" },
+  { id: 83, code: "E5", stage: "four", title: "Time Management Matrix", category: "N", time: "20 min", difficulty: "Easy", status: "locked" },
+  { id: 84, code: "E6", stage: "four", title: "Daily Learning Habit", category: "N", time: "30 to 60 min", difficulty: "Easy", status: "locked" },
+  { id: 85, code: "E7", stage: "four", title: "Micro-Skill Challenge", category: "N", time: "1 to 2 hrs", difficulty: "Easy", status: "locked" },
+  { id: 86, code: "E8", stage: "four", title: "Personal KPI Tracker", category: "N", time: "5 min", difficulty: "Easy", status: "locked" },
+  { id: 87, code: "E9", stage: "four", title: "Focus Routine", category: "N", time: "Ongoing", difficulty: "Easy", status: "locked" },
+  { id: 88, code: "E10", stage: "four", title: "Gratitude Habit", category: "N", time: "2 min", difficulty: "Easy", status: "locked" },
+  { id: 89, code: "E11", stage: "four", title: "Stress Management Technique", category: "N", time: "10 to 20 min", difficulty: "Easy", status: "locked" },
+  { id: 90, code: "E12", stage: "four", title: "Accountability Partner", category: "N", time: "5 to 15 min", difficulty: "Easy", status: "locked" },
+  { id: 91, code: "E13", stage: "four", title: "Learning Log", category: "N", time: "2 to 5 min", difficulty: "Easy", status: "locked" },
+  { id: 92, code: "E14", stage: "four", title: "Habit Stacking Routine", category: "N", time: "15 min", difficulty: "Easy", status: "locked" },
+  { id: 93, code: "E15", stage: "four", title: "Self-Assessment Review", category: "N", time: "45 min to 1 hr", difficulty: "Moderate", status: "locked" },
+  { id: 94, code: "E16", stage: "four", title: "Energy Audit", category: "N", time: "1 wk", difficulty: "Easy", status: "locked" },
+  { id: 95, code: "E17", stage: "four", title: "Goal Visualization Exercise", category: "N", time: "5 min", difficulty: "Easy", status: "locked" },
+  { id: 96, code: "E18", stage: "four", title: "Affirmation Practice", category: "N", time: "2 min", difficulty: "Easy", status: "locked" },
+  { id: 97, code: "E19", stage: "four", title: "Networking/Skill Challenge", category: "N", time: "2 hrs", difficulty: "Easy", status: "locked" },
+  { id: 98, code: "E20", stage: "four", title: "Productivity Tool Setup", category: "N", time: "2 hrs", difficulty: "Moderate", status: "locked" },
+  { id: 99, code: "F1", stage: "four", title: "Side Project", category: "O", time: "Several wks", difficulty: "Deep", status: "locked" },
+  { id: 100, code: "F2", stage: "four", title: "Volunteer/Impact Experience", category: "O", time: "1 semester", difficulty: "Deep", status: "locked" },
+  { id: 101, code: "F3", stage: "four", title: "Certification/Badge", category: "O", time: "10 to 20 hrs", difficulty: "Moderate", status: "locked" },
+  { id: 102, code: "F4", stage: "four", title: "Strategic Goal Sheet", category: "O", time: "1 hr", difficulty: "Moderate", status: "locked" },
+  { id: 103, code: "F5", stage: "four", title: "Thought Leadership Post", category: "O", time: "3 to 5 hrs", difficulty: "Deep", status: "locked" },
+];
+
+export const FIRSTS: FirstModule[] = [...STAGE_ONE_FIRSTS, ...STAGE_TWO_FIRSTS, ...STAGE_THREE_FIRSTS, ...STAGE_FOUR_FIRSTS];
 
 export const MOCK_USER = {
   firstName: "Ada",

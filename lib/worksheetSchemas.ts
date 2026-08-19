@@ -1049,4 +1049,307 @@ export const WORKSHEET_SCHEMAS: Record<number, WorksheetField[]> = {
     { type: "textarea", key: "ifNot", label: "If not, what does that tell me?", rows: 2, seed: "" },
     { type: "text", key: "finalDecision", label: "Final decision", seed: "" },
   ],
+  79: [
+    { type: "text", key: "physicalCue", label: "Physical cue", hint: "A posture or gesture you'll use every time, e.g. shoulders back, feet planted.", seed: "Stand tall, shoulders back, feet shoulder-width apart" },
+    { type: "text", key: "breathingPattern", label: "Breathing pattern", hint: "A specific count you can repeat under pressure.", seed: "Inhale for 4 counts, hold for 4, exhale for 6" },
+    { type: "text", key: "mentalCue", label: "Mental cue", hint: "A short phrase or memory you'll bring to mind.", seed: "I've prepared for this, and I've done hard things before" },
+    { type: "table", key: "practiceLog", label: "2-week practice log", section: "Practice log", columns: [
+      { key: "day", label: "Day", kind: "text" },
+      { key: "ran", label: "Ran routine? (Y/N)", kind: "text" },
+      { key: "feeling", label: "How it felt", kind: "text" },
+    ], seedRows: [{ day: "Mon", ran: "Y", feeling: "Steadier than usual before my 9am class" }] },
+    { type: "table", key: "deploymentLog", label: "High-stakes deployment log", section: "Deployment log", columns: [
+      { key: "event", label: "Event", kind: "text" },
+      { key: "used", label: "Used routine? (Y/N)", kind: "text" },
+      { key: "result", label: "Result", kind: "text" },
+    ], seedRows: [{ event: "Interview with Acme Corp", used: "Y", result: "Felt grounded through the first tough question instead of freezing" }] },
+    { type: "textarea", key: "reflection", label: "Reflection", hint: "What changes in your body or mind when you run this routine?", rows: 2, seed: "My breathing slows down first, then my thoughts stop racing." },
+  ],
+
+  80: [
+    { type: "text", key: "wakeTime", label: "Wake time", seed: "6:45am" },
+    { type: "text", key: "firstTenMin", label: "First 10 minutes plan", hint: "What you do before checking your phone.", seed: "Make bed, drink water, stretch for 3 minutes" },
+    { type: "text", key: "planningMethod", label: "Planning method", hint: "How you decide today's priorities.", seed: "Write top 3 priorities on a sticky note" },
+    { type: "text", key: "energizeMethod", label: "Energize method", seed: "5 minutes of sunlight or a short walk" },
+    { type: "table", key: "weekTracker", label: "One-week tracker", section: "One-week tracker", columns: [
+      { key: "day", label: "Day", kind: "text" },
+      { key: "completed", label: "Ritual completed? (Y/N)", kind: "text" },
+      { key: "energy", label: "Energy level (1 to 10)", kind: "rating" },
+    ], seedRows: [{ day: "Mon", completed: "Y", energy: 7 }] },
+    { type: "textarea", key: "adjustment1", label: "What worked well this week?", rows: 2, seed: "Sticky-note priorities kept me from drifting into email first thing." },
+    { type: "textarea", key: "adjustment2", label: "What will you adjust next week?", rows: 2, seed: "Move wake time 15 minutes earlier so the ritual isn't rushed." },
+  ],
+
+  81: [
+    { type: "text", key: "entry1Date", label: "Entry 1: Date", section: "Entry 1", seed: "Monday" },
+    { type: "text", key: "entry1Win", label: "One win", section: "Entry 1", seed: "Finished my resume draft a day ahead of schedule" },
+    { type: "text", key: "entry1Lesson", label: "One lesson", section: "Entry 1", seed: "I write better in the morning than at night" },
+    { type: "text", key: "entry1Feedback", label: "One piece of feedback received", section: "Entry 1", seed: "A mentor said my bullet points needed stronger verbs" },
+    { type: "text", key: "entry2Date", label: "Entry 2: Date", section: "Entry 2", seed: "Thursday" },
+    { type: "text", key: "entry2Win", label: "One win", section: "Entry 2", seed: "Reached out to two alumni I'd been putting off" },
+    { type: "text", key: "entry2Lesson", label: "One lesson", section: "Entry 2", seed: "Cold outreach feels easier once I've done it once that week" },
+    { type: "text", key: "entry2Feedback", label: "One piece of feedback received", section: "Entry 2", seed: "A peer said my LinkedIn headline was too vague" },
+    { type: "textarea", key: "patternQuestion1", label: "What patterns do you notice across your wins?", section: "Weekly pattern review", rows: 2, seed: "Most wins happen when I do the hard task first thing in the morning." },
+    { type: "textarea", key: "patternQuestion2", label: "What patterns do you notice across your lessons and feedback?", section: "Weekly pattern review", rows: 2, seed: "I keep getting told to be more specific, in writing and in conversation." },
+  ],
+
+  82: [
+    { type: "textarea", key: "setbackDescription", label: "Describe a recent setback and your emotional reaction", hint: "Be specific about what happened and how it felt.", rows: 3, seed: "I didn't get a callback after a first-round interview I thought went well. I felt embarrassed and started doubting whether I was ready for this field at all." },
+    { type: "textarea", key: "reframe1", label: "What's one fact versus one story I'm telling myself?", rows: 2, seed: "Fact: I didn't get a callback. Story: I'm not cut out for this field." },
+    { type: "textarea", key: "reframe2", label: "What would I tell a friend in this exact situation?", rows: 2, seed: "I'd tell them one interview isn't a verdict on their whole career, and to ask what they could adjust for next time." },
+    { type: "textarea", key: "reframe3", label: "What is one thing within my control here?", rows: 2, seed: "I can ask for feedback on that interview and tighten my answers before the next one." },
+    { type: "text", key: "nextAction", label: "Next concrete action", seed: "Email the recruiter to ask for feedback on the interview" },
+    { type: "table", key: "resilienceLog", label: "Resilience log", section: "Resilience log", columns: [
+      { key: "setback", label: "Setback", kind: "text" },
+      { key: "lesson", label: "Lesson extracted", kind: "text" },
+      { key: "action", label: "Next action taken", kind: "text" },
+    ], seedRows: [{ setback: "No callback after first-round interview", lesson: "My answers were too broad, not specific enough", action: "Emailed for feedback, rewrote 3 stories with concrete numbers" }] },
+  ],
+
+  83: [
+    { type: "textarea", key: "urgentImportant", label: "Urgent & important", hint: "Do these now.", rows: 3, seed: "Finish the application due tomorrow" },
+    { type: "textarea", key: "importantNotUrgent", label: "Important, not urgent", hint: "Schedule these.", rows: 3, seed: "Build my Skill Growth Plan for next semester" },
+    { type: "textarea", key: "urgentNotImportant", label: "Urgent, not important", hint: "Delegate or shorten these.", rows: 3, seed: "Responding to a group chat about weekend plans" },
+    { type: "textarea", key: "neither", label: "Neither urgent nor important", hint: "Cut or limit these.", rows: 3, seed: "Scrolling social media between classes" },
+    { type: "text", key: "priorityRule1", label: "Priority rule 1", hint: "A rule you'll use to decide what to do first.", seed: "Anything due within 48 hours gets scheduled first" },
+    { type: "text", key: "priorityRule2", label: "Priority rule 2", seed: "No more than one 'neither' activity per day, and only after the important work is done" },
+  ],
+
+  84: [
+    { type: "text", key: "skill", label: "Skill I'm building", seed: "SQL for data analysis" },
+    { type: "text", key: "timeBlock", label: "Time block commitment", seed: "30 to 60 minutes, weekday mornings" },
+    { type: "table", key: "weekLog", label: "One-week log", section: "One-week log", columns: [
+      { key: "day", label: "Day", kind: "text" },
+      { key: "topic", label: "Topic covered", kind: "text" },
+      { key: "takeaway", label: "Key takeaway", kind: "text" },
+    ], seedRows: [{ day: "Mon", topic: "JOIN statements", takeaway: "Finally understand the difference between inner and left join" }] },
+    { type: "textarea", key: "review1", label: "What's sticking, and what isn't?", rows: 2, seed: "Syntax is sticking, but I forget it under time pressure, so I need timed practice." },
+    { type: "textarea", key: "review2", label: "What will you adjust for next week?", rows: 2, seed: "Add one timed practice problem each day instead of just reading." },
+  ],
+
+  85: [
+    { type: "text", key: "week1Skill", label: "Week 1: Micro-skill", section: "Week 1", seed: "Cold email outreach" },
+    { type: "text", key: "week1Practice", label: "Week 1: Practice", section: "Week 1", seed: "Sent 3 cold emails to alumni in my target field" },
+    { type: "text", key: "week1Evidence", label: "Week 1: Evidence", section: "Week 1", seed: "Got 1 reply and a 15-minute call scheduled" },
+    { type: "text", key: "week2Skill", label: "Week 2: Micro-skill", section: "Week 2", seed: "Data visualization in Excel" },
+    { type: "text", key: "week2Practice", label: "Week 2: Practice", section: "Week 2", seed: "Rebuilt a messy spreadsheet into 2 clean charts" },
+    { type: "text", key: "week2Evidence", label: "Week 2: Evidence", section: "Week 2", seed: "Used one chart in my class presentation" },
+    { type: "text", key: "week3Skill", label: "Week 3: Micro-skill", section: "Week 3", seed: "Public speaking under time pressure" },
+    { type: "text", key: "week3Practice", label: "Week 3: Practice", section: "Week 3", seed: "Gave a 2-minute impromptu update in a club meeting" },
+    { type: "text", key: "week3Evidence", label: "Week 3: Evidence", section: "Week 3", seed: "Stayed on time and got a compliment on clarity" },
+    { type: "chipList", key: "futureChallenges", label: "Running list of future micro-skill challenges", section: "Future challenges", seed: ["Negotiation basics", "Basic video editing", "Reading a financial statement"] },
+  ],
+
+  86: [
+    { type: "text", key: "kpi1", label: "KPI target 1", seed: "10 applications per week" },
+    { type: "text", key: "kpi2", label: "KPI target 2", seed: "3 networking touches per week" },
+    { type: "text", key: "kpi3", label: "KPI target 3", seed: "3 hours of skill-building per week" },
+    { type: "table", key: "weeklyTracker", label: "Weekly tracker", section: "Weekly tracker", columns: [
+      { key: "weekOf", label: "Week of", kind: "text" },
+      { key: "applications", label: "Applications", kind: "rating" },
+      { key: "networking", label: "Networking touches", kind: "rating" },
+      { key: "skillHours", label: "Skill hours", kind: "rating" },
+    ], seedRows: [{ weekOf: "Sept 1", applications: 8, networking: 2, skillHours: 4 }] },
+    { type: "textarea", key: "review1", label: "Which KPI is hardest to hit consistently, and why?", rows: 2, seed: "Networking touches, because it's easy to deprioritize when nothing is due." },
+    { type: "textarea", key: "review2", label: "What will you change next month?", rows: 2, seed: "Block a fixed 20 minutes every Friday just for networking outreach." },
+  ],
+
+  87: [
+    { type: "text", key: "blockLength", label: "Focus block length", seed: "45 minutes" },
+    { type: "text", key: "breakLength", label: "Break length", seed: "10 minutes" },
+    { type: "text", key: "environmentRules", label: "Environment rules", hint: "What you'll do to remove distractions.", seed: "Phone in another room, notifications off, door closed" },
+    { type: "table", key: "practiceLog", label: "Practice log", section: "Practice log", columns: [
+      { key: "session", label: "Session", kind: "text" },
+      { key: "task", label: "Task worked on", kind: "text" },
+      { key: "blocks", label: "Blocks completed", kind: "rating" },
+      { key: "quality", label: "Focus quality (1 to 10)", kind: "rating" },
+    ], seedRows: [{ session: "Tue AM", task: "Cover letter draft", blocks: 2, quality: 7 }] },
+    { type: "textarea", key: "adjustment1", label: "When did focus break down, and why?", rows: 2, seed: "Focus dropped after the second block once hunger set in." },
+    { type: "textarea", key: "adjustment2", label: "What will you adjust?", rows: 2, seed: "Eat before starting, and cap sessions at 3 blocks before a longer break." },
+  ],
+
+  88: [
+    { type: "textarea", key: "day1", label: "Day 1: Three things", rows: 2, seed: "A professor who stayed late to answer questions, a warm meal, a text from an old friend" },
+    { type: "textarea", key: "day2", label: "Day 2: Three things", rows: 2, seed: "Finishing a hard problem set, sunny weather, a good cup of coffee" },
+    { type: "textarea", key: "day3", label: "Day 3: Three things", rows: 2, seed: "A helpful comment from a mentor, my roommate's cooking, getting through a tough workout" },
+    { type: "textarea", key: "day4", label: "Day 4: Three things", rows: 2, seed: "A productive study session, a call with family, finishing a chore I'd been avoiding" },
+    { type: "textarea", key: "day5", label: "Day 5: Three things", rows: 2, seed: "An encouraging email, a walk outside, finishing the week's reading" },
+    { type: "textarea", key: "weekly1", label: "What kept showing up across your five days?", rows: 2, seed: "People, more than any achievement, showed up almost every day." },
+    { type: "textarea", key: "weekly2", label: "How did this practice change your mood over the week?", rows: 2, seed: "I noticed I complained less by Thursday, I was looking for the good moment instead." },
+  ],
+
+  89: [
+    { type: "text", key: "technique", label: "Technique chosen", seed: "Box breathing" },
+    { type: "text", key: "frequency", label: "Frequency", seed: "Once in the morning, once before any stressful task" },
+    { type: "table", key: "practiceLog", label: "Practice log", section: "Practice log", columns: [
+      { key: "day", label: "Day", kind: "text" },
+      { key: "practiced", label: "Practiced? (Y/N)", kind: "text" },
+      { key: "before", label: "Stress before (1 to 10)", kind: "rating" },
+      { key: "after", label: "Stress after (1 to 10)", kind: "rating" },
+    ], seedRows: [{ day: "Mon", practiced: "Y", before: 7, after: 4 }] },
+    { type: "textarea", key: "review1", label: "When was the technique most useful?", rows: 2, seed: "Right before checking my email after submitting an application." },
+    { type: "textarea", key: "review2", label: "What will you adjust?", rows: 2, seed: "Use it before class presentations too, not just applications." },
+  ],
+
+  90: [
+    { type: "text", key: "partner", label: "Accountability partner", seed: "My roommate, Dana" },
+    { type: "text", key: "frequency", label: "Check-in frequency", seed: "Every Sunday evening" },
+    { type: "text", key: "reportContent", label: "What we report to each other", seed: "One goal met, one goal missed, and next week's top priority" },
+    { type: "table", key: "checkinLog", label: "Check-in log", section: "Check-in log", columns: [
+      { key: "date", label: "Date", kind: "text" },
+      { key: "committed", label: "What I committed to", kind: "text" },
+      { key: "followedThrough", label: "Did I follow through?", kind: "text" },
+    ], seedRows: [{ date: "Sept 7", committed: "Send 3 networking emails", followedThrough: "Yes, sent all 3" }] },
+    { type: "textarea", key: "reflection", label: "How has having a partner changed your follow-through?", rows: 2, seed: "Knowing I have to say it out loud on Sunday keeps me from quietly letting a goal slide." },
+  ],
+
+  91: [
+    { type: "table", key: "entriesTable", label: "Learning log entries", section: "Learning log", columns: [
+      { key: "source", label: "Source", kind: "text" },
+      { key: "takeaway", label: "Key takeaway", kind: "text" },
+      { key: "apply", label: "How I'll apply it", kind: "text" },
+    ], seedRows: [{ source: "Podcast interview with a hiring manager", takeaway: "Most rejected resumes fail on specificity, not formatting", apply: "Rewrite my bullet points with real numbers" }] },
+    { type: "textarea", key: "review1", label: "What's the biggest shift in your thinking this month?", rows: 2, seed: "I used to think polish mattered most, now I think specificity matters more." },
+    { type: "textarea", key: "review2", label: "What will you seek out to learn next?", rows: 2, seed: "How to negotiate a starting offer, I've never done it before." },
+  ],
+
+  92: [
+    { type: "chipList", key: "stack", label: "Ordered habit stack", hint: "List each habit in the order you'll run it, anchored to an existing routine.", seed: ["After I pour coffee", "I review today's top 3 priorities", "Then I check my calendar", "Then I reply to any urgent message", "Then I start my first focus block"] },
+    { type: "table", key: "weekTracker", label: "One-week tracker", section: "One-week tracker", columns: [
+      { key: "day", label: "Day", kind: "text" },
+      { key: "completed", label: "Full stack completed? (Y/N)", kind: "text" },
+      { key: "brokeDown", label: "Where it broke down", kind: "text" },
+    ], seedRows: [{ day: "Mon", completed: "N", brokeDown: "Skipped the priorities review after an early meeting" }] },
+    { type: "text", key: "adjustment1", label: "What's the weakest link in the stack?", seed: "The priorities review, it's the easiest step to skip" },
+    { type: "text", key: "adjustment2", label: "How will you fix it?", seed: "Move it before I open my laptop instead of after" },
+  ],
+
+  93: [
+    { type: "scale", key: "confidenceLevel", label: "Confidence level", hint: "0 = very low, 100 = very high", seed: 55 },
+    { type: "scale", key: "consistencyHabits", label: "Consistency with habits", hint: "0 = very low, 100 = very high", seed: 60 },
+    { type: "scale", key: "careerReadiness", label: "Overall career readiness", hint: "0 = very low, 100 = very high", seed: 50 },
+    { type: "textarea", key: "reflection1", label: "What's grown most since you started this stage?", rows: 2, seed: "My ability to recover from a setback without spiraling for days." },
+    { type: "textarea", key: "reflection2", label: "What's still the biggest gap?", rows: 2, seed: "Consistency, I still fall off my habits during busy weeks." },
+    { type: "textarea", key: "reflection3", label: "What evidence supports your ratings above?", rows: 2, seed: "I kept my learning habit going for 3 straight weeks, but my focus routine has lapsed twice." },
+    { type: "text", key: "nextFocus", label: "Next month's focus", seed: "Protect the focus routine even during busy weeks" },
+  ],
+
+  94: [
+    { type: "table", key: "dailyLog", label: "Daily energy log", section: "Daily energy log", hint: "Rate your energy 1 to 10 for each time block.", columns: [
+      { key: "block", label: "Time block", kind: "text" },
+      { key: "mon", label: "Mon", kind: "rating" },
+      { key: "tue", label: "Tue", kind: "rating" },
+      { key: "wed", label: "Wed", kind: "rating" },
+      { key: "thu", label: "Thu", kind: "rating" },
+      { key: "fri", label: "Fri", kind: "rating" },
+    ], seedRows: [
+      { block: "Morning (7 to 11am)", mon: 8, tue: 7, wed: 8, thu: 6, fri: 7 },
+      { block: "Afternoon (12 to 4pm)", mon: 4, tue: 4, wed: 3, thu: 4, fri: 5 },
+      { block: "Evening (5 to 9pm)", mon: 6, tue: 5, wed: 6, thu: 6, fri: 7 },
+    ] },
+    { type: "textarea", key: "pattern1", label: "When is your energy consistently highest?", rows: 2, seed: "Mornings, every single day this week." },
+    { type: "textarea", key: "pattern2", label: "When is your energy consistently lowest?", rows: 2, seed: "Early-to-mid afternoon, right after lunch." },
+    { type: "textarea", key: "redesign1", label: "What should move into your high-energy blocks?", rows: 2, seed: "My hardest coursework and any application writing." },
+    { type: "textarea", key: "redesign2", label: "What should move into your low-energy blocks?", rows: 2, seed: "Email, admin tasks, and scheduling, things that don't need sharp thinking." },
+  ],
+
+  95: [
+    { type: "text", key: "milestone", label: "Milestone", seed: "Land a summer internship in data analytics" },
+    { type: "text", key: "targetDate", label: "Target date", seed: "March 15" },
+    { type: "textarea", key: "vividDetail", label: "Vivid detail", hint: "Describe the moment you hit this milestone in as much sensory detail as possible.", rows: 3, seed: "I'm reading the offer email at my kitchen table, the light is coming in low through the window, and I call my mom before I even finish reading it." },
+    { type: "textarea", key: "reverse1", label: "Working backward from that moment, what has to be true 1 month before?", rows: 2, seed: "I'll have completed at least 2 final-round interviews." },
+    { type: "textarea", key: "reverse2", label: "What has to be true today to stay on that path?", rows: 2, seed: "I need to have my applications and outreach list finalized by this Friday." },
+  ],
+
+  96: [
+    { type: "text", key: "affirmation1", label: "Affirmation 1", seed: "I've prepared for this, and preparation shows" },
+    { type: "text", key: "affirmation2", label: "Affirmation 2", seed: "Setbacks are information, not a verdict" },
+    { type: "text", key: "affirmation3", label: "Affirmation 3", seed: "I get better at this every time I practice" },
+    { type: "table", key: "practiceLog", label: "Practice log", section: "Practice log", columns: [
+      { key: "day", label: "Day", kind: "text" },
+      { key: "saidAloud", label: "Said aloud? (Y/N)", kind: "text" },
+      { key: "believable", label: "Did it feel believable?", kind: "text" },
+    ], seedRows: [{ day: "Mon", saidAloud: "Y", believable: "Mostly, affirmation 2 felt truest today" }] },
+    { type: "textarea", key: "revision", label: "Which affirmation needs revising, and why?", rows: 2, seed: "Affirmation 1 feels forced when I haven't actually prepared, I'll only say it on days it's true." },
+  ],
+
+  97: [
+    { type: "text", key: "week1Goal", label: "Week 1: Goal", section: "Week 1", seed: "Message 3 people in my target industry" },
+    { type: "text", key: "week1Result", label: "Week 1: Result", section: "Week 1", seed: "2 replied, 1 offered a 15-minute call" },
+    { type: "text", key: "week2Goal", label: "Week 2: Goal", section: "Week 2", seed: "Attend 1 industry event or webinar" },
+    { type: "text", key: "week2Result", label: "Week 2: Result", section: "Week 2", seed: "Attended, met 2 new contacts, exchanged information" },
+    { type: "text", key: "week3Goal", label: "Week 3: Goal", section: "Week 3", seed: "Follow up with everyone from weeks 1 and 2" },
+    { type: "text", key: "week3Result", label: "Week 3: Result", section: "Week 3", seed: "Sent 4 follow-ups, 1 turned into an ongoing mentor conversation" },
+    { type: "textarea", key: "reflection1", label: "What made outreach easier as the weeks went on?", rows: 2, seed: "Having a simple template to start from instead of writing each message from scratch." },
+    { type: "textarea", key: "reflection2", label: "What will you keep doing after this challenge ends?", rows: 2, seed: "The weekly follow-up habit, that's where the real relationships started forming." },
+  ],
+
+  98: [
+    { type: "text", key: "taskManager", label: "Task manager chosen", seed: "Todoist" },
+    { type: "text", key: "calendar", label: "Calendar tool chosen", seed: "Google Calendar" },
+    { type: "text", key: "notesApp", label: "Notes app chosen", seed: "Notion" },
+    { type: "checklist", key: "configChecklist", label: "Configuration checklist", section: "Configuration checklist", items: ["Task manager set up with today's priorities", "Calendar blocked with focus time and deadlines", "Notes app organized into a few clear folders", "All three tools linked or reviewed together once daily"], seedChecked: ["Task manager set up with today's priorities"] },
+    { type: "textarea", key: "thirtyDayCheck", label: "30-day check: Is this system actually reducing friction?", rows: 2, seed: "Mostly yes, though I still forget to check my calendar in the mornings, that's my next fix." },
+  ],
+
+  99: [
+    { type: "text", key: "projectIdea", label: "Project idea", seed: "A simple budgeting app for college students" },
+    { type: "text", key: "skillDemonstrated", label: "Skill it demonstrates", seed: "End-to-end product thinking and basic front-end development" },
+    { type: "text", key: "scope", label: "Scope", hint: "Keep this realistic for the time you actually have.", seed: "A single-page tool with 3 core features, built over 6 weeks" },
+    { type: "table", key: "milestonePlan", label: "Milestone plan", section: "Milestone plan", columns: [
+      { key: "milestone", label: "Milestone", kind: "text" },
+      { key: "targetDate", label: "Target date", kind: "text" },
+      { key: "status", label: "Status", kind: "text" },
+    ], seedRows: [{ milestone: "Working prototype of core feature", targetDate: "Week 3", status: "In progress" }] },
+    { type: "textarea", key: "showcasePlan", label: "How will you showcase this once it's done?", rows: 2, seed: "A short write-up on LinkedIn with a link to the live demo and the code." },
+  ],
+
+  100: [
+    { type: "text", key: "organization", label: "Organization", seed: "Local food bank" },
+    { type: "text", key: "role", label: "Role", seed: "Volunteer logistics coordinator" },
+    { type: "text", key: "timeCommitment", label: "Time commitment", seed: "4 hours per week for one semester" },
+    { type: "table", key: "impactLog", label: "Impact log", section: "Impact log", columns: [
+      { key: "date", label: "Date", kind: "text" },
+      { key: "whatIDid", label: "What I did", kind: "text" },
+      { key: "impact", label: "Impact / outcome", kind: "text" },
+    ], seedRows: [{ date: "Sept 10", whatIDid: "Redesigned the volunteer sign-up sheet", impact: "Cut scheduling conflicts roughly in half" }] },
+    { type: "textarea", key: "storyDevelopment", label: "Turn this into a 30-second story for interviews", rows: 3, seed: "I noticed our volunteer sign-up process kept double-booking shifts, so I rebuilt it as a shared calendar. Conflicts dropped by about half, and it's still the process they use." },
+  ],
+
+  101: [
+    { type: "text", key: "certification", label: "Certification / badge chosen", seed: "Google Data Analytics Certificate" },
+    { type: "text", key: "relevance", label: "Why it's relevant to my direction", seed: "Directly matches the skills listed in most entry-level analyst postings I've seen" },
+    { type: "text", key: "estTime", label: "Estimated time to complete", seed: "10 to 20 hours" },
+    { type: "table", key: "progressTracker", label: "Progress tracker", section: "Progress tracker", columns: [
+      { key: "module", label: "Module / section", kind: "text" },
+      { key: "completed", label: "Completed? (Y/N)", kind: "text" },
+      { key: "date", label: "Date", kind: "text" },
+    ], seedRows: [{ module: "Foundations of data analysis", completed: "Y", date: "Sept 5" }] },
+    { type: "checklist", key: "rolloutChecklist", label: "Rollout checklist", section: "Rollout checklist", items: ["Added to resume", "Added to LinkedIn", "Mentioned in at least one application"], seedChecked: [] },
+  ],
+
+  102: [
+    { type: "table", key: "goalsTable", label: "Goals", section: "Goals", columns: [
+      { key: "goal", label: "Goal", kind: "text" },
+      { key: "whyItMatters", label: "Why it matters", kind: "text" },
+      { key: "targetDate", label: "Target date", kind: "text" },
+    ], seedRows: [{ goal: "Land 3 second-round interviews", whyItMatters: "Proof my applications are actually competitive", targetDate: "End of semester" }] },
+    { type: "table", key: "firstActionsTable", label: "First actions", section: "First actions", columns: [
+      { key: "goal", label: "Goal", kind: "text" },
+      { key: "firstAction", label: "First concrete action", kind: "text" },
+      { key: "when", label: "This week or next?", kind: "text" },
+    ], seedRows: [{ goal: "Land 3 second-round interviews", firstAction: "Rewrite resume bullets with specific numbers", when: "This week" }] },
+    { type: "text", key: "reviewSchedule", label: "Review schedule", hint: "When will you revisit this sheet?", seed: "First Sunday of every month" },
+  ],
+
+  103: [
+    { type: "textarea", key: "pointOfView", label: "Point of view", hint: "What's one opinion you hold about your field that not everyone agrees with?", rows: 2, seed: "I think most students over-optimize their resume format and under-optimize the actual evidence behind each bullet point." },
+    { type: "textarea", key: "groundingExperience", label: "Grounding experience", hint: "What specific experience backs this up?", rows: 2, seed: "I rewrote my own resume three times, the version with real numbers got twice the response rate of the polished but vague one." },
+    { type: "text", key: "outline1", label: "Outline point 1", seed: "The problem: vague bullet points" },
+    { type: "text", key: "outline2", label: "Outline point 2", seed: "What I tried that didn't work" },
+    { type: "text", key: "outline3", label: "Outline point 3", seed: "What changed when I added real numbers" },
+    { type: "text", key: "outline4", label: "Outline point 4", seed: "One takeaway readers can use today" },
+    { type: "textarea", key: "draft", label: "Draft", rows: 6, seed: "Most resumes fail for a boring reason: they're vague. I rewrote mine three times before I figured that out. The version that finally worked replaced 'responsible for reporting' with 'built a weekly report that cut review time by 3 hours.' Same job, twice the callbacks. If your bullet points could apply to anyone, they're not doing their job. Go find the number." },
+    { type: "checklist", key: "publishChecklist", label: "Publish & share checklist", section: "Publish & share checklist", items: ["Reviewed by mentor or peer", "Published", "Shared directly with relevant contacts"], seedChecked: [] },
+  ],
 };

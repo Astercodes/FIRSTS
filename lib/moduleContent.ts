@@ -91,6 +91,31 @@ export const COACH_MODE: Record<number, CoachMode> = {
   76: "research",
   77: "research",
   78: "synthesis",
+  79: "reflective",
+  80: "reflective",
+  81: "reflective",
+  82: "reflective",
+  83: "hybrid",
+  84: "reflective",
+  85: "reflective",
+  86: "hybrid",
+  87: "reflective",
+  88: "reflective",
+  89: "reflective",
+  90: "reflective",
+  91: "reflective",
+  92: "reflective",
+  93: "synthesis",
+  94: "reflective",
+  95: "reflective",
+  96: "reflective",
+  97: "reflective",
+  98: "hybrid",
+  99: "reflective",
+  100: "reflective",
+  101: "research",
+  102: "synthesis",
+  103: "reflective",
 };
 
 export const LEARN_CONTENT: Record<number, LearnContent> = {
@@ -2411,5 +2436,720 @@ export const LEARN_CONTENT: Record<number, LearnContent> = {
     successSignal:
       "You can explain your final decision with specific reference to your own weighted priorities, not just it felt right or it paid more.",
     milestoneTies: [1, 2],
+  },
+  79: {
+    definition:
+      "A Confidence Routine is a short, repeatable daily practice combining posture, breathing, and visualization that you run before high-stakes moments or simply to start your day grounded rather than reactive.",
+    whyItMatters:
+      "Confidence is not a fixed trait you either have or do not, it is a state you can deliberately enter through the same small physical and mental cues each time. Students who wait to feel confident before acting often wait indefinitely, while a routine lets you act your way into the feeling.",
+    whenWhoWhere: [
+      { label: "When", body: "Build this early in the semester, before you need it for a specific high-stakes event, so it is already a habit rather than something you are improvising under pressure." },
+      { label: "Who", body: "No collaborator required, though a mentor or coach can help you notice which physical cues genuinely shift your state versus which ones are just performance." },
+      { label: "Where", body: "Practiced in your room each morning, and again in the minutes before any interview, presentation, or difficult conversation." },
+    ],
+    howItWorks: [
+      "Choose one physical cue (shoulders back, feet planted), one breathing pattern (four slow breaths), and one mental cue (a specific memory or phrase).",
+      "Run all three in sequence every morning for two weeks until it is automatic.",
+      "Deploy it before any high-stakes moment.",
+    ],
+    tools: ["A simple phone timer for the breathing count", "A notes app to record which memory or phrase works best"],
+    scenario: {
+      title: "Ninety seconds, measurably calmer",
+      body: "A student used to spend the ten minutes before every interview scrolling her phone to distract herself from nerves, which left her more anxious, not less. She replaced it with a ninety-second routine of posture, breath, and a specific memory of a past success, and reported walking into her next three interviews measurably calmer.",
+    },
+    pitfalls: [
+      "Treating the routine as a one-time fix rather than a practiced habit",
+      "Choosing cues that do not actually resonate with you personally, just because they worked for someone else",
+    ],
+    successSignal:
+      "You can notice your body shifting into a calmer, more grounded state within the ninety seconds of running the routine, even under real pressure.",
+    milestoneTies: [96],
+  },
+
+  80: {
+    definition:
+      "A Morning Productivity Ritual is a short, consistent sequence you run at the start of each day to plan, prioritize, and energize before reacting to emails, notifications, or other people's agendas.",
+    whyItMatters:
+      "Without a ritual, the first hour of the day often gets hijacked by whatever demands attention loudest, not what matters most. Students who start reactively tend to stay reactive all day, while a deliberate morning sequence sets the tone for intentional work.",
+    whenWhoWhere: [
+      { label: "When", body: "Build this at the start of a semester or job search, when establishing new daily patterns is easier than retrofitting them into an already busy routine." },
+      { label: "Who", body: "No collaborator required, though sharing your ritual with a roommate or accountability partner can help you stick with it during the first few weeks." },
+      { label: "Where", body: "Practiced at home before checking your phone, ideally in the same physical spot each day to build the habit faster." },
+    ],
+    howItWorks: [
+      "Choose three fixed steps: a few minutes of quiet planning, identifying your top one to three priorities for the day, and one small energizing action (movement, sunlight, music).",
+      "Keep the whole ritual under fifteen minutes so it is sustainable.",
+      "Do it before opening any app that invites reaction.",
+    ],
+    tools: ["A simple paper notebook or notes app for the daily plan", "A phone setting that delays notifications until the ritual is done"],
+    scenario: {
+      title: "Starting the day on her own terms",
+      body: "A student used to start every day by scrolling emails in bed, which left her anxious and behind before she had even gotten up. She switched to ten minutes of planning and stretching before touching her phone, and noticed she felt in control of her day rather than controlled by it within the first week.",
+    },
+    pitfalls: [
+      "Designing an overly elaborate ritual that takes an hour and collapses under its own weight after a few days",
+      "Checking your phone before the ritual is complete",
+    ],
+    successSignal:
+      "You consistently know your top three priorities for the day before 9am, and you feel like you are starting the day on your own terms rather than someone else's.",
+    milestoneTies: [],
+  },
+
+  81: {
+    definition:
+      "A Reflection Journal is a regular, low-friction habit of writing down your wins, lessons, and feedback so that growth becomes visible over time instead of disappearing into memory.",
+    whyItMatters:
+      "Without a written record, real progress is easy to underestimate, and hard-won lessons are easy to relearn the hard way a second time. A reflection habit turns scattered experiences into a legible, trackable story of growth.",
+    whenWhoWhere: [
+      { label: "When", body: "Start this as early as possible in Stage One, since its value compounds the longer you keep it, but it is never too late to begin." },
+      { label: "Who", body: "No collaborator required, this is a private practice, though sharing occasional entries with a mentor can deepen the reflection." },
+      { label: "Where", body: "Written in a notebook or notes app, ideally at a consistent time such as Sunday evenings or right after a significant event." },
+    ],
+    howItWorks: [
+      "After any notable event (an interview, a piece of feedback, a hard week), write three short entries: one win, one lesson, and one piece of feedback received.",
+      "Keep entries under five minutes so the habit does not feel burdensome.",
+      "Review past entries monthly.",
+    ],
+    tools: ["A simple notebook or notes app with dated entries, kept in one consistent place"],
+    scenario: {
+      title: "Catching a repeated mistake in real time",
+      body: "A student could not remember, six months into her job search, whether she had already learned a specific interview lesson or was encountering it for the first time. After starting a reflection journal, she caught herself repeating a mistake in real time because she recognized it from a page two weeks earlier, and corrected course before the interview ended.",
+    },
+    pitfalls: [
+      "Writing entries so long and elaborate that the habit becomes a chore and gets abandoned",
+      "Only writing during hard times and never capturing wins",
+    ],
+    successSignal:
+      "You can flip back through a month of entries and see a clear, specific story of what you learned and how you grew, not just a vague sense that time passed.",
+    milestoneTies: [93],
+  },
+
+  82: {
+    definition:
+      "A Resilience Drill is a deliberate practice of processing rejection or failure constructively, using a structured reflection instead of either suppressing the disappointment or spiraling into it.",
+    whyItMatters:
+      "A real job search guarantees rejection, often repeatedly, and how a candidate processes that rejection directly affects whether the next application or interview gets their best effort or their depleted leftovers. Resilience is a skill that can be drilled, not just a trait some people happen to have.",
+    whenWhoWhere: [
+      { label: "When", body: "Practice this the first time you face a real rejection or setback, ideally with the structure already designed before you need it emotionally." },
+      { label: "Who", body: "A mentor, friend, or accountability partner who can help you separate the useful lesson from the unhelpful self-criticism after a setback." },
+      { label: "Where", body: "Done privately, soon after receiving disappointing news, before the feeling has a chance to calcify into a broader narrative about your worth." },
+    ],
+    howItWorks: [
+      "After a rejection or setback, give yourself a defined window to feel the disappointment (an hour, not a week).",
+      "Walk through three questions: what is one thing in my control I would adjust, what is one thing that was genuinely outside my control, and what is one piece of evidence this is not a pattern.",
+    ],
+    tools: ["A simple written template with the three reflection questions, kept ready before you need it"],
+    scenario: {
+      title: "Three questions instead of a spiral",
+      body: "A student was rejected from her top-choice company after a final-round interview and initially spiraled into thinking she was not good enough for any of her remaining applications. Using the three-question drill, she identified one specific answer she had rushed, one factor entirely outside her control (they had hired internally), and reminded herself of two other strong interview performances that same month.",
+    },
+    pitfalls: [
+      "Skipping the feeling entirely and rushing straight to lessons learned, which can suppress real processing",
+      "Staying stuck in the feeling indefinitely without ever moving to reflection",
+    ],
+    successSignal:
+      "After a setback, you can identify one specific, actionable lesson without spiraling into a broader story about your overall worth or ability.",
+    milestoneTies: [60],
+  },
+
+  83: {
+    definition:
+      "A Time Management Matrix is a simple framework, typically a four-quadrant grid sorting tasks by urgency and importance, used to prioritize high-impact work over merely urgent-feeling busywork.",
+    whyItMatters:
+      "Without a prioritization system, urgent but low-value tasks (a fast email, a notification) tend to crowd out important but non-urgent ones (skill-building, networking), even though the important work is what actually moves a career forward.",
+    whenWhoWhere: [
+      { label: "When", body: "Build this once your task load includes real competing priorities, typically once job searching, coursework, and skill-building are all happening simultaneously." },
+      { label: "Who", body: "No collaborator required, though a mentor can help you sanity check whether you are classifying tasks accurately rather than avoiding hard ones by calling them low priority." },
+      { label: "Where", body: "Used during your weekly planning session, reviewing your task list and sorting each item into a quadrant." },
+    ],
+    howItWorks: [
+      "Draw a four-quadrant grid: urgent and important, important but not urgent, urgent but not important, neither.",
+      "Sort your current task list into the grid honestly.",
+      "Prioritize quadrant two (important, not urgent) deliberately, since it is the quadrant most often neglected despite driving the most long-term value.",
+    ],
+    tools: ["A simple grid drawn on paper or in a notes app, no special software required"],
+    scenario: {
+      title: "Seeing where the important work was landing",
+      body: "A student's task list was dominated by quick emails and notifications, while his skill-building goals kept getting pushed to tomorrow. After sorting his tasks into the matrix, he saw clearly that his most important work was consistently landing in the neglected quadrant, and started blocking dedicated time for it first, before the urgent tasks could crowd it out.",
+    },
+    pitfalls: [
+      "Classifying everything as urgent and important, which defeats the purpose of prioritization",
+      "Building the matrix once and never updating it as priorities shift",
+    ],
+    successSignal:
+      "You can point to specific blocks of time each week protected for important but not urgent work, and that work is actually getting done rather than perpetually deferred.",
+    milestoneTies: [84, 97],
+  },
+
+  84: {
+    definition:
+      "A Daily Learning Habit is a consistent commitment of 30 to 60 minutes each day dedicated specifically to building a skill relevant to your career direction, protected from being crowded out by other demands.",
+    whyItMatters:
+      "Skills compound slowly and are easy to deprioritize day to day, but the gap between students who protect consistent learning time and those who do not becomes significant over a semester. A small daily habit beats an occasional large effort.",
+    whenWhoWhere: [
+      { label: "When", body: "Build this once you have identified a specific skill gap, ideally from your Stage One Skill Growth Plan, so the time has a clear target rather than being vaguely aspirational." },
+      { label: "Who", body: "No collaborator required, though an accountability partner can help you maintain consistency during the early weeks." },
+      { label: "Where", body: "Practiced at the same time and place each day, ideally during a natural energy peak identified through your Energy Audit." },
+    ],
+    howItWorks: [
+      "Choose one specific skill and one specific daily time block, protected on your calendar like a class.",
+      "Track completion with a simple checkmark system.",
+      "Review progress weekly rather than expecting daily visible improvement.",
+    ],
+    tools: ["A calendar block", "A simple habit tracker (paper or app)", "Whatever specific learning resource matches your target skill"],
+    scenario: {
+      title: "A certification without a large time sacrifice",
+      body: "A student wanted to build Google Analytics fluency but kept deprioritizing it whenever the week got busy. She blocked 45 minutes every morning right after her productivity ritual, treating it as non-negotiable as a class, and had completed a full certification within six weeks without ever feeling like she had made a large time sacrifice on any single day.",
+    },
+    pitfalls: [
+      "Choosing an unrealistic daily time commitment that collapses the first busy week",
+      "Switching skills too frequently to build real depth in any one area",
+    ],
+    successSignal:
+      "You can look back at a month of tracked days and see consistent completion, with a specific, demonstrable skill improvement to show for it.",
+    milestoneTies: [13],
+  },
+
+  85: {
+    definition:
+      "A Micro-Skill Challenge is a weekly commitment to learning one small, specific new skill or technique, chosen deliberately to build a habit of continuous growth rather than letting skill-building stay abstract.",
+    whyItMatters:
+      "A single big skill goal can feel distant and overwhelming, while a new micro-skill each week creates frequent small wins that build both real capability and the confidence that comes from visible progress.",
+    whenWhoWhere: [
+      { label: "When", body: "Start this once your Daily Learning Habit (E6) is established, as a way to add variety and breadth alongside your deeper, ongoing skill focus." },
+      { label: "Who", body: "No collaborator required, though sharing your weekly challenge with a friend or accountability partner adds light social motivation." },
+      { label: "Where", body: "Practiced in short bursts throughout the week, wherever the skill naturally applies." },
+    ],
+    howItWorks: [
+      "Each Monday, choose one small, specific skill you can realistically learn and demonstrate by Friday, such as a single Excel function or a specific interview technique.",
+      "Practice it in a real context, not just a tutorial.",
+      "Note what you learned.",
+    ],
+    tools: ["A running list of candidate micro-skills to pull from each week"],
+    scenario: {
+      title: "One function at a time",
+      body: "A student challenged herself to learn one new Excel function every week for a month, applying each one to real coursework data instead of a generic tutorial exercise. By the end of the month, she could build a working pivot table from scratch, a skill that had felt intimidating as a single big goal but approachable one function at a time.",
+    },
+    pitfalls: [
+      "Choosing a skill too large to actually complete in a week, which undermines the confidence-building purpose of the exercise",
+      "Skipping weeks without noticing the habit has quietly stopped",
+    ],
+    successSignal:
+      "You can point to a running list of small, specific skills learned week over week, each with a real example of where you applied it.",
+    milestoneTies: [84, 56, 64],
+  },
+
+  86: {
+    definition:
+      "A Personal KPI Tracker is a simple dashboard of key numbers, such as applications sent, networking conversations had, and skill-building hours logged, that makes your job search effort visible and measurable rather than a vague sense of being busy.",
+    whyItMatters:
+      "Job searches can feel like constant effort with no clear signal of progress, which erodes motivation over time. Tracking a small set of meaningful numbers turns invisible effort into visible momentum, even before offers start coming in.",
+    whenWhoWhere: [
+      { label: "When", body: "Set this up at the start of your active job search, alongside your Stage Three Application Tracker, so both operational and motivational tracking run together." },
+      { label: "Who", body: "No collaborator required, though sharing your weekly numbers with an accountability partner adds useful external visibility." },
+      { label: "Where", body: "Updated weekly, ideally during the same session as your Sunday planning ritual." },
+    ],
+    howItWorks: [
+      "Choose three to five KPIs that reflect real effort, such as applications sent, networking conversations, skill-building hours, and interviews completed.",
+      "Log the numbers weekly.",
+      "Review the trend monthly rather than judging any single week in isolation.",
+    ],
+    tools: ["A simple spreadsheet or notes app table, updated weekly"],
+    scenario: {
+      title: "Effort that was building toward something",
+      body: "A student felt like her job search was going nowhere during a slow month with no callbacks. Reviewing her KPI tracker, she saw she had actually had fifteen networking conversations and forty hours of skill-building that month, effort that was not showing up as offers yet but was clearly building toward something, which kept her motivated to continue.",
+    },
+    pitfalls: [
+      "Tracking too many numbers, which makes the habit tedious",
+      "Only tracking outcomes (offers) rather than effort inputs, which are what you can actually control",
+    ],
+    successSignal:
+      "You can look at a month of tracked numbers and see clear, consistent effort, even during weeks when outcomes like callbacks feel discouraging.",
+    milestoneTies: [59],
+  },
+
+  87: {
+    definition:
+      "A Focus Routine is a structured approach to deep, uninterrupted work, typically using timed blocks like the Pomodoro technique or longer deep-work sessions, designed to protect concentration from constant fragmentation.",
+    whyItMatters:
+      "Constant task-switching and notification interruptions make even simple work take far longer than necessary and leave students feeling busy without feeling productive. A structured focus routine reclaims real depth of attention.",
+    whenWhoWhere: [
+      { label: "When", body: "Build this once you have consistent blocks of important work to protect, such as skill-building, application tailoring, or coursework." },
+      { label: "Who", body: "No collaborator required, though roommates or family should know your focus block hours so they can respect them." },
+      { label: "Where", body: "Practiced wherever you do focused work, ideally somewhere with minimal built-in interruption." },
+    ],
+    howItWorks: [
+      "Choose a format: 25-minute Pomodoro sprints with 5-minute breaks, or longer 90-minute deep-work blocks if your work suits sustained focus better.",
+      "Put your phone out of reach, close unrelated tabs, and track how many focused blocks you complete each day.",
+    ],
+    tools: ["A simple timer app, or a dedicated Pomodoro app if you want built-in tracking"],
+    scenario: {
+      title: "Three hours down to under one",
+      body: "A student found himself taking three hours to write a cover letter he could have finished in forty-five minutes, constantly checking his phone between sentences. After switching to 25-minute Pomodoro blocks with his phone in another room, the same task took under an hour, and the quality was noticeably more coherent.",
+    },
+    pitfalls: [
+      "Choosing a format that does not match your actual work style, like forcing 25-minute sprints on work that genuinely needs longer uninterrupted stretches",
+      "Abandoning the routine the first time it feels awkward",
+    ],
+    successSignal:
+      "You can complete meaningful work in noticeably less calendar time than before, with fewer half-finished, interrupted attempts.",
+    milestoneTies: [83, 84],
+  },
+
+  88: {
+    definition:
+      "A Gratitude Habit is a brief daily practice of noting specific things you are genuinely grateful for, used to counterbalance the disappointment and comparison that a competitive job search can otherwise amplify.",
+    whyItMatters:
+      "A job search naturally surfaces a lot of rejection, waiting, and comparison to peers, all of which can quietly erode overall wellbeing if left unchecked. A small daily gratitude practice does not erase the hard parts, but it keeps them from being the only thing you notice.",
+    whenWhoWhere: [
+      { label: "When", body: "Start this alongside your Reflection Journal (E3), ideally early in your search before discouragement has a chance to build up." },
+      { label: "Who", body: "No collaborator required, this is a private, low-effort practice." },
+      { label: "Where", body: "Practiced at a consistent time, such as right before bed or as part of your morning ritual." },
+    ],
+    howItWorks: [
+      "Each day, write down two or three specific things you are grateful for, avoiding generic entries in favor of specific ones.",
+      "Keep entries short, under two minutes, so the habit is sustainable.",
+    ],
+    tools: ["A notes app or the same notebook used for your reflection journal"],
+    scenario: {
+      title: "Noticing the support that was already there",
+      body: "A student going through a discouraging stretch of rejections almost stopped noticing the good things happening alongside the hard ones, like a mentor who kept checking in or a friend who helped her prep for interviews. Starting a specific, brief gratitude habit did not erase the rejections, but it kept her aware of the real support she had, which noticeably improved her overall mood during the search.",
+    },
+    pitfalls: [
+      "Writing generic, repetitive entries that become rote",
+      "Treating gratitude as a way to suppress legitimate frustration rather than something that coexists alongside it",
+    ],
+    successSignal:
+      "You notice yourself naturally clocking specific good moments throughout the day, even during a discouraging week, rather than only noticing what went wrong.",
+    milestoneTies: [81],
+  },
+
+  89: {
+    definition:
+      "A Stress Management Technique is a specific, practiced method, such as meditation, exercise, or structured breathing, that you can deploy reliably when the pressure of a job search or busy semester builds up.",
+    whyItMatters:
+      "Chronic, unmanaged stress degrades decision-making, interview performance, and overall health, all at exactly the moment when a student needs to be at their best. A practiced technique gives you a reliable release valve instead of letting stress accumulate unchecked.",
+    whenWhoWhere: [
+      { label: "When", body: "Build this before you are in an acutely stressful stretch, so the technique is already familiar when you actually need it." },
+      { label: "Who", body: "No collaborator required, though a campus counseling center can help you find a technique that fits your specific needs if general options are not working." },
+      { label: "Where", body: "Practiced regularly, not just during acute stress, so it becomes a reliable tool rather than something unfamiliar you are trying for the first time under pressure." },
+    ],
+    howItWorks: [
+      "Try two or three techniques, such as a 10-minute guided meditation, a 20-minute walk or workout, or a structured breathing pattern like box breathing.",
+      "Practice your chosen technique on a regular schedule, not just when stressed.",
+      "Deploy it deliberately during high-pressure stretches.",
+    ],
+    tools: ["A meditation app", "A simple breathing pattern guide", "A consistent walking route"],
+    scenario: {
+      title: "A daily walk that changed the season",
+      body: "A student noticed his sleep and appetite suffering during a particularly intense interview season and initially tried to just push through it. After committing to a daily 20-minute walk regardless of how busy the day felt, both his sleep and his interview composure improved within two weeks.",
+    },
+    pitfalls: [
+      "Only trying a technique for the first time during an acute crisis, when it is hardest to learn something new",
+      "Assuming one technique should work for everyone regardless of personal fit",
+    ],
+    successSignal:
+      "You have a specific technique you can reliably turn to that measurably reduces your stress within a session, and you use it proactively, not just reactively.",
+    milestoneTies: [79],
+  },
+
+  90: {
+    definition:
+      "An Accountability Partner is a specific person, a peer, mentor, or friend, who regularly checks in on your goals and progress, providing external structure that is often more reliable than self-discipline alone.",
+    whyItMatters:
+      "Even highly motivated students find that intentions alone do not always translate into consistent action, especially over the length of a full job search or semester. A specific person checking in adds real social accountability that most people respond to more reliably than a private to-do list.",
+    whenWhoWhere: [
+      { label: "When", body: "Set this up as early as possible, ideally alongside your other Stage Four habits, so it reinforces everything else you are building." },
+      { label: "Who", body: "A peer going through a similar process, a mentor, or a friend who is reliable and willing to actually follow up, not just agree to the idea once." },
+      { label: "Where", body: "Check-ins can happen over text, a weekly call, or in person, whatever is sustainable for both people long-term." },
+    ],
+    howItWorks: [
+      "Choose a specific person and propose a specific, low-friction check-in cadence, such as a five-minute weekly text exchange on progress.",
+      "Be explicit about what you want them to ask you, and offer to do the same for them if it is a mutual arrangement.",
+    ],
+    tools: ["A recurring calendar reminder or a standing text thread"],
+    scenario: {
+      title: "The light pressure that kept them consistent",
+      body: "A student and a classmate agreed to text each other every Sunday night with their top three numbers from their KPI trackers. Neither wanted to admit to the other that they had had a low-effort week, which turned out to be exactly the light pressure both of them needed to stay consistent through a long search.",
+    },
+    pitfalls: [
+      "Choosing a partner who will not actually follow through",
+      "Setting an accountability structure so demanding that it becomes its own source of stress",
+    ],
+    successSignal:
+      "You find yourself doing something specifically because you know your accountability partner will ask about it, not just because you feel like doing it that day.",
+    milestoneTies: [86],
+  },
+
+  91: {
+    definition:
+      "A Learning Log is a running record of key takeaways from books, podcasts, articles, or conversations with mentors, capturing insight before it fades from memory.",
+    whyItMatters:
+      "Most people absorb a lot of good ideas from what they read, listen to, and discuss, but without a log, the vast majority of that insight quietly evaporates within days. A learning log turns passive consumption into a durable, searchable resource.",
+    whenWhoWhere: [
+      { label: "When", body: "Start this as soon as you are regularly consuming career-relevant content, whether that is industry podcasts, books, or mentor conversations." },
+      { label: "Who", body: "No collaborator required, though mentors are often flattered to know a specific piece of their advice made it into your log." },
+      { label: "Where", body: "Logged immediately after consuming content, while the idea is still fresh, rather than trying to reconstruct it later from memory." },
+    ],
+    howItWorks: [
+      "After finishing a book chapter, podcast episode, or mentor conversation, write down one to three specific takeaways in your own words, not just a general impression.",
+      "Tag entries by topic so you can search them later when a related situation comes up.",
+    ],
+    tools: ["A notes app with simple tags or folders, organized by topic rather than by source"],
+    scenario: {
+      title: "Pulling up the exact tactic when it mattered",
+      body: "A student remembered vaguely that a podcast had mentioned something useful about negotiating salary but could not recall the specific advice when she actually needed it during a real negotiation. After that, she started logging one specific takeaway from every episode immediately, and was able to pull up and apply a specific negotiation tactic word for word during her next offer conversation.",
+    },
+    pitfalls: [
+      "Writing vague, general summaries instead of specific, applicable takeaways",
+      "Letting the log lapse whenever consumption slows down",
+    ],
+    successSignal:
+      "You can search your log and find a specific, applicable idea exactly when a real situation calls for it, rather than vaguely remembering you read something relevant once.",
+    milestoneTies: [84],
+  },
+
+  92: {
+    definition:
+      "A Habit Stacking Routine combines several small productive habits into one connected daily sequence, using an existing habit as the trigger for a new one, so the whole stack becomes easier to maintain than any single habit alone.",
+    whyItMatters:
+      "New habits are hardest to maintain in isolation, since they require remembering to do them from scratch each day. Attaching a new habit to an existing one borrows the existing habit's momentum, making the whole sequence far more likely to stick.",
+    whenWhoWhere: [
+      { label: "When", body: "Build this once you have two or three individual habits from this stage already established, and want to link them into a more efficient combined routine." },
+      { label: "Who", body: "No collaborator required, though sharing your stack with an accountability partner can reinforce it." },
+      { label: "Where", body: "Wherever your anchor habit already happens, since the new habits are simply attached to that existing routine and location." },
+    ],
+    howItWorks: [
+      "Identify one habit you already do reliably (making coffee, brushing your teeth) as the anchor.",
+      "Attach one or two new habits immediately before or after it, using a simple after I ___, I will ___ structure.",
+      "Start with just one added habit before stacking more.",
+    ],
+    tools: ["A simple written after/I will statement, posted somewhere visible like a mirror or notes app widget"],
+    scenario: {
+      title: "The stack that finally stuck",
+      body: "A student struggled to maintain both her gratitude habit and her learning log as separate practices until she stacked them onto her existing nightly teeth-brushing routine: after brushing her teeth, she would write one gratitude entry, then one learning log entry, before getting into bed. The stack stuck in a way neither habit had on its own.",
+    },
+    pitfalls: [
+      "Stacking too many new habits onto one anchor at once, which overwhelms the routine and causes the whole stack to collapse",
+      "Choosing an anchor habit that is not actually consistent yet",
+    ],
+    successSignal:
+      "The stacked habits start happening automatically, triggered by the anchor habit, without requiring active willpower or a reminder each time.",
+    milestoneTies: [88, 91],
+  },
+
+  93: {
+    definition:
+      "A Self-Assessment Review is a structured monthly reflection on your overall career readiness, pulling together your KPIs, reflection journal, and current goals into one honest checkpoint.",
+    whyItMatters:
+      "Without a regular structured review, it is easy to either lose track of real progress or keep drifting without noticing a strategy is not working. A monthly checkpoint catches both problems before they compound over a full semester.",
+    whenWhoWhere: [
+      { label: "When", body: "Schedule this on a fixed monthly cadence, ideally the same weekend each month so it becomes a predictable ritual rather than something you have to remember to schedule." },
+      { label: "Who", body: "No collaborator required for the review itself, though sharing a summary with a mentor or accountability partner adds valuable outside perspective." },
+      { label: "Where", body: "Done in one focused sitting, reviewing your KPI Tracker, Reflection Journal, and current goals side by side." },
+    ],
+    howItWorks: [
+      "Review your KPI numbers and reflection journal entries from the past month.",
+      "Answer three questions: what is working, what is not working, and what will I change going into next month.",
+      "Update your goals accordingly.",
+    ],
+    tools: ["Your Personal KPI Tracker and Reflection Journal from earlier in this stage, reviewed together in one sitting"],
+    scenario: {
+      title: "Catching a quiet drop in numbers",
+      body: "A student's monthly review revealed that his networking conversation count had quietly dropped to zero for three weeks straight, something he had not consciously noticed day to day. Seeing it clearly in the monthly numbers prompted him to recommit to networking specifically, rather than letting the gap continue silently.",
+    },
+    pitfalls: [
+      "Skipping the review when a month feels discouraging, which is exactly when the honest checkpoint is most valuable",
+      "Reviewing without actually changing anything based on what you find",
+    ],
+    successSignal:
+      "You can point to a specific, concrete adjustment made each month based directly on what the review revealed, not just a vague sense of trying harder.",
+    milestoneTies: [86, 81],
+  },
+
+  94: {
+    definition:
+      "An Energy Audit is a short tracking exercise identifying your peak productivity times and low-energy stretches across a typical week, so you can schedule demanding work when you are actually sharpest.",
+    whyItMatters:
+      "Most people schedule tasks by when they are available, not by when they are actually at their best, which means important work often lands during low-energy stretches while high-energy time gets wasted on passive tasks.",
+    whenWhoWhere: [
+      { label: "When", body: "Run this early in a semester or job search, before you have locked in a fixed schedule, so you can build your calendar around your real energy patterns." },
+      { label: "Who", body: "No collaborator required, this is a straightforward self-observation exercise." },
+      { label: "Where", body: "Tracked throughout a normal week, across whatever settings your day actually includes: classes, work blocks, evenings." },
+    ],
+    howItWorks: [
+      "For one week, note your energy level (low, medium, high) every few hours.",
+      "At the end of the week, identify your consistent peak and low windows.",
+      "Rearrange your calendar so demanding work lands in peak windows and passive tasks land in low ones.",
+    ],
+    tools: ["A simple hourly tracking sheet, or a recurring phone reminder to log your energy level"],
+    scenario: {
+      title: "Swapping the wrong hours",
+      body: "A student had been scheduling her hardest coursework for late evening, assuming that was just when she had free time, without ever checking whether it was actually when she thought most clearly. Her energy audit revealed a strong, consistent peak in late morning that she had been spending on passive email instead, so she swapped the two, and her focused work quality improved noticeably.",
+    },
+    pitfalls: [
+      "Only tracking for a day or two, which is not enough to reveal a reliable pattern",
+      "Identifying your peak windows and then not actually rearranging your schedule to use them",
+    ],
+    successSignal:
+      "Your calendar visibly reflects your real energy patterns, with demanding work scheduled in peak windows and passive tasks in low-energy ones.",
+    milestoneTies: [87],
+  },
+
+  95: {
+    definition:
+      "A Goal Visualization Exercise is a structured practice of vividly imagining specific career milestones already achieved, used to clarify direction and build motivation toward concrete, well-defined outcomes.",
+    whyItMatters:
+      "Vague goals like get a good job do not generate much useful direction or motivation, while a vivid, specific picture of an achieved milestone makes the daily effort required to get there feel more connected to something real.",
+    whenWhoWhere: [
+      { label: "When", body: "Practice this alongside your Stage One Career Vision, and revisit it whenever motivation dips or a goal starts to feel abstract again." },
+      { label: "Who", body: "No collaborator required, this is a private, internal practice, though describing the visualization to someone else can sharpen its specificity." },
+      { label: "Where", body: "Practiced somewhere quiet with a few uninterrupted minutes, ideally as part of an existing routine like your morning ritual." },
+    ],
+    howItWorks: [
+      "Choose one specific milestone (accepting an offer, finishing a strong first project).",
+      "Spend five minutes vividly imagining the specific details: where you are, who is there, how it feels.",
+      "Write down two or three concrete details from the visualization to anchor it beyond the exercise itself.",
+    ],
+    tools: ["A quiet five-minute block and a notes app to capture the specific details afterward"],
+    scenario: {
+      title: "Making the future feel close",
+      body: "A student's job search felt abstract and distant until she started visualizing the specific moment of accepting an offer call, imagining exactly where she would be sitting and who she would call first to share the news. That specific mental picture made her daily application effort feel connected to something real and close, rather than a vague future she could not quite picture.",
+    },
+    pitfalls: [
+      "Keeping the visualization too vague to generate real motivation",
+      "Using it as a substitute for actual action rather than a supplement to it",
+    ],
+    successSignal:
+      "You can describe your visualized milestone with specific, concrete details, and the exercise leaves you more motivated to take action afterward, not just pleasantly distracted.",
+    milestoneTies: [2],
+  },
+
+  96: {
+    definition:
+      "An Affirmation Practice is a set of specific, believable daily statements you repeat to reinforce genuine confidence, grounded in real evidence rather than generic, hollow positivity.",
+    whyItMatters:
+      "Vague affirmations that do not match your actual experience tend to feel hollow and can backfire, while specific, evidence-based statements genuinely reinforce a more accurate, confident self-view over time.",
+    whenWhoWhere: [
+      { label: "When", body: "Build this once you have real evidence to draw on, such as your Stage One Strength Inventory and early wins from your Reflection Journal." },
+      { label: "Who", body: "No collaborator required, this is a private daily practice." },
+      { label: "Where", body: "Practiced as part of your morning ritual or confidence routine, so it is anchored to an existing habit." },
+    ],
+    howItWorks: [
+      "Write three to five affirmations grounded in specific, true evidence about yourself, not generic statements.",
+      "Read them aloud each morning.",
+      "Update them as new evidence (wins, feedback, growth) accumulates.",
+    ],
+    tools: ["A notes app or index card kept somewhere visible, like your bathroom mirror or desk"],
+    scenario: {
+      title: "Evidence instead of hollow words",
+      body: "A student's early attempt at affirmations felt so disconnected from how she actually felt that she stopped doing them within a week. She rewrote them around real evidence instead, such as leading her capstone team to a second-place finish by trusting her instinct on the harder concept, and found these far easier to actually believe and repeat consistently.",
+    },
+    pitfalls: [
+      "Writing generic, unbelievable statements that feel disconnected from your actual experience, which undermines the practice's credibility",
+      "Never updating them as new evidence accumulates",
+    ],
+    successSignal:
+      "You can say your affirmations and feel a genuine, if small, shift toward confidence, rather than reciting words that feel hollow or performative.",
+    milestoneTies: [5, 79],
+  },
+
+  97: {
+    definition:
+      "A Networking/Skill Challenge is a weekly stretch goal, one conversation or skill push slightly beyond your current comfort zone, designed to keep both your network and your capabilities growing continuously.",
+    whyItMatters:
+      "Without a deliberate stretch goal, networking and skill-building both tend to stay within an already comfortable range, which limits growth. A weekly challenge keeps pushing the edges outward in small, manageable increments.",
+    whenWhoWhere: [
+      { label: "When", body: "Start this once your basic networking and skill-building habits (E6, E7) are established, as a way to keep raising the bar rather than plateauing." },
+      { label: "Who", body: "An accountability partner to share your weekly challenge with, for light social motivation." },
+      { label: "Where", body: "Wherever the specific challenge takes you: a new type of event, a harder skill application, an unfamiliar conversation." },
+    ],
+    howItWorks: [
+      "Each week, set one specific stretch goal slightly beyond your current comfort zone, such as messaging someone more senior than you would normally reach out to.",
+      "Complete it, then note what you learned.",
+    ],
+    tools: ["A running list of potential stretch goals to pull from each week"],
+    scenario: {
+      title: "The message that led to the best conversation of her search",
+      body: "A student who was comfortable networking with peers and recent grads set a stretch goal of messaging a Director-level alum she would normally consider too senior to approach. The message led to one of her most useful informational interviews of the entire search, and gave her the confidence to keep reaching slightly further each week after that.",
+    },
+    pitfalls: [
+      "Setting a goal so far outside your comfort zone that you avoid it entirely",
+      "Setting one so easy it does not actually stretch you",
+    ],
+    successSignal:
+      "You complete a stretch goal that would have felt uncomfortable a month ago, and it starts to feel more normal over time.",
+    milestoneTies: [84, 85],
+  },
+
+  98: {
+    definition:
+      "A Productivity Tool Setup is the deliberate selection and configuration of a small set of tools, such as a task manager, calendar, and notes app, that actually support your specific habits rather than adding complexity for its own sake.",
+    whyItMatters:
+      "Tool-switching and over-engineered systems can become their own form of procrastination, while a simple, well-configured setup removes friction from every other habit in this stage.",
+    whenWhoWhere: [
+      { label: "When", body: "Set this up once you have identified which habits from this stage you are actually committing to, so the tools are chosen to fit real needs rather than guessed at in advance." },
+      { label: "Who", body: "No collaborator required, though seeing how a mentor or peer has set up their own system can offer useful ideas." },
+      { label: "Where", body: "Configured once in a focused setup session, then used daily across whatever settings your habits require." },
+    ],
+    howItWorks: [
+      "Choose one task manager, one calendar, and one notes app, and resist adding more tools than that.",
+      "Configure each one specifically to support the habits from this stage: a KPI tracker view, a daily ritual checklist, a learning log folder.",
+    ],
+    tools: ["Whichever specific apps you choose, the tools matter less than keeping the set small and well-configured"],
+    scenario: {
+      title: "One system that finally stuck",
+      body: "A student had tried five different productivity apps over two years, spending more time setting each one up than actually using it. She committed to just Notion and Google Calendar, built one simple dashboard combining her KPI tracker, habit checklist, and learning log, and finally stuck with a system for more than a month.",
+    },
+    pitfalls: [
+      "Adding new tools every time you see someone else's system, which resets your setup effort repeatedly",
+      "Over-engineering the configuration until maintaining the system becomes its own time-consuming task",
+    ],
+    successSignal:
+      "You can open your tools each morning and immediately see what matters, without needing to reconfigure or search across scattered apps.",
+    milestoneTies: [86, 80, 91],
+  },
+
+  99: {
+    definition:
+      "A Side Project is a small, self-directed project you build outside of coursework or work requirements, demonstrating initiative and giving you something concrete and original to talk about beyond your resume's listed experiences.",
+    whyItMatters:
+      "In a competitive field, candidates with identical coursework and internships are common, but a genuine self-directed project signals initiative and passion that is hard to fake and immediately differentiates you in an interview.",
+    whenWhoWhere: [
+      { label: "When", body: "Start this once your core Stage One through Three work is underway, as an additional differentiator rather than a replacement for the foundational work." },
+      { label: "Who", body: "No collaborator required, though a mentor can help you scope something achievable rather than an idea too large to ever finish." },
+      { label: "Where", body: "Built in your own time, over weeks or a semester, documented publicly if possible (a portfolio piece, a small website, a public repository)." },
+    ],
+    howItWorks: [
+      "Choose a small, scoped project connected to your career direction, something you can realistically finish in a few weeks to a couple months.",
+      "Document your process as you go, not just the final result.",
+      "Publish or share it somewhere visible.",
+    ],
+    tools: ["Whatever your project requires, the key constraint is scope, not tools"],
+    scenario: {
+      title: "A newsletter that became her best talking point",
+      body: "A marketing student built a small personal newsletter analyzing sustainable brand marketing campaigns, publishing one issue every two weeks for a semester. It became her most-discussed talking point in interviews, since it was clearly self-directed and demonstrated the exact skill set she was applying for, unprompted by any class or employer.",
+    },
+    pitfalls: [
+      "Choosing a project so ambitious it never gets finished, which undermines the initiative it is meant to demonstrate",
+      "Building something disconnected from your actual career direction",
+    ],
+    successSignal:
+      "You have one specific, finished (or clearly in-progress with real output) project you can describe enthusiastically and specifically in an interview.",
+    milestoneTies: [56],
+  },
+
+  100: {
+    definition:
+      "A Volunteer/Impact Experience is a leadership role or meaningful contribution outside of academics, demonstrating character and initiative in a context where no grade or paycheck is the primary motivator.",
+    whyItMatters:
+      "Volunteer and impact work reveals character in a way that academic or paid work sometimes cannot, since the primary motivation has to come from genuine commitment rather than external requirements or compensation.",
+    whenWhoWhere: [
+      { label: "When", body: "Pursue this whenever you find a cause or organization you genuinely care about, rather than forcing it purely for resume value." },
+      { label: "Who", body: "A local nonprofit, community organization, or campus initiative aligned with something you actually care about." },
+      { label: "Where", body: "Wherever the specific opportunity exists, whether that is in-person local work or a remote volunteer role." },
+    ],
+    howItWorks: [
+      "Identify a cause you genuinely care about, then look for a role with real responsibility, not just occasional participation.",
+      "Commit to a defined period and track specific outcomes or contributions, not just hours logged.",
+    ],
+    tools: ["Local volunteer matching platforms, or direct outreach to organizations you already know and care about"],
+    scenario: {
+      title: "Solving a real operational problem",
+      body: "A student who cared about food insecurity took on a leadership role coordinating volunteer schedules for a local food bank, eventually redesigning their signup process to fix chronic understaffing on weekend shifts. That specific, concrete leadership story became a standout answer in interviews asking about leadership outside formal work.",
+    },
+    pitfalls: [
+      "Taking on a volunteer role purely for resume optics without real commitment, which tends to show through in how you describe it",
+      "Overcommitting to the point of burnout alongside other priorities",
+    ],
+    successSignal:
+      "You can describe a specific contribution or leadership moment from this experience with the same concrete detail as a STAR interview story.",
+    milestoneTies: [64],
+  },
+
+  101: {
+    definition:
+      "A Certification/Badge is a beginner-friendly, verifiable credential, such as a Google Analytics or HubSpot certification, that demonstrates specific technical competency to employers scanning for concrete evidence of skill.",
+    whyItMatters:
+      "A resume claim of a skill is easy to write and hard to verify, while a certification provides an objective, third-party signal that closes exactly this kind of credibility gap for entry-level candidates without much work history to point to instead.",
+    whenWhoWhere: [
+      { label: "When", body: "Pursue this once you have identified a specific skill gap, ideally from your Stage One Skill Growth Plan, so the certification targets something you actually need." },
+      { label: "Who", body: "No collaborator required, most beginner certifications are self-paced and free or low-cost." },
+      { label: "Where", body: "Completed online, through the certifying organization's own platform (Google, HubSpot, Coursera, and similar)." },
+    ],
+    howItWorks: [
+      "Identify one certification directly relevant to your target roles, based on what is actually listed as preferred or required in job postings you have analyzed.",
+      "Complete it using your Daily Learning Habit time block.",
+      "Add it immediately to your resume and LinkedIn once finished.",
+    ],
+    tools: ["The specific certifying platform (Google Skillshop, HubSpot Academy, Coursera, and similar)", "Your existing Daily Learning Habit time block"],
+    scenario: {
+      title: "Closing a gap flagged back in Stage One",
+      body: "A student noticed Google Analytics appearing as a preferred qualification across nearly every brand marketing listing she had analyzed. She completed the certification using her existing daily learning time block over three weeks, and updated her resume and LinkedIn the same day she finished, closing a gap she had flagged as a weakness back in Stage One.",
+    },
+    pitfalls: [
+      "Choosing a certification unrelated to your actual target roles just because it is popular",
+      "Completing one and forgetting to actually add it to your materials",
+    ],
+    successSignal:
+      "You hold a specific, verifiable credential directly relevant to a skill gap your job listing analysis identified, visibly listed on your resume and LinkedIn.",
+    milestoneTies: [13, 63],
+  },
+
+  102: {
+    definition:
+      "A Strategic Goal Sheet is a focused document listing three to five specific, actionable goals for the next 6 to 12 months, translating everything built across earlier stages into a concrete forward plan.",
+    whyItMatters:
+      "Without a consolidated forward plan, all the self-awareness, professional identity, and job search skill built across the earlier stages can stay scattered rather than pointed toward specific next steps.",
+    whenWhoWhere: [
+      { label: "When", body: "Build this once your job search is either resolved or well underway, as a bridge from launching into your actual early career." },
+      { label: "Who", body: "A mentor or career advisor to review the goals for realism and ambition balance." },
+      { label: "Where", body: "Written in one focused sitting, then reviewed and updated as part of your monthly Self-Assessment Review." },
+    ],
+    howItWorks: [
+      "Choose three to five goals spanning different areas: a skill goal, a network goal, a role or promotion goal, and a personal growth goal.",
+      "Make each one specific and measurable, with a rough timeline, rather than broad aspirations.",
+    ],
+    tools: ["Your Stage One Career Vision and Stage Four Self-Assessment Reviews as source material for realistic, well-grounded goals"],
+    scenario: {
+      title: "Forward motion after the offer",
+      body: "After accepting her offer, a student initially felt directionless without the job search's built-in structure. Writing a strategic goal sheet, with specific goals like completing a second analytics certification within 6 months and building one new senior-level relationship per quarter, gave her the same sense of forward motion she had had during the active search, now redirected toward her first year on the job.",
+    },
+    pitfalls: [
+      "Writing goals too vague to actually act on (be successful)",
+      "Writing so many goals that none of them get real focus",
+    ],
+    successSignal:
+      "You can point to specific, measurable progress on each goal at your next monthly review, not just a restated intention to keep trying.",
+    milestoneTies: [2, 93],
+  },
+
+  103: {
+    definition:
+      "A Thought Leadership Post is a piece of original writing on a topic in your field, published publicly to build visibility and demonstrate genuine thinking beyond what your resume alone can show.",
+    whyItMatters:
+      "Publishing original thinking, even as an early-career candidate, signals a level of engagement and initiative that few peers demonstrate, and gives interviewers and networking contacts something specific and memorable to reference.",
+    whenWhoWhere: [
+      { label: "When", body: "Write this once you have a genuine point of view worth sharing, ideally building on the Blog/Article Post and Industry Trend Report work from Stage Two." },
+      { label: "Who", body: "A mentor or peer to review the draft before publishing, since a second set of eyes catches unclear reasoning." },
+      { label: "Where", body: "Published on LinkedIn, a personal website, or another platform where your target network will actually see it." },
+    ],
+    howItWorks: [
+      "Choose a specific, narrow point of view you genuinely hold, grounded in real experience rather than generic industry commentary.",
+      "Draft, revise for clarity, and publish.",
+      "Share it directly with a few people in your network who would find it genuinely relevant.",
+    ],
+    tools: ["LinkedIn Articles, a personal website blog, or Medium", "The writing habits built in Stage Two"],
+    scenario: {
+      title: "More engagement than anything else she published",
+      body: "After her job search concluded, a student wrote a post about what she had learned analyzing dozens of job listings during Stage Three, specifically how much unstated information sits in a posting's keyword patterns. The post generated more direct engagement from industry professionals than anything else she had published, several of whom she had not previously connected with.",
+    },
+    pitfalls: [
+      "Writing generic industry commentary that does not reflect a genuine, specific point of view",
+      "Publishing without sharing it anywhere your target network would actually see it",
+    ],
+    successSignal:
+      "The post generates real engagement, comments or direct messages, from people in your target field, not just passive views.",
+    milestoneTies: [49, 51],
   },
 };
