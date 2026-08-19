@@ -1,12 +1,8 @@
-import { ComingSoonPanel } from "@/components/dashboard/ComingSoonPanel";
+import type { Metadata } from "next";
+import { CoachHub } from "@/components/dashboard/CoachHub";
+
+export const metadata: Metadata = { title: "AI Coach | FIRSTS" };
 
 export default function CoachPage() {
-  return (
-    <ComingSoonPanel
-      eyebrow="Coming soon"
-      title="Your AI Coach lives here."
-      body="Reflective Socratic coaching and live-research mode, scoped to whichever FIRST you're working on."
-      color="var(--fuchsia-blast)"
-    />
-  );
+  return <CoachHub />;
 }
