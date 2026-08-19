@@ -9,6 +9,7 @@ const NAV = [
   { label: "Stage Two", href: "/dashboard/stage/two", icon: LayersIcon },
   { label: "Stage Three", href: "/dashboard/stage/three", icon: LayersIcon },
   { label: "Stage Four", href: "/dashboard/stage/four", icon: LayersIcon },
+  { label: "Stage Five", href: "/dashboard/stage/five", icon: LayersIcon },
   { label: "AI Coach", href: "/dashboard/coach", icon: SparkleIcon },
   { label: "Portfolio", href: "/dashboard/portfolio", icon: FolderIcon },
 ];

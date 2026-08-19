@@ -1352,4 +1352,323 @@ export const WORKSHEET_SCHEMAS: Record<number, WorksheetField[]> = {
     { type: "textarea", key: "draft", label: "Draft", rows: 6, seed: "Most resumes fail for a boring reason: they're vague. I rewrote mine three times before I figured that out. The version that finally worked replaced 'responsible for reporting' with 'built a weekly report that cut review time by 3 hours.' Same job, twice the callbacks. If your bullet points could apply to anyone, they're not doing their job. Go find the number." },
     { type: "checklist", key: "publishChecklist", label: "Publish & share checklist", section: "Publish & share checklist", items: ["Reviewed by mentor or peer", "Published", "Shared directly with relevant contacts"], seedChecked: [] },
   ],
+  104: [
+    { type: "wordBank", key: "familiarModels", label: "Circle any mental models you've heard of before, even loosely", section: "Word bank", words: ["Opportunity Cost", "Inversion", "First Principles", "80/20 Principle", "Systems Thinking", "Occam's Razor", "Sunk Cost", "Second-Order Thinking", "Confirmation Bias", "Anchoring", "Circle of Competence", "Margin of Safety", "Compounding", "Regret Minimization", "Falsifiability"], pickCount: 5, seed: ["Opportunity Cost", "Sunk Cost", "Confirmation Bias"] },
+    { type: "table", key: "modelsIUse", label: "Models I already use", section: "Models I already use", hint: "For each model you circled, name one real decision where you already used it without naming it.", columns: [
+      { key: "model", label: "Model", kind: "text" },
+      { key: "decision", label: "Real decision where I used it", kind: "text" },
+    ], seedRows: [{ model: "Opportunity Cost", decision: "Turned down a part-time job to protect time for my capstone project" }] },
+    { type: "text", key: "newModel", label: "A model I don't know well yet", section: "One new model", seed: "Second-Order Thinking" },
+    { type: "text", key: "whereToTry", label: "Where I could try applying it this week", seed: "Deciding whether to take on a new club leadership role" },
+  ],
+
+  105: [
+    { type: "text", key: "outcome", label: "Outcome I'm mapping", section: "The outcome", seed: "Got the highest grade in my cohort on the group project" },
+    { type: "table", key: "backwardChain", label: "Backward chain, most recent to earliest", section: "Backward chain", hint: "Work backward, asking what caused this at each step.", columns: [
+      { key: "step", label: "Step", kind: "text" },
+      { key: "cause", label: "Cause", kind: "text" },
+    ], seedRows: [
+      { step: "1", cause: "Presented last, so we could incorporate every earlier group's feedback" },
+      { step: "2", cause: "Volunteered to go last in the practice run order" },
+    ] },
+    { type: "textarea", key: "surprisedMost", label: "Which cause surprised me most?", section: "Reflection", rows: 2, seed: "That the sign-up order was a deliberate choice, not luck." },
+    { type: "textarea", key: "wouldIGuess", label: "Would I have guessed this chain without mapping it?", rows: 2, seed: "No, I would have just credited the material or the team." },
+  ],
+
+  106: [
+    { type: "textarea", key: "fullProblem", label: "The full problem, as it currently feels", section: "The problem", rows: 3, seed: "Build a full portfolio website before internship applications open in three weeks." },
+    { type: "table", key: "subTasks", label: "Sub-tasks", section: "Sub-tasks", columns: [
+      { key: "subTask", label: "Sub-task", kind: "text" },
+      { key: "order", label: "Order (1st, 2nd, etc.)", kind: "text" },
+    ], seedRows: [
+      { subTask: "Pick a template and domain", order: "1st" },
+      { subTask: "Write project case studies", order: "2nd" },
+    ] },
+    { type: "text", key: "firstStep", label: "The very first thing I'll actually do", section: "First step", seed: "Pick a template tonight" },
+  ],
+
+  107: [
+    { type: "text", key: "decision", label: "The decision", section: "Setup", seed: "Which of two internship offers to accept" },
+    { type: "chipList", key: "criteria", label: "My criteria", seed: ["Mentorship", "Pay", "Location", "Growth potential"] },
+    { type: "table", key: "scoringMatrix", label: "Scoring matrix", section: "Scoring matrix", columns: [
+      { key: "option", label: "Option", kind: "text" },
+      { key: "c1", label: "Criterion 1 score", kind: "rating" },
+      { key: "c2", label: "Criterion 2 score", kind: "rating" },
+      { key: "c3", label: "Criterion 3 score", kind: "rating" },
+      { key: "total", label: "Weighted total", kind: "text" },
+    ], seedRows: [
+      { option: "Offer A", c1: 8, c2: 6, c3: 7, total: "" },
+      { option: "Offer B", c1: 6, c2: 9, c3: 5, total: "" },
+    ] },
+    { type: "text", key: "topScoring", label: "Top-scoring option", section: "Result", seed: "" },
+    { type: "text", key: "matchesGut", label: "Does this match my gut instinct? (Y/N)", seed: "" },
+  ],
+
+  108: [
+    { type: "textarea", key: "problem", label: "Problem or failure", section: "The problem", rows: 2, seed: "I keep missing internal team deadlines by a day or two." },
+    { type: "table", key: "whys", label: "The whys", section: "The whys", columns: [
+      { key: "why", label: "Why #", kind: "text" },
+      { key: "answer", label: "Answer", kind: "text" },
+    ], seedRows: [
+      { why: "1", answer: "I start the task too late" },
+      { why: "2", answer: "I keep planning to fit it in around other things" },
+      { why: "3", answer: "I never block dedicated time for it" },
+    ] },
+    { type: "text", key: "rootCause", label: "Real root cause", section: "Root cause & fix", seed: "No dedicated time block exists for this task" },
+    { type: "text", key: "specificFix", label: "Specific fix", seed: "Block a recurring 45-minute slot the day after each assignment" },
+  ],
+
+  109: [
+    { type: "text", key: "claim", label: "Claim I'm examining", section: "The claim", seed: "This productivity app doubles your output" },
+    { type: "text", key: "source", label: "Source", seed: "App landing page" },
+    { type: "textarea", key: "assumption", label: "What assumption does this claim rest on?", section: "Interrogation", rows: 2, seed: "That the study behind it reflects how most people would actually use the app." },
+    { type: "textarea", key: "evidence", label: "What evidence is actually offered?", rows: 2, seed: "A single internal study, sample size not stated on the page." },
+    { type: "textarea", key: "supportsConclusion", label: "Does the evidence really support the conclusion?", rows: 2, seed: "Not clearly, the sample size and methodology aren't disclosed." },
+    { type: "textarea", key: "verdict", label: "Do I still believe this claim? Why or why not?", section: "Verdict", rows: 2, seed: "Not fully, I'd want to see the actual study before trusting the number." },
+  ],
+
+  110: [
+    { type: "text", key: "prediction", label: "My specific, falsifiable prediction", section: "Prediction", seed: "Studying with my group helps me retain material better than studying solo" },
+    { type: "textarea", key: "smallestTest", label: "Smallest test that could disprove it", rows: 2, seed: "One week studying solo, one week with the group, both followed by a self-quiz" },
+    { type: "textarea", key: "actualResult", label: "What actually happened", section: "Result", rows: 2, seed: "The solo week scored higher on the self-quiz" },
+    { type: "text", key: "predictionRight", label: "Was my prediction right? (Y/N)", seed: "N" },
+    { type: "textarea", key: "whatIllDo", label: "What I'll do differently now", section: "Update", rows: 2, seed: "Study solo first, then use the group only to check gaps" },
+  ],
+
+  111: [
+    { type: "text", key: "decision", label: "Decision I'm facing", section: "The decision", seed: "Whether to accept a job offer in a new city" },
+    { type: "table", key: "scenarios", label: "Three scenarios", section: "Three scenarios", columns: [
+      { key: "scenario", label: "Scenario", kind: "text" },
+      { key: "whatHappens", label: "What happens", kind: "text" },
+      { key: "myResponse", label: "My response", kind: "text" },
+    ], seedRows: [
+      { scenario: "Best case", whatHappens: "Role exceeds expectations", myResponse: "Ask about growth path within 6 months" },
+      { scenario: "Most likely", whatHappens: "Solid but unremarkable", myResponse: "Give it a full year before reassessing" },
+      { scenario: "Worst case", whatHappens: "Poor fit within 6 months", myResponse: "Start a quiet search, lean on my network" },
+    ] },
+    { type: "textarea", key: "mostPrepared", label: "Which scenario am I most prepared for right now?", section: "Reflection", rows: 2, seed: "Most likely, I haven't thought as much about the worst case." },
+  ],
+
+  112: [
+    { type: "table", key: "decisionReview", label: "Decision review", section: "Decision review", columns: [
+      { key: "decision", label: "Past decision", kind: "text" },
+      { key: "bias", label: "Possible bias", kind: "text" },
+      { key: "howShowedUp", label: "How it showed up", kind: "text" },
+    ], seedRows: [{ decision: "Stuck with a group project role I disliked", bias: "Sunk cost", howShowedUp: "Kept going because of time already invested, not because it made sense" }] },
+    { type: "text", key: "myPattern", label: "My most common bias", section: "My pattern", seed: "Sunk cost" },
+    { type: "textarea", key: "watchFor", label: "A situation where I'll watch for it next", rows: 2, seed: "Whenever I'm deciding whether to keep going with a project that isn't working." },
+  ],
+
+  113: [
+    { type: "textarea", key: "recurringProblem", label: "Recurring problem", section: "The system", rows: 2, seed: "Our student org's meetings keep having low attendance." },
+    { type: "table", key: "nodes", label: "Nodes & connections", section: "Nodes & connections", columns: [
+      { key: "node", label: "Node (person/process/outcome)", kind: "text" },
+      { key: "influences", label: "What it influences", kind: "text" },
+    ], seedRows: [{ node: "Sparse agendas", influences: "Perceived value of attending" }] },
+    { type: "textarea", key: "theLoop", label: "Feedback loop I found (X leads to Y leads back to X)", section: "The loop", rows: 2, seed: "Sparse agendas lead to low perceived value, which leads to more absences, which leads to even sparser agendas." },
+  ],
+
+  114: [
+    { type: "textarea", key: "feedbackReceived", label: "Feedback received, as given", section: "The feedback", rows: 2, seed: "You rush through your conclusions, the ending feels cut short." },
+    { type: "text", key: "whoGaveIt", label: "Who gave it", seed: "My presentations professor" },
+    { type: "textarea", key: "patternPointedTo", label: "The specific pattern it points to", section: "Integration", rows: 2, seed: "I run out of time and cut the ending short." },
+    { type: "text", key: "concreteChange", label: "Concrete change I'll make", seed: "Time practice runs and leave room for a real close" },
+    { type: "text", key: "howIllKnow", label: "How I'll know if it worked", seed: "My next presentation ends with a full closing statement, not a rushed one" },
+  ],
+
+  115: [
+    { type: "table", key: "taskList", label: "Task list", section: "Task list", columns: [
+      { key: "task", label: "Task", kind: "text" },
+      { key: "impact", label: "Impact (1 to 10)", kind: "rating" },
+      { key: "effort", label: "Effort (1 to 10)", kind: "rating" },
+      { key: "priority", label: "Priority order", kind: "text" },
+    ], seedRows: [{ task: "Send 3 networking follow-ups", impact: 8, effort: 2, priority: "1" }] },
+    { type: "text", key: "priority1", label: "Top priority 1", section: "Reordered plan", seed: "Send 3 networking follow-ups" },
+    { type: "text", key: "priority2", label: "Top priority 2", seed: "Finish resume rewrite" },
+    { type: "text", key: "priority3", label: "Top priority 3", seed: "Apply to 2 target roles" },
+  ],
+
+  116: [
+    { type: "text", key: "modelApplying", label: "Mental model I'm applying", section: "Setup", seed: "Opportunity cost" },
+    { type: "textarea", key: "realProblem", label: "My real problem", rows: 2, seed: "Whether to take on a third leadership role this semester" },
+    { type: "textarea", key: "appliedReasoning", label: "Applied reasoning", section: "Applied reasoning", rows: 4, seed: "If I say yes, the project I'd have to deprioritize is my research assistantship, which matters more to my long-term goals than another leadership line." },
+    { type: "textarea", key: "conclusion", label: "How this changed my thinking versus my first instinct", section: "Conclusion", rows: 2, seed: "I was about to say yes automatically, naming the real trade-off made me decline." },
+  ],
+
+  117: [
+    { type: "table", key: "instances", label: "Instances", section: "Instances", columns: [
+      { key: "instance", label: "Instance", kind: "text" },
+      { key: "keyDetail", label: "Key detail", kind: "text" },
+    ], seedRows: [{ instance: "Rejection from Company A", keyDetail: "Posting emphasized data analytics skills" }] },
+    { type: "textarea", key: "whatRepeats", label: "What repeats across these instances", section: "The pattern", rows: 2, seed: "All four postings I was rejected from emphasized data analytics skills prominently." },
+    { type: "textarea", key: "whatIllDoDifferently", label: "What I'll do differently now that I see it", rows: 2, seed: "Add a specific data analytics example to my resume before applying to similar roles." },
+  ],
+
+  118: [
+    { type: "text", key: "whatDecided", label: "What I decided", section: "The decision", seed: "Accepted the marketing internship over the research assistantship" },
+    { type: "textarea", key: "howDecided", label: "How I decided it (model or process used, if any)", rows: 2, seed: "Built a weighted decision matrix comparing mentorship, pay, and growth potential." },
+    { type: "textarea", key: "hindsight", label: "What I'd do differently in hindsight", section: "Hindsight", rows: 2, seed: "I'd weight location higher, the commute has been harder than expected." },
+    { type: "textarea", key: "patternCheck", label: "Do I use structured tools for big decisions but instinct for medium ones?", section: "Pattern check", rows: 2, seed: "Yes, and a couple of the instinct-only decisions are ones I've regretted." },
+    { type: "text", key: "habitToChange", label: "One decision-making habit I want to change", seed: "Use at least a quick pros and cons list for medium-stakes decisions, not just major ones" },
+  ],
+
+  119: [
+    { type: "textarea", key: "strengths", label: "Strengths", section: "STRENGTHS", rows: 3, seed: "Strong written communication, reliable under deadline pressure" },
+    { type: "textarea", key: "weaknesses", label: "Weaknesses", section: "WEAKNESSES", rows: 3, seed: "Limited data analytics experience" },
+    { type: "textarea", key: "opportunities", label: "Opportunities", section: "OPPORTUNITIES", rows: 3, seed: "Growing demand for analytics-literate marketers" },
+    { type: "textarea", key: "threats", label: "Threats", section: "THREATS", rows: 3, seed: "Most target postings list analytics tools as required" },
+    { type: "textarea", key: "crossQuadrant", label: "One action that emerges from a cross-quadrant connection", section: "Cross-quadrant insight", rows: 2, seed: "My weakness (analytics) directly crosses a real threat (postings requiring it), so closing that gap is my top priority." },
+  ],
+
+  120: [
+    { type: "textarea", key: "conventionalProblem", label: "The problem, as conventionally approached", section: "The problem", rows: 2, seed: "A resume has to follow the standard reverse-chronological format." },
+    { type: "table", key: "assumptions", label: "Assumptions embedded in the conventional approach", section: "Assumptions", columns: [
+      { key: "assumption", label: "Assumption", kind: "text" },
+      { key: "truthOrConvention", label: "Fundamental truth or just convention?", kind: "text" },
+    ], seedRows: [{ assumption: "Work history must be listed in reverse chronological order", truthOrConvention: "Convention" }] },
+    { type: "textarea", key: "rebuild", label: "Using only the fundamental truths, sketch a new solution", section: "Rebuild", rows: 3, seed: "A resume just needs to communicate value quickly and credibly, so I tested a skills-forward format instead." },
+  ],
+
+  121: [
+    { type: "text", key: "goal", label: "My goal", section: "The goal", seed: "Give a strong final presentation" },
+    { type: "chipList", key: "failureModes", label: "Ways I could guarantee failure at this", section: "Guaranteed failure modes", seed: ["Never practice out loud", "Ignore the time limit", "Skip reading the room during Q&A", "Write the slides the night before"] },
+    { type: "table", key: "checkAgainstPlan", label: "Check against my real plan", section: "Check against plan", columns: [
+      { key: "failureMode", label: "Failure mode", kind: "text" },
+      { key: "doingThis", label: "Am I currently doing this? (Y/N)", kind: "text" },
+      { key: "fix", label: "Fix", kind: "text" },
+    ], seedRows: [{ failureMode: "Never practice out loud", doingThis: "Y", fix: "Schedule 2 full practice run-throughs" }] },
+  ],
+
+  122: [
+    { type: "text", key: "optionConsidering", label: "Option I'm considering", section: "The option", seed: "Taking on a third leadership role" },
+    { type: "text", key: "bestAlternative", label: "My best alternative use of the same time/resources", seed: "More hours on my research assistantship" },
+    { type: "textarea", key: "thisOption", label: "This option", section: "Direct comparison", rows: 2, seed: "Third leadership role: visible, but stretches me thin" },
+    { type: "textarea", key: "bestAlternativeDetail", label: "My best alternative", rows: 2, seed: "Research assistantship: builds skills more directly tied to my goals" },
+    { type: "textarea", key: "decisionAndWhy", label: "Which I'm choosing, and why", section: "Decision", rows: 2, seed: "Declining the role, the research assistantship matters more to where I'm headed." },
+  ],
+
+  123: [
+    { type: "table", key: "activitiesResults", label: "Activities & results", section: "Activities & results", columns: [
+      { key: "activity", label: "Activity", kind: "text" },
+      { key: "result", label: "Result produced (1 to 10)", kind: "rating" },
+    ], seedRows: [
+      { activity: "Network-sourced applications", result: 9 },
+      { activity: "Cold applications", result: 2 },
+    ] },
+    { type: "textarea", key: "vitalFew", label: "The smaller subset producing most of my results", section: "The vital few", rows: 2, seed: "Network-sourced applications, only about 20% of my submissions, but nearly all my interviews." },
+    { type: "textarea", key: "shiftTime", label: "How I'll shift more time toward it", rows: 2, seed: "Spend more evenings on outreach and fewer on cold job board applications." },
+  ],
+
+  124: [
+    { type: "textarea", key: "recurringProblem", label: "The recurring problem", section: "The system", rows: 2, seed: "Our team consistently misses internal deadlines." },
+    { type: "textarea", key: "rolesProcesses", label: "Key roles, processes, and outputs involved", rows: 3, seed: "Writer, editor, approver, and the final publish step." },
+    { type: "textarea", key: "connections", label: "What feeds into what?", section: "Connections & loops", rows: 2, seed: "Drafts feed into a single approver, who is often the bottleneck." },
+    { type: "textarea", key: "feedbackLoop", label: "Is there a feedback loop where an effect cycles back to become its own cause?", rows: 2, seed: "Delayed approvals push deadlines later, which compresses the next cycle's review time too." },
+    { type: "textarea", key: "structuralFix", label: "One structural change (not a person to blame) that would improve the system", section: "Structural fix", rows: 2, seed: "Add a second approver so review doesn't depend on one person's schedule." },
+  ],
+
+  125: [
+    { type: "text", key: "firstChoice", label: "The first choice", section: "First decision point", seed: "Accept the offer now, ask for an extension, or decline" },
+    { type: "table", key: "firstDecisionTable", label: "First decision point options", columns: [
+      { key: "option", label: "Option", kind: "text" },
+      { key: "outcome", label: "Likely outcome", kind: "text" },
+      { key: "risk", label: "Risk", kind: "text" },
+    ], seedRows: [{ option: "Accept now", outcome: "Secures the role", risk: "No time to compare other offers" }] },
+    { type: "text", key: "secondChoice", label: "The follow-up choice this leads to", section: "Second decision point (if applicable)", seed: "If I ask for an extension, how long to request" },
+    { type: "table", key: "secondDecisionTable", label: "Second decision point options", columns: [
+      { key: "option", label: "Option", kind: "text" },
+      { key: "outcome", label: "Likely outcome", kind: "text" },
+      { key: "risk", label: "Risk", kind: "text" },
+    ], seedRows: [{ option: "Ask for 1 week", outcome: "Likely granted", risk: "Small chance it annoys the recruiter" }] },
+    { type: "textarea", key: "leaning", label: "Which branch I'm leaning toward, and why", section: "Leaning", rows: 2, seed: "Asking for a short extension, it's low risk and buys real clarity." },
+  ],
+
+  126: [
+    { type: "text", key: "variable1", label: "Key variable 1", section: "Key variables", seed: "Cost of living in the new city" },
+    { type: "text", key: "variable2", label: "Key variable 2", seed: "Ability to rebuild my network" },
+    { type: "text", key: "variable3", label: "Key variable 3", seed: "Actual fit of the role" },
+    { type: "table", key: "scenarioPlans", label: "Scenario plans", section: "Scenario plans", columns: [
+      { key: "scenario", label: "Scenario", kind: "text" },
+      { key: "whatHappens", label: "What happens", kind: "text" },
+      { key: "actionPlan", label: "My action plan", kind: "text" },
+    ], seedRows: [{ scenario: "Best case", whatHappens: "Role and city both exceed expectations", actionPlan: "Commit to a 2-year lease" }] },
+    { type: "textarea", key: "confidenceCheck", label: "How this changes how I feel about the decision", section: "Confidence check", rows: 2, seed: "Having a real plan for each variable combination made the move feel structured instead of scary." },
+  ],
+
+  127: [
+    { type: "text", key: "taskForChecklist", label: "Task I'm building a checklist for", section: "The task", seed: "Submitting a job application" },
+    { type: "textarea", key: "whyWorthChecklist", label: "Why it's worth a checklist (past mistake or risk)", rows: 2, seed: "I've forgotten to attach my resume twice." },
+    { type: "chipList", key: "checklistSteps", label: "Steps, in order", section: "The checklist", seed: ["Attach resume", "Attach cover letter", "Check contact info is current", "Proofread once more", "Submit", "Log it in my tracker"] },
+    { type: "textarea", key: "firstUseResult", label: "Result the first time I used it", section: "First real use", rows: 2, seed: "Caught a missing cover letter before submitting." },
+    { type: "textarea", key: "stepToAdd", label: "Any step I needed to add or clarify", rows: 2, seed: "Added 'check contact info' after noticing an old phone number on file." },
+  ],
+
+  128: [
+    { type: "textarea", key: "problemStatement", label: "Problem statement", section: "The problem", rows: 2, seed: "Our team keeps miscommunicating about who owns what." },
+    { type: "table", key: "fiveWhys", label: "The five whys", section: "The five whys", columns: [
+      { key: "why", label: "Why", kind: "text" },
+      { key: "answer", label: "Answer", kind: "text" },
+    ], seedRows: [
+      { why: "Why 1", answer: "People miss updates" },
+      { why: "Why 2", answer: "Updates live in different places" },
+      { why: "Why 3", answer: "No one owns the shared calendar" },
+      { why: "Why 4", answer: "It was never assigned to anyone" },
+      { why: "Why 5 (root cause)", answer: "The team never designated a calendar owner when it formed" },
+    ] },
+    { type: "textarea", key: "structuralFix", label: "The structural fix this points to", section: "Fix", rows: 2, seed: "Assign one person as the standing calendar owner." },
+  ],
+
+  129: [
+    { type: "text", key: "skillOrTask", label: "Skill or task", section: "Skill / task being practiced", seed: "Case interview practice" },
+    { type: "text", key: "attempt1Did", label: "Attempt 1: What I did", section: "Attempt 1", seed: "Worked through a market-sizing case" },
+    { type: "text", key: "attempt1Observed", label: "Attempt 1: What I observed", seed: "Froze on structuring the framework" },
+    { type: "text", key: "attempt1Adjustment", label: "Attempt 1: Adjustment for next time", seed: "Practice the framework skeleton until it's automatic" },
+    { type: "text", key: "attempt2Did", label: "Attempt 2: What I did", section: "Attempt 2", seed: "Worked through a profitability case" },
+    { type: "text", key: "attempt2Observed", label: "Attempt 2: What I observed", seed: "Framework came faster, stumbled on the math" },
+    { type: "text", key: "attempt2Adjustment", label: "Attempt 2: Adjustment for next time", seed: "Drill mental math separately" },
+    { type: "text", key: "attempt3Did", label: "Attempt 3: What I did", section: "Attempt 3", seed: "Worked through a market-entry case" },
+    { type: "text", key: "attempt3Observed", label: "Attempt 3: What I observed", seed: "Framework and math both solid, struggled with an ambiguous follow-up" },
+    { type: "text", key: "attempt3Adjustment", label: "Attempt 3: Adjustment for next time", seed: "Practice asking clarifying questions before answering" },
+    { type: "textarea", key: "acrossAttempts", label: "What actually improved from attempt 1 to attempt 3", section: "Across all attempts", rows: 2, seed: "My stuck point moved entirely from framework structure to handling ambiguous follow-ups, a much more advanced problem." },
+  ],
+
+  130: [
+    { type: "table", key: "optionsCriteria", label: "Options & criteria", section: "Options & criteria", columns: [
+      { key: "option", label: "Option", kind: "text" },
+      { key: "cost", label: "Cost (1 to 10)", kind: "rating" },
+      { key: "impact", label: "Impact (1 to 10)", kind: "rating" },
+      { key: "feasibility", label: "Feasibility (1 to 10)", kind: "rating" },
+    ], seedRows: [{ option: "Ambitious approach", cost: 7, impact: 9, feasibility: 3 }] },
+    { type: "textarea", key: "matchesGut", label: "Does the highest-scoring option match my gut instinct?", section: "What the scores reveal", rows: 2, seed: "No, my gut favored the ambitious option, but it scored much lower on feasibility." },
+    { type: "textarea", key: "whereScoresDiverge", label: "Where did the scores diverge sharply, and why?", rows: 2, seed: "Feasibility, given my actual time constraints this semester." },
+    { type: "text", key: "finalChoice", label: "My final choice", seed: "The more moderate approach" },
+  ],
+
+  131: [
+    { type: "textarea", key: "unresolvedProblem", label: "The unresolved problem", section: "The problem", rows: 2, seed: "Which networking activities are actually worth my limited time." },
+    { type: "text", key: "model1", label: "Model 1", section: "First model", seed: "80/20 Analysis" },
+    { type: "textarea", key: "model1Reveals", label: "What applying it reveals", rows: 2, seed: "A small set of contacts drove most of my opportunities." },
+    { type: "text", key: "model2", label: "Model 2", section: "Second model", seed: "Systems Thinking" },
+    { type: "textarea", key: "model2Reveals", label: "What applying it reveals", rows: 2, seed: "Those contacts were all connected through one alumni group." },
+    { type: "textarea", key: "combinationReveals", label: "What the combination shows that neither model alone did", section: "The combination", rows: 2, seed: "The real leverage point is that one alumni group, not networking broadly." },
+  ],
+
+  132: [
+    { type: "textarea", key: "largerPlan", label: "The larger plan", section: "The plan", rows: 2, seed: "Launch a full weekly content series." },
+    { type: "textarea", key: "riskiestAssumption", label: "The riskiest assumption it depends on", rows: 2, seed: "That people actually want this specific type of content." },
+    { type: "textarea", key: "smallestTest", label: "Smallest possible test of that assumption", section: "The small test", rows: 2, seed: "Publish a single piece first and watch engagement." },
+    { type: "textarea", key: "result", label: "Result", rows: 2, seed: "Strong engagement on the first piece." },
+    { type: "text", key: "decision", label: "Confirm, adjust, or abandon the full plan?", section: "Decision", seed: "Confirm, moving forward with the full series" },
+  ],
+
+  133: [
+    { type: "chipList", key: "longTermGoals", label: "Long-term goals", section: "Long-term goals", seed: ["Lead a small product team within 5 years", "Build a reputation for shipping things people actually use"] },
+    { type: "chipList", key: "currentPriorities", label: "Current priorities", section: "Current priorities", seed: ["Finish my current class project", "Apply to 3 internships this month"] },
+    { type: "table", key: "connectionCheck", label: "Connection check", section: "Connection check", columns: [
+      { key: "goal", label: "Long-term goal", kind: "text" },
+      { key: "connected", label: "Connected current action? (Y/N)", kind: "text" },
+    ], seedRows: [{ goal: "Lead a small product team within 5 years", connected: "N" }] },
+    { type: "textarea", key: "goalWithNoAction", label: "Any goal with no connected action", section: "Gaps", rows: 2, seed: "Leading a small product team, nothing I'm doing right now builds toward that directly." },
+    { type: "textarea", key: "actionWithNoGoal", label: "Any current action with no connected goal", rows: 2, seed: "None right now, everything on my plate ties to at least one goal." },
+  ],
 };

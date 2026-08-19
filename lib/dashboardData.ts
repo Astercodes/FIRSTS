@@ -1,12 +1,12 @@
 export type ModuleStatus = "complete" | "in-progress" | "available" | "locked";
-export type StageId = "one" | "two" | "three" | "four";
+export type StageId = "one" | "two" | "three" | "four" | "five";
 
 export type FirstModule = {
   id: number;
   code: string;
   stage: StageId;
   title: string;
-  category: "A" | "B" | "C" | "D" | "E" | "F" | "G" | "H" | "I" | "J" | "K" | "L" | "M" | "N" | "O";
+  category: "A" | "B" | "C" | "D" | "E" | "F" | "G" | "H" | "I" | "J" | "K" | "L" | "M" | "N" | "O" | "P" | "Q";
   time: string;
   difficulty: "Easy" | "Moderate" | "Deep";
   status: ModuleStatus;
@@ -30,6 +30,8 @@ export const CATEGORY_META = {
   M: { label: "Closing the Loop & Offers", color: "var(--lime-zest)" },
   N: { label: "Mindset, Productivity & Habits", color: "var(--pink-grapefruit)" },
   O: { label: "Extra Edge & Standout Factor", color: "var(--juicy-plum)" },
+  P: { label: "Thinking, Reasoning & Mental Models", color: "var(--tropical-mango)" },
+  Q: { label: "Thinking Frameworks", color: "var(--juicy-plum)" },
 } as const;
 
 export const STAGES: { id: StageId; label: string; shortLabel: string; href: string }[] = [
@@ -37,6 +39,7 @@ export const STAGES: { id: StageId; label: string; shortLabel: string; href: str
   { id: "two", label: "Stage Two · Professional Identity & Personal Brand", shortLabel: "Stage Two", href: "/dashboard/stage/two" },
   { id: "three", label: "Stage Three · Job Application & Interview Skills", shortLabel: "Stage Three", href: "/dashboard/stage/three" },
   { id: "four", label: "Stage Four · Mindset, Productivity & Habits", shortLabel: "Stage Four", href: "/dashboard/stage/four" },
+  { id: "five", label: "Stage Five · Thinking, Reasoning & Mental Models", shortLabel: "Stage Five", href: "/dashboard/stage/five" },
 ];
 
 const STAGE_ONE_FIRSTS: FirstModule[] = [
@@ -154,7 +157,40 @@ const STAGE_FOUR_FIRSTS: FirstModule[] = [
   { id: 103, code: "F5", stage: "four", title: "Thought Leadership Post", category: "O", time: "3 to 5 hrs", difficulty: "Deep", status: "locked" },
 ];
 
-export const FIRSTS: FirstModule[] = [...STAGE_ONE_FIRSTS, ...STAGE_TWO_FIRSTS, ...STAGE_THREE_FIRSTS, ...STAGE_FOUR_FIRSTS];
+const STAGE_FIVE_FIRSTS: FirstModule[] = [
+  { id: 104, code: "G1", stage: "five", title: "Mental Model Awareness", category: "P", time: "1 hr", difficulty: "Easy", status: "locked" },
+  { id: 105, code: "G2", stage: "five", title: "Cause-and-Effect Mapping", category: "P", time: "20 to 30 min", difficulty: "Easy", status: "locked" },
+  { id: 106, code: "G3", stage: "five", title: "Problem Breakdown Exercise", category: "P", time: "20 min", difficulty: "Easy", status: "locked" },
+  { id: 107, code: "G4", stage: "five", title: "Decision Matrix", category: "P", time: "30 min", difficulty: "Easy", status: "locked" },
+  { id: 108, code: "G5", stage: "five", title: "Root Cause Analysis", category: "P", time: "20 min", difficulty: "Moderate", status: "locked" },
+  { id: 109, code: "G6", stage: "five", title: "Critical Thinking Drill", category: "P", time: "10 to 15 min", difficulty: "Easy", status: "locked" },
+  { id: 110, code: "G7", stage: "five", title: "Hypothesis Testing", category: "P", time: "1 to 2 wks", difficulty: "Moderate", status: "locked" },
+  { id: 111, code: "G8", stage: "five", title: "Scenario Planning", category: "P", time: "30 min", difficulty: "Easy", status: "locked" },
+  { id: 112, code: "G9", stage: "five", title: "Cognitive Bias Audit", category: "P", time: "45 min", difficulty: "Moderate", status: "locked" },
+  { id: 113, code: "G10", stage: "five", title: "Systems Thinking Exercise", category: "P", time: "45 min to 1 hr", difficulty: "Moderate", status: "locked" },
+  { id: 114, code: "G11", stage: "five", title: "Feedback Integration", category: "P", time: "15 min", difficulty: "Easy", status: "locked" },
+  { id: 115, code: "G12", stage: "five", title: "Strategic Prioritization", category: "P", time: "20 min", difficulty: "Easy", status: "locked" },
+  { id: 116, code: "G13", stage: "five", title: "Mental Model Application", category: "P", time: "30 min", difficulty: "Moderate", status: "locked" },
+  { id: 117, code: "G14", stage: "five", title: "Pattern Recognition Drill", category: "P", time: "30 to 45 min", difficulty: "Moderate", status: "locked" },
+  { id: 118, code: "G15", stage: "five", title: "Reflection on Decision-Making", category: "P", time: "15 min", difficulty: "Easy", status: "locked" },
+  { id: 119, code: "H16", stage: "five", title: "SWOT Thinking Exercise", category: "Q", time: "30 min", difficulty: "Easy", status: "locked" },
+  { id: 120, code: "H17", stage: "five", title: "First-Principles Analysis", category: "Q", time: "45 min to 1 hr", difficulty: "Deep", status: "locked" },
+  { id: 121, code: "H18", stage: "five", title: "Inversion Thinking Drill", category: "Q", time: "20 min", difficulty: "Easy", status: "locked" },
+  { id: 122, code: "H19", stage: "five", title: "Opportunity Cost Exercise", category: "Q", time: "15 min", difficulty: "Easy", status: "locked" },
+  { id: 123, code: "H20", stage: "five", title: "80/20 Analysis", category: "Q", time: "30 to 45 min", difficulty: "Moderate", status: "locked" },
+  { id: 124, code: "H21", stage: "five", title: "Systems Thinking Application", category: "Q", time: "1 hr", difficulty: "Deep", status: "locked" },
+  { id: 125, code: "H22", stage: "five", title: "Decision Tree Exercise", category: "Q", time: "30 to 45 min", difficulty: "Moderate", status: "locked" },
+  { id: 126, code: "H23", stage: "five", title: "Scenario Analysis", category: "Q", time: "1 to 2 hrs", difficulty: "Deep", status: "locked" },
+  { id: 127, code: "H24", stage: "five", title: "Checklists & SOPs Creation", category: "Q", time: "20 min", difficulty: "Easy", status: "locked" },
+  { id: 128, code: "H25", stage: "five", title: "Root Cause Framework", category: "Q", time: "20 min", difficulty: "Moderate", status: "locked" },
+  { id: 129, code: "H26", stage: "five", title: "Feedback Loop Exercise", category: "Q", time: "Ongoing", difficulty: "Moderate", status: "locked" },
+  { id: 130, code: "H27", stage: "five", title: "Comparative Analysis", category: "Q", time: "30 to 45 min", difficulty: "Moderate", status: "locked" },
+  { id: 131, code: "H28", stage: "five", title: "Mental Model Combination", category: "Q", time: "45 min to 1 hr", difficulty: "Deep", status: "locked" },
+  { id: 132, code: "H29", stage: "five", title: "Hypothesis-Driven Approach", category: "Q", time: "Days to wks", difficulty: "Moderate", status: "locked" },
+  { id: 133, code: "H30", stage: "five", title: "Strategic Mapping", category: "Q", time: "1 hr", difficulty: "Moderate", status: "locked" },
+];
+
+export const FIRSTS: FirstModule[] = [...STAGE_ONE_FIRSTS, ...STAGE_TWO_FIRSTS, ...STAGE_THREE_FIRSTS, ...STAGE_FOUR_FIRSTS, ...STAGE_FIVE_FIRSTS];
 
 export const MOCK_USER = {
   firstName: "Ada",

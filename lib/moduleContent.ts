@@ -116,6 +116,36 @@ export const COACH_MODE: Record<number, CoachMode> = {
   101: "research",
   102: "synthesis",
   103: "reflective",
+  104: "reflective",
+  105: "reflective",
+  106: "reflective",
+  107: "hybrid",
+  108: "reflective",
+  109: "research",
+  110: "hybrid",
+  111: "reflective",
+  112: "reflective",
+  113: "reflective",
+  114: "reflective",
+  115: "hybrid",
+  116: "reflective",
+  117: "reflective",
+  118: "synthesis",
+  119: "synthesis",
+  120: "reflective",
+  121: "reflective",
+  122: "reflective",
+  123: "hybrid",
+  124: "reflective",
+  125: "hybrid",
+  126: "hybrid",
+  127: "reflective",
+  128: "reflective",
+  129: "reflective",
+  130: "hybrid",
+  131: "synthesis",
+  132: "hybrid",
+  133: "synthesis",
 };
 
 export const LEARN_CONTENT: Record<number, LearnContent> = {
@@ -3151,5 +3181,844 @@ export const LEARN_CONTENT: Record<number, LearnContent> = {
     successSignal:
       "The post generates real engagement, comments or direct messages, from people in your target field, not just passive views.",
     milestoneTies: [49, 51],
+  },
+  104: {
+    definition:
+      "A Mental Model Awareness FIRST is the foundational understanding of what a mental model actually is: a simplified framework for how something works, used to reason through unfamiliar problems faster and more clearly than starting from scratch each time.",
+    whyItMatters:
+      "Students who don't consciously know they're using mental models tend to reason inconsistently, sometimes carefully and sometimes on pure instinct, without noticing the difference. Naming the tool is the first step to using it deliberately.",
+    whenWhoWhere: [
+      { label: "When", body: "Build this awareness early, before you need to apply any specific model under pressure, so the vocabulary is already familiar." },
+      { label: "Who", body: "No collaborator required, though a professor or mentor who thinks visibly out loud can model what deliberate reasoning looks like." },
+      { label: "Where", body: "Introduced through reading and reflection, then noticed in action during any real decision or class discussion." },
+    ],
+    howItWorks: [
+      "Read three or four short explanations of common mental models: opportunity cost, inversion, first principles.",
+      "For each, write one sentence connecting it to a decision you've already made without realizing you were using it.",
+    ],
+    tools: ["A short list of common mental models, Farnam Street's mental models list is a widely used starting point", "A notes app to log examples"],
+    scenario: {
+      title: "The habit she already had a name for",
+      body: "A student assumed mental models was an abstract academic term until she realized that her habit of asking what's the real cost of saying yes to this before taking on new commitments was, in fact, opportunity cost thinking she'd been doing instinctively for years.",
+    },
+    pitfalls: [
+      "Treating mental models as trivia to memorize rather than tools to actually apply",
+      "Trying to learn dozens at once instead of starting with a small, useful set",
+    ],
+    successSignal:
+      "You can name at least three mental models you already use instinctively, and recognize a new situation where a specific model would help.",
+    milestoneTies: [],
+  },
+
+  105: {
+    definition:
+      "A Cause-and-Effect Mapping FIRST is the practice of visually or verbally tracing how a specific action led to a specific outcome, step by step, instead of treating results as disconnected from their origins.",
+    whyItMatters:
+      "Without tracing cause and effect deliberately, it's easy to repeat mistakes or credit success to the wrong factor, since the real mechanism stays invisible.",
+    whenWhoWhere: [
+      { label: "When", body: "Practice this after any notable outcome, positive or negative, while the details are still fresh." },
+      { label: "Who", body: "No collaborator required, though discussing the map with someone who was also involved can surface causes you missed." },
+      { label: "Where", body: "Done on paper or a simple diagram tool immediately after a project, exam, or decision concludes." },
+    ],
+    howItWorks: [
+      "Write the outcome on one end, then work backward asking what caused this at each step until you reach a root action or decision.",
+      "Draw the chain as a simple line of boxes and arrows.",
+    ],
+    tools: ["A notebook", "A simple diagramming tool like a whiteboard app, or paper and pen"],
+    scenario: {
+      title: "Not just luck",
+      body: "A student assumed a strong exam grade was just luck until she mapped it backward and found a clear chain: she'd started reviewing two weeks earlier than usual, which let her attend office hours before the material got dense, which meant she'd already resolved her confusion before test week.",
+    },
+    pitfalls: [
+      "Stopping at the first cause instead of tracing back further",
+      "Assuming correlation is causation without checking the actual mechanism",
+    ],
+    successSignal:
+      "You can trace a real outcome back through at least three genuine causal steps, not just one surface-level explanation.",
+    milestoneTies: [108, 113],
+  },
+
+  106: {
+    definition:
+      "A Problem Breakdown Exercise is the deliberate practice of deconstructing a complex, overwhelming problem into smaller, clearly defined, manageable parts before attempting to solve any of it.",
+    whyItMatters:
+      "Complex problems feel paralyzing when approached as one giant task; breaking them down converts an overwhelming wall into a sequence of achievable steps, which is often the real difference between finishing and stalling out.",
+    whenWhoWhere: [
+      { label: "When", body: "Use this any time a problem or project feels too big to know where to start." },
+      { label: "Who", body: "No collaborator required, though talking the breakdown through with a peer can reveal parts you overlooked." },
+      { label: "Where", body: "Done at the start of any large assignment, project, or decision, before diving into execution." },
+    ],
+    howItWorks: [
+      "Write the full problem at the top of a page.",
+      "List every distinct sub-question or sub-task it contains.",
+      "Group related ones together, then order them by what needs to happen first.",
+    ],
+    tools: ["A notebook, whiteboard, or simple mind-mapping app"],
+    scenario: {
+      title: "From frozen to a first draft",
+      body: "A student froze for two days looking at a capstone brief that just said develop a go-to-market strategy. Once she broke it into five sub-questions, audience, positioning, channels, budget, timeline, she finished a full first draft outline within an hour.",
+    },
+    pitfalls: [
+      "Breaking the problem down so finely that the list itself becomes overwhelming",
+      "Skipping the ordering step and tackling parts randomly",
+    ],
+    successSignal:
+      "A problem that felt paralyzing now has a clear, ordered list of smaller steps you can actually start on.",
+    milestoneTies: [],
+  },
+
+  107: {
+    definition:
+      "A Decision Matrix is a structured tool for evaluating multiple options against the same set of criteria, using weighted scoring to make a comparison more objective than gut instinct alone.",
+    whyItMatters:
+      "Without a structured comparison, decisions often get made based on whichever option was considered most recently or most vividly, rather than the one that actually scores best against what matters.",
+    whenWhoWhere: [
+      { label: "When", body: "Use this for any decision with three or more real options and genuine uncertainty about which is best." },
+      { label: "Who", body: "No collaborator required, though a second opinion on your weighting can catch blind spots." },
+      { label: "Where", body: "Built on paper or in a simple spreadsheet whenever a real multi-option decision arises." },
+    ],
+    howItWorks: [
+      "List your options as rows and your decision criteria as columns.",
+      "Weight each criterion by importance, score each option per criterion, then multiply and sum for a weighted total per option.",
+    ],
+    tools: ["A spreadsheet tool like Google Sheets or Excel", "Or a simple hand-drawn grid"],
+    scenario: {
+      title: "The winner she'd been talking herself out of",
+      body: "A student comparing two internship offers kept flip-flopping based on whichever conversation she'd had most recently. Building a simple weighted matrix, mentorship, pay, location, growth potential, revealed a clear winner she'd been talking herself out of.",
+    },
+    pitfalls: [
+      "Choosing weights that quietly favor the option you already wanted",
+      "Including so many criteria that the matrix becomes unwieldy",
+    ],
+    successSignal:
+      "The matrix produces a clear top score, and you can explain your final decision by pointing to specific weighted factors rather than a vague feeling.",
+    milestoneTies: [78],
+  },
+
+  108: {
+    definition:
+      "A Root Cause Analysis is a structured method for identifying the true underlying cause of a challenge or failure, rather than stopping at the first, most visible symptom.",
+    whyItMatters:
+      "Fixing a symptom without addressing its root cause means the same problem tends to resurface in a slightly different form, wasting effort on repeat solutions.",
+    whenWhoWhere: [
+      { label: "When", body: "Use this after any recurring problem or notable failure, especially one that has happened more than once." },
+      { label: "Who", body: "No collaborator required, though people closer to the problem can offer perspective a root cause analysis alone might miss." },
+      { label: "Where", body: "Done in a focused reflection session shortly after the failure, while details are still accessible." },
+    ],
+    howItWorks: [
+      "State the problem clearly, then ask why did this happen and answer honestly.",
+      "Ask why again about that answer, repeating four or five times until you reach a cause that, if fixed, would actually prevent recurrence.",
+    ],
+    tools: ["A notebook", "The discipline to keep asking why past the first comfortable answer"],
+    scenario: {
+      title: "Past busy to the real cause",
+      body: "A student kept missing internal team deadlines and initially blamed being busy. Pushing the why further revealed the real root cause: he never blocked dedicated time for the task, always planning to fit it in, which never actually happened.",
+    },
+    pitfalls: [
+      "Stopping at the first answer, which is often a symptom rather than a cause",
+      "Turning the exercise into self-blame instead of honest diagnosis",
+    ],
+    successSignal:
+      "You reach a cause that, once named, makes the pattern of repeated failure make sense and points to a specific fix.",
+    milestoneTies: [128],
+  },
+
+  109: {
+    definition:
+      "A Critical Thinking Drill is a deliberate practice of questioning the assumptions, evidence, and logic behind a claim or scenario before accepting or rejecting it.",
+    whyItMatters:
+      "Most claims, in coursework, media, or casual conversation, rest on unstated assumptions that go unexamined. Practicing this skill deliberately makes it a reflex rather than an occasional effort.",
+    whenWhoWhere: [
+      { label: "When", body: "Practice this regularly with low-stakes claims so the habit is strong before you need it for a high-stakes decision." },
+      { label: "Who", body: "No collaborator required, though debating the claim with someone who disagrees sharpens the exercise." },
+      { label: "Where", body: "Practiced with articles, class readings, or claims from conversations and social media." },
+    ],
+    howItWorks: [
+      "Take a claim and identify the assumptions it rests on, the evidence offered for it, and whether the logic connecting evidence to conclusion actually holds.",
+      "Note any gaps.",
+    ],
+    tools: ["Any article, argument, or claim you encounter", "A notebook"],
+    scenario: {
+      title: "The gap the headline omitted",
+      body: "A student read a headline claiming a new productivity app doubles output and initially believed it. Applying the drill, she found the underlying study had a sample size of twelve people over three days, a gap the headline conveniently omitted.",
+    },
+    pitfalls: [
+      "Using critical thinking only to attack claims you already disagree with",
+      "Giving claims you like a pass without the same scrutiny",
+    ],
+    successSignal:
+      "You can identify at least one unstated assumption or evidence gap in a claim you initially found convincing.",
+    milestoneTies: [110, 112],
+  },
+
+  110: {
+    definition:
+      "A Hypothesis Testing exercise is the practice of making a specific, falsifiable prediction and then designing a small, real experiment to check whether it holds, rather than assuming your best guess is correct.",
+    whyItMatters:
+      "Untested assumptions quietly shape decisions constantly, and many turn out wrong when actually checked. Small experiments are a low-cost way to replace guessing with evidence.",
+    whenWhoWhere: [
+      { label: "When", body: "Use this whenever you're about to make a decision based on an assumption you haven't actually verified." },
+      { label: "Who", body: "No collaborator required, though sharing results with someone else can help you interpret them honestly." },
+      { label: "Where", body: "Applied to real, low-stakes situations: study methods, outreach messages, daily routines." },
+    ],
+    howItWorks: [
+      "State your prediction clearly and specifically.",
+      "Design the smallest possible test that could prove it wrong.",
+      "Run the test, record the actual result, and compare it honestly to your prediction.",
+    ],
+    tools: ["A notebook to record predictions and outcomes side by side"],
+    scenario: {
+      title: "The result that changed how he studied",
+      body: "A student assumed his study group made him retain material better than solo review. He tested it directly: one week studying solo, one week with the group, both followed by a self-quiz. The solo week actually scored higher, which changed how he studied for the rest of the semester.",
+    },
+    pitfalls: [
+      "Making the test so small or biased that it can't actually disprove your prediction",
+      "Ignoring inconvenient results that contradict what you wanted to believe",
+    ],
+    successSignal:
+      "You have a real result, not just a stronger opinion, and you're willing to update your approach based on what the test actually showed.",
+    milestoneTies: [132],
+  },
+
+  111: {
+    definition:
+      "A Scenario Planning exercise is the practice of mapping out best-case, worst-case, and most-likely outcomes for a decision before it happens, so you're prepared regardless of which one unfolds.",
+    whyItMatters:
+      "Planning for only the outcome you hope for leaves you unprepared if things go differently, while planning for only the worst case can create unnecessary anxiety. Mapping all three keeps you grounded and ready either way.",
+    whenWhoWhere: [
+      { label: "When", body: "Use this before any decision with real uncertainty and meaningful stakes, such as a job offer decision or a major project commitment." },
+      { label: "Who", body: "No collaborator required, though talking through each scenario with someone else can surface outcomes you hadn't considered." },
+      { label: "Where", body: "Done in a focused planning session before the decision point arrives, not after." },
+    ],
+    howItWorks: [
+      "Write the decision at the top.",
+      "For best-case, worst-case, and most-likely outcomes, describe what happens and one action you'd take in response to each.",
+    ],
+    tools: ["A simple three-column template: best case, most likely, worst case"],
+    scenario: {
+      title: "A real plan for the worst case",
+      body: "Before accepting her offer, a student mapped out what she'd do if the role turned out to be a poor fit within six months, worst case, if it was solid but unremarkable, most likely, and if it exceeded expectations, best case. Having a real plan for the worst case measurably reduced her pre-decision anxiety.",
+    },
+    pitfalls: [
+      "Spending so much time on the worst case that it becomes catastrophizing rather than planning",
+      "Skipping the most-likely scenario because it feels less interesting than the extremes",
+    ],
+    successSignal:
+      "You feel calmer about the decision because you have a concrete response ready for each scenario, not just the one you're hoping for.",
+    milestoneTies: [126],
+  },
+
+  112: {
+    definition:
+      "A Cognitive Bias Audit is a structured self-review that identifies which specific cognitive biases show up most often in your own decision-making, so you can watch for them deliberately.",
+    whyItMatters:
+      "Everyone has biases, but most people assume their own reasoning is more objective than it actually is. Naming your specific, recurring biases turns an invisible pattern into something you can actually catch in the moment.",
+    whenWhoWhere: [
+      { label: "When", body: "Conduct this after reviewing a handful of past decisions, ideally including at least one that didn't go well." },
+      { label: "Who", body: "A mentor or close friend who has observed your decision-making can offer a useful outside perspective." },
+      { label: "Where", body: "Done in a reflective session reviewing your own decision history." },
+    ],
+    howItWorks: [
+      "Review 3 to 5 past decisions.",
+      "For each, ask whether confirmation bias, anchoring, sunk cost, or overconfidence played a role.",
+      "Note which bias appears most often across your own history.",
+    ],
+    tools: ["A short list of common cognitive biases", "Your own decision history to review against it"],
+    scenario: {
+      title: "A textbook sunk cost he hadn't named",
+      body: "A student reviewing his past few major decisions noticed a clear pattern: he consistently stuck with a plan longer than he should have because of how much time he'd already invested, a textbook sunk cost bias he hadn't previously named in himself.",
+    },
+    pitfalls: [
+      "Treating the audit as a one-time academic exercise rather than something to actively watch for in future decisions",
+    ],
+    successSignal:
+      "You can name your one or two most common personal biases and catch yourself falling into one in real time, at least occasionally.",
+    milestoneTies: [107, 111],
+  },
+
+  113: {
+    definition:
+      "A Systems Thinking Exercise is the practice of recognizing how processes, people, and outcomes interconnect and influence each other, rather than viewing a situation as a set of isolated, independent parts.",
+    whyItMatters:
+      "Many problems that look like isolated failures are actually symptoms of how a larger system is structured; fixing the visible symptom without seeing the system means the same issue tends to resurface elsewhere.",
+    whenWhoWhere: [
+      { label: "When", body: "Use this when a problem keeps recurring across different specific situations, suggesting a structural cause rather than a one-off mistake." },
+      { label: "Who", body: "No collaborator required, though people who interact with different parts of the same system can reveal connections you can't see alone." },
+      { label: "Where", body: "Applied to any recurring team, process, or personal-habit problem." },
+    ],
+    howItWorks: [
+      "Draw the key people, processes, and outcomes involved as nodes, then draw arrows showing how each one influences the others.",
+      "Look for loops, where an outcome feeds back into a cause.",
+    ],
+    tools: ["Paper and pen, or a simple diagramming tool for mapping nodes and connections"],
+    scenario: {
+      title: "The loop behind the empty meetings",
+      body: "A student org kept struggling with low meeting attendance, and different officers blamed different individual members each time. Mapping it as a system revealed a feedback loop: sparse agendas led to low perceived value, which led to more absences, which led to even sparser agendas, since fewer people showed up to plan them.",
+    },
+    pitfalls: [
+      "Oversimplifying the map to just a few nodes when the real system has more interconnected parts",
+      "Stopping at the first loop found without checking for others",
+    ],
+    successSignal:
+      "You can identify at least one feedback loop in a recurring problem, showing how an effect cycles back to become its own cause.",
+    milestoneTies: [124],
+  },
+
+  114: {
+    definition:
+      "A Feedback Integration exercise is the deliberate practice of analyzing feedback you've received and using it to actually adjust your thinking or approach, rather than simply hearing it and moving on unchanged.",
+    whyItMatters:
+      "Feedback that isn't integrated is functionally the same as no feedback at all; the value only appears once it changes what you actually do next.",
+    whenWhoWhere: [
+      { label: "When", body: "Practice this immediately after receiving any substantive feedback, while the specifics are still fresh." },
+      { label: "Who", body: "The person who gave the feedback, if a follow-up clarifying question would help you apply it more precisely." },
+      { label: "Where", body: "Done in a short reflection session right after receiving feedback, before the details fade." },
+    ],
+    howItWorks: [
+      "Write down the feedback exactly as given.",
+      "Identify the specific pattern or behavior it points to.",
+      "Name one concrete change you'll make, and a way you'll know if it worked.",
+    ],
+    tools: ["A dedicated notes section or document just for tracking feedback and how you responded to it"],
+    scenario: {
+      title: "The same note, twice",
+      body: "A student received the same piece of feedback twice, from two different professors, about rushing through her presentations' conclusions. The second time, instead of just nodding, she wrote it down, identified the pattern, running out of time and cutting the ending short, and started deliberately timing her practice runs to leave room for a real close.",
+    },
+    pitfalls: [
+      "Hearing the same feedback repeatedly without noticing the pattern",
+      "Becoming defensive instead of curious about what's actually being pointed out",
+    ],
+    successSignal:
+      "You can point to a specific behavior change that came directly from feedback you received, not just a vague intention to do better.",
+    milestoneTies: [129],
+  },
+
+  115: {
+    definition:
+      "A Strategic Prioritization exercise ranks your current tasks or projects by impact versus effort, so your time goes toward what actually matters most rather than whatever feels most urgent in the moment.",
+    whyItMatters:
+      "Without deliberate prioritization, low-impact but easy tasks often crowd out higher-impact but harder ones, simply because they're quicker to cross off a list.",
+    whenWhoWhere: [
+      { label: "When", body: "Use this at the start of any week or project phase with more tasks than time to do them all equally well." },
+      { label: "Who", body: "No collaborator required, though a mentor's perspective on what actually matters most can sharpen your impact estimates." },
+      { label: "Where", body: "Done during weekly or project-planning sessions." },
+    ],
+    howItWorks: [
+      "List your current tasks.",
+      "Rate each on impact, how much it actually moves your goals forward, and effort, how much time or energy it requires.",
+      "Prioritize high-impact, low-effort tasks first, then high-impact, high-effort.",
+    ],
+    tools: ["A simple 2x2 grid, impact vs. effort", "Or a spreadsheet"],
+    scenario: {
+      title: "Three quick wins near the bottom",
+      body: "A student's task list had fifteen items, and she'd been working through them in the order they were added. Rated by impact versus effort, three quick, high-impact tasks had been sitting untouched near the bottom simply because they'd been added last.",
+    },
+    pitfalls: [
+      "Rating everything as high-impact because it all feels important in the moment, which defeats the purpose of prioritizing at all",
+    ],
+    successSignal:
+      "Your week's actual time allocation matches your stated priorities, rather than drifting toward whatever felt easiest to start.",
+    milestoneTies: [83, 86],
+  },
+
+  116: {
+    definition:
+      "A Mental Model Application is the deliberate use of one specific mental model, such as opportunity cost or inversion, to work through a real, current problem, rather than just knowing the model exists in the abstract.",
+    whyItMatters:
+      "Knowing about a mental model and actually applying it under real conditions are very different skills; this FIRST closes that gap by forcing genuine application.",
+    whenWhoWhere: [
+      { label: "When", body: "Use this once you're comfortable with the basic vocabulary from Mental Model Awareness, applied to a real decision you're currently facing." },
+      { label: "Who", body: "No collaborator required, though explaining your application to someone else is a good check that you're using the model correctly." },
+      { label: "Where", body: "Applied directly to a current, real problem, not a hypothetical one." },
+    ],
+    howItWorks: [
+      "Choose one mental model.",
+      "Write your real problem, then work through it explicitly using that model's lens, showing your reasoning step by step rather than just stating a conclusion.",
+    ],
+    tools: ["A short reference list of mental models with brief definitions", "Your current real problem"],
+    scenario: {
+      title: "What am I giving up",
+      body: "A student trying to decide whether to take on an extra leadership role applied opportunity cost explicitly: instead of just asking can I fit this in, she asked what am I giving up by saying yes, and named the specific project that would suffer, which made the decision far clearer than vague busyness ever had.",
+    },
+    pitfalls: [
+      "Applying the model loosely or informally without actually writing out the reasoning, which makes it easy to fool yourself that you've thought it through when you haven't",
+    ],
+    successSignal:
+      "You can point to a specific decision where explicitly using a mental model changed your reasoning or conclusion from what you would have done on instinct alone.",
+    milestoneTies: [104, 131],
+  },
+
+  117: {
+    definition:
+      "A Pattern Recognition Drill is the deliberate practice of identifying recurring trends or issues across multiple instances of data or behavior, rather than treating each instance as an isolated event.",
+    whyItMatters:
+      "A single data point rarely tells you much, but the same issue appearing three or four times reveals a pattern worth acting on, if you're paying attention closely enough to notice it.",
+    whenWhoWhere: [
+      { label: "When", body: "Use this once you have several instances of similar data or behavior to compare, such as multiple grades, multiple rejections, or multiple team interactions." },
+      { label: "Who", body: "No collaborator required, though a mentor reviewing the same data might catch a pattern you're too close to see." },
+      { label: "Where", body: "Applied to your own tracked data: grades, application outcomes, feedback, habits." },
+    ],
+    howItWorks: [
+      "Gather at least four to five comparable instances.",
+      "Lay them side by side and look for what repeats: a common cause, a common time of day, a common type of mistake.",
+    ],
+    tools: ["Your own tracked records: grades, application logs, journal entries, as raw material"],
+    scenario: {
+      title: "Obvious once compared, invisible alone",
+      body: "A student reviewing four rejected applications side by side noticed all four postings emphasized data analytics skills prominently, a pattern invisible when looking at any single rejection alone but obvious once compared together.",
+    },
+    pitfalls: [
+      "Seeing a pattern in too few data points and overgeneralizing from coincidence",
+      "Dismissing a real pattern because no single instance seemed significant on its own",
+    ],
+    successSignal:
+      "You can name a specific, repeating pattern across multiple instances that wasn't visible when looking at any single one alone.",
+    milestoneTies: [63, 86],
+  },
+
+  118: {
+    definition:
+      "A Reflection on Decision-Making is a structured journaling practice that captures your key insights, reasoning patterns, and lessons learned across the decisions you've made, building self-knowledge about how you actually think.",
+    whyItMatters:
+      "Without deliberate reflection, the same reasoning mistakes tend to repeat across different decisions, since each one is experienced in isolation rather than as part of a visible pattern over time.",
+    whenWhoWhere: [
+      { label: "When", body: "Practice this weekly or after any significant decision, closing out this category by connecting everything learned across the earlier FIRSTS." },
+      { label: "Who", body: "No collaborator required, though sharing patterns with a mentor can validate or challenge your self-assessment." },
+      { label: "Where", body: "Written in a dedicated journal or notes section reserved specifically for decision reflection." },
+    ],
+    howItWorks: [
+      "After a decision, write what you decided, how you decided it, which model or process, if any, you used, and what you'd do differently in hindsight.",
+      "Review past entries periodically for patterns.",
+    ],
+    tools: ["A dedicated journal, physical or digital, kept specifically for this purpose"],
+    scenario: {
+      title: "Structure for the big ones, instinct for the rest",
+      body: "Reviewing a month of decision journal entries, a student noticed she used a structured process, decision matrix, scenario planning, for major decisions but pure instinct for medium-stakes ones, several of which she later regretted, a clear signal about where to apply more structure going forward.",
+    },
+    pitfalls: [
+      "Journaling only about decisions that went well, which produces a skewed, overly positive picture of your own reasoning",
+    ],
+    successSignal:
+      "You can identify a real pattern in how you make decisions, and name one specific way you want that pattern to change.",
+    milestoneTies: [],
+  },
+
+  119: {
+    definition:
+      "A SWOT Thinking Exercise applies the Strengths, Weaknesses, Opportunities, and Threats framework not just to companies, but directly to yourself, a project, or a decision you're facing.",
+    whyItMatters:
+      "SWOT is usually taught as a business tool, but the same structure works well for personal decisions, forcing you to consider internal factors, strengths, weaknesses, alongside external ones, opportunities, threats, instead of only one or the other.",
+    whenWhoWhere: [
+      { label: "When", body: "Use this at the start of a major personal decision or project, when you want a fuller picture than a pros-and-cons list alone provides." },
+      { label: "Who", body: "No collaborator required, though someone who knows you or the project well can add perspective you might miss about your own blind spots." },
+      { label: "Where", body: "Done in a focused planning session, written out in the classic four-quadrant grid." },
+    ],
+    howItWorks: [
+      "Draw four quadrants.",
+      "List your genuine strengths and weaknesses relevant to the decision, internal, then external opportunities and threats.",
+      "Look specifically at where a strength could address a threat, or a weakness could block an opportunity.",
+    ],
+    tools: ["A simple four-quadrant template, paper or digital"],
+    scenario: {
+      title: "Where the gap and the threat lined up",
+      body: "A student applying SWOT to her own job search identified a genuine weakness, data analytics, crossing directly with a real threat, most postings requiring it, which made closing that specific gap her top priority rather than one item on a long, undifferentiated list.",
+    },
+    pitfalls: [
+      "Listing generic strengths and weaknesses without connecting them to the specific decision at hand, which produces a list that feels thorough but isn't actually useful",
+    ],
+    successSignal:
+      "You can point to at least one specific action that emerged directly from where two quadrants intersected, not just four separate lists.",
+    milestoneTies: [12],
+  },
+
+  120: {
+    definition:
+      "A First-Principles Analysis breaks a problem down into its fundamental, verifiable truths, rather than reasoning by analogy to how things are usually done, opening space for genuinely original solutions.",
+    whyItMatters:
+      "Most problem-solving happens by comparison to precedent, which is efficient but can trap you in assumptions that were never actually necessary. First-principles thinking strips those assumptions away to find what's truly required.",
+    whenWhoWhere: [
+      { label: "When", body: "Use this when a conventional approach feels stuck or when you suspect the standard way of doing something is more habit than necessity." },
+      { label: "Who", body: "No collaborator required, though a mentor unfamiliar with the standard approach can help you see past your own inherited assumptions." },
+      { label: "Where", body: "Applied to any problem where you catch yourself thinking this is just how it's done." },
+    ],
+    howItWorks: [
+      "State the problem.",
+      "List every assumption embedded in the conventional approach.",
+      "For each assumption, ask whether it's a fundamental truth or just convention.",
+      "Rebuild a solution using only the fundamental truths.",
+    ],
+    tools: ["A notebook", "The discipline to keep asking is this actually true, or just how it's usually done"],
+    scenario: {
+      title: "A resume that broke the format",
+      body: "A student assumed a strong resume had to follow the standard reverse-chronological format because that's just how resumes work. Breaking it down to first principles, the fundamental truth is that a resume needs to communicate value quickly and credibly, not that it must follow one specific layout, she tested a skills-forward format that better fit her actual strengths.",
+    },
+    pitfalls: [
+      "Confusing first principles with simply having a contrarian opinion, without actually verifying which assumptions are truly fundamental versus just unexamined",
+    ],
+    successSignal:
+      "You arrive at a solution that differs meaningfully from the conventional approach, and you can explain exactly which assumption you removed to get there.",
+    milestoneTies: [121],
+  },
+
+  121: {
+    definition:
+      "An Inversion Thinking Drill solves a problem by deliberately thinking about its opposite: instead of asking how to succeed, asking specifically how you would guarantee failure, then avoiding exactly that.",
+    whyItMatters:
+      "It's often easier to see clearly what would cause failure than to directly identify what guarantees success; inversion uses that asymmetry to surface risks and mistakes you might otherwise miss.",
+    whenWhoWhere: [
+      { label: "When", body: "Use this alongside any forward-looking plan, as a check against blind spots the direct approach might not catch." },
+      { label: "Who", body: "No collaborator required, though brainstorming failure modes with a peer often generates a longer, more honest list than doing it alone." },
+      { label: "Where", body: "Applied to any plan or goal before committing to it fully." },
+    ],
+    howItWorks: [
+      "State your goal.",
+      "Instead of listing how to achieve it, list every way you could guarantee failure.",
+      "Check your actual plan against that list and remove or address each failure mode.",
+    ],
+    tools: ["A notebook", "A genuine willingness to think pessimistically for a few minutes"],
+    scenario: {
+      title: "How to guarantee a terrible presentation",
+      body: "Before a big presentation, a student inverted the question from how do I give a great presentation to how would I guarantee a terrible one and generated a list including never practice out loud and ignore the time limit, both of which she then deliberately made sure not to do.",
+    },
+    pitfalls: [
+      "Treating the exercise as pure pessimism without translating the failure list back into concrete preventive action",
+    ],
+    successSignal:
+      "Your plan visibly changes based on failure modes you identified through inversion that you hadn't considered when thinking forward.",
+    milestoneTies: [120, 131],
+  },
+
+  122: {
+    definition:
+      "An Opportunity Cost Exercise is the deliberate practice of naming what you give up by choosing one option, so a decision is evaluated against its real alternative, not just in isolation.",
+    whyItMatters:
+      "Evaluating an option purely on its own merits, without naming what you're trading away, makes almost anything look reasonable; opportunity cost forces the comparison that actually matters.",
+    whenWhoWhere: [
+      { label: "When", body: "Use this before committing significant time or resources to any option, especially when multiple genuine alternatives exist." },
+      { label: "Who", body: "No collaborator required, though naming the trade-off out loud to someone else often makes it feel more real than just thinking it privately." },
+      { label: "Where", body: "Applied before saying yes to any new commitment, project, or offer." },
+    ],
+    howItWorks: [
+      "Before deciding, explicitly name your best alternative use of the same time or resources.",
+      "Compare the option you're considering directly against that specific alternative, not against doing nothing.",
+    ],
+    tools: ["A simple two-column comparison: this option vs. my best alternative"],
+    scenario: {
+      title: "The trade-off that made it obvious",
+      body: "A student was about to say yes to a third leadership role, thinking only about the role itself. Naming the opportunity cost explicitly, the specific project she'd have to deprioritize, made the real trade-off obvious, and she declined.",
+    },
+    pitfalls: [
+      "Comparing the option only against doing nothing, rather than against your actual next-best alternative, which understates the real cost",
+    ],
+    successSignal:
+      "You can name your specific opportunity cost for a real decision, not just a vague sense that you're busy.",
+    milestoneTies: [83],
+  },
+
+  123: {
+    definition:
+      "An 80/20 Analysis, the Pareto Principle, identifies the roughly 20% of your actions that are producing roughly 80% of your results, so you can invest more deliberately in what's actually working.",
+    whyItMatters:
+      "Effort and results are rarely evenly distributed; without checking, it's easy to keep spending equal time across all activities when a small subset is quietly doing most of the real work.",
+    whenWhoWhere: [
+      { label: "When", body: "Use this periodically, such as monthly, to review where your effort is actually paying off versus just occupying time." },
+      { label: "Who", body: "No collaborator required, though a mentor reviewing your results with you can help identify which 20% is genuinely driving outcomes." },
+      { label: "Where", body: "Applied to any area with trackable inputs and outputs: study methods, networking activities, application types." },
+    ],
+    howItWorks: [
+      "List your recent activities in a given area.",
+      "Rank them by actual result produced.",
+      "Identify the smaller subset responsible for most of the results, and consider shifting more time toward it.",
+    ],
+    tools: ["Your own tracked data, from your Stage Four KPI Tracker, for example, as the raw material for the analysis"],
+    scenario: {
+      title: "Where the interviews actually came from",
+      body: "Reviewing her Stage Three job search data, a student found that network-sourced applications, only about 20% of her total submissions, accounted for nearly all of her interview invitations, which directly reshaped how she spent her remaining search time.",
+    },
+    pitfalls: [
+      "Applying the 80/20 split too literally as an exact ratio rather than a general pattern to investigate honestly in your own data",
+    ],
+    successSignal:
+      "You can name the specific smaller subset of your effort that's producing most of your results, backed by your own real data.",
+    milestoneTies: [86],
+  },
+
+  124: {
+    definition:
+      "A Systems Thinking Application extends the systems thinking skill from Category G into a real project, team, or process, mapping the interrelated elements at a larger, more consequential scale.",
+    whyItMatters:
+      "Personal-scale systems thinking builds the skill; applying it to a real team or project is where it starts to genuinely change outcomes, since most team-level problems are systemic rather than individual.",
+    whenWhoWhere: [
+      { label: "When", body: "Use this when joining a new team or project, or when a team-level problem keeps recurring despite different people trying to fix it." },
+      { label: "Who", body: "Ideally involves input from others on the team, since a system usually looks different from each person's vantage point within it." },
+      { label: "Where", body: "Applied to a real, current team, club, or project structure." },
+    ],
+    howItWorks: [
+      "Map the key roles, processes, and outputs of the system.",
+      "Draw connections and feedback loops between them.",
+      "Identify one structural change, not just a person to blame, that would improve the whole system.",
+    ],
+    tools: ["A whiteboard or diagramming tool", "Ideally a short conversation with at least one other person in the system"],
+    scenario: {
+      title: "One unclear step, not one slow person",
+      body: "A team consistently missed deadlines, and the initial instinct was to blame whoever submitted last. Mapping the actual system revealed that the true bottleneck was a single unclear approval step early in the process that delayed everything downstream, a structural fix rather than a personnel issue.",
+    },
+    pitfalls: [
+      "Defaulting back to blaming individuals once the mapping gets difficult, instead of pushing through to find the actual structural cause",
+    ],
+    successSignal:
+      "You identify a structural change, not a person, that would improve the system, and the team agrees the diagnosis rings true.",
+    milestoneTies: [113],
+  },
+
+  125: {
+    definition:
+      "A Decision Tree Exercise visually maps out a complex decision's branching choices, their possible outcomes, and the risks attached to each, making a tangled decision easier to actually see and compare.",
+    whyItMatters:
+      "Complex decisions with multiple sequential choices are hard to hold entirely in your head at once; a visual tree externalizes the structure so you can evaluate it clearly rather than losing track of branches.",
+    whenWhoWhere: [
+      { label: "When", body: "Use this for decisions with more than one sequential choice point, such as if I do X, then I'll need to decide Y." },
+      { label: "Who", body: "No collaborator required, though walking someone else through your tree often reveals branches or risks you missed." },
+      { label: "Where", body: "Drawn out on paper or a simple diagram tool during a focused planning session." },
+    ],
+    howItWorks: [
+      "Start with your first decision point as a single node.",
+      "Draw a branch for each option.",
+      "From each resulting outcome, draw further branches for any subsequent decisions.",
+      "Label risks or probabilities where relevant.",
+    ],
+    tools: ["Paper and pen, or a simple flowchart tool"],
+    scenario: {
+      title: "A rushed decision made structured",
+      body: "A student deciding whether to accept an offer with a short response deadline used a decision tree to map accept now vs. ask for an extension vs. decline, with each branch showing the realistic next steps and risks, which made a stressful, rushed decision feel structured and clear instead of overwhelming.",
+    },
+    pitfalls: [
+      "Building a tree so detailed it becomes as overwhelming as the original decision, rather than a tool that actually simplifies it",
+    ],
+    successSignal:
+      "You can look at the finished tree and immediately see which branch you're leaning toward and why, rather than still feeling stuck.",
+    milestoneTies: [107],
+  },
+
+  126: {
+    definition:
+      "A Scenario Analysis extends the scenario planning skill from Category G to more complex, multi-variable situations, planning concrete actions for best-case, worst-case, and most-likely outcomes across a larger decision.",
+    whyItMatters:
+      "As decisions grow more complex, with more variables and stakeholders, simple scenario planning needs to scale up to handle that complexity while still producing a clear, actionable plan for each outcome.",
+    whenWhoWhere: [
+      { label: "When", body: "Use this for higher-stakes, more complex decisions than the basic scenario planning FIRST covered, such as a major career pivot or a significant financial commitment." },
+      { label: "Who", body: "Ideally involves someone with more experience in the relevant domain, who can sanity-check whether your scenarios are realistic." },
+      { label: "Where", body: "Done in an extended planning session, potentially across more than one sitting for a truly complex decision." },
+    ],
+    howItWorks: [
+      "Identify the key variables driving uncertainty.",
+      "For best-case, worst-case, and most-likely combinations of those variables, write a specific action plan, not just a description of what might happen.",
+    ],
+    tools: ["A structured template covering multiple variables per scenario, more detailed than the basic three-column version"],
+    scenario: {
+      title: "An anxiety-inducing move made navigable",
+      body: "A student considering a cross-country move for a new role built out a full scenario analysis covering variables like cost of living, network rebuilding, and role fit, with a concrete action plan for each combination, which turned an anxiety-inducing decision into a structured, navigable one.",
+    },
+    pitfalls: [
+      "Adding so many variables that the analysis becomes unmanageable, rather than focusing on the two or three that actually drive the most uncertainty",
+    ],
+    successSignal:
+      "You have a specific, ready action plan for each major scenario, not just a description of what could happen.",
+    milestoneTies: [111],
+  },
+
+  127: {
+    definition:
+      "A Checklists & SOPs Creation exercise builds a repeatable, written process for a task you do more than once, reducing errors and freeing mental energy from having to remember every step from scratch each time.",
+    whyItMatters:
+      "Repeated tasks done from memory alone accumulate small, inconsistent errors over time; a written checklist or standard operating procedure catches what memory alone tends to miss.",
+    whenWhoWhere: [
+      { label: "When", body: "Create this for any task you've done, or expect to do, at least three times, especially one with real consequences if a step gets skipped." },
+      { label: "Who", body: "No collaborator required, though someone else's fresh eyes often catch missing steps you've internalized so deeply you forgot to write them down." },
+      { label: "Where", body: "Written once, then stored somewhere you'll actually reference it each time you do the task." },
+    ],
+    howItWorks: [
+      "Do the task once while consciously noting every step.",
+      "Write them out in order.",
+      "Test the checklist the next time you do the task, and refine any steps that were missing or unclear.",
+    ],
+    tools: ["A simple document or notes app", "A checklist-specific tool if you prefer built-in check-off functionality"],
+    scenario: {
+      title: "A five-step fix for a repeated mistake",
+      body: "After forgetting to attach her resume to an application twice, a student built a five-step before submitting checklist. She hasn't repeated that specific mistake since, and the checklist now catches other small oversights too.",
+    },
+    pitfalls: [
+      "Making the checklist so long and detailed that it becomes a chore to actually use, defeating its purpose of reducing friction",
+    ],
+    successSignal:
+      "You stop making a specific repeated mistake because the checklist catches it before submission or completion.",
+    milestoneTies: [75, 98],
+  },
+
+  128: {
+    definition:
+      "A Root Cause Framework formalizes the root cause analysis skill from Category G into the specific, named 5 Whys method, a simple, repeatable structure for reliably reaching underlying causes.",
+    whyItMatters:
+      "Having a named, structured method makes root cause analysis easier to apply consistently under pressure, rather than relying on remembering to dig deeper each time from scratch.",
+    whenWhoWhere: [
+      { label: "When", body: "Use this any time a problem or failure recurs, now with the explicit five-why structure as your default process." },
+      { label: "Who", body: "No collaborator required, though applying this in a group setting for a team problem often surfaces causes no individual would reach alone." },
+      { label: "Where", body: "Applied the same way as Root Cause Analysis, but now using the named, structured method deliberately." },
+    ],
+    howItWorks: [
+      "State the problem.",
+      "Ask why did this happen and write the answer.",
+      "Ask why about that answer, and repeat for a total of five whys, or until you reach a cause that is clearly systemic or actionable.",
+    ],
+    tools: ["A simple five-row template: Why 1 through Why 5"],
+    scenario: {
+      title: "The calendar no one owned",
+      body: "A team used the formal 5 Whys method on a recurring miscommunication issue and traced it, after five iterations, back to the fact that no one owned the team calendar, a root cause no one had named in months of informal complaining about bad communication.",
+    },
+    pitfalls: [
+      "Forcing exactly five whys even when the true root cause is reached sooner",
+      "Stopping early at a comfortable answer before five whys are genuinely exhausted",
+    ],
+    successSignal:
+      "The final why points to something structural and fixable, not just a restatement of the original problem in different words.",
+    milestoneTies: [108],
+  },
+
+  129: {
+    definition:
+      "A Feedback Loop Exercise extends feedback integration into an iterative cycle: try something, observe the result, adjust based on what you learned, and try again, rather than treating any single attempt as final.",
+    whyItMatters:
+      "Most meaningful skills and projects improve through repeated cycles of trying, observing, and adjusting, not through getting it right on the first attempt; building this loop deliberately speeds up genuine improvement.",
+    whenWhoWhere: [
+      { label: "When", body: "Use this for any skill or project where you'll have multiple attempts, such as interview practice, writing drafts, or a recurring presentation." },
+      { label: "Who", body: "Ideally involves someone who can give you honest observation of each attempt, since self-assessment alone often misses real patterns." },
+      { label: "Where", body: "Applied across multiple sessions or attempts at the same underlying skill or task." },
+    ],
+    howItWorks: [
+      "After each attempt, record what you did, what result you observed, and one specific adjustment for the next attempt.",
+      "Compare across three or more cycles to see real improvement.",
+    ],
+    tools: ["A simple log with three columns: attempt, observation, adjustment"],
+    scenario: {
+      title: "A different kind of stuck by attempt six",
+      body: "A student practicing case interview questions logged her framework, her stuck points, and one adjustment after each of six practice cases. By the sixth, her stuck points had shifted entirely from framework structure to a much more advanced issue: handling ambiguous follow-up questions, a clear sign of real progress the loop made visible.",
+    },
+    pitfalls: [
+      "Repeating attempts without actually recording or reviewing what changed, which turns iteration into just repetition without real learning",
+    ],
+    successSignal:
+      "Comparing your log across several cycles, you can point to a specific, real improvement, not just a vague sense of getting better.",
+    milestoneTies: [68, 85],
+  },
+
+  130: {
+    definition:
+      "A Comparative Analysis evaluates multiple real alternatives against explicit criteria like cost, impact, and feasibility, producing a structured comparison rather than an intuitive gut-level ranking.",
+    whyItMatters:
+      "Options often get compared unevenly, one on cost, another on convenience, another on gut feeling, which makes the comparison itself unreliable; explicit shared criteria fix that.",
+    whenWhoWhere: [
+      { label: "When", body: "Use this whenever you're choosing between multiple real alternatives and want the comparison to be fair and consistent across all of them." },
+      { label: "Who", body: "No collaborator required, though someone with more experience in the relevant domain can help validate your feasibility estimates." },
+      { label: "Where", body: "Applied to any multi-option decision: tools, strategies, vendors, approaches." },
+    ],
+    howItWorks: [
+      "List your alternatives and your comparison criteria: cost, impact, feasibility, time.",
+      "Score each alternative against each criterion using the same scale, then compare totals and look closely at any criterion where the scores diverge sharply.",
+    ],
+    tools: ["A simple comparison grid or spreadsheet, similar in structure to the Decision Matrix but focused specifically on cost, impact, feasibility criteria"],
+    scenario: {
+      title: "The ambitious option that scored lower",
+      body: "Comparing three possible approaches to a class project, a student's gut instinct favored the most ambitious option until a comparative analysis showed it scored dramatically lower on feasibility given her actual time constraints, prompting her to choose a more moderate approach that she completed to a much higher standard.",
+    },
+    pitfalls: [
+      "Using criteria so broad or vague that scoring becomes arbitrary rather than genuinely comparative",
+    ],
+    successSignal:
+      "The analysis reveals something your gut instinct missed, usually a feasibility or cost issue that wasn't obvious until made explicit.",
+    milestoneTies: [107],
+  },
+
+  131: {
+    definition:
+      "A Mental Model Combination deliberately pairs two or more mental models, such as the 80/20 Principle with Systems Thinking, to solve a problem that a single model alone wouldn't fully address.",
+    whyItMatters:
+      "Real problems are rarely clean enough for one mental model to solve completely; combining models often reveals insight that neither would surface alone.",
+    whenWhoWhere: [
+      { label: "When", body: "Use this once you're comfortable applying individual models, when a problem still feels unresolved after using just one lens." },
+      { label: "Who", body: "No collaborator required, though talking through the combination with someone else can help clarify which models genuinely complement each other for this specific problem." },
+      { label: "Where", body: "Applied to a real, sufficiently complex problem where a single-model approach has already been tried and fallen short." },
+    ],
+    howItWorks: [
+      "Choose two models that address different aspects of the problem.",
+      "Apply the first, then apply the second to the results or gaps left by the first.",
+      "Note where the combination revealed something neither model showed alone.",
+    ],
+    tools: ["Your running list of mental models from earlier in this stage", "A real problem to apply them to"],
+    scenario: {
+      title: "The alumni group neither model alone would have found",
+      body: "A student used 80/20 Analysis to find that a small set of networking contacts drove most of her opportunities, then applied Systems Thinking to that smaller set and discovered they were all connected through one specific alumni group, revealing a structural leverage point that neither model alone would have surfaced.",
+    },
+    pitfalls: [
+      "Combining models just to seem sophisticated rather than because the specific problem genuinely calls for more than one lens",
+    ],
+    successSignal:
+      "The combination surfaces an insight or action that using either model alone would have missed.",
+    milestoneTies: [116],
+  },
+
+  132: {
+    definition:
+      "A Hypothesis-Driven Approach extends hypothesis testing to bigger decisions: testing key assumptions at small scale before committing to full implementation of a larger plan.",
+    whyItMatters:
+      "Committing fully to a large plan based on untested assumptions risks a lot of wasted effort if a core assumption turns out wrong; testing first, at small scale, catches that risk early and cheaply.",
+    whenWhoWhere: [
+      { label: "When", body: "Use this before any significant commitment of time or resources, when the plan rests on at least one assumption you haven't verified at scale." },
+      { label: "Who", body: "No collaborator required, though a mentor can help identify which assumption is actually most important to test first." },
+      { label: "Where", body: "Applied before launching any larger project, strategy, or commitment." },
+    ],
+    howItWorks: [
+      "Identify the single riskiest assumption underlying your plan.",
+      "Design the smallest possible real test of that assumption before committing further resources.",
+      "Use the result to confirm, adjust, or abandon the full plan.",
+    ],
+    tools: ["The same hypothesis-testing structure from earlier in this stage, now applied explicitly before a larger commitment"],
+    scenario: {
+      title: "One piece before months of investment",
+      body: "Before fully committing to a content series, a student tested the riskiest assumption, that people actually wanted this specific type of content, by publishing just one piece first. Strong engagement confirmed the assumption before she invested months into a full series; weak engagement would have saved her that same investment.",
+    },
+    pitfalls: [
+      "Skipping the small test because you're confident the assumption is obviously true, which is exactly the situation where testing has the most value",
+    ],
+    successSignal:
+      "You have real evidence confirming or challenging your riskiest assumption before committing significant further resources.",
+    milestoneTies: [110],
+  },
+
+  133: {
+    definition:
+      "A Strategic Mapping exercise charts your priorities, dependencies, and outcomes for both short- and long-term goals on a single visual map, connecting today's actions to tomorrow's bigger picture.",
+    whyItMatters:
+      "Without an explicit map connecting near-term actions to longer-term goals, daily priorities can drift away from what actually matters most over a longer horizon.",
+    whenWhoWhere: [
+      { label: "When", body: "Use this at the start of a new semester, job, or major life phase, and revisit it periodically as circumstances shift." },
+      { label: "Who", body: "No collaborator required, though a mentor can help validate whether your near-term actions genuinely connect to your stated long-term goals." },
+      { label: "Where", body: "Built in a dedicated planning session, ideally with enough space to see the whole map at once." },
+    ],
+    howItWorks: [
+      "Write your long-term goals on one side and your current short-term priorities on the other.",
+      "Draw explicit connecting lines showing how each short-term action supports, or fails to support, a long-term goal.",
+      "Flag any goal with no connected action, and any action with no connected goal.",
+    ],
+    tools: ["A large sheet of paper, whiteboard, or digital mind-mapping tool"],
+    scenario: {
+      title: "Two goals that had quietly drifted",
+      body: "Mapping her priorities six months into her new role, a student found that two of her long-term goals from her Stage Four Strategic Goal Sheet had zero connected current actions, having quietly drifted out of her daily attention, a gap the map made immediately visible in a way her day-to-day to-do list never would have.",
+    },
+    pitfalls: [
+      "Building the map once and never revisiting it, letting it become outdated as circumstances change",
+    ],
+    successSignal:
+      "Every long-term goal has at least one connected current action, and every current major action connects to a real long-term goal, not just busywork.",
+    milestoneTies: [102],
   },
 };
