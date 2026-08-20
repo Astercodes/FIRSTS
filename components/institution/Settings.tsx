@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import { cohortsForInstitution } from "@/lib/cohortData";
 import { staffForInstitution } from "@/lib/institutionStaff";
-import { findInstitutionByDomain } from "@/lib/institutions";
+import { findInstitutionByDomain, getInstitutionByName } from "@/lib/institutions";
 import { loadAdvisor, ADVISOR_CHANGE_EVENT, MOCK_ADVISOR, type AdvisorProfile } from "@/lib/advisorStore";
 
 export function Settings() {
@@ -29,6 +29,8 @@ export function Settings() {
   const sso = match?.sso ?? false;
   const plan = sso ? "Campus-wide" : "Department pilot";
   const seatsIncluded = sso ? 40 : 10;
+  const enrollment = getInstitutionByName(institution)?.enrollment;
+  const studentsInFirsts = cohorts.reduce((sum, c) => sum + c.students.length, 0);
 
   return (
     <div className="mx-auto max-w-3xl space-y-8">
@@ -48,6 +50,10 @@ export function Settings() {
           <SettingRow label="Domain" value={match?.domain ?? "Not verified"} />
           <SettingRow label="Primary admin" value={name} />
           <SettingRow label="Admin email" value={email} />
+          {enrollment && (
+            <SettingRow label="Total enrollment (approx)" value={enrollment.toLocaleString()} />
+          )}
+          <SettingRow label="Students in FIRSTS cohorts" value={studentsInFirsts.toLocaleString()} />
         </dl>
       </div>
 

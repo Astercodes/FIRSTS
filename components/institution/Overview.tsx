@@ -11,7 +11,7 @@ import {
   institutionWeeklyTrend,
 } from "@/lib/cohortData";
 import { staffForInstitution } from "@/lib/institutionStaff";
-import { findInstitutionByDomain } from "@/lib/institutions";
+import { findInstitutionByDomain, getInstitutionByName } from "@/lib/institutions";
 import { loadAdvisor, ADVISOR_CHANGE_EVENT, MOCK_ADVISOR, type AdvisorProfile } from "@/lib/advisorStore";
 import { HBarChart } from "@/components/charts/HBarChart";
 import { TrendChart } from "@/components/charts/TrendChart";
@@ -46,6 +46,8 @@ export function InstitutionOverview() {
     : 0;
   const trend = institutionWeeklyTrend(institution);
   const departments = Array.from(new Set(cohorts.map((c) => c.focus)));
+  const enrollment = getInstitutionByName(institution)?.enrollment;
+  const penetration = enrollment ? Math.max(1, Math.round((allStudents.length / enrollment) * 1000) / 10) : null;
 
   return (
     <div className="mx-auto max-w-6xl space-y-8">
@@ -58,7 +60,14 @@ export function InstitutionOverview() {
             {institution}
           </h1>
           <p className="mt-1 text-sm text-ink/50">
-            Every department, cohort, and staff member running FIRSTS at your institution.
+            {allStudents.length.toLocaleString()} students across {departments.length} departments and{" "}
+            {cohorts.length} cohorts
+            {enrollment && (
+              <>
+                , out of roughly {enrollment.toLocaleString()} enrolled campus-wide ({penetration}%)
+              </>
+            )}
+            . Rolling out department by department, expanding each semester.
           </p>
         </div>
         <span
