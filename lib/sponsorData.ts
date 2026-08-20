@@ -10,6 +10,10 @@ export type Sponsorship = {
 export const SPONSORSHIPS: Sponsorship[] = [
   { id: "sp-1", cohortId: "marketing-2027", tier: "Cohort sponsor", startedOn: "September 2025" },
   { id: "sp-2", cohortId: "business-analytics-2026", tier: "Department partner", startedOn: "January 2026" },
+  { id: "sp-3", cohortId: "hci-2026", tier: "Cohort sponsor", startedOn: "October 2025" },
+  { id: "sp-4", cohortId: "ross-2027", tier: "Cohort sponsor", startedOn: "February 2026" },
+  { id: "sp-5", cohortId: "comms-2026", tier: "Department partner", startedOn: "November 2025" },
+  { id: "sp-6", cohortId: "econ-2026", tier: "Cohort sponsor", startedOn: "March 2026" },
 ];
 
 export function sponsorshipStats(s: Sponsorship) {
@@ -99,6 +103,70 @@ export const CANDIDATE_PORTFOLIOS: CandidatePortfolio[] = [
       result: "After the team shipped the change, week-two retention rose from 18% to 31%.",
     },
     goalHeadline: "Break into product analytics at an early-stage tech company",
+  },
+  {
+    id: "cp-5",
+    name: "Bode Reyes",
+    headline: "Human-computer interaction student focused on accessible product design",
+    school: "Stanford University",
+    sharedOn: "4 days ago",
+    stagesCompleted: 4,
+    topValues: ["Design for the edge case first", "Test with real users, not assumptions", "Ownership of the outcome"],
+    starStory: {
+      situation: "A student accessibility group flagged that our university's course registration tool was nearly unusable with a screen reader.",
+      task: "I was asked to lead a redesign proposal the registrar's office would actually consider adopting.",
+      action: "I ran usability sessions with three screen-reader users, mapped every broken interaction, and delivered an annotated prototype with the fixes ranked by effort and impact.",
+      result: "The registrar's office adopted the top four fixes for the next release, and the accessibility group asked me to consult on two more campus tools.",
+    },
+    goalHeadline: "Land a product design role on an accessibility or inclusive design team",
+  },
+  {
+    id: "cp-6",
+    name: "Farid Nwosu",
+    headline: "Business student focused on operations strategy and process design",
+    school: "University of Michigan",
+    sharedOn: "6 days ago",
+    stagesCompleted: 4,
+    topValues: ["Systems thinking", "Measure before you change", "Bring the team along"],
+    starStory: {
+      situation: "A student-run consulting club I led was losing members because project turnaround took nearly triple the promised time.",
+      task: "As incoming president, I was asked to fix the intake and staffing process before the next semester.",
+      action: "I mapped the full project pipeline, found that staffing approvals were the bottleneck, and rebuilt the process around a standing weekly staffing meeting with clear decision owners.",
+      result: "Average project turnaround dropped from 11 weeks to 6, and membership grew by a third the following semester.",
+    },
+    goalHeadline: "Land a rotational operations or strategy role at a large consumer company",
+  },
+  {
+    id: "cp-7",
+    name: "Emeka Johansson",
+    headline: "Communications student focused on crisis and internal communications",
+    school: "Howard University",
+    sharedOn: "1 week ago",
+    stagesCompleted: 4,
+    topValues: ["Clarity over cleverness", "Say it before the rumor does", "Consistency across channels"],
+    starStory: {
+      situation: "A campus organization I served as communications lead for faced public criticism after a scheduling error affected a major event.",
+      task: "I was asked to draft and coordinate the organization's public response within a few hours.",
+      action: "I drafted a direct acknowledgment with a concrete fix, got it approved by leadership in under an hour, and pushed the same message consistently across email, social, and in-person channels.",
+      result: "Public criticism died down within a day, and the organization's advisor asked me to write the standing crisis-communication template for future events.",
+    },
+    goalHeadline: "Move into a corporate communications or public relations role",
+  },
+  {
+    id: "cp-8",
+    name: "Emeka Oyelaran",
+    headline: "Economics student focused on development economics and data policy",
+    school: "University of Lagos",
+    sharedOn: "3 days ago",
+    stagesCompleted: 4,
+    topValues: ["Evidence-based recommendations", "Understand the local context first", "Precision in writing"],
+    starStory: {
+      situation: "A student research group I was part of had collected survey data on informal-sector employment but couldn't turn it into anything policymakers would read.",
+      task: "I was asked to turn six months of raw survey data into a policy brief for a local government partner.",
+      action: "I cleaned and cross-tabbed the dataset, built three clear charts instead of a dense table, and wrote a two-page brief that led with the single most actionable finding.",
+      result: "The brief was cited in the local government's next budget planning session, and the research group has used my format as the template since.",
+    },
+    goalHeadline: "Land an analyst role at a development finance or policy research organization",
   },
 ];
 

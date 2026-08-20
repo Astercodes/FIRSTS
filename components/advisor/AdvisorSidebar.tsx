@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { COHORTS } from "@/lib/cohortData";
+import { cohortsForInstitution } from "@/lib/cohortData";
 import { loadAdvisor, ADVISOR_CHANGE_EVENT, MOCK_ADVISOR, type AdvisorProfile } from "@/lib/advisorStore";
 
 export function AdvisorSidebar() {
@@ -22,6 +22,8 @@ export function AdvisorSidebar() {
   }, []);
 
   const role = advisor?.role ?? MOCK_ADVISOR.role;
+  const institution = advisor?.institution || MOCK_ADVISOR.institution;
+  const cohorts = cohortsForInstitution(institution);
 
   return (
     <aside className="fixed inset-y-0 left-0 z-30 hidden w-64 flex-col bg-ink text-paper lg:flex print:hidden">
@@ -53,7 +55,7 @@ export function AdvisorSidebar() {
         <p className="mt-5 mb-1.5 px-3.5 text-[11px] font-semibold uppercase tracking-[0.15em] text-paper/35">
           Your cohorts
         </p>
-        {COHORTS.map((c) => (
+        {cohorts.map((c) => (
           <NavLink
             key={c.id}
             href={`/advisor/cohorts/${c.id}`}

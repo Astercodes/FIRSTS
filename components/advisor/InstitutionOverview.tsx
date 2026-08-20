@@ -1,14 +1,20 @@
 "use client";
 
-import Link from "next/link";
 import { useEffect, useState } from "react";
 import {
-  COHORTS,
+  cohortsForInstitution,
   cohortAvgCompletion,
   cohortAtRiskCount,
-  allStudentsAcrossCohorts,
+  cohortActiveCount,
+  cohortWatchCount,
+  institutionWeeklyTrend,
 } from "@/lib/cohortData";
 import { loadAdvisor, ADVISOR_CHANGE_EVENT, MOCK_ADVISOR, type AdvisorProfile } from "@/lib/advisorStore";
+import { HBarChart } from "@/components/charts/HBarChart";
+import { TrendChart } from "@/components/charts/TrendChart";
+import { StatusBar } from "@/components/charts/StatusBar";
+
+const WEEK_LABELS = ["Wk 1", "Wk 2", "Wk 3", "Wk 4", "Wk 5", "Wk 6", "Wk 7", "Wk 8"];
 
 export function InstitutionOverview() {
   const [advisor, setAdvisor] = useState<AdvisorProfile | null>(null);
@@ -25,11 +31,16 @@ export function InstitutionOverview() {
   }, []);
 
   const institution = advisor?.institution || MOCK_ADVISOR.institution;
-  const allStudents = allStudentsAcrossCohorts();
-  const totalAtRisk = COHORTS.reduce((sum, c) => sum + cohortAtRiskCount(c), 0);
-  const avgCompletion = Math.round(
-    COHORTS.reduce((sum, c) => sum + cohortAvgCompletion(c), 0) / COHORTS.length
-  );
+  const cohorts = cohortsForInstitution(institution);
+  const allStudents = cohorts.flatMap((c) => c.students);
+  const totalAtRisk = cohorts.reduce((sum, c) => sum + cohortAtRiskCount(c), 0);
+  const totalWatch = cohorts.reduce((sum, c) => sum + cohortWatchCount(c), 0);
+  const totalActive = cohorts.reduce((sum, c) => sum + cohortActiveCount(c), 0);
+  const avgCompletion = cohorts.length
+    ? Math.round(cohorts.reduce((sum, c) => sum + cohortAvgCompletion(c), 0) / cohorts.length)
+    : 0;
+  const trend = institutionWeeklyTrend(institution);
+  const departments = Array.from(new Set(cohorts.map((c) => c.focus)));
 
   return (
     <div className="mx-auto max-w-6xl space-y-8">
@@ -46,43 +57,50 @@ export function InstitutionOverview() {
       </div>
 
       <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-        <StatCard label="Cohorts running" value={String(COHORTS.length)} color="var(--berry-burst)" />
+        <StatCard label="Cohorts running" value={String(cohorts.length)} color="var(--berry-burst)" />
+        <StatCard label="Departments represented" value={String(departments.length)} color="var(--fuchsia-blast)" />
         <StatCard label="Total students" value={String(allStudents.length)} color="var(--juicy-plum)" />
         <StatCard label="Average completion" value={`${avgCompletion}%`} color="var(--neon-pink)" />
-        <StatCard label="At-risk, institution-wide" value={String(totalAtRisk)} color="var(--sunshine-orange)" />
+      </div>
+
+      <div className="grid gap-6 lg:grid-cols-5">
+        <div className="rounded-3xl border border-ink/10 bg-white p-7 lg:col-span-3">
+          <h2 className="mb-1 font-display text-lg font-semibold text-ink">Engagement trend</h2>
+          <p className="mb-5 text-xs text-ink/45">Institution-wide average completion, last 8 weeks</p>
+          {trend.length > 0 ? (
+            <TrendChart values={trend} labels={WEEK_LABELS} color="var(--neon-pink)" seriesName="Average completion" />
+          ) : (
+            <p className="text-sm text-ink/45">No cohorts yet.</p>
+          )}
+        </div>
+
+        <div className="rounded-3xl border border-ink/10 bg-white p-7 lg:col-span-2">
+          <h2 className="mb-1 font-display text-lg font-semibold text-ink">Engagement status</h2>
+          <p className="mb-5 text-xs text-ink/45">Institution-wide, every cohort</p>
+          <StatusBar active={totalActive} watch={totalWatch} atRisk={totalAtRisk} />
+        </div>
       </div>
 
       <div className="rounded-3xl border border-ink/10 bg-white p-7">
-        <h2 className="mb-5 font-display text-lg font-semibold text-ink">Completion by cohort</h2>
-        <div className="space-y-5">
-          {COHORTS.map((c) => {
-            const avg = cohortAvgCompletion(c);
-            const atRisk = cohortAtRiskCount(c);
-            return (
-              <div key={c.id}>
-                <div className="mb-1.5 flex items-center justify-between text-sm">
-                  <Link href={`/advisor/cohorts/${c.id}`} className="font-medium text-ink hover:text-berry-burst">
-                    {c.name}
-                  </Link>
-                  <span className="text-ink/60">
-                    {avg}% avg · {c.students.length} students
-                    {atRisk > 0 && (
-                      <span className="ml-2 font-semibold text-[var(--sunshine-orange)]">
-                        {atRisk} at risk
-                      </span>
-                    )}
-                  </span>
-                </div>
-                <div className="h-2.5 w-full overflow-hidden rounded-full bg-ink/10">
-                  <div
-                    className="h-full rounded-full transition-all duration-1000"
-                    style={{ width: `${avg}%`, background: "var(--berry-burst)" }}
-                  />
-                </div>
-              </div>
-            );
-          })}
-        </div>
+        <h2 className="mb-1 font-display text-lg font-semibold text-ink">Completion by cohort</h2>
+        <p className="mb-6 text-xs text-ink/45">At-risk counts shown per cohort</p>
+        {cohorts.length > 0 ? (
+          <HBarChart
+            color="var(--berry-burst)"
+            data={cohorts.map((c) => {
+              const atRisk = cohortAtRiskCount(c);
+              return {
+                key: c.id,
+                label: c.name,
+                value: cohortAvgCompletion(c),
+                href: `/advisor/cohorts/${c.id}`,
+                sublabel: `${c.students.length} students${atRisk > 0 ? ` · ${atRisk} at risk` : ""}`,
+              };
+            })}
+          />
+        ) : (
+          <p className="text-sm text-ink/45">No cohorts yet.</p>
+        )}
       </div>
 
       <div className="rounded-3xl border border-ink/10 bg-paper-dim p-7">

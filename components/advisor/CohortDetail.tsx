@@ -7,7 +7,13 @@ import {
   isAtRisk,
   cohortAvgCompletion,
   cohortAtRiskCount,
+  cohortActiveCount,
+  cohortWatchCount,
 } from "@/lib/cohortData";
+import { TrendChart } from "@/components/charts/TrendChart";
+import { StatusBar } from "@/components/charts/StatusBar";
+
+const WEEK_LABELS = ["Wk 1", "Wk 2", "Wk 3", "Wk 4", "Wk 5", "Wk 6", "Wk 7", "Wk 8"];
 
 export function CohortDetail({ cohort }: { cohort: Cohort }) {
   const avg = cohortAvgCompletion(cohort);
@@ -32,12 +38,29 @@ export function CohortDetail({ cohort }: { cohort: Cohort }) {
 
       <div className="grid gap-4 sm:grid-cols-3">
         <StatCard label="Average completion" value={`${avg}%`} color="var(--juicy-plum)" />
-        <StatCard label="At-risk students" value={String(atRisk)} color="var(--sunshine-orange)" />
+        <StatCard label="At-risk students" value={String(atRisk)} color="#c92f3f" />
         <StatCard
           label="Opted to share at least one reflection"
           value={String(cohort.students.filter((s) => s.sharedCount > 0).length)}
           color="var(--citrus-lime)"
         />
+      </div>
+
+      <div className="grid gap-6 lg:grid-cols-5">
+        <div className="rounded-3xl border border-ink/10 bg-white p-7 lg:col-span-3">
+          <h2 className="mb-1 font-display text-lg font-semibold text-ink">Completion trend</h2>
+          <p className="mb-5 text-xs text-ink/45">Cohort average, last 8 weeks</p>
+          <TrendChart values={cohort.weeklyTrend} labels={WEEK_LABELS} seriesName="Average completion" />
+        </div>
+        <div className="rounded-3xl border border-ink/10 bg-white p-7 lg:col-span-2">
+          <h2 className="mb-1 font-display text-lg font-semibold text-ink">Engagement status</h2>
+          <p className="mb-5 text-xs text-ink/45">This cohort</p>
+          <StatusBar
+            active={cohortActiveCount(cohort)}
+            watch={cohortWatchCount(cohort)}
+            atRisk={cohortAtRiskCount(cohort)}
+          />
+        </div>
       </div>
 
       <div className="rounded-3xl border border-ink/10 bg-white p-2">
@@ -72,7 +95,7 @@ export function CohortDetail({ cohort }: { cohort: Cohort }) {
                         <div>
                           <p className="font-medium text-ink">{s.name}</p>
                           {risky && (
-                            <p className="text-xs font-semibold text-[var(--sunshine-orange)]">At risk</p>
+                            <p className="text-xs font-semibold text-[#c92f3f]">At risk</p>
                           )}
                         </div>
                       </div>

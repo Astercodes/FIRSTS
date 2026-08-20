@@ -2,8 +2,12 @@
 
 import Link from "next/link";
 import { SPONSORSHIPS, sponsorshipStats } from "@/lib/sponsorData";
+import { HBarChart } from "@/components/charts/HBarChart";
 
 export function SponsorshipsView() {
+  const totalStudents = SPONSORSHIPS.reduce((sum, s) => sum + sponsorshipStats(s).students, 0);
+  const institutions = Array.from(new Set(SPONSORSHIPS.map((s) => sponsorshipStats(s).institution)));
+
   return (
     <div className="mx-auto max-w-6xl space-y-8">
       <div className="flex flex-wrap items-end justify-between gap-4">
@@ -14,6 +18,9 @@ export function SponsorshipsView() {
           <h1 className="mt-1.5 font-display text-3xl font-semibold tracking-tight text-ink">
             Sponsorships
           </h1>
+          <p className="mt-1 text-sm text-ink/50">
+            {SPONSORSHIPS.length} cohorts across {institutions.length} schools · {totalStudents} students reached
+          </p>
         </div>
         <Link
           href="/request-demo?for=employer-sponsor"
@@ -21,6 +28,23 @@ export function SponsorshipsView() {
         >
           Sponsor another cohort
         </Link>
+      </div>
+
+      <div className="rounded-3xl border border-ink/10 bg-white p-7">
+        <h2 className="mb-1 font-display text-lg font-semibold text-ink">Average completion by sponsorship</h2>
+        <p className="mb-6 text-xs text-ink/45">Every cohort or department you currently sponsor</p>
+        <HBarChart
+          color="var(--pink-grapefruit)"
+          data={SPONSORSHIPS.map((s) => {
+            const stats = sponsorshipStats(s);
+            return {
+              key: s.id,
+              label: stats.name,
+              value: stats.avgCompletion,
+              sublabel: `${stats.institution} · ${stats.students} students`,
+            };
+          })}
+        />
       </div>
 
       <div className="grid gap-5 md:grid-cols-2">
