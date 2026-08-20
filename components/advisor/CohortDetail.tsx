@@ -15,7 +15,15 @@ import { StatusBar } from "@/components/charts/StatusBar";
 
 const WEEK_LABELS = ["Wk 1", "Wk 2", "Wk 3", "Wk 4", "Wk 5", "Wk 6", "Wk 7", "Wk 8"];
 
-export function CohortDetail({ cohort }: { cohort: Cohort }) {
+export function CohortDetail({
+  cohort,
+  backHref = "/advisor",
+  backLabel = "← Overview",
+}: {
+  cohort: Cohort;
+  backHref?: string;
+  backLabel?: string;
+}) {
   const avg = cohortAvgCompletion(cohort);
   const atRisk = cohortAtRiskCount(cohort);
   const sorted = [...cohort.students].sort(
@@ -25,8 +33,8 @@ export function CohortDetail({ cohort }: { cohort: Cohort }) {
   return (
     <div className="mx-auto max-w-6xl space-y-8">
       <div>
-        <Link href="/advisor" className="text-sm font-medium text-ink/45 hover:text-ink">
-          ← Overview
+        <Link href={backHref} className="text-sm font-medium text-ink/45 hover:text-ink">
+          {backLabel}
         </Link>
         <h1 className="mt-2 font-display text-3xl font-semibold tracking-tight text-ink">
           {cohort.name}

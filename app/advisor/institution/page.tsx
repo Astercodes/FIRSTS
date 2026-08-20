@@ -1,8 +1,5 @@
-import type { Metadata } from "next";
-import { InstitutionOverview } from "@/components/advisor/InstitutionOverview";
+import { redirect } from "next/navigation";
 
-export const metadata: Metadata = { title: "Institution overview | FIRSTS" };
-
-export default function AdvisorInstitutionPage() {
-  return <InstitutionOverview />;
+export default function AdvisorInstitutionRedirect() {
+  redirect("/institution");
 }

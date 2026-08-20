@@ -9,7 +9,7 @@ export default function AdvisorSignup() {
     <AuthShell
       tag="Path C · Advisor / institution"
       title="Verify your institution."
-      subtitle="For career center staff, advisors, and mentors at partner schools."
+      subtitle="For career center staff, advisors, and mentors at partner schools, plus campus-wide administrators setting up FIRSTS for their whole institution."
       color="var(--citrus-lime)"
     >
       <AdvisorSignupForm />

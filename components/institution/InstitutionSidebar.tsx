@@ -3,10 +3,16 @@
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { cohortsForInstitution } from "@/lib/cohortData";
 import { loadAdvisor, ADVISOR_CHANGE_EVENT, MOCK_ADVISOR, type AdvisorProfile } from "@/lib/advisorStore";
 
-export function AdvisorSidebar() {
+const NAV = [
+  { label: "Overview", href: "/institution", icon: GridIcon },
+  { label: "Departments", href: "/institution/departments", icon: LayersIcon },
+  { label: "Staff", href: "/institution/staff", icon: UsersIcon },
+  { label: "Settings", href: "/institution/settings", icon: GearIcon },
+];
+
+export function InstitutionSidebar() {
   const pathname = usePathname();
   const [advisor, setAdvisor] = useState<AdvisorProfile | null>(null);
 
@@ -21,9 +27,7 @@ export function AdvisorSidebar() {
     };
   }, []);
 
-  const role = advisor?.role ?? MOCK_ADVISOR.role;
   const institution = advisor?.institution || MOCK_ADVISOR.institution;
-  const cohorts = cohortsForInstitution(institution);
 
   return (
     <aside className="fixed inset-y-0 left-0 z-30 hidden w-64 flex-col bg-ink text-paper lg:flex print:hidden">
@@ -35,36 +39,33 @@ export function AdvisorSidebar() {
           FIRSTS
         </span>
         <span className="ml-auto rounded-full bg-white/10 px-2 py-0.5 text-[10px] font-bold uppercase tracking-wide text-paper/60">
-          Advisor
+          Institution
         </span>
       </div>
 
+      <div className="px-6 pb-4">
+        <p className="truncate text-xs font-medium text-paper/40">{institution}</p>
+      </div>
+
       <nav className="flex-1 space-y-1 px-3">
-        <NavLink href="/advisor" active={pathname === "/advisor"}>
-          <GridIcon className="h-[18px] w-[18px]" />
-          Overview
-        </NavLink>
-
-        {role === "Institution Admin" && (
-          <NavLink href="/institution" active={pathname.startsWith("/institution")}>
-            <BuildingIcon className="h-[18px] w-[18px]" />
-            Campus-wide view
-          </NavLink>
-        )}
-
-        <p className="mt-5 mb-1.5 px-3.5 text-[11px] font-semibold uppercase tracking-[0.15em] text-paper/35">
-          Your cohorts
-        </p>
-        {cohorts.map((c) => (
-          <NavLink
-            key={c.id}
-            href={`/advisor/cohorts/${c.id}`}
-            active={pathname === `/advisor/cohorts/${c.id}`}
-          >
-            <UsersIcon className="h-[18px] w-[18px]" />
-            {c.name}
-          </NavLink>
-        ))}
+        {NAV.map((item) => {
+          const active = pathname === item.href;
+          const Icon = item.icon;
+          return (
+            <Link
+              key={item.href}
+              href={item.href}
+              className={`flex items-center gap-3 rounded-xl px-3.5 py-2.5 text-sm font-medium transition-colors ${
+                active
+                  ? "bg-white/10 text-paper"
+                  : "text-paper/55 hover:bg-white/5 hover:text-paper/85"
+              }`}
+            >
+              <Icon className="h-[18px] w-[18px]" />
+              {item.label}
+            </Link>
+          );
+        })}
       </nav>
 
       <div className="border-t border-white/10 p-3">
@@ -77,29 +78,6 @@ export function AdvisorSidebar() {
         </Link>
       </div>
     </aside>
-  );
-}
-
-function NavLink({
-  href,
-  active,
-  children,
-}: {
-  href: string;
-  active: boolean;
-  children: React.ReactNode;
-}) {
-  return (
-    <Link
-      href={href}
-      className={`flex items-center gap-3 rounded-xl px-3.5 py-2.5 text-sm font-medium transition-colors ${
-        active
-          ? "bg-white/10 text-paper"
-          : "text-paper/55 hover:bg-white/5 hover:text-paper/85"
-      }`}
-    >
-      <span className="truncate">{children}</span>
-    </Link>
   );
 }
 
@@ -116,11 +94,12 @@ function GridIcon({ className }: IconProps) {
   );
 }
 
-function BuildingIcon({ className }: IconProps) {
+function LayersIcon({ className }: IconProps) {
   return (
     <svg viewBox="0 0 24 24" fill="none" strokeWidth={1.7} className={className}>
-      <rect x="5" y="3.5" width="14" height="17" rx="1.5" stroke="currentColor" />
-      <path d="M9 8h1M14 8h1M9 12h1M14 12h1M9 16h1M14 16h1" stroke="currentColor" strokeLinecap="round" />
+      <path d="m12 3 8.5 4.5L12 12 3.5 7.5 12 3Z" stroke="currentColor" strokeLinejoin="round" />
+      <path d="m3.5 12 8.5 4.5 8.5-4.5" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" />
+      <path d="m3.5 16.5 8.5 4.5 8.5-4.5" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" />
     </svg>
   );
 }
@@ -132,6 +111,19 @@ function UsersIcon({ className }: IconProps) {
       <path d="M3.5 19c0-3 2.5-5 5.5-5s5.5 2 5.5 5" stroke="currentColor" strokeLinecap="round" />
       <path d="M15.5 5.5c1.5.3 2.5 1.5 2.5 3s-1 2.7-2.5 3" stroke="currentColor" strokeLinecap="round" />
       <path d="M17 14.2c1.8.5 3 2 3 4.3" stroke="currentColor" strokeLinecap="round" />
+    </svg>
+  );
+}
+
+function GearIcon({ className }: IconProps) {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" strokeWidth={1.7} className={className}>
+      <circle cx="12" cy="12" r="3" stroke="currentColor" />
+      <path
+        d="M12 3.5v2M12 18.5v2M20.5 12h-2M5.5 12h-2M17.8 6.2l-1.4 1.4M7.6 16.4l-1.4 1.4M17.8 17.8l-1.4-1.4M7.6 7.6 6.2 6.2"
+        stroke="currentColor"
+        strokeLinecap="round"
+      />
     </svg>
   );
 }

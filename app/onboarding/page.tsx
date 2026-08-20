@@ -78,8 +78,8 @@ export default function OnboardingSelector() {
             id="advisor"
             href="/onboarding/advisor"
             tag="Path C"
-            title="I'm an advisor or career center"
-            body="Institution-domain email required. Get a cohort dashboard, roster tools, and advisor visibility, never raw student reflections."
+            title="I'm an advisor or campus administrator"
+            body="Institution-domain email required. Advisors get a cohort dashboard, institution admins get the campus-wide view, staff seats, and settings, never raw student reflections."
             meta="Requires institution verification"
             color="var(--citrus-lime)"
             icon={<BriefcaseIcon className="h-6 w-6" />}

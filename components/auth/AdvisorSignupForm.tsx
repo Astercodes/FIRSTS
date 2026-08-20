@@ -96,6 +96,13 @@ export function AdvisorSignupForm() {
             onChange={(v) => setRole(v as AdvisorRole)}
             color={COLOR}
           />
+          <p className="-mt-2 text-xs leading-relaxed text-paper/45">
+            {role === "Institution Admin"
+              ? "Institution Admin gets the campus-wide dashboard: every department, staff seats, and SSO settings."
+              : role === "Advisor / Mentor"
+              ? "Advisor / Mentor gets a dashboard scoped to the cohorts you personally run."
+              : "Institution Admin covers your whole campus. Advisor / Mentor is scoped to the cohorts you personally run."}
+          </p>
           <TextField
             id="password"
             type="password"
@@ -173,11 +180,11 @@ export function AdvisorSignupForm() {
           </p>
           {step === "done" && (
             <Link
-              href="/advisor"
+              href={role === "Institution Admin" ? "/institution" : "/advisor"}
               className="mt-6 inline-block w-full rounded-2xl px-6 py-3.5 text-sm font-semibold text-ink transition-transform duration-300 hover:scale-[1.015]"
               style={{ background: COLOR }}
             >
-              Continue to your dashboard
+              {role === "Institution Admin" ? "Continue to your campus-wide dashboard" : "Continue to your dashboard"}
             </Link>
           )}
         </motion.div>

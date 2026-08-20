@@ -1,15 +1,32 @@
 "use client";
 
+import { useEffect, useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { COHORTS } from "@/lib/cohortData";
+import { cohortsForInstitution } from "@/lib/cohortData";
+import { loadAdvisor, ADVISOR_CHANGE_EVENT, MOCK_ADVISOR, type AdvisorProfile } from "@/lib/advisorStore";
 
 export function AdvisorMobileNav() {
   const pathname = usePathname();
+  const [advisor, setAdvisor] = useState<AdvisorProfile | null>(null);
+
+  useEffect(() => {
+    const sync = () => setAdvisor(loadAdvisor());
+    sync();
+    window.addEventListener(ADVISOR_CHANGE_EVENT, sync);
+    window.addEventListener("storage", sync);
+    return () => {
+      window.removeEventListener(ADVISOR_CHANGE_EVENT, sync);
+      window.removeEventListener("storage", sync);
+    };
+  }, []);
+
+  const institution = advisor?.institution || MOCK_ADVISOR.institution;
+  const role = advisor?.role ?? MOCK_ADVISOR.role;
   const items = [
     { label: "Overview", href: "/advisor" },
-    { label: "Institution", href: "/advisor/institution" },
-    ...COHORTS.map((c) => ({ label: c.name, href: `/advisor/cohorts/${c.id}` })),
+    ...(role === "Institution Admin" ? [{ label: "Campus-wide view", href: "/institution" }] : []),
+    ...cohortsForInstitution(institution).map((c) => ({ label: c.name, href: `/advisor/cohorts/${c.id}` })),
   ];
 
   return (
