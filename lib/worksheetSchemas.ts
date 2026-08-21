@@ -2231,4 +2231,776 @@ export const WORKSHEET_SCHEMAS: Record<number, WorksheetField[]> = {
     { type: "text", key: "week3Challenge", label: "This week's specific challenge", section: "Week 3", seed: "Summarize before responding in every disagreement" },
     { type: "textarea", key: "week3MetLearned", label: "Met it? (Y/N) + what I learned", rows: 2, seed: "Y, it's becoming close to automatic now." },
   ],
+
+  204: [
+    { type: "checklist", key: "skillsChecklist", label: "Skills checklist", section: "Skills checklist", items: ["Basic formulas (SUM, AVERAGE, IF)", "Simple formatting", "One pivot table built"], seedChecked: ["Basic formulas (SUM, AVERAGE, IF)", "Simple formatting"] },
+    { type: "text", key: "realDataset", label: "Real dataset used", section: "Applied practice", seed: "My own monthly budget, tracked for the last 3 months" },
+    { type: "textarea", key: "whatBuilt", label: "What I built with it", rows: 2, seed: "A simple tracker with a SUM formula for totals and a pivot table breaking spending down by category." },
+  ],
+
+  205: [
+    { type: "text", key: "dataset", label: "Dataset", section: "Data", seed: "My weekly study hours over the last 8 weeks" },
+    { type: "table", key: "summaryStats", label: "Summary stats", section: "Summary stats", columns: [
+      { key: "statistic", label: "Statistic", kind: "text" },
+      { key: "value", label: "Value", kind: "text" },
+    ], seedRows: [
+      { statistic: "Average hours/week", value: "9.5" },
+      { statistic: "Lowest day", value: "Day before hardest exam" },
+      { statistic: "Highest day", value: "Sunday" },
+    ] },
+    { type: "textarea", key: "insight", label: "One sentence, genuine insight (not just numbers)", section: "The insight", rows: 2, seed: "I consistently study least on the day right before my hardest exam, which is exactly backwards." },
+  ],
+
+  206: [
+    { type: "table", key: "surveyQuestions", label: "Survey questions", section: "Draft questions", columns: [
+      { key: "question", label: "Question", kind: "text" },
+    ], seedRows: [
+      { question: "How satisfied were you with the event overall?" },
+      { question: "What was the single most useful part?" },
+      { question: "What would you change for next time?" },
+      { question: "How did you hear about this event?" },
+      { question: "Would you attend a similar event again?" },
+    ] },
+    { type: "text", key: "pilotedOn", label: "Piloted on", section: "Pilot test", seed: "One friend not involved in planning the event" },
+    { type: "textarea", key: "confusingWording", label: "Confusing wording caught and fixed", rows: 2, seed: "\"Don't you agree our event was great?\" was leading, changed to \"How would you rate the event overall?\"" },
+  ],
+
+  207: [
+    { type: "text", key: "dataset", label: "Dataset", section: "Statistic", seed: "Class survey satisfaction scores, 1 to 10" },
+    { type: "text", key: "statisticCalculated", label: "Statistic calculated", seed: "Average score: 7.2" },
+    { type: "textarea", key: "whatItMeans", label: "What it means", section: "Interpretation", rows: 2, seed: "On the surface, a 7.2 average looks like solid, consistent satisfaction." },
+    { type: "textarea", key: "whatItMightHide", label: "What it might be hiding", rows: 2, seed: "Checking the distribution showed a bimodal split: half rated it 9 to 10, half rated it 3 to 4. The average hid a real divide." },
+  ],
+
+  208: [
+    { type: "text", key: "goalProject", label: "Goal / project", section: "Metric", seed: "Improving my 5K running time this semester" },
+    { type: "text", key: "metricChosen", label: "Metric chosen", seed: "5K time in minutes, logged weekly" },
+    { type: "table", key: "log", label: "Log", section: "Log", columns: [
+      { key: "date", label: "Date", kind: "text" },
+      { key: "value", label: "Value", kind: "text" },
+    ], seedRows: [
+      { date: "Week 1", value: "28:40" },
+      { date: "Week 2", value: "27:55" },
+      { date: "Week 3", value: "27:10" },
+      { date: "Week 4", value: "26:50" },
+      { date: "Week 5", value: "" },
+    ] },
+  ],
+
+  209: [
+    { type: "text", key: "datasetEntered", label: "Dataset entered", section: "Entry task", seed: "42 survey responses transcribed from paper forms into a spreadsheet" },
+    { type: "text", key: "errorRate", label: "Error rate found on spot-check", section: "Accuracy check", seed: "3% of entries had a typo or misplaced value" },
+    { type: "textarea", key: "errorCause", label: "What caused the errors, if any", rows: 2, seed: "Almost all of it was rushing through the last ten responses instead of pacing myself." },
+  ],
+
+  210: [
+    { type: "text", key: "resultProject", label: "Result / project", section: "My result", seed: "My club event survey's 40% response rate" },
+    { type: "textarea", key: "benchmarkFound", label: "External benchmark found", section: "Benchmark", rows: 2, seed: "Industry norms for similar event surveys sit around 50 to 60%." },
+    { type: "textarea", key: "howICompare", label: "How I compare", rows: 2, seed: "My 40% is actually below typical range, worth improving my follow-up reminders next time." },
+  ],
+
+  211: [
+    { type: "textarea", key: "theProblem", label: "The problem", section: "Problem", rows: 2, seed: "Our project's timeline slipped twice, and I assumed it was because one teammate was slow." },
+    { type: "textarea", key: "evidenceGathered", label: "Evidence gathered", section: "Evidence gathered", rows: 3, seed: "Actual timestamps showed both slips happened right after the same handoff step, regardless of who owned it next." },
+    { type: "textarea", key: "conclusion", label: "Conclusion, backed by evidence", section: "Conclusion", rows: 2, seed: "The real bottleneck was an unclear handoff, not any one teammate's pace." },
+  ],
+
+  212: [
+    { type: "table", key: "inconsistencies", label: "Inconsistencies identified", section: "Inconsistencies found", columns: [
+      { key: "issue", label: "Issue", kind: "text" },
+    ], seedRows: [
+      { issue: "Dates entered in three different formats" },
+      { issue: "Some names had trailing whitespace" },
+      { issue: "Blank cells mixed with \"N/A\" text for the same missing value" },
+    ] },
+    { type: "table", key: "fixesApplied", label: "Fixes applied", section: "Fixes applied", columns: [
+      { key: "issue", label: "Issue", kind: "text" },
+      { key: "fix", label: "Fix applied", kind: "text" },
+    ], seedRows: [
+      { issue: "Mixed date formats", fix: "Standardized all dates to YYYY-MM-DD" },
+      { issue: "Trailing whitespace", fix: "Trimmed all name fields" },
+      { issue: "Inconsistent blanks", fix: "Replaced all missing values with one consistent marker" },
+    ] },
+  ],
+
+  213: [
+    { type: "text", key: "project", label: "Project", section: "Structure agreed", seed: "Group project tracking spreadsheet for our marketing case study" },
+    { type: "table", key: "columnOwners", label: "Column / owner", columns: [
+      { key: "column", label: "Column", kind: "text" },
+      { key: "owner", label: "Owner", kind: "text" },
+    ], seedRows: [
+      { column: "Research notes", owner: "Priya" },
+      { column: "Budget tracking", owner: "Jordan" },
+      { column: "Timeline", owner: "Me" },
+      { column: "Final draft", owner: "Whole team" },
+    ] },
+    { type: "textarea", key: "preventedConfusion", label: "Did the shared structure prevent confusion?", section: "Result", rows: 2, seed: "Yes, once everyone had one column to own, we stopped overwriting each other's work." },
+  ],
+
+  214: [
+    { type: "textarea", key: "responsePatterns", label: "Response patterns", section: "Response patterns", rows: 3, seed: "Most respondents rated the event 4 or 5 out of 5, but almost everyone flagged the same complaint about parking." },
+    { type: "table", key: "topFindings", label: "Most significant findings", section: "Top findings", columns: [
+      { key: "finding", label: "Finding", kind: "text" },
+    ], seedRows: [
+      { finding: "Parking was the single most repeated complaint" },
+      { finding: "Attendees who arrived early rated the event highest" },
+      { finding: "Word-of-mouth was the top way people heard about it" },
+    ] },
+  ],
+
+  215: [
+    { type: "text", key: "dataset", label: "Dataset (time-series)", section: "Trend", seed: "My weekly job application response rate over 6 weeks" },
+    { type: "text", key: "trendDirection", label: "Direction / rate of trend", seed: "Declining, from 25% to about 10% response rate" },
+    { type: "textarea", key: "actionSuggested", label: "Specific action the trend suggests", section: "Action", rows: 2, seed: "The decline started right after I changed my resume format, so reverting that change is the concrete next step." },
+  ],
+
+  216: [
+    { type: "text", key: "questionAnswered", label: "The question the data answers", section: "Structure", seed: "Did our new sign-up flow reduce drop-off?" },
+    { type: "text", key: "keyFinding", label: "Key finding", seed: "Drop-off fell from 35% to 18% after the redesign." },
+    { type: "text", key: "supportingEvidence", label: "Supporting evidence", seed: "Compared two months of funnel data before and after the change." },
+    { type: "textarea", key: "fullDraft", label: "Full draft", section: "Full draft", rows: 5, seed: "Our sign-up flow redesign cut drop-off from 35% to 18% over the following month. The biggest gain came from removing an optional field on the first screen. I recommend keeping the shorter flow and testing one more simplification next." },
+  ],
+
+  217: [
+    { type: "text", key: "activityMetric", label: "Activity / metric", section: "Setup", seed: "Weekly practice interview scores, self-rated 1 to 10" },
+    { type: "table", key: "extendedLog", label: "Extended log", section: "Extended log", columns: [
+      { key: "week", label: "Week", kind: "text" },
+      { key: "value", label: "Value", kind: "text" },
+      { key: "notes", label: "Notes", kind: "text" },
+    ], seedRows: [
+      { week: "Week 1", value: "5", notes: "Very nervous, rushed answers" },
+      { week: "Week 3", value: "6.5", notes: "Slower pace, better structure" },
+      { week: "Week 5", value: "7.5", notes: "Started using STAR consistently" },
+      { week: "Week 7", value: "8", notes: "Felt genuinely prepared" },
+    ] },
+  ],
+
+  218: [
+    { type: "text", key: "dataFinding", label: "Data finding", section: "Finding", seed: "Our early data shows a 15% lift in one week and the team wants to change strategy now." },
+    { type: "textarea", key: "whatDataNotShow", label: "What does the data not show?", section: "Scrutiny", rows: 2, seed: "It doesn't show whether this is a real trend or normal week-to-week variance." },
+    { type: "textarea", key: "assumption", label: "What assumption does the analysis rest on?", rows: 2, seed: "That one good week is representative of a sustained pattern." },
+    { type: "textarea", key: "sampleSkewed", label: "Could the sample or method be skewed?", rows: 2, seed: "Yes, the sample size is small and covers only one unusually active week." },
+  ],
+  219: [
+    { type: "text", key: "introduction", label: "Introduction", section: "Outline", seed: "This report examines whether our club's new onboarding process improved retention." },
+    { type: "textarea", key: "bodyKeyPoints", label: "Body, key points", rows: 3, seed: "Retention rose from 60% to 78% after the first month. New members cited the mentor pairing as the most valuable part." },
+    { type: "text", key: "conclusion", label: "Conclusion", seed: "The mentor pairing should become a permanent part of onboarding." },
+    { type: "textarea", key: "draft", label: "Draft", section: "Draft", rows: 6, seed: "Outline first, then draft: this report opens with the retention question, presents the before-and-after numbers, and closes with the mentor-pairing recommendation, in that order." },
+  ],
+
+  220: [
+    { type: "table", key: "sources", label: "Sources", section: "Sources", columns: [
+      { key: "source", label: "Source", kind: "text" },
+      { key: "keyPoint", label: "Key point", kind: "text" },
+    ], seedRows: [
+      { source: "Industry report on Gen Z marketing", keyPoint: "Trust in sustainability claims requires specific evidence, not general statements" },
+      { source: "Academic study on ad skepticism", keyPoint: "Vague claims reduce trust more than no claim at all" },
+      { source: "Company case study", keyPoint: "Third-party certification logos increased click-through by 12%" },
+    ] },
+    { type: "textarea", key: "synthesis", label: "Synthesis", section: "Synthesis", rows: 4, seed: "Across all three sources, specificity and third-party evidence consistently beat vague or unverified claims in earning trust from younger consumers." },
+  ],
+
+  221: [
+    { type: "text", key: "processDocumented", label: "Process being documented", section: "Process", seed: "Setting up our club's weekly meeting room and AV equipment" },
+    { type: "table", key: "steps", label: "Steps, in order", columns: [
+      { key: "step", label: "Step", kind: "text" },
+    ], seedRows: [
+      { step: "Unlock the AV closet with the front-desk key" },
+      { step: "Connect the laptop to the room's HDMI cable" },
+      { step: "Power on the projector and select the correct input" },
+      { step: "Test audio with the room's speaker system" },
+      { step: "Set up chairs in a semicircle facing the screen" },
+      { step: "Return the key to the front desk after the meeting" },
+    ] },
+    { type: "textarea", key: "testerResult", label: "Tester, and did it work unassisted?", section: "Test", rows: 2, seed: "A new officer followed the steps with no help and had the room ready in under ten minutes." },
+  ],
+
+  222: [
+    { type: "text", key: "documentSummarized", label: "Document being summarized", section: "Source", seed: "My 20-page semester project report" },
+    { type: "textarea", key: "draft", label: "Draft", section: "Draft", rows: 5, seed: "One-page summary: the project tested whether a redesigned sign-up flow reduced drop-off. It did, from 35% to 18%, driven mainly by removing one optional field. We recommend keeping the shorter flow and testing further simplification next quarter." },
+  ],
+
+  223: [
+    { type: "text", key: "document", label: "Document", section: "Before", seed: "My internship application cover letter" },
+    { type: "textarea", key: "formattingIssuesNoticed", label: "Formatting issues noticed", rows: 2, seed: "Three different fonts, inconsistent spacing between paragraphs, and no clear header hierarchy." },
+    { type: "textarea", key: "fixesApplied", label: "Fixes applied", section: "After", rows: 2, seed: "One font throughout, consistent paragraph spacing, and a clear bold header for my name and contact info." },
+  ],
+
+  224: [
+    { type: "table", key: "sourceCheck", label: "Source check", section: "Source check", columns: [
+      { key: "source", label: "Source", kind: "text" },
+      { key: "authority", label: "Authority?", kind: "text" },
+      { key: "evidence", label: "Evidence?", kind: "text" },
+      { key: "corroborated", label: "Corroborated elsewhere?", kind: "text" },
+    ], seedRows: [
+      { source: "Personal blog post citing a statistic", authority: "No clear credentials", evidence: "No source cited", corroborated: "No" },
+      { source: "Industry association report", authority: "Yes, established organization", evidence: "Cites underlying survey data", corroborated: "Yes, matched a second source" },
+    ] },
+    { type: "textarea", key: "trustVerdict", label: "Trust this source? Why or why not?", section: "Verdict", rows: 2, seed: "No, the blog post's number didn't match the original study it claimed to cite, which turned out to say something different." },
+  ],
+
+  225: [
+    { type: "text", key: "documentType", label: "Document type", section: "Recurring structure", seed: "Weekly team status report" },
+    { type: "textarea", key: "recurringSections", label: "Recurring sections identified", rows: 2, seed: "Wins this week, blockers, and next week's priorities, the same three sections every time." },
+    { type: "text", key: "templateSavedWhere", label: "Where the template is saved", section: "Template saved", seed: "Shared drive, \"Team Templates\" folder" },
+  ],
+
+  226: [
+    { type: "text", key: "question", label: "Question", section: "Structure", seed: "What makes a campus sustainability campaign actually change student behavior?" },
+    { type: "textarea", key: "keyFinding", label: "Key finding (leads the presentation)", rows: 2, seed: "Campaigns with a specific, trackable action (like a pledge card) outperformed general awareness campaigns by a wide margin." },
+    { type: "text", key: "implication", label: "Implication", seed: "Future campus campaigns should always include one specific, trackable action." },
+    { type: "textarea", key: "audienceRecall", label: "Could the audience state the finding afterward?", section: "Result", rows: 2, seed: "Yes, three separate people repeated the finding back accurately when asked afterward." },
+  ],
+
+  227: [
+    { type: "textarea", key: "draft", label: "Process / project / concept", section: "Draft", rows: 5, seed: "Our sign-up automation script pulls new form responses every hour, checks for duplicates, and adds valid entries to our roster spreadsheet automatically, no manual copying required." },
+    { type: "textarea", key: "nonExpertUnderstanding", label: "Non-expert reader's understanding", section: "Test", rows: 2, seed: "My non-technical club co-lead understood exactly what it does and why it saves us time, without needing any of the technical detail." },
+  ],
+
+  228: [
+    { type: "text", key: "skillProcess", label: "Skill / process", section: "Guide", seed: "Setting up our shared project folder structure from scratch" },
+    { type: "table", key: "stepsZeroKnowledge", label: "Steps, assuming zero prior knowledge", columns: [
+      { key: "step", label: "Step", kind: "text" },
+    ], seedRows: [
+      { step: "Open the shared drive and create a new top-level folder named for the project" },
+      { step: "Inside it, create three subfolders: Research, Drafts, Final" },
+      { step: "Name every file using the format date_projectname_version" },
+      { step: "Share the folder with everyone on the team" },
+      { step: "Pin the folder link in the team chat" },
+    ] },
+    { type: "textarea", key: "testReaderStuck", label: "Where the test reader got stuck", section: "Test", rows: 2, seed: "They weren't sure what \"version\" meant in the naming convention, so I added an example filename to clarify." },
+  ],
+
+  229: [
+    { type: "text", key: "problem", label: "Problem", section: "Proposal", seed: "Our club's supply budget runs out every semester before the last event." },
+    { type: "text", key: "solution", label: "Solution", seed: "Shift 15% of the marketing budget to supplies, based on last year's actual spending split." },
+    { type: "text", key: "ask", label: "Ask", seed: "Approval to reallocate $200 from marketing to supplies for this semester." },
+    { type: "textarea", key: "feedbackReceived", label: "Feedback received", section: "Feedback received", rows: 3, seed: "The advisor asked for a specific breakdown of what the $200 would cover before approving, which I added." },
+  ],
+
+  230: [
+    { type: "text", key: "currentProcessOwner", label: "Current process owner", section: "Interview", seed: "Our outgoing treasurer, who handles all reimbursements" },
+    { type: "table", key: "documentedSteps", label: "Steps", section: "Documented steps", columns: [
+      { key: "step", label: "Step", kind: "text" },
+    ], seedRows: [
+      { step: "Collect the original receipt from the requester" },
+      { step: "Confirm the expense matches an approved budget line" },
+      { step: "Fill out the reimbursement form with amount and category" },
+      { step: "Submit the form and receipt to the advisor for signature" },
+      { step: "Log the reimbursement in the shared budget tracker" },
+    ] },
+    { type: "textarea", key: "teamReviewFeedback", label: "Feedback from team review", section: "Team review", rows: 2, seed: "The new treasurer confirmed she could follow every step without needing to ask the outgoing one for help." },
+  ],
+
+  231: [
+    { type: "text", key: "broadTopic", label: "Broad topic", section: "Broad topic", seed: "What makes marketing effective" },
+    { type: "textarea", key: "narrowing", label: "Narrowing", section: "Narrowing", rows: 3, seed: "Narrowed from \"marketing effectiveness\" to \"trust in sustainability marketing\" to \"specific claim types\" to a defined audience: Gen Z consumers." },
+    { type: "text", key: "finalQuestion", label: "Specific, answerable research question", section: "Final question", seed: "What specific claim types increase trust in sustainability marketing among Gen Z consumers?" },
+  ],
+  232: [
+    { type: "table", key: "plan", label: "Plan", section: "Plan", columns: [
+      { key: "task", label: "Task", kind: "text" },
+      { key: "timeline", label: "Timeline", kind: "text" },
+      { key: "resources", label: "Resources needed", kind: "text" },
+    ], seedRows: [
+      { task: "Draft campaign concept", timeline: "Week 1", resources: "Team brainstorm session" },
+      { task: "Design assets", timeline: "Week 2 to 3", resources: "Design software, one teammate" },
+      { task: "Launch and monitor", timeline: "Week 4", resources: "Social media accounts" },
+    ] },
+    { type: "textarea", key: "keyDependencies", label: "Key dependencies between tasks", section: "Dependencies", rows: 2, seed: "Design can't start until the concept is approved, and launch can't happen until assets are finished." },
+  ],
+
+  233: [
+    { type: "table", key: "agenda", label: "Agenda", section: "Agenda", columns: [
+      { key: "topic", label: "Topic", kind: "text" },
+      { key: "time", label: "Time", kind: "text" },
+      { key: "objective", label: "Objective", kind: "text" },
+    ], seedRows: [
+      { topic: "Budget update", time: "5 min", objective: "Confirm remaining funds" },
+      { topic: "Event logistics", time: "10 min", objective: "Assign remaining tasks" },
+      { topic: "Open questions", time: "5 min", objective: "Surface blockers early" },
+    ] },
+    { type: "textarea", key: "stayedOnTrack", label: "Stayed on time and on topic?", section: "Result", rows: 2, seed: "Yes, sharing the agenda beforehand cut our usual meeting length from 45 to 25 minutes." },
+  ],
+
+  234: [
+    { type: "table", key: "budget", label: "Budget", section: "Budget", columns: [
+      { key: "category", label: "Category", kind: "text" },
+      { key: "planned", label: "Planned", kind: "text" },
+      { key: "actual", label: "Actual", kind: "text" },
+    ], seedRows: [
+      { category: "Venue", planned: "$150", actual: "$150" },
+      { category: "Food", planned: "$200", actual: "$240" },
+      { category: "Supplies", planned: "$50", actual: "$45" },
+    ] },
+    { type: "textarea", key: "biggestVariance", label: "Biggest variance, and why", section: "Variance review", rows: 2, seed: "Food ran $40 over because we underestimated headcount, worth padding that line item next time." },
+  ],
+
+  235: [
+    { type: "textarea", key: "urgentImportant", label: "Urgent & important", section: "Urgent & important", rows: 2, seed: "Submit the grant application due tomorrow." },
+    { type: "textarea", key: "importantNotUrgent", label: "Important, not urgent", section: "Important, not urgent", rows: 2, seed: "Build the skill growth plan for next semester." },
+    { type: "textarea", key: "urgentNotImportant", label: "Urgent, not important", section: "Urgent, not important", rows: 2, seed: "Respond to a low-stakes group chat message everyone is waiting on." },
+    { type: "textarea", key: "neither", label: "Neither", section: "Neither", rows: 2, seed: "Reorganizing bookmarks I never actually use." },
+  ],
+
+  236: [
+    { type: "table", key: "risks", label: "Risks", section: "Risks", columns: [
+      { key: "risk", label: "Risk", kind: "text" },
+      { key: "likelihood", label: "Likelihood", kind: "text" },
+      { key: "impact", label: "Impact", kind: "text" },
+    ], seedRows: [
+      { risk: "Key teammate unavailable during finals week", likelihood: "High", impact: "High" },
+      { risk: "Venue cancellation", likelihood: "Low", impact: "High" },
+      { risk: "Low turnout", likelihood: "Medium", impact: "Medium" },
+    ] },
+    { type: "textarea", key: "mitigationPlan", label: "Highest-priority risk, and mitigation plan", section: "Mitigation", rows: 2, seed: "Teammate unavailability during finals: built in a two-week buffer before the deadline so their part could shift earlier." },
+  ],
+
+  237: [
+    { type: "table", key: "log", label: "Log", section: "Log", columns: [
+      { key: "date", label: "Date", kind: "text" },
+      { key: "planned", label: "Planned progress", kind: "text" },
+      { key: "actual", label: "Actual progress", kind: "text" },
+      { key: "adjustment", label: "Adjustment needed", kind: "text" },
+    ], seedRows: [
+      { date: "Week 1", planned: "Outline finished", actual: "Outline finished", adjustment: "None" },
+      { date: "Week 2", planned: "First draft done", actual: "50% done", adjustment: "Push deadline 3 days" },
+      { date: "Week 3", planned: "Draft revised", actual: "Draft finished", adjustment: "Back on track" },
+    ] },
+  ],
+
+  238: [
+    { type: "text", key: "inefficiency", label: "Specific inefficiency noticed", section: "Inefficiency", seed: "We re-enter the same registrant data into both our sign-up form and our roster spreadsheet." },
+    { type: "text", key: "proposedChange", label: "Proposed change", section: "Proposed change", seed: "Connect the form directly to the spreadsheet using a built-in integration." },
+    { type: "textarea", key: "expectedBenefit", label: "Expected benefit", rows: 2, seed: "Saves roughly 30 minutes of manual entry every week and removes a common source of typos." },
+  ],
+
+  239: [
+    { type: "text", key: "project", label: "Project", section: "Scope", seed: "Building a simple attendance-tracking spreadsheet for club meetings" },
+    { type: "text", key: "skillDemonstrated", label: "Skill demonstrated", seed: "Spreadsheet formulas and basic data entry" },
+    { type: "text", key: "timeframeKeptSmall", label: "Timeframe (kept small)", seed: "One weekend" },
+    { type: "textarea", key: "completedOnTime", label: "Completed on time? (Y/N)", section: "Completion", rows: 2, seed: "Y, finished Saturday afternoon and used it at Monday's meeting." },
+  ],
+
+  240: [
+    { type: "text", key: "problemType", label: "Problem type", section: "Problem type", seed: "Recurring spreadsheet formula errors" },
+    { type: "table", key: "stepsThatWorked", label: "Steps that worked", section: "Checklist", columns: [
+      { key: "step", label: "Step", kind: "text" },
+    ], seedRows: [
+      { step: "Isolate which cell is producing the error" },
+      { step: "Check the formula syntax against a reference" },
+      { step: "Test the formula on a small sample first" },
+      { step: "Check for mismatched data types (text vs. number)" },
+      { step: "Search the exact error message if still stuck" },
+    ] },
+  ],
+
+  241: [
+    { type: "text", key: "skill", label: "Skill", section: "Application", seed: "Excel formulas I'd only practiced in clean, isolated exercises" },
+    { type: "text", key: "realTaskAppliedTo", label: "Real task it was applied to", seed: "A messy real internship dataset with missing values and inconsistent formatting" },
+    { type: "textarea", key: "realApplicationRevealed", label: "What the real application revealed that practice didn't", section: "Reflection", rows: 2, seed: "My clean practice data never had missing values, so I hadn't learned how to handle them until this real dataset forced it." },
+  ],
+
+  242: [
+    { type: "text", key: "workflow", label: "Workflow", section: "Current workflow", seed: "Reformatting the weekly status report from scratch every Friday" },
+    { type: "text", key: "slowestStep", label: "Slowest / most repetitive step", seed: "Rebuilding the same section headers and formatting every single week" },
+    { type: "text", key: "specificFix", label: "Specific fix implemented", section: "Improvement", seed: "Built a reusable template with the headers already in place" },
+    { type: "text", key: "timeSaved", label: "Time saved", seed: "About 10 minutes every week" },
+  ],
+
+  243: [
+    { type: "text", key: "recurringTask", label: "Recurring task", section: "Task", seed: "Closing out our club's weekly meeting" },
+    { type: "table", key: "steps", label: "Steps", section: "Checklist", columns: [
+      { key: "step", label: "Step", kind: "text" },
+    ], seedRows: [
+      { step: "Recap action items and owners out loud" },
+      { step: "Confirm next meeting time and location" },
+      { step: "Post meeting notes in the shared channel" },
+      { step: "Update the project tracker with any changes" },
+      { step: "Reset the room and return any borrowed equipment" },
+    ] },
+  ],
+
+  244: [
+    { type: "table", key: "executionLog", label: "Execution log", section: "Execution log", columns: [
+      { key: "phase", label: "Phase", kind: "text" },
+      { key: "plannedDate", label: "Planned date", kind: "text" },
+      { key: "actualDate", label: "Actual date", kind: "text" },
+    ], seedRows: [
+      { phase: "Research", plannedDate: "Sept 1", actualDate: "Sept 1" },
+      { phase: "Draft", plannedDate: "Sept 8", actualDate: "Sept 10" },
+      { phase: "Review", plannedDate: "Sept 15", actualDate: "Sept 15" },
+      { phase: "Final submission", plannedDate: "Sept 20", actualDate: "Sept 19" },
+    ] },
+    { type: "textarea", key: "fullyCompleted", label: "Was the project fully completed?", section: "Completion", rows: 2, seed: "Yes, submitted a day early despite one phase running two days behind." },
+  ],
+
+  245: [
+    { type: "table", key: "componentEstimates", label: "Component estimates", section: "Component estimates", columns: [
+      { key: "component", label: "Component", kind: "text" },
+      { key: "estimate", label: "Estimated cost/time", kind: "text" },
+    ], seedRows: [
+      { component: "Research", estimate: "3 hrs" },
+      { component: "Design", estimate: "5 hrs" },
+      { component: "Printing", estimate: "$40" },
+    ] },
+    { type: "text", key: "bufferAdded", label: "Buffer added", section: "Buffer & total", seed: "20% time buffer on design" },
+    { type: "text", key: "totalEstimate", label: "Total estimate", seed: "~9 hrs and $40" },
+    { type: "text", key: "actualCostTime", label: "Actual cost/time", section: "Actual (fill in after)", seed: "10.5 hrs and $40, design ran over as expected" },
+  ],
+
+  246: [
+    { type: "text", key: "task", label: "Task", section: "Delegated task", seed: "Designing the event flyer" },
+    { type: "text", key: "person", label: "Person", seed: "Jordan, our design lead" },
+    { type: "text", key: "deadline", label: "Deadline", seed: "This Friday at 5pm" },
+    { type: "textarea", key: "contextGiven", label: "Context given", rows: 2, seed: "Shared the event details, brand colors, and one example flyer we liked for reference." },
+    { type: "textarea", key: "completedWithoutMicromanaging", label: "Completed on time without micromanaging?", section: "Result", rows: 2, seed: "Yes, one check-in midweek was enough, no need to follow up daily." },
+  ],
+
+  247: [
+    { type: "text", key: "realTaskSimulated", label: "Real task being simulated", section: "Task", seed: "The weekly data reporting task I'll do during my upcoming internship" },
+    { type: "textarea", key: "simulationNotes", label: "Simulation notes", section: "Simulation", rows: 4, seed: "Used a sample dataset to build the same weekly summary format I expect to be asked for, timing myself to see how long it realistically takes." },
+    { type: "textarea", key: "moreReadyForReal", label: "Do I feel more ready for the real version?", section: "Readiness check", rows: 2, seed: "Yes, the format and timing no longer feel unfamiliar going into week one." },
+  ],
+
+  248: [
+    { type: "table", key: "problems", label: "Problems", section: "Problems", columns: [
+      { key: "problem", label: "Problem", kind: "text" },
+      { key: "impact", label: "Impact", kind: "text" },
+      { key: "urgency", label: "Urgency", kind: "text" },
+    ], seedRows: [
+      { problem: "Outdated roster spreadsheet", impact: "Low", urgency: "Low" },
+      { problem: "Broken sign-up form link", impact: "High", urgency: "High" },
+      { problem: "Unclear meeting time on the calendar", impact: "Medium", urgency: "Medium" },
+    ] },
+    { type: "textarea", key: "decision", label: "Which I'll solve first, and why", section: "Decision", rows: 2, seed: "The broken sign-up link, since it's actively blocking new members from joining right now." },
+  ],
+
+  249: [
+    { type: "textarea", key: "outcomes", label: "Project", section: "Outcomes", rows: 4, seed: "The spring showcase project shipped on time, drew our highest attendance yet, and stayed within budget." },
+    { type: "text", key: "lessonLearned", label: "Specific lesson learned", section: "Lessons & next steps", seed: "Booking the venue earlier gave us far more flexibility than past events." },
+    { type: "text", key: "carryIntoNext", label: "What I'll carry into the next project", seed: "Book venues at least six weeks out from now on." },
+  ],
+  250: [
+    { type: "table", key: "slideOutline", label: "Slide outline", section: "Slide outline", columns: [
+      { key: "slideNum", label: "Slide #", kind: "text" },
+      { key: "coreIdea", label: "Core idea", kind: "text" },
+    ], seedRows: [
+      { slideNum: "1", coreIdea: "The problem: declining event attendance" },
+      { slideNum: "2", coreIdea: "What we tried: new outreach channels" },
+      { slideNum: "3", coreIdea: "Result: attendance up 20%" },
+      { slideNum: "4", coreIdea: "Recommendation for next semester" },
+    ] },
+    { type: "textarea", key: "slideSimplified", label: "Slide I simplified, and how", section: "Simplify check", rows: 2, seed: "Slide 2 had five bullet points, cut down to the one channel that actually drove results." },
+  ],
+
+  251: [
+    { type: "text", key: "conceptVisualized", label: "Concept being visualized", section: "The idea", seed: "Our club's four-step new-member onboarding process" },
+    { type: "text", key: "visualFormatChosen", label: "Visual format chosen", seed: "A simple horizontal flowchart" },
+    { type: "textarea", key: "fasterThanText", label: "Was it faster to understand than the text version?", section: "Test", rows: 2, seed: "Yes, a new officer understood the process in seconds instead of reading several paragraphs." },
+  ],
+
+  252: [
+    { type: "text", key: "dataset", label: "Dataset", section: "Data", seed: "Monthly membership numbers over the past year" },
+    { type: "textarea", key: "chartTypeChosen", label: "Chart type chosen, and why", rows: 2, seed: "A line chart, since membership over time is a trend, not a comparison between separate categories." },
+    { type: "textarea", key: "patternRevealed", label: "Pattern the chart revealed", section: "Result", rows: 2, seed: "A clear seasonal dip every summer that the raw monthly table hadn't made obvious." },
+  ],
+
+  253: [
+    { type: "text", key: "processDiagrammed", label: "Process being diagrammed", section: "Process", seed: "Our event approval process, from proposal to final sign-off" },
+    { type: "textarea", key: "stepsDependencies", label: "Steps & dependencies", section: "Steps & dependencies", rows: 4, seed: "Proposal submitted, then advisor review, then budget check (can happen in parallel with venue booking), then final sign-off." },
+  ],
+
+  254: [
+    { type: "text", key: "presentationRecorded", label: "Presentation recorded", section: "Recording", seed: "My practice run of the research presentation" },
+    { type: "text", key: "length", label: "Length", seed: "9 minutes 40 seconds" },
+    { type: "textarea", key: "pacingIssueCaught", label: "Pacing or structural issue caught", section: "Review", rows: 2, seed: "My middle section ran almost twice as long as I'd planned, so I trimmed two examples down to one." },
+  ],
+
+  255: [
+    { type: "table", key: "pointsToInclude", label: "Points to include", section: "Key points", columns: [
+      { key: "point", label: "Point", kind: "text" },
+    ], seedRows: [
+      { point: "The core statistic: 78% retention after mentor pairing" },
+      { point: "The one-sentence takeaway" },
+      { point: "A simple before-and-after visual" },
+      { point: "Where to learn more" },
+    ] },
+    { type: "textarea", key: "feedbackReceived", label: "Feedback or engagement received", section: "Result", rows: 2, seed: "Three club members asked to share it with their own committees after seeing it posted." },
+  ],
+
+  256: [
+    { type: "text", key: "centralTopic", label: "Central topic", section: "Central idea", seed: "Planning our spring showcase event" },
+    { type: "textarea", key: "branches", label: "Branches", section: "Branches", rows: 4, seed: "Venue, budget, marketing, and volunteers, each with its own sub-branches for specific tasks." },
+  ],
+
+  257: [
+    { type: "text", key: "concept", label: "Concept", section: "Core idea", seed: "How our sign-up automation script works" },
+    { type: "text", key: "analogyUsed", label: "Analogy used", seed: "Comparing it to a mail sorter that automatically routes each letter to the right bin" },
+    { type: "text", key: "nonExpertTester", label: "Non-expert tester", section: "Test", seed: "My roommate, who has no coding background" },
+    { type: "textarea", key: "couldExplainBack", label: "Could they explain it back?", rows: 2, seed: "Yes, using the mail-sorter analogy in their own words." },
+  ],
+
+  258: [
+    { type: "text", key: "project", label: "Project", section: "The work", seed: "The sign-up automation script I built for my club" },
+    { type: "text", key: "problem", label: "Problem", section: "Case study", seed: "Manual data entry from our sign-up form was eating an hour every week." },
+    { type: "text", key: "myRole", label: "My role", seed: "Designed and built the automation script end to end" },
+    { type: "text", key: "outcome", label: "Outcome", seed: "Cut the weekly task from an hour to about five minutes of review" },
+  ],
+
+  259: [
+    { type: "textarea", key: "pacingRight", label: "Was the pacing right?", section: "Questions asked", rows: 2, seed: "Mostly, but the middle section felt rushed to two of the three people I asked." },
+    { type: "textarea", key: "openingHookWorked", label: "Did the opening hook work?", rows: 2, seed: "Yes, opening with the retention statistic got immediate attention." },
+    { type: "text", key: "specificChangeMade", label: "Specific change made", section: "Revision made", seed: "Slowed down and added one extra example in the middle section." },
+  ],
+
+  260: [
+    { type: "table", key: "timeline", label: "Timeline", section: "Timeline", columns: [
+      { key: "phase", label: "Phase", kind: "text" },
+      { key: "start", label: "Start", kind: "text" },
+      { key: "end", label: "End", kind: "text" },
+    ], seedRows: [
+      { phase: "Research", start: "Sept 1", end: "Sept 7" },
+      { phase: "Design", start: "Sept 8", end: "Sept 20" },
+      { phase: "Build", start: "Sept 15", end: "Sept 25" },
+      { phase: "Launch", start: "Sept 26", end: "Sept 30" },
+    ] },
+  ],
+
+  261: [
+    { type: "text", key: "newPieceAdded", label: "New piece added", section: "Added", seed: "The sign-up automation project, with a short case study" },
+    { type: "text", key: "outdatedPieceRemoved", label: "Outdated piece removed", section: "Removed", seed: "A freshman-year class assignment that no longer reflects my current skill level" },
+  ],
+
+  262: [
+    { type: "text", key: "presentationShared", label: "Presentation shared", section: "Sharing", seed: "My research presentation recording" },
+    { type: "text", key: "platform", label: "Platform", seed: "LinkedIn" },
+    { type: "textarea", key: "engagementGenerated", label: "Engagement or connections generated", section: "Result", rows: 2, seed: "A professional in my target field commented and we ended up scheduling a short call." },
+  ],
+
+  263: [
+    { type: "text", key: "event", label: "Event", section: "Event", seed: "Campus tech showcase" },
+    { type: "text", key: "workShowcased", label: "Work showcased", seed: "The sign-up automation project" },
+    { type: "textarea", key: "feedbackOrConnection", label: "Feedback or connection made", section: "Result", rows: 2, seed: "A recruiter stopped by, asked detailed questions, and remembered the project weeks later during recruiting season." },
+  ],
+  264: [
+    { type: "text", key: "tool", label: "Tool", section: "Tool", seed: "Trello" },
+    { type: "text", key: "realTaskUsedFor", label: "Real task used for", seed: "Tracking my personal project tasks over a weekend" },
+    { type: "textarea", key: "canNavigateConfidently", label: "Can I navigate it confidently now?", section: "Comfort check", rows: 2, seed: "Yes, boards, cards, and due dates all feel natural now instead of unfamiliar." },
+  ],
+
+  265: [
+    { type: "checklist", key: "setup", label: "Setup", section: "Setup", items: ["All current deadlines entered", "Color-coding or categories used", "Reminders set"], seedChecked: ["All current deadlines entered", "Reminders set"] },
+    { type: "textarea", key: "stoppedMissing", label: "Did I stop missing anything?", section: "Reflection", rows: 2, seed: "Yes, no missed deadlines since moving everything into one calendar." },
+  ],
+
+  266: [
+    { type: "text", key: "exerciseCompleted", label: "Exercise completed", section: "Exercise", seed: "An IF formula that flags any budget line over $100 for review" },
+    { type: "text", key: "conditionalWritten", label: "One conditional statement or formula I wrote", seed: "=IF(B2>100, \"Review\", \"OK\")" },
+  ],
+
+  267: [
+    { type: "text", key: "tool", label: "Tool", section: "Tool", seed: "Google Analytics" },
+    { type: "textarea", key: "whyRelevant", label: "Why it's relevant to my target field", rows: 2, seed: "Brand marketing roles list it as a required or preferred skill in nearly every posting I've seen." },
+    { type: "text", key: "tutorialCompleted", label: "Tutorial or task completed", section: "Progress", seed: "Google's free Analytics Academy introductory course" },
+  ],
+
+  268: [
+    { type: "text", key: "structureCategories", label: "Structure / categories used", section: "Organization", seed: "Folders by type: Templates, Reference Docs, Design Assets" },
+    { type: "text", key: "whereStored", label: "Where it's stored", seed: "Shared drive, top-level \"Resources\" folder" },
+  ],
+
+  269: [
+    { type: "text", key: "namingConvention", label: "Naming convention chosen", section: "System", seed: "date_projectname_version, e.g. 2026-03-01_showcase_v2" },
+    { type: "text", key: "appliedToHowMany", label: "Applied to how many existing files?", seed: "Renamed about 30 existing files to match" },
+  ],
+
+  270: [
+    { type: "text", key: "repetitiveTask", label: "Repetitive task", section: "Task", seed: "Copying new sign-up form responses into our roster spreadsheet" },
+    { type: "text", key: "approachUsed", label: "Approach used", section: "Automation", seed: "A simple Zapier automation connecting the form to the spreadsheet" },
+    { type: "text", key: "timeSaved", label: "Time saved", seed: "About 30 minutes every week" },
+  ],
+
+  271: [
+    { type: "text", key: "tool1", label: "Tool 1", section: "Integration", seed: "Google Calendar" },
+    { type: "text", key: "tool2", label: "Tool 2", seed: "Todoist" },
+    { type: "text", key: "integrationMethod", label: "Integration method used", seed: "Built-in calendar sync so tasks with due dates show up automatically" },
+  ],
+
+  272: [
+    { type: "table", key: "trackingLog", label: "Tracking log", section: "Tracking log", columns: [
+      { key: "task", label: "Task", kind: "text" },
+      { key: "estimatedTime", label: "Estimated time", kind: "text" },
+      { key: "actualTime", label: "Actual time", kind: "text" },
+    ], seedRows: [
+      { task: "Email and admin", estimatedTime: "30 min", actualTime: "1 hr 20 min" },
+      { task: "Deep work block", estimatedTime: "2 hrs", actualTime: "1 hr 45 min" },
+      { task: "Meetings", estimatedTime: "1 hr", actualTime: "1 hr" },
+    ] },
+  ],
+
+  273: [
+    { type: "text", key: "errorEncountered", label: "Error encountered", section: "The error", seed: "A spreadsheet formula kept returning #REF!" },
+    { type: "textarea", key: "isolationProcess", label: "Isolation process", section: "Isolation process", rows: 4, seed: "Tested the formula on a fresh sheet with sample data, then reintroduced one part of the original range at a time until the error reappeared." },
+    { type: "text", key: "rootCause", label: "What actually caused it", section: "Root cause", seed: "A referenced column had been deleted earlier, breaking the range." },
+  ],
+
+  274: [
+    { type: "text", key: "certificationChosen", label: "Certification chosen", section: "Certification", seed: "Google Analytics for Beginners certification" },
+    { type: "textarea", key: "whyRelevant", label: "Why it's relevant", rows: 2, seed: "Directly closes a gap I identified in my own Stage One Weakness Awareness worksheet." },
+    { type: "table", key: "progress", label: "Progress", section: "Progress", columns: [
+      { key: "module", label: "Module", kind: "text" },
+      { key: "completed", label: "Completed? (Y/N)", kind: "text" },
+    ], seedRows: [
+      { module: "Introduction to Analytics", completed: "Y" },
+      { module: "Advanced concepts", completed: "Y" },
+      { module: "Final assessment", completed: "In progress" },
+    ] },
+  ],
+
+  275: [
+    { type: "text", key: "purpose", label: "Purpose", section: "Form", seed: "Collecting RSVPs and dietary restrictions for our year-end banquet" },
+    { type: "textarea", key: "questionTypesUsed", label: "Question types used", rows: 2, seed: "Multiple choice for RSVP status, checkboxes for dietary restrictions, one open text field for special requests." },
+    { type: "textarea", key: "responsesEasyToAnalyze", label: "Were responses easy to analyze?", section: "Result", rows: 2, seed: "Yes, the multiple-choice and checkbox answers summarized automatically, only the open text field needed manual review." },
+  ],
+
+  276: [
+    { type: "table", key: "curatedList", label: "Curated list", section: "Curated list", columns: [
+      { key: "resource", label: "Resource", kind: "text" },
+      { key: "whyUseful", label: "Why it's useful", kind: "text" },
+    ], seedRows: [
+      { resource: "Google Sheets function guide", whyUseful: "Clear explanations with real examples for each formula" },
+      { resource: "Exceljet formula reference", whyUseful: "Fast lookup when I forget exact syntax" },
+      { resource: "A short YouTube pivot table tutorial", whyUseful: "Made pivot tables click after reading alone didn't" },
+    ] },
+  ],
+
+  277: [
+    { type: "table", key: "toolsUsed", label: "Tools used", section: "Tools used", columns: [
+      { key: "tool", label: "Tool", kind: "text" },
+      { key: "partHandled", label: "Part of project it handled", kind: "text" },
+    ], seedRows: [
+      { tool: "Google Forms", partHandled: "Collected survey responses" },
+      { tool: "Google Sheets", partHandled: "Cleaned and analyzed the data" },
+      { tool: "Google Slides", partHandled: "Presented the findings" },
+    ] },
+    { type: "textarea", key: "handoffsSmooth", label: "Did the handoffs between tools go smoothly?", section: "Result", rows: 2, seed: "Yes, planning the export format in advance meant no reformatting was needed between steps." },
+  ],
+  278: [
+    { type: "text", key: "peerWorkReviewed", label: "Peer / work reviewed", section: "Feedback", seed: "A teammate's draft budget spreadsheet" },
+    { type: "text", key: "specificStrength", label: "Specific strength noted", seed: "Clear category labels made it easy to follow" },
+    { type: "textarea", key: "actionableSuggestion", label: "Specific, actionable suggestion", rows: 2, seed: "Add a running total row so overspending is visible at a glance, not just per category." },
+    { type: "textarea", key: "madeChangeBasedOnIt", label: "Did they make a change based on it?", section: "Result", rows: 2, seed: "Yes, the running total was in the next version I saw." },
+  ],
+
+  279: [
+    { type: "text", key: "contentPresented", label: "Content presented", section: "Content", seed: "My data analysis findings on club event attendance" },
+    { type: "text", key: "audience", label: "Audience", seed: "A small study group of five classmates" },
+    { type: "textarea", key: "assumedTooMuchKnowledge", label: "Where did I assume too much background knowledge?", section: "Result", rows: 2, seed: "I used \"response rate\" without defining it, and two people asked what it meant." },
+  ],
+
+  280: [
+    { type: "text", key: "whatNegotiating", label: "What I'm negotiating", section: "Prep", seed: "Shifting a shared project deadline with a teammate" },
+    { type: "textarea", key: "priorities", label: "My priorities (non-negotiable)", rows: 2, seed: "The final submission date can't move, since it's set by the professor." },
+    { type: "textarea", key: "flexiblePoints", label: "My flexible points", rows: 2, seed: "I can flex on which sections each of us drafts first." },
+    { type: "textarea", key: "outcome", label: "Outcome", section: "Result", rows: 2, seed: "Learning her exam conflict was the real issue let us swap task order instead of arguing over the deadline itself." },
+  ],
+
+  281: [
+    { type: "text", key: "promptProblem", label: "Prompt / problem", section: "Prompt", seed: "How can we boost attendance at our spring showcase?" },
+    { type: "textarea", key: "ideasGenerated", label: "Ideas generated", section: "Ideas generated", rows: 5, seed: "Free food, earlier promotion, partnering with another club, a raffle prize, better signage, a livestream option, moving the date." },
+    { type: "textarea", key: "topIdeas", label: "Top 1 to 2 ideas after evaluation", section: "Best ideas", rows: 2, seed: "Earlier promotion and partnering with another club, both low-cost and high-impact." },
+  ],
+
+  282: [
+    { type: "text", key: "collaboratorFunction", label: "Collaborator / function", section: "Collaboration", seed: "An engineering student on our shared campus app project" },
+    { type: "textarea", key: "theirPriorities", label: "Their priorities I learned about", rows: 2, seed: "They cared most about a stable technical spec before any timeline discussion, not the marketing angle I led with." },
+    { type: "textarea", key: "howAdapted", label: "How I adapted my communication for them", section: "Adjustment", rows: 2, seed: "Started future requests with the technical constraint, then explained the marketing reason behind it." },
+  ],
+
+  283: [
+    { type: "text", key: "feedbackReceived", label: "Feedback received", section: "Feedback", seed: "\"Your chart labels are unclear, I can't tell what the axes represent.\"" },
+    { type: "text", key: "specificChangeMade", label: "Specific change made", section: "Concrete revision", seed: "Added clear axis labels and a title to every chart going forward, not just the one flagged." },
+  ],
+
+  284: [
+    { type: "text", key: "skillExperience", label: "Skill / experience", section: "Reflection", seed: "A data analysis project for my marketing class" },
+    { type: "text", key: "whatILearned", label: "What I learned", seed: "I genuinely mastered basic formulas, but pivot tables still slow me down." },
+    { type: "text", key: "genuinelyChallenging", label: "What was genuinely challenging", seed: "Deciding which fields to put in rows versus values in the pivot table" },
+    { type: "text", key: "nextStep", label: "Next step", seed: "Do one focused pivot table tutorial this week" },
+  ],
+
+  285: [
+    { type: "text", key: "skillGenuinelyGrown", label: "Skill that's genuinely grown", section: "Pattern review", seed: "Spreadsheet formulas, which no longer take me any real effort" },
+    { type: "text", key: "recurringChallenge", label: "Challenge that keeps recurring", seed: "Presentation design still shows up as a struggle across every reflection this semester" },
+  ],
+
+  286: [
+    { type: "text", key: "whoChecksConsistency", label: "Who checks consistency", section: "Review process", seed: "Me, as the assigned final reviewer for this submission" },
+    { type: "text", key: "whoConfirmsDeadline", label: "Who confirms the deadline", seed: "Our team lead, the day before submission" },
+    { type: "textarea", key: "readAsCoherent", label: "Did the final submission read as coherent?", section: "Result", rows: 2, seed: "Yes, having one owner for final review caught a formatting mismatch between two sections before it went out." },
+  ],
+
+  287: [
+    { type: "table", key: "ratings", label: "Ratings", section: "Ratings", columns: [
+      { key: "skill", label: "Skill", kind: "text" },
+      { key: "rating", label: "Rating (1 to 10)", kind: "text" },
+      { key: "evidence", label: "Evidence", kind: "text" },
+    ], seedRows: [
+      { skill: "Spreadsheet formulas", rating: "8", evidence: "Built trackers without help all semester" },
+      { skill: "Data analysis", rating: "7", evidence: "Consistently found real insights, not just numbers" },
+      { skill: "Presentation design", rating: "4", evidence: "Decks still feel cluttered and text-heavy" },
+    ] },
+    { type: "textarea", key: "genuinePriorityGap", label: "Genuine priority gap", section: "Priority", rows: 2, seed: "Presentation design is my lowest honest score and the one I keep avoiding, worth prioritizing next." },
+  ],
+
+  288: [
+    { type: "text", key: "prioritySkills", label: "Priority skill(s)", section: "Plan", seed: "Presentation design" },
+    { type: "table", key: "milestones", label: "Milestones", columns: [
+      { key: "milestone", label: "Milestone", kind: "text" },
+      { key: "targetDate", label: "Target date", kind: "text" },
+      { key: "resourceMethod", label: "Resource/method", kind: "text" },
+    ], seedRows: [
+      { milestone: "Complete a slide-design fundamentals course", targetDate: "In 3 weeks", resourceMethod: "Free online course" },
+      { milestone: "Rebuild one past deck using what I learned", targetDate: "In 6 weeks", resourceMethod: "A past class presentation" },
+      { milestone: "Present it and get specific feedback", targetDate: "In 8 weeks", resourceMethod: "Study group" },
+    ] },
+  ],
+
+  289: [
+    { type: "text", key: "conceptTaught", label: "Concept taught", section: "Session", seed: "How to build a basic pivot table" },
+    { type: "text", key: "peer", label: "Peer", seed: "A classmate who'd never used one before" },
+    { type: "textarea", key: "gapSurfaced", label: "Gap in my own understanding it surfaced", section: "What teaching revealed", rows: 2, seed: "I couldn't clearly explain why one specific field went in \"values\" instead of \"rows\" until I looked it up myself." },
+  ],
+
+  290: [
+    { type: "table", key: "toolAudit", label: "Tool audit", section: "Tool audit", columns: [
+      { key: "tool", label: "Tool", kind: "text" },
+      { key: "genuinelyHelps", label: "Genuinely helps? (Y/N)", kind: "text" },
+    ], seedRows: [
+      { tool: "Todoist", genuinelyHelps: "Y" },
+      { tool: "A second, unused task app", genuinelyHelps: "N" },
+      { tool: "Google Calendar", genuinelyHelps: "Y" },
+    ] },
+    { type: "text", key: "toolsDropping", label: "Tool(s) I'm dropping or consolidating", section: "Decision", seed: "Dropping the second task app, everything moves into Todoist" },
+  ],
+
+  291: [
+    { type: "text", key: "issue1", label: "Issue", section: "Entry 1", seed: "Spreadsheet formula returning #REF! after deleting a column" },
+    { type: "text", key: "solution1", label: "Solution", seed: "Rebuilt the reference range and avoided deleting referenced columns going forward" },
+    { type: "text", key: "lesson1", label: "Lesson", seed: "Check what a column is referenced by before deleting it" },
+    { type: "text", key: "issue2", label: "Issue (2)", section: "Entry 2", seed: "Automation script silently failing on weekends" },
+    { type: "text", key: "solution2", label: "Solution (2)", seed: "Added an error notification so failures surface immediately instead of going unnoticed" },
+    { type: "text", key: "lesson2", label: "Lesson (2)", seed: "Always build in a failure alert, not just a happy-path automation" },
+  ],
+
+  292: [
+    { type: "text", key: "recentStruggle", label: "Recent moment of genuine struggle", section: "The struggle", seed: "Spending an hour stuck on a pivot table that still didn't summarize the data correctly" },
+    { type: "textarea", key: "realGap", label: "Specific underlying gap it points to", section: "The real gap", rows: 2, seed: "The struggle wasn't the tool itself, it was not understanding what \"aggregation\" actually means conceptually." },
+  ],
+
+  293: [
+    { type: "text", key: "feedbackReceived", label: "Feedback received (instructor/client)", section: "Feedback", seed: "\"Clarify the methodology section.\"" },
+    { type: "textarea", key: "genuineRevision", label: "What I actually changed, beyond the surface ask", section: "Genuine revision", rows: 3, seed: "Rewrote the entire section to explain why each method was chosen, not just adding one clarifying sentence as originally asked." },
+  ],
 };

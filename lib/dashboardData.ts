@@ -1,12 +1,12 @@
 export type ModuleStatus = "complete" | "in-progress" | "available" | "locked";
-export type StageId = "one" | "two" | "three" | "four" | "five" | "six";
+export type StageId = "one" | "two" | "three" | "four" | "five" | "six" | "seven";
 
 export type FirstModule = {
   id: number;
   code: string;
   stage: StageId;
   title: string;
-  category: "A" | "B" | "C" | "D" | "E" | "F" | "G" | "H" | "I" | "J" | "K" | "L" | "M" | "N" | "O" | "P" | "Q" | "R" | "S" | "T" | "U" | "V" | "W";
+  category: "A" | "B" | "C" | "D" | "E" | "F" | "G" | "H" | "I" | "J" | "K" | "L" | "M" | "N" | "O" | "P" | "Q" | "R" | "S" | "T" | "U" | "V" | "W" | "X" | "Y" | "Z" | "AA" | "BB" | "CC";
   time: string;
   difficulty: "Easy" | "Moderate" | "Deep";
   status: ModuleStatus;
@@ -38,6 +38,12 @@ export const CATEGORY_META = {
   U: { label: "Interpersonal & Networking Communication", color: "var(--fuchsia-blast)" },
   V: { label: "Feedback, Reflection & Self-Assessment", color: "var(--berry-burst)" },
   W: { label: "Communication Systems & Tools", color: "var(--juicy-plum)" },
+  X: { label: "Data & Analysis", color: "var(--sunshine-orange)" },
+  Y: { label: "Documents & Written Communication", color: "var(--berry-burst)" },
+  Z: { label: "Planning & Project Management", color: "var(--juicy-plum)" },
+  AA: { label: "Visual & Presentation Tools", color: "var(--tropical-mango)" },
+  BB: { label: "Digital Tools & Systems", color: "var(--fuchsia-blast)" },
+  CC: { label: "Collaboration & Reflection", color: "var(--citrus-lime)" },
 } as const;
 
 export const STAGES: { id: StageId; label: string; shortLabel: string; href: string }[] = [
@@ -47,6 +53,7 @@ export const STAGES: { id: StageId; label: string; shortLabel: string; href: str
   { id: "four", label: "Stage Four · Mindset, Productivity & Habits", shortLabel: "Stage Four", href: "/dashboard/stage/four" },
   { id: "five", label: "Stage Five · Thinking, Reasoning & Mental Models", shortLabel: "Stage Five", href: "/dashboard/stage/five" },
   { id: "six", label: "Stage Six · Communication: Speaking, Reading, Writing", shortLabel: "Stage Six", href: "/dashboard/stage/six" },
+  { id: "seven", label: "Stage Seven · Hard Skills", shortLabel: "Stage Seven", href: "/dashboard/stage/seven" },
 ];
 
 const STAGE_ONE_FIRSTS: FirstModule[] = [
@@ -270,7 +277,100 @@ const STAGE_SIX_FIRSTS: FirstModule[] = [
   { id: 203, code: "I68", stage: "six", title: "Communication Challenge Goal", category: "W", time: "10 min/wk", difficulty: "Easy", status: "locked" },
 ];
 
-export const FIRSTS: FirstModule[] = [...STAGE_ONE_FIRSTS, ...STAGE_TWO_FIRSTS, ...STAGE_THREE_FIRSTS, ...STAGE_FOUR_FIRSTS, ...STAGE_FIVE_FIRSTS, ...STAGE_SIX_FIRSTS];
+const STAGE_SEVEN_FIRSTS: FirstModule[] = [
+  { id: 204, code: "K1", stage: "seven", title: "Spreadsheet Mastery", category: "X", time: "2 to 3 hrs", difficulty: "Easy", status: "locked" },
+  { id: 205, code: "K2", stage: "seven", title: "Data Analysis Exercise", category: "X", time: "45 min", difficulty: "Easy", status: "locked" },
+  { id: 206, code: "K9", stage: "seven", title: "Survey/Questionnaire Designed", category: "X", time: "30 to 45 min", difficulty: "Easy", status: "locked" },
+  { id: 207, code: "K10", stage: "seven", title: "Statistical Insight Extracted", category: "X", time: "30 min", difficulty: "Easy", status: "locked" },
+  { id: 208, code: "K26", stage: "seven", title: "KPI/Metric Measurement", category: "X", time: "15 min", difficulty: "Easy", status: "locked" },
+  { id: 209, code: "K43", stage: "seven", title: "Data Entry Accuracy Exercise", category: "X", time: "Time varies with dataset size", difficulty: "Easy", status: "locked" },
+  { id: 210, code: "K45", stage: "seven", title: "Benchmarking Exercise", category: "X", time: "30 to 45 min", difficulty: "Moderate", status: "locked" },
+  { id: 211, code: "K46", stage: "seven", title: "Analytical Problem Solved", category: "X", time: "Varies by problem", difficulty: "Moderate", status: "locked" },
+  { id: 212, code: "K53", stage: "seven", title: "Data Cleaning Exercise", category: "X", time: "Time varies significantly with data messiness", difficulty: "Moderate", status: "locked" },
+  { id: 213, code: "K62", stage: "seven", title: "Collaborative Spreadsheet", category: "X", time: "20 min", difficulty: "Easy", status: "locked" },
+  { id: 214, code: "K64", stage: "seven", title: "Survey Analysis Conducted", category: "X", time: "45 min", difficulty: "Moderate", status: "locked" },
+  { id: 215, code: "K65", stage: "seven", title: "Data Trend Interpretation", category: "X", time: "30 to 45 min", difficulty: "Moderate", status: "locked" },
+  { id: 216, code: "K73", stage: "seven", title: "Data Interpretation Report", category: "X", time: "45 min", difficulty: "Moderate", status: "locked" },
+  { id: 217, code: "K81", stage: "seven", title: "Performance Metric Tracked", category: "X", time: "5 min", difficulty: "Easy", status: "locked" },
+  { id: 218, code: "K84", stage: "seven", title: "Critical Thinking Applied to Data", category: "X", time: "20 to 30 min", difficulty: "Moderate", status: "locked" },
+  { id: 219, code: "K4", stage: "seven", title: "Report Written", category: "Y", time: "Several hours", difficulty: "Moderate", status: "locked" },
+  { id: 220, code: "K8", stage: "seven", title: "Research Summary", category: "Y", time: "1 to 2 hrs", difficulty: "Moderate", status: "locked" },
+  { id: 221, code: "K13", stage: "seven", title: "Standard Operating Procedure Drafted", category: "Y", time: "1 hr", difficulty: "Moderate", status: "locked" },
+  { id: 222, code: "K16", stage: "seven", title: "Written Executive Summary", category: "Y", time: "30 to 45 min", difficulty: "Moderate", status: "locked" },
+  { id: 223, code: "K18", stage: "seven", title: "Document Formatting Exercise", category: "Y", time: "20 to 30 min", difficulty: "Easy", status: "locked" },
+  { id: 224, code: "K33", stage: "seven", title: "Online Research Exercise", category: "Y", time: "5 to 10 min", difficulty: "Easy", status: "locked" },
+  { id: 225, code: "K36", stage: "seven", title: "Technical Template Created", category: "Y", time: "1 hr", difficulty: "Moderate", status: "locked" },
+  { id: 226, code: "K42", stage: "seven", title: "Research Presentation", category: "Y", time: "Several hours", difficulty: "Moderate", status: "locked" },
+  { id: 227, code: "K44", stage: "seven", title: "Technical Summary Written", category: "Y", time: "30 to 45 min", difficulty: "Moderate", status: "locked" },
+  { id: 228, code: "K58", stage: "seven", title: "Documentation for Others Created", category: "Y", time: "1 hr", difficulty: "Moderate", status: "locked" },
+  { id: 229, code: "K63", stage: "seven", title: "Mock Proposal Submission", category: "Y", time: "Several hours", difficulty: "Moderate", status: "locked" },
+  { id: 230, code: "K67", stage: "seven", title: "Process Documentation for Team", category: "Y", time: "1 to 2 hrs", difficulty: "Moderate", status: "locked" },
+  { id: 231, code: "K72", stage: "seven", title: "Research Question Formulated", category: "Y", time: "20 to 30 min", difficulty: "Easy", status: "locked" },
+  { id: 232, code: "K5", stage: "seven", title: "Project Plan Drafted", category: "Z", time: "30 to 60 min", difficulty: "Moderate", status: "locked" },
+  { id: 233, code: "K6", stage: "seven", title: "Meeting Agenda Prepared", category: "Z", time: "15 min", difficulty: "Easy", status: "locked" },
+  { id: 234, code: "K7", stage: "seven", title: "Budget/Expense Sheet Prepared", category: "Z", time: "30 min", difficulty: "Easy", status: "locked" },
+  { id: 235, code: "K11", stage: "seven", title: "Task Prioritization Exercise", category: "Z", time: "15 to 20 min", difficulty: "Easy", status: "locked" },
+  { id: 236, code: "K12", stage: "seven", title: "Risk Assessment", category: "Z", time: "30 to 45 min", difficulty: "Moderate", status: "locked" },
+  { id: 237, code: "K23", stage: "seven", title: "Project Tracking Log Maintained", category: "Z", time: "10 min", difficulty: "Easy", status: "locked" },
+  { id: 238, code: "K27", stage: "seven", title: "Process Improvement Proposal", category: "Z", time: "30 min", difficulty: "Moderate", status: "locked" },
+  { id: 239, code: "K37", stage: "seven", title: "Mini Project Completed", category: "Z", time: "Time varies by scope, ideally capped at a weekend or a week", difficulty: "Moderate", status: "locked" },
+  { id: 240, code: "K38", stage: "seven", title: "Problem-Solving Checklist", category: "Z", time: "20 min", difficulty: "Easy", status: "locked" },
+  { id: 241, code: "K50", stage: "seven", title: "Practical Application of Hard Skill", category: "Z", time: "Varies by skill and task", difficulty: "Moderate", status: "locked" },
+  { id: 242, code: "K57", stage: "seven", title: "Workflow Optimization Exercise", category: "Z", time: "30 to 45 min", difficulty: "Moderate", status: "locked" },
+  { id: 243, code: "K66", stage: "seven", title: "Workflow Checklist", category: "Z", time: "15 to 20 min", difficulty: "Easy", status: "locked" },
+  { id: 244, code: "K70", stage: "seven", title: "Multi-Step Project Plan Executed", category: "Z", time: "Time varies significantly with project scope", difficulty: "Deep", status: "locked" },
+  { id: 245, code: "K71", stage: "seven", title: "Cost/Time Estimate Prepared", category: "Z", time: "30 to 45 min", difficulty: "Moderate", status: "locked" },
+  { id: 246, code: "K74", stage: "seven", title: "Task Delegation Exercise", category: "Z", time: "Ongoing practice", difficulty: "Moderate", status: "locked" },
+  { id: 247, code: "K83", stage: "seven", title: "Simulation of Workplace Task", category: "Z", time: "Varies by task complexity", difficulty: "Moderate", status: "locked" },
+  { id: 248, code: "K88", stage: "seven", title: "Problem Prioritization Exercise", category: "Z", time: "15 to 20 min", difficulty: "Easy", status: "locked" },
+  { id: 249, code: "K89", stage: "seven", title: "Project Closure Documented", category: "Z", time: "20 to 30 min", difficulty: "Easy", status: "locked" },
+  { id: 250, code: "K3", stage: "seven", title: "Presentation Deck Created", category: "AA", time: "1 to 2 hrs", difficulty: "Moderate", status: "locked" },
+  { id: 251, code: "K17", stage: "seven", title: "Visual Communication Created", category: "AA", time: "30 to 45 min", difficulty: "Moderate", status: "locked" },
+  { id: 252, code: "K31", stage: "seven", title: "Data Visualization", category: "AA", time: "20 to 30 min", difficulty: "Easy", status: "locked" },
+  { id: 253, code: "K32", stage: "seven", title: "Workflow Diagram Created", category: "AA", time: "30 to 45 min", difficulty: "Moderate", status: "locked" },
+  { id: 254, code: "K34", stage: "seven", title: "Digital Presentation Recording", category: "AA", time: "1 hr", difficulty: "Moderate", status: "locked" },
+  { id: 255, code: "K35", stage: "seven", title: "Infographic Designed", category: "AA", time: "1 hr", difficulty: "Moderate", status: "locked" },
+  { id: 256, code: "K39", stage: "seven", title: "Mind Map Created", category: "AA", time: "20 to 30 min", difficulty: "Easy", status: "locked" },
+  { id: 257, code: "K51", stage: "seven", title: "Technical Presentation to Non-Experts", category: "AA", time: "45 min", difficulty: "Moderate", status: "locked" },
+  { id: 258, code: "K59", stage: "seven", title: "Digital Portfolio Item Created", category: "AA", time: "1 hr", difficulty: "Moderate", status: "locked" },
+  { id: 259, code: "K69", stage: "seven", title: "Digital Presentation Feedback Received", category: "AA", time: "20 to 30 min", difficulty: "Easy", status: "locked" },
+  { id: 260, code: "K75", stage: "seven", title: "Visual Project Timeline Created", category: "AA", time: "30 to 45 min", difficulty: "Moderate", status: "locked" },
+  { id: 261, code: "K79", stage: "seven", title: "Online Portfolio Update", category: "AA", time: "30 to 45 min", difficulty: "Easy", status: "locked" },
+  { id: 262, code: "K87", stage: "seven", title: "Digital Presentation Shared Online", category: "AA", time: "15 to 20 min", difficulty: "Easy", status: "locked" },
+  { id: 263, code: "K90", stage: "seven", title: "Technical Showcase Event Participation", category: "AA", time: "Prep plus the event itself", difficulty: "Deep", status: "locked" },
+  { id: 264, code: "K14", stage: "seven", title: "Digital Collaboration Tool Used", category: "BB", time: "A few hours of genuine use to build comfort", difficulty: "Easy", status: "locked" },
+  { id: 265, code: "K15", stage: "seven", title: "Calendar/Time Management System", category: "BB", time: "15 min", difficulty: "Easy", status: "locked" },
+  { id: 266, code: "K20", stage: "seven", title: "Basic Coding or Logic Exercise", category: "BB", time: "1 to 2 hrs", difficulty: "Easy", status: "locked" },
+  { id: 267, code: "K28", stage: "seven", title: "Professional Tool Exploration", category: "BB", time: "Several hours", difficulty: "Moderate", status: "locked" },
+  { id: 268, code: "K40", stage: "seven", title: "Resource Library Organized", category: "BB", time: "1 hr", difficulty: "Easy", status: "locked" },
+  { id: 269, code: "K41", stage: "seven", title: "File Management System Set Up", category: "BB", time: "30 to 45 min", difficulty: "Easy", status: "locked" },
+  { id: 270, code: "K47", stage: "seven", title: "Task Automation Attempted", category: "BB", time: "Varies with the specific automation", difficulty: "Moderate", status: "locked" },
+  { id: 271, code: "K48", stage: "seven", title: "Cross-Platform Tool Integration", category: "BB", time: "30 min", difficulty: "Moderate", status: "locked" },
+  { id: 272, code: "K52", stage: "seven", title: "Time-Tracking System Used", category: "BB", time: "5 min", difficulty: "Easy", status: "locked" },
+  { id: 273, code: "K54", stage: "seven", title: "Technical Troubleshooting Exercise", category: "BB", time: "Varies by problem complexity", difficulty: "Moderate", status: "locked" },
+  { id: 274, code: "K61", stage: "seven", title: "Online Tool Certification Attempted", category: "BB", time: "Several weeks", difficulty: "Deep", status: "locked" },
+  { id: 275, code: "K68", stage: "seven", title: "Online Form/Template Created", category: "BB", time: "30 min", difficulty: "Easy", status: "locked" },
+  { id: 276, code: "K76", stage: "seven", title: "Technical Resource Curation", category: "BB", time: "A few minutes added each time you find a useful resource", difficulty: "Easy", status: "locked" },
+  { id: 277, code: "K82", stage: "seven", title: "Multi-Tool Project Completed", category: "BB", time: "Varies with project scope", difficulty: "Deep", status: "locked" },
+  { id: 278, code: "K19", stage: "seven", title: "Peer Review Participation", category: "CC", time: "20 to 30 min", difficulty: "Moderate", status: "locked" },
+  { id: 279, code: "K21", stage: "seven", title: "Public Speaking Practice", category: "CC", time: "30 to 45 min", difficulty: "Moderate", status: "locked" },
+  { id: 280, code: "K22", stage: "seven", title: "Negotiation Exercise", category: "CC", time: "Varies by context", difficulty: "Moderate", status: "locked" },
+  { id: 281, code: "K24", stage: "seven", title: "Creative Brainstorming Session", category: "CC", time: "30 to 45 min", difficulty: "Easy", status: "locked" },
+  { id: 282, code: "K25", stage: "seven", title: "Cross-Functional Collaboration", category: "CC", time: "Ongoing", difficulty: "Moderate", status: "locked" },
+  { id: 283, code: "K29", stage: "seven", title: "Feedback Integration", category: "CC", time: "Varies by the scope of the feedback", difficulty: "Easy", status: "locked" },
+  { id: 284, code: "K30", stage: "seven", title: "Hard Skill Reflection", category: "CC", time: "15 to 20 min", difficulty: "Easy", status: "locked" },
+  { id: 285, code: "K49", stage: "seven", title: "Reflection on Hard Skill Growth", category: "CC", time: "30 min", difficulty: "Easy", status: "locked" },
+  { id: 286, code: "K55", stage: "seven", title: "Collaborative Project Submission", category: "CC", time: "Team-dependent", difficulty: "Moderate", status: "locked" },
+  { id: 287, code: "K56", stage: "seven", title: "Self-Assessment of Technical Skills", category: "CC", time: "30 min", difficulty: "Easy", status: "locked" },
+  { id: 288, code: "K60", stage: "seven", title: "Hard Skill Development Plan", category: "CC", time: "1 hr", difficulty: "Moderate", status: "locked" },
+  { id: 289, code: "K77", stage: "seven", title: "Peer Teaching Session", category: "CC", time: "20 to 30 min", difficulty: "Easy", status: "locked" },
+  { id: 290, code: "K78", stage: "seven", title: "Reflection on Tool Efficiency", category: "CC", time: "20 to 30 min", difficulty: "Easy", status: "locked" },
+  { id: 291, code: "K80", stage: "seven", title: "Technical Problem-Solving Journal", category: "CC", time: "10 min", difficulty: "Easy", status: "locked" },
+  { id: 292, code: "K85", stage: "seven", title: "Reflection on Learning Gaps", category: "CC", time: "20 to 30 min", difficulty: "Easy", status: "locked" },
+  { id: 293, code: "K86", stage: "seven", title: "Mock Client/Instructor Feedback Implementation", category: "CC", time: "Varies by scope of revision needed", difficulty: "Moderate", status: "locked" },
+];
+
+export const FIRSTS: FirstModule[] = [...STAGE_ONE_FIRSTS, ...STAGE_TWO_FIRSTS, ...STAGE_THREE_FIRSTS, ...STAGE_FOUR_FIRSTS, ...STAGE_FIVE_FIRSTS, ...STAGE_SIX_FIRSTS, ...STAGE_SEVEN_FIRSTS];
 
 export const MOCK_USER = {
   firstName: "Ada",

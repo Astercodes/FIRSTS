@@ -216,6 +216,96 @@ export const COACH_MODE: Record<number, CoachMode> = {
   201: "hybrid",
   202: "hybrid",
   203: "reflective",
+  204: "hybrid",
+  205: "hybrid",
+  206: "hybrid",
+  207: "hybrid",
+  208: "hybrid",
+  209: "hybrid",
+  210: "research",
+  211: "synthesis",
+  212: "hybrid",
+  213: "hybrid",
+  214: "hybrid",
+  215: "hybrid",
+  216: "hybrid",
+  217: "hybrid",
+  218: "synthesis",
+  219: "hybrid",
+  220: "research",
+  221: "hybrid",
+  222: "hybrid",
+  223: "hybrid",
+  224: "research",
+  225: "hybrid",
+  226: "research",
+  227: "hybrid",
+  228: "hybrid",
+  229: "hybrid",
+  230: "hybrid",
+  231: "research",
+  232: "hybrid",
+  233: "hybrid",
+  234: "hybrid",
+  235: "hybrid",
+  236: "synthesis",
+  237: "hybrid",
+  238: "synthesis",
+  239: "hybrid",
+  240: "synthesis",
+  241: "reflective",
+  242: "hybrid",
+  243: "hybrid",
+  244: "hybrid",
+  245: "hybrid",
+  246: "hybrid",
+  247: "hybrid",
+  248: "synthesis",
+  249: "reflective",
+  250: "hybrid",
+  251: "hybrid",
+  252: "hybrid",
+  253: "hybrid",
+  254: "hybrid",
+  255: "hybrid",
+  256: "hybrid",
+  257: "hybrid",
+  258: "hybrid",
+  259: "reflective",
+  260: "hybrid",
+  261: "hybrid",
+  262: "hybrid",
+  263: "hybrid",
+  264: "hybrid",
+  265: "hybrid",
+  266: "hybrid",
+  267: "research",
+  268: "hybrid",
+  269: "hybrid",
+  270: "hybrid",
+  271: "hybrid",
+  272: "hybrid",
+  273: "synthesis",
+  274: "research",
+  275: "hybrid",
+  276: "research",
+  277: "hybrid",
+  278: "reflective",
+  279: "reflective",
+  280: "reflective",
+  281: "reflective",
+  282: "reflective",
+  283: "reflective",
+  284: "reflective",
+  285: "reflective",
+  286: "reflective",
+  287: "reflective",
+  288: "reflective",
+  289: "reflective",
+  290: "reflective",
+  291: "reflective",
+  292: "reflective",
+  293: "reflective",
 };
 
 export const LEARN_CONTENT: Record<number, LearnContent> = {
@@ -5974,5 +6064,2421 @@ export const LEARN_CONTENT: Record<number, LearnContent> = {
     successSignal:
       "By week's end, you can clearly say whether you met the specific goal, and you've built one small, real habit improvement.",
     milestoneTies: [90],
+  },
+
+  204: {
+    definition:
+      "A First Spreadsheet Mastery is basic working fluency in Excel or Google Sheets for data entry, budgeting, or tracking, covering formulas, formatting, and simple functions.",
+    whyItMatters:
+      "Spreadsheets are the single most common tool across nearly every entry-level role, and fluency here removes a common early bottleneck.",
+    whenWhoWhere: [
+      { label: "When", body: "Build this before your first internship or job, not after you're already expected to use it under pressure." },
+      { label: "Who", body: "A career center workshop, online tutorial, or peer already fluent in spreadsheets." },
+      { label: "Where", body: "Practiced on real or sample data, not just abstract exercises." },
+    ],
+    howItWorks: [
+      "Learn basic formulas (SUM, AVERAGE, IF), simple formatting, and one pivot table.",
+      "Apply them to a real dataset, like your own budget or a class project.",
+    ],
+    tools: ["Google Sheets or Excel", "free tutorials from Google or Microsoft's own training resources"],
+    scenario: {
+      title: "Closing the pivot-table gap in a weekend",
+      body: "A student who avoided spreadsheets froze during an internship task requiring a simple pivot table. A weekend of focused practice with a free tutorial closed the gap before it became a bigger problem.",
+    },
+    pitfalls: [
+      "Avoiding spreadsheets entirely out of intimidation, which only makes the eventual real-world requirement more stressful.",
+    ],
+    successSignal:
+      "You can build a basic tracker or summary table from raw data without needing to ask for help.",
+    milestoneTies: [],
+  },
+
+  205: {
+    definition:
+      "A First Data Analysis Exercise summarizes, charts, or interprets a simple dataset to extract a genuine insight.",
+    whyItMatters:
+      "The ability to look at raw numbers and extract a meaningful takeaway is a foundational analytical skill valuable in nearly any field.",
+    whenWhoWhere: [
+      { label: "When", body: "Practice this once you have basic spreadsheet fluency (K1)." },
+      { label: "Who", body: "No collaborator required, though checking your interpretation with someone else is a good sanity check." },
+      { label: "Where", body: "Applied to any real, even small, dataset: class survey results, personal habit tracking, a sports statistic." },
+    ],
+    howItWorks: [
+      "Import or enter the data, calculate basic summary statistics (average, total, trend), and write one sentence stating the actual insight, not just the numbers.",
+    ],
+    tools: ["Google Sheets or Excel"],
+    scenario: {
+      title: "A pattern invisible until it was charted",
+      body: "A student analyzing her own weekly study hours discovered she consistently studied least on the day before her hardest exam, a pattern invisible without actually charting it out.",
+    },
+    pitfalls: [
+      "Stopping at calculating numbers without ever stating what they actually mean.",
+    ],
+    successSignal:
+      "You can state a genuine, specific insight from the data, not just report the numbers themselves.",
+    milestoneTies: [207, 215],
+  },
+
+  206: {
+    definition:
+      "A First Survey/Questionnaire Designed collects feedback or data professionally, with clear, unbiased questions and a genuine purpose.",
+    whyItMatters:
+      "Poorly designed surveys produce unreliable data; knowing how to ask a clear, unbiased question is a distinct and valuable skill.",
+    whenWhoWhere: [
+      { label: "When", body: "Use this whenever you genuinely need structured feedback or data from a group." },
+      { label: "Who", body: "A small test group to pilot the survey before sending it more broadly." },
+      { label: "Where", body: "Built in a survey tool and distributed to a real, relevant audience." },
+    ],
+    howItWorks: [
+      "Write clear, single-concept questions avoiding leading language.",
+      "Pilot it on two or three people first to catch confusing wording.",
+    ],
+    tools: ["Google Forms, Typeform, or a similar survey tool"],
+    scenario: {
+      title: "One pilot test caught a leading question",
+      body: "A student's first survey draft had a leading question (“don't you agree our event was great?”) that skewed results. Piloting it on a friend first caught the bias before it reached the full audience.",
+    },
+    pitfalls: [
+      "Writing leading or double-barreled questions that make the resulting data unreliable.",
+    ],
+    successSignal:
+      "The responses give you genuinely useful, unbiased data you can act on.",
+    milestoneTies: [214],
+  },
+
+  207: {
+    definition:
+      "A First Statistical Insight Extracted pulls out basic percentages, averages, or trends from a dataset and states what they actually mean.",
+    whyItMatters:
+      "Basic statistical literacy, understanding what an average or percentage actually implies, is essential for interpreting data correctly rather than being misled by it.",
+    whenWhoWhere: [
+      { label: "When", body: "Practice this whenever you encounter a dataset relevant to your studies or a project." },
+      { label: "Who", body: "No collaborator required." },
+      { label: "Where", body: "Applied to any real dataset, even something as simple as grades or survey results." },
+    ],
+    howItWorks: [
+      "Calculate one relevant statistic (percentage change, average, trend direction).",
+      "State clearly what it implies, and note anything the statistic might be hiding.",
+    ],
+    tools: ["A spreadsheet tool for calculations"],
+    scenario: {
+      title: "What the average was quietly hiding",
+      body: "A student noticed an “average” satisfaction score looked fine until she checked the distribution and found it masked a bimodal split, half very happy, half very unhappy, a nuance the single average number completely hid.",
+    },
+    pitfalls: [
+      "Reporting a single summary statistic without checking whether it's hiding something important, like a skewed distribution.",
+    ],
+    successSignal:
+      "You can state a specific statistic and correctly explain what it does and doesn't tell you.",
+    milestoneTies: [205],
+  },
+
+  208: {
+    definition:
+      "A First KPI/Metric Measurement tracks performance in a project or personal goal using a specific, chosen number over time.",
+    whyItMatters:
+      "Without a chosen metric, progress on a project or goal is often just a vague impression rather than something you can actually verify.",
+    whenWhoWhere: [
+      { label: "When", body: "Set this up at the start of any project or goal worth tracking objectively." },
+      { label: "Who", body: "No collaborator required." },
+      { label: "Where", body: "Tracked in a simple spreadsheet or tracker app." },
+    ],
+    howItWorks: [
+      "Choose one metric that genuinely reflects progress toward your goal.",
+      "Log it consistently, weekly or per milestone, and review the trend.",
+    ],
+    tools: ["A spreadsheet or your existing Stage Four KPI Tracker system"],
+    scenario: {
+      title: "Making stalls visible, not just progress",
+      body: "A student tracking a personal fitness goal by feel alone couldn't tell if she was actually improving. Tracking one specific metric weekly made real progress, and stalls, visible for the first time.",
+    },
+    pitfalls: [
+      "Choosing a metric that's easy to measure but doesn't actually reflect real progress toward the goal.",
+    ],
+    successSignal:
+      "You can point to a tracked trend, not just a vague sense of how things are going.",
+    milestoneTies: [],
+  },
+
+  209: {
+    definition:
+      "A First Data Entry Accuracy Exercise practices careful, error-free recording of data, building genuine attention to detail.",
+    whyItMatters:
+      "Small data entry errors compound into larger analytical mistakes; careful entry is an underrated foundational skill in any data-adjacent role.",
+    whenWhoWhere: [
+      { label: "When", body: "Practice this with any real dataset you need to enter or transcribe." },
+      { label: "Who", body: "No collaborator required, though having someone spot-check your entries is a good accuracy test." },
+      { label: "Where", body: "Applied to any real data entry task." },
+    ],
+    howItWorks: [
+      "Enter data carefully, then do a dedicated accuracy pass comparing entries against the source.",
+      "Note your error rate.",
+    ],
+    tools: ["A spreadsheet and the original data source to check against"],
+    scenario: {
+      title: "A rushed 3% error rate, slowed to near zero",
+      body: "A student entering survey responses found a 3% error rate on her first spot-check, entirely from rushing. Slowing down and adding a dedicated review pass brought that down to near zero.",
+    },
+    pitfalls: [
+      "Rushing through entry without a dedicated review pass, assuming errors won't happen.",
+    ],
+    successSignal:
+      "Your error rate on a spot-check is genuinely low, not just assumed to be fine.",
+    milestoneTies: [212],
+  },
+
+  210: {
+    definition:
+      "A First Benchmarking Exercise compares your results, project, or work against a relevant external standard.",
+    whyItMatters:
+      "Without a benchmark, it's hard to know if a result is genuinely good or just feels good in isolation.",
+    whenWhoWhere: [
+      { label: "When", body: "Use this whenever you complete a project or result and want to know how it actually compares." },
+      { label: "Who", body: "No collaborator required, though someone with relevant field knowledge can help identify a fair benchmark." },
+      { label: "Where", body: "Applied to any completed project, metric, or piece of work." },
+    ],
+    howItWorks: [
+      "Identify a relevant external standard (industry average, a comparable project, a public benchmark).",
+      "Compare your result directly against it.",
+    ],
+    tools: ["Research sources relevant to finding a fair external benchmark"],
+    scenario: {
+      title: "40% felt strong, until the benchmark said otherwise",
+      body: "A student assumed her survey's 40% response rate was strong until benchmarking against industry norms revealed the typical range was 50-60%, a genuinely useful reality check.",
+    },
+    pitfalls: [
+      "Comparing against an unfair or irrelevant benchmark, which produces a misleading conclusion either way.",
+    ],
+    successSignal:
+      "You know objectively whether your result is strong, average, or weak relative to a fair external standard.",
+    milestoneTies: [],
+  },
+
+  211: {
+    definition:
+      "A First Analytical Problem Solved approaches a genuine problem systematically using logic and evidence, rather than intuition alone.",
+    whyItMatters:
+      "Systematic problem-solving produces more reliable results than pure intuition, especially for problems with real data or evidence available.",
+    whenWhoWhere: [
+      { label: "When", body: "Use this for any problem where data or logical structure could meaningfully improve the solution." },
+      { label: "Who", body: "No collaborator required, though discussing your approach with someone else can catch logical gaps." },
+      { label: "Where", body: "Applied to any real analytical problem: a class assignment, a work task, a personal decision." },
+    ],
+    howItWorks: [
+      "Define the problem clearly, gather relevant data or evidence, and work through it systematically rather than jumping to a conclusion.",
+    ],
+    tools: ["Whatever data or evidence is relevant to the specific problem"],
+    scenario: {
+      title: "The real bottleneck wasn't the teammate",
+      body: "A student assumed a project's schedule slip was due to one teammate's slowness, but analyzing the actual timeline data revealed the bottleneck was really an unclear early handoff, a different, more useful conclusion than her initial assumption.",
+    },
+    pitfalls: [
+      "Jumping to a conclusion based on assumption before actually checking the available evidence.",
+    ],
+    successSignal:
+      "Your conclusion is backed by actual evidence, not just your first instinct.",
+    milestoneTies: [],
+  },
+
+  212: {
+    definition:
+      "A First Data Cleaning Exercise organizes messy, inconsistent data into a clean, analyzable format.",
+    whyItMatters:
+      "Real-world data is almost never clean; the ability to identify and fix inconsistencies is a prerequisite for any reliable analysis.",
+    whenWhoWhere: [
+      { label: "When", body: "Practice this with any genuinely messy dataset, such as data pulled from multiple sources." },
+      { label: "Who", body: "No collaborator required." },
+      { label: "Where", body: "Applied to any dataset with inconsistencies: inconsistent formatting, duplicates, missing values." },
+    ],
+    howItWorks: [
+      "Identify inconsistencies (formatting, duplicates, missing values).",
+      "Standardize formatting, remove or flag duplicates, and decide how to handle missing data explicitly.",
+    ],
+    tools: ["Excel or Google Sheets, including basic find-and-replace and deduplication features"],
+    scenario: {
+      title: "Twenty minutes to fix hours of confusion",
+      body: "A student's dataset had dates in three different formats, silently breaking her analysis until she standardized them, a fix that took twenty minutes but had been causing hours of confusion.",
+    },
+    pitfalls: [
+      "Analyzing messy data without cleaning it first, which can produce confidently wrong conclusions.",
+    ],
+    successSignal:
+      "Your cleaned dataset produces consistent, trustworthy results when analyzed.",
+    milestoneTies: [216, 215],
+  },
+
+  213: {
+    definition:
+      "A First Collaborative Spreadsheet tracks a group project collaboratively, with clear ownership and version control.",
+    whyItMatters:
+      "Group spreadsheets without clear structure often become chaotic, with conflicting edits and unclear ownership; doing this well is a distinct team skill.",
+    whenWhoWhere: [
+      { label: "When", body: "Use this for any group project involving shared data or tracking." },
+      { label: "Who", body: "Your project team." },
+      { label: "Where", body: "Built in a real-time collaborative tool." },
+    ],
+    howItWorks: [
+      "Establish clear column ownership and a simple structure everyone agrees to before entering data.",
+      "Use comments for questions rather than silently changing others' entries.",
+    ],
+    tools: ["Google Sheets, which supports real-time collaboration"],
+    scenario: {
+      title: "One structure ended the spreadsheet chaos",
+      body: "A group project's shared spreadsheet became chaotic with conflicting formats until the team agreed on one structure and assigned clear column ownership, which fixed the confusion immediately.",
+    },
+    pitfalls: [
+      "Letting the spreadsheet evolve without any agreed structure, leading to inconsistent, conflicting entries.",
+    ],
+    successSignal:
+      "The team can all read and trust the same shared spreadsheet without confusion about who owns what.",
+    milestoneTies: [],
+  },
+
+  214: {
+    definition:
+      "A First Survey Analysis Conducted summarizes and interprets insights from collected survey data.",
+    whyItMatters:
+      "Collecting survey data is only useful if you can actually extract and communicate genuine insights from it afterward.",
+    whenWhoWhere: [
+      { label: "When", body: "Do this once you've collected responses to a survey you designed (K9)." },
+      { label: "Who", body: "No collaborator required, though sharing findings with someone else is a good clarity check." },
+      { label: "Where", body: "Applied to your own collected survey data." },
+    ],
+    howItWorks: [
+      "Summarize response patterns for each question.",
+      "Look for the two or three most significant findings, not just a report of every number.",
+    ],
+    tools: ["The survey tool's built-in summary features, plus a spreadsheet for deeper analysis if needed"],
+    scenario: {
+      title: "Two findings mattered more than forty percentages",
+      body: "A student's survey analysis initially just listed every response percentage. Focusing instead on the two most surprising or actionable findings made her final report far more useful to the team.",
+    },
+    pitfalls: [
+      "Reporting every data point without prioritizing the most significant or actionable findings.",
+    ],
+    successSignal:
+      "You can state two or three genuine, actionable insights from the survey, not just a full data dump.",
+    milestoneTies: [206],
+  },
+
+  215: {
+    definition:
+      "A First Data Trend Interpretation extracts patterns over time from data and states actionable insights based on them.",
+    whyItMatters:
+      "Spotting a trend is only useful if you can translate it into something actionable; this skill bridges raw pattern recognition and real decision-making.",
+    whenWhoWhere: [
+      { label: "When", body: "Apply this to any dataset with a time dimension: weekly numbers, monthly performance, sequential results." },
+      { label: "Who", body: "No collaborator required." },
+      { label: "Where", body: "Applied to any time-series dataset relevant to your work or projects." },
+    ],
+    howItWorks: [
+      "Chart the data over time.",
+      "Identify the direction and rate of any real trend.",
+      "State one specific action the trend suggests.",
+    ],
+    tools: ["A spreadsheet's basic charting features"],
+    scenario: {
+      title: "A declining trend that pointed to its own fix",
+      body: "A student tracking weekly application response rates noticed a declining trend that correlated with a resume change she'd made, prompting her to revert it, a concrete action the trend directly suggested.",
+    },
+    pitfalls: [
+      "Noticing a trend but never translating it into an actual decision or action.",
+    ],
+    successSignal:
+      "You can state a specific action you're taking because of a trend you identified, not just describe the trend.",
+    milestoneTies: [],
+  },
+
+  216: {
+    definition:
+      "A First Data Interpretation Report explains data findings in writing, structured for a reader who wasn't part of the original analysis.",
+    whyItMatters:
+      "Data that isn't communicated clearly in writing often fails to actually influence a decision, no matter how solid the underlying analysis.",
+    whenWhoWhere: [
+      { label: "When", body: "Write this after completing a genuine data analysis worth sharing with others." },
+      { label: "Who", body: "No collaborator required, though testing it on someone unfamiliar with the analysis is a good clarity check." },
+      { label: "Where", body: "Written as a standalone short report or section of a larger report." },
+    ],
+    howItWorks: [
+      "State the question the data answers, the key finding, and the evidence supporting it, in that order.",
+      "Avoid burying the finding in methodology detail.",
+    ],
+    tools: ["Your completed data analysis as source material"],
+    scenario: {
+      title: "Leading with the finding, not the methodology",
+      body: "A student's data interpretation report led with three paragraphs of methodology before ever stating the actual finding. Restructuring to state the finding first made her report far more useful to a busy reader.",
+    },
+    pitfalls: [
+      "Leading with methodology or process instead of the actual finding, which buries the point a reader actually needs.",
+    ],
+    successSignal:
+      "A reader unfamiliar with your analysis understands the key finding within the first few sentences.",
+    milestoneTies: [222],
+  },
+
+  217: {
+    definition:
+      "A First Performance Metric Tracked measures output or results over time for a specific, ongoing activity.",
+    whyItMatters:
+      "Tracking a metric over an extended period reveals real trends that a single snapshot measurement can't show.",
+    whenWhoWhere: [
+      { label: "When", body: "Set this up for any activity you're doing repeatedly and want to genuinely improve." },
+      { label: "Who", body: "No collaborator required." },
+      { label: "Where", body: "Tracked in a running log or spreadsheet, updated consistently." },
+    ],
+    howItWorks: [
+      "Choose a metric genuinely tied to the outcome you care about.",
+      "Log it consistently over an extended period (weeks or months), and review for real trends periodically.",
+    ],
+    tools: ["A spreadsheet or tracker app"],
+    scenario: {
+      title: "Improvement no single interview could show",
+      body: "A student tracking her weekly practice interview scores over two months could see genuine, steady improvement in a way that any single interview alone wouldn't have revealed.",
+    },
+    pitfalls: [
+      "Tracking inconsistently, which makes the resulting data too sparse to reveal a genuine trend.",
+    ],
+    successSignal:
+      "You have enough consistent data points to see a real trend, not just isolated snapshots.",
+    milestoneTies: [208],
+  },
+
+  218: {
+    definition:
+      "A First Critical Thinking Applied to Data evaluates data findings logically before making a decision based on them, checking for gaps or hidden assumptions.",
+    whyItMatters:
+      "Data can mislead just as easily as it can inform; applying genuine critical thinking to findings, not just accepting them at face value, prevents costly bad decisions.",
+    whenWhoWhere: [
+      { label: "When", body: "Apply this before making any significant decision based on data findings, your own or someone else's." },
+      { label: "Who", body: "No collaborator required, though discussing the data with someone skeptical can sharpen your scrutiny." },
+      { label: "Where", body: "Applied to any data-driven finding before acting on it." },
+    ],
+    howItWorks: [
+      "Ask what the data doesn't show, what assumptions the analysis rests on, and whether the sample or method could be skewed before accepting the conclusion.",
+    ],
+    tools: ["The critical thinking questions from your Stage Five Critical Thinking Drill"],
+    scenario: {
+      title: "Catching a decision built on too few data points",
+      body: "A team was about to change strategy based on a small early data trend, until one member applied critical scrutiny and pointed out the sample size was too small to draw a real conclusion yet, preventing a premature decision.",
+    },
+    pitfalls: [
+      "Accepting data findings uncritically simply because they're presented as numbers, which can feel more objective than they actually are.",
+    ],
+    successSignal:
+      "You can identify at least one real limitation or assumption in a data finding before acting on it.",
+    milestoneTies: [],
+  },
+
+  219: {
+    definition:
+      "A First Report Written structures an academic or professional report with clear organization, applying the same discipline as Stage Six's Written Report Drafted to a hard-skill context.",
+    whyItMatters:
+      "A well-structured report communicates findings or recommendations clearly, regardless of field; this is one of the most transferable hard skills across disciplines.",
+    whenWhoWhere: [
+      { label: "When", body: "Practice this on a real class or project deliverable before you need one professionally." },
+      { label: "Who", body: "A professor or mentor for structural feedback." },
+      { label: "Where", body: "Drafted over multiple sittings for a real assignment or project." },
+    ],
+    howItWorks: [
+      "Outline introduction, body, and conclusion first.",
+      "Write the body in logically ordered sections, then revise for clarity separately from drafting.",
+    ],
+    tools: ["A simple outline template"],
+    scenario: {
+      title: "From data dump to a structure professors could follow",
+      body: "A student's early reports were disorganized data dumps. Adopting a consistent structure, outline first, then draft, made her reports measurably easier for professors to follow and grade well.",
+    },
+    pitfalls: [
+      "Skipping the outline step and writing directly into full paragraphs, which often produces a disorganized final structure.",
+    ],
+    successSignal:
+      "A reader can follow your report's logic from introduction to conclusion without re-reading sections.",
+    milestoneTies: [],
+  },
+
+  220: {
+    definition:
+      "A First Research Summary gathers information from multiple sources and summarizes findings concisely and accurately.",
+    whyItMatters:
+      "The ability to synthesize multiple sources into a clear summary is essential for nearly any research-adjacent task, academic or professional.",
+    whenWhoWhere: [
+      { label: "When", body: "Practice this whenever you need to research and summarize a topic for yourself or someone else." },
+      { label: "Who", body: "No collaborator required." },
+      { label: "Where", body: "Applied to any research task with multiple sources." },
+    ],
+    howItWorks: [
+      "Gather three to five credible sources.",
+      "Identify the common thread and any disagreements between them.",
+      "Write a concise summary in your own words, citing sources.",
+    ],
+    tools: ["Credible research sources relevant to your topic"],
+    scenario: {
+      title: "From strung-together quotes to real synthesis",
+      body: "A student's first research summary was just a string of quotes from different sources with no real synthesis. Her revised version, written in her own words with sources cited for support, was far more useful and readable.",
+    },
+    pitfalls: [
+      "Stringing together quotes or paraphrased sentences without genuine synthesis into your own understanding.",
+    ],
+    successSignal:
+      "A reader gets a clear, accurate picture of the topic without needing to read all the original sources themselves.",
+    milestoneTies: [224, 226],
+  },
+
+  221: {
+    definition:
+      "A First Standard Operating Procedure Drafted writes clear, step-by-step instructions for a repeatable process.",
+    whyItMatters:
+      "SOPs make work repeatable and consistent across a team, reducing errors and dependence on any one person's memory.",
+    whenWhoWhere: [
+      { label: "When", body: "Draft one for any process you or your team performs repeatedly." },
+      { label: "Who", body: "Ideally reviewed by someone else who will actually use the process." },
+      { label: "Where", body: "Written as a standalone reference document." },
+    ],
+    howItWorks: [
+      "List every step in order, including any decision points or common errors to avoid.",
+      "Test it by having someone else follow it exactly as written.",
+    ],
+    tools: ["A shared document or wiki tool"],
+    scenario: {
+      title: "A process that survived losing its only expert",
+      body: "A club's event setup process lived only in one officer's head until she wrote an SOP. The next event ran smoothly even with a different officer leading it, entirely because the process was now documented.",
+    },
+    pitfalls: [
+      "Assuming steps are obvious and skipping them, the same failure mode as under-documenting any technical process.",
+    ],
+    successSignal:
+      "Someone unfamiliar with the process can follow your SOP and complete it correctly without additional guidance.",
+    milestoneTies: [],
+  },
+
+  222: {
+    definition:
+      "A First Written Executive Summary condenses key points from a longer document into a concise, quick-reading overview.",
+    whyItMatters:
+      "Busy readers often only read the summary; a weak one means strong underlying work may never get real attention.",
+    whenWhoWhere: [
+      { label: "When", body: "Write this as the final step after completing any longer report or document." },
+      { label: "Who", body: "No collaborator required, though testing it on someone who hasn't read the full document is useful." },
+      { label: "Where", body: "Placed at the start of a longer report or shared as a standalone overview." },
+    ],
+    howItWorks: [
+      "State the purpose, the key finding or recommendation, and the most important supporting point, all within about a page.",
+    ],
+    tools: ["The full document as source material"],
+    scenario: {
+      title: "The one page most people actually read",
+      body: "A student's 20-page project report went unread by busy stakeholders until she added a concise one-page summary, which most people ended up reading instead of the full document, and still walked away with an accurate understanding.",
+    },
+    pitfalls: [
+      "Including too much detail, which defeats the purpose of a summary meant for a time-pressed reader.",
+    ],
+    successSignal:
+      "A reader who only reads your summary understands the core message accurately.",
+    milestoneTies: [],
+  },
+
+  223: {
+    definition:
+      "A First Document Formatting Exercise makes a report or presentation professional-looking through consistent, clean formatting.",
+    whyItMatters:
+      "Poor formatting can undermine the perceived quality of genuinely strong content; clean formatting signals professionalism and care.",
+    whenWhoWhere: [
+      { label: "When", body: "Apply this as a final polish step on any document meant for a real audience." },
+      { label: "Who", body: "No collaborator required." },
+      { label: "Where", body: "Applied to any report, proposal, or document before sharing it." },
+    ],
+    howItWorks: [
+      "Use consistent headers, fonts, and spacing throughout.",
+      "Add a clear title, page numbers if relevant, and check for any formatting inconsistencies.",
+    ],
+    tools: ["Word, Google Docs, or your document tool's built-in style features"],
+    scenario: {
+      title: "Twenty minutes of formatting, a different impression",
+      body: "A student's strong report content was undercut by inconsistent fonts and spacing throughout. A twenty-minute formatting pass made the same content look noticeably more professional and polished.",
+    },
+    pitfalls: [
+      "Treating formatting as unimportant relative to content, when in practice both affect how the work is perceived.",
+    ],
+    successSignal:
+      "The document looks clean and consistent throughout, with no jarring formatting inconsistencies.",
+    milestoneTies: [],
+  },
+
+  224: {
+    definition:
+      "A First Online Research Exercise evaluates online sources for credibility and relevance before using them.",
+    whyItMatters:
+      "Not all online sources are equally reliable; the ability to quickly assess credibility prevents building work on shaky evidence.",
+    whenWhoWhere: [
+      { label: "When", body: "Practice this whenever you're researching a topic using online sources." },
+      { label: "Who", body: "No collaborator required." },
+      { label: "Where", body: "Applied to any online research task." },
+    ],
+    howItWorks: [
+      "Check the source's authority, evidence, and potential bias.",
+      "Cross-check significant claims against at least one other source.",
+    ],
+    tools: ["A simple credibility checklist: who wrote it, what evidence backs it, is it corroborated elsewhere"],
+    scenario: {
+      title: "One extra check caught a misquoted source",
+      body: "A student almost cited a statistic from an uncredited blog post until cross-checking revealed the original source had actually said something notably different, a mistake avoided by one extra verification step.",
+    },
+    pitfalls: [
+      "Accepting the first search result as reliable without checking its actual credibility.",
+    ],
+    successSignal:
+      "You can explain why you trust a source, not just that you found it online.",
+    milestoneTies: [220],
+  },
+
+  225: {
+    definition:
+      "A First Technical Template Created builds a reusable format for reports, budgets, or tracking documents that saves time on future similar work.",
+    whyItMatters:
+      "Rebuilding the same document structure from scratch repeatedly wastes time; a good template captures the structure once for reuse.",
+    whenWhoWhere: [
+      { label: "When", body: "Build this once you notice you're recreating a similar document structure repeatedly." },
+      { label: "Who", body: "No collaborator required." },
+      { label: "Where", body: "Saved in a personal or shared template library." },
+    ],
+    howItWorks: [
+      "Identify the recurring structure across similar past documents.",
+      "Build a clean, reusable version with placeholders for the variable content.",
+    ],
+    tools: ["Word, Google Docs, or Excel, depending on the document type"],
+    scenario: {
+      title: "Cutting weekly reporting time in half",
+      body: "A student who rebuilt a status report format from scratch every week finally built a template with the recurring sections pre-built, cutting her weekly reporting time by more than half.",
+    },
+    pitfalls: [
+      "Over-building a template with too much rigid structure that doesn't flex for the actual variation between uses.",
+    ],
+    successSignal:
+      "You can start a new instance of the document type in minutes instead of rebuilding structure from scratch.",
+    milestoneTies: [],
+  },
+
+  226: {
+    definition:
+      "A First Research Presentation presents findings from an investigation clearly to an audience.",
+    whyItMatters:
+      "Research that isn't presented clearly often fails to influence decisions, regardless of how solid the underlying work is.",
+    whenWhoWhere: [
+      { label: "When", body: "Present this after completing genuine research worth sharing." },
+      { label: "Who", body: "Your class, team, or relevant audience for the research." },
+      { label: "Where", body: "Delivered in a real presentation setting." },
+    ],
+    howItWorks: [
+      "Structure around the question, method, key finding, and implication.",
+      "Lead with the finding, not a lengthy methodology walkthrough.",
+    ],
+    tools: ["Your Research Summary (K8) as source material, plus presentation skills from Stage Six"],
+    scenario: {
+      title: "Leading with the finding kept the room engaged",
+      body: "A student's research presentation buried her actual finding in five minutes of methodology before the audience's attention had already drifted. Restructuring to lead with the finding kept the room engaged throughout.",
+    },
+    pitfalls: [
+      "Leading with lengthy methodology instead of the actual finding, which loses audience attention before the point lands.",
+    ],
+    successSignal:
+      "Your audience can accurately state your key finding immediately after the presentation.",
+    milestoneTies: [220],
+  },
+
+  227: {
+    definition:
+      "A First Technical Summary Written concisely explains a process, project, or concept in writing.",
+    whyItMatters:
+      "The ability to distill technical work into a clear written summary makes it accessible to a broader audience, including decision-makers.",
+    whenWhoWhere: [
+      { label: "When", body: "Write this for any technical process or project worth documenting concisely." },
+      { label: "Who", body: "No collaborator required, though a non-expert test reader is useful." },
+      { label: "Where", body: "Written as a short standalone document." },
+    ],
+    howItWorks: [
+      "State the purpose, the core process or concept, and the outcome, in plain language avoiding unnecessary jargon.",
+    ],
+    tools: ["The technical work itself as source material"],
+    scenario: {
+      title: "The summary that ended up in her interviews",
+      body: "A student's technical summary of a coding project, written for a non-technical audience, became the version she actually used in interviews, since it communicated the value clearly without requiring technical background.",
+    },
+    pitfalls: [
+      "Writing for an audience with your own level of expertise rather than the actual intended reader.",
+    ],
+    successSignal:
+      "A non-expert reader understands what you did and why it mattered.",
+    milestoneTies: [],
+  },
+
+  228: {
+    definition:
+      "A First Documentation for Others Created makes a guide or tutorial that someone else can genuinely follow to complete a task.",
+    whyItMatters:
+      "Documentation that only makes sense to its author isn't actually useful documentation; writing genuinely for someone else is a distinct discipline.",
+    whenWhoWhere: [
+      { label: "When", body: "Create this for any skill or process you know well enough to teach." },
+      { label: "Who", body: "Ideally tested on someone who doesn't already know the process." },
+      { label: "Where", body: "Written as a standalone guide or tutorial document." },
+    ],
+    howItWorks: [
+      "Write each step assuming zero prior knowledge.",
+      "Test it on someone unfamiliar with the process and revise based on where they got stuck.",
+    ],
+    tools: ["A shared document, plus screenshots or visuals if helpful"],
+    scenario: {
+      title: "The step that seemed obvious until a reader got stuck",
+      body: "A student's first attempt at documenting a software setup process skipped a step that seemed “obvious” to her but stumped her test reader completely. Adding that step made the guide genuinely usable.",
+    },
+    pitfalls: [
+      "Skipping steps that feel obvious to you but aren't obvious to someone without your background.",
+    ],
+    successSignal:
+      "A genuine novice can follow your guide and complete the task without additional help.",
+    milestoneTies: [221],
+  },
+
+  229: {
+    definition:
+      "A First Mock Proposal Submission drafts and submits a proposal as deliberate practice, even without a real, immediate decision riding on it.",
+    whyItMatters:
+      "Practicing the full proposal process, drafting, revising, submitting, builds real fluency before you need to do it under genuine pressure.",
+    whenWhoWhere: [
+      { label: "When", body: "Practice this whenever you have a genuine idea worth proposing, even in a lower-stakes practice context." },
+      { label: "Who", body: "A mentor or peer willing to receive and react to the mock proposal." },
+      { label: "Where", body: "Submitted through whatever real channel would be used for an actual proposal." },
+    ],
+    howItWorks: [
+      "Draft a full proposal using the structure from Stage Six's Business Proposal Drafted.",
+      "Submit it for genuine feedback, even if the stakes are practice-level.",
+    ],
+    tools: ["Your Business Proposal Drafted template from Stage Six"],
+    scenario: {
+      title: "A practice run that caught the weakness before it counted",
+      body: "A student practiced submitting a mock funding proposal to a career center advisor before a real grant deadline. The practice run's feedback caught a structural weakness she fixed before the real submission mattered.",
+    },
+    pitfalls: [
+      "Treating a low-stakes practice proposal too casually, missing the chance to build genuine submission discipline.",
+    ],
+    successSignal:
+      "You receive genuine feedback on a full proposal cycle before a real, higher-stakes submission.",
+    milestoneTies: [],
+  },
+
+  230: {
+    definition:
+      "A First Process Documentation for Team makes work repeatable for others by documenting a team process clearly and completely.",
+    whyItMatters:
+      "Team processes that live only in one person's head create a single point of failure; documenting them protects the team's ability to function.",
+    whenWhoWhere: [
+      { label: "When", body: "Document any team process that currently depends on one person's memory or informal knowledge." },
+      { label: "Who", body: "The team members who will actually use the documentation." },
+      { label: "Where", body: "Written as a shared team reference document." },
+    ],
+    howItWorks: [
+      "Interview whoever currently “owns” the process informally.",
+      "Write it out step by step, and have the team review it for accuracy and completeness.",
+    ],
+    tools: ["A shared team document or wiki"],
+    scenario: {
+      title: "Onboarding that worked without the original lead",
+      body: "A team's onboarding process existed only in the team lead's head until a member documented it based on her own recent onboarding experience. The next new member onboarded smoothly even without the original lead's involvement.",
+    },
+    pitfalls: [
+      "Documenting only the parts you personally use, missing edge cases someone else with more experience would know.",
+    ],
+    successSignal:
+      "The team can function and onboard new members without depending on one specific person's informal knowledge.",
+    milestoneTies: [221],
+  },
+
+  231: {
+    definition:
+      "A First Research Question Formulated designs a clear, specific, and answerable problem or inquiry before beginning research.",
+    whyItMatters:
+      "A vague research question leads to unfocused research; a sharp, specific question makes the entire process more efficient and useful.",
+    whenWhoWhere: [
+      { label: "When", body: "Formulate this before beginning any genuine research project." },
+      { label: "Who", body: "A mentor or professor to sanity-check whether the question is genuinely answerable within your constraints." },
+      { label: "Where", body: "Written at the very start of a research process." },
+    ],
+    howItWorks: [
+      "Start broad, then narrow until the question is specific enough to actually be answerable with available time and resources.",
+    ],
+    tools: ["No special tool", "iterative refinement through writing and revising the question"],
+    scenario: {
+      title: "Narrowing an unanswerable question into a real one",
+      body: "A student's initial research question, “what makes marketing effective,” was far too broad to research meaningfully. Narrowing it to “what specific claim types increase trust in sustainability marketing among Gen Z consumers” made the research immediately more focused and productive.",
+    },
+    pitfalls: [
+      "Starting research with a question so broad that no realistic amount of research could fully answer it.",
+    ],
+    successSignal:
+      "Your research question is specific enough that you could describe exactly what evidence would answer it.",
+    milestoneTies: [226, 220],
+  },
+
+  232: {
+    definition:
+      "A First Project Plan Drafted outlines tasks, timelines, and resources needed for a project before work begins.",
+    whyItMatters:
+      "Projects started without a plan tend to drift or run into resource surprises partway through; upfront planning catches issues early when they're cheap to fix.",
+    whenWhoWhere: [
+      { label: "When", body: "Draft this before starting any project with multiple steps or stakeholders." },
+      { label: "Who", body: "Whoever else is involved in the project, ideally consulted while drafting." },
+      { label: "Where", body: "Written before work begins, then referenced and updated throughout." },
+    ],
+    howItWorks: [
+      "List every major task, a realistic timeline, and the resources (people, tools, budget) each requires.",
+      "Identify dependencies between tasks.",
+    ],
+    tools: ["A simple project plan template or tool like Trello, Notion, or a spreadsheet"],
+    scenario: {
+      title: "A plan upfront, instead of stalling twice",
+      body: "A student's group project started without a plan and stalled twice from unclear task ownership. The next project, planned upfront with clear tasks and owners, ran far more smoothly.",
+    },
+    pitfalls: [
+      "Skipping the planning step because a project feels simple, only to hit avoidable surprises partway through.",
+    ],
+    successSignal:
+      "The project runs with fewer surprises because major tasks, timelines, and resources were identified in advance.",
+    milestoneTies: [244, 237],
+  },
+
+  233: {
+    definition:
+      "A First Meeting Agenda Prepared organizes topics, timing, and objectives for a meeting in a project or hard-skill context, reinforcing the same discipline from Stage Six.",
+    whyItMatters:
+      "Structured meetings save time and produce clearer outcomes than unstructured ones, a core project management discipline.",
+    whenWhoWhere: [
+      { label: "When", body: "Prepare one before any project-related meeting with a real decision or update to cover." },
+      { label: "Who", body: "Meeting attendees, ideally consulted briefly on what needs covering." },
+      { label: "Where", body: "Shared in advance of the meeting." },
+    ],
+    howItWorks: [
+      "List topics with time estimates and a clear objective for each (decide, inform, brainstorm).",
+    ],
+    tools: ["A shared document or meeting template"],
+    scenario: {
+      title: "A three-item agenda that kept meetings short",
+      body: "A project team's meetings ran long and unfocused until the lead started sharing a three-item agenda beforehand, which consistently cut meeting time while improving clarity on decisions made.",
+    },
+    pitfalls: [
+      "Preparing an agenda but not actually following it during the meeting.",
+    ],
+    successSignal:
+      "The meeting stays on topic and ends with clear decisions or next steps.",
+    milestoneTies: [],
+  },
+
+  234: {
+    definition:
+      "A First Budget/Expense Sheet Prepared tracks a personal or project budget clearly, with planned versus actual spending.",
+    whyItMatters:
+      "Budget tracking prevents projects and personal finances alike from quietly overspending without anyone noticing until it's a real problem.",
+    whenWhoWhere: [
+      { label: "When", body: "Prepare this at the start of any project or personal spending period worth tracking." },
+      { label: "Who", body: "No collaborator required, unless it's a shared project budget." },
+      { label: "Where", body: "Tracked in a spreadsheet, updated consistently." },
+    ],
+    howItWorks: [
+      "List planned expenses by category, then track actual spending against the plan.",
+      "Review variances periodically.",
+    ],
+    tools: ["Excel or Google Sheets"],
+    scenario: {
+      title: "Catching an overspend before the final bill",
+      body: "A club's event budget quietly overspent by 20% because no one was tracking actual versus planned spending until the final bill arrived. The next event's tracked budget caught an overspend early enough to adjust.",
+    },
+    pitfalls: [
+      "Setting a budget but never actually tracking real spending against it.",
+    ],
+    successSignal:
+      "You catch budget variances early enough to actually adjust, not just after the fact.",
+    milestoneTies: [245],
+  },
+
+  235: {
+    definition:
+      "A First Task Prioritization Exercise applies a structured framework like the Eisenhower Matrix to prioritize tasks by urgency and importance.",
+    whyItMatters:
+      "Without a structured framework, prioritization tends to default to whatever feels most urgent in the moment, not what's actually most important.",
+    whenWhoWhere: [
+      { label: "When", body: "Use this at the start of any week or project phase with more tasks than time." },
+      { label: "Who", body: "No collaborator required." },
+      { label: "Where", body: "Applied to your current real task list." },
+    ],
+    howItWorks: [
+      "Sort tasks into four quadrants: urgent/important, important/not urgent, urgent/not important, neither.",
+      "Prioritize accordingly.",
+    ],
+    tools: ["A simple four-quadrant grid"],
+    scenario: {
+      title: "Urgent-feeling work that wasn't actually important",
+      body: "A student's task list felt equally urgent until sorted into the matrix, revealing that several “urgent-feeling” tasks were actually low-importance busywork crowding out a genuinely important, less urgent task.",
+    },
+    pitfalls: [
+      "Rating most tasks as urgent and important, which defeats the purpose of the framework.",
+    ],
+    successSignal:
+      "Your actual time allocation shifts toward genuinely important tasks, not just urgent-feeling ones.",
+    milestoneTies: [],
+  },
+
+  236: {
+    definition:
+      "A First Risk Assessment identifies potential issues in a project or plan before they occur, along with how likely and how serious each is.",
+    whyItMatters:
+      "Identifying risks in advance lets you plan mitigation before a problem occurs, rather than reacting to it after the fact.",
+    whenWhoWhere: [
+      { label: "When", body: "Conduct this at the start of any project with real stakes or uncertainty." },
+      { label: "Who", body: "Your project team, if applicable, since different people often see different risks." },
+      { label: "Where", body: "Done in a dedicated planning session before major project work begins." },
+    ],
+    howItWorks: [
+      "List potential risks.",
+      "Rate each by likelihood and impact.",
+      "For the highest-priority risks, note a mitigation plan.",
+    ],
+    tools: ["A simple risk matrix template (likelihood vs. impact)"],
+    scenario: {
+      title: "The buffer that prevented a real scheduling crisis",
+      body: "A project team identified “key teammate unavailable during finals week” as a real risk during planning, and built in a buffer that prevented a genuine scheduling crisis when it actually happened.",
+    },
+    pitfalls: [
+      "Only identifying obvious risks while missing less visible but higher-impact ones.",
+    ],
+    successSignal:
+      "You have a mitigation plan ready for your highest-priority risks before they become real problems.",
+    milestoneTies: [232],
+  },
+
+  237: {
+    definition:
+      "A First Project Tracking Log Maintained monitors progress and adjusts tasks throughout a project's lifecycle, not just at the planning stage.",
+    whyItMatters:
+      "A project plan without ongoing tracking tends to drift silently off course; regular tracking catches problems while there's still time to adjust.",
+    whenWhoWhere: [
+      { label: "When", body: "Maintain this throughout any project with a real plan (K5) in place." },
+      { label: "Who", body: "No collaborator required, though sharing the log with a team keeps everyone aligned." },
+      { label: "Where", body: "Updated consistently, weekly or per milestone." },
+    ],
+    howItWorks: [
+      "Log actual progress against planned progress regularly.",
+      "Note any tasks running behind and adjust the plan accordingly.",
+    ],
+    tools: ["A spreadsheet, Trello, Notion, or a similar project tracking tool"],
+    scenario: {
+      title: "A weekly check that caught the drift early",
+      body: "A student's project plan looked solid at the start but silently drifted off schedule until a weekly tracking habit caught the slippage early enough to adjust the remaining timeline realistically.",
+    },
+    pitfalls: [
+      "Building a plan but never actually tracking progress against it, letting drift go unnoticed.",
+    ],
+    successSignal:
+      "You catch schedule drift early enough to actually adjust, rather than discovering it at the deadline.",
+    milestoneTies: [232],
+  },
+
+  238: {
+    definition:
+      "A First Process Improvement Proposal identifies a small inefficiency in a real process and proposes a specific, actionable change.",
+    whyItMatters:
+      "Noticing and proposing small process improvements demonstrates initiative and genuinely improves how a team or system functions.",
+    whenWhoWhere: [
+      { label: "When", body: "Propose this whenever you notice a genuine, specific inefficiency worth fixing." },
+      { label: "Who", body: "Whoever owns or is affected by the process." },
+      { label: "Where", body: "Presented as a short proposal, verbal or written." },
+    ],
+    howItWorks: [
+      "Describe the specific inefficiency, the proposed change, and the expected benefit.",
+      "Keep the ask small and concrete rather than a sweeping overhaul.",
+    ],
+    tools: ["The Business Proposal Drafted structure from Stage Six"],
+    scenario: {
+      title: "A small fix for data entered twice",
+      body: "A student noticed her team re-entered the same data in two separate systems and proposed a simple change to eliminate the duplication, a small, concrete fix that saved the team real time every week.",
+    },
+    pitfalls: [
+      "Proposing a sweeping overhaul instead of a small, concrete, easily approved fix.",
+    ],
+    successSignal:
+      "Your proposed change gets approved and implemented because it was specific and low-risk.",
+    milestoneTies: [],
+  },
+
+  239: {
+    definition:
+      "A First Mini Project Completed is a small project demonstrating a specific technical or hard skill, scoped to be genuinely finishable.",
+    whyItMatters:
+      "A completed small project is more valuable as evidence of skill than an ambitious unfinished one; scope discipline is itself a hard skill.",
+    whenWhoWhere: [
+      { label: "When", body: "Undertake this whenever you want to build or demonstrate a specific skill concretely." },
+      { label: "Who", body: "No collaborator required, though feedback from someone in the relevant field is valuable." },
+      { label: "Where", body: "Completed independently, on your own schedule." },
+    ],
+    howItWorks: [
+      "Scope the project small enough to realistically finish within a set timeframe (a weekend, a week).",
+      "Complete it fully rather than moving on to a new idea partway through.",
+    ],
+    tools: ["Whatever tools the specific skill requires"],
+    scenario: {
+      title: "Something finished, instead of another big idea",
+      body: "A student's ambitious month-long project idea never got finished. Scoping a much smaller version to complete in one weekend gave her something genuinely done to show, rather than another unfinished idea.",
+    },
+    pitfalls: [
+      "Scoping too ambitiously and never actually finishing, which produces nothing concrete to show for the effort.",
+    ],
+    successSignal:
+      "You have a genuinely completed project, however small, that demonstrates the skill.",
+    milestoneTies: [258],
+  },
+
+  240: {
+    definition:
+      "A First Problem-Solving Checklist is a step-by-step guide for tackling a recurring type of issue, built from your own real experience solving it.",
+    whyItMatters:
+      "A checklist built from real experience captures hard-won lessons in a reusable form, rather than relearning them each time the problem recurs.",
+    whenWhoWhere: [
+      { label: "When", body: "Build this after solving a genuinely tricky problem you expect to encounter again." },
+      { label: "Who", body: "No collaborator required." },
+      { label: "Where", body: "Kept as a reference document for future instances of the same problem type." },
+    ],
+    howItWorks: [
+      "Document the steps you actually took to solve the problem, in order, including any dead ends worth noting to avoid repeating.",
+    ],
+    tools: ["A simple checklist document"],
+    scenario: {
+      title: "Five minutes, instead of an hour, the second time",
+      body: "A student who spent an hour debugging a recurring software error the hard way built a checklist afterward. The next time the same error appeared, she resolved it in five minutes using her own documented steps.",
+    },
+    pitfalls: [
+      "Not documenting the solution after solving a problem, forcing yourself to relearn it from scratch next time.",
+    ],
+    successSignal:
+      "The next time the same problem type occurs, you solve it dramatically faster using your own checklist.",
+    milestoneTies: [],
+  },
+
+  241: {
+    definition:
+      "A First Practical Application of Hard Skill uses a specific skill you've been building in a real-world or realistic simulated scenario.",
+    whyItMatters:
+      "Applying a skill in a real context reveals gaps that purely theoretical practice doesn't, and builds genuine confidence that transfers to future situations.",
+    whenWhoWhere: [
+      { label: "When", body: "Apply this once you have basic proficiency in a skill and want to test it under real conditions." },
+      { label: "Who", body: "No collaborator required, though a real or simulated stakeholder adds useful pressure." },
+      { label: "Where", body: "Applied to a genuine task, project, or realistic simulation." },
+    ],
+    howItWorks: [
+      "Choose a real or realistic task requiring the skill.",
+      "Complete it fully, then reflect on what the real application revealed that practice alone hadn't.",
+    ],
+    tools: ["Whatever the specific skill requires"],
+    scenario: {
+      title: "What a messy real dataset revealed that practice didn't",
+      body: "A student who'd practiced Excel formulas in isolation found applying them to a real, messy internship dataset revealed gaps her clean practice exercises had never exposed.",
+    },
+    pitfalls: [
+      "Staying in purely theoretical or simulated practice indefinitely, avoiding the real-world test that would reveal genuine gaps.",
+    ],
+    successSignal:
+      "You complete a genuine real-world application of the skill, and can name what it revealed that practice alone didn't.",
+    milestoneTies: [],
+  },
+
+  242: {
+    definition:
+      "A First Workflow Optimization Exercise improves the efficiency of a process you repeat regularly.",
+    whyItMatters:
+      "Small, repeated inefficiencies compound significantly over time; deliberately optimizing a regular workflow pays off across every future repetition.",
+    whenWhoWhere: [
+      { label: "When", body: "Apply this to any workflow you repeat often enough that small improvements meaningfully add up." },
+      { label: "Who", body: "No collaborator required, unless it's a shared team workflow." },
+      { label: "Where", body: "Applied to your own regular work process." },
+    ],
+    howItWorks: [
+      "Time or observe your current workflow.",
+      "Identify the slowest or most repetitive step, and find a specific way to speed it up or eliminate it.",
+    ],
+    tools: ["A timer or simple observation, plus whatever tools might streamline the identified step"],
+    scenario: {
+      title: "A template that erased a repeated ten-minute task",
+      body: "A student noticed she manually reformatted the same type of document every week. Building a template (K36) for it eliminated a repeated ten-minute task, compounding into hours saved over a semester.",
+    },
+    pitfalls: [
+      "Optimizing a workflow you rarely use instead of one that's genuinely repeated often enough to matter.",
+    ],
+    successSignal:
+      "The optimized workflow measurably saves time on every subsequent repetition.",
+    milestoneTies: [225, 270],
+  },
+
+  243: {
+    definition:
+      "A First Workflow Checklist creates a step-by-step guide for a recurring task, distinct from a problem-solving checklist by covering routine work rather than troubleshooting.",
+    whyItMatters:
+      "Routine recurring tasks benefit from a checklist just as much as troubleshooting does, ensuring consistency and catching skipped steps.",
+    whenWhoWhere: [
+      { label: "When", body: "Build this for any routine task you perform repeatedly with multiple steps." },
+      { label: "Who", body: "No collaborator required." },
+      { label: "Where", body: "Kept as a quick-reference document for the recurring task." },
+    ],
+    howItWorks: [
+      "List every step of the routine task in order.",
+      "Test it on your next real instance of the task and refine based on what's missing.",
+    ],
+    tools: ["A simple checklist document or app"],
+    scenario: {
+      title: "A checklist that ended the missed-step errors",
+      body: "A student's weekly report submission process had five steps she sometimes forgot under time pressure. A written checklist eliminated the missed-step errors entirely.",
+    },
+    pitfalls: [
+      "Assuming a routine task is simple enough not to need a checklist, until a step gets missed under time pressure.",
+    ],
+    successSignal:
+      "You stop missing steps in the routine task because the checklist catches what memory alone sometimes misses.",
+    milestoneTies: [240],
+  },
+
+  244: {
+    definition:
+      "A First Multi-Step Project Plan Executed plans, monitors, and fully completes a project with multiple sequential or parallel steps.",
+    whyItMatters:
+      "Executing a full multi-step plan from start to finish, not just drafting one, is the real test of project management skill.",
+    whenWhoWhere: [
+      { label: "When", body: "Undertake this for a genuine project with enough complexity to require real planning and tracking." },
+      { label: "Who", body: "Your project team, if applicable." },
+      { label: "Where", body: "Executed over the real timeline of the project." },
+    ],
+    howItWorks: [
+      "Use your Project Plan Drafted (K5) and Project Tracking Log Maintained (K23) together, adjusting the plan as needed, through to genuine completion.",
+    ],
+    tools: ["Your existing project planning and tracking tools"],
+    scenario: {
+      title: "What executing a real plan taught that planning alone hadn't",
+      body: "A student's first fully-executed multi-step project, planned, tracked, and adjusted along the way, taught her more about real project management than any number of planning exercises alone had.",
+    },
+    pitfalls: [
+      "Planning meticulously but losing tracking discipline partway through execution, letting the plan drift unmanaged.",
+    ],
+    successSignal:
+      "You complete the full project, having used your plan and tracking log actively throughout, not just at the start.",
+    milestoneTies: [237, 232, 236],
+  },
+
+  245: {
+    definition:
+      "A First Cost/Time Estimate Prepared predicts the resources, cost or time, needed for a project before it begins.",
+    whyItMatters:
+      "Accurate estimates prevent projects from running out of budget or time unexpectedly, and the skill of estimating well improves with deliberate practice.",
+    whenWhoWhere: [
+      { label: "When", body: "Prepare this at the planning stage of any project with real resource constraints." },
+      { label: "Who", body: "No collaborator required, though someone experienced with similar projects can sanity-check your estimate." },
+      { label: "Where", body: "Prepared before work begins, then compared against actuals afterward." },
+    ],
+    howItWorks: [
+      "Break the project into components and estimate each separately, then sum.",
+      "Add a reasonable buffer for uncertainty.",
+    ],
+    tools: ["A spreadsheet for breaking down and summing estimates"],
+    scenario: {
+      title: "Estimating by component instead of guessing whole",
+      body: "A student's first project time estimate was wildly optimistic because she estimated the whole project at once rather than breaking it into components. Estimating component by component in her next project was noticeably more accurate.",
+    },
+    pitfalls: [
+      "Estimating the whole project as a single guess rather than breaking it into estimable components.",
+    ],
+    successSignal:
+      "Your estimate ends up reasonably close to the actual cost or time required, within your added buffer.",
+    milestoneTies: [234],
+  },
+
+  246: {
+    definition:
+      "A First Task Delegation Exercise assigns and monitors responsibilities within a team, practicing the specific skill of handing off work effectively.",
+    whyItMatters:
+      "Delegation is a distinct skill from doing the work yourself; poor delegation leads to unclear ownership and dropped tasks.",
+    whenWhoWhere: [
+      { label: "When", body: "Practice this whenever you're leading or co-leading a team project." },
+      { label: "Who", body: "Your team members receiving delegated tasks." },
+      { label: "Where", body: "Applied in any team project context." },
+    ],
+    howItWorks: [
+      "Assign tasks with clear ownership, a specific deadline, and enough context for the person to succeed independently.",
+      "Check in at a set point rather than either micromanaging or disappearing.",
+    ],
+    tools: ["A shared task tracker showing clear ownership"],
+    scenario: {
+      title: "Clear deadlines instead of a vague ask",
+      body: "A student's delegated tasks kept falling through until she started including clear deadlines and context with each assignment, instead of a vague “can you help with this.”",
+    },
+    pitfalls: [
+      "Delegating with unclear scope or no deadline, which makes it easy for the task to quietly slip.",
+    ],
+    successSignal:
+      "Delegated tasks get completed on time without you needing to micromanage or repeatedly follow up.",
+    milestoneTies: [282],
+  },
+
+  247: {
+    definition:
+      "A First Simulation of Workplace Task replicates a genuine professional activity in a practice setting, building readiness before the real thing.",
+    whyItMatters:
+      "Simulating a real workplace task in advance reduces the learning curve when you actually encounter it for the first time on the job.",
+    whenWhoWhere: [
+      { label: "When", body: "Use this before starting a new role or task type you haven't done in a real professional setting yet." },
+      { label: "Who", body: "A mentor who can describe or design a realistic simulation." },
+      { label: "Where", body: "Practiced in a low-stakes setting resembling the real task as closely as possible." },
+    ],
+    howItWorks: [
+      "Identify a specific workplace task you're likely to encounter.",
+      "Recreate it as closely as possible, using real or realistic materials and constraints.",
+    ],
+    tools: ["Whatever materials or tools the real task would require"],
+    scenario: {
+      title: "A simulated first week made the real one familiar",
+      body: "A student about to start a data-heavy internship simulated a realistic weekly reporting task using sample data beforehand, so the actual first week's version felt familiar rather than completely new.",
+    },
+    pitfalls: [
+      "Simulating a task so simplified it doesn't actually resemble the real complexity you'll encounter.",
+    ],
+    successSignal:
+      "When you encounter the real task, it feels familiar rather than entirely new.",
+    milestoneTies: [],
+  },
+
+  248: {
+    definition:
+      "A First Problem Prioritization Exercise decides which of several challenges to solve first, based on impact and urgency rather than whichever feels most pressing emotionally.",
+    whyItMatters:
+      "When facing multiple problems at once, tackling them in the wrong order wastes effort on lower-impact issues while higher-impact ones wait.",
+    whenWhoWhere: [
+      { label: "When", body: "Use this whenever you're facing more than one real problem simultaneously." },
+      { label: "Who", body: "No collaborator required, though discussing priority with a mentor can sharpen your judgment." },
+      { label: "Where", body: "Applied to any situation with multiple competing problems." },
+    ],
+    howItWorks: [
+      "List each problem.",
+      "Rate by impact if solved and urgency.",
+      "Solve the highest-impact, most urgent problem first, not just the loudest one.",
+    ],
+    tools: ["A simple impact/urgency grid, similar to the Task Prioritization Exercise (K11)"],
+    scenario: {
+      title: "The quiet issue that mattered more than the loud one",
+      body: "A student facing three simultaneous project issues initially tackled the most annoying one first. Rating them by actual impact revealed a quieter but far more consequential issue that should have come first.",
+    },
+    pitfalls: [
+      "Solving the most emotionally loud or annoying problem first, rather than the one with the greatest real impact.",
+    ],
+    successSignal:
+      "You solve problems in an order that reflects genuine impact and urgency, not just emotional pressure.",
+    milestoneTies: [235],
+  },
+
+  249: {
+    definition:
+      "A First Project Closure Documented summarizes a completed project's outcomes, lessons learned, and next steps, formally closing the loop rather than just moving on.",
+    whyItMatters:
+      "Without a deliberate closure step, the lessons from a completed project often get lost, and the same mistakes can recur on the next one.",
+    whenWhoWhere: [
+      { label: "When", body: "Document this at the genuine end of any project worth reflecting on." },
+      { label: "Who", body: "Your project team, if applicable." },
+      { label: "Where", body: "Written as a short closure document or held as a closing team conversation." },
+    ],
+    howItWorks: [
+      "Summarize what was actually achieved, what worked well, what didn't, and one specific lesson to carry into the next project.",
+    ],
+    tools: ["A simple closure template: outcomes, lessons, next steps"],
+    scenario: {
+      title: "The closure step that broke a repeated mistake",
+      body: "A team that never formally closed out projects kept repeating the same planning mistake across three consecutive projects. Adding a closure step with a documented lesson broke the pattern on the fourth.",
+    },
+    pitfalls: [
+      "Moving straight to the next project without ever capturing what the last one taught you.",
+    ],
+    successSignal:
+      "You can point to a specific lesson from this project that you're deliberately applying to the next one.",
+    milestoneTies: [],
+  },
+
+  250: {
+    definition:
+      "A First Presentation Deck Created designs slides to communicate ideas clearly, applying clean, uncluttered visual design.",
+    whyItMatters:
+      "A well-designed deck supports your spoken content instead of competing with it, directly affecting how your ideas land.",
+    whenWhoWhere: [
+      { label: "When", body: "Build this whenever you have a genuine presentation to give." },
+      { label: "Who", body: "No collaborator required, though a design-savvy peer can help polish visual choices." },
+      { label: "Where", body: "Built in a slide tool for a specific real audience and setting." },
+    ],
+    howItWorks: [
+      "One core idea per slide, minimal text, consistent formatting throughout.",
+    ],
+    tools: ["Google Slides, PowerPoint, or Canva"],
+    scenario: {
+      title: "One idea per slide kept eyes off the screen",
+      body: "A student's dense, text-heavy first deck lost her audience's attention to reading instead of listening. Her simplified second deck, one idea per slide, kept eyes on her instead of the screen.",
+    },
+    pitfalls: [
+      "Treating slides as a script with full sentences instead of visual support for spoken content.",
+    ],
+    successSignal:
+      "Your audience looks at you, not at dense text on the screen, during your presentation.",
+    milestoneTies: [],
+  },
+
+  251: {
+    definition:
+      "A First Visual Communication Created is a chart, infographic, or diagram built to explain a concept more clearly than text alone.",
+    whyItMatters:
+      "Some ideas, especially data-heavy or process-heavy ones, communicate far more clearly visually than in paragraphs of text.",
+    whenWhoWhere: [
+      { label: "When", body: "Use this whenever a concept involves comparison, process, or data that would genuinely benefit from visual structure." },
+      { label: "Who", body: "No collaborator required, though testing it on someone unfamiliar with the content is a good clarity check." },
+      { label: "Where", body: "Applied to reports, presentations, or any communication involving data or process." },
+    ],
+    howItWorks: [
+      "Identify the core relationship you're conveying, and choose the simplest visual format that captures it.",
+    ],
+    tools: ["Canva, PowerPoint, or Google Sheets' charting features"],
+    scenario: {
+      title: "A flowchart replaced a paragraph nobody followed",
+      body: "A student's paragraph explaining a multi-step process confused her team repeatedly. A single flowchart replacing the paragraph made the process immediately clear.",
+    },
+    pitfalls: [
+      "Over-designing the visual with unnecessary decoration that obscures rather than clarifies.",
+    ],
+    successSignal:
+      "A reader understands the concept faster from your visual than from an equivalent amount of text.",
+    milestoneTies: [],
+  },
+
+  252: {
+    definition:
+      "A First Data Visualization creates graphs or charts specifically to communicate data findings clearly.",
+    whyItMatters:
+      "A well-designed chart can reveal a pattern instantly that a table of numbers would take much longer to convey.",
+    whenWhoWhere: [
+      { label: "When", body: "Use this whenever you have quantitative findings worth communicating visually." },
+      { label: "Who", body: "No collaborator required." },
+      { label: "Where", body: "Applied to any dataset with a genuine story to tell visually." },
+    ],
+    howItWorks: [
+      "Choose the chart type that fits your data (line for trends, bar for comparisons, pie sparingly for parts of a whole).",
+      "Label clearly and cut unnecessary decoration.",
+    ],
+    tools: ["Excel, Google Sheets, or a dedicated visualization tool"],
+    scenario: {
+      title: "A line graph revealed what a table of numbers hid",
+      body: "A student's table of twelve monthly numbers meant little to her audience until she charted it as a simple line graph, instantly revealing the seasonal trend the raw numbers had obscured.",
+    },
+    pitfalls: [
+      "Choosing a chart type that doesn't fit the data, like a pie chart for a trend over time.",
+    ],
+    successSignal:
+      "A viewer grasps the pattern in your data within seconds of seeing the chart.",
+    milestoneTies: [205],
+  },
+
+  253: {
+    definition:
+      "A First Workflow Diagram Created visually maps out a process or project, showing steps and their sequence or dependencies.",
+    whyItMatters:
+      "A visual workflow diagram often clarifies a process faster than a written description, especially for processes with branches or dependencies.",
+    whenWhoWhere: [
+      { label: "When", body: "Create this for any process complex enough that a written description alone feels hard to follow." },
+      { label: "Who", body: "No collaborator required, though review from someone who'll use the process is valuable." },
+      { label: "Where", body: "Built using a diagramming tool or even simple boxes and arrows on paper." },
+    ],
+    howItWorks: [
+      "Map each step as a box, with arrows showing sequence or dependency.",
+      "Keep it simple enough to read at a glance.",
+    ],
+    tools: ["A whiteboard, or a simple diagramming tool like Lucidchart or Google Drawings"],
+    scenario: {
+      title: "Fewer questions once the process was visible",
+      body: "A team's written process description caused confusion until a simple workflow diagram replaced it, and questions about the process dropped noticeably once people could see it visually.",
+    },
+    pitfalls: [
+      "Making the diagram so detailed it becomes as hard to follow as the original written description.",
+    ],
+    successSignal:
+      "Someone can understand the process at a glance from your diagram, without needing a lengthy explanation.",
+    milestoneTies: [221],
+  },
+
+  254: {
+    definition:
+      "A First Digital Presentation Recording records yourself giving a presentation for later review, building on the recording practices from Stage Six with a full presentation.",
+    whyItMatters:
+      "Watching a full recorded presentation reveals pacing, structure, and delivery issues that are hard to notice in the moment of speaking.",
+    whenWhoWhere: [
+      { label: "When", body: "Record this before any presentation with real stakes." },
+      { label: "Who", body: "No collaborator required for the recording itself." },
+      { label: "Where", body: "Recorded in a setting resembling the real presentation as closely as possible." },
+    ],
+    howItWorks: [
+      "Record the full presentation, not just an excerpt.",
+      "Watch it back for pacing, clarity, and any parts that dragged or rushed.",
+    ],
+    tools: ["A phone camera or screen recording software for digital presentations"],
+    scenario: {
+      title: "A section that ran twice as long as planned",
+      body: "A student recording her full practice presentation discovered her middle section ran nearly twice as long as she'd planned, an issue invisible without watching the complete recording.",
+    },
+    pitfalls: [
+      "Only recording a short excerpt instead of the full presentation, missing pacing issues that only show up over the full length.",
+    ],
+    successSignal:
+      "You catch at least one specific pacing or structural issue you wouldn't have noticed without the recording.",
+    milestoneTies: [],
+  },
+
+  255: {
+    definition:
+      "A First Infographic Designed summarizes key points visually in a single, shareable graphic.",
+    whyItMatters:
+      "A well-designed infographic can communicate a complex idea at a glance and is easily shared and referenced, unlike a full report.",
+    whenWhoWhere: [
+      { label: "When", body: "Use this when you want to summarize findings or an idea in a highly shareable, visual format." },
+      { label: "Who", body: "No collaborator required." },
+      { label: "Where", body: "Built in a design tool, intended for sharing or display." },
+    ],
+    howItWorks: [
+      "Identify the three to five key points worth including.",
+      "Design a simple, visually clear layout, using icons or simple graphics sparingly to support the data, not distract from it.",
+    ],
+    tools: ["Canva has strong built-in infographic templates"],
+    scenario: {
+      title: "A dense report nobody read, made shareable",
+      body: "A student's dense report on a class project got little engagement until she distilled it into a simple infographic, which classmates actually shared and referenced afterward.",
+    },
+    pitfalls: [
+      "Including too much information, which turns the infographic into a cluttered, unreadable mess.",
+    ],
+    successSignal:
+      "A viewer can grasp the key points from your infographic in under a minute.",
+    milestoneTies: [251],
+  },
+
+  256: {
+    definition:
+      "A First Mind Map Created visually organizes ideas, goals, or concepts around a central theme, using branches to show relationships.",
+    whyItMatters:
+      "Mind maps are effective for brainstorming and organizing complex, interconnected ideas in a way linear notes often can't capture.",
+    whenWhoWhere: [
+      { label: "When", body: "Use this whenever you're brainstorming or trying to organize a complex set of interrelated ideas." },
+      { label: "Who", body: "No collaborator required, though group mind-mapping can work well for team brainstorming." },
+      { label: "Where", body: "Built on paper or in a mind-mapping tool." },
+    ],
+    howItWorks: [
+      "Start with the central idea, then branch out to related sub-ideas, and further branches from those as connections emerge.",
+    ],
+    tools: ["Paper and pen, or a tool like MindMeister or a simple diagramming app"],
+    scenario: {
+      title: "Unsticking a plan by going non-linear first",
+      body: "A student trying to plan a complex project felt stuck writing a linear outline. Switching to a mind map let her capture ideas non-linearly first, which she then organized into a clear plan afterward.",
+    },
+    pitfalls: [
+      "Trying to organize the mind map too rigidly from the start, defeating its purpose as a free-form brainstorming tool.",
+    ],
+    successSignal:
+      "The mind map reveals connections between ideas that a linear list wouldn't have surfaced as clearly.",
+    milestoneTies: [],
+  },
+
+  257: {
+    definition:
+      "A First Technical Presentation to Non-Experts explains a complex technical concept simply, building on the Stage Six presentation FIRSTS with a specifically technical subject.",
+    whyItMatters:
+      "Technical work that can't be explained to non-experts often fails to get the resources or support it needs from decision-makers outside the technical function.",
+    whenWhoWhere: [
+      { label: "When", body: "Practice this whenever you need to present technical work to a mixed or non-technical audience." },
+      { label: "Who", body: "A non-expert test audience, ideally including friends or family." },
+      { label: "Where", body: "Applied to any presentation for a general or cross-functional audience." },
+    ],
+    howItWorks: [
+      "Identify the core value or finding a non-expert genuinely needs.",
+      "Use analogies liberally and test your explanation on a truly non-expert listener first.",
+    ],
+    tools: ["A non-expert test audience"],
+    scenario: {
+      title: "Losing the room until one clear analogy landed",
+      body: "A student's technical presentation using field jargon lost her family completely in a practice run. Simplifying it around one clear analogy made the same content land clearly with both her family and, later, her actual mixed audience.",
+    },
+    pitfalls: [
+      "Assuming your audience shares more technical background than they actually do.",
+    ],
+    successSignal:
+      "A genuinely non-expert listener can accurately explain your core point back to you afterward.",
+    milestoneTies: [],
+  },
+
+  258: {
+    definition:
+      "A First Digital Portfolio Item Created showcases a technical or creative skill in a polished, presentable format for a portfolio.",
+    whyItMatters:
+      "A portfolio item is often the concrete evidence that convinces someone you can actually do what you claim on a resume.",
+    whenWhoWhere: [
+      { label: "When", body: "Create this after completing a Mini Project (K37) or other work genuinely worth showcasing." },
+      { label: "Who", body: "No collaborator required, though feedback before finalizing is valuable." },
+      { label: "Where", body: "Prepared for inclusion in your personal website or portfolio." },
+    ],
+    howItWorks: [
+      "Select your strongest piece of relevant work.",
+      "Write a short case study or description explaining the problem, your process, and the outcome.",
+    ],
+    tools: ["Your existing personal website or portfolio platform from Stage Two"],
+    scenario: {
+      title: "A mini-project that became an interview talking point",
+      body: "A student's technical mini-project sat unused until she wrote a short case study around it and added it to her portfolio, which then became a specific talking point in her next interview.",
+    },
+    pitfalls: [
+      "Adding raw work to a portfolio without context, leaving a viewer unclear what problem it solved or what your specific role was.",
+    ],
+    successSignal:
+      "A viewer of your portfolio item understands the problem, your role, and the outcome without additional explanation.",
+    milestoneTies: [],
+  },
+
+  259: {
+    definition:
+      "A First Digital Presentation Feedback Received solicits and incorporates genuine feedback on a recorded or delivered presentation.",
+    whyItMatters:
+      "Feedback on an actual delivered presentation, not just the script or slides, catches issues in tone, pacing, and delivery that reading alone can't reveal.",
+    whenWhoWhere: [
+      { label: "When", body: "Solicit this after delivering or recording a genuine presentation." },
+      { label: "Who", body: "A mentor, peer, or career advisor willing to watch and give honest feedback." },
+      { label: "Where", body: "Reviewed together, or feedback given on a shared recording." },
+    ],
+    howItWorks: [
+      "Ask specific questions (“was the pacing right,” “did the opening hook work”) rather than a vague “what did you think.” Incorporate the feedback into a revised version.",
+    ],
+    tools: ["Your recorded presentation from Digital Presentation Recording (K34)"],
+    scenario: {
+      title: "Specific questions surfaced the note that mattered",
+      body: "A student's feedback request got vague praise until she asked specific questions about pacing and clarity, which surfaced a genuinely useful note about her rushed conclusion that she then fixed.",
+    },
+    pitfalls: [
+      "Asking for feedback too vaguely, which tends to produce unhelpful, generic praise.",
+    ],
+    successSignal:
+      "You make a specific, real improvement to your presentation based on the feedback received.",
+    milestoneTies: [254],
+  },
+
+  260: {
+    definition:
+      "A First Visual Project Timeline Created is a Gantt chart or roadmap visually laying out a project's phases and deadlines.",
+    whyItMatters:
+      "A visual timeline makes dependencies and deadlines far easier to track and communicate than a written schedule alone.",
+    whenWhoWhere: [
+      { label: "When", body: "Create this for any project with multiple phases or a meaningful timeline." },
+      { label: "Who", body: "Your project team, if applicable, so everyone has visibility into the same timeline." },
+      { label: "Where", body: "Built in a spreadsheet or dedicated project management tool." },
+    ],
+    howItWorks: [
+      "List project phases with start and end dates.",
+      "Visualize as a simple Gantt-style bar chart or roadmap, showing dependencies where relevant.",
+    ],
+    tools: ["Google Sheets (simple Gantt template), Trello, or Notion's timeline views"],
+    scenario: {
+      title: "A timeline made the crunch points visible",
+      body: "A team's project deadlines lived only in a text document until a visual timeline made it immediately clear which phases overlapped and where the tightest crunch points were.",
+    },
+    pitfalls: [
+      "Building the timeline once and never updating it as the project's actual schedule shifts.",
+    ],
+    successSignal:
+      "Team members can see at a glance where the project stands and what's coming next.",
+    milestoneTies: [232],
+  },
+
+  261: {
+    definition:
+      "A First Online Portfolio Update adds new projects or improvements to your existing online portfolio, keeping it current.",
+    whyItMatters:
+      "A portfolio that isn't kept current quietly loses value over time, showing only outdated work rather than your most recent, strongest skills.",
+    whenWhoWhere: [
+      { label: "When", body: "Update this periodically, especially after completing any new significant project." },
+      { label: "Who", body: "No collaborator required." },
+      { label: "Where", body: "Applied to your existing personal website or portfolio platform." },
+    ],
+    howItWorks: [
+      "Add your most recent, strongest project.",
+      "Remove or de-emphasize older, weaker pieces that no longer represent your best work.",
+    ],
+    tools: ["Your existing personal website or portfolio platform"],
+    scenario: {
+      title: "Replacing freshman-year work with what she'd actually built",
+      body: "A student's portfolio still showed only freshman-year work by senior year until she did a deliberate update, replacing outdated pieces with her much stronger recent projects.",
+    },
+    pitfalls: [
+      "Building a portfolio once and never revisiting it as your skills and work genuinely improve.",
+    ],
+    successSignal:
+      "Your portfolio accurately reflects your current, strongest work, not outdated early pieces.",
+    milestoneTies: [],
+  },
+
+  262: {
+    definition:
+      "A First Digital Presentation Shared Online publishes a presentation publicly for feedback or exposure, beyond its original private audience.",
+    whyItMatters:
+      "Sharing work publicly, even modestly, builds visibility and can generate feedback or opportunities beyond the original intended audience.",
+    whenWhoWhere: [
+      { label: "When", body: "Do this for presentations genuinely worth wider visibility, not every private or sensitive one." },
+      { label: "Who", body: "Your broader professional network." },
+      { label: "Where", body: "Shared on LinkedIn, a personal website, or a relevant public platform." },
+    ],
+    howItWorks: [
+      "Choose a presentation appropriate for public sharing.",
+      "Add brief context for viewers unfamiliar with the original setting.",
+    ],
+    tools: ["LinkedIn, YouTube (for recordings), or your personal website"],
+    scenario: {
+      title: "A shared recording that led to a real conversation",
+      body: "A student shared a class presentation recording on LinkedIn with brief context, and it led to a genuine conversation with a professional in her target field who'd seen it.",
+    },
+    pitfalls: [
+      "Sharing sensitive or private work publicly without checking whether it's actually appropriate to share.",
+    ],
+    successSignal:
+      "The shared presentation generates genuine engagement or connections beyond its original audience.",
+    milestoneTies: [],
+  },
+
+  263: {
+    definition:
+      "A First Technical Showcase Event Participation shares your work at a competition, fair, or virtual event, presenting it to a broader, often evaluative audience.",
+    whyItMatters:
+      "Showcase events provide real deadlines and genuine external feedback that private practice alone doesn't replicate, and often open networking opportunities.",
+    whenWhoWhere: [
+      { label: "When", body: "Participate whenever a genuine showcase opportunity relevant to your work arises." },
+      { label: "Who", body: "Event organizers, judges, and fellow participants." },
+      { label: "Where", body: "At the specific showcase event, in person or virtual." },
+    ],
+    howItWorks: [
+      "Prepare your strongest, most presentable piece of work.",
+      "Practice a concise explanation for people encountering it for the first time.",
+    ],
+    tools: ["Your Digital Portfolio Item (K59) as a starting point for what to showcase"],
+    scenario: {
+      title: "A recruiter who remembered the project weeks later",
+      body: "A student who participated in a campus tech showcase, initially reluctant, ended up in a genuine conversation with a company recruiter attending the event who remembered her project weeks later during recruiting season.",
+    },
+    pitfalls: [
+      "Skipping showcase opportunities out of nervousness, missing the real networking and feedback value they provide.",
+    ],
+    successSignal:
+      "You leave the event with genuine feedback or a new connection, not just having displayed your work passively.",
+    milestoneTies: [],
+  },
+
+  264: {
+    definition:
+      "A First Digital Collaboration Tool Used is genuine working proficiency with a tool like Google Docs, Trello, Notion, or Slack in a real collaborative context.",
+    whyItMatters:
+      "Nearly every modern team relies on digital collaboration tools, and fluency here removes friction from working with any team.",
+    whenWhoWhere: [
+      { label: "When", body: "Build this before your first team-based internship or job, ideally through real use rather than abstract tutorials alone." },
+      { label: "Who", body: "A team or group project to practice with." },
+      { label: "Where", body: "Applied in a real collaborative context, not just solo exploration." },
+    ],
+    howItWorks: [
+      "Use the tool for a genuine team task: shared docs, a Trello board, a Slack channel.",
+      "Learn its core features through actual use.",
+    ],
+    tools: ["Google Workspace, Trello, Notion, or Slack, depending on what's relevant to your context"],
+    scenario: {
+      title: "Closing a tool gap before it slowed her down further",
+      body: "A student unfamiliar with Trello before her internship spent her first week slower than teammates until she deliberately practiced with it on a personal project over a weekend, closing the gap quickly.",
+    },
+    pitfalls: [
+      "Waiting until you're expected to use a tool professionally before ever trying it, rather than building familiarity in advance.",
+    ],
+    successSignal:
+      "You can navigate and contribute to the tool confidently without needing hand-holding.",
+    milestoneTies: [],
+  },
+
+  265: {
+    definition:
+      "A First Calendar/Time Management System schedules tasks and deadlines efficiently using a consistent digital system.",
+    whyItMatters:
+      "A reliable calendar system prevents missed deadlines and double-bookings, and frees mental energy from having to remember everything manually.",
+    whenWhoWhere: [
+      { label: "When", body: "Build this before you have enough competing commitments that memory alone becomes unreliable." },
+      { label: "Who", body: "No collaborator required." },
+      { label: "Where", body: "Set up in a digital calendar tool, used consistently." },
+    ],
+    howItWorks: [
+      "Put every real deadline and commitment into the calendar immediately when you learn about it.",
+      "Use consistent color-coding or categories for different types of commitments.",
+    ],
+    tools: ["Google Calendar, Outlook, or a similar tool"],
+    scenario: {
+      title: "One missed deadline was the last one",
+      body: "A student who tracked deadlines only in her memory missed a submission until she moved fully to a digital calendar system, entering every deadline the moment she learned about it.",
+    },
+    pitfalls: [
+      "Using the calendar inconsistently, entering some commitments but not others, which undermines trust in the system.",
+    ],
+    successSignal:
+      "You stop missing deadlines because everything genuinely lives in one reliable system.",
+    milestoneTies: [],
+  },
+
+  266: {
+    definition:
+      "A First Basic Coding or Logic Exercise is an optional, introductory exercise in simple formulas or programming logic, building foundational computational thinking.",
+    whyItMatters:
+      "Even outside technical roles, basic logical and computational thinking increasingly shows up in everyday tools like spreadsheet formulas and automation.",
+    whenWhoWhere: [
+      { label: "When", body: "Try this if your field has any adjacency to data, automation, or technical work, even if coding itself isn't required." },
+      { label: "Who", body: "A free online tutorial or course." },
+      { label: "Where", body: "Practiced through a beginner-friendly online platform." },
+    ],
+    howItWorks: [
+      "Complete a short, beginner-focused exercise using conditional logic (if/then) or basic formulas, even something as simple as spreadsheet IF statements.",
+    ],
+    tools: ["Codecademy, freeCodeCamp, or even just advanced spreadsheet formula practice"],
+    scenario: {
+      title: "Conditional logic made her team's tools less intimidating",
+      body: "A marketing student with no coding background found that learning basic conditional logic through spreadsheet formulas made her feel far less intimidated by her team's actual data tools.",
+    },
+    pitfalls: [
+      "Assuming this skill is irrelevant outside technical roles, when basic logical thinking increasingly shows up in everyday tools.",
+    ],
+    successSignal:
+      "You can write one basic conditional statement or formula without needing to look up every step.",
+    milestoneTies: [],
+  },
+
+  267: {
+    definition:
+      "A First Professional Tool Exploration learns a software or app relevant to your specific field, building proactive fluency before it's required.",
+    whyItMatters:
+      "Being already familiar with field-relevant tools when you start a role removes a common early-career learning curve.",
+    whenWhoWhere: [
+      { label: "When", body: "Explore this once you have a clear sense of your target field's commonly used tools." },
+      { label: "Who", body: "A mentor or professional in your target field who can recommend the most relevant tools." },
+      { label: "Where", body: "Practiced through free trials, tutorials, or student versions of the tool." },
+    ],
+    howItWorks: [
+      "Identify one tool commonly used in your target field.",
+      "Complete a beginner tutorial and apply it to a small real or practice task.",
+    ],
+    tools: ["Whatever specific tool is relevant to your target field (Google Analytics, Figma, Salesforce, etc.)"],
+    scenario: {
+      title: "Learning the tool before the internship required it",
+      body: "A student targeting brand marketing roles proactively learned Google Analytics before her internship even started, arriving with a real head start most peers didn't have.",
+    },
+    pitfalls: [
+      "Waiting to learn a field-relevant tool until a job requires it, rather than building familiarity proactively.",
+    ],
+    successSignal:
+      "You can navigate the tool's basic functions without needing extensive on-the-job training.",
+    milestoneTies: [],
+  },
+
+  268: {
+    definition:
+      "A First Resource Library Organized compiles useful references, templates, or tools into one organized, easily accessible collection.",
+    whyItMatters:
+      "Without organization, useful resources you've found or built tend to scatter across bookmarks, files, and memory, making them hard to actually reuse.",
+    whenWhoWhere: [
+      { label: "When", body: "Build this once you've accumulated enough useful resources that finding them again is becoming difficult." },
+      { label: "Who", body: "No collaborator required." },
+      { label: "Where", body: "Organized in a dedicated folder, bookmark collection, or notes tool." },
+    ],
+    howItWorks: [
+      "Gather your scattered templates, references, and tool links into one organized structure with clear categories.",
+    ],
+    tools: ["A dedicated folder structure, Notion database, or bookmark manager"],
+    scenario: {
+      title: "One afternoon organizing saved every project after",
+      body: "A student who'd built several useful templates over the semester couldn't find half of them when needed. One afternoon spent organizing them into a single labeled folder saved significant time in every subsequent project.",
+    },
+    pitfalls: [
+      "Continuing to accumulate useful resources without ever organizing them, until finding anything becomes genuinely difficult.",
+    ],
+    successSignal:
+      "You can find any resource you've previously created or saved within a minute or two.",
+    milestoneTies: [276],
+  },
+
+  269: {
+    definition:
+      "A First File Management System Set Up organizes digital folders for easy access, using a consistent naming and structure convention.",
+    whyItMatters:
+      "A disorganized file system wastes real time searching for documents and increases the risk of using an outdated version by mistake.",
+    whenWhoWhere: [
+      { label: "When", body: "Set this up before you accumulate enough files that disorganization becomes a real problem." },
+      { label: "Who", body: "No collaborator required, unless setting up a shared team file system." },
+      { label: "Where", body: "Applied to your personal computer, cloud storage, or a shared team drive." },
+    ],
+    howItWorks: [
+      "Establish a consistent folder structure and file naming convention (including dates or version numbers where relevant).",
+      "Apply it consistently going forward.",
+    ],
+    tools: ["Google Drive, Dropbox, or your computer's native file system"],
+    scenario: {
+      title: "A naming convention that ended the file hunting",
+      body: "A student who used to search through dozens of similarly-named files for the right version adopted a consistent “date_projectname_version” naming convention, eliminating the confusion almost immediately.",
+    },
+    pitfalls: [
+      "Setting up a system once but not applying it consistently to new files going forward.",
+    ],
+    successSignal:
+      "You can find the specific file or version you need within seconds, without confusion.",
+    milestoneTies: [268],
+  },
+
+  270: {
+    definition:
+      "A First Task Automation Attempted uses simple tools to automate a repetitive task, reducing manual effort over time.",
+    whyItMatters:
+      "Even simple automation compounds significantly over repeated use, and knowing what's automatable is itself a valuable skill.",
+    whenWhoWhere: [
+      { label: "When", body: "Attempt this once you've identified a genuinely repetitive task worth automating." },
+      { label: "Who", body: "No collaborator required, though someone experienced with the automation tool can help troubleshoot." },
+      { label: "Where", body: "Applied to your own repeated workflow." },
+    ],
+    howItWorks: [
+      "Identify one repetitive task.",
+      "Research a simple automation approach (a spreadsheet formula, a Zapier automation, a simple script) and implement it.",
+    ],
+    tools: ["Spreadsheet formulas, Zapier, or built-in automation features in tools you already use"],
+    scenario: {
+      title: "An automation that reclaimed a real chunk of time",
+      body: "A student manually copying data between two systems every week set up a simple Zapier automation to do it instead, reclaiming a real chunk of time every week going forward.",
+    },
+    pitfalls: [
+      "Trying to automate something too complex for a first attempt, getting discouraged before completing a simpler win.",
+    ],
+    successSignal:
+      "The automated task now runs with meaningfully less manual effort than before.",
+    milestoneTies: [242],
+  },
+
+  271: {
+    definition:
+      "A First Cross-Platform Tool Integration connects multiple apps or software for workflow efficiency, rather than working with each tool in isolation.",
+    whyItMatters:
+      "Many workflows span multiple tools; knowing how to connect them reduces manual re-entry and friction between systems.",
+    whenWhoWhere: [
+      { label: "When", body: "Attempt this once you're regularly moving information manually between two or more tools." },
+      { label: "Who", body: "No collaborator required." },
+      { label: "Where", body: "Applied to your own real, multi-tool workflow." },
+    ],
+    howItWorks: [
+      "Identify two tools you use together regularly.",
+      "Research whether a native integration or a connector tool like Zapier can link them automatically.",
+    ],
+    tools: ["Zapier, native app integrations, or built-in import/export features"],
+    scenario: {
+      title: "One integration erased the duplicate entry",
+      body: "A student manually re-entered the same task information into both her calendar and her task manager until she found a simple integration that synced them automatically, eliminating the duplicate work entirely.",
+    },
+    pitfalls: [
+      "Assuming a manual workaround is just how things work, without checking whether an integration already exists.",
+    ],
+    successSignal:
+      "Information now flows between your tools automatically instead of requiring manual re-entry.",
+    milestoneTies: [270],
+  },
+
+  272: {
+    definition:
+      "A First Time-Tracking System Used measures how long tasks or projects actually take, revealing patterns invisible to estimation alone.",
+    whyItMatters:
+      "Most people significantly misjudge how long tasks actually take; tracked data reveals the real numbers, which improves future estimates and planning.",
+    whenWhoWhere: [
+      { label: "When", body: "Use this for a week or two, especially around tasks you find yourself repeatedly estimating." },
+      { label: "Who", body: "No collaborator required." },
+      { label: "Where", body: "Applied to your own real work over a tracked period." },
+    ],
+    howItWorks: [
+      "Track actual time spent on tasks for one to two weeks using a simple timer or app.",
+      "Compare actual time against what you would have estimated.",
+    ],
+    tools: ["Toggl, a simple timer, or even a manual log"],
+    scenario: {
+      title: "An hour a day, quietly lost to email",
+      body: "A student who always felt behind schedule discovered through time tracking that she consistently underestimated email and administrative time by nearly an hour a day, a genuinely useful, specific finding.",
+    },
+    pitfalls: [
+      "Tracking for too short a period to reveal a genuine, reliable pattern.",
+    ],
+    successSignal:
+      "You have real data revealing where your time estimates were off, and by how much.",
+    milestoneTies: [245],
+  },
+
+  273: {
+    definition:
+      "A First Technical Troubleshooting Exercise identifies, isolates, and solves a technical error or problem systematically.",
+    whyItMatters:
+      "Technical problems are inevitable with any tool or system; a systematic troubleshooting approach solves them faster than random trial and error.",
+    whenWhoWhere: [
+      { label: "When", body: "Practice this whenever you encounter a genuine technical error or issue." },
+      { label: "Who", body: "No collaborator required, though documenting your process for others is valuable afterward." },
+      { label: "Where", body: "Applied to any real technical problem you encounter." },
+    ],
+    howItWorks: [
+      "Isolate the specific point of failure rather than guessing broadly.",
+      "Change one variable at a time and observe the effect, rather than changing many things at once.",
+    ],
+    tools: ["Whatever the specific technical context requires, plus a systematic mindset"],
+    scenario: {
+      title: "Isolating one variable instead of changing everything at once",
+      body: "A student's spreadsheet formula kept returning an error, and randomly changing multiple things at once made it worse. Isolating and testing one component at a time revealed the actual single cell reference causing the issue.",
+    },
+    pitfalls: [
+      "Changing multiple variables at once when troubleshooting, which makes it impossible to know what actually fixed (or broke) the issue.",
+    ],
+    successSignal:
+      "You solve the problem systematically and can explain exactly what caused it, not just that it eventually worked.",
+    milestoneTies: [],
+  },
+
+  274: {
+    definition:
+      "A First Online Tool Certification Attempted completes a free or beginner-level certification relevant to your target career.",
+    whyItMatters:
+      "A completed certification is concrete, verifiable evidence of a specific skill, and the process of earning it builds real proficiency.",
+    whenWhoWhere: [
+      { label: "When", body: "Attempt this once you've identified a specific tool or skill gap relevant to your target roles." },
+      { label: "Who", body: "No collaborator required." },
+      { label: "Where", body: "Completed through the certification's official online platform." },
+    ],
+    howItWorks: [
+      "Choose a certification directly relevant to your target field.",
+      "Set a realistic completion timeline and work through it consistently rather than in one rushed sitting.",
+    ],
+    tools: ["Google, HubSpot, Meta, and Microsoft all offer free or low-cost beginner certifications in various fields"],
+    scenario: {
+      title: "Closing a named gap, one short session at a time",
+      body: "A student pursuing brand marketing roles completed a free Google Analytics certification over six weeks of consistent short study sessions, directly closing a gap she'd identified in her Stage One Weakness Awareness worksheet.",
+    },
+    pitfalls: [
+      "Choosing a certification that isn't actually relevant to your target field, just because it's available or well-known.",
+    ],
+    successSignal:
+      "You complete the certification and can add it credibly to your resume and LinkedIn.",
+    milestoneTies: [],
+  },
+
+  275: {
+    definition:
+      "A First Online Form/Template Created builds a functional form using Google Forms, Typeform, or a similar tool for a genuine data collection need.",
+    whyItMatters:
+      "Online forms are a common, low-effort way to collect structured information, and building one well is a distinct, useful skill.",
+    whenWhoWhere: [
+      { label: "When", body: "Use this whenever you have a genuine need to collect structured information from multiple people." },
+      { label: "Who", body: "The audience who will fill out the form." },
+      { label: "Where", body: "Built in a form tool and distributed to real respondents." },
+    ],
+    howItWorks: [
+      "Design clear, single-concept questions.",
+      "Choose appropriate question types (multiple choice, short answer) for each.",
+      "Test it yourself before distributing.",
+    ],
+    tools: ["Google Forms, Typeform, or a similar tool"],
+    scenario: {
+      title: "Multiple choice made the responses easy to analyze",
+      body: "A student's first form used open-ended questions for everything, producing messy, hard-to-analyze responses. Her revised version used multiple choice where possible, making the results far easier to summarize afterward.",
+    },
+    pitfalls: [
+      "Defaulting to open-ended questions everywhere, which produces data that's much harder to analyze at scale.",
+    ],
+    successSignal:
+      "The collected responses are clean and genuinely easy to analyze afterward.",
+    milestoneTies: [206],
+  },
+
+  276: {
+    definition:
+      "A First Technical Resource Curation compiles tutorials, guides, or references for a specific skill into an organized, reusable collection.",
+    whyItMatters:
+      "Curating the best resources for a skill saves significant future time, both for yourself and anyone else you share the curated list with.",
+    whenWhoWhere: [
+      { label: "When", body: "Do this while actively learning a new skill, capturing the best resources you find along the way." },
+      { label: "Who", body: "No collaborator required, though sharing the curated list benefits others learning the same skill." },
+      { label: "Where", body: "Organized in a dedicated document or resource list." },
+    ],
+    howItWorks: [
+      "As you learn a skill, note which specific resources were genuinely most useful.",
+      "Organize them by sub-topic or learning stage.",
+    ],
+    tools: ["A simple document or Notion page for organizing links and notes"],
+    scenario: {
+      title: "A running list that later helped a struggling classmate",
+      body: "A student learning Excel formulas kept a running list of the specific tutorials that actually helped her understand each concept, which became a genuinely useful resource she later shared with a struggling classmate.",
+    },
+    pitfalls: [
+      "Collecting resources without ever noting which were actually useful, producing an unfiltered link dump rather than a genuinely curated list.",
+    ],
+    successSignal:
+      "Your curated list reflects genuine quality judgment, not just every resource you happened to encounter.",
+    milestoneTies: [268],
+  },
+
+  277: {
+    definition:
+      "A First Multi-Tool Project Completed combines multiple apps or software tools to deliver a single final result.",
+    whyItMatters:
+      "Real projects rarely rely on just one tool; the ability to combine several fluently is a genuinely practical, common workplace skill.",
+    whenWhoWhere: [
+      { label: "When", body: "Undertake this for any project genuinely requiring more than one tool to complete well." },
+      { label: "Who", body: "No collaborator required." },
+      { label: "Where", body: "Applied to a real project spanning multiple tools." },
+    ],
+    howItWorks: [
+      "Identify which tool is best suited for each part of the project.",
+      "Plan how information will flow between them before starting.",
+    ],
+    tools: ["Whatever combination of tools the specific project requires (e.g., data in Sheets, visuals in Canva, presentation in Slides)"],
+    scenario: {
+      title: "A smooth handoff because the tools were planned in advance",
+      body: "A student's project combined survey data collected in Google Forms, analyzed in Sheets, and presented in Slides, a smooth workflow because she planned the tool handoffs in advance rather than figuring it out reactively.",
+    },
+    pitfalls: [
+      "Not planning how information will move between tools in advance, causing awkward manual re-entry partway through.",
+    ],
+    successSignal:
+      "The project moves smoothly between tools, with information flowing cleanly rather than requiring repeated manual re-entry.",
+    milestoneTies: [],
+  },
+
+  278: {
+    definition:
+      "A First Peer Review Participation gives structured, constructive feedback on someone else's work in a hard-skill or technical context.",
+    whyItMatters:
+      "Reviewing others' technical or hard-skill work sharpens your own critical eye and builds a valuable reciprocal feedback culture.",
+    whenWhoWhere: [
+      { label: "When", body: "Participate whenever a genuine peer review opportunity arises on technical or project-based work." },
+      { label: "Who", body: "A peer whose work you're reviewing." },
+      { label: "Where", body: "Delivered as written or verbal structured feedback." },
+    ],
+    howItWorks: [
+      "Note specific strengths first, then specific, actionable suggestions tied to concrete examples in the work.",
+    ],
+    tools: ["The peer's actual work and a structured review template if available"],
+    scenario: {
+      title: "Feedback peers could actually act on",
+      body: "A student's early technical peer reviews were vague. Learning to cite specific examples made her feedback something peers could genuinely act on.",
+    },
+    pitfalls: [
+      "Giving vague, general feedback not tied to specific, actionable examples.",
+    ],
+    successSignal:
+      "The peer can point to a specific change made directly from your feedback.",
+    milestoneTies: [],
+  },
+
+  279: {
+    definition:
+      "A First Public Speaking Practice presents ideas clearly to a small audience, reinforcing the speaking skills built in Stage Six with a hard-skill or technical topic.",
+    whyItMatters:
+      "Presenting technical or hard-skill work aloud is a distinct challenge from presenting more general topics, and deserves its own deliberate practice.",
+    whenWhoWhere: [
+      { label: "When", body: "Practice this whenever you have technical or project content to present." },
+      { label: "Who", body: "A small, real audience: classmates, a study group, or colleagues." },
+      { label: "Where", body: "Any low-stakes setting with a real audience." },
+    ],
+    howItWorks: [
+      "Present real technical content, focused on clarity for your specific audience's background.",
+    ],
+    tools: ["Your existing presentation skills from Stage Six"],
+    scenario: {
+      title: "A practice run caught the assumed background knowledge",
+      body: "A student practicing presenting her data analysis to a small study group caught and fixed several places where her explanation assumed too much background knowledge.",
+    },
+    pitfalls: [
+      "Assuming a technical audience needs less clarity effort than a general one, when in fact precision still matters.",
+    ],
+    successSignal:
+      "Your small audience can follow your technical content clearly and ask relevant follow-up questions.",
+    milestoneTies: [],
+  },
+
+  280: {
+    definition:
+      "A First Negotiation Exercise practices reaching a mutually beneficial solution through structured, deliberate negotiation.",
+    whyItMatters:
+      "Negotiation is a distinct, learnable skill relevant far beyond salary discussions, including resource allocation, deadlines, and project scope.",
+    whenWhoWhere: [
+      { label: "When", body: "Practice this whenever a genuine negotiation opportunity arises, even a low-stakes one." },
+      { label: "Who", body: "Whoever you're negotiating with: a teammate, a vendor, a stakeholder." },
+      { label: "Where", body: "Applied in any real negotiation context." },
+    ],
+    howItWorks: [
+      "Identify your actual priorities versus your flexible points before starting.",
+      "Listen for the other side's priorities, and look for a solution serving both.",
+    ],
+    tools: ["The negotiation prep structure from Stage Three's Job Offer Negotiation Prep"],
+    scenario: {
+      title: "The underlying concern, not the surface disagreement",
+      body: "A student negotiating a project deadline with a teammate initially framed it as a win-lose disagreement, until identifying the teammate's actual underlying concern (a conflicting exam schedule) revealed an easy mutual solution neither had considered.",
+    },
+    pitfalls: [
+      "Treating negotiation as purely adversarial, missing solutions that could genuinely serve both sides.",
+    ],
+    successSignal:
+      "You reach a solution that both sides are genuinely satisfied with, not just a compromise neither likes.",
+    milestoneTies: [],
+  },
+
+  281: {
+    definition:
+      "A First Creative Brainstorming Session generates and organizes ideas effectively, using structured techniques rather than unstructured, unfocused discussion.",
+    whyItMatters:
+      "Unstructured brainstorming often produces fewer and lower-quality ideas than a deliberately structured session.",
+    whenWhoWhere: [
+      { label: "When", body: "Use this whenever you need to generate genuine new ideas, alone or with a group." },
+      { label: "Who", body: "A group, if collaborative, or done solo with a structured method." },
+      { label: "Where", body: "Any setting conducive to focused, uninterrupted idea generation." },
+    ],
+    howItWorks: [
+      "Set a time limit and a clear prompt.",
+      "Generate quantity first without judging ideas, then group and evaluate afterward.",
+    ],
+    tools: ["A whiteboard, sticky notes, or a simple shared document"],
+    scenario: {
+      title: "Separating generation from evaluation changed everything",
+      body: "A team's unstructured brainstorm produced few genuine ideas until they switched to a timed, judgment-free generation phase followed by a separate evaluation phase, which dramatically increased both quantity and quality of ideas.",
+    },
+    pitfalls: [
+      "Judging or discussing ideas during the generation phase, which suppresses the quantity and range of ideas produced.",
+    ],
+    successSignal:
+      "You generate a genuinely larger and more varied set of ideas than an unstructured discussion would have produced.",
+    milestoneTies: [],
+  },
+
+  282: {
+    definition:
+      "A First Cross-Functional Collaboration works genuinely with peers from different disciplines or functions, practicing the specific skill of bridging different professional perspectives.",
+    whyItMatters:
+      "Cross-functional work requires translating between different disciplines' vocabularies and priorities, a distinct skill from working within your own function alone.",
+    whenWhoWhere: [
+      { label: "When", body: "Seek this out whenever a genuine opportunity arises to work with people from different disciplines." },
+      { label: "Who", body: "Peers or colleagues from a different field or function than your own." },
+      { label: "Where", body: "Applied in any genuinely cross-functional project or team." },
+    ],
+    howItWorks: [
+      "Actively ask about the other discipline's priorities and vocabulary rather than assuming your own frame applies universally.",
+      "Translate your own contributions into terms that land for them.",
+    ],
+    tools: ["No special tool", "genuine curiosity about a different discipline's perspective"],
+    scenario: {
+      title: "Framing requests around what engineers actually cared about",
+      body: "A marketing student working with an engineering team initially struggled to communicate campaign timelines in terms that landed, until she learned to frame requests around technical constraints the engineers actually cared about.",
+    },
+    pitfalls: [
+      "Assuming your own discipline's priorities and vocabulary translate directly to a different function without adjustment.",
+    ],
+    successSignal:
+      "You can communicate effectively with a cross-functional collaborator without them needing to translate your language themselves.",
+    milestoneTies: [],
+  },
+
+  283: {
+    definition:
+      "A First Feedback Integration applies suggestions to improve work quality, reinforcing the Stage Five Feedback Integration FIRST in a hard-skill context.",
+    whyItMatters:
+      "Feedback that isn't integrated is functionally wasted; genuinely applying it to improve real work is where the actual value lies.",
+    whenWhoWhere: [
+      { label: "When", body: "Practice this immediately after receiving any substantive feedback on technical or project work." },
+      { label: "Who", body: "Whoever gave you the feedback." },
+      { label: "Where", body: "Applied directly to the specific work that received feedback." },
+    ],
+    howItWorks: [
+      "Identify the specific pattern the feedback points to, not just the individual instance.",
+      "Make a concrete revision and note it explicitly.",
+    ],
+    tools: ["The original work and the feedback received"],
+    scenario: {
+      title: "The same feedback twice, then a checklist to catch it herself",
+      body: "A student received the same feedback about unclear chart labeling twice across different projects before she consciously built a personal checklist to catch it herself going forward.",
+    },
+    pitfalls: [
+      "Fixing only the specific instance mentioned in feedback without addressing the underlying pattern it points to.",
+    ],
+    successSignal:
+      "You can point to a specific, concrete revision made directly from the feedback.",
+    milestoneTies: [],
+  },
+
+  284: {
+    definition:
+      "A First Hard Skill Reflection documents learnings, challenges, and next steps after building or applying a hard skill.",
+    whyItMatters:
+      "Reflection turns a completed skill-building experience into genuine, retained insight rather than a vague memory of having done something.",
+    whenWhoWhere: [
+      { label: "When", body: "Reflect on this after any substantial hard-skill learning experience or project." },
+      { label: "Who", body: "No collaborator required." },
+      { label: "Where", body: "Written in a dedicated reflection journal or notes section." },
+    ],
+    howItWorks: [
+      "Write what you learned, what was genuinely challenging, and one specific next step for continued growth.",
+    ],
+    tools: ["A dedicated reflection journal, potentially shared with your Stage Four Reflection Journal"],
+    scenario: {
+      title: "Formulas mastered, pivot tables still the real gap",
+      body: "A student's reflection after a data analysis project revealed she'd genuinely mastered basic formulas but still struggled with pivot tables, a specific, actionable insight that shaped her next learning priority.",
+    },
+    pitfalls: [
+      "Writing only a generic “it went well” reflection without genuine specificity about what was learned or what remains challenging.",
+    ],
+    successSignal:
+      "You can name a specific skill gain and a specific remaining challenge, not just a vague overall impression.",
+    milestoneTies: [288],
+  },
+
+  285: {
+    definition:
+      "A First Reflection on Hard Skill Growth reviews progress across multiple hard-skill experiences over time, identifying real patterns of growth.",
+    whyItMatters:
+      "Looking across multiple individual reflections reveals genuine growth trajectories that any single reflection alone can't show.",
+    whenWhoWhere: [
+      { label: "When", body: "Do this periodically, reviewing several past Hard Skill Reflections (K30) together." },
+      { label: "Who", body: "No collaborator required, though sharing patterns with a mentor can validate your self-assessment." },
+      { label: "Where", body: "Done in a dedicated review session looking back across multiple entries." },
+    ],
+    howItWorks: [
+      "Review several past hard-skill reflections together.",
+      "Identify which skills have genuinely grown and which challenges keep recurring.",
+    ],
+    tools: ["Your accumulated Hard Skill Reflection entries"],
+    scenario: {
+      title: "One challenge kept recurring across three months",
+      body: "Reviewing three months of hard-skill reflections together, a student noticed she'd genuinely closed her spreadsheet formula gap but kept flagging the same presentation-design challenge repeatedly, a clear signal about where to focus next.",
+    },
+    pitfalls: [
+      "Reviewing reflections individually without ever looking across them together for a genuine pattern.",
+    ],
+    successSignal:
+      "You can name a specific skill that's genuinely grown and one that's still a recurring challenge.",
+    milestoneTies: [288],
+  },
+
+  286: {
+    definition:
+      "A First Collaborative Project Submission coordinates and delivers work as part of a team, practicing the specific skill of a genuinely joint final deliverable.",
+    whyItMatters:
+      "Coordinating a final joint submission, ensuring consistency, catching gaps, meeting shared deadlines, is a distinct skill from completing individual work alone.",
+    whenWhoWhere: [
+      { label: "When", body: "Practice this whenever you're part of a team delivering a single combined submission." },
+      { label: "Who", body: "Your project team." },
+      { label: "Where", body: "Applied to any genuine team deliverable." },
+    ],
+    howItWorks: [
+      "Establish a clear final review process before submission: who checks consistency, who confirms the deadline is met, who does a final proofread.",
+    ],
+    tools: ["A shared document or submission checklist"],
+    scenario: {
+      title: "One owner for final review fixed the inconsistency",
+      body: "A team's first joint submission had inconsistent formatting across sections because no one owned final review. Assigning that role explicitly for the next submission caught and fixed the same issue before it went out.",
+    },
+    pitfalls: [
+      "Assuming individual sections will naturally combine into a coherent whole without a deliberate final review step.",
+    ],
+    successSignal:
+      "The final joint submission reads as one coherent piece of work, not visibly disconnected sections.",
+    milestoneTies: [],
+  },
+
+  287: {
+    definition:
+      "A First Self-Assessment of Technical Skills rates your genuine proficiency across your technical or hard skills and plans targeted improvement.",
+    whyItMatters:
+      "An honest baseline assessment focuses improvement efforts on genuine gaps, rather than scattering effort based on vague impression.",
+    whenWhoWhere: [
+      { label: "When", body: "Conduct this periodically, especially before setting a new Hard Skill Development Plan." },
+      { label: "Who", body: "A mentor for outside perspective alongside your self-rating." },
+      { label: "Where", body: "Done in a dedicated assessment session." },
+    ],
+    howItWorks: [
+      "List your relevant technical skills.",
+      "Rate each honestly, with specific evidence, not just gut feeling.",
+      "Identify your genuine priority gap.",
+    ],
+    tools: ["A simple skills rating template, similar to your Stage One Strength Inventory"],
+    scenario: {
+      title: "The weaker skill wasn't the one she assumed",
+      body: "A student assumed her weakest skill was presentation design, but an honest, evidence-based self-assessment revealed her data analysis skills were actually weaker, a genuine surprise that redirected her focus.",
+    },
+    pitfalls: [
+      "Rating skills based on vague confidence rather than specific evidence from real recent work.",
+    ],
+    successSignal:
+      "You can name your genuine priority skill gap, backed by specific evidence.",
+    milestoneTies: [288],
+  },
+
+  288: {
+    definition:
+      "A First Hard Skill Development Plan outlines 3 to 6 months of focused skill growth, based on your self-assessment and reflections.",
+    whyItMatters:
+      "A specific, time-bound development plan turns scattered good intentions into a genuine, trackable growth trajectory.",
+    whenWhoWhere: [
+      { label: "When", body: "Build this after completing your Self-Assessment of Technical Skills (K56) and reviewing your accumulated reflections." },
+      { label: "Who", body: "A mentor to sanity-check whether the plan is realistic and well-prioritized." },
+      { label: "Where", body: "Written as a dedicated planning document." },
+    ],
+    howItWorks: [
+      "Choose one or two priority skills from your self-assessment.",
+      "Set specific milestones over 3 to 6 months, with concrete resources and practice methods for each.",
+    ],
+    tools: ["Your Self-Assessment of Technical Skills and Hard Skill Reflection entries as source material"],
+    scenario: {
+      title: "Named resources beat a vague intention to get better",
+      body: "A student's development plan targeting data analytics specifically, with monthly milestones and named resources, produced far more real progress over a semester than her previous vague intention to “get better at Excel.”",
+    },
+    pitfalls: [
+      "Setting a plan too broad or unfocused, trying to improve everything at once instead of prioritizing genuine gaps.",
+    ],
+    successSignal:
+      "You can point to specific, planned progress at each milestone, not just a vague ongoing intention.",
+    milestoneTies: [],
+  },
+
+  289: {
+    definition:
+      "A First Peer Teaching Session teaches a technical concept to a peer, deepening your own understanding through the act of explaining it.",
+    whyItMatters:
+      "Teaching a concept to someone else is one of the most effective ways to deepen your own understanding and reveal any remaining gaps in it.",
+    whenWhoWhere: [
+      { label: "When", body: "Offer this whenever you have a technical skill or concept you understand well enough to teach." },
+      { label: "Who", body: "A peer who wants to learn the concept." },
+      { label: "Where", body: "Any informal teaching setting: a study session, a quick desk-side explanation." },
+    ],
+    howItWorks: [
+      "Prepare a short, clear explanation.",
+      "Let the peer ask questions, and notice where your own explanation feels shaky, a signal of a gap worth addressing.",
+    ],
+    tools: ["Whatever materials support the specific concept being taught"],
+    scenario: {
+      title: "Teaching it exposed the edge case she didn't know",
+      body: "A student teaching a peer a spreadsheet technique realized mid-explanation that she didn't actually understand one edge case as well as she'd thought, prompting her to research and close that gap immediately afterward.",
+    },
+    pitfalls: [
+      "Skipping teaching opportunities because they feel like they take more time than they're worth, missing the genuine learning value for yourself.",
+    ],
+    successSignal:
+      "You identify at least one gap in your own understanding through the process of teaching it to someone else.",
+    milestoneTies: [],
+  },
+
+  290: {
+    definition:
+      "A First Reflection on Tool Efficiency evaluates which tools genuinely helped your productivity versus which added friction without real benefit.",
+    whyItMatters:
+      "Not every tool you adopt actually helps; periodic evaluation prevents accumulating tools that add complexity without genuine value.",
+    whenWhoWhere: [
+      { label: "When", body: "Conduct this periodically, especially after trying several new tools over a period of time." },
+      { label: "Who", body: "No collaborator required." },
+      { label: "Where", body: "Done in a dedicated reflection session reviewing your current tool stack." },
+    ],
+    howItWorks: [
+      "List the tools you currently use regularly.",
+      "For each, honestly assess whether it genuinely improves your work or just adds complexity.",
+    ],
+    tools: ["Your current list of regularly used tools and systems"],
+    scenario: {
+      title: "Three apps, none fully used, down to one",
+      body: "A student reviewing her tool stack realized she'd adopted three different task management apps over a year, none fully committed to, and consolidating back to just one significantly reduced her mental overhead.",
+    },
+    pitfalls: [
+      "Continuing to use a tool out of habit without ever honestly evaluating whether it's actually still helping.",
+    ],
+    successSignal:
+      "You can name at least one tool you're dropping or consolidating because it wasn't genuinely adding value.",
+    milestoneTies: [],
+  },
+
+  291: {
+    definition:
+      "A First Technical Problem-Solving Journal tracks issues encountered, solutions found, and lessons learned across a series of technical problems over time.",
+    whyItMatters:
+      "A running journal of technical problems and solutions becomes an increasingly valuable personal reference, and reveals patterns in the types of problems you tend to encounter.",
+    whenWhoWhere: [
+      { label: "When", body: "Start this once you're regularly encountering and solving technical problems worth documenting." },
+      { label: "Who", body: "No collaborator required." },
+      { label: "Where", body: "Kept in a dedicated journal or notes section." },
+    ],
+    howItWorks: [
+      "After solving a genuine technical problem, log the issue, your solution, and the lesson learned.",
+      "Review periodically for patterns.",
+    ],
+    tools: ["A dedicated notes document, potentially the same one as your Problem-Solving Checklist entries"],
+    scenario: {
+      title: "A semester of entries traced back to one tool",
+      body: "A student's technical problem-solving journal, kept over a semester, revealed that most of her recurring issues traced back to one specific tool she'd never fully learned, a clear signal for where to invest focused learning time.",
+    },
+    pitfalls: [
+      "Solving problems without ever logging them, losing the cumulative value a running journal would provide.",
+    ],
+    successSignal:
+      "Reviewing the journal reveals a genuine pattern in the types of problems you encounter, pointing to a specific learning priority.",
+    milestoneTies: [240],
+  },
+
+  292: {
+    definition:
+      "A First Reflection on Learning Gaps identifies what you still genuinely need to learn next, based on honest assessment rather than assumption.",
+    whyItMatters:
+      "Genuine progress depends on accurately identifying real gaps, not just continuing to practice skills you're already comfortable with.",
+    whenWhoWhere: [
+      { label: "When", body: "Conduct this periodically, especially after completing a significant project or learning milestone." },
+      { label: "Who", body: "A mentor for outside perspective on gaps you might not see yourself." },
+      { label: "Where", body: "Done in a dedicated reflection session." },
+    ],
+    howItWorks: [
+      "Honestly review recent work for moments of genuine struggle or uncertainty, not just completed tasks.",
+      "Name the specific underlying gap each points to.",
+    ],
+    tools: ["Your recent project work and any feedback received as source material"],
+    scenario: {
+      title: "The real gap wasn't the tool she blamed",
+      body: "A student's honest reflection revealed that her recurring struggle wasn't actually the specific tool she blamed, but a more fundamental gap in understanding the underlying data concepts the tool required.",
+    },
+    pitfalls: [
+      "Only reflecting on comfortable, already-mastered skills rather than honestly confronting genuine struggle points.",
+    ],
+    successSignal:
+      "You can name a specific, honest learning gap, not just a comfortable area you're already confident in.",
+    milestoneTies: [288],
+  },
+
+  293: {
+    definition:
+      "A First Mock Client/Instructor Feedback Implementation refines work based on simulated or real client or instructor input, practicing the discipline of genuine revision.",
+    whyItMatters:
+      "The ability to take feedback from an authority figure or client and genuinely improve the work, rather than making superficial changes, is a core professional skill.",
+    whenWhoWhere: [
+      { label: "When", body: "Practice this whenever you receive substantive feedback from an instructor, client, or client-like stakeholder." },
+      { label: "Who", body: "The instructor, client, or stakeholder who gave the feedback." },
+      { label: "Where", body: "Applied to real coursework or project work with genuine stakeholder feedback." },
+    ],
+    howItWorks: [
+      "Review the feedback for the underlying concern, not just the surface suggestion.",
+      "Make a genuine, substantive revision, not just a superficial fix.",
+    ],
+    tools: ["The original work and the feedback received"],
+    scenario: {
+      title: "A rewrite, not a sentence added, changed the grade",
+      body: "A student's instructor feedback asked her to “clarify the methodology section,” and rather than just adding a sentence, she rewrote the section to genuinely address the underlying confusion, which the instructor specifically noted in her final grade.",
+    },
+    pitfalls: [
+      "Making a superficial fix that technically addresses the literal feedback without solving the underlying concern.",
+    ],
+    successSignal:
+      "The revised work genuinely addresses the underlying concern behind the feedback, not just its surface wording.",
+    milestoneTies: [283],
   },
 };
