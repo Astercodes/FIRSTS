@@ -13,10 +13,29 @@ function todayIso(): string {
   return new Date().toISOString().slice(0, 10);
 }
 
+const ISO_DATE_RE = /^\d{4}-\d{2}-\d{2}$/;
+
 function readOverrides(): Overrides {
   try {
     const raw = window.localStorage.getItem(STORAGE_KEY);
-    return raw ? JSON.parse(raw) : {};
+    if (!raw) return {};
+    const parsed = JSON.parse(raw) as Record<string, unknown>;
+
+    // Older versions of this app stored `true` instead of a completion date.
+    // Migrate any such legacy entries in place so stale localStorage from
+    // before that change doesn't crash the date-based momentum math.
+    let migrated = false;
+    const overrides: Overrides = {};
+    for (const [id, value] of Object.entries(parsed)) {
+      if (typeof value === "string" && ISO_DATE_RE.test(value)) {
+        overrides[Number(id)] = value;
+      } else {
+        overrides[Number(id)] = todayIso();
+        migrated = true;
+      }
+    }
+    if (migrated) writeOverrides(overrides);
+    return overrides;
   } catch {
     return {};
   }
