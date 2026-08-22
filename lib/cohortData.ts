@@ -38,6 +38,42 @@ export function studentOverallPct(s: CohortStudent): number {
   return Math.round(weighted / TOTAL_COUNT);
 }
 
+const STAGE_ORDER: (keyof CohortStudent["stagePct"])[] = ["one", "two", "three", "four"];
+const STAGE_SHORT_LABEL: Record<keyof CohortStudent["stagePct"], string> = {
+  one: "Stage One",
+  two: "Stage Two",
+  three: "Stage Three",
+  four: "Stage Four",
+};
+
+/** The stage a student is currently working through: the earliest stage that isn't yet 100%. "complete" if all four are. */
+export function studentCurrentStage(s: CohortStudent): keyof CohortStudent["stagePct"] | "complete" {
+  for (const stage of STAGE_ORDER) {
+    if (s.stagePct[stage] < 100) return stage;
+  }
+  return "complete";
+}
+
+export type StageDistributionBucket = {
+  key: string;
+  label: string;
+  count: number;
+};
+
+/** How many students are currently sitting in each stage, right now, plus a "complete" bucket. */
+export function stageDistribution(students: CohortStudent[]): StageDistributionBucket[] {
+  const buckets: StageDistributionBucket[] = [
+    ...STAGE_ORDER.map((s) => ({ key: s, label: STAGE_SHORT_LABEL[s], count: 0 })),
+    { key: "complete", label: "Complete", count: 0 },
+  ];
+  for (const s of students) {
+    const stage = studentCurrentStage(s);
+    const bucket = buckets.find((b) => b.key === stage)!;
+    bucket.count += 1;
+  }
+  return buckets;
+}
+
 export function isAtRisk(s: CohortStudent): boolean {
   return s.daysInactive >= 21;
 }

@@ -9,11 +9,13 @@ import {
   cohortActiveCount,
   cohortWatchCount,
   institutionWeeklyTrend,
+  stageDistribution,
 } from "@/lib/cohortData";
 import { loadAdvisor, ADVISOR_CHANGE_EVENT, MOCK_ADVISOR, type AdvisorProfile } from "@/lib/advisorStore";
 import { HBarChart } from "@/components/charts/HBarChart";
 import { TrendChart } from "@/components/charts/TrendChart";
 import { StatusBar } from "@/components/charts/StatusBar";
+import { CohortHistogram } from "@/components/charts/CohortHistogram";
 
 const WEEK_LABELS = ["Wk 1", "Wk 2", "Wk 3", "Wk 4", "Wk 5", "Wk 6", "Wk 7", "Wk 8"];
 
@@ -42,6 +44,11 @@ export function AdvisorOverview() {
     ? Math.round(cohorts.reduce((sum, c) => sum + cohortAvgCompletion(c), 0) / cohorts.length)
     : 0;
   const trend = institutionWeeklyTrend(institution);
+  const distribution = stageDistribution(allStudents);
+  const bottleneck = distribution
+    .filter((d) => d.key !== "complete")
+    .reduce((max, d) => (d.count > max.count ? d : max), distribution[0]);
+  const bottleneckPct = totalStudents > 0 ? Math.round((bottleneck.count / totalStudents) * 100) : 0;
 
   return (
     <div className="mx-auto max-w-6xl space-y-8">
@@ -77,6 +84,23 @@ export function AdvisorOverview() {
           <p className="mb-5 text-xs text-ink/45">Every student across your cohorts</p>
           <StatusBar active={totalActive} watch={totalWatch} atRisk={totalAtRisk} />
         </div>
+      </div>
+
+      <div className="rounded-3xl border border-ink/10 bg-white p-7">
+        <div className="mb-1 flex flex-wrap items-baseline justify-between gap-2">
+          <h2 className="font-display text-lg font-semibold text-ink">Cohort distribution</h2>
+          {totalStudents > 0 && bottleneck.count > 0 && (
+            <span className="rounded-full bg-[color-mix(in_oklab,var(--berry-burst)_12%,white)] px-3 py-1 text-xs font-semibold text-[var(--berry-burst)]">
+              {bottleneckPct}% of students are in {bottleneck.label}
+            </span>
+          )}
+        </div>
+        <p className="mb-5 text-xs text-ink/45">How many students are in each stage right now, across your cohorts</p>
+        {totalStudents > 0 ? (
+          <CohortHistogram data={distribution} />
+        ) : (
+          <p className="text-sm text-ink/45">No students yet.</p>
+        )}
       </div>
 
       <div className="rounded-3xl border border-ink/10 bg-white p-7">
