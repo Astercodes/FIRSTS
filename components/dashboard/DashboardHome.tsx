@@ -23,7 +23,9 @@ export function DashboardHome() {
   const stages = stageProgress(allModules);
   const categoryRows = categoryProgressByStage(allModules);
   const continueModule =
-    allModules.find((m) => m.status === "in-progress") ?? allModules.find((m) => m.status === "available");
+    allModules.find((m) => m.status === "in-progress") ??
+    allModules.find((m) => m.status === "available") ??
+    allModules.find((m) => m.status !== "complete");
   const dueForReview = allModules.filter((m) => m.dueForReview);
 
   const streak = habitStreak(allModules);
