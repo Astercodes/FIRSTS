@@ -1,5 +1,6 @@
 import { WORKSHEET_SCHEMAS, defaultAnswers, type WorksheetField, type FieldValue } from "@/lib/worksheetSchemas";
 import { loadAnswers } from "@/lib/answersStore";
+import type { FirstModule } from "@/lib/dashboardData";
 
 export type ThoroughnessLevel = 1 | 2 | 3;
 
@@ -74,16 +75,26 @@ function levelFromRatio(ratio: number): ThoroughnessLevel {
   return 1;
 }
 
+const LEVEL_PCT: Record<ThoroughnessLevel, number> = { 1: 30, 2: 65, 3: 95 };
+
 /**
  * Compares a student's saved worksheet answers against that worksheet's own
- * seed depth as the benchmark. Returns null when there is nothing saved yet,
- * since an untouched worksheet has no quality to report.
+ * seed depth as the benchmark. Falls back to the module's own seeded
+ * thoroughness (set the same way seed progress data is) when nothing has
+ * been saved in this browser yet. Returns null only when there is truly
+ * nothing to report, since an untouched, never-marked-complete worksheet
+ * has no quality to show.
  */
-export function scoreThoroughness(moduleId: number): ThoroughnessResult | null {
-  const answers = loadAnswers<Record<string, FieldValue>>(moduleId);
-  if (!answers) return null;
+export function scoreThoroughness(module: FirstModule): ThoroughnessResult | null {
+  const answers = loadAnswers<Record<string, FieldValue>>(module.id);
 
-  const schema = WORKSHEET_SCHEMAS[moduleId];
+  if (!answers) {
+    if (!module.thoroughness) return null;
+    const level = module.thoroughness;
+    return { level, label: THOROUGHNESS_LABEL[level], pct: LEVEL_PCT[level] };
+  }
+
+  const schema = WORKSHEET_SCHEMAS[module.id];
 
   let ratio: number;
   if (schema && schema.length > 0) {

@@ -21,12 +21,12 @@ export function ModuleCard({
 
   useEffect(() => {
     function sync() {
-      setDepth(scoreThoroughness(m.id));
+      setDepth(scoreThoroughness(m));
     }
     sync();
     window.addEventListener("storage", sync);
     return () => window.removeEventListener("storage", sync);
-  }, [m.id, m.status]);
+  }, [m]);
 
   const Wrapper: ElementType = isLocked ? "div" : Link;
   const wrapperProps = isLocked ? {} : { href: `/dashboard/stage/${m.id}` };
