@@ -6,8 +6,12 @@ import { PortfolioTeaser } from "@/components/dashboard/PortfolioTeaser";
 import { StackedLayers } from "@/components/dashboard/StackedLayers";
 import { RadarChart } from "@/components/dashboard/RadarChart";
 import { CategoryHeatmap } from "@/components/dashboard/CategoryHeatmap";
+import { VelocityChart } from "@/components/dashboard/VelocityChart";
+import { StreakCard } from "@/components/dashboard/StreakCard";
+import { TimeInvestedCard } from "@/components/dashboard/TimeInvestedCard";
 import { useFirstsWithProgress } from "@/lib/progressStore";
 import { completionStats, stageProgress, categoryProgressByStage } from "@/lib/dashboardData";
+import { habitStreak, weeklyVelocity, timeInvested, isDeceleration } from "@/lib/momentum";
 
 export function DashboardHome() {
   const allModules = useFirstsWithProgress();
@@ -17,6 +21,14 @@ export function DashboardHome() {
   const continueModule =
     allModules.find((m) => m.status === "in-progress") ?? allModules.find((m) => m.status === "available");
   const dueForReview = allModules.filter((m) => m.dueForReview);
+
+  const streak = habitStreak(allModules);
+  const velocityWeeks = weeklyVelocity(allModules, 12);
+  const timeStats = timeInvested(allModules);
+  const decelerating = isDeceleration(velocityWeeks);
+  const weeklyAvg = velocityWeeks.reduce((s, w) => s + w.count, 0) / velocityWeeks.length;
+  const bestWeek = Math.max(...velocityWeeks.map((w) => w.count));
+  const last4Weeks = velocityWeeks.slice(-4).reduce((s, w) => s + w.count, 0);
 
   return (
     <div className="mx-auto max-w-6xl space-y-6">
@@ -47,6 +59,39 @@ export function DashboardHome() {
         </h2>
         <div className="mt-6">
           <StackedLayers stages={stages} />
+        </div>
+      </div>
+
+      <div className="grid gap-6 lg:grid-cols-5">
+        <div className="rounded-3xl border border-ink/8 bg-white p-7 lg:col-span-3">
+          <div className="flex flex-wrap items-baseline justify-between gap-2">
+            <div>
+              <p className="text-xs font-semibold uppercase tracking-[0.15em] text-ink/45">
+                Momentum
+              </p>
+              <h2 className="mt-1.5 font-display text-lg font-semibold text-ink">
+                FIRSTS completed per week
+              </h2>
+            </div>
+            {decelerating && (
+              <span className="rounded-full bg-[color-mix(in_oklab,var(--tropical-mango)_18%,white)] px-3 py-1 text-xs font-semibold text-ink/70">
+                Pace has slowed recently
+              </span>
+            )}
+          </div>
+          <div className="mt-5">
+            <VelocityChart weeks={velocityWeeks} />
+          </div>
+          <div className="mt-6 grid grid-cols-3 gap-4 border-t border-ink/8 pt-5">
+            <VelocityStat label="Weekly average" value={weeklyAvg.toFixed(1)} />
+            <VelocityStat label="Best week" value={String(bestWeek)} />
+            <VelocityStat label="Last 4 weeks" value={String(last4Weeks)} />
+          </div>
+        </div>
+
+        <div className="grid grid-rows-2 gap-6 lg:col-span-2">
+          <StreakCard streak={streak} />
+          <TimeInvestedCard data={timeStats} />
         </div>
       </div>
 
@@ -82,6 +127,15 @@ export function DashboardHome() {
         </div>
         <PortfolioTeaser />
       </div>
+    </div>
+  );
+}
+
+function VelocityStat({ label, value }: { label: string; value: string }) {
+  return (
+    <div>
+      <p className="font-display text-2xl font-bold tracking-tight text-ink">{value}</p>
+      <p className="mt-0.5 text-xs font-medium text-ink/45">{label}</p>
     </div>
   );
 }

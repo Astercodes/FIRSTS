@@ -6,7 +6,12 @@ import { FIRSTS, type FirstModule } from "./dashboardData";
 const STORAGE_KEY = "firsts:progress-overrides";
 const EVENT_NAME = "firsts:progress-change";
 
-type Overrides = Record<number, true>;
+/** Each override stores the ISO date (YYYY-MM-DD) the module was marked complete, so live activity feeds the same streak/velocity/time-invested math as the seeded history. */
+type Overrides = Record<number, string>;
+
+function todayIso(): string {
+  return new Date().toISOString().slice(0, 10);
+}
 
 function readOverrides(): Overrides {
   try {
@@ -24,7 +29,7 @@ function writeOverrides(overrides: Overrides) {
 
 export function markComplete(id: number) {
   const overrides = readOverrides();
-  overrides[id] = true;
+  overrides[id] = todayIso();
   writeOverrides(overrides);
 }
 
@@ -36,7 +41,9 @@ export function markIncomplete(id: number) {
 
 function mergeOverrides(overrides: Overrides): FirstModule[] {
   return FIRSTS.map((m) =>
-    overrides[m.id] ? { ...m, status: "complete" as const, lastUpdated: "just now" } : m
+    overrides[m.id]
+      ? { ...m, status: "complete" as const, lastUpdated: "just now", completedAt: overrides[m.id] }
+      : m
   );
 }
 

@@ -4,9 +4,13 @@ import { useEffect, useState } from "react";
 import Link from "next/link";
 import { MOCK_USER } from "@/lib/dashboardData";
 import { loadProfile, PROFILE_CHANGE_EVENT, type Profile } from "@/lib/profileStore";
+import { useFirstsWithProgress } from "@/lib/progressStore";
+import { habitStreak } from "@/lib/momentum";
 
 export function Topbar() {
   const [profile, setProfile] = useState<Partial<Profile> | null>(null);
+  const modules = useFirstsWithProgress();
+  const streak = habitStreak(modules);
 
   useEffect(() => {
     const sync = () => setProfile(loadProfile());
@@ -41,7 +45,7 @@ export function Topbar() {
       <div className="flex items-center gap-3">
         <div className="flex items-center gap-1.5 rounded-full bg-paper-dim px-3 py-1.5 text-xs font-semibold text-ink/70">
           <FlameIcon className="h-3.5 w-3.5 text-[var(--sunshine-orange)]" />
-          {MOCK_USER.streakDays}-day streak
+          {streak}-day streak
         </div>
         <Link
           href="/dashboard/profile"
