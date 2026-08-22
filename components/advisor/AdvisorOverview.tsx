@@ -13,6 +13,7 @@ import {
   stalledStudents,
   categoryWeakSpot,
   weakestCategory,
+  appointmentOutcomeComparison,
 } from "@/lib/cohortData";
 import { loadAdvisor, ADVISOR_CHANGE_EVENT, MOCK_ADVISOR, type AdvisorProfile } from "@/lib/advisorStore";
 import { HBarChart } from "@/components/charts/HBarChart";
@@ -20,6 +21,7 @@ import { TrendChart } from "@/components/charts/TrendChart";
 import { StatusBar } from "@/components/charts/StatusBar";
 import { CohortHistogram } from "@/components/charts/CohortHistogram";
 import { CohortCategoryHeatmap } from "@/components/charts/CohortCategoryHeatmap";
+import { OutcomeComparisonChart } from "@/components/charts/OutcomeComparisonChart";
 import { StalledStudentsTable } from "@/components/advisor/StalledStudentsTable";
 
 const WEEK_LABELS = ["Wk 1", "Wk 2", "Wk 3", "Wk 4", "Wk 5", "Wk 6", "Wk 7", "Wk 8"];
@@ -57,6 +59,7 @@ export function AdvisorOverview() {
   const stalled = stalledStudents(cohorts);
   const weakSpotRows = categoryWeakSpot(allStudents);
   const weakest = weakestCategory(weakSpotRows);
+  const outcomeComparison = appointmentOutcomeComparison(allStudents);
 
   return (
     <div className="mx-auto max-w-6xl space-y-8">
@@ -128,6 +131,28 @@ export function AdvisorOverview() {
         </p>
         {totalStudents > 0 ? (
           <CohortCategoryHeatmap rows={weakSpotRows} />
+        ) : (
+          <p className="text-sm text-ink/45">No students yet.</p>
+        )}
+      </div>
+
+      <div className="rounded-3xl border border-ink/10 bg-white p-7">
+        <div className="mb-1 flex flex-wrap items-baseline justify-between gap-2">
+          <h2 className="font-display text-lg font-semibold text-ink">Advisor engagement & outcomes</h2>
+          {outcomeComparison.engaged.count > 0 && outcomeComparison.notEngaged.count > 0 && (
+            <span className="rounded-full bg-[color-mix(in_oklab,#1a8f3c_12%,white)] px-3 py-1 text-xs font-semibold text-[#1a8f3c]">
+              {outcomeComparison.completionGap >= 0 ? "+" : ""}
+              {outcomeComparison.completionGap} pts completion gap
+            </span>
+          )}
+        </div>
+        <p className="mb-5 text-xs text-ink/45">
+          There&apos;s no separate appointment record in this data, so this uses whether a
+          student has shared at least one reflection with their advisor as the closest proxy
+          for an advising relationship. Correlation, not proof that sessions cause the gap.
+        </p>
+        {totalStudents > 0 ? (
+          <OutcomeComparisonChart data={outcomeComparison} />
         ) : (
           <p className="text-sm text-ink/45">No students yet.</p>
         )}

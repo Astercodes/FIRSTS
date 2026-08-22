@@ -2261,3 +2261,53 @@ export function institutionWeeklyTrend(institution: string): number[] {
     Math.round(cohorts.reduce((sum, c) => sum + (c.weeklyTrend[w] ?? 0), 0) / cohorts.length)
   );
 }
+
+/**
+ * There's no dedicated "advising appointment" record in this data. Whether a
+ * student has shared at least one reflection with their advisor is the
+ * closest real signal of an advising relationship the app tracks, so it
+ * stands in for "had a session" here. That's stated plainly wherever this
+ * is shown, rather than implied.
+ */
+export function hadAdvisorEngagement(s: CohortStudent): boolean {
+  return s.sharedCount > 0;
+}
+
+export type OutcomeGroup = {
+  label: string;
+  count: number;
+  avgCompletion: number;
+  avgDaysInactive: number;
+};
+
+export type OutcomeComparison = {
+  engaged: OutcomeGroup;
+  notEngaged: OutcomeGroup;
+  completionGap: number;
+};
+
+/** Average completion and average inactivity, split by whether a student has ever shared a reflection with their advisor. */
+export function appointmentOutcomeComparison(students: CohortStudent[]): OutcomeComparison {
+  const engaged = students.filter(hadAdvisorEngagement);
+  const notEngaged = students.filter((s) => !hadAdvisorEngagement(s));
+
+  const toGroup = (label: string, group: CohortStudent[]): OutcomeGroup => ({
+    label,
+    count: group.length,
+    avgCompletion: group.length
+      ? Math.round(group.reduce((sum, s) => sum + studentOverallPct(s), 0) / group.length)
+      : 0,
+    avgDaysInactive: group.length
+      ? Math.round(group.reduce((sum, s) => sum + s.daysInactive, 0) / group.length)
+      : 0,
+  });
+
+  const engagedGroup = toGroup("Shared with an advisor", engaged);
+  const notEngagedGroup = toGroup("Hasn't shared yet", notEngaged);
+
+  return {
+    engaged: engagedGroup,
+    notEngaged: notEngagedGroup,
+    completionGap: engagedGroup.avgCompletion - notEngagedGroup.avgCompletion,
+  };
+}
