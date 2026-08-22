@@ -1,7 +1,10 @@
+"use client";
+
 import Link from "next/link";
-import type { ElementType } from "react";
+import { type ElementType, useEffect, useState } from "react";
 import type { FirstModule, ModuleStatus } from "@/lib/dashboardData";
 import { CATEGORY_META } from "@/lib/dashboardData";
+import { scoreThoroughness, type ThoroughnessResult } from "@/lib/depthScore";
 
 export function ModuleCard({
   module: m,
@@ -14,6 +17,16 @@ export function ModuleCard({
   const effectiveStatus: ModuleStatus =
     m.status === "locked" && unlocked ? "available" : m.status;
   const isLocked = effectiveStatus === "locked";
+  const [depth, setDepth] = useState<ThoroughnessResult | null>(null);
+
+  useEffect(() => {
+    function sync() {
+      setDepth(scoreThoroughness(m.id));
+    }
+    sync();
+    window.addEventListener("storage", sync);
+    return () => window.removeEventListener("storage", sync);
+  }, [m.id, m.status]);
 
   const Wrapper: ElementType = isLocked ? "div" : Link;
   const wrapperProps = isLocked ? {} : { href: `/dashboard/stage/${m.id}` };
@@ -31,9 +44,12 @@ export function ModuleCard({
           <span className="mr-1.5 text-ink/35">{m.code}</span>
           {m.title}
         </p>
-        <p className="mt-0.5 text-xs text-ink/45">
-          {m.time} · {m.difficulty}
-        </p>
+        <div className="mt-0.5 flex items-center gap-2">
+          <p className="text-xs text-ink/45">
+            {m.time} · {m.difficulty}
+          </p>
+          {depth && <DepthIndicator depth={depth} color={color} />}
+        </div>
       </div>
       {effectiveStatus === "complete" && (
         <span className="shrink-0 text-xs font-semibold text-ink/35">Done</span>
@@ -47,6 +63,32 @@ export function ModuleCard({
         </span>
       )}
     </Wrapper>
+  );
+}
+
+function DepthIndicator({ depth, color }: { depth: ThoroughnessResult; color: string }) {
+  return (
+    <span
+      className="inline-flex shrink-0 items-center gap-1.5"
+      title={`Response depth: ${depth.label}`}
+      aria-label={`Response depth: ${depth.label}`}
+    >
+      <span className="flex items-end gap-[1.5px]">
+        {[1, 2, 3].map((tick) => (
+          <span
+            key={tick}
+            className={`w-[3px] rounded-[1px] ${tick > depth.level ? "bg-ink/10" : ""}`}
+            style={{
+              height: 3 + tick * 2,
+              background: tick <= depth.level ? color : undefined,
+            }}
+          />
+        ))}
+      </span>
+      <span className="text-[10px] font-semibold uppercase tracking-wide text-ink/40">
+        {depth.label}
+      </span>
+    </span>
   );
 }
 
