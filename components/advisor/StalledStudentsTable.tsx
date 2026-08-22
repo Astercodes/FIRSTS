@@ -15,10 +15,12 @@ const STAGE_LABEL: Record<string, string> = {
 };
 
 const MAX_ROWS = 50;
+const COLLAPSED_ROWS = 5;
 
 export function StalledStudentsTable({ students }: { students: StalledStudent[] }) {
   const [sortKey, setSortKey] = useState<SortKey>("risk");
   const [sortDir, setSortDir] = useState<"asc" | "desc">("desc");
+  const [showAll, setShowAll] = useState(false);
 
   function toggleSort(key: SortKey) {
     if (key === sortKey) {
@@ -43,7 +45,8 @@ export function StalledStudentsTable({ students }: { students: StalledStudent[] 
     return copy;
   }, [students, sortKey, sortDir]);
 
-  const visible = sorted.slice(0, MAX_ROWS);
+  const capped = sorted.slice(0, MAX_ROWS);
+  const visible = showAll ? capped : capped.slice(0, COLLAPSED_ROWS);
 
   if (students.length === 0) {
     return (
@@ -125,10 +128,21 @@ export function StalledStudentsTable({ students }: { students: StalledStudent[] 
         </table>
       </div>
 
-      {students.length > MAX_ROWS && (
-        <p className="px-5 pb-4 pt-3 text-xs text-ink/40">
-          Showing the top {MAX_ROWS} of {students.length} flagged students by risk.
-        </p>
+      {capped.length > COLLAPSED_ROWS && (
+        <div className="flex items-center justify-between px-5 pb-4 pt-3">
+          <button
+            type="button"
+            onClick={() => setShowAll((v) => !v)}
+            className="text-xs font-semibold text-berry-burst hover:underline"
+          >
+            {showAll ? "Show less" : `See all ${students.length} flagged →`}
+          </button>
+          {showAll && students.length > MAX_ROWS && (
+            <span className="text-xs text-ink/40">
+              Showing the top {MAX_ROWS} of {students.length} by risk.
+            </span>
+          )}
+        </div>
       )}
     </div>
   );

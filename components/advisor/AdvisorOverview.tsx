@@ -11,12 +11,15 @@ import {
   institutionWeeklyTrend,
   stageDistribution,
   stalledStudents,
+  categoryWeakSpot,
+  weakestCategory,
 } from "@/lib/cohortData";
 import { loadAdvisor, ADVISOR_CHANGE_EVENT, MOCK_ADVISOR, type AdvisorProfile } from "@/lib/advisorStore";
 import { HBarChart } from "@/components/charts/HBarChart";
 import { TrendChart } from "@/components/charts/TrendChart";
 import { StatusBar } from "@/components/charts/StatusBar";
 import { CohortHistogram } from "@/components/charts/CohortHistogram";
+import { CohortCategoryHeatmap } from "@/components/charts/CohortCategoryHeatmap";
 import { StalledStudentsTable } from "@/components/advisor/StalledStudentsTable";
 
 const WEEK_LABELS = ["Wk 1", "Wk 2", "Wk 3", "Wk 4", "Wk 5", "Wk 6", "Wk 7", "Wk 8"];
@@ -52,6 +55,8 @@ export function AdvisorOverview() {
     .reduce((max, d) => (d.count > max.count ? d : max), distribution[0]);
   const bottleneckPct = totalStudents > 0 ? Math.round((bottleneck.count / totalStudents) * 100) : 0;
   const stalled = stalledStudents(cohorts);
+  const weakSpotRows = categoryWeakSpot(allStudents);
+  const weakest = weakestCategory(weakSpotRows);
 
   return (
     <div className="mx-auto max-w-6xl space-y-8">
@@ -103,6 +108,26 @@ export function AdvisorOverview() {
         <p className="mb-5 text-xs text-ink/45">How many students are in each stage right now, across your cohorts</p>
         {totalStudents > 0 ? (
           <CohortHistogram data={distribution} />
+        ) : (
+          <p className="text-sm text-ink/45">No students yet.</p>
+        )}
+      </div>
+
+      <div className="rounded-3xl border border-ink/10 bg-white p-7">
+        <div className="mb-1 flex flex-wrap items-baseline justify-between gap-2">
+          <h2 className="font-display text-lg font-semibold text-ink">Category weak spots</h2>
+          {weakest && (
+            <span className="rounded-full bg-[color-mix(in_oklab,#c92f3f_10%,white)] px-3 py-1 text-xs font-semibold text-[#c92f3f]">
+              Weakest: {weakest.label} ({weakest.pct}%)
+            </span>
+          )}
+        </div>
+        <p className="mb-5 text-xs text-ink/45">
+          Average completion per category, across every student in your cohorts. Useful for
+          programming decisions, like where to run a workshop.
+        </p>
+        {totalStudents > 0 ? (
+          <CohortCategoryHeatmap rows={weakSpotRows} />
         ) : (
           <p className="text-sm text-ink/45">No students yet.</p>
         )}

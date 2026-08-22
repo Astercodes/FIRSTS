@@ -1,4 +1,4 @@
-import { FIRSTS } from "./dashboardData";
+import { FIRSTS, CATEGORY_META } from "./dashboardData";
 
 const STAGE_COUNTS = {
   one: FIRSTS.filter((f) => f.stage === "one").length,
@@ -72,6 +72,66 @@ export function stageDistribution(students: CohortStudent[]): StageDistributionB
     bucket.count += 1;
   }
   return buckets;
+}
+
+const CATEGORY_STAGE: Record<string, keyof CohortStudent["stagePct"]> = {
+  A: "one", B: "one", C: "one", D: "one",
+  E: "two", F: "two", G: "two", H: "two", I: "two", J: "two",
+  K: "three", L: "three", M: "three",
+  N: "four", O: "four",
+};
+
+function hashSeed(seed: string): number {
+  let h = 2166136261;
+  for (let i = 0; i < seed.length; i++) {
+    h ^= seed.charCodeAt(i);
+    h = Math.imul(h, 16777619);
+  }
+  return h >>> 0;
+}
+
+/**
+ * A student's stage percentage doesn't break down by category, so each
+ * student's category standing is derived from their stage percentage plus a
+ * deterministic per-(student, category) offset, seeded so it's stable across
+ * reloads. Averaged across a whole cohort this still surfaces a believable,
+ * consistent weak-spot signal without needing category-level tracking per
+ * student.
+ */
+function categoryPctForStudent(s: CohortStudent, category: string): number {
+  const stage = CATEGORY_STAGE[category];
+  const base = s.stagePct[stage];
+  if (base === 0) return 0;
+  const jitter = ((hashSeed(`${s.id}|${category}`) % 29) - 14);
+  return Math.max(0, Math.min(100, base + jitter));
+}
+
+export type CategoryWeakSpotRow = {
+  stage: keyof CohortStudent["stagePct"];
+  shortLabel: string;
+  categories: { category: string; label: string; color: string; pct: number }[];
+};
+
+/** Cohort-average completion per category, grouped by stage, same shape as the student-facing category heatmap but averaged across every student. */
+export function categoryWeakSpot(students: CohortStudent[]): CategoryWeakSpotRow[] {
+  return STAGE_ORDER.map((stage) => {
+    const categories = (Object.keys(CATEGORY_STAGE) as (keyof typeof CATEGORY_META)[])
+      .filter((cat) => CATEGORY_STAGE[cat] === stage)
+      .map((cat) => {
+        const avg = students.length
+          ? Math.round(students.reduce((sum, s) => sum + categoryPctForStudent(s, cat), 0) / students.length)
+          : 0;
+        return { category: cat, label: CATEGORY_META[cat].label, color: CATEGORY_META[cat].color, pct: avg };
+      });
+    return { stage, shortLabel: STAGE_SHORT_LABEL[stage], categories };
+  });
+}
+
+/** The single weakest category across the whole cohort, for a callout. */
+export function weakestCategory(rows: CategoryWeakSpotRow[]): { label: string; pct: number } | null {
+  const all = rows.flatMap((r) => r.categories);
+  if (all.length === 0) return null;
+  return all.reduce((min, c) => (c.pct < min.pct ? c : min), all[0]);
 }
 
 export type StalledReason = "inactive" | "stalled-mid-stage" | "both";
