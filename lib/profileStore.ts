@@ -8,6 +8,12 @@ export type Profile = {
   location: string;
   linkedin: string;
   photo: string | null;
+  /** Only collected if the student opts in to the "Others like you" peer comparison. */
+  major?: string;
+  gradYear?: string;
+  peerCompareOptIn?: boolean;
+  /** Whether the student has chosen to make their portfolio viewable via a public link. */
+  portfolioPublic?: boolean;
 };
 
 const KEY = "firsts:profile";

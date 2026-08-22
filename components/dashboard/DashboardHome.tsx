@@ -9,8 +9,10 @@ import { CategoryHeatmap } from "@/components/dashboard/CategoryHeatmap";
 import { VelocityChart } from "@/components/dashboard/VelocityChart";
 import { StreakCard } from "@/components/dashboard/StreakCard";
 import { TimeInvestedCard } from "@/components/dashboard/TimeInvestedCard";
+import { MomentumStories } from "@/components/dashboard/MomentumStories";
+import { PeerCompareCard } from "@/components/dashboard/PeerCompareCard";
 import { useFirstsWithProgress } from "@/lib/progressStore";
-import { completionStats, stageProgress, categoryProgressByStage } from "@/lib/dashboardData";
+import { completionStats, stageProgress, categoryProgressByStage, STAGES } from "@/lib/dashboardData";
 import { habitStreak, weeklyVelocity, timeInvested, isDeceleration } from "@/lib/momentum";
 
 export function DashboardHome() {
@@ -29,6 +31,10 @@ export function DashboardHome() {
   const weeklyAvg = velocityWeeks.reduce((s, w) => s + w.count, 0) / velocityWeeks.length;
   const bestWeek = Math.max(...velocityWeeks.map((w) => w.count));
   const last4Weeks = velocityWeeks.slice(-4).reduce((s, w) => s + w.count, 0);
+
+  const compareStageId = continueModule?.stage ?? "one";
+  const compareStage = stages.find((s) => s.stage === compareStageId)!;
+  const compareStageLabel = STAGES.find((s) => s.id === compareStageId)!.label;
 
   return (
     <div className="mx-auto max-w-6xl space-y-6">
@@ -92,6 +98,15 @@ export function DashboardHome() {
         <div className="grid grid-rows-2 gap-6 lg:col-span-2">
           <StreakCard streak={streak} />
           <TimeInvestedCard data={timeStats} />
+        </div>
+      </div>
+
+      <div className="grid gap-6 lg:grid-cols-5">
+        <div className="lg:col-span-3">
+          <MomentumStories />
+        </div>
+        <div className="lg:col-span-2">
+          <PeerCompareCard stage={compareStageId} stageLabel={compareStageLabel} pct={compareStage.pct} />
         </div>
       </div>
 

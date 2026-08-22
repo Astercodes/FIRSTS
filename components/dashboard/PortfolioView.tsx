@@ -6,6 +6,12 @@ import { useFirstsWithProgress } from "@/lib/progressStore";
 import { CATEGORY_META, MOCK_USER, completionStats } from "@/lib/dashboardData";
 import { PORTFOLIO_PIECES, effectiveAnswers } from "@/lib/portfolioContent";
 import { loadProfile, saveProfile, processPhoto, type Profile } from "@/lib/profileStore";
+import { Switch } from "@/components/ui/Switch";
+
+export function portfolioSlug(name: string): string {
+  const slug = name.trim().toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "");
+  return slug || "your-portfolio";
+}
 
 type ResolvedPiece = {
   moduleId: number;
@@ -37,11 +43,12 @@ const VALUE_CHIP_COLORS = [
   "var(--tropical-mango)",
 ];
 
-export function PortfolioView() {
+export function PortfolioView({ publicMode = false }: { publicMode?: boolean }) {
   const modules = useFirstsWithProgress();
   const stats = completionStats(modules);
   const [pieces, setPieces] = useState<ResolvedPiece[] | null>(null);
   const [copyState, setCopyState] = useState<"idle" | "copied">("idle");
+  const [linkCopyState, setLinkCopyState] = useState<"idle" | "copied">("idle");
   const [profile, setProfile] = useState<Profile>(EMPTY_PROFILE);
   const [editingProfile, setEditingProfile] = useState(false);
   const first = useRef(true);
@@ -81,6 +88,19 @@ export function PortfolioView() {
 
   function updateProfile<K extends keyof Profile>(key: K, value: Profile[K]) {
     setProfile((prev) => ({ ...prev, [key]: value }));
+  }
+
+  function togglePublic(v: boolean) {
+    updateProfile("portfolioPublic", v);
+  }
+
+  function handleCopyLink() {
+    const slug = portfolioSlug(profile.name || MOCK_USER.firstName);
+    const url = `${window.location.origin}/p/${slug}`;
+    navigator.clipboard.writeText(url).then(() => {
+      setLinkCopyState("copied");
+      setTimeout(() => setLinkCopyState("idle"), 1800);
+    });
   }
 
   async function handlePhotoChange(e: React.ChangeEvent<HTMLInputElement>) {
@@ -138,35 +158,80 @@ export function PortfolioView() {
   const highlight = getPiece(53);
   const valueList = values.text.split(".")[0]?.split(",").map((v) => v.trim()).filter(Boolean) ?? [];
 
+  const shareSlug = portfolioSlug(profile.name || MOCK_USER.firstName);
+
   return (
     <div className="mx-auto max-w-4xl">
-      <div className="mb-6 flex flex-col items-start justify-between gap-4 sm:flex-row sm:items-center print:hidden">
-        <div>
+      {publicMode ? (
+        <div className="mb-6 print:hidden">
           <p className="text-xs font-semibold uppercase tracking-[0.15em] text-ink/45">
-            Career Portfolio
+            Public portfolio
           </p>
           <p className="mt-1 text-sm text-ink/55">
-            {stats.complete} of {stats.total} FIRSTS complete. This is exactly what prints, so
-            fill in your profile and personalize each section before you send it anywhere.
+            {displayName} chose to share this portfolio via a public link.
           </p>
         </div>
-        <div className="flex shrink-0 gap-2">
-          <button
-            type="button"
-            onClick={handleCopy}
-            className="rounded-full border border-ink/15 px-4 py-2 text-sm font-semibold text-ink/75 transition-colors hover:border-ink/30"
-          >
-            {copyState === "copied" ? "Copied" : "Copy as text"}
-          </button>
-          <button
-            type="button"
-            onClick={() => window.print()}
-            className="rounded-full bg-ink px-4 py-2 text-sm font-semibold text-paper transition-colors hover:bg-ink/85"
-          >
-            Print / Save as PDF
-          </button>
-        </div>
-      </div>
+      ) : (
+        <>
+          <div className="mb-6 flex flex-col items-start justify-between gap-4 sm:flex-row sm:items-center print:hidden">
+            <div>
+              <p className="text-xs font-semibold uppercase tracking-[0.15em] text-ink/45">
+                Career Portfolio
+              </p>
+              <p className="mt-1 text-sm text-ink/55">
+                {stats.complete} of {stats.total} FIRSTS complete. This is exactly what prints, so
+                fill in your profile and personalize each section before you send it anywhere.
+              </p>
+            </div>
+            <div className="flex shrink-0 gap-2">
+              <button
+                type="button"
+                onClick={handleCopy}
+                className="rounded-full border border-ink/15 px-4 py-2 text-sm font-semibold text-ink/75 transition-colors hover:border-ink/30"
+              >
+                {copyState === "copied" ? "Copied" : "Copy as text"}
+              </button>
+              <button
+                type="button"
+                onClick={() => window.print()}
+                className="rounded-full bg-ink px-4 py-2 text-sm font-semibold text-paper transition-colors hover:bg-ink/85"
+              >
+                Print / Save as PDF
+              </button>
+            </div>
+          </div>
+
+          <div className="mb-6 flex flex-col items-start justify-between gap-3 rounded-2xl border border-ink/8 bg-white p-5 sm:flex-row sm:items-center print:hidden">
+            <div className="flex items-center gap-3">
+              <Switch checked={!!profile.portfolioPublic} onChange={togglePublic} label="" />
+              <div>
+                <p className="text-sm font-semibold text-ink">Make my portfolio public</p>
+                <p className="text-xs text-ink/45">
+                  Anyone with the link can view a read-only version. Off by default.
+                </p>
+              </div>
+            </div>
+            {profile.portfolioPublic && (
+              <div className="flex shrink-0 items-center gap-2">
+                <Link
+                  href={`/p/${shareSlug}`}
+                  target="_blank"
+                  className="rounded-full border border-ink/15 px-4 py-2 text-xs font-semibold text-ink/70 transition-colors hover:border-ink/30"
+                >
+                  Preview
+                </Link>
+                <button
+                  type="button"
+                  onClick={handleCopyLink}
+                  className="rounded-full bg-ink px-4 py-2 text-xs font-semibold text-paper transition-colors hover:bg-ink/85"
+                >
+                  {linkCopyState === "copied" ? "Link copied" : "Copy link"}
+                </button>
+              </div>
+            )}
+          </div>
+        </>
+      )}
 
       {/* The printable page. Everything inside this panel is exactly what gets exported. */}
       <div className="portfolio-page relative overflow-hidden rounded-3xl border border-ink/8 bg-white shadow-sm print:rounded-none print:border-0 print:shadow-none">
@@ -198,9 +263,10 @@ export function PortfolioView() {
               <div className="group relative">
                 <button
                   type="button"
-                  onClick={() => fileInputRef.current?.click()}
+                  onClick={() => !publicMode && fileInputRef.current?.click()}
                   className="relative flex h-24 w-24 items-center justify-center overflow-hidden rounded-full ring-4 ring-white transition-opacity print:pointer-events-none print:ring-2 print:ring-ink/10"
                   aria-label="Upload profile photo"
+                  disabled={publicMode}
                 >
                   {profile.photo ? (
                     // eslint-disable-next-line @next/next/no-img-element
@@ -208,20 +274,24 @@ export function PortfolioView() {
                   ) : (
                     <FictionalPersonIcon className="h-full w-full" />
                   )}
-                  <span className="absolute inset-0 hidden items-center justify-center bg-ink/50 text-[11px] font-semibold text-paper opacity-0 transition-opacity group-hover:opacity-100 sm:flex print:hidden">
-                    {profile.photo ? "Change" : "Add photo"}
-                  </span>
+                  {!publicMode && (
+                    <span className="absolute inset-0 hidden items-center justify-center bg-ink/50 text-[11px] font-semibold text-paper opacity-0 transition-opacity group-hover:opacity-100 sm:flex print:hidden">
+                      {profile.photo ? "Change" : "Add photo"}
+                    </span>
+                  )}
                 </button>
-                <input
-                  ref={fileInputRef}
-                  type="file"
-                  accept="image/*"
-                  onChange={handlePhotoChange}
-                  className="hidden"
-                />
+                {!publicMode && (
+                  <input
+                    ref={fileInputRef}
+                    type="file"
+                    accept="image/*"
+                    onChange={handlePhotoChange}
+                    className="hidden"
+                  />
+                )}
               </div>
 
-              {editingProfile ? (
+              {editingProfile && !publicMode ? (
                 <div className="mt-4 space-y-2 print:hidden">
                   <input
                     value={profile.name}
@@ -282,13 +352,15 @@ export function PortfolioView() {
                       <p>Add your contact details.</p>
                     )}
                   </div>
-                  <button
-                    type="button"
-                    onClick={() => setEditingProfile(true)}
-                    className="mt-3 text-[11px] font-semibold text-ink/40 underline decoration-ink/15 underline-offset-4 transition-colors hover:text-ink/70 print:hidden"
-                  >
-                    Edit profile
-                  </button>
+                  {!publicMode && (
+                    <button
+                      type="button"
+                      onClick={() => setEditingProfile(true)}
+                      className="mt-3 text-[11px] font-semibold text-ink/40 underline decoration-ink/15 underline-offset-4 transition-colors hover:text-ink/70 print:hidden"
+                    >
+                      Edit profile
+                    </button>
+                  )}
                 </>
               )}
 
@@ -438,8 +510,9 @@ export function PortfolioView() {
       </div>
 
       <p className="mt-4 text-center text-xs text-ink/40 print:hidden">
-        Everything here is stored on this device only. Nothing is shared until you copy, print,
-        or save it yourself.
+        {publicMode
+          ? "This is a public, read-only view. Nothing here can be edited from this page."
+          : "Everything here is stored on this device only. Nothing is shared until you copy, print, or make it public."}
       </p>
     </div>
   );

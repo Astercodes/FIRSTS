@@ -2,14 +2,17 @@
 
 import Link from "next/link";
 import { FirstsList } from "@/components/dashboard/FirstsList";
+import { PaceBandPill } from "@/components/dashboard/PaceBandPill";
 import { useFirstsWithProgress } from "@/lib/progressStore";
 import { STAGES, completionStats, type StageId } from "@/lib/dashboardData";
+import { paceBand } from "@/lib/socialProof";
 
 export function StageOverview({ stage }: { stage: StageId }) {
   const allModules = useFirstsWithProgress();
   const modules = allModules.filter((m) => m.stage === stage);
   const stats = completionStats(modules);
   const current = STAGES.find((s) => s.id === stage)!;
+  const band = paceBand(stage, stats.pct);
 
   return (
     <div className="mx-auto max-w-4xl space-y-6">
@@ -34,10 +37,13 @@ export function StageOverview({ stage }: { stage: StageId }) {
         <h1 className="mt-1 font-display text-3xl font-semibold tracking-tight text-ink">
           {current.shortLabel}
         </h1>
-        <p className="mt-2 text-[15px] text-ink/55">
-          {stats.complete} of {stats.total} FIRSTS complete. Tap any
-          unlocked module to open it.
-        </p>
+        <div className="mt-2 flex flex-wrap items-center gap-3">
+          <p className="text-[15px] text-ink/55">
+            {stats.complete} of {stats.total} FIRSTS complete. Tap any
+            unlocked module to open it.
+          </p>
+          {band && <PaceBandPill band={band} />}
+        </div>
       </div>
       <FirstsList
         modules={modules}
