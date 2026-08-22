@@ -10,12 +10,14 @@ import {
   cohortWatchCount,
   institutionWeeklyTrend,
   stageDistribution,
+  stalledStudents,
 } from "@/lib/cohortData";
 import { loadAdvisor, ADVISOR_CHANGE_EVENT, MOCK_ADVISOR, type AdvisorProfile } from "@/lib/advisorStore";
 import { HBarChart } from "@/components/charts/HBarChart";
 import { TrendChart } from "@/components/charts/TrendChart";
 import { StatusBar } from "@/components/charts/StatusBar";
 import { CohortHistogram } from "@/components/charts/CohortHistogram";
+import { StalledStudentsTable } from "@/components/advisor/StalledStudentsTable";
 
 const WEEK_LABELS = ["Wk 1", "Wk 2", "Wk 3", "Wk 4", "Wk 5", "Wk 6", "Wk 7", "Wk 8"];
 
@@ -49,6 +51,7 @@ export function AdvisorOverview() {
     .filter((d) => d.key !== "complete")
     .reduce((max, d) => (d.count > max.count ? d : max), distribution[0]);
   const bottleneckPct = totalStudents > 0 ? Math.round((bottleneck.count / totalStudents) * 100) : 0;
+  const stalled = stalledStudents(cohorts);
 
   return (
     <div className="mx-auto max-w-6xl space-y-8">
@@ -67,6 +70,8 @@ export function AdvisorOverview() {
         <StatCard label="Active in the last 7 days" value={String(totalActive)} color="#1a8f3c" />
         <StatCard label="At-risk (21+ days inactive)" value={String(totalAtRisk)} color="#c92f3f" />
       </div>
+
+      <StalledStudentsTable students={stalled} />
 
       <div className="grid gap-6 lg:grid-cols-5">
         <div className="rounded-3xl border border-ink/10 bg-white p-7 lg:col-span-3">

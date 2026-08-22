@@ -74,6 +74,67 @@ export function stageDistribution(students: CohortStudent[]): StageDistributionB
   return buckets;
 }
 
+export type StalledReason = "inactive" | "stalled-mid-stage" | "both";
+
+export type StalledStudent = CohortStudent & {
+  cohortId: string;
+  cohortName: string;
+  currentStage: keyof CohortStudent["stagePct"] | "complete";
+  currentStagePct: number;
+  reason: StalledReason;
+  reasonLabel: string;
+  riskScore: number;
+};
+
+const INACTIVE_THRESHOLD_DAYS = 14;
+const STALLED_MID_STAGE_THRESHOLD_DAYS = 5;
+
+/**
+ * Students inactive 14+ days, or who clearly began their current stage
+ * (non-zero progress in it) but haven't touched it in 5+ days. Ranked by
+ * days inactive, the plainest, most explainable risk signal available.
+ */
+export function stalledStudents(cohorts: Cohort[]): StalledStudent[] {
+  const flagged: StalledStudent[] = [];
+
+  for (const cohort of cohorts) {
+    for (const s of cohort.students) {
+      const currentStage = studentCurrentStage(s);
+      const currentStagePct = currentStage === "complete" ? 100 : s.stagePct[currentStage];
+
+      const inactive = s.daysInactive >= INACTIVE_THRESHOLD_DAYS;
+      const stalledMidStage =
+        currentStage !== "complete" &&
+        currentStagePct > 0 &&
+        currentStagePct < 100 &&
+        s.daysInactive >= STALLED_MID_STAGE_THRESHOLD_DAYS;
+
+      if (!inactive && !stalledMidStage) continue;
+
+      const reason: StalledReason = inactive && stalledMidStage ? "both" : inactive ? "inactive" : "stalled-mid-stage";
+      const reasonLabel =
+        reason === "both"
+          ? `Inactive ${s.daysInactive}d, stalled mid-${STAGE_SHORT_LABEL[currentStage as keyof CohortStudent["stagePct"]]}`
+          : reason === "inactive"
+          ? `Inactive ${s.daysInactive}d`
+          : `Started ${STAGE_SHORT_LABEL[currentStage as keyof CohortStudent["stagePct"]]}, no progress ${s.daysInactive}d`;
+
+      flagged.push({
+        ...s,
+        cohortId: cohort.id,
+        cohortName: cohort.name,
+        currentStage,
+        currentStagePct,
+        reason,
+        reasonLabel,
+        riskScore: s.daysInactive,
+      });
+    }
+  }
+
+  return flagged.sort((a, b) => b.riskScore - a.riskScore);
+}
+
 export function isAtRisk(s: CohortStudent): boolean {
   return s.daysInactive >= 21;
 }
