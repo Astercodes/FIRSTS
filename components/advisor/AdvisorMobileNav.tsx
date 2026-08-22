@@ -25,6 +25,7 @@ export function AdvisorMobileNav() {
   const role = advisor?.role ?? MOCK_ADVISOR.role;
   const items = [
     { label: "Overview", href: "/advisor" },
+    { label: "Segments", href: "/advisor/segments" },
     ...(role === "Institution Admin" ? [{ label: "Campus-wide view", href: "/institution" }] : []),
     ...cohortsForInstitution(institution).map((c) => ({ label: c.name, href: `/advisor/cohorts/${c.id}` })),
   ];

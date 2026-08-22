@@ -45,6 +45,11 @@ export function AdvisorSidebar() {
           Overview
         </NavLink>
 
+        <NavLink href="/advisor/segments" active={pathname === "/advisor/segments"}>
+          <FilterIcon className="h-[18px] w-[18px]" />
+          Segments
+        </NavLink>
+
         {role === "Institution Admin" && (
           <NavLink href="/institution" active={pathname.startsWith("/institution")}>
             <BuildingIcon className="h-[18px] w-[18px]" />
@@ -112,6 +117,14 @@ function GridIcon({ className }: IconProps) {
       <rect x="13.5" y="3.5" width="7" height="7" rx="1.5" stroke="currentColor" />
       <rect x="3.5" y="13.5" width="7" height="7" rx="1.5" stroke="currentColor" />
       <rect x="13.5" y="13.5" width="7" height="7" rx="1.5" stroke="currentColor" />
+    </svg>
+  );
+}
+
+function FilterIcon({ className }: IconProps) {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" strokeWidth={1.7} className={className}>
+      <path d="M4 5h16l-6 7v6l-4 2v-8L4 5Z" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" />
     </svg>
   );
 }
