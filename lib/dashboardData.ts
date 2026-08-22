@@ -168,11 +168,11 @@ const STAGE_FOUR_FIRSTS: FirstModule[] = [
   { id: 96, code: "E18", stage: "four", title: "Affirmation Practice", category: "N", time: "2 min", difficulty: "Easy", status: "locked" },
   { id: 97, code: "E19", stage: "four", title: "Networking/Skill Challenge", category: "N", time: "2 hrs", difficulty: "Easy", status: "locked" },
   { id: 98, code: "E20", stage: "four", title: "Productivity Tool Setup", category: "N", time: "2 hrs", difficulty: "Moderate", status: "locked" },
-  { id: 99, code: "F1", stage: "four", title: "Side Project", category: "O", time: "Several wks", difficulty: "Deep", status: "locked" },
+  { id: 99, code: "F1", stage: "four", title: "Side Project", category: "O", time: "Several wks", difficulty: "Deep", status: "complete", thoroughness: 3, completedAt: "2026-08-10" },
   { id: 100, code: "F2", stage: "four", title: "Volunteer/Impact Experience", category: "O", time: "1 semester", difficulty: "Deep", status: "locked" },
   { id: 101, code: "F3", stage: "four", title: "Certification/Badge", category: "O", time: "10 to 20 hrs", difficulty: "Moderate", status: "locked" },
   { id: 102, code: "F4", stage: "four", title: "Strategic Goal Sheet", category: "O", time: "1 hr", difficulty: "Moderate", status: "locked" },
-  { id: 103, code: "F5", stage: "four", title: "Thought Leadership Post", category: "O", time: "3 to 5 hrs", difficulty: "Deep", status: "locked" },
+  { id: 103, code: "F5", stage: "four", title: "Thought Leadership Post", category: "O", time: "3 to 5 hrs", difficulty: "Deep", status: "complete", thoroughness: 3, completedAt: "2026-07-23" },
 ];
 
 const STAGE_FIVE_FIRSTS: FirstModule[] = [

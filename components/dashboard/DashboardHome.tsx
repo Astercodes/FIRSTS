@@ -11,9 +11,11 @@ import { StreakCard } from "@/components/dashboard/StreakCard";
 import { TimeInvestedCard } from "@/components/dashboard/TimeInvestedCard";
 import { MomentumStories } from "@/components/dashboard/MomentumStories";
 import { PeerCompareCard } from "@/components/dashboard/PeerCompareCard";
+import { BadgeShelf } from "@/components/dashboard/BadgeShelf";
 import { useFirstsWithProgress } from "@/lib/progressStore";
 import { completionStats, stageProgress, categoryProgressByStage, STAGES } from "@/lib/dashboardData";
 import { habitStreak, weeklyVelocity, timeInvested, isDeceleration } from "@/lib/momentum";
+import { allBadges } from "@/lib/badges";
 
 export function DashboardHome() {
   const allModules = useFirstsWithProgress();
@@ -35,6 +37,8 @@ export function DashboardHome() {
   const compareStageId = continueModule?.stage ?? "one";
   const compareStage = stages.find((s) => s.stage === compareStageId)!;
   const compareStageLabel = STAGES.find((s) => s.id === compareStageId)!.label;
+
+  const badges = allBadges(allModules);
 
   return (
     <div className="mx-auto max-w-6xl space-y-6">
@@ -135,6 +139,8 @@ export function DashboardHome() {
           </div>
         </div>
       </div>
+
+      <BadgeShelf stage={badges.stage} standout={badges.standout} />
 
       <div className="grid gap-6 lg:grid-cols-3">
         <div className="lg:col-span-2">
