@@ -26,6 +26,7 @@ export function AdvisorMobileNav() {
   const items = [
     { label: "Overview", href: "/advisor" },
     { label: "Segmentation", href: "/advisor/segments" },
+    { label: "Workload", href: "/advisor/workload" },
     ...(role === "Institution Admin" ? [{ label: "Campus-wide view", href: "/institution" }] : []),
     ...cohortsForInstitution(institution).map((c) => ({ label: c.name, href: `/advisor/cohorts/${c.id}` })),
   ];

@@ -50,6 +50,11 @@ export function AdvisorSidebar() {
           Segmentation
         </NavLink>
 
+        <NavLink href="/advisor/workload" active={pathname === "/advisor/workload"}>
+          <ClipboardIcon className="h-[18px] w-[18px]" />
+          Workload
+        </NavLink>
+
         {role === "Institution Admin" && (
           <NavLink href="/institution" active={pathname.startsWith("/institution")}>
             <BuildingIcon className="h-[18px] w-[18px]" />
@@ -125,6 +130,16 @@ function FilterIcon({ className }: IconProps) {
   return (
     <svg viewBox="0 0 24 24" fill="none" strokeWidth={1.7} className={className}>
       <path d="M4 5h16l-6 7v6l-4 2v-8L4 5Z" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" />
+    </svg>
+  );
+}
+
+function ClipboardIcon({ className }: IconProps) {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" strokeWidth={1.7} className={className}>
+      <rect x="5.5" y="4.5" width="13" height="16" rx="1.5" stroke="currentColor" />
+      <path d="M9 4.5V4a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v.5" stroke="currentColor" strokeLinecap="round" />
+      <path d="M8.5 11h7M8.5 14.5h7M8.5 18h4" stroke="currentColor" strokeLinecap="round" />
     </svg>
   );
 }
