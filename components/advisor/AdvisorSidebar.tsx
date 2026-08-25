@@ -47,7 +47,7 @@ export function AdvisorSidebar() {
 
         <NavLink href="/advisor/segments" active={pathname === "/advisor/segments"}>
           <FilterIcon className="h-[18px] w-[18px]" />
-          Segments
+          Segmentation
         </NavLink>
 
         {role === "Institution Admin" && (

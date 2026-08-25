@@ -59,6 +59,10 @@ export function SegmentsView() {
   const [selected, setSelected] = useState<Set<string>>(new Set());
   const [cohortName, setCohortName] = useState("");
   const [expandedCustom, setExpandedCustom] = useState<string | null>(null);
+  const [showAllStudents, setShowAllStudents] = useState(false);
+
+  const COLLAPSED_ROWS = 50;
+  const visibleStudents = showAllStudents ? filtered : filtered.slice(0, COLLAPSED_ROWS);
 
   function toggleOne(key: string) {
     setSelected((prev) => {
@@ -71,7 +75,7 @@ export function SegmentsView() {
 
   function toggleAllVisible() {
     setSelected((prev) => {
-      const visibleKeys = filtered.map(studentKey);
+      const visibleKeys = visibleStudents.map(studentKey);
       const allSelected = visibleKeys.every((k) => prev.has(k));
       const next = new Set(prev);
       if (allSelected) {
@@ -97,11 +101,53 @@ export function SegmentsView() {
           {institution}
         </p>
         <h1 className="mt-1.5 font-display text-3xl font-semibold tracking-tight text-ink">
-          Segments
+          Segmentation
         </h1>
         <p className="mt-2 text-sm text-ink/55">
           Filter your students into populations, cross-reference stall risk against groups your
           institution prioritizes, and save ad hoc groups to track as a unit.
+        </p>
+      </div>
+
+      <div className="rounded-3xl border border-ink/10 bg-white p-7">
+        <h2 className="mb-1 font-display text-lg font-semibold text-ink">At-risk population overlay</h2>
+        <p className="mb-5 text-xs text-ink/45">
+          Stall rate within each priority population, against the {overlay.baselineStalledPct}% institution-wide
+          baseline. A gap here is an equity signal, not just an engagement one.
+        </p>
+        <div className="space-y-3">
+          {overlay.rows.map((row) => (
+            <div key={row.key}>
+              <div className="mb-1 flex items-baseline justify-between gap-2">
+                <span className="text-sm font-medium text-ink/70">
+                  {row.label} <span className="text-xs text-ink/40">({row.populationCount} students)</span>
+                </span>
+                <span className="text-sm font-bold tabular-nums text-ink">
+                  {row.stalledPct}%
+                  <span className="ml-1 text-xs font-normal text-ink/40">
+                    {row.stalledPct > overlay.baselineStalledPct ? "above" : row.stalledPct < overlay.baselineStalledPct ? "below" : "at"} baseline
+                  </span>
+                </span>
+              </div>
+              <div className="relative h-2.5 w-full overflow-hidden rounded-full bg-ink/6">
+                <div
+                  className="h-full rounded-full"
+                  style={{
+                    width: `${Math.max(row.stalledPct, row.stalledPct > 0 ? 2 : 0)}%`,
+                    background: row.stalledPct > overlay.baselineStalledPct ? "#c92f3f" : "var(--berry-burst)",
+                  }}
+                />
+                <div
+                  className="absolute top-0 h-full w-px bg-ink/40"
+                  style={{ left: `${overlay.baselineStalledPct}%` }}
+                  title={`Baseline: ${overlay.baselineStalledPct}%`}
+                />
+              </div>
+            </div>
+          ))}
+        </div>
+        <p className="mt-4 text-xs text-ink/40">
+          The vertical mark on each bar is the institution-wide baseline stall rate.
         </p>
       </div>
 
@@ -196,7 +242,7 @@ export function SegmentsView() {
               </tr>
             </thead>
             <tbody>
-              {filtered.slice(0, 200).map((s) => {
+              {visibleStudents.map((s) => {
                 const key = studentKey(s);
                 const badges = [
                   s.firstGen && "First-gen",
@@ -256,8 +302,19 @@ export function SegmentsView() {
         {filtered.length === 0 && (
           <p className="px-5 py-8 text-center text-sm text-ink/45">No students match these filters.</p>
         )}
-        {filtered.length > 200 && (
-          <p className="px-5 pb-4 pt-3 text-xs text-ink/40">Showing the first 200 of {filtered.length} matching students.</p>
+        {filtered.length > COLLAPSED_ROWS && (
+          <div className="flex items-center justify-between px-5 pb-4 pt-3">
+            <button
+              type="button"
+              onClick={() => setShowAllStudents((v) => !v)}
+              className="text-xs font-semibold text-berry-burst hover:underline"
+            >
+              {showAllStudents ? "Show less" : `See all ${filtered.length} →`}
+            </button>
+            {!showAllStudents && (
+              <span className="text-xs text-ink/40">Showing {COLLAPSED_ROWS} of {filtered.length}.</span>
+            )}
+          </div>
         )}
       </div>
 
@@ -287,48 +344,6 @@ export function SegmentsView() {
           </button>
         </div>
       )}
-
-      <div className="rounded-3xl border border-ink/10 bg-white p-7">
-        <h2 className="mb-1 font-display text-lg font-semibold text-ink">At-risk population overlay</h2>
-        <p className="mb-5 text-xs text-ink/45">
-          Stall rate within each priority population, against the {overlay.baselineStalledPct}% institution-wide
-          baseline. A gap here is an equity signal, not just an engagement one.
-        </p>
-        <div className="space-y-3">
-          {overlay.rows.map((row) => (
-            <div key={row.key}>
-              <div className="mb-1 flex items-baseline justify-between gap-2">
-                <span className="text-sm font-medium text-ink/70">
-                  {row.label} <span className="text-xs text-ink/40">({row.populationCount} students)</span>
-                </span>
-                <span className="text-sm font-bold tabular-nums text-ink">
-                  {row.stalledPct}%
-                  <span className="ml-1 text-xs font-normal text-ink/40">
-                    {row.stalledPct > overlay.baselineStalledPct ? "above" : row.stalledPct < overlay.baselineStalledPct ? "below" : "at"} baseline
-                  </span>
-                </span>
-              </div>
-              <div className="relative h-2.5 w-full overflow-hidden rounded-full bg-ink/6">
-                <div
-                  className="h-full rounded-full"
-                  style={{
-                    width: `${Math.max(row.stalledPct, row.stalledPct > 0 ? 2 : 0)}%`,
-                    background: row.stalledPct > overlay.baselineStalledPct ? "#c92f3f" : "var(--berry-burst)",
-                  }}
-                />
-                <div
-                  className="absolute top-0 h-full w-px bg-ink/40"
-                  style={{ left: `${overlay.baselineStalledPct}%` }}
-                  title={`Baseline: ${overlay.baselineStalledPct}%`}
-                />
-              </div>
-            </div>
-          ))}
-        </div>
-        <p className="mt-4 text-xs text-ink/40">
-          The vertical mark on each bar is the institution-wide baseline stall rate.
-        </p>
-      </div>
 
       <div className="rounded-3xl border border-ink/10 bg-white p-7">
         <h2 className="mb-1 font-display text-lg font-semibold text-ink">Custom cohorts</h2>
