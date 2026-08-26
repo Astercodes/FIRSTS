@@ -3,7 +3,6 @@
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { cohortsForInstitution } from "@/lib/cohortData";
 import { loadAdvisor, ADVISOR_CHANGE_EVENT, MOCK_ADVISOR, type AdvisorProfile } from "@/lib/advisorStore";
 
 export function AdvisorSidebar() {
@@ -22,8 +21,6 @@ export function AdvisorSidebar() {
   }, []);
 
   const role = advisor?.role ?? MOCK_ADVISOR.role;
-  const institution = advisor?.institution || MOCK_ADVISOR.institution;
-  const cohorts = cohortsForInstitution(institution);
 
   return (
     <aside className="fixed inset-y-0 left-0 z-30 hidden w-64 flex-col bg-ink text-paper lg:flex print:hidden">
@@ -40,61 +37,39 @@ export function AdvisorSidebar() {
       </div>
 
       <nav className="flex-1 space-y-1 px-3">
-        <NavLink href="/advisor" active={pathname === "/advisor"}>
-          <GridIcon className="h-[18px] w-[18px]" />
+        <NavLink href="/advisor" active={pathname === "/advisor"} icon={<GridIcon className="h-[18px] w-[18px]" />}>
           Overview
         </NavLink>
 
-        <NavLink href="/advisor/segments" active={pathname === "/advisor/segments"}>
-          <FilterIcon className="h-[18px] w-[18px]" />
+        <NavLink href="/advisor/segments" active={pathname === "/advisor/segments"} icon={<FilterIcon className="h-[18px] w-[18px]" />}>
           Segmentation
         </NavLink>
 
-        <NavLink href="/advisor/workload" active={pathname === "/advisor/workload"}>
-          <ClipboardIcon className="h-[18px] w-[18px]" />
+        <NavLink href="/advisor/workload" active={pathname === "/advisor/workload"} icon={<ClipboardIcon className="h-[18px] w-[18px]" />}>
           Workload
         </NavLink>
 
-        <NavLink href="/advisor/outcomes" active={pathname === "/advisor/outcomes"}>
-          <TargetIcon className="h-[18px] w-[18px]" />
+        <NavLink href="/advisor/outcomes" active={pathname === "/advisor/outcomes"} icon={<TargetIcon className="h-[18px] w-[18px]" />}>
           Outcomes
         </NavLink>
 
-        <NavLink href="/advisor/programming" active={pathname === "/advisor/programming"}>
-          <CalendarIcon className="h-[18px] w-[18px]" />
+        <NavLink href="/advisor/programming" active={pathname === "/advisor/programming"} icon={<CalendarIcon className="h-[18px] w-[18px]" />}>
           Programming
         </NavLink>
 
-        <NavLink href="/advisor/reporting" active={pathname === "/advisor/reporting"}>
-          <ReportIcon className="h-[18px] w-[18px]" />
+        <NavLink href="/advisor/reporting" active={pathname === "/advisor/reporting"} icon={<ReportIcon className="h-[18px] w-[18px]" />}>
           Reporting
         </NavLink>
 
-        <NavLink href="/advisor/communication" active={pathname === "/advisor/communication"}>
-          <MessageIcon className="h-[18px] w-[18px]" />
+        <NavLink href="/advisor/communication" active={pathname === "/advisor/communication"} icon={<MessageIcon className="h-[18px] w-[18px]" />}>
           Communication
         </NavLink>
 
         {role === "Institution Admin" && (
-          <NavLink href="/institution" active={pathname.startsWith("/institution")}>
-            <BuildingIcon className="h-[18px] w-[18px]" />
+          <NavLink href="/institution" active={pathname.startsWith("/institution")} icon={<BuildingIcon className="h-[18px] w-[18px]" />}>
             Campus-wide view
           </NavLink>
         )}
-
-        <p className="mt-5 mb-1.5 px-3.5 text-[11px] font-semibold uppercase tracking-[0.15em] text-paper/35">
-          Your cohorts
-        </p>
-        {cohorts.map((c) => (
-          <NavLink
-            key={c.id}
-            href={`/advisor/cohorts/${c.id}`}
-            active={pathname === `/advisor/cohorts/${c.id}`}
-          >
-            <UsersIcon className="h-[18px] w-[18px]" />
-            {c.name}
-          </NavLink>
-        ))}
       </nav>
 
       <div className="border-t border-white/10 p-3">
@@ -113,10 +88,12 @@ export function AdvisorSidebar() {
 function NavLink({
   href,
   active,
+  icon,
   children,
 }: {
   href: string;
   active: boolean;
+  icon: React.ReactNode;
   children: React.ReactNode;
 }) {
   return (
@@ -128,6 +105,7 @@ function NavLink({
           : "text-paper/55 hover:bg-white/5 hover:text-paper/85"
       }`}
     >
+      {icon}
       <span className="truncate">{children}</span>
     </Link>
   );
@@ -207,17 +185,6 @@ function BuildingIcon({ className }: IconProps) {
     <svg viewBox="0 0 24 24" fill="none" strokeWidth={1.7} className={className}>
       <rect x="5" y="3.5" width="14" height="17" rx="1.5" stroke="currentColor" />
       <path d="M9 8h1M14 8h1M9 12h1M14 12h1M9 16h1M14 16h1" stroke="currentColor" strokeLinecap="round" />
-    </svg>
-  );
-}
-
-function UsersIcon({ className }: IconProps) {
-  return (
-    <svg viewBox="0 0 24 24" fill="none" strokeWidth={1.7} className={className}>
-      <circle cx="9" cy="8.5" r="3" stroke="currentColor" />
-      <path d="M3.5 19c0-3 2.5-5 5.5-5s5.5 2 5.5 5" stroke="currentColor" strokeLinecap="round" />
-      <path d="M15.5 5.5c1.5.3 2.5 1.5 2.5 3s-1 2.7-2.5 3" stroke="currentColor" strokeLinecap="round" />
-      <path d="M17 14.2c1.8.5 3 2 3 4.3" stroke="currentColor" strokeLinecap="round" />
     </svg>
   );
 }

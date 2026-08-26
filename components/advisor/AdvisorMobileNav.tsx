@@ -3,7 +3,6 @@
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { cohortsForInstitution } from "@/lib/cohortData";
 import { loadAdvisor, ADVISOR_CHANGE_EVENT, MOCK_ADVISOR, type AdvisorProfile } from "@/lib/advisorStore";
 
 export function AdvisorMobileNav() {
@@ -21,7 +20,6 @@ export function AdvisorMobileNav() {
     };
   }, []);
 
-  const institution = advisor?.institution || MOCK_ADVISOR.institution;
   const role = advisor?.role ?? MOCK_ADVISOR.role;
   const items = [
     { label: "Overview", href: "/advisor" },
@@ -32,7 +30,6 @@ export function AdvisorMobileNav() {
     { label: "Reporting", href: "/advisor/reporting" },
     { label: "Communication", href: "/advisor/communication" },
     ...(role === "Institution Admin" ? [{ label: "Campus-wide view", href: "/institution" }] : []),
-    ...cohortsForInstitution(institution).map((c) => ({ label: c.name, href: `/advisor/cohorts/${c.id}` })),
   ];
 
   return (

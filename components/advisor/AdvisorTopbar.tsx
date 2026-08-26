@@ -42,11 +42,23 @@ export function AdvisorTopbar() {
       </div>
 
       <div className="flex items-center gap-3">
-        <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full font-display text-sm font-bold text-ink"
-          style={{ background: "linear-gradient(135deg, var(--juicy-plum), var(--berry-burst))" }}
+        <Link
+          href="/advisor/profile"
+          className="flex h-9 w-9 shrink-0 items-center justify-center overflow-hidden rounded-full font-display text-sm font-bold text-ink transition-transform hover:scale-105"
+          style={
+            advisor?.photo
+              ? undefined
+              : { background: "linear-gradient(135deg, var(--juicy-plum), var(--berry-burst))" }
+          }
+          aria-label="Your profile"
         >
-          {initial}
-        </span>
+          {advisor?.photo ? (
+            // eslint-disable-next-line @next/next/no-img-element
+            <img src={advisor.photo} alt={displayName} className="h-full w-full object-cover" />
+          ) : (
+            initial
+          )}
+        </Link>
       </div>
     </header>
   );
