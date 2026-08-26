@@ -90,6 +90,11 @@ body {
     -webkit-print-color-adjust: exact;
     print-color-adjust: exact;
   }
+  .report-page {
+    color-adjust: exact;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
 }
 
 /* Custom scrollbar, thin, brand-tinted */

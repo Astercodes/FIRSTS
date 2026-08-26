@@ -65,6 +65,11 @@ export function AdvisorSidebar() {
           Programming
         </NavLink>
 
+        <NavLink href="/advisor/reporting" active={pathname === "/advisor/reporting"}>
+          <ReportIcon className="h-[18px] w-[18px]" />
+          Reporting
+        </NavLink>
+
         {role === "Institution Admin" && (
           <NavLink href="/institution" active={pathname.startsWith("/institution")}>
             <BuildingIcon className="h-[18px] w-[18px]" />
@@ -169,6 +174,16 @@ function CalendarIcon({ className }: IconProps) {
     <svg viewBox="0 0 24 24" fill="none" strokeWidth={1.7} className={className}>
       <rect x="4" y="5" width="16" height="15" rx="1.5" stroke="currentColor" />
       <path d="M4 9.5h16M8 3v3.5M16 3v3.5" stroke="currentColor" strokeLinecap="round" />
+    </svg>
+  );
+}
+
+function ReportIcon({ className }: IconProps) {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" strokeWidth={1.7} className={className}>
+      <path d="M6 3.5h9l4 4V20a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V4.5a1 1 0 0 1 1-1Z" stroke="currentColor" strokeLinejoin="round" />
+      <path d="M15 3.5V7a1 1 0 0 0 1 1h3.5" stroke="currentColor" strokeLinejoin="round" />
+      <path d="M8 13l2.5 2.5L16 10" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" />
     </svg>
   );
 }
