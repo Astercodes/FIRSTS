@@ -60,6 +60,11 @@ export function AdvisorSidebar() {
           Outcomes
         </NavLink>
 
+        <NavLink href="/advisor/programming" active={pathname === "/advisor/programming"}>
+          <CalendarIcon className="h-[18px] w-[18px]" />
+          Programming
+        </NavLink>
+
         {role === "Institution Admin" && (
           <NavLink href="/institution" active={pathname.startsWith("/institution")}>
             <BuildingIcon className="h-[18px] w-[18px]" />
@@ -155,6 +160,15 @@ function TargetIcon({ className }: IconProps) {
       <circle cx="12" cy="12" r="8" stroke="currentColor" />
       <circle cx="12" cy="12" r="4.2" stroke="currentColor" />
       <circle cx="12" cy="12" r="0.8" fill="currentColor" />
+    </svg>
+  );
+}
+
+function CalendarIcon({ className }: IconProps) {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" strokeWidth={1.7} className={className}>
+      <rect x="4" y="5" width="16" height="15" rx="1.5" stroke="currentColor" />
+      <path d="M4 9.5h16M8 3v3.5M16 3v3.5" stroke="currentColor" strokeLinecap="round" />
     </svg>
   );
 }

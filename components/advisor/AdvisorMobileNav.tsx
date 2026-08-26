@@ -28,6 +28,7 @@ export function AdvisorMobileNav() {
     { label: "Segmentation", href: "/advisor/segments" },
     { label: "Workload", href: "/advisor/workload" },
     { label: "Outcomes", href: "/advisor/outcomes" },
+    { label: "Programming", href: "/advisor/programming" },
     ...(role === "Institution Admin" ? [{ label: "Campus-wide view", href: "/institution" }] : []),
     ...cohortsForInstitution(institution).map((c) => ({ label: c.name, href: `/advisor/cohorts/${c.id}` })),
   ];
