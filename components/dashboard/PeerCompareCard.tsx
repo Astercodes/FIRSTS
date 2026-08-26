@@ -3,12 +3,25 @@
 import { useEffect, useState } from "react";
 import { Switch } from "@/components/ui/Switch";
 import { loadProfile, saveProfile } from "@/lib/profileStore";
-import { peerPaceAverage } from "@/lib/socialProof";
+import { peerPaceAverage, paceBand } from "@/lib/socialProof";
+import { PaceBandPill } from "@/components/dashboard/PaceBandPill";
 import type { StageId } from "@/lib/dashboardData";
 
 const GRAD_YEAR_OPTIONS = ["Freshman", "Sophomore", "Junior", "Senior", "Graduate student", "Early professional"];
 
-export function PeerCompareCard({ stage, stageLabel, pct }: { stage: StageId; stageLabel: string; pct: number }) {
+export function PeerCompareCard({
+  stage,
+  stageLabel,
+  pct,
+  primarySignal = false,
+}: {
+  stage: StageId;
+  stageLabel: string;
+  pct: number;
+  /** True for independent students, who have no school cohort, so this is their only social signal. Reframes the copy accordingly and surfaces the pace band alongside it. */
+  primarySignal?: boolean;
+}) {
+  const band = primarySignal ? paceBand(stage, pct) : null;
   const [optIn, setOptIn] = useState(false);
   const [major, setMajor] = useState("");
   const [gradYear, setGradYear] = useState("");
@@ -52,7 +65,7 @@ export function PeerCompareCard({ stage, stageLabel, pct }: { stage: StageId; st
       <div className="flex items-start justify-between gap-3">
         <div>
           <p className="text-xs font-semibold uppercase tracking-[0.15em] text-ink/45">
-            Others like you
+            {primarySignal ? "Students like you, across all of FIRSTS" : "Others like you"}
           </p>
           <h2 className="mt-1.5 font-display text-lg font-semibold text-ink">
             Peer pace comparison
@@ -60,6 +73,14 @@ export function PeerCompareCard({ stage, stageLabel, pct }: { stage: StageId; st
         </div>
         <Switch checked={optIn} onChange={toggleOptIn} label="" />
       </div>
+
+      {primarySignal && (
+        <p className="mt-2 text-xs leading-relaxed text-ink/40">
+          No school cohort behind your account, so this is the only social signal on your
+          dashboard: an anonymized read against everyone on FIRSTS with a similar background,
+          not just one school.
+        </p>
+      )}
 
       {!optIn && (
         <p className="mt-3 text-sm leading-relaxed text-ink/50">
@@ -102,9 +123,12 @@ export function PeerCompareCard({ stage, stageLabel, pct }: { stage: StageId; st
 
       {optIn && hasDetails && (
         <div className="mt-4 flex flex-1 flex-col justify-center">
-          <p className="text-xs text-ink/45">
-            {stageLabel} · {major}, {gradYear.toLowerCase()}
-          </p>
+          <div className="flex flex-wrap items-center gap-2">
+            <p className="text-xs text-ink/45">
+              {stageLabel} · {major}, {gradYear.toLowerCase()}
+            </p>
+            {band && <PaceBandPill band={band} />}
+          </div>
           <div className="mt-4 space-y-3">
             <PeerBar label="You" pct={pct} tone="strong" />
             <PeerBar label="Peer average" pct={peerAvg} tone="light" />

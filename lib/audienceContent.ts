@@ -45,7 +45,7 @@ export const AUDIENCES: Record<string, AudienceConfig> = {
     headline: "Your career center ",
     highlight: "already built this in.",
     subheadline:
-      "Sign in with your school email and you're auto-joined to your cohort. Work through all four stages at your own pace. Your advisor sees your completion status, never your raw reflections, unless you choose to share.",
+      `Sign in with your school email and you're auto-joined to your cohort. Work through all ${TOTAL_STAGES} stages at your own pace. Your advisor sees your completion status, never your raw reflections, unless you choose to share.`,
     primaryCta: { label: "Sign in with your school", href: "/onboarding/school" },
     secondaryCta: { label: "Not at a partner school?", href: "/for/independent-students" },
     color: "var(--neon-pink)",
@@ -83,7 +83,7 @@ export const AUDIENCES: Record<string, AudienceConfig> = {
     subheadline:
       "FIRSTS wasn't built for freshman year alone. Stage Two covers professional identity and personal brand, Stage Three covers job applications and interviews, and Stage Four covers the mindset and habits that keep you moving after you're hired.",
     primaryCta: { label: "Start free", href: "/onboarding/independent" },
-    secondaryCta: { label: "See all 4 stages", href: "/#stages" },
+    secondaryCta: { label: `See all ${TOTAL_STAGES} stages`, href: "/#stages" },
     color: "var(--sunshine-orange)",
     colorSecondary: "var(--tropical-mango)",
     stats: [
@@ -117,7 +117,7 @@ export const AUDIENCES: Record<string, AudienceConfig> = {
     headline: "Your school hasn't signed up yet. ",
     highlight: "You still can.",
     subheadline:
-      "FIRSTS doesn't require an institution. Sign up with your personal email, work through all four stages at your own pace, and build a portfolio no career center gatekeeps.",
+      `FIRSTS doesn't require an institution. Sign up with your personal email, work through all ${TOTAL_STAGES} stages at your own pace, and build a portfolio no career center gatekeeps.`,
     primaryCta: { label: "Start free", href: "/onboarding/independent" },
     secondaryCta: { label: "Tell your career center about FIRSTS", href: "/for/institutions" },
     color: "var(--citrus-lime)",
@@ -129,7 +129,7 @@ export const AUDIENCES: Record<string, AudienceConfig> = {
     ],
     features: [
       { title: "No school required", body: `An independent account gets you the identical ${TOTAL_FIRSTS} FIRSTS a partner-school student gets, nothing held back.` },
-      { title: "Self-paced, start to finish", body: "Work through all four stages in order, or switch on Free Explore Mode and jump around." },
+      { title: "Self-paced, start to finish", body: `Work through all ${TOTAL_STAGES} stages in order, or switch on Free Explore Mode and jump around.` },
       { title: "A coach on your side", body: "The same AI Coach hub, grounded in your real progress, not a stripped-down version." },
       { title: "A portfolio that travels with you", body: "Export your work and take it anywhere, it's not tied to an institution that might never sign up." },
     ],

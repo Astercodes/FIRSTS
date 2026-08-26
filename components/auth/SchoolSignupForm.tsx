@@ -11,6 +11,7 @@ import {
   searchInstitutions,
   type Institution,
 } from "@/lib/institutions";
+import { loadProfile, saveProfile } from "@/lib/profileStore";
 
 const COLOR = "var(--neon-pink)";
 const YEARS = ["Freshman", "Sophomore", "Junior", "Senior", "Graduate"];
@@ -45,6 +46,7 @@ export function SchoolSignupForm() {
 
   function handleQuizSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
+    saveProfile({ ...loadProfile(), major, gradYear: year ?? "", accountType: "partner" });
     setStep("done");
   }
 

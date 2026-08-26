@@ -8,6 +8,7 @@ import { OAuthButtons } from "@/components/auth/OAuthButtons";
 import { Divider } from "@/components/auth/Divider";
 import { PillSelect } from "@/components/auth/PillSelect";
 import { SubmitButton } from "@/components/auth/SubmitButton";
+import { loadProfile, saveProfile } from "@/lib/profileStore";
 
 const COLOR = "var(--sunshine-orange)";
 const STATUS_OPTIONS = ["Student", "Recent grad", "Early professional", "Career-changer"];
@@ -21,6 +22,7 @@ export function IndependentSignupForm() {
 
   function handleSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
+    saveProfile({ ...loadProfile(), name, status: status ?? "", accountType: "independent" });
     setDone(true);
   }
 

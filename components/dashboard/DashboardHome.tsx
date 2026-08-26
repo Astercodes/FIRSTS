@@ -1,5 +1,7 @@
 "use client";
 
+import { useEffect, useState } from "react";
+import Link from "next/link";
 import { ContinueCard } from "@/components/dashboard/ContinueCard";
 import { DueForReview } from "@/components/dashboard/DueForReview";
 import { PortfolioTeaser } from "@/components/dashboard/PortfolioTeaser";
@@ -11,14 +13,32 @@ import { StreakCard } from "@/components/dashboard/StreakCard";
 import { TimeInvestedCard } from "@/components/dashboard/TimeInvestedCard";
 import { MomentumStories } from "@/components/dashboard/MomentumStories";
 import { PeerCompareCard } from "@/components/dashboard/PeerCompareCard";
+import { GoalTracker } from "@/components/dashboard/GoalTracker";
 import { BadgeShelf } from "@/components/dashboard/BadgeShelf";
 import { useFirstsWithProgress } from "@/lib/progressStore";
 import { completionStats, stageProgress, categoryProgressByStage, STAGES } from "@/lib/dashboardData";
 import { habitStreak, weeklyVelocity, timeInvested, isDeceleration } from "@/lib/momentum";
 import { allBadges } from "@/lib/badges";
+import { loadProfile, PROFILE_CHANGE_EVENT } from "@/lib/profileStore";
 
 export function DashboardHome() {
   const allModules = useFirstsWithProgress();
+  const [isIndependent, setIsIndependent] = useState(true);
+
+  useEffect(() => {
+    function sync() {
+      const p = loadProfile();
+      setIsIndependent((p?.accountType ?? "independent") === "independent");
+    }
+    sync();
+    window.addEventListener(PROFILE_CHANGE_EVENT, sync);
+    window.addEventListener("storage", sync);
+    return () => {
+      window.removeEventListener(PROFILE_CHANGE_EVENT, sync);
+      window.removeEventListener("storage", sync);
+    };
+  }, []);
+
   const stats = completionStats(allModules);
   const stages = stageProgress(allModules);
   const categoryRows = categoryProgressByStage(allModules);
@@ -61,6 +81,8 @@ export function DashboardHome() {
           </p>
         </div>
       </div>
+
+      {isIndependent && <GoalTracker stages={stages} weeklyAvg={weeklyAvg} />}
 
       <div className="rounded-3xl border border-ink/8 bg-white p-7">
         <p className="text-xs font-semibold uppercase tracking-[0.15em] text-ink/45">
@@ -112,7 +134,12 @@ export function DashboardHome() {
           <MomentumStories />
         </div>
         <div className="lg:col-span-2">
-          <PeerCompareCard stage={compareStageId} stageLabel={compareStageLabel} pct={compareStage.pct} />
+          <PeerCompareCard
+            stage={compareStageId}
+            stageLabel={compareStageLabel}
+            pct={compareStage.pct}
+            primarySignal={isIndependent}
+          />
         </div>
       </div>
 
@@ -127,6 +154,16 @@ export function DashboardHome() {
           <div className="mt-4">
             <RadarChart stages={stages} />
           </div>
+          {isIndependent && (
+            <p className="mt-4 border-t border-ink/8 pt-4 text-xs leading-relaxed text-ink/40">
+              Every stage above is fully unlocked, nothing held back. A school partnership adds
+              an advisor who sees this same shape, plus a real cohort to compare against instead
+              of a FIRSTS-wide average.{" "}
+              <Link href="/for/institutions" className="font-semibold text-ink/60 underline decoration-ink/20 underline-offset-4 hover:text-ink">
+                Tell your career center →
+              </Link>
+            </p>
+          )}
         </div>
 
         <div className="rounded-3xl border border-ink/8 bg-white p-7 lg:col-span-3">

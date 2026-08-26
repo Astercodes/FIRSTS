@@ -14,6 +14,13 @@ export type Profile = {
   peerCompareOptIn?: boolean;
   /** Whether the student has chosen to make their portfolio viewable via a public link. */
   portfolioPublic?: boolean;
+  /**
+   * Set at signup: "partner" for a verified school-affiliated join, "independent"
+   * for a self-serve, no-institution account. Unset (e.g. a profile that
+   * predates this field) defaults to "independent" throughout the app, since
+   * that's the account type with no cohort or advisor context to fall back on.
+   */
+  accountType?: "independent" | "partner";
 };
 
 const KEY = "firsts:profile";
