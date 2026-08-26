@@ -70,6 +70,11 @@ export function AdvisorSidebar() {
           Reporting
         </NavLink>
 
+        <NavLink href="/advisor/communication" active={pathname === "/advisor/communication"}>
+          <MessageIcon className="h-[18px] w-[18px]" />
+          Communication
+        </NavLink>
+
         {role === "Institution Admin" && (
           <NavLink href="/institution" active={pathname.startsWith("/institution")}>
             <BuildingIcon className="h-[18px] w-[18px]" />
@@ -184,6 +189,15 @@ function ReportIcon({ className }: IconProps) {
       <path d="M6 3.5h9l4 4V20a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V4.5a1 1 0 0 1 1-1Z" stroke="currentColor" strokeLinejoin="round" />
       <path d="M15 3.5V7a1 1 0 0 0 1 1h3.5" stroke="currentColor" strokeLinejoin="round" />
       <path d="M8 13l2.5 2.5L16 10" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" />
+    </svg>
+  );
+}
+
+function MessageIcon({ className }: IconProps) {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" strokeWidth={1.7} className={className}>
+      <path d="M4 5.5h16a1 1 0 0 1 1 1V16a1 1 0 0 1-1 1H9l-4.5 3.5V17H4a1 1 0 0 1-1-1V6.5a1 1 0 0 1 1-1Z" stroke="currentColor" strokeLinejoin="round" />
+      <path d="M7.5 10h9M7.5 13.2h6" stroke="currentColor" strokeLinecap="round" />
     </svg>
   );
 }
