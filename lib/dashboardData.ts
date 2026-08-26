@@ -1,12 +1,12 @@
 export type ModuleStatus = "complete" | "in-progress" | "available" | "locked";
-export type StageId = "one" | "two" | "three" | "four" | "five" | "six" | "seven";
+export type StageId = "one" | "two" | "three" | "four" | "five" | "six" | "seven" | "eight";
 
 export type FirstModule = {
   id: number;
   code: string;
   stage: StageId;
   title: string;
-  category: "A" | "B" | "C" | "D" | "E" | "F" | "G" | "H" | "I" | "J" | "K" | "L" | "M" | "N" | "O" | "P" | "Q" | "R" | "S" | "T" | "U" | "V" | "W" | "X" | "Y" | "Z" | "AA" | "BB" | "CC";
+  category: "A" | "B" | "C" | "D" | "E" | "F" | "G" | "H" | "I" | "J" | "K" | "L" | "M" | "N" | "O" | "P" | "Q" | "R" | "S" | "T" | "U" | "V" | "W" | "X" | "Y" | "Z" | "AA" | "BB" | "CC" | "DD" | "EE" | "FF" | "GG" | "HH" | "II";
   time: string;
   difficulty: "Easy" | "Moderate" | "Deep";
   status: ModuleStatus;
@@ -48,6 +48,12 @@ export const CATEGORY_META = {
   AA: { label: "Visual & Presentation Tools", color: "var(--tropical-mango)" },
   BB: { label: "Digital Tools & Systems", color: "var(--fuchsia-blast)" },
   CC: { label: "Collaboration & Reflection", color: "var(--citrus-lime)" },
+  DD: { label: "Communication & Listening", color: "var(--neon-pink)" },
+  EE: { label: "Emotional Intelligence & Self-Awareness", color: "var(--berry-burst)" },
+  FF: { label: "Feedback & Conflict Resolution", color: "var(--sunshine-orange)" },
+  GG: { label: "Teamwork & Collaboration", color: "var(--citrus-lime)" },
+  HH: { label: "Networking & Public Speaking", color: "var(--tropical-mango)" },
+  II: { label: "Growth Mindset & Resilience", color: "var(--fuchsia-blast)" },
 } as const;
 
 export const STAGES: { id: StageId; label: string; shortLabel: string; href: string }[] = [
@@ -58,6 +64,7 @@ export const STAGES: { id: StageId; label: string; shortLabel: string; href: str
   { id: "five", label: "Stage Five · Thinking, Reasoning & Mental Models", shortLabel: "Stage Five", href: "/dashboard/stage/five" },
   { id: "six", label: "Stage Six · Communication: Speaking, Reading, Writing", shortLabel: "Stage Six", href: "/dashboard/stage/six" },
   { id: "seven", label: "Stage Seven · Hard Skills", shortLabel: "Stage Seven", href: "/dashboard/stage/seven" },
+  { id: "eight", label: "Stage Eight · Soft Skills", shortLabel: "Stage Eight", href: "/dashboard/stage/eight" },
 ];
 
 const STAGE_ONE_FIRSTS: FirstModule[] = [
@@ -374,7 +381,60 @@ const STAGE_SEVEN_FIRSTS: FirstModule[] = [
   { id: 293, code: "K86", stage: "seven", title: "Mock Client/Instructor Feedback Implementation", category: "CC", time: "Varies by scope of revision needed", difficulty: "Moderate", status: "locked" },
 ];
 
-export const FIRSTS: FirstModule[] = [...STAGE_ONE_FIRSTS, ...STAGE_TWO_FIRSTS, ...STAGE_THREE_FIRSTS, ...STAGE_FOUR_FIRSTS, ...STAGE_FIVE_FIRSTS, ...STAGE_SIX_FIRSTS, ...STAGE_SEVEN_FIRSTS];
+const STAGE_EIGHT_FIRSTS: FirstModule[] = [
+  { id: 294, code: "L1", stage: "eight", title: "Active Listening Exercise", category: "DD", time: "Ongoing", difficulty: "Easy", status: "complete", thoroughness: 3, completedAt: "2026-06-02" },
+  { id: 295, code: "L4", stage: "eight", title: "Assertive Communication Practice", category: "DD", time: "Ongoing", difficulty: "Moderate", status: "locked" },
+  { id: 296, code: "L30", stage: "eight", title: "Communication Style Awareness", category: "DD", time: "30 min", difficulty: "Easy", status: "complete", thoroughness: 2, completedAt: "2026-06-09" },
+  { id: 297, code: "L36", stage: "eight", title: "Listening Without Interrupting Challenge", category: "DD", time: "One conversation", difficulty: "Easy", status: "locked" },
+  { id: 298, code: "L37", stage: "eight", title: "Body Language Awareness Exercise", category: "DD", time: "Ongoing", difficulty: "Easy", status: "complete", thoroughness: 1, completedAt: "2026-06-16" },
+  { id: 299, code: "L39", stage: "eight", title: "Inclusive Communication Practice", category: "DD", time: "Ongoing", difficulty: "Moderate", status: "locked" },
+  { id: 300, code: "L40", stage: "eight", title: "Empathetic Response Exercise", category: "DD", time: "Ongoing", difficulty: "Easy", status: "complete", thoroughness: 3, completedAt: "2026-06-23" },
+  { id: 301, code: "L49", stage: "eight", title: "Listening for Understanding Exercise", category: "DD", time: "Ongoing", difficulty: "Easy", status: "locked" },
+  { id: 302, code: "L2", stage: "eight", title: "Empathy Reflection", category: "EE", time: "15 min", difficulty: "Easy", status: "complete", thoroughness: 2, completedAt: "2026-06-30" },
+  { id: 303, code: "L15", stage: "eight", title: "Emotional Awareness Reflection", category: "EE", time: "20 min", difficulty: "Easy", status: "locked" },
+  { id: 304, code: "L16", stage: "eight", title: "Patience Challenge", category: "EE", time: "Ongoing", difficulty: "Easy", status: "complete", thoroughness: 1, completedAt: "2026-07-07" },
+  { id: 305, code: "L21", stage: "eight", title: "Perspective-Taking Exercise", category: "EE", time: "15 to 20 min", difficulty: "Moderate", status: "locked" },
+  { id: 306, code: "L29", stage: "eight", title: "Emotional Intelligence Practice", category: "EE", time: "Ongoing", difficulty: "Easy", status: "complete", thoroughness: 3, completedAt: "2026-07-14" },
+  { id: 307, code: "L43", stage: "eight", title: "Emotional Regulation Drill", category: "EE", time: "Ongoing", difficulty: "Moderate", status: "locked" },
+  { id: 308, code: "L45", stage: "eight", title: "Cultural Awareness Reflection", category: "EE", time: "20 min", difficulty: "Easy", status: "complete", thoroughness: 2, completedAt: "2026-07-21" },
+  { id: 309, code: "L48", stage: "eight", title: "Personal Values Statement Written", category: "EE", time: "30 min", difficulty: "Easy", status: "locked" },
+  { id: 310, code: "L5", stage: "eight", title: "Feedback Given", category: "FF", time: "10 to 15 min", difficulty: "Moderate", status: "complete", thoroughness: 1, completedAt: "2026-07-28" },
+  { id: 311, code: "L6", stage: "eight", title: "Feedback Received Gracefully", category: "FF", time: "Ongoing", difficulty: "Easy", status: "locked" },
+  { id: 312, code: "L3", stage: "eight", title: "Conflict Resolution Practice", category: "FF", time: "15 to 30 min", difficulty: "Deep", status: "complete", thoroughness: 3, completedAt: "2026-08-04" },
+  { id: 313, code: "L23", stage: "eight", title: "Team Conflict Debrief", category: "FF", time: "20 to 30 min", difficulty: "Moderate", status: "locked" },
+  { id: 314, code: "L35", stage: "eight", title: "Conflict Mediation Role Played", category: "FF", time: "20 to 30 min", difficulty: "Deep", status: "complete", thoroughness: 2, completedAt: "2026-08-11" },
+  { id: 315, code: "L31", stage: "eight", title: "Team Feedback Session Facilitated", category: "FF", time: "30 to 45 min", difficulty: "Deep", status: "locked" },
+  { id: 316, code: "L9", stage: "eight", title: "Negotiation Exercise", category: "FF", time: "Varies by context", difficulty: "Moderate", status: "complete", thoroughness: 1, completedAt: "2026-08-18" },
+  { id: 317, code: "L33", stage: "eight", title: "Boundary Setting Exercise", category: "FF", time: "Ongoing", difficulty: "Moderate", status: "locked" },
+  { id: 318, code: "L7", stage: "eight", title: "Collaboration Challenge Completed", category: "GG", time: "Varies by project scope", difficulty: "Deep", status: "complete", thoroughness: 3, completedAt: "2026-08-24" },
+  { id: 319, code: "L8", stage: "eight", title: "Team Role Assumed", category: "GG", time: "Project-dependent", difficulty: "Moderate", status: "locked" },
+  { id: 320, code: "L32", stage: "eight", title: "Collaborative Brainstorm", category: "GG", time: "30 to 45 min", difficulty: "Easy", status: "complete", thoroughness: 2, completedAt: "2026-06-05" },
+  { id: 321, code: "L18", stage: "eight", title: "Problem-Solving Discussion", category: "GG", time: "30 min", difficulty: "Moderate", status: "locked" },
+  { id: 322, code: "L42", stage: "eight", title: "Group Decision Facilitated", category: "GG", time: "Varies by decision complexity", difficulty: "Deep", status: "complete", thoroughness: 1, completedAt: "2026-06-12" },
+  { id: 323, code: "L44", stage: "eight", title: "Team Role Rotation Experience", category: "GG", time: "Project-dependent", difficulty: "Moderate", status: "locked" },
+  { id: 324, code: "L34", stage: "eight", title: "Adaptation to Remote/Virtual Work", category: "GG", time: "Ongoing", difficulty: "Moderate", status: "complete", thoroughness: 3, completedAt: "2026-06-19" },
+  { id: 325, code: "L47", stage: "eight", title: "Peer Recognition Shared", category: "GG", time: "A few minutes", difficulty: "Easy", status: "locked" },
+  { id: 326, code: "L19", stage: "eight", title: "Decision-Making Log", category: "GG", time: "10 min", difficulty: "Easy", status: "complete", thoroughness: 2, completedAt: "2026-06-26" },
+  { id: 327, code: "L10", stage: "eight", title: "Public Speaking Confidence Drill", category: "HH", time: "Ongoing", difficulty: "Easy", status: "locked" },
+  { id: 328, code: "L11", stage: "eight", title: "Presentation to Mixed Audience", category: "HH", time: "Extra prep time", difficulty: "Moderate", status: "complete", thoroughness: 1, completedAt: "2026-07-03" },
+  { id: 329, code: "L12", stage: "eight", title: "Networking Conversation", category: "HH", time: "Ongoing", difficulty: "Easy", status: "locked" },
+  { id: 330, code: "L13", stage: "eight", title: "Peer Mentoring Session", category: "HH", time: "Varies by skill", difficulty: "Moderate", status: "complete", thoroughness: 3, completedAt: "2026-07-10" },
+  { id: 331, code: "L14", stage: "eight", title: "Mentor Interaction", category: "HH", time: "15 min prep", difficulty: "Easy", status: "locked" },
+  { id: 332, code: "L22", stage: "eight", title: "Networking Follow-Up Practice", category: "HH", time: "A few minutes", difficulty: "Easy", status: "complete", thoroughness: 2, completedAt: "2026-07-17" },
+  { id: 333, code: "L38", stage: "eight", title: "Networking Event Reflection", category: "HH", time: "15 min", difficulty: "Easy", status: "locked" },
+  { id: 334, code: "L41", stage: "eight", title: "Presentation Handling Q&A", category: "HH", time: "Prep plus the Q&A itself", difficulty: "Moderate", status: "complete", thoroughness: 1, completedAt: "2026-07-24" },
+  { id: 335, code: "L46", stage: "eight", title: "Motivational Speech Practice", category: "HH", time: "Significant prep", difficulty: "Deep", status: "locked" },
+  { id: 336, code: "L17", stage: "eight", title: "Adaptability Exercise", category: "II", time: "Situational", difficulty: "Moderate", status: "complete", thoroughness: 3, completedAt: "2026-07-31" },
+  { id: 337, code: "L20", stage: "eight", title: "Critical Thinking Exercise", category: "II", time: "Ongoing", difficulty: "Easy", status: "locked" },
+  { id: 338, code: "L24", stage: "eight", title: "Leadership Reflection", category: "II", time: "20 to 30 min", difficulty: "Easy", status: "complete", thoroughness: 2, completedAt: "2026-08-07" },
+  { id: 339, code: "L25", stage: "eight", title: "Stress Management Technique Practiced", category: "II", time: "Ongoing", difficulty: "Easy", status: "locked" },
+  { id: 340, code: "L26", stage: "eight", title: "Gratitude Practice", category: "II", time: "A few minutes daily", difficulty: "Easy", status: "complete", thoroughness: 1, completedAt: "2026-08-14" },
+  { id: 341, code: "L27", stage: "eight", title: "Resilience Exercise", category: "II", time: "Varies", difficulty: "Moderate", status: "locked" },
+  { id: 342, code: "L28", stage: "eight", title: "Time Management Reflection", category: "II", time: "20 to 30 min", difficulty: "Easy", status: "complete", thoroughness: 3, completedAt: "2026-08-21" },
+  { id: 343, code: "L50", stage: "eight", title: "Reflection on Soft Skill Growth", category: "II", time: "45 min to 1 hr", difficulty: "Moderate", status: "locked" },
+];
+
+export const FIRSTS: FirstModule[] = [...STAGE_ONE_FIRSTS, ...STAGE_TWO_FIRSTS, ...STAGE_THREE_FIRSTS, ...STAGE_FOUR_FIRSTS, ...STAGE_FIVE_FIRSTS, ...STAGE_SIX_FIRSTS, ...STAGE_SEVEN_FIRSTS, ...STAGE_EIGHT_FIRSTS];
 
 export const MOCK_USER = {
   firstName: "Ada",

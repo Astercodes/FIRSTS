@@ -3003,4 +3003,322 @@ export const WORKSHEET_SCHEMAS: Record<number, WorksheetField[]> = {
     { type: "text", key: "feedbackReceived", label: "Feedback received (instructor/client)", section: "Feedback", seed: "\"Clarify the methodology section.\"" },
     { type: "textarea", key: "genuineRevision", label: "What I actually changed, beyond the surface ask", section: "Genuine revision", rows: 3, seed: "Rewrote the entire section to explain why each method was chosen, not just adding one clarifying sentence as originally asked." },
   ],
+
+  294: [
+    { type: "table", key: "conversationLog", label: "Conversation log", section: "Conversation log", columns: [
+      { key: "conversation", label: "Conversation", kind: "text" },
+      { key: "paraphrased", label: "Paraphrased first? (Y/N)", kind: "text" },
+      { key: "result", label: "Result", kind: "text" },
+    ], seedRows: [
+      { conversation: "Group project check-in with Maya", paraphrased: "Y", result: "Caught that I'd misunderstood which section she meant" },
+      { conversation: "Roommate venting about work", paraphrased: "Y", result: "She said talking to me felt easier than usual" },
+    ] },
+    { type: "textarea", key: "caughtMisunderstanding", label: "Did paraphrasing ever catch a misunderstanding?", section: "Reflection", rows: 2, seed: "Yes, once, it revealed we'd been planning around two different deadlines." },
+  ],
+
+  295: [
+    { type: "text", key: "needSoftened", label: "Need or opinion I've been softening or avoiding", section: "The need", seed: "Asking my group to split presentation slides more evenly" },
+    { type: "text", key: "iStatement", label: "My assertive \"I\" statement", seed: "I can take the intro, but I'd like us to split the rest evenly this time." },
+    { type: "textarea", key: "result", label: "How the other person responded", section: "Result", rows: 2, seed: "They agreed right away and apologized for not noticing the imbalance sooner." },
+  ],
+
+  296: [
+    { type: "text", key: "selfPerception", label: "How I think I come across", section: "My self-perception", seed: "Direct and efficient, focused on getting things done" },
+    { type: "table", key: "outsideFeedback", label: "Outside feedback", section: "Outside feedback", columns: [
+      { key: "person", label: "Person asked", kind: "text" },
+      { key: "description", label: "Their description", kind: "text" },
+    ], seedRows: [
+      { person: "Roommate", description: "Efficient but sometimes abrupt" },
+      { person: "Project teammate", description: "Clear and easy to follow" },
+    ] },
+    { type: "textarea", key: "gap", label: "What surprised me, if anything", section: "The gap", rows: 2, seed: "I didn't realize \"efficient\" could also land as \"abrupt\" to someone less familiar with me." },
+  ],
+
+  297: [
+    { type: "text", key: "conversation", label: "Conversation / person", section: "The conversation", seed: "Coffee catch-up with my roommate" },
+    { type: "text", key: "madeIt", label: "Made it through without interrupting? (Y/N)", seed: "Y" },
+    { type: "textarea", key: "openUp", label: "Did the other person seem to open up more?", section: "Reflection", rows: 2, seed: "Yes, she kept going into more detail than she usually does when I jump in." },
+  ],
+
+  298: [
+    { type: "textarea", key: "selfObservation", label: "My posture / gestures noticed", section: "Self-observation", rows: 2, seed: "Crossed my arms and avoided eye contact whenever asked a question I wasn't prepared for." },
+    { type: "textarea", key: "observingOthers", label: "A non-verbal cue I noticed in someone else", section: "Observing others", rows: 2, seed: "A teammate leaned back and looked at the door whenever the meeting ran long, a clear sign to wrap up." },
+  ],
+
+  299: [
+    { type: "text", key: "group", label: "Group / discussion", section: "The group", seed: "Weekly study group" },
+    { type: "text", key: "quieterMember", label: "Quieter member invited", seed: "Devon, who rarely speaks first" },
+    { type: "textarea", key: "result", label: "What they contributed", section: "Result", rows: 2, seed: "A genuinely different approach to the problem that changed how we solved it." },
+  ],
+
+  300: [
+    { type: "text", key: "who", label: "Who shared something difficult", section: "The situation", seed: "My roommate, stressed about a heavy week" },
+    { type: "text", key: "whatISaid", label: "What I said before jumping to advice", seed: "That sounds exhausting, do you want ideas or just want to vent?" },
+    { type: "textarea", key: "result", label: "Did they want advice or just to be heard?", section: "Result", rows: 2, seed: "Just to be heard. She thanked me afterward for asking instead of assuming." },
+  ],
+
+  301: [
+    { type: "text", key: "info", label: "Instructions / info received", section: "The information", seed: "Deadline and deliverables for the group project handoff" },
+    { type: "textarea", key: "mySummary", label: "My summary back to them", rows: 2, seed: "So we're submitting the draft Thursday, and you're handling the intro section, is that right?" },
+    { type: "textarea", key: "result", label: "Did summarizing catch a misunderstanding?", section: "Result", rows: 2, seed: "Yes, I had the wrong day, it caught the mistake before it became a problem." },
+  ],
+
+  302: [
+    { type: "textarea", key: "situation", label: "Situation where I reacted quickly", section: "The interaction", rows: 2, seed: "Getting annoyed at a teammate's slow email replies during a busy week." },
+    { type: "textarea", key: "theirPerspective", label: "Their likely perspective", section: "Their perspective", rows: 2, seed: "She was probably dealing with something urgent I didn't know about." },
+  ],
+
+  303: [
+    { type: "text", key: "moment", label: "Recent moment of strong emotion", section: "The moment", seed: "Feeling defensive during feedback on a writing draft" },
+    { type: "text", key: "trigger", label: "The specific trigger", seed: "Feedback that touched on my writing specifically, more than other kinds of feedback" },
+    { type: "textarea", key: "pattern", label: "My typical reaction, and did it serve me well?", section: "Pattern", rows: 2, seed: "I get quiet and want to explain myself, which usually just delays actually hearing the feedback." },
+  ],
+
+  304: [
+    { type: "text", key: "situation", label: "Situation involving delay or frustration", section: "The moment", seed: "Slow WiFi during an important video call" },
+    { type: "textarea", key: "result", label: "Did pausing to breathe change my reaction?", section: "Result", rows: 2, seed: "Yes, I stayed calm instead of getting visibly annoyed on camera." },
+  ],
+
+  305: [
+    { type: "textarea", key: "myView", label: "My view", section: "Perspectives", rows: 2, seed: "My teammate missed the deadline and put the whole project at risk." },
+    { type: "textarea", key: "theirView", label: "Their view", rows: 2, seed: "He was probably overwhelmed and didn't know how to ask for help without looking like he was failing." },
+    { type: "textarea", key: "neutralView", label: "A neutral view", rows: 2, seed: "The deadline slipped, and there's likely no single person to blame, just an unclear plan for what to do if someone got stuck." },
+  ],
+
+  306: [
+    { type: "text", key: "emotion", label: "Specific emotion right now", section: "Check-in", seed: "A little anxious" },
+    { type: "text", key: "driving", label: "What's driving it", seed: "An upcoming deadline I haven't fully planned for yet" },
+  ],
+
+  307: [
+    { type: "text", key: "technique", label: "Technique chosen", section: "Technique", seed: "Box breathing: four counts in, hold, out, hold" },
+    { type: "text", key: "moment", label: "Stressful moment it was used in", section: "Applied", seed: "An unexpectedly tough question during a presentation" },
+    { type: "textarea", key: "didItHelp", label: "Did it help?", rows: 2, seed: "Yes, it gave me a second to think instead of reacting defensively." },
+  ],
+
+  308: [
+    { type: "text", key: "interaction", label: "Interaction / person", section: "The interaction", seed: "Working with an international classmate on a group project" },
+    { type: "textarea", key: "assumption", label: "Assumption I noticed making", section: "Reflection", rows: 2, seed: "I assumed direct feedback was always preferred." },
+    { type: "textarea", key: "learned", label: "What I learned", rows: 2, seed: "Her background valued a more indirect approach, which changed how I gave feedback going forward." },
+  ],
+
+  309: [
+    { type: "textarea", key: "sourceMoment", label: "A moment I felt genuinely proud of my own behavior", section: "Source moment", rows: 2, seed: "Telling a teammate an uncomfortable truth instead of letting a problem slide." },
+    { type: "textarea", key: "statement", label: "My values statement", section: "Statement", rows: 2, seed: "I treat people's time as valuable, and I choose honesty over comfort." },
+  ],
+
+  310: [
+    { type: "text", key: "topic", label: "Peer / feedback topic", section: "Prep", seed: "A teammate's presentation section running long" },
+    { type: "text", key: "strength", label: "Genuine strength I'll lead with", seed: "His slides were the clearest of anyone's on the team" },
+    { type: "text", key: "suggestion", label: "Specific, actionable suggestion", seed: "Cut the middle section by about two minutes so we stay on schedule" },
+    { type: "textarea", key: "result", label: "How it was received", section: "Result", rows: 2, seed: "Well, he thanked me for saying it directly instead of letting it slide." },
+  ],
+
+  311: [
+    { type: "text", key: "feedback", label: "Feedback received", section: "The feedback", seed: "My methodology section needed more clarity" },
+    { type: "text", key: "whoGaveIt", label: "Who gave it", seed: "My instructor" },
+    { type: "textarea", key: "change", label: "Specific change I made", section: "Follow-through", rows: 2, seed: "Rewrote the section to explain why each method was chosen, not just what it was." },
+  ],
+
+  312: [
+    { type: "text", key: "issue", label: "The issue", section: "The disagreement", seed: "A teammate repeatedly missing deadlines without saying anything" },
+    { type: "text", key: "iStatement", label: "My \"I\" statement opening", seed: "I've noticed the last two deadlines slipped, and it's putting real pressure on the rest of the team." },
+    { type: "textarea", key: "agreed", label: "What was agreed", section: "Resolution", rows: 2, seed: "He'd flag delays earlier, and we'd check in two days before each deadline." },
+  ],
+
+  313: [
+    { type: "textarea", key: "whatHappened", label: "What happened", section: "Team conflict debrief", rows: 2, seed: "Two of us both assumed the other owned the final handoff, and it slipped through the cracks." },
+    { type: "textarea", key: "whatWedChange", label: "What we'd change", rows: 2, seed: "Name one clear owner for every handoff, out loud, before moving on." },
+    { type: "text", key: "structuralFix", label: "Structural or process fix identified", seed: "A shared checklist naming an owner for each project step" },
+  ],
+
+  314: [
+    { type: "text", key: "parties", label: "Two parties involved", section: "The disagreement", seed: "Two roommates disagreeing over chore splitting" },
+    { type: "textarea", key: "outcome", label: "Outcome reached", section: "Resolution", rows: 2, seed: "A specific, written chore schedule both of them agreed to." },
+  ],
+
+  315: [
+    { type: "text", key: "groundRules", label: "Ground rules set", section: "Ground rules", seed: "Be specific, be kind, be actionable" },
+    { type: "table", key: "feedbackCaptured", label: "Feedback captured", section: "Feedback captured", columns: [
+      { key: "member", label: "Team member", kind: "text" },
+      { key: "working", label: "Working well", kind: "text" },
+      { key: "improve", label: "To improve", kind: "text" },
+    ], seedRows: [
+      { member: "Maya", working: "Always hits her deadlines", improve: "Could share progress updates more often" },
+      { member: "Devon", working: "Great at catching errors", improve: "Could speak up earlier when something's unclear" },
+    ] },
+  ],
+
+  316: [
+    { type: "text", key: "negotiating", label: "What I'm negotiating", section: "Prep", seed: "A project deadline with a teammate" },
+    { type: "text", key: "nonNegotiable", label: "My priorities (non-negotiable)", seed: "The final deliverable still needs to ship on time" },
+    { type: "text", key: "flexible", label: "My flexible points", seed: "Who does which section, and in what order" },
+    { type: "textarea", key: "outcome", label: "Outcome", section: "Result", rows: 2, seed: "He had a conflicting exam, so we swapped section order and both priorities were met." },
+  ],
+
+  317: [
+    { type: "text", key: "boundary", label: "Boundary I've been avoiding stating", section: "The boundary", seed: "Saying no to last-minute favor requests the night before a deadline" },
+    { type: "text", key: "howStated", label: "How I stated it", seed: "I can't do this tonight, but I could help tomorrow instead." },
+    { type: "textarea", key: "respected", label: "Was it respected?", section: "Result", rows: 2, seed: "Yes, with no pushback or friction." },
+  ],
+
+  318: [
+    { type: "textarea", key: "challenge", label: "Difficult group task", section: "The challenge", rows: 2, seed: "A tight deadline with genuinely conflicting ideas about project direction." },
+    { type: "textarea", key: "howCollaborationHelped", label: "Specific moment collaboration made the difference", section: "How collaboration helped", rows: 2, seed: "Agreeing on decision criteria upfront kept the disagreement from stalling the whole project." },
+  ],
+
+  319: [
+    { type: "text", key: "roleChosen", label: "Role chosen", section: "Role", seed: "Facilitator" },
+    { type: "text", key: "defaultRole", label: "My usual default role", seed: "Quiet contributor" },
+    { type: "textarea", key: "stretch", label: "How it stretched me", section: "Reflection", rows: 2, seed: "I had to speak up and keep the group on track, which isn't my natural instinct." },
+  ],
+
+  320: [
+    { type: "text", key: "prompt", label: "Prompt / problem", section: "Prompt", seed: "How to make our club's event actually get attendance" },
+    { type: "textarea", key: "ideasGenerated", label: "Ideas generated", section: "Ideas generated", rows: 3, seed: "Free food, a raffle, partnering with another club, moving the time, a countdown on social media." },
+    { type: "textarea", key: "topIdeas", label: "Best idea(s) after evaluation", section: "Top ideas", rows: 2, seed: "Partnering with another club, since it doubles our reach for free." },
+  ],
+
+  321: [
+    { type: "text", key: "problem", label: "Shared problem", section: "The problem", seed: "Unclear scope on a group project brief" },
+    { type: "table", key: "perspectives", label: "Perspectives heard", section: "Perspectives heard", columns: [
+      { key: "person", label: "Person", kind: "text" },
+      { key: "perspective", label: "Their perspective", kind: "text" },
+    ], seedRows: [
+      { person: "Me", perspective: "Thought we were building a prototype" },
+      { person: "Teammate", perspective: "Thought we were writing a proposal" },
+    ] },
+    { type: "textarea", key: "solution", label: "Insight or solution surfaced", section: "Solution", rows: 2, seed: "The brief was genuinely ambiguous, so we asked the instructor to clarify instead of guessing." },
+  ],
+
+  322: [
+    { type: "text", key: "decision", label: "Decision being made", section: "Decision", seed: "Which direction to take our final project" },
+    { type: "textarea", key: "concernAddressed", label: "Quieter member's concern surfaced and addressed", section: "Concerns addressed", rows: 2, seed: "One teammate worried the timeline was unrealistic, and we adjusted scope once she said so." },
+    { type: "textarea", key: "finalDecision", label: "Final decision with buy-in", section: "Result", rows: 2, seed: "A slightly smaller scope that everyone genuinely agreed was achievable." },
+  ],
+
+  323: [
+    { type: "text", key: "defaultRole", label: "Usual default role", section: "Rotation", seed: "Researcher" },
+    { type: "text", key: "newRole", label: "New role tried", seed: "Presenter" },
+    { type: "textarea", key: "discovery", label: "Something new I learned about myself", section: "Discovery", rows: 2, seed: "I was more comfortable in front of a room than I expected." },
+  ],
+
+  324: [
+    { type: "text", key: "habitAdjusted", label: "Habit adjusted for remote work", section: "Adjustment", seed: "Switching to brief video check-ins for anything with real emotional stakes" },
+    { type: "textarea", key: "result", label: "Did it reduce misunderstandings?", section: "Result", rows: 2, seed: "Yes, tone came through much more clearly than in text-only messages." },
+  ],
+
+  325: [
+    { type: "text", key: "contribution", label: "Teammate / contribution", section: "Recognition", seed: "Maya's data analysis that reshaped our whole approach" },
+    { type: "text", key: "howAcknowledged", label: "How I acknowledged it publicly", seed: "Called it out specifically in our team meeting, not just a generic thank you" },
+    { type: "textarea", key: "reaction", label: "Their reaction", section: "Result", rows: 2, seed: "She seemed genuinely pleased, and spoke up more in the following meetings." },
+  ],
+
+  326: [
+    { type: "text", key: "decision", label: "The decision", section: "Decision log", seed: "Choosing to prioritize the data section over the design polish before the deadline" },
+    { type: "text", key: "factors", label: "Key factors considered", seed: "Grading rubric weight, time remaining, teammate availability" },
+    { type: "text", key: "reasoning", label: "My reasoning", seed: "Substance mattered more than polish given the rubric, and we could always polish later" },
+    { type: "text", key: "date", label: "Date", seed: "2026-07-01" },
+  ],
+
+  327: [
+    { type: "text", key: "topic", label: "Topic", section: "The talk", seed: "Why I chose my major" },
+    { type: "text", key: "audience", label: "Audience", seed: "Two roommates" },
+    { type: "textarea", key: "comparison", label: "How did it feel compared to solo rehearsal?", section: "Reflection", rows: 2, seed: "More nerve-wracking at first, but it built real comfort solo practice never did." },
+  ],
+
+  328: [
+    { type: "table", key: "segments", label: "Segments", section: "Segments", columns: [
+      { key: "segment", label: "Audience segment", kind: "text" },
+      { key: "addressed", label: "How I addressed them", kind: "text" },
+    ], seedRows: [
+      { segment: "Technical stakeholders", addressed: "Went deep on methodology" },
+      { segment: "Non-technical stakeholders", addressed: "Added a plain-language recap after each technical point" },
+    ] },
+    { type: "textarea", key: "result", label: "Did each segment feel spoken to?", section: "Result", rows: 2, seed: "Yes, both groups said afterward they followed along the whole time." },
+  ],
+
+  329: [
+    { type: "text", key: "whoIMet", label: "Who I met", section: "The conversation", seed: "An alum working in a field I'm curious about" },
+    { type: "text", key: "genuineQuestion", label: "Genuine question I asked", seed: "What's something about this job nobody tells you before you start?" },
+    { type: "textarea", key: "result", label: "How long did it genuinely sustain?", section: "Result", rows: 2, seed: "Almost twenty minutes, much longer than I expected for a first conversation." },
+  ],
+
+  330: [
+    { type: "text", key: "peerSkill", label: "Peer / skill", section: "Session", seed: "Helping a classmate with pivot tables in Excel" },
+    { type: "textarea", key: "guidingQuestions", label: "Guiding questions I asked", rows: 2, seed: "What are you actually trying to summarize here? What would that look like as a table?" },
+    { type: "textarea", key: "result", label: "Could they do it independently afterward?", section: "Result", rows: 2, seed: "Yes, she built the next one herself without asking for help." },
+  ],
+
+  331: [
+    { type: "textarea", key: "questions", label: "Questions prepared", section: "Questions prepared", rows: 3, seed: "1. How did you decide between two offers early in your career?\n2. What's one thing you wish you'd asked in your first job?" },
+    { type: "text", key: "guidance", label: "Guidance received", section: "Application", seed: "Ask about team culture directly in interviews, not just role responsibilities" },
+    { type: "textarea", key: "howApplied", label: "How I applied it", rows: 2, seed: "Asked about team culture in my next interview and got a much clearer picture of the role." },
+  ],
+
+  332: [
+    { type: "text", key: "contact", label: "Contact", section: "Contact", seed: "An alum I met at a career fair three months ago" },
+    { type: "text", key: "reason", label: "Genuinely relevant reason for reaching out", seed: "Sharing an article related to a project she mentioned she was working on" },
+    { type: "textarea", key: "response", label: "Response received", section: "Result", rows: 2, seed: "A warm reply, and she offered to make an introduction to someone on her team." },
+  ],
+
+  333: [
+    { type: "text", key: "event", label: "Event", section: "Event", seed: "A campus career fair" },
+    { type: "textarea", key: "workedWell", label: "What worked well", section: "Reflection", rows: 2, seed: "Conversations that opened with a genuine question about the other person went better than my usual pitch opener." },
+    { type: "textarea", key: "tryDifferently", label: "What to try differently next time", rows: 2, seed: "Lead with a question every time, even when I'm nervous and want to just launch into my pitch." },
+  ],
+
+  334: [
+    { type: "textarea", key: "anticipated", label: "Likely questions and rough answers", section: "Anticipated questions", rows: 3, seed: "1. Why this approach over the alternative? Because it was faster to test.\n2. What would you do differently? Start user testing earlier.\n3. What's the biggest risk? Adoption, not the technology itself." },
+    { type: "textarea", key: "realResult", label: "How the real Q&A went", section: "Real Q&A result", rows: 2, seed: "One question I hadn't anticipated came up, but pausing before answering kept my response clear." },
+  ],
+
+  335: [
+    { type: "textarea", key: "story", label: "Genuine personal story or conviction", section: "The story", rows: 3, seed: "Failing my first pitch competition and using the specific feedback to place in the next one." },
+    { type: "textarea", key: "audienceReaction", label: "How the audience reacted", section: "Result", rows: 2, seed: "A few people said afterward it made them want to try again after their own setbacks." },
+  ],
+
+  336: [
+    { type: "text", key: "change", label: "Unexpected change or challenge", section: "The change", seed: "Presentation software failing five minutes before a scheduled talk" },
+    { type: "textarea", key: "howAdapted", label: "How I adapted", section: "Response", rows: 2, seed: "Switched to a whiteboard version of the same content instead of panicking." },
+  ],
+
+  337: [
+    { type: "text", key: "judgment", label: "Snap judgment made", section: "The judgment", seed: "Assumed a quiet new teammate didn't care about the project" },
+    { type: "text", key: "evidence", label: "Evidence that actually supports it", section: "Examination", seed: "Honestly, none, just that she spoke less than the rest of us" },
+    { type: "text", key: "alternative", label: "Alternative explanation", seed: "She's simply more reserved in group settings, not disengaged" },
+  ],
+
+  338: [
+    { type: "textarea", key: "experience", label: "Leadership experience", section: "The experience", rows: 2, seed: "Leading a group project that fell behind schedule under real time pressure." },
+    { type: "text", key: "worked", label: "What worked", seed: "Being clear about priorities when time got short" },
+    { type: "textarea", key: "revealed", label: "What it revealed about my natural tendencies", section: "Reflection", rows: 2, seed: "I tend to take over tasks myself under stress instead of delegating." },
+  ],
+
+  339: [
+    { type: "text", key: "technique", label: "Technique tried", section: "Technique", seed: "A short walk outside instead of seated meditation" },
+    { type: "textarea", key: "didItHelp", label: "Did it genuinely help?", rows: 2, seed: "Yes, more than meditation ever has for me personally." },
+  ],
+
+  340: [
+    { type: "textarea", key: "gratitudeList", label: "Specific things I'm grateful for", section: "Today's gratitude", rows: 3, seed: "1. My roommate covering for me during a rough week\n2. A professor who gave detailed, useful feedback\n3. A sunny walk that reset my mood before a hard meeting" },
+  ],
+
+  341: [
+    { type: "textarea", key: "whatHappened", label: "What happened", section: "The setback", rows: 2, seed: "Got rejected from my top-choice internship after making it to the final round." },
+    { type: "text", key: "lesson", label: "Specific lesson extracted", section: "Lesson & action", seed: "I applied too late in the cycle and was competing for very few remaining spots" },
+    { type: "text", key: "nextAction", label: "Concrete next action", seed: "Start next year's applications a full month earlier" },
+  ],
+
+  342: [
+    { type: "text", key: "mostProductive", label: "When I'm genuinely most productive", section: "Patterns", seed: "Evenings, after 7pm" },
+    { type: "text", key: "leastProductive", label: "When I'm genuinely least productive", seed: "Early morning, despite trying to force it for months" },
+    { type: "textarea", key: "adjustment", label: "One schedule change based on this", section: "Adjustment", rows: 2, seed: "Moved my hardest, most focused work block to the evening instead of forcing an early-morning routine." },
+  ],
+
+  343: [
+    { type: "text", key: "grown", label: "Skill that's genuinely grown", section: "Growth", seed: "Active listening and receiving feedback without getting defensive" },
+    { type: "text", key: "challenge", label: "Area still genuinely difficult", section: "Remaining challenge", seed: "Staying neutral when mediating a disagreement between two people I'm close to" },
+    { type: "textarea", key: "nextSteps", label: "Next steps", section: "Next steps", rows: 2, seed: "Look for a low-stakes chance to practice mediation before a higher-stakes one comes up." },
+  ],
 };

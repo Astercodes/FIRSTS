@@ -51,7 +51,7 @@ export function DashboardHome() {
 
         <div className="flex flex-col justify-center rounded-3xl border border-ink/8 bg-white p-7">
           <p className="text-xs font-semibold uppercase tracking-[0.15em] text-ink/45">
-            All 7 stages
+            All {STAGES.length} stages
           </p>
           <p className="mt-2 font-display text-5xl font-bold tracking-tight text-ink">
             {stats.pct}%

@@ -306,6 +306,56 @@ export const COACH_MODE: Record<number, CoachMode> = {
   291: "reflective",
   292: "reflective",
   293: "reflective",
+  294: "hybrid",
+  295: "hybrid",
+  296: "reflective",
+  297: "hybrid",
+  298: "hybrid",
+  299: "hybrid",
+  300: "hybrid",
+  301: "hybrid",
+  302: "reflective",
+  303: "reflective",
+  304: "hybrid",
+  305: "synthesis",
+  306: "reflective",
+  307: "hybrid",
+  308: "reflective",
+  309: "reflective",
+  310: "hybrid",
+  311: "hybrid",
+  312: "hybrid",
+  313: "synthesis",
+  314: "synthesis",
+  315: "synthesis",
+  316: "hybrid",
+  317: "hybrid",
+  318: "hybrid",
+  319: "hybrid",
+  320: "hybrid",
+  321: "synthesis",
+  322: "synthesis",
+  323: "reflective",
+  324: "hybrid",
+  325: "hybrid",
+  326: "reflective",
+  327: "hybrid",
+  328: "synthesis",
+  329: "hybrid",
+  330: "hybrid",
+  331: "hybrid",
+  332: "hybrid",
+  333: "reflective",
+  334: "hybrid",
+  335: "hybrid",
+  336: "hybrid",
+  337: "hybrid",
+  338: "reflective",
+  339: "hybrid",
+  340: "reflective",
+  341: "hybrid",
+  342: "reflective",
+  343: "reflective",
 };
 
 export const LEARN_CONTENT: Record<number, LearnContent> = {
@@ -8480,5 +8530,1344 @@ export const LEARN_CONTENT: Record<number, LearnContent> = {
     successSignal:
       "The revised work genuinely addresses the underlying concern behind the feedback, not just its surface wording.",
     milestoneTies: [283],
+  },
+
+  294: {
+    definition:
+      "A First Active Listening Exercise practices truly understanding what someone is saying before formulating a response, rather than listening only long enough to plan your next point.",
+    whyItMatters:
+      "Most people listen to reply, not to understand, which produces conversations that feel disjointed and erodes trust over time. Genuinely understanding someone first builds far stronger relationships.",
+    whenWhoWhere: [
+      { label: "When", body: "Practice this in any real conversation, but especially ones involving feedback, disagreement, or someone sharing something important to them." },
+      { label: "Who", body: "Anyone you're in conversation with; no special collaborator needed." },
+      { label: "Where", body: "Applied in real, live conversations, not a hypothetical exercise." },
+    ],
+    howItWorks: [
+      "As the other person speaks, resist planning your response.",
+      "When they finish, paraphrase what you heard before adding your own point.",
+    ],
+    tools: ["No special tool, just a practiced habit of paraphrasing before responding"],
+    scenario: {
+      title: "A paraphrase that caught a costly misunderstanding",
+      body: "A student practicing active listening in a group project meeting paraphrased a teammate's idea before responding, and the teammate corrected a small but important misunderstanding that would have caused wasted work otherwise.",
+    },
+    pitfalls: [
+      "Nodding along while mentally drafting your reply, which looks like listening but isn't.",
+    ],
+    successSignal:
+      "People say you're easy to talk to, and misunderstandings get caught before they cause real problems.",
+    milestoneTies: [],
+  },
+
+  295: {
+    definition:
+      "A First Assertive Communication Practice expresses your needs and opinions clearly and respectfully, without being passive or aggressive.",
+    whyItMatters:
+      "Passive communication leaves your real needs unmet, while aggressive communication damages relationships; assertiveness is the middle path that actually gets results without cost to the relationship.",
+    whenWhoWhere: [
+      { label: "When", body: "Practice this whenever you need to state a genuine need, boundary, or opinion, especially one you'd normally soften or avoid." },
+      { label: "Who", body: "Whoever the conversation is with; no special collaborator needed." },
+      { label: "Where", body: "Applied in any real conversation involving a need, request, or disagreement." },
+    ],
+    howItWorks: [
+      "State your position clearly using \"I\" language, without over-apologizing or over-explaining.",
+      "Stay calm and specific rather than vague.",
+    ],
+    tools: ["A simple framework: state the situation, state your need, state the specific ask"],
+    scenario: {
+      title: "Trading \"it's fine\" for a specific ask",
+      body: "A student who used to say \"it's fine, don't worry about it\" when a group project task fell on her unfairly started saying \"I can take this, but I'd like us to split the next one evenly\" instead, and the workload balance genuinely improved.",
+    },
+    pitfalls: [
+      "Over-apologizing before stating your actual need, which undercuts the assertiveness before you even get to the point.",
+    ],
+    successSignal:
+      "You state your need clearly and the other person responds to the actual request, not a watered-down version of it.",
+    milestoneTies: [317, 316],
+  },
+
+  296: {
+    definition:
+      "A First Communication Style Awareness identifies your own default tone, approach, and impact on others, building the self-knowledge needed to adjust deliberately.",
+    whyItMatters:
+      "Most people have a default communication style they're only partially aware of, and that style can land differently than intended without them realizing it.",
+    whenWhoWhere: [
+      { label: "When", body: "Conduct this reflection periodically, especially after receiving feedback about how you come across." },
+      { label: "Who", body: "A trusted friend or mentor who can offer honest outside observation." },
+      { label: "Where", body: "Done in a reflective session, ideally combined with real feedback from others." },
+    ],
+    howItWorks: [
+      "Ask two or three people how they'd describe your communication style.",
+      "Compare it to your own self-perception, and note any real gaps.",
+    ],
+    tools: ["A simple self-reflection prompt: how do I think I come across, and how do others actually experience me?"],
+    scenario: {
+      title: "\"Abrupt\" was not how she saw herself",
+      body: "A student who saw herself as direct and efficient was surprised when a teammate described her style as \"abrupt,\" a gap she hadn't noticed until asking directly.",
+    },
+    pitfalls: [
+      "Assuming your self-perception matches how others actually experience you, without ever checking.",
+    ],
+    successSignal:
+      "You can name your default style and at least one specific way it might land differently than intended.",
+    milestoneTies: [295, 299],
+  },
+
+  297: {
+    definition:
+      "A First Listening Without Interrupting Challenge focuses fully on the speaker for an entire conversation without cutting in, even when you have something to add.",
+    whyItMatters:
+      "Interrupting, even with good intentions, signals that your own point matters more than fully hearing theirs, which subtly damages trust over time.",
+    whenWhoWhere: [
+      { label: "When", body: "Practice this as a deliberate challenge in at least one real conversation this week." },
+      { label: "Who", body: "Anyone you're in conversation with." },
+      { label: "Where", body: "Applied in a real conversation, ideally one where you'd normally be tempted to jump in." },
+    ],
+    howItWorks: [
+      "Consciously wait for a genuine pause before speaking.",
+      "If a thought comes up mid-conversation, hold it rather than interrupting to say it.",
+    ],
+    tools: ["No special tool, a deliberate, practiced restraint"],
+    scenario: {
+      title: "A full conversation without finishing her sentences",
+      body: "A student who habitually finished her roommate's sentences tried a full conversation without interrupting once, and noticed her roommate opened up with more detail than usual, likely because she felt genuinely heard.",
+    },
+    pitfalls: [
+      "Interrupting to \"help\" finish someone's thought, which often isn't actually welcome even when well-intentioned.",
+    ],
+    successSignal:
+      "You complete a full conversation without interrupting, and notice whether the other person seems to open up more.",
+    milestoneTies: [294],
+  },
+
+  298: {
+    definition:
+      "A First Body Language Awareness Exercise observes and adjusts your own non-verbal cues, and notices those of others, building awareness of a communication channel most people underuse deliberately.",
+    whyItMatters:
+      "Non-verbal cues often communicate more than words do, and being unaware of your own can undercut an otherwise strong verbal message.",
+    whenWhoWhere: [
+      { label: "When", body: "Practice this in any real conversation or presentation setting." },
+      { label: "Who", body: "No special collaborator required, though recording yourself or asking for feedback helps." },
+      { label: "Where", body: "Applied in real conversations, meetings, or presentations." },
+    ],
+    howItWorks: [
+      "Notice your own posture, eye contact, and gestures during a conversation.",
+      "Separately, notice what the other person's body language communicates beyond their words.",
+    ],
+    tools: ["A mirror or recorded video for self-observation"],
+    scenario: {
+      title: "Crossed arms, visible only on video",
+      body: "A student reviewing a recorded mock interview noticed she crossed her arms defensively every time she got an unexpected question, a pattern completely invisible to her until she saw it on video.",
+    },
+    pitfalls: [
+      "Focusing so much on managing your own body language that you stop actually listening to the conversation.",
+    ],
+    successSignal:
+      "You notice at least one specific non-verbal habit, in yourself or someone else, that you hadn't consciously registered before.",
+    milestoneTies: [],
+  },
+
+  299: {
+    definition:
+      "A First Inclusive Communication Practice ensures diverse voices are genuinely heard in a group setting, rather than letting the same few people dominate by default.",
+    whyItMatters:
+      "Groups often default to hearing from the most confident or vocal members, missing valuable perspectives from quieter participants.",
+    whenWhoWhere: [
+      { label: "When", body: "Practice this whenever you're part of or facilitating a group discussion." },
+      { label: "Who", body: "The group you're part of, especially quieter members." },
+      { label: "Where", body: "Applied in class discussions, team meetings, or group projects." },
+    ],
+    howItWorks: [
+      "Actively invite quieter members by name (\"what do you think, [name]\").",
+      "Notice who hasn't spoken and create space for them.",
+    ],
+    tools: ["No special tool, a deliberate habit of noticing group participation patterns"],
+    scenario: {
+      title: "One direct invitation surfaced the best idea",
+      body: "A student facilitating a study group noticed the same two people always spoke first. Directly inviting a quieter member's perspective surfaced a genuinely useful idea no one else had raised.",
+    },
+    pitfalls: [
+      "Assuming silence means agreement or lack of opinion, rather than a need for an explicit invitation to speak.",
+    ],
+    successSignal:
+      "More than the usual two or three people genuinely participate in the discussion.",
+    milestoneTies: [],
+  },
+
+  300: {
+    definition:
+      "A First Empathetic Response Exercise replies to a challenging or emotional situation with genuine understanding, rather than jumping straight to advice or problem-solving.",
+    whyItMatters:
+      "Most people's instinct when someone shares a problem is to immediately offer solutions, but often what's actually needed first is to feel understood.",
+    whenWhoWhere: [
+      { label: "When", body: "Practice this whenever someone shares something difficult or emotional with you." },
+      { label: "Who", body: "Anyone sharing a genuine difficulty with you." },
+      { label: "Where", body: "Applied in real conversations involving frustration, stress, or disappointment." },
+    ],
+    howItWorks: [
+      "Before offering advice, reflect back what you're hearing emotionally (\"that sounds really frustrating\").",
+      "Ask if they want advice or just want to be heard.",
+    ],
+    tools: ["No special tool, a practiced pause before jumping to problem-solving mode"],
+    scenario: {
+      title: "\"Do you want ideas or just want to vent?\"",
+      body: "A student's roommate vented about a stressful week, and instead of immediately suggesting fixes, she asked that question directly. Her roommate said she just needed to vent, and thanked her afterward for asking.",
+    },
+    pitfalls: [
+      "Jumping straight to advice or comparison (\"that happened to me too\") before acknowledging the person's actual feelings.",
+    ],
+    successSignal:
+      "The person feels genuinely heard, which you can often tell because the conversation naturally deepens rather than shutting down.",
+    milestoneTies: [302, 294],
+  },
+
+  301: {
+    definition:
+      "A First Listening for Understanding Exercise summarizes another person's key points before responding, confirming genuine comprehension rather than assumed understanding.",
+    whyItMatters:
+      "Summarizing forces you to actually process what was said, rather than just hearing words while your mind moves ahead to your own response.",
+    whenWhoWhere: [
+      { label: "When", body: "Practice this in any conversation with real content or stakes, especially ones involving instructions, feedback, or planning." },
+      { label: "Who", body: "Anyone giving you information, instructions, or feedback." },
+      { label: "Where", body: "Applied in meetings, feedback conversations, or any information-dense exchange." },
+    ],
+    howItWorks: [
+      "After someone finishes explaining something, summarize the key points back to them before responding or acting.",
+    ],
+    tools: ["No special tool, a practiced habit of summarizing before responding"],
+    scenario: {
+      title: "A summary that caught a wrong deadline",
+      body: "A student receiving instructions for a group project summarized them back and caught that she'd misunderstood one key deadline, avoiding a costly mistake.",
+    },
+    pitfalls: [
+      "Assuming you understood correctly without checking, especially under time pressure when summarizing feels like it slows things down.",
+    ],
+    successSignal:
+      "You catch at least one misunderstanding by summarizing that you would have missed otherwise.",
+    milestoneTies: [294],
+  },
+
+  302: {
+    definition:
+      "A First Empathy Reflection deliberately considers the perspective of a classmate, colleague, or client, especially in a situation where you initially reacted without fully considering their viewpoint.",
+    whyItMatters:
+      "Empathy doesn't always come automatically in the moment, especially during disagreement; deliberately reflecting on someone else's perspective afterward builds the habit of considering it in the moment next time.",
+    whenWhoWhere: [
+      { label: "When", body: "Practice this after any interaction where you reacted strongly or dismissively, to reflect on what the other person might have been experiencing." },
+      { label: "Who", body: "No collaborator required for the reflection itself." },
+      { label: "Where", body: "Done in a private reflective session shortly after the interaction." },
+    ],
+    howItWorks: [
+      "Recall a recent interaction where you reacted without much thought to the other person's perspective.",
+      "Write out what they might have been feeling or dealing with that you didn't consider in the moment.",
+    ],
+    tools: ["A journal or notes app for the reflection"],
+    scenario: {
+      title: "A family emergency behind the slow replies",
+      body: "A student annoyed by a teammate's slow email responses later learned the teammate had been dealing with a family emergency, a perspective that completely reframed her earlier frustration.",
+    },
+    pitfalls: [
+      "Only doing this reflection after conflict has already caused damage, rather than building the habit of considering perspective proactively.",
+    ],
+    successSignal:
+      "You can name a specific way your understanding of the situation changed after considering the other person's perspective.",
+    milestoneTies: [305],
+  },
+
+  303: {
+    definition:
+      "A First Emotional Awareness Reflection recognizes your own triggers, stressors, and typical reactions, building the self-knowledge needed to respond deliberately rather than react automatically.",
+    whyItMatters:
+      "Without conscious awareness of your own emotional patterns, you tend to react the same way repeatedly, even when that reaction isn't serving you well.",
+    whenWhoWhere: [
+      { label: "When", body: "Conduct this reflection periodically, especially after a moment of strong emotional reaction." },
+      { label: "Who", body: "No collaborator required, though discussing patterns with a trusted friend can deepen the reflection." },
+      { label: "Where", body: "Done in a private journaling session." },
+    ],
+    howItWorks: [
+      "Recall a recent moment of strong emotion.",
+      "Identify the specific trigger, your typical reaction pattern, and whether that reaction actually served you well.",
+    ],
+    tools: ["A journal or notes app"],
+    scenario: {
+      title: "Defensive about writing feedback, every time",
+      body: "A student noticed she consistently became defensive during any feedback involving her writing specifically, a pattern she hadn't consciously named until reflecting on three separate instances together.",
+    },
+    pitfalls: [
+      "Judging yourself harshly for the reaction instead of simply observing the pattern with curiosity.",
+    ],
+    successSignal:
+      "You can name a specific, recurring trigger and your typical reaction to it.",
+    milestoneTies: [307],
+  },
+
+  304: {
+    definition:
+      "A First Patience Challenge deliberately practices staying calm under pressure or delay, building tolerance for frustration in a controlled, intentional way.",
+    whyItMatters:
+      "Patience is a trainable skill, not just a fixed trait; deliberately practicing it in smaller moments builds capacity for the bigger ones.",
+    whenWhoWhere: [
+      { label: "When", body: "Practice this whenever a genuine moment of delay or frustration arises, treating it as deliberate practice rather than just an annoyance." },
+      { label: "Who", body: "No collaborator required." },
+      { label: "Where", body: "Applied to any real situation involving waiting, delay, or frustration." },
+    ],
+    howItWorks: [
+      "When frustration arises, consciously pause and breathe before reacting.",
+      "Treat the delay as a chance to practice, not just something to endure.",
+    ],
+    tools: ["A simple breathing technique: four counts in, four counts held, four counts out"],
+    scenario: {
+      title: "Slow WiFi as deliberate practice",
+      body: "A student who used to get visibly frustrated by slow WiFi during an important call used the delay as a deliberate patience practice moment, breathing through it instead of reacting, and noticed the habit carried over into other frustrating moments too.",
+    },
+    pitfalls: [
+      "Suppressing frustration without actually processing it, which can build up rather than genuinely dissipate.",
+    ],
+    successSignal:
+      "You notice yourself pausing and breathing during a frustrating moment instead of reacting immediately.",
+    milestoneTies: [307, 339],
+  },
+
+  305: {
+    definition:
+      "A First Perspective-Taking Exercise deliberately considers a situation from multiple viewpoints, not just your own, before forming a judgment or response.",
+    whyItMatters:
+      "Most disagreements look completely reasonable from both sides; genuinely considering multiple viewpoints leads to better decisions and more empathetic responses.",
+    whenWhoWhere: [
+      { label: "When", body: "Practice this before responding to any disagreement or complex situation with real stakes." },
+      { label: "Who", body: "No collaborator required, though discussing the situation with someone neutral can help surface angles you missed." },
+      { label: "Where", body: "Applied to any real situation with more than one reasonable perspective." },
+    ],
+    howItWorks: [
+      "Before forming a judgment, write out the situation from at least two other people's likely perspectives, as genuinely and generously as you can.",
+    ],
+    tools: ["A simple three-column template: my view, their view, a neutral view"],
+    scenario: {
+      title: "A missed deadline, reconsidered",
+      body: "A student frustrated by a teammate's missed deadline considered the situation from the teammate's likely perspective and realized he'd probably been juggling an unexpected personal crisis, which completely changed how she approached the conversation.",
+    },
+    pitfalls: [
+      "Doing this exercise but still secretly assuming your own view is the correct one, rather than genuinely considering the other perspectives.",
+    ],
+    successSignal:
+      "Your understanding of a situation changes, even slightly, after genuinely considering another perspective.",
+    milestoneTies: [302],
+  },
+
+  306: {
+    definition:
+      "A First Emotional Intelligence Practice identifies emotions in yourself and others in real time, building the skill of naming feelings accurately as they happen, not just after the fact.",
+    whyItMatters:
+      "Emotional intelligence starts with accurate identification; you can't manage or respond well to an emotion you haven't correctly named.",
+    whenWhoWhere: [
+      { label: "When", body: "Practice this throughout any given day, checking in periodically on your own emotional state and noticing others'." },
+      { label: "Who", body: "No collaborator required." },
+      { label: "Where", body: "Applied throughout daily life and interactions." },
+    ],
+    howItWorks: [
+      "Pause periodically and name your current emotional state specifically (not just \"good\" or \"bad,\" but \"frustrated,\" \"anxious,\" \"relieved\").",
+      "Practice noticing emotional cues in others too.",
+    ],
+    tools: ["An emotion wheel or vocabulary list to build more specific emotional language"],
+    scenario: {
+      title: "\"Disappointed\" versus \"anxious\" changed her response",
+      body: "A student who only ever described her feelings as \"fine\" or \"stressed\" started naming more specific emotions, and found that identifying \"disappointed\" versus \"anxious\" in a given moment actually changed how she chose to respond to it.",
+    },
+    pitfalls: [
+      "Using only vague, generic emotional labels instead of building genuinely specific emotional vocabulary.",
+    ],
+    successSignal:
+      "You can name a specific emotion, not just a vague good/bad label, in real time during your day.",
+    milestoneTies: [],
+  },
+
+  307: {
+    definition:
+      "A First Emotional Regulation Drill practices staying calm and composed in a genuinely stressful moment, using a specific technique rather than just hoping to remain calm.",
+    whyItMatters:
+      "Emotional regulation is a skill that improves with deliberate practice, not something you either have or don't; specific techniques give you something concrete to reach for under real pressure.",
+    whenWhoWhere: [
+      { label: "When", body: "Practice this whenever a genuinely stressful moment arises, treating it as an opportunity to apply the technique." },
+      { label: "Who", body: "No collaborator required." },
+      { label: "Where", body: "Applied to any real stressful moment: a difficult conversation, an unexpected setback, a tight deadline." },
+    ],
+    howItWorks: [
+      "Choose one specific regulation technique (box breathing, a grounding phrase, a brief pause before responding) and apply it deliberately in a real stressful moment.",
+    ],
+    tools: ["A specific chosen technique, such as box breathing (four counts in, hold, out, hold)"],
+    scenario: {
+      title: "A practiced pause during a hostile question",
+      body: "A student facing an unexpectedly hostile question in a presentation used a practiced pause-and-breathe technique instead of reacting defensively, which visibly steadied her response and impressed the audience.",
+    },
+    pitfalls: [
+      "Waiting until you're already overwhelmed to try a technique for the first time, rather than practicing it in advance during lower-stakes moments.",
+    ],
+    successSignal:
+      "You apply your chosen technique in a real stressful moment and notice it genuinely helps you respond more calmly.",
+    milestoneTies: [304],
+  },
+
+  308: {
+    definition:
+      "A First Cultural Awareness Reflection notes genuine differences and similarities across peers from different backgrounds, building awareness beyond your own default cultural assumptions.",
+    whyItMatters:
+      "Increasingly diverse environments require genuine cultural awareness, not just tolerance; understanding real differences and similarities builds better working relationships.",
+    whenWhoWhere: [
+      { label: "When", body: "Reflect on this after meaningful interactions with people from different cultural backgrounds than your own." },
+      { label: "Who", body: "No collaborator required, though genuine conversations with people from different backgrounds are the real source material." },
+      { label: "Where", body: "Reflected on after real interactions or conversations." },
+    ],
+    howItWorks: [
+      "After a meaningful cross-cultural interaction, reflect on what genuinely surprised you, what assumptions you noticed yourself making, and what you learned.",
+    ],
+    tools: ["A journal for reflection"],
+    scenario: {
+      title: "An assumption about \"direct\" feedback, revised",
+      body: "A student working with an international classmate noticed her own assumption that direct feedback was always preferred, and learned through the interaction that her classmate's cultural background valued a more indirect approach, a genuinely useful insight for future collaboration.",
+    },
+    pitfalls: [
+      "Treating cultural awareness as a one-time checkbox rather than an ongoing, evolving practice of genuine curiosity.",
+    ],
+    successSignal:
+      "You can name a specific assumption you noticed yourself making, and what you learned that challenged or refined it.",
+    milestoneTies: [],
+  },
+
+  309: {
+    definition:
+      "A First Personal Values Statement Written clarifies your guiding principles in a concise, written statement, building on the values work from Stage One with more soft-skill-focused specificity.",
+    whyItMatters:
+      "A clear, written values statement helps guide decisions and behavior consistently, rather than reacting differently each time based on mood or circumstance.",
+    whenWhoWhere: [
+      { label: "When", body: "Write this once you have enough real experience to know which values genuinely guide your behavior, not just ones that sound good in theory." },
+      { label: "Who", body: "No collaborator required, though discussing it with a mentor can sharpen the statement." },
+      { label: "Where", body: "Written in a dedicated reflective session." },
+    ],
+    howItWorks: [
+      "Reflect on moments you felt genuinely proud of your behavior, and identify the value underneath each.",
+      "Write a concise statement capturing your two or three core guiding principles.",
+    ],
+    tools: ["Your Stage One Core Values Audit as a starting reference point"],
+    scenario: {
+      title: "A statement she actually used months later",
+      body: "A student's values statement, \"I treat people's time as valuable, and I choose honesty over comfort,\" became something she actually referenced when deciding how to handle a difficult team conversation months later.",
+    },
+    pitfalls: [
+      "Writing a values statement that sounds impressive but doesn't actually reflect how you behave in practice.",
+    ],
+    successSignal:
+      "You can recall and apply your values statement in an actual real decision, not just have it written somewhere unused.",
+    milestoneTies: [1],
+  },
+
+  310: {
+    definition:
+      "A First Feedback Given delivers constructive feedback to a peer or team member, practicing the specific skill of doing so clearly and kindly.",
+    whyItMatters:
+      "Most people avoid giving feedback out of discomfort, which deprives peers of genuinely useful input they could use to improve.",
+    whenWhoWhere: [
+      { label: "When", body: "Practice this whenever you have genuine, constructive feedback to offer in a setting where it would be welcome." },
+      { label: "Who", body: "A peer, teammate, or classmate whose work or approach you have genuine insight on." },
+      { label: "Where", body: "Delivered privately and directly, not in front of a group unless the setting specifically calls for it." },
+    ],
+    howItWorks: [
+      "Lead with something genuine you appreciated, then offer one specific, actionable piece of constructive input, framed around the work or behavior rather than the person.",
+    ],
+    tools: ["No special tool, a genuine, specific observation to share"],
+    scenario: {
+      title: "A shared deadline forced the honest conversation",
+      body: "A student avoided telling a teammate his presentation section ran too long, until a shared deadline forced the conversation. Delivered kindly and specifically, the feedback was received well.",
+    },
+    pitfalls: [
+      "Avoiding giving feedback entirely out of discomfort, which deprives your peer of genuinely useful input.",
+    ],
+    successSignal:
+      "The person receives your feedback well and makes a genuine adjustment based on it.",
+    milestoneTies: [311],
+  },
+
+  311: {
+    definition:
+      "A First Feedback Received Gracefully reflects on and implements advice received from someone else, practicing a non-defensive response even when the feedback is uncomfortable.",
+    whyItMatters:
+      "How you respond to feedback in the moment shapes whether people feel comfortable giving you honest input in the future.",
+    whenWhoWhere: [
+      { label: "When", body: "Practice this whenever you receive any substantive feedback, especially feedback that stings a little." },
+      { label: "Who", body: "Whoever gives you the feedback." },
+      { label: "Where", body: "Applied in the moment feedback is given, ideally followed up afterward with a genuine change." },
+    ],
+    howItWorks: [
+      "Listen fully without interrupting or explaining.",
+      "Thank the person genuinely.",
+      "Reflect on the feedback afterward and identify one specific change to make.",
+    ],
+    tools: ["No special tool, a practiced, non-defensive response in the moment"],
+    scenario: {
+      title: "\"Thank you, that's helpful\" changed what she got next",
+      body: "A student used to immediately explain or justify her work whenever a professor gave critical feedback, which visibly discouraged detailed input in later assignments. Practicing a simple \"thank you, that's helpful\" instead led to noticeably more detailed feedback over time.",
+    },
+    pitfalls: [
+      "Becoming defensive or immediately explaining your reasoning, which discourages honest feedback in the future.",
+    ],
+    successSignal:
+      "The person who gave you feedback continues to give you honest, detailed input rather than softening or withholding it.",
+    milestoneTies: [],
+  },
+
+  312: {
+    definition:
+      "A First Conflict Resolution Practice handles a genuine disagreement constructively, addressing the underlying issue directly rather than avoiding it or letting it escalate.",
+    whyItMatters:
+      "Avoided conflict doesn't disappear, it tends to resurface worse later; addressing disagreement directly and constructively is a distinct, learnable skill.",
+    whenWhoWhere: [
+      { label: "When", body: "Use this whenever a genuine, unresolved disagreement arises, ideally addressed relatively soon rather than left to fester." },
+      { label: "Who", body: "The specific person you're in disagreement with." },
+      { label: "Where", body: "In a private, calm setting, not in front of a group or in the heat of the original moment." },
+    ],
+    howItWorks: [
+      "State your perspective using \"I\" statements.",
+      "Genuinely listen to their perspective.",
+      "Focus the conversation on a specific resolution, not on who was right.",
+    ],
+    tools: ["No special tool, a calm setting and genuine willingness to hear the other perspective"],
+    scenario: {
+      title: "Weeks of silence versus one direct conversation",
+      body: "A student avoided addressing a group project teammate's missed deadlines for weeks, letting resentment build. A direct, calm conversation focused on a specific go-forward plan resolved the tension far more effectively than weeks of silent frustration had.",
+    },
+    pitfalls: [
+      "Avoiding the conversation entirely, which tends to make the underlying issue worse over time.",
+    ],
+    successSignal:
+      "The specific issue gets resolved, and the working relationship continues functionally afterward.",
+    milestoneTies: [],
+  },
+
+  313: {
+    definition:
+      "A First Team Conflict Debrief reflects on a past team disagreement and its resolution, extracting lessons for handling similar situations better in the future.",
+    whyItMatters:
+      "Without deliberate debriefing, teams tend to repeat the same conflict patterns rather than genuinely learning from past disagreements.",
+    whenWhoWhere: [
+      { label: "When", body: "Conduct this shortly after a team conflict has been resolved, while details are still fresh." },
+      { label: "Who", body: "The team members involved in the conflict, ideally, though it can also be done individually." },
+      { label: "Where", body: "Done in a reflective conversation or written reflection." },
+    ],
+    howItWorks: [
+      "Discuss or reflect on what caused the conflict, how it was resolved, and what the team would do differently next time.",
+    ],
+    tools: ["A simple debrief template: what happened, what worked, what we'd change"],
+    scenario: {
+      title: "A scheduling conflict, and the structure underneath it",
+      body: "A team that debriefed a scheduling conflict identified that the real cause was an unclear task ownership structure, not personal friction, and fixed the structural issue rather than just patching over the personal tension.",
+    },
+    pitfalls: [
+      "Skipping the debrief once the immediate tension has passed, missing the chance to prevent similar conflicts in the future.",
+    ],
+    successSignal:
+      "The team identifies a specific structural or process change that would prevent a similar conflict from recurring.",
+    milestoneTies: [],
+  },
+
+  314: {
+    definition:
+      "A First Conflict Mediation Role Played practices mediating a disagreement between two other people, staying neutral and helping both sides reach understanding.",
+    whyItMatters:
+      "Mediation is a distinct skill from resolving your own conflicts; staying genuinely neutral while helping two other people communicate is valuable both for team dynamics and future leadership roles.",
+    whenWhoWhere: [
+      { label: "When", body: "Practice this whenever a genuine opportunity arises to help mediate a disagreement between peers, or in a deliberate role-play setting." },
+      { label: "Who", body: "Two peers in disagreement, or role-play partners simulating one." },
+      { label: "Where", body: "In a calm, private setting suited to a genuine mediation conversation." },
+    ],
+    howItWorks: [
+      "Stay neutral, don't take sides.",
+      "Help each person state their perspective and genuinely hear the other's.",
+      "Guide the conversation toward a specific resolution rather than dwelling on blame.",
+    ],
+    tools: ["No special tool, genuine neutrality and structured facilitation"],
+    scenario: {
+      title: "A chore schedule, mediated carefully",
+      body: "A student asked to informally mediate between two roommates in disagreement over chores stayed carefully neutral, helped each state their actual concern, and guided them to a specific, mutually agreed chore schedule.",
+    },
+    pitfalls: [
+      "Unconsciously taking a side, even subtly, which undermines the mediator's credibility with both parties.",
+    ],
+    successSignal:
+      "Both parties feel genuinely heard, and the conversation ends with a specific, mutually agreed resolution.",
+    milestoneTies: [312, 313],
+  },
+
+  315: {
+    definition:
+      "A First Team Feedback Session Facilitated guides peers through a structured, constructive feedback exchange, ensuring the conversation stays productive rather than becoming personal or unfocused.",
+    whyItMatters:
+      "Team feedback sessions without structure often become either too vague to be useful or uncomfortably personal; facilitation keeps them genuinely productive.",
+    whenWhoWhere: [
+      { label: "When", body: "Facilitate this at natural team checkpoints, such as after completing a project phase." },
+      { label: "Who", body: "Your team members." },
+      { label: "Where", body: "In a dedicated team meeting set aside specifically for feedback." },
+    ],
+    howItWorks: [
+      "Set clear ground rules (specific, kind, actionable).",
+      "Structure the session around what's working and what to improve, giving everyone a chance to both give and receive.",
+    ],
+    tools: ["A simple structure: one thing working well, one thing to improve, per person"],
+    scenario: {
+      title: "From awkward and vague to genuinely useful",
+      body: "A team's first unstructured feedback attempt turned awkward and vague. A facilitated version with clear ground rules and a consistent structure produced genuinely useful, specific input from everyone.",
+    },
+    pitfalls: [
+      "Letting the session drift into vague positivity or, conversely, uncomfortable personal criticism without structure to keep it constructive.",
+    ],
+    successSignal:
+      "Every team member leaves with at least one specific, actionable piece of feedback.",
+    milestoneTies: [310, 311],
+  },
+
+  316: {
+    definition:
+      "A First Negotiation Exercise practices finding a genuinely win-win solution in a real negotiation, rather than treating it as a purely adversarial exchange.",
+    whyItMatters:
+      "Negotiation is relevant far beyond salary discussions, including everyday resource allocation, deadlines, and task division; approaching it collaboratively rather than adversarially produces better outcomes for both sides.",
+    whenWhoWhere: [
+      { label: "When", body: "Practice this whenever a genuine negotiation opportunity arises, even a low-stakes one." },
+      { label: "Who", body: "Whoever you're negotiating with." },
+      { label: "Where", body: "Applied in any real negotiation context." },
+    ],
+    howItWorks: [
+      "Identify your actual priorities versus flexible points before starting.",
+      "Listen for the other side's priorities, and look for a solution serving both.",
+    ],
+    tools: ["A simple prep structure: my priorities, my flexible points, their likely priorities"],
+    scenario: {
+      title: "An exam schedule hiding behind \"win-lose\"",
+      body: "A student negotiating a project deadline with a teammate initially framed it as win-lose, until identifying the teammate's actual underlying concern (a conflicting exam schedule) revealed an easy mutual solution.",
+    },
+    pitfalls: [
+      "Treating negotiation as purely adversarial, missing solutions that could genuinely serve both sides.",
+    ],
+    successSignal:
+      "You reach a solution that both sides are genuinely satisfied with, not just a compromise neither likes.",
+    milestoneTies: [280],
+  },
+
+  317: {
+    definition:
+      "A First Boundary Setting Exercise communicates a genuine limit respectfully, protecting your time, energy, or wellbeing without damaging the relationship.",
+    whyItMatters:
+      "Without practiced boundaries, it's easy to become overcommitted or resentful, which ultimately damages relationships more than a respectfully stated limit would.",
+    whenWhoWhere: [
+      { label: "When", body: "Practice this whenever a genuine boundary needs to be communicated, especially one you'd normally avoid stating." },
+      { label: "Who", body: "Whoever the boundary needs to be communicated to." },
+      { label: "Where", body: "Applied in any real situation requiring a limit: time, workload, emotional energy." },
+    ],
+    howItWorks: [
+      "State the boundary clearly and calmly, without over-apologizing.",
+      "Offer an alternative if appropriate, but don't feel obligated to over-explain or justify.",
+    ],
+    tools: ["A simple structure: state the boundary, offer an alternative if relevant, hold the line calmly"],
+    scenario: {
+      title: "\"I can't tonight, but tomorrow works\"",
+      body: "A student who always said yes to last-minute favor requests started saying, \"I can't do this tonight, but I could help tomorrow instead,\" and found people respected the boundary without any real friction.",
+    },
+    pitfalls: [
+      "Over-apologizing or over-explaining the boundary, which can invite pushback or negotiation on something you actually need to hold firm.",
+    ],
+    successSignal:
+      "You state a boundary calmly and it's respected, without the relationship suffering as a result.",
+    milestoneTies: [],
+  },
+
+  318: {
+    definition:
+      "A First Collaboration Challenge Completed works through a genuinely difficult group task successfully, building real experience navigating team friction toward a shared outcome.",
+    whyItMatters:
+      "Easy collaborations don't build much skill; genuinely challenging ones, involving real friction or difficulty, are where collaborative skill actually develops.",
+    whenWhoWhere: [
+      { label: "When", body: "Use this whenever a group task presents genuine difficulty, not just routine coordination." },
+      { label: "Who", body: "Your team members." },
+      { label: "Where", body: "Applied to any genuinely challenging group project or task." },
+    ],
+    howItWorks: [
+      "Stay focused on the shared goal even when friction arises.",
+      "Address disagreements directly rather than avoiding them, and adapt your role as needed to help the team succeed.",
+    ],
+    tools: ["No special tool, genuine commitment to the shared outcome despite difficulty"],
+    scenario: {
+      title: "Decision criteria, agreed on upfront",
+      body: "A team facing a genuinely difficult project with conflicting ideas and a tight deadline pushed through by explicitly agreeing on decision criteria upfront, which prevented the disagreement from stalling the whole project.",
+    },
+    pitfalls: [
+      "Giving up on genuine collaboration at the first sign of friction, retreating into solo work instead.",
+    ],
+    successSignal:
+      "The team completes the genuinely difficult task, and you can point to a specific moment where collaboration, not just individual effort, made the difference.",
+    milestoneTies: [],
+  },
+
+  319: {
+    definition:
+      "A First Team Role Assumed takes deliberate responsibility as a leader, facilitator, or contributor within a group, practicing a specific role rather than falling into whatever happens by default.",
+    whyItMatters:
+      "Deliberately choosing and committing to a role helps a team function more effectively than everyone defaulting to whatever role feels most comfortable or familiar.",
+    whenWhoWhere: [
+      { label: "When", body: "Use this at the start of any group project, deliberately choosing a role rather than letting it happen by default." },
+      { label: "Who", body: "Your team members, ideally involved in discussing role assignment together." },
+      { label: "Where", body: "Applied at the start of any group project." },
+    ],
+    howItWorks: [
+      "Discuss as a team who will take on which roles (leader, facilitator, specific contributor areas).",
+      "Commit fully to your chosen role rather than drifting between them.",
+    ],
+    tools: ["A simple team role discussion at project kickoff"],
+    scenario: {
+      title: "From quiet contributor to facilitator",
+      body: "A student who always defaulted to a quiet contributor role deliberately took on the facilitator role in her next group project, which pushed her to develop skills she wouldn't have built otherwise.",
+    },
+    pitfalls: [
+      "Always taking the same comfortable role by default, missing the growth that comes from deliberately trying a different one.",
+    ],
+    successSignal:
+      "You can name the specific role you took on and one way it stretched you beyond your usual default.",
+    milestoneTies: [323],
+  },
+
+  320: {
+    definition:
+      "A First Collaborative Brainstorm generates creative ideas in a group setting, using structured techniques to produce more and better ideas than an unstructured discussion would.",
+    whyItMatters:
+      "Unstructured group brainstorming often produces fewer and lower-quality ideas than a deliberately structured session, since judgment and social dynamics tend to suppress genuine idea generation.",
+    whenWhoWhere: [
+      { label: "When", body: "Use this whenever a group needs to generate genuine new ideas together." },
+      { label: "Who", body: "Your group or team." },
+      { label: "Where", body: "Any setting conducive to focused, uninterrupted idea generation." },
+    ],
+    howItWorks: [
+      "Set a time limit and clear prompt.",
+      "Generate quantity first without judging ideas, then group and evaluate together afterward.",
+    ],
+    tools: ["A whiteboard, sticky notes, or a shared document"],
+    scenario: {
+      title: "Separating generation from judgment",
+      body: "A team's unstructured brainstorm produced few genuine ideas until they switched to a timed, judgment-free generation phase followed by a separate evaluation phase, dramatically increasing both quantity and quality.",
+    },
+    pitfalls: [
+      "Judging or discussing ideas during the generation phase, which suppresses the range of ideas produced.",
+    ],
+    successSignal:
+      "The group generates a genuinely larger and more varied set of ideas than an unstructured discussion would have produced.",
+    milestoneTies: [281],
+  },
+
+  321: {
+    definition:
+      "A First Problem-Solving Discussion brainstorms solutions with peers around a genuine shared problem, practicing collaborative rather than solo problem-solving.",
+    whyItMatters:
+      "Group problem-solving often surfaces solutions no individual would have reached alone, but only if the discussion is structured to genuinely draw out different perspectives.",
+    whenWhoWhere: [
+      { label: "When", body: "Use this whenever a genuine shared problem affects a group you're part of." },
+      { label: "Who", body: "Peers who share the problem or have relevant insight into it." },
+      { label: "Where", body: "Any setting conducive to focused group discussion." },
+    ],
+    howItWorks: [
+      "State the problem clearly.",
+      "Invite each person to share their perspective before converging on solutions, rather than jumping to the first idea offered.",
+    ],
+    tools: ["No special tool, a structured discussion approach"],
+    scenario: {
+      title: "Three interpretations of the same brief",
+      body: "A group struggling with an unclear project scope held a structured problem-solving discussion where each member shared their understanding first, revealing that the confusion stemmed from three different interpretations of the original brief.",
+    },
+    pitfalls: [
+      "Converging on the first idea offered, usually from the most vocal person, without genuinely exploring other perspectives first.",
+    ],
+    successSignal:
+      "The discussion surfaces a solution or insight that wasn't obvious from any single person's perspective alone.",
+    milestoneTies: [320],
+  },
+
+  322: {
+    definition:
+      "A First Group Decision Facilitated leads a discussion toward genuine group consensus, rather than letting the loudest voice or a rushed vote decide the outcome.",
+    whyItMatters:
+      "Decisions reached without genuine buy-in from the group often unravel later; facilitating toward real consensus produces more durable, committed outcomes.",
+    whenWhoWhere: [
+      { label: "When", body: "Use this whenever a group decision needs to be made with genuine buy-in from all involved." },
+      { label: "Who", body: "The group making the decision." },
+      { label: "Where", body: "In a dedicated discussion or meeting focused on the decision." },
+    ],
+    howItWorks: [
+      "Ensure everyone's perspective is heard before converging.",
+      "Look for common ground and address concerns directly rather than overriding them.",
+    ],
+    tools: ["A simple structure: hear all perspectives, identify common ground, address remaining concerns, confirm agreement"],
+    scenario: {
+      title: "A quiet reservation, addressed directly",
+      body: "A team facilitator noticed one member's quiet reservation about a decision that seemed to have consensus, and addressing it directly revealed a genuine concern that improved the final decision once incorporated.",
+    },
+    pitfalls: [
+      "Rushing to a vote or the loudest opinion without checking whether quieter members have unaddressed concerns.",
+    ],
+    successSignal:
+      "The final decision has genuine buy-in from the whole group, not just the most vocal members.",
+    milestoneTies: [299],
+  },
+
+  323: {
+    definition:
+      "A First Team Role Rotation Experience deliberately tries a different position in a group than your usual default, building flexibility and a broader skill set.",
+    whyItMatters:
+      "Sticking to the same comfortable role limits your growth; deliberately rotating into unfamiliar roles builds flexibility and reveals strengths you might not have discovered otherwise.",
+    whenWhoWhere: [
+      { label: "When", body: "Use this across multiple group projects over time, deliberately varying your role each time." },
+      { label: "Who", body: "Your team, ideally supportive of the rotation experiment." },
+      { label: "Where", body: "Applied across different group projects or team settings." },
+    ],
+    howItWorks: [
+      "Identify your usual default role, then deliberately choose a different one for your next group project, committing fully to it.",
+    ],
+    tools: ["No special tool, deliberate role variation across projects"],
+    scenario: {
+      title: "Research role to presenter, discovering a comfort",
+      body: "A student who always took on research tasks deliberately took the presenter role in her next group project, and discovered a genuine comfort with public speaking she hadn't previously realized she had.",
+    },
+    pitfalls: [
+      "Reverting to your comfortable default role under pressure instead of committing to the new one.",
+    ],
+    successSignal:
+      "You discover something new about your own capabilities by trying an unfamiliar role.",
+    milestoneTies: [319],
+  },
+
+  324: {
+    definition:
+      "A First Adaptation to Remote/Virtual Work adjusts your collaboration habits for an online team setting, addressing the specific challenges of virtual coordination.",
+    whyItMatters:
+      "Remote and virtual teamwork requires different habits than in-person collaboration, including more deliberate communication since informal cues are lost.",
+    whenWhoWhere: [
+      { label: "When", body: "Practice this whenever you're collaborating with a team primarily or entirely online." },
+      { label: "Who", body: "Your remote or virtual team." },
+      { label: "Where", body: "Applied in virtual meetings, shared documents, and asynchronous communication." },
+    ],
+    howItWorks: [
+      "Over-communicate slightly compared to in-person settings, since tone and context are harder to convey virtually.",
+      "Use video when possible to preserve some non-verbal cues.",
+    ],
+    tools: ["Video conferencing tools, shared documents, and asynchronous messaging platforms"],
+    scenario: {
+      title: "Brief video check-ins resolved near-misunderstandings",
+      body: "A student's fully remote team project initially suffered from misread tones in text-only messages. Switching to brief video check-ins for anything with real emotional stakes resolved several near-misunderstandings.",
+    },
+    pitfalls: [
+      "Assuming text communication carries the same tone and context as in-person conversation, when it often reads more harshly or ambiguously than intended.",
+    ],
+    successSignal:
+      "Your remote team communicates as effectively as an equivalent in-person team would, with fewer misunderstandings from lost context.",
+    milestoneTies: [],
+  },
+
+  325: {
+    definition:
+      "A First Peer Recognition Shared publicly acknowledges a teammate's genuine contribution, building a habit of visible appreciation rather than assuming good work speaks for itself.",
+    whyItMatters:
+      "Genuine contributions often go unnoticed without deliberate acknowledgment, and public recognition builds team morale and reinforces the behaviors worth repeating.",
+    whenWhoWhere: [
+      { label: "When", body: "Practice this whenever a teammate makes a genuine, specific contribution worth acknowledging." },
+      { label: "Who", body: "The teammate being recognized, and ideally the broader team as the audience." },
+      { label: "Where", body: "In a team meeting, shared channel, or other visible team setting." },
+    ],
+    howItWorks: [
+      "Name the specific contribution and its actual impact, rather than a generic \"great job.\"",
+      "Share it in a setting others will see, not just privately.",
+    ],
+    tools: ["A team channel or meeting as the venue for public recognition"],
+    scenario: {
+      title: "A quieter teammate, visibly more engaged after",
+      body: "A student publicly acknowledged a quieter teammate's specific data analysis contribution in a team meeting, and noticed that teammate visibly became more engaged in subsequent meetings.",
+    },
+    pitfalls: [
+      "Giving vague, generic praise (\"great job everyone\") instead of specific, genuine recognition of an individual contribution.",
+    ],
+    successSignal:
+      "The recognized teammate visibly appreciates it, and the specific behavior you recognized tends to continue or increase.",
+    milestoneTies: [310],
+  },
+
+  326: {
+    definition:
+      "A First Decision-Making Log documents a real decision and its rationale, building a record that supports both accountability and future reflection.",
+    whyItMatters:
+      "Without a documented rationale, it's hard to learn from past decisions, since memory of the actual reasoning fades quickly once the outcome is known.",
+    whenWhoWhere: [
+      { label: "When", body: "Use this for any decision with real stakes or genuine uncertainty at the time it's made." },
+      { label: "Who", body: "No collaborator required, though shared team decisions benefit from a jointly maintained log." },
+      { label: "Where", body: "Documented at the time the decision is made, not reconstructed afterward." },
+    ],
+    howItWorks: [
+      "Record the decision, the key factors considered, and the reasoning behind the final choice, at the time you make it.",
+    ],
+    tools: ["A simple decision log template: decision, factors considered, reasoning, date"],
+    scenario: {
+      title: "Confirming the original logic months later",
+      body: "A team that documented their reasoning for a product direction decision was able to revisit it months later and confirm the original logic still held, rather than second-guessing based on incomplete memory of why they'd chosen that path.",
+    },
+    pitfalls: [
+      "Only logging decisions after the fact, once the outcome is already known, which distorts the honest record of the original reasoning.",
+    ],
+    successSignal:
+      "You can look back at a logged decision and accurately recall the genuine reasoning behind it, not a reconstructed narrative.",
+    milestoneTies: [],
+  },
+
+  327: {
+    definition:
+      "A First Public Speaking Confidence Drill practices speaking in front of a small group, building comfort specifically with the presence of an audience rather than just the content itself.",
+    whyItMatters:
+      "Content mastery and audience comfort are distinct challenges; practicing specifically in front of real people builds the comfort that solo rehearsal alone doesn't provide.",
+    whenWhoWhere: [
+      { label: "When", body: "Practice this regularly, especially before any higher-stakes speaking opportunity." },
+      { label: "Who", body: "A small group of friends, classmates, or a study group." },
+      { label: "Where", body: "Any low-stakes setting with a real, if small, audience." },
+    ],
+    howItWorks: [
+      "Speak on any topic for one to two minutes in front of a small group.",
+      "Focus on your comfort with the audience's presence, not just the content quality.",
+    ],
+    tools: ["No special tool, a willing small audience"],
+    scenario: {
+      title: "Roommates as practice for a graded presentation",
+      body: "A student who only ever rehearsed alone was thrown off by a real audience's presence during her first graded presentation. Practicing in front of roommates a few times beforehand significantly reduced that nervousness for her next one.",
+    },
+    pitfalls: [
+      "Only ever practicing alone, which doesn't build the specific comfort needed for a real audience's presence.",
+    ],
+    successSignal:
+      "You feel less physically nervous speaking in front of people after repeated small-group practice.",
+    milestoneTies: [],
+  },
+
+  328: {
+    definition:
+      "A First Presentation to Mixed Audience adapts your tone and language to a genuinely varied audience, rather than assuming everyone shares the same background or expertise.",
+    whyItMatters:
+      "A single presentation style rarely lands equally well with a truly mixed audience; adapting tone and language for different segments within the same room is a distinct, valuable skill.",
+    whenWhoWhere: [
+      { label: "When", body: "Practice this whenever your actual audience includes genuinely different backgrounds, expertise levels, or interests." },
+      { label: "Who", body: "A genuinely mixed audience, not a uniform group." },
+      { label: "Where", body: "Applied to any presentation with real audience diversity." },
+    ],
+    howItWorks: [
+      "Identify the different segments of your audience in advance.",
+      "Build in moments that speak to each segment's specific interest or background, rather than a one-size-fits-all approach.",
+    ],
+    tools: ["Audience research beforehand, if possible"],
+    scenario: {
+      title: "A plain-language recap after every technical point",
+      body: "A student presenting to both technical and non-technical stakeholders built in a brief plain-language recap after each technical point, which kept both segments of the audience genuinely engaged.",
+    },
+    pitfalls: [
+      "Assuming a uniform audience and pitching entirely to one segment, losing the rest of the room.",
+    ],
+    successSignal:
+      "Different segments of your audience each report feeling like the presentation spoke to them specifically.",
+    milestoneTies: [],
+  },
+
+  329: {
+    definition:
+      "A First Networking Conversation engages meaningfully with a new contact, building on the networking skills from earlier stages with a focus specifically on genuine engagement over transactional exchange.",
+    whyItMatters:
+      "Networking that feels transactional rarely produces genuine relationships; approaching it with real curiosity about the other person produces more durable, valuable connections.",
+    whenWhoWhere: [
+      { label: "When", body: "Practice this at any networking event or new professional introduction." },
+      { label: "Who", body: "Anyone new in a professional or social context." },
+      { label: "Where", body: "Applied at networking events, informational interviews, or any new introduction." },
+    ],
+    howItWorks: [
+      "Lead with genuine curiosity about the other person rather than your own agenda.",
+      "Ask real questions and listen for what actually interests you about their answer.",
+    ],
+    tools: ["A few prepared conversation starters as a fallback"],
+    scenario: {
+      title: "From a mental checklist to genuine curiosity",
+      body: "A student who used to approach networking events with a mental checklist of what she needed from each conversation shifted to genuine curiosity instead, and found her conversations naturally lasted longer and felt less exhausting.",
+    },
+    pitfalls: [
+      "Treating the conversation as transactional, focused on what you can get from it rather than genuine mutual engagement.",
+    ],
+    successSignal:
+      "The conversation feels genuinely engaging for both people, not just useful for one side.",
+    milestoneTies: [],
+  },
+
+  330: {
+    definition:
+      "A First Peer Mentoring Session guides a peer through a skill or task, practicing the specific skill of teaching and supporting someone at a similar level to you.",
+    whyItMatters:
+      "Peer mentoring is a distinct skill from being mentored, and teaching a peer often deepens your own understanding while building genuine leadership capability.",
+    whenWhoWhere: [
+      { label: "When", body: "Offer this whenever a peer needs help with a skill or task you're comfortable with." },
+      { label: "Who", body: "A peer who could benefit from your guidance." },
+      { label: "Where", body: "Any informal or formal mentoring setting." },
+    ],
+    howItWorks: [
+      "Ask what specifically they're struggling with before launching into explanation.",
+      "Guide them toward their own understanding rather than just doing the task for them.",
+    ],
+    tools: ["No special tool, genuine patience and a teaching mindset"],
+    scenario: {
+      title: "Guiding questions instead of just doing it",
+      body: "A student mentoring a peer on a spreadsheet skill resisted the urge to just do it for them, instead asking guiding questions that let the peer arrive at the solution themselves, which built the peer's genuine confidence rather than dependence.",
+    },
+    pitfalls: [
+      "Just doing the task for the person instead of guiding them toward their own understanding.",
+    ],
+    successSignal:
+      "The peer can complete the skill or task independently afterward, not just watch you do it.",
+    milestoneTies: [289],
+  },
+
+  331: {
+    definition:
+      "A First Mentor Interaction asks thoughtful questions of a mentor and genuinely applies their guidance, rather than just passively receiving advice.",
+    whyItMatters:
+      "A mentoring relationship's value depends heavily on how well you engage with it; thoughtful questions and genuine application make the relationship far more valuable than passive listening.",
+    whenWhoWhere: [
+      { label: "When", body: "Practice this in any mentoring conversation, prepared in advance rather than improvised." },
+      { label: "Who", body: "A mentor, formal or informal." },
+      { label: "Where", body: "Any scheduled or informal mentoring conversation." },
+    ],
+    howItWorks: [
+      "Prepare specific questions in advance.",
+      "After the conversation, identify one specific piece of guidance to actually apply, and follow up on how it went.",
+    ],
+    tools: ["A short list of prepared questions specific to your current situation"],
+    scenario: {
+      title: "Two prepared questions changed the advice she got",
+      body: "A student who used to have vague, unfocused mentor conversations started preparing two specific questions each time, and found the resulting advice was far more actionable and specific in return.",
+    },
+    pitfalls: [
+      "Showing up to mentor conversations without any specific questions prepared, resulting in generic, less useful advice.",
+    ],
+    successSignal:
+      "You can point to a specific piece of mentor guidance you actually applied, and the result of applying it.",
+    milestoneTies: [],
+  },
+
+  332: {
+    definition:
+      "A First Networking Follow-Up Practice maintains a professional connection proactively over time, rather than letting it fade after the initial meeting.",
+    whyItMatters:
+      "Most networking value is lost not at the initial meeting but in the failure to follow up consistently afterward; proactive follow-up is what actually sustains a relationship.",
+    whenWhoWhere: [
+      { label: "When", body: "Practice this periodically with contacts you've genuinely valued, not just immediately after meeting them." },
+      { label: "Who", body: "A previous networking contact you want to maintain a relationship with." },
+      { label: "Where", body: "Applied via email, LinkedIn, or another appropriate channel." },
+    ],
+    howItWorks: [
+      "Reach out periodically with something genuinely relevant to them, not just a generic check-in, such as an article they'd find interesting or a specific update on something you discussed.",
+    ],
+    tools: ["A simple system for tracking who to follow up with and when"],
+    scenario: {
+      title: "From faded contacts to real relationships",
+      body: "A student who let networking contacts fade after the initial meeting started sending occasional, genuinely relevant follow-ups, and found several contacts became real, ongoing relationships rather than one-time conversations.",
+    },
+    pitfalls: [
+      "Only reaching out when you need something, which reads as transactional rather than a genuine ongoing relationship.",
+    ],
+    successSignal:
+      "A previous contact responds warmly to your follow-up, indicating the relationship is genuinely being maintained.",
+    milestoneTies: [],
+  },
+
+  333: {
+    definition:
+      "A First Networking Event Reflection documents what worked and what you learned after attending a networking event, building genuine improvement over time rather than repeating the same approach.",
+    whyItMatters:
+      "Without deliberate reflection, networking approach tends to stay static rather than genuinely improving event to event.",
+    whenWhoWhere: [
+      { label: "When", body: "Conduct this shortly after attending any networking event." },
+      { label: "Who", body: "No collaborator required for the reflection itself." },
+      { label: "Where", body: "Done in a private reflective session shortly after the event." },
+    ],
+    howItWorks: [
+      "Reflect on what conversations went well and why, what felt awkward, and one specific thing to try differently next time.",
+    ],
+    tools: ["A journal or notes app"],
+    scenario: {
+      title: "A pattern across events: questions beat pitches",
+      body: "A student's post-event reflections revealed a consistent pattern: conversations that opened with a genuine question about the other person consistently went better than ones opening with her own pitch, a clear insight for future events.",
+    },
+    pitfalls: [
+      "Skipping reflection because the event is over and moving on feels easier, missing the chance to genuinely improve.",
+    ],
+    successSignal:
+      "You can name a specific pattern across multiple event reflections that's genuinely improving your networking approach.",
+    milestoneTies: [],
+  },
+
+  334: {
+    definition:
+      "A First Presentation Handling Q&A answers audience questions confidently and clearly during or after a presentation, a distinct skill from delivering prepared content.",
+    whyItMatters:
+      "Unscripted Q&A often reveals more about genuine understanding and composure than the prepared portion of a presentation ever does.",
+    whenWhoWhere: [
+      { label: "When", body: "Practice this whenever your presentation includes a Q&A component, ideally rehearsed with likely questions in advance." },
+      { label: "Who", body: "A practice audience willing to ask realistic questions." },
+      { label: "Where", body: "Applied to any real presentation with a Q&A component." },
+    ],
+    howItWorks: [
+      "Anticipate likely questions in advance and prepare rough answers.",
+      "During real Q&A, pause briefly before answering rather than rushing, and it's fine to say \"that's a great question, let me think\" if needed.",
+    ],
+    tools: ["A list of anticipated questions prepared in advance"],
+    scenario: {
+      title: "A deliberate pause replaced the ramble",
+      body: "A student who used to rush and ramble during Q&A started deliberately pausing for a beat before answering, which made her responses noticeably more composed and clear.",
+    },
+    pitfalls: [
+      "Rushing to answer immediately out of nervousness, which often produces a less clear, more rambling response than a brief pause would allow.",
+    ],
+    successSignal:
+      "You handle at least one unexpected question calmly and clearly, without visible panic.",
+    milestoneTies: [],
+  },
+
+  335: {
+    definition:
+      "A First Motivational Speech Practice inspires a small group with genuine ideas, practicing the specific skill of persuasive, energizing communication rather than purely informational speaking.",
+    whyItMatters:
+      "Motivational speaking is a distinct skill from informational presenting, requiring genuine energy and emotional connection alongside clear content.",
+    whenWhoWhere: [
+      { label: "When", body: "Practice this whenever you have a genuine opportunity to inspire or energize a small group around an idea." },
+      { label: "Who", body: "A small group willing to be your practice audience." },
+      { label: "Where", body: "Any setting suited to a short motivational talk." },
+    ],
+    howItWorks: [
+      "Ground the speech in a genuine, personal conviction rather than generic inspirational language.",
+      "Use energy and pacing deliberately, not just content.",
+    ],
+    tools: ["A genuine personal story or conviction as the foundation"],
+    scenario: {
+      title: "Generic phrases fell flat; a real story landed",
+      body: "A student's first attempt at a motivational talk used generic inspirational phrases and fell flat. Grounding her second attempt in a specific, genuine personal story about overcoming a real setback landed far more powerfully with her small practice audience.",
+    },
+    pitfalls: [
+      "Relying on generic inspirational language instead of a genuine, specific personal conviction or story.",
+    ],
+    successSignal:
+      "Your small audience reports feeling genuinely moved or energized, not just informed.",
+    milestoneTies: [],
+  },
+
+  336: {
+    definition:
+      "A First Adaptability Exercise deliberately adjusts to an unexpected change or challenge, building the specific muscle of flexible response rather than rigid reaction.",
+    whyItMatters:
+      "Unexpected change is inevitable in any real project or career, and the ability to adapt quickly and constructively is a distinct, trainable skill.",
+    whenWhoWhere: [
+      { label: "When", body: "Practice this whenever a genuine unexpected change or challenge arises." },
+      { label: "Who", body: "No collaborator required." },
+      { label: "Where", body: "Applied to any real situation involving unexpected change." },
+    ],
+    howItWorks: [
+      "When an unexpected change occurs, consciously pause before reacting.",
+      "Ask what the change actually requires of you, rather than immediately resisting or panicking.",
+    ],
+    tools: ["A simple pause-and-reassess habit"],
+    scenario: {
+      title: "A whiteboard talk after the software failed",
+      body: "A student whose presentation software failed five minutes before a scheduled talk paused, switched to a whiteboard-based version of her content instead of panicking, and delivered successfully despite the unexpected obstacle.",
+    },
+    pitfalls: [
+      "Reacting to unexpected change with immediate frustration or rigidity, rather than pausing to assess what's actually needed.",
+    ],
+    successSignal:
+      "You navigate an unexpected change constructively, without the disruption derailing the overall outcome.",
+    milestoneTies: [341, 307],
+  },
+
+  337: {
+    definition:
+      "A First Critical Thinking Exercise analyzes information carefully before forming a conclusion, reinforcing the analytical habits from Stage Five in an interpersonal, soft-skill context.",
+    whyItMatters:
+      "Snap judgments about people or social situations are often wrong; deliberately analyzing before concluding produces more accurate, fair assessments.",
+    whenWhoWhere: [
+      { label: "When", body: "Practice this whenever you're forming a judgment about a person or social situation with real stakes." },
+      { label: "Who", body: "No collaborator required." },
+      { label: "Where", body: "Applied to any situation involving a judgment about people or social dynamics." },
+    ],
+    howItWorks: [
+      "Before concluding, ask what evidence actually supports your judgment, what assumptions you're making, and what alternative explanations might fit the same facts.",
+    ],
+    tools: ["The critical thinking questions from your Stage Five Critical Thinking Drill"],
+    scenario: {
+      title: "\"Didn't care\" turned out to be \"reserved\"",
+      body: "A student's snap judgment that a quiet new teammate \"didn't care about the project\" was revised after critically examining the assumption, realizing the teammate was simply more reserved in group settings, not disengaged.",
+    },
+    pitfalls: [
+      "Treating a first impression as settled fact rather than a hypothesis worth examining critically.",
+    ],
+    successSignal:
+      "You catch at least one snap judgment about a person or situation that critical examination revised or overturned.",
+    milestoneTies: [],
+  },
+
+  338: {
+    definition:
+      "A First Leadership Reflection documents your own leadership style and the lessons you've learned from leading, building genuine self-awareness as a leader.",
+    whyItMatters:
+      "Leadership style often develops unconsciously through habit; deliberate reflection surfaces both genuine strengths and blind spots you might not otherwise notice.",
+    whenWhoWhere: [
+      { label: "When", body: "Conduct this after any significant leadership experience, formal or informal." },
+      { label: "Who", body: "No collaborator required, though feedback from those you led adds valuable outside perspective." },
+      { label: "Where", body: "Done in a private reflective session." },
+    ],
+    howItWorks: [
+      "Reflect on a recent leadership experience: what worked, what didn't, and what it revealed about your natural leadership tendencies.",
+    ],
+    tools: ["A journal, and ideally feedback from people you led"],
+    scenario: {
+      title: "Taking over tasks instead of delegating, under stress",
+      body: "A student's leadership reflection after a rocky group project revealed she tended to take over tasks rather than delegate when stressed, a pattern she hadn't consciously noticed until reflecting on it directly.",
+    },
+    pitfalls: [
+      "Reflecting only on successes, missing the more valuable lessons often found in leadership moments that didn't go as well.",
+    ],
+    successSignal:
+      "You can name a specific leadership tendency, strength or blind spot, that this reflection revealed.",
+    milestoneTies: [],
+  },
+
+  339: {
+    definition:
+      "A First Stress Management Technique Practiced applies a specific method, meditation, breathing, or exercise, to manage real stress, reinforcing the Stage Four stress management habit with fresh, deliberate practice.",
+    whyItMatters:
+      "Consistent stress management prevents burnout and supports better decision-making under pressure, and different techniques work better for different people and situations.",
+    whenWhoWhere: [
+      { label: "When", body: "Practice this consistently, especially during genuinely stressful periods." },
+      { label: "Who", body: "No collaborator required." },
+      { label: "Where", body: "Applied wherever the chosen technique is practiced: a quiet room, outdoors, or even briefly at a desk." },
+    ],
+    howItWorks: [
+      "Choose one technique (meditation, breathing, or exercise) and apply it consistently during a stressful period, tracking whether it genuinely helps.",
+    ],
+    tools: ["A meditation app, a simple breathing technique, or a consistent exercise routine"],
+    scenario: {
+      title: "A walk outside beat seated meditation",
+      body: "A student experimenting with different stress techniques found a short walk outside worked far better for her than seated meditation, a personal insight she wouldn't have found without trying multiple approaches.",
+    },
+    pitfalls: [
+      "Assuming one popular technique (like meditation) will work for everyone, without experimenting to find what genuinely helps you.",
+    ],
+    successSignal:
+      "You identify a specific technique that genuinely reduces your stress, backed by your own real experience trying it.",
+    milestoneTies: [],
+  },
+
+  340: {
+    definition:
+      "A First Gratitude Practice journals daily for positivity and focus, reinforcing the Stage Four gratitude habit with continued, deliberate practice.",
+    whyItMatters:
+      "Consistent gratitude practice measurably improves mood and outlook, particularly useful during stressful periods like a job search or heavy workload.",
+    whenWhoWhere: [
+      { label: "When", body: "Practice this daily, ideally at a consistent time." },
+      { label: "Who", body: "No collaborator required." },
+      { label: "Where", body: "Applied in a private journal or notes app." },
+    ],
+    howItWorks: [
+      "Write three specific things you're grateful for each day, being as specific as possible rather than generic.",
+    ],
+    tools: ["A dedicated journal or notes app"],
+    scenario: {
+      title: "Specificity made the practice feel genuine",
+      body: "A student who restarted her gratitude practice during a stressful job search noted that being specific (\"my roommate covering for me during a rough week\" rather than just \"my roommate\") made the practice feel more genuine and impactful.",
+    },
+    pitfalls: [
+      "Writing generic, repetitive entries that feel more like an obligation than a genuine practice.",
+    ],
+    successSignal:
+      "You notice a genuine shift in mood or outlook after a consistent period of practice.",
+    milestoneTies: [],
+  },
+
+  341: {
+    definition:
+      "A First Resilience Exercise deliberately and intentionally works to recover from a genuine setback, rather than just waiting for time to pass.",
+    whyItMatters:
+      "Resilience is a trainable skill, not just a fixed trait; deliberately and intentionally working through a setback builds the capacity to recover faster from future ones.",
+    whenWhoWhere: [
+      { label: "When", body: "Practice this after any genuine setback, disappointment, or failure." },
+      { label: "Who", body: "No collaborator required, though support from others can be part of the deliberate recovery process." },
+      { label: "Where", body: "Applied following any real setback." },
+    ],
+    howItWorks: [
+      "Acknowledge the setback honestly.",
+      "Extract a specific, useful lesson from it.",
+      "Take one concrete action moving forward, rather than dwelling indefinitely.",
+    ],
+    tools: ["The Resilience Drill structure from Stage Four"],
+    scenario: {
+      title: "A specific lesson from a top-choice rejection",
+      body: "A student rejected from a top-choice opportunity deliberately worked through the setback, extracting a specific lesson about her application timing, and used that lesson to improve her next application rather than just feeling discouraged.",
+    },
+    pitfalls: [
+      "Either suppressing the disappointment entirely or dwelling on it indefinitely, rather than deliberately working through it toward a concrete next step.",
+    ],
+    successSignal:
+      "You can name a specific lesson extracted from the setback and a concrete action you took as a result.",
+    milestoneTies: [],
+  },
+
+  342: {
+    definition:
+      "A First Time Management Reflection analyzes your own productivity patterns honestly, identifying what genuinely works and what doesn't, rather than assuming a generic productivity system fits your specific patterns.",
+    whyItMatters:
+      "Generic productivity advice doesn't account for individual variation; genuine self-reflection reveals your own specific patterns, which produces more effective personal systems.",
+    whenWhoWhere: [
+      { label: "When", body: "Conduct this periodically, especially when your current time management approach isn't working well." },
+      { label: "Who", body: "No collaborator required." },
+      { label: "Where", body: "Done in a reflective session, ideally informed by real tracked data if available." },
+    ],
+    howItWorks: [
+      "Reflect honestly on when you're most and least productive, what specific habits help or hurt your focus, and adjust your systems based on genuine self-knowledge rather than generic advice.",
+    ],
+    tools: ["Your Stage Four Energy Audit and Time-Tracking System data, if available"],
+    scenario: {
+      title: "Evening focus, not the popular morning routine",
+      body: "A student who tried to adopt a popular early-morning productivity routine realized through honest reflection that she was consistently more focused in the evening, and adjusted her schedule to match her actual patterns rather than someone else's.",
+    },
+    pitfalls: [
+      "Adopting a generic productivity system without checking whether it actually fits your own real patterns.",
+    ],
+    successSignal:
+      "Your adjusted system, based on genuine self-reflection, produces better results than a generic one did.",
+    milestoneTies: [272],
+  },
+
+  343: {
+    definition:
+      "A First Reflection on Soft Skill Growth documents your overall progress, challenges, and next steps across the soft skills built throughout this stage, closing the loop on the whole category.",
+    whyItMatters:
+      "Looking across the whole stage's worth of practice reveals genuine growth patterns that no single FIRST alone would show.",
+    whenWhoWhere: [
+      { label: "When", body: "Conduct this at the end of working through this stage, or periodically as you continue practicing these skills." },
+      { label: "Who", body: "A mentor for outside perspective, if available." },
+      { label: "Where", body: "Done in a dedicated, comprehensive reflective session." },
+    ],
+    howItWorks: [
+      "Review your practice across this stage's FIRSTS.",
+      "Identify which skills have genuinely grown, which remain challenging, and your specific next steps.",
+    ],
+    tools: ["Your accumulated reflections and practice logs from throughout this stage"],
+    scenario: {
+      title: "Listening grew; mediation still felt hard",
+      body: "A student's comprehensive reflection revealed that her active listening and feedback-receiving skills had genuinely grown, while conflict mediation remained an area she still found uncomfortable, a clear, honest picture to guide her continued growth.",
+    },
+    pitfalls: [
+      "Reviewing only the skills that feel comfortable to reflect on, avoiding honest assessment of genuinely difficult areas.",
+    ],
+    successSignal:
+      "You can name specific, genuine growth areas and specific remaining challenges, backed by real practice across this stage.",
+    milestoneTies: [],
   },
 };
