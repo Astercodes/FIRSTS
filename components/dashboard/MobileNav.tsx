@@ -13,6 +13,7 @@ const NAV = [
   { label: "Stage Six", href: "/dashboard/stage/six" },
   { label: "Stage Seven", href: "/dashboard/stage/seven" },
   { label: "Stage Eight", href: "/dashboard/stage/eight" },
+  { label: "Stage Nine", href: "/dashboard/stage/nine" },
   { label: "AI Coach", href: "/dashboard/coach" },
   { label: "Portfolio", href: "/dashboard/portfolio" },
 ];

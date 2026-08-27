@@ -1,12 +1,12 @@
 export type ModuleStatus = "complete" | "in-progress" | "available" | "locked";
-export type StageId = "one" | "two" | "three" | "four" | "five" | "six" | "seven" | "eight";
+export type StageId = "one" | "two" | "three" | "four" | "five" | "six" | "seven" | "eight" | "nine";
 
 export type FirstModule = {
   id: number;
   code: string;
   stage: StageId;
   title: string;
-  category: "A" | "B" | "C" | "D" | "E" | "F" | "G" | "H" | "I" | "J" | "K" | "L" | "M" | "N" | "O" | "P" | "Q" | "R" | "S" | "T" | "U" | "V" | "W" | "X" | "Y" | "Z" | "AA" | "BB" | "CC" | "DD" | "EE" | "FF" | "GG" | "HH" | "II";
+  category: "A" | "B" | "C" | "D" | "E" | "F" | "G" | "H" | "I" | "J" | "K" | "L" | "M" | "N" | "O" | "P" | "Q" | "R" | "S" | "T" | "U" | "V" | "W" | "X" | "Y" | "Z" | "AA" | "BB" | "CC" | "DD" | "EE" | "FF" | "GG" | "HH" | "II" | "JJ" | "KK" | "LL" | "MM" | "NN" | "OO";
   time: string;
   difficulty: "Easy" | "Moderate" | "Deep";
   status: ModuleStatus;
@@ -54,6 +54,12 @@ export const CATEGORY_META = {
   GG: { label: "Teamwork & Collaboration", color: "var(--citrus-lime)" },
   HH: { label: "Networking & Public Speaking", color: "var(--tropical-mango)" },
   II: { label: "Growth Mindset & Resilience", color: "var(--fuchsia-blast)" },
+  JJ: { label: "Core Vocabulary Building Blocks", color: "var(--sunshine-orange)" },
+  KK: { label: "Written & Documentation Vocabulary", color: "var(--berry-burst)" },
+  LL: { label: "Meeting & Verbal Communication Vocabulary", color: "var(--citrus-lime)" },
+  MM: { label: "Presentation & Persuasion Vocabulary", color: "var(--neon-pink)" },
+  NN: { label: "Self-Presentation & Networking Vocabulary", color: "var(--tropical-mango)" },
+  OO: { label: "Problem-Solving & Growth Vocabulary", color: "var(--fuchsia-blast)" },
 } as const;
 
 export const STAGES: { id: StageId; label: string; shortLabel: string; href: string }[] = [
@@ -65,6 +71,7 @@ export const STAGES: { id: StageId; label: string; shortLabel: string; href: str
   { id: "six", label: "Stage Six · Communication: Speaking, Reading, Writing", shortLabel: "Stage Six", href: "/dashboard/stage/six" },
   { id: "seven", label: "Stage Seven · Hard Skills", shortLabel: "Stage Seven", href: "/dashboard/stage/seven" },
   { id: "eight", label: "Stage Eight · Soft Skills", shortLabel: "Stage Eight", href: "/dashboard/stage/eight" },
+  { id: "nine", label: "Stage Nine · English Vocabulary", shortLabel: "Stage Nine", href: "/dashboard/stage/nine" },
 ];
 
 const STAGE_ONE_FIRSTS: FirstModule[] = [
@@ -434,7 +441,48 @@ const STAGE_EIGHT_FIRSTS: FirstModule[] = [
   { id: 343, code: "L50", stage: "eight", title: "Reflection on Soft Skill Growth", category: "II", time: "45 min to 1 hr", difficulty: "Moderate", status: "locked" },
 ];
 
-export const FIRSTS: FirstModule[] = [...STAGE_ONE_FIRSTS, ...STAGE_TWO_FIRSTS, ...STAGE_THREE_FIRSTS, ...STAGE_FOUR_FIRSTS, ...STAGE_FIVE_FIRSTS, ...STAGE_SIX_FIRSTS, ...STAGE_SEVEN_FIRSTS, ...STAGE_EIGHT_FIRSTS];
+const STAGE_NINE_FIRSTS: FirstModule[] = [
+  { id: 344, code: "M1", stage: "nine", title: "20 Professional Adjectives Learned", category: "JJ", time: "1 to 2 hrs", difficulty: "Easy", status: "complete", thoroughness: 3, completedAt: "2026-06-04" },
+  { id: 345, code: "M2", stage: "nine", title: "20 Action Verbs Learned for CVs/Resumes", category: "JJ", time: "1 hr", difficulty: "Easy", status: "locked" },
+  { id: 346, code: "M3", stage: "nine", title: "10 Transition Words for Writing", category: "JJ", time: "30 to 45 min", difficulty: "Easy", status: "complete", thoroughness: 2, completedAt: "2026-06-11" },
+  { id: 347, code: "M4", stage: "nine", title: "10 Academic Phrases for Reports/Emails", category: "JJ", time: "30 min", difficulty: "Easy", status: "locked" },
+  { id: 348, code: "M5", stage: "nine", title: "20 Workplace Phrases for Communication", category: "JJ", time: "30 min", difficulty: "Easy", status: "complete", thoroughness: 1, completedAt: "2026-06-18" },
+  { id: 349, code: "M6", stage: "nine", title: "10 Vocabulary Words for Presentations", category: "JJ", time: "30 min", difficulty: "Easy", status: "locked" },
+  { id: 350, code: "M7", stage: "nine", title: "10 Words for Networking Conversations", category: "JJ", time: "Ongoing", difficulty: "Easy", status: "complete", thoroughness: 3, completedAt: "2026-06-25" },
+  { id: 351, code: "M8", stage: "nine", title: "10 Polite Expressions for Professional Settings", category: "JJ", time: "Ongoing", difficulty: "Easy", status: "locked" },
+  { id: 352, code: "M9", stage: "nine", title: "10 Common Academic/Business Idioms", category: "JJ", time: "30 to 45 min", difficulty: "Easy", status: "complete", thoroughness: 2, completedAt: "2026-07-02" },
+  { id: 353, code: "M10", stage: "nine", title: "10 Vocabulary Reflection Exercise", category: "JJ", time: "45 min to 1 hr", difficulty: "Moderate", status: "locked" },
+  { id: 354, code: "M11", stage: "nine", title: "Professional Email Vocabulary", category: "KK", time: "30 min", difficulty: "Easy", status: "complete", thoroughness: 1, completedAt: "2026-07-09" },
+  { id: 355, code: "M12", stage: "nine", title: "Report & Memo Vocabulary", category: "KK", time: "30 to 45 min", difficulty: "Easy", status: "locked" },
+  { id: 356, code: "M13", stage: "nine", title: "Agenda/Minutes Vocabulary", category: "KK", time: "20 to 30 min", difficulty: "Easy", status: "complete", thoroughness: 3, completedAt: "2026-07-16" },
+  { id: 357, code: "M14", stage: "nine", title: "Vocabulary for Documenting Decisions and Next Steps", category: "KK", time: "20 min", difficulty: "Easy", status: "locked" },
+  { id: 358, code: "M15", stage: "nine", title: "Vocabulary for Summarizing Findings from Research or Projects", category: "KK", time: "20 to 30 min", difficulty: "Easy", status: "complete", thoroughness: 2, completedAt: "2026-07-23" },
+  { id: 359, code: "M16", stage: "nine", title: "Meeting/Call Vocabulary", category: "LL", time: "Ongoing", difficulty: "Easy", status: "locked" },
+  { id: 360, code: "M17", stage: "nine", title: "Negotiation & Persuasion Vocabulary", category: "LL", time: "20 min", difficulty: "Moderate", status: "complete", thoroughness: 1, completedAt: "2026-07-30" },
+  { id: 361, code: "M22", stage: "nine", title: "Follow-Up Vocabulary", category: "LL", time: "Ongoing", difficulty: "Easy", status: "locked" },
+  { id: 362, code: "M18", stage: "nine", title: "Feedback Vocabulary", category: "LL", time: "Ongoing", difficulty: "Easy", status: "complete", thoroughness: 3, completedAt: "2026-08-06" },
+  { id: 363, code: "M23", stage: "nine", title: "Follow-Up Vocabulary After Networking", category: "LL", time: "Ongoing", difficulty: "Easy", status: "locked" },
+  { id: 364, code: "M24", stage: "nine", title: "Question-Asking Vocabulary", category: "LL", time: "Ongoing", difficulty: "Easy", status: "complete", thoroughness: 2, completedAt: "2026-08-13" },
+  { id: 365, code: "M25", stage: "nine", title: "Listening & Responding Vocabulary", category: "LL", time: "Ongoing", difficulty: "Easy", status: "locked" },
+  { id: 366, code: "M38", stage: "nine", title: "Vocabulary for Giving and Receiving Constructive Feedback", category: "LL", time: "Situational", difficulty: "Moderate", status: "complete", thoroughness: 1, completedAt: "2026-08-20" },
+  { id: 367, code: "M26", stage: "nine", title: "Presentation Introduction Vocabulary", category: "MM", time: "15 min", difficulty: "Easy", status: "locked" },
+  { id: 368, code: "M27", stage: "nine", title: "Vocabulary for Structuring Presentations", category: "MM", time: "20 min", difficulty: "Easy", status: "complete", thoroughness: 3, completedAt: "2026-08-25" },
+  { id: 369, code: "M28", stage: "nine", title: "Vocabulary for Emphasizing Key Points", category: "MM", time: "15 min", difficulty: "Easy", status: "locked" },
+  { id: 370, code: "M29", stage: "nine", title: "Audience Engagement Vocabulary", category: "MM", time: "20 min", difficulty: "Moderate", status: "complete", thoroughness: 2, completedAt: "2026-06-08" },
+  { id: 371, code: "M30", stage: "nine", title: "Q&A Handling Vocabulary", category: "MM", time: "15 min", difficulty: "Moderate", status: "locked" },
+  { id: 372, code: "M31", stage: "nine", title: "Persuasive Speaking Vocabulary", category: "MM", time: "15 to 20 min", difficulty: "Moderate", status: "complete", thoroughness: 1, completedAt: "2026-06-15" },
+  { id: 373, code: "M19", stage: "nine", title: "Professional Greeting Vocabulary", category: "NN", time: "Ongoing", difficulty: "Easy", status: "locked" },
+  { id: 374, code: "M20", stage: "nine", title: "Self-Introduction Vocabulary", category: "NN", time: "20 min", difficulty: "Easy", status: "complete", thoroughness: 3, completedAt: "2026-06-22" },
+  { id: 375, code: "M21", stage: "nine", title: "Small Talk Vocabulary", category: "NN", time: "Ongoing", difficulty: "Easy", status: "locked" },
+  { id: 376, code: "M32", stage: "nine", title: "Workplace Expression Vocabulary", category: "NN", time: "Ongoing", difficulty: "Easy", status: "complete", thoroughness: 2, completedAt: "2026-06-29" },
+  { id: 377, code: "M33", stage: "nine", title: "Vocabulary for Articulating Challenges and Obstacles", category: "OO", time: "15 min", difficulty: "Easy", status: "locked" },
+  { id: 378, code: "M34", stage: "nine", title: "Vocabulary for Proposing Solutions and Alternatives", category: "OO", time: "15 to 20 min", difficulty: "Easy", status: "complete", thoroughness: 1, completedAt: "2026-07-06" },
+  { id: 379, code: "M35", stage: "nine", title: "Vocabulary for Analyzing Pros and Cons", category: "OO", time: "20 min", difficulty: "Easy", status: "locked" },
+  { id: 380, code: "M36", stage: "nine", title: "Vocabulary for Brainstorming and Ideation Sessions", category: "OO", time: "Ongoing", difficulty: "Easy", status: "complete", thoroughness: 3, completedAt: "2026-07-13" },
+  { id: 381, code: "M37", stage: "nine", title: "Vocabulary for Reflecting on Personal Growth and Lessons Learned", category: "OO", time: "20 to 30 min", difficulty: "Easy", status: "locked" },
+];
+
+export const FIRSTS: FirstModule[] = [...STAGE_ONE_FIRSTS, ...STAGE_TWO_FIRSTS, ...STAGE_THREE_FIRSTS, ...STAGE_FOUR_FIRSTS, ...STAGE_FIVE_FIRSTS, ...STAGE_SIX_FIRSTS, ...STAGE_SEVEN_FIRSTS, ...STAGE_EIGHT_FIRSTS, ...STAGE_NINE_FIRSTS];
 
 export const MOCK_USER = {
   firstName: "Ada",

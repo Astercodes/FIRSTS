@@ -3321,4 +3321,500 @@ export const WORKSHEET_SCHEMAS: Record<number, WorksheetField[]> = {
     { type: "text", key: "challenge", label: "Area still genuinely difficult", section: "Remaining challenge", seed: "Staying neutral when mediating a disagreement between two people I'm close to" },
     { type: "textarea", key: "nextSteps", label: "Next steps", section: "Next steps", rows: 2, seed: "Look for a low-stakes chance to practice mediation before a higher-stakes one comes up." },
   ],
+
+  344: [
+    { type: "checklist", key: "wordBank", label: "Word bank", section: "Word bank", items: ["adaptable", "innovative", "proactive", "diligent", "strategic", "collaborative", "resilient", "analytical", "resourceful", "articulate", "efficient", "meticulous", "organized", "versatile", "dependable", "ambitious", "perceptive", "enthusiastic"], seedChecked: ["adaptable", "innovative", "proactive", "diligent", "strategic", "collaborative", "resilient"] },
+    { type: "table", key: "practice", label: "Practice", section: "Practice", columns: [
+      { key: "word", label: "Word/Phrase Used", kind: "text" },
+      { key: "sentence", label: "My Sentence", kind: "text" },
+    ], seedRows: [
+      { word: "meticulous", sentence: "I approach every deliverable with a meticulous review before sending it out." },
+      { word: "resourceful", sentence: "Being resourceful during the internship search meant reaching out to alumni I'd never met." },
+    ] },
+    { type: "text", key: "whereUsed", label: "Where I used this for real (email, conversation, presentation)", section: "Real application", seed: "A resume bullet and a LinkedIn summary line" },
+    { type: "text", key: "result", label: "Result", seed: "Recruiters commented that my profile read as more specific than most" },
+  ],
+
+  345: [
+    { type: "checklist", key: "wordBank", label: "Word bank", section: "Word bank", items: ["led", "managed", "created", "implemented", "developed", "designed", "analyzed", "coordinated", "facilitated", "optimized", "initiated", "executed", "researched", "presented", "achieved", "collaborated", "mentored", "organized", "streamlined", "documented"], seedChecked: ["led", "managed", "created", "implemented", "developed", "designed", "analyzed", "coordinated"] },
+    { type: "table", key: "practice", label: "Practice", section: "Practice", columns: [
+      { key: "word", label: "Word/Phrase Used", kind: "text" },
+      { key: "sentence", label: "My Sentence", kind: "text" },
+    ], seedRows: [
+      { word: "streamlined", sentence: "Streamlined the weekly reporting process, cutting prep time by half." },
+      { word: "coordinated", sentence: "Coordinated a five-person team across two time zones for the final launch." },
+    ] },
+    { type: "text", key: "whereUsed", label: "Where I used this for real", section: "Real application", seed: "Rewriting my resume's experience section" },
+    { type: "text", key: "result", label: "Result", seed: "Every bullet now opens with a specific, accurate verb instead of \"responsible for\"" },
+  ],
+
+  346: [
+    { type: "checklist", key: "wordBank", label: "Word bank", section: "Word bank", items: ["however", "therefore", "moreover", "consequently", "additionally", "in contrast", "on the other hand", "furthermore", "similarly", "thus"], seedChecked: ["however", "therefore", "moreover", "consequently"] },
+    { type: "table", key: "practice", label: "Practice", section: "Practice", columns: [
+      { key: "word", label: "Word/Phrase Used", kind: "text" },
+      { key: "sentence", label: "My Sentence", kind: "text" },
+    ], seedRows: [
+      { word: "however", sentence: "The first approach seemed promising, however the data told a different story." },
+      { word: "consequently", sentence: "The vendor missed the deadline, and consequently we had to push our own timeline." },
+    ] },
+    { type: "text", key: "whereUsed", label: "Where I used this for real", section: "Real application", seed: "Revising a class report's middle section" },
+    { type: "text", key: "result", label: "Result", seed: "The argument read as connected instead of a list of facts" },
+  ],
+
+  347: [
+    { type: "checklist", key: "wordBank", label: "Word bank", section: "Word bank", items: ["in conclusion", "it is evident that", "the purpose of this report", "as discussed", "according to research", "it can be inferred that", "based on findings", "this demonstrates", "it is important to note", "key takeaway"], seedChecked: ["in conclusion", "it is evident that", "the purpose of this report", "as discussed"] },
+    { type: "table", key: "practice", label: "Practice", section: "Practice", columns: [
+      { key: "word", label: "Word/Phrase Used", kind: "text" },
+      { key: "sentence", label: "My Sentence", kind: "text" },
+    ], seedRows: [
+      { word: "the purpose of this report", sentence: "The purpose of this report is to summarize Q2 engagement across all three cohorts." },
+      { word: "in conclusion", sentence: "In conclusion, the pilot supported expanding the program to two more departments." },
+    ] },
+    { type: "text", key: "whereUsed", label: "Where I used this for real", section: "Real application", seed: "Opening and closing lines of a class report" },
+    { type: "text", key: "result", label: "Result", seed: "The structure was immediately clear to a skimming reader" },
+  ],
+
+  348: [
+    { type: "checklist", key: "wordBank", label: "Word bank", section: "Word bank", items: ["please advise", "for your review", "looking forward to your feedback", "let me know your thoughts", "as discussed", "following up on", "kindly note", "would you be able to", "I appreciate your assistance", "thank you in advance", "let's schedule a meeting", "per our discussion", "for your consideration", "I would suggest", "may I recommend", "could you clarify", "I will follow up", "to confirm", "I look forward to", "please find attached"], seedChecked: ["please advise", "for your review", "looking forward to your feedback", "let me know your thoughts", "as discussed", "following up on", "kindly note", "would you be able to"] },
+    { type: "table", key: "practice", label: "Practice", section: "Practice", columns: [
+      { key: "word", label: "Word/Phrase Used", kind: "text" },
+      { key: "sentence", label: "My Sentence", kind: "text" },
+    ], seedRows: [
+      { word: "for your review", sentence: "Attached is the draft agenda for your review before Thursday's meeting." },
+      { word: "following up on", sentence: "Following up on our call, here are the three next steps we discussed." },
+    ] },
+    { type: "text", key: "whereUsed", label: "Where I used this for real", section: "Real application", seed: "A follow-up email to a group project teammate" },
+    { type: "text", key: "result", label: "Result", seed: "The email read as more professional, not overly casual or formal" },
+  ],
+
+  349: [
+    { type: "checklist", key: "wordBank", label: "Word bank", section: "Word bank", items: ["highlight", "illustrate", "emphasize", "demonstrate", "propose", "overview", "summary", "insight", "key point", "takeaway"], seedChecked: ["highlight", "illustrate", "emphasize", "demonstrate"] },
+    { type: "table", key: "practice", label: "Practice", section: "Practice", columns: [
+      { key: "word", label: "Word/Phrase Used", kind: "text" },
+      { key: "sentence", label: "My Sentence", kind: "text" },
+    ], seedRows: [
+      { word: "highlight", sentence: "I want to highlight the drop-off we saw right after the survey question changed." },
+      { word: "key point", sentence: "The key point here is that response time, not response rate, was the real problem." },
+    ] },
+    { type: "text", key: "whereUsed", label: "Where I used this for real", section: "Real application", seed: "Opening line of my Stage Six presentation script" },
+    { type: "text", key: "result", label: "Result", seed: "The audience followed the structure without needing extra slides" },
+  ],
+
+  350: [
+    { type: "checklist", key: "wordBank", label: "Word bank", section: "Word bank", items: ["collaboration", "opportunity", "insight", "connection", "initiative", "expertise", "growth", "alignment", "innovation", "engagement"], seedChecked: ["collaboration", "opportunity", "insight", "connection", "initiative"] },
+    { type: "table", key: "practice", label: "Practice", section: "Practice", columns: [
+      { key: "word", label: "Word/Phrase Used", kind: "text" },
+      { key: "sentence", label: "My Sentence", kind: "text" },
+    ], seedRows: [
+      { word: "insight", sentence: "I'd love your insight on how the team decided to pivot last year." },
+      { word: "alignment", sentence: "There's real alignment between what you described and what I'm hoping to do next." },
+    ] },
+    { type: "text", key: "whereUsed", label: "Where I used this for real", section: "Real application", seed: "A conversation with an alum at a career fair" },
+    { type: "text", key: "result", label: "Result", seed: "The conversation ran twice as long as my usual small talk" },
+  ],
+
+  351: [
+    { type: "checklist", key: "wordBank", label: "Word bank", section: "Word bank", items: ["I appreciate your time", "thank you for your consideration", "I look forward to your response", "may I suggest", "would it be possible", "I value your input", "I hope this helps", "please let me know", "I apologize for any inconvenience", "I am grateful for your support"], seedChecked: ["I appreciate your time", "thank you for your consideration", "I look forward to your response", "may I suggest"] },
+    { type: "table", key: "practice", label: "Practice", section: "Practice", columns: [
+      { key: "word", label: "Word/Phrase Used", kind: "text" },
+      { key: "sentence", label: "My Sentence", kind: "text" },
+    ], seedRows: [
+      { word: "I appreciate your time", sentence: "I appreciate your time today, especially given how packed this week has been for you." },
+      { word: "I am grateful for your support", sentence: "I am grateful for your support throughout the application process." },
+    ] },
+    { type: "text", key: "whereUsed", label: "Where I used this for real", section: "Real application", seed: "A thank-you email after an informational interview" },
+    { type: "text", key: "result", label: "Result", seed: "The message felt calibrated instead of relying on the same exclamation point every time" },
+  ],
+
+  352: [
+    { type: "checklist", key: "wordBank", label: "Word bank", section: "Word bank", items: ["think outside the box", "hit the ground running", "in the loop", "take it offline", "raise the bar", "on the same page", "game changer", "cut to the chase", "move the needle", "back to the drawing board"], seedChecked: ["think outside the box", "hit the ground running", "in the loop", "take it offline"] },
+    { type: "table", key: "practice", label: "Practice", section: "Practice", columns: [
+      { key: "word", label: "Word/Phrase Used", kind: "text" },
+      { key: "sentence", label: "My Sentence", kind: "text" },
+    ], seedRows: [
+      { word: "take it offline", sentence: "Let's take it offline and loop back with the group once we've compared notes." },
+      { word: "in the loop", sentence: "Keep me in the loop on anything that changes before Friday." },
+    ] },
+    { type: "text", key: "whereUsed", label: "Where I used this for real", section: "Real application", seed: "A team meeting where a manager used one I didn't recognize at first" },
+    { type: "text", key: "result", label: "Result", seed: "Looked it up afterward and used it correctly a week later" },
+  ],
+
+  353: [
+    { type: "table", key: "wordsChosen", label: "Words chosen", section: "Words chosen", columns: [
+      { key: "word", label: "Word/Phrase", kind: "text" },
+      { key: "source", label: "Which List It Came From", kind: "text" },
+    ], seedRows: [
+      { word: "meticulous", source: "Professional Adjectives" },
+      { word: "streamlined", source: "Action Verbs for Resumes" },
+      { word: "for your review", source: "Workplace Phrases" },
+      { word: "take it offline", source: "Academic/Business Idioms" },
+      { word: "insight", source: "Words for Networking" },
+    ] },
+    { type: "textarea", key: "sentences", label: "My sentences", section: "My sentences", rows: 3, seed: "Used together across a real week: I streamlined my application tracker (Action Verbs), sent it for your review to a mentor (Workplace Phrases), and asked for her insight (Networking) on which roles to prioritize." },
+    { type: "text", key: "recallCheck", label: "How many could I recall without looking back?", section: "Recall check", seed: "8 of 10" },
+  ],
+
+  354: [
+    { type: "checklist", key: "wordBank", label: "Word bank", section: "Word bank", items: ["I am writing to", "please find below", "at your earliest convenience", "kindly confirm", "I wanted to reach out regarding", "for your reference", "please see attached", "I would appreciate it if", "thank you for your patience", "please do not hesitate to", "I look forward to hearing from you", "as per our conversation", "I trust this email finds you well", "please advise if", "in the meantime", "should you have any questions", "I will keep you updated", "thank you for your understanding", "please confirm receipt", "best regards"], seedChecked: ["I am writing to", "please find below", "at your earliest convenience", "kindly confirm", "I wanted to reach out regarding", "for your reference", "please see attached", "I would appreciate it if"] },
+    { type: "table", key: "practice", label: "Practice", section: "Practice", columns: [
+      { key: "word", label: "Word/Phrase Used", kind: "text" },
+      { key: "sentence", label: "My Sentence", kind: "text" },
+    ], seedRows: [
+      { word: "at your earliest convenience", sentence: "Could you confirm at your earliest convenience whether Thursday still works?" },
+      { word: "please do not hesitate to", sentence: "Please do not hesitate to reach out if anything is unclear before then." },
+    ] },
+    { type: "text", key: "whereUsed", label: "Where I used this for real", section: "Real application", seed: "An email requesting a recommendation letter" },
+    { type: "text", key: "result", label: "Result", seed: "The tone matched the request without sounding stiff" },
+  ],
+
+  355: [
+    { type: "checklist", key: "wordBank", label: "Word bank", section: "Word bank", items: ["overview", "background", "scope", "objective", "methodology", "findings", "analysis", "recommendations", "next steps", "executive summary", "key findings", "limitations", "appendix", "in summary", "the data indicates", "conclusion", "action plan", "timeline", "deliverables", "stakeholders"], seedChecked: ["overview", "background", "scope", "objective", "methodology", "findings", "analysis", "recommendations"] },
+    { type: "table", key: "practice", label: "Practice", section: "Practice", columns: [
+      { key: "word", label: "Word/Phrase Used", kind: "text" },
+      { key: "sentence", label: "My Sentence", kind: "text" },
+    ], seedRows: [
+      { word: "scope", sentence: "The scope of this report covers only the spring cohort, not the full year." },
+      { word: "recommendations", sentence: "Our recommendations focus on the two changes with the clearest evidence behind them." },
+    ] },
+    { type: "text", key: "whereUsed", label: "Where I used this for real", section: "Real application", seed: "Outlining a class research report" },
+    { type: "text", key: "result", label: "Result", seed: "My manager said it was the easiest report of mine to navigate so far" },
+  ],
+
+  356: [
+    { type: "checklist", key: "wordBank", label: "Word bank", section: "Word bank", items: ["action item", "owner", "deadline", "decision made", "tabled for discussion", "quorum", "motion carried", "agenda item", "call to order", "adjourned", "roll call", "old business", "new business", "follow-up required", "consensus reached", "dissenting opinion", "minutes approved", "meeting objective", "time allotted", "attendees"], seedChecked: ["action item", "owner", "deadline", "decision made", "tabled for discussion", "quorum", "motion carried", "agenda item"] },
+    { type: "table", key: "practice", label: "Practice", section: "Practice", columns: [
+      { key: "word", label: "Word/Phrase Used", kind: "text" },
+      { key: "sentence", label: "My Sentence", kind: "text" },
+    ], seedRows: [
+      { word: "action item", sentence: "Action item: Priya to send the updated budget by Friday." },
+      { word: "tabled for discussion", sentence: "The vendor question was tabled for discussion until next week's meeting." },
+    ] },
+    { type: "text", key: "whereUsed", label: "Where I used this for real", section: "Real application", seed: "Minutes for my club's officer meeting" },
+    { type: "text", key: "result", label: "Result", seed: "Everyone could tell what was decided versus still open" },
+  ],
+
+  357: [
+    { type: "checklist", key: "wordBank", label: "Word bank", section: "Word bank", items: ["we have agreed to", "the decision was made to", "moving forward we will", "pending confirmation", "to be finalized by", "action required", "responsible party", "target date", "status update", "resolved", "outstanding item", "agreed upon", "subject to change", "finalized on", "next review date", "escalation needed", "approved by", "deferred to", "in progress", "completed"], seedChecked: ["we have agreed to", "the decision was made to", "moving forward we will", "pending confirmation", "to be finalized by", "action required", "responsible party", "target date"] },
+    { type: "table", key: "practice", label: "Practice", section: "Practice", columns: [
+      { key: "word", label: "Word/Phrase Used", kind: "text" },
+      { key: "sentence", label: "My Sentence", kind: "text" },
+    ], seedRows: [
+      { word: "pending confirmation", sentence: "The venue is pending confirmation, so treat Saturday's date as tentative for now." },
+      { word: "the decision was made to", sentence: "The decision was made to split the workshop into two shorter sessions." },
+    ] },
+    { type: "text", key: "whereUsed", label: "Where I used this for real", section: "Real application", seed: "Documenting a group project decision in our shared doc" },
+    { type: "text", key: "result", label: "Result", seed: "No one asked \"wait, did we actually decide that?\" afterward" },
+  ],
+
+  358: [
+    { type: "checklist", key: "wordBank", label: "Word bank", section: "Word bank", items: ["the data suggests", "key findings include", "notably", "this is consistent with", "a significant pattern emerged", "the results indicate", "it was observed that", "a notable trend", "this finding supports", "in comparison to", "the analysis revealed", "further investigation is needed", "this aligns with", "the majority of respondents", "a clear correlation", "this contradicts", "preliminary results show", "the sample size", "statistically significant", "worth noting"], seedChecked: ["the data suggests", "key findings include", "notably", "this is consistent with", "a significant pattern emerged", "the results indicate", "it was observed that", "a notable trend"] },
+    { type: "table", key: "practice", label: "Practice", section: "Practice", columns: [
+      { key: "word", label: "Word/Phrase Used", kind: "text" },
+      { key: "sentence", label: "My Sentence", kind: "text" },
+    ], seedRows: [
+      { word: "the data suggests", sentence: "The data suggests engagement drops sharply after the third week, not gradually." },
+      { word: "worth noting", sentence: "It's worth noting that the sample size for this group was quite small." },
+    ] },
+    { type: "text", key: "whereUsed", label: "Where I used this for real", section: "Real application", seed: "Summarizing survey results for my club's annual report" },
+    { type: "text", key: "result", label: "Result", seed: "The confidence level in my language actually matched the evidence" },
+  ],
+
+  359: [
+    { type: "checklist", key: "wordBank", label: "Word bank", section: "Word bank", items: ["shall we get started", "to add to that", "can I jump in", "let's circle back to", "to summarize what we've covered", "before we wrap up", "let's table that for now", "moving on to the next item", "does anyone have questions", "let's take this offline", "I'll hand it over to", "thanks for joining", "can everyone hear me", "let's stay on track", "to keep us on time", "any final thoughts", "let's pick this up next time", "I'll send a recap", "appreciate everyone's time", "let's dive in"], seedChecked: ["shall we get started", "to add to that", "can I jump in", "let's circle back to", "to summarize what we've covered", "before we wrap up", "let's table that for now", "moving on to the next item"] },
+    { type: "table", key: "practice", label: "Practice", section: "Practice", columns: [
+      { key: "word", label: "Word/Phrase Used", kind: "text" },
+      { key: "sentence", label: "My Sentence", kind: "text" },
+    ], seedRows: [
+      { word: "can I jump in", sentence: "Can I jump in, I think there's a simpler way to frame that." },
+      { word: "before we wrap up", sentence: "Before we wrap up, does anyone have a blocker I should know about?" },
+    ] },
+    { type: "text", key: "whereUsed", label: "Where I used this for real", section: "Real application", seed: "A weekly team check-in call" },
+    { type: "text", key: "result", label: "Result", seed: "Spoke up twice instead of staying silent the whole meeting" },
+  ],
+
+  360: [
+    { type: "checklist", key: "wordBank", label: "Word bank", section: "Word bank", items: ["what if we considered", "I'd like to propose", "from my perspective", "that's a fair point and", "let's find a middle ground", "what would it take to", "I understand your position but", "here's what I can offer", "let's explore options", "that works for me if", "I'm open to", "under what conditions", "would you be willing to", "let's meet halfway", "I need you to understand", "my priority is", "that's a dealbreaker for me", "let's revisit this point", "I appreciate your flexibility", "does that work for both of us"], seedChecked: ["what if we considered", "I'd like to propose", "from my perspective", "that's a fair point and", "let's find a middle ground", "what would it take to", "I understand your position but", "here's what I can offer"] },
+    { type: "table", key: "practice", label: "Practice", section: "Practice", columns: [
+      { key: "word", label: "Word/Phrase Used", kind: "text" },
+      { key: "sentence", label: "My Sentence", kind: "text" },
+    ], seedRows: [
+      { word: "that's a fair point and", sentence: "That's a fair point, and I'd add that the timeline matters just as much as scope." },
+      { word: "let's find a middle ground", sentence: "Let's find a middle ground between the two deadlines we each proposed." },
+    ] },
+    { type: "text", key: "whereUsed", label: "Where I used this for real", section: "Real application", seed: "Negotiating a project deadline with a teammate" },
+    { type: "text", key: "result", label: "Result", seed: "The conversation stayed collaborative instead of turning adversarial" },
+  ],
+
+  361: [
+    { type: "checklist", key: "wordBank", label: "Word bank", section: "Word bank", items: ["just circling back on", "wanted to check in regarding", "any updates on", "following up as promised", "I wanted to touch base", "per my last email", "as promised here is", "checking in to see", "I haven't heard back so", "just a friendly reminder", "wanted to make sure this didn't slip through", "still hoping to connect on", "any movement on", "wanted to revisit", "hope to hear from you soon", "bumping this to the top of your inbox", "following up one more time", "wanted to close the loop", "any thoughts on my previous message", "appreciate your patience"], seedChecked: ["just circling back on", "wanted to check in regarding", "any updates on", "following up as promised", "I wanted to touch base", "per my last email", "as promised here is", "checking in to see"] },
+    { type: "table", key: "practice", label: "Practice", section: "Practice", columns: [
+      { key: "word", label: "Word/Phrase Used", kind: "text" },
+      { key: "sentence", label: "My Sentence", kind: "text" },
+    ], seedRows: [
+      { word: "just circling back on", sentence: "Just circling back on the intro you offered to make last week." },
+      { word: "wanted to close the loop", sentence: "Wanted to close the loop now that the position has been filled." },
+    ] },
+    { type: "text", key: "whereUsed", label: "Where I used this for real", section: "Real application", seed: "A follow-up to a contact who hadn't replied in two weeks" },
+    { type: "text", key: "result", label: "Result", seed: "Got a reply within a day, apologizing for the delay" },
+  ],
+
+  362: [
+    { type: "checklist", key: "wordBank", label: "Word bank", section: "Word bank", items: ["one thing I'd suggest", "what worked well was", "have you considered", "I hear what you're saying and", "that's helpful thank you", "let me think about that", "constructive criticism", "room for improvement", "strengths and weaknesses", "actionable feedback", "specific example", "going forward", "I'd like to build on", "an area to develop", "well done on", "this could be strengthened by", "I appreciate the feedback", "let's discuss further", "my takeaway is", "thank you for being direct"], seedChecked: ["one thing I'd suggest", "what worked well was", "have you considered", "I hear what you're saying and", "that's helpful thank you", "let me think about that", "constructive criticism", "room for improvement"] },
+    { type: "table", key: "practice", label: "Practice", section: "Practice", columns: [
+      { key: "word", label: "Word/Phrase Used", kind: "text" },
+      { key: "sentence", label: "My Sentence", kind: "text" },
+    ], seedRows: [
+      { word: "one thing I'd suggest", sentence: "One thing I'd suggest is trimming the middle section by about a minute." },
+      { word: "I appreciate the feedback", sentence: "I appreciate the feedback, that's not something I'd noticed on my own." },
+    ] },
+    { type: "text", key: "whereUsed", label: "Where I used this for real", section: "Real application", seed: "Giving feedback to a teammate on their presentation draft" },
+    { type: "text", key: "result", label: "Result", seed: "He made the change without getting defensive" },
+  ],
+
+  363: [
+    { type: "checklist", key: "wordBank", label: "Word bank", section: "Word bank", items: ["it was great connecting with you at", "I enjoyed our conversation about", "I'd love to stay in touch", "would you be open to", "following up on our conversation", "it was a pleasure meeting you", "I wanted to continue our discussion", "thank you for the insightful conversation", "let's grab coffee sometime", "I'd value staying connected", "hope our paths cross again", "thank you for sharing your perspective", "would love to pick your brain further", "let's keep in touch", "appreciated your insights on", "hope to collaborate in the future", "thanks again for the conversation", "let's schedule a follow-up chat", "wonderful meeting you", "looking forward to future conversations"], seedChecked: ["it was great connecting with you at", "I enjoyed our conversation about", "I'd love to stay in touch", "would you be open to", "following up on our conversation", "it was a pleasure meeting you", "I wanted to continue our discussion", "thank you for the insightful conversation"] },
+    { type: "table", key: "practice", label: "Practice", section: "Practice", columns: [
+      { key: "word", label: "Word/Phrase Used", kind: "text" },
+      { key: "sentence", label: "My Sentence", kind: "text" },
+    ], seedRows: [
+      { word: "I enjoyed our conversation about", sentence: "I enjoyed our conversation about your team's move to a four-day pilot." },
+      { word: "would love to pick your brain further", sentence: "Would love to pick your brain further on how you broke into the field." },
+    ] },
+    { type: "text", key: "whereUsed", label: "Where I used this for real", section: "Real application", seed: "A follow-up message the day after a networking event" },
+    { type: "text", key: "result", label: "Result", seed: "Got a reply suggesting an actual call, not just a polite thanks" },
+  ],
+
+  364: [
+    { type: "checklist", key: "wordBank", label: "Word bank", section: "Word bank", items: ["what's your take on", "how did you approach", "what's been your experience with", "what would you do differently", "what's driving that decision", "can you walk me through", "what inspired", "how do you see this evolving", "what's the reasoning behind", "what challenges did you face", "how did that come about", "what's your perspective on", "could you elaborate on", "what factors influenced", "how would you prioritize", "what's the story behind", "what surprised you about", "how did you decide", "what's your advice for", "what would success look like"], seedChecked: ["what's your take on", "how did you approach", "what's been your experience with", "what would you do differently", "what's driving that decision", "can you walk me through", "what inspired", "how do you see this evolving"] },
+    { type: "table", key: "practice", label: "Practice", section: "Practice", columns: [
+      { key: "word", label: "Word/Phrase Used", kind: "text" },
+      { key: "sentence", label: "My Sentence", kind: "text" },
+    ], seedRows: [
+      { word: "what's been your experience with", sentence: "What's been your experience with switching industries this late into your career?" },
+      { word: "what would you do differently", sentence: "Looking back, what would you do differently about your first year here?" },
+    ] },
+    { type: "text", key: "whereUsed", label: "Where I used this for real", section: "Real application", seed: "A mentor check-in call" },
+    { type: "text", key: "result", label: "Result", seed: "Got a much longer, more specific answer than my usual questions get" },
+  ],
+
+  365: [
+    { type: "checklist", key: "wordBank", label: "Word bank", section: "Word bank", items: ["what I'm hearing is", "so if I understand correctly", "that makes sense because", "I see what you mean", "can you say more about", "to build on what you said", "that's a great point", "I hadn't considered that", "thank you for clarifying", "let me make sure I follow", "that resonates with me", "I appreciate you sharing that", "that's an interesting perspective", "to paraphrase", "if I'm hearing you right", "that helps clarify things", "I want to understand better", "could you give an example", "that changes my thinking on", "I follow you"], seedChecked: ["what I'm hearing is", "so if I understand correctly", "that makes sense because", "I see what you mean", "can you say more about", "to build on what you said", "that's a great point", "I hadn't considered that"] },
+    { type: "table", key: "practice", label: "Practice", section: "Practice", columns: [
+      { key: "word", label: "Word/Phrase Used", kind: "text" },
+      { key: "sentence", label: "My Sentence", kind: "text" },
+    ], seedRows: [
+      { word: "so if I understand correctly", sentence: "So if I understand correctly, the delay was on the vendor's side, not ours?" },
+      { word: "that resonates with me", sentence: "That resonates with me, I ran into almost the same thing last semester." },
+    ] },
+    { type: "text", key: "whereUsed", label: "Where I used this for real", section: "Real application", seed: "A conversation with a roommate about a stressful week" },
+    { type: "text", key: "result", label: "Result", seed: "She said it was the first time she felt like I was actually listening" },
+  ],
+
+  366: [
+    { type: "checklist", key: "wordBank", label: "Word bank", section: "Word bank", items: ["the impact of this was", "my intention in sharing this is", "what support would help you with this", "I want to make sure I understood your feedback correctly", "let's find a path forward together", "I recognize this may be hard to hear", "my hope is that this helps you grow", "can we discuss how to address this", "I want to understand your perspective too", "this comes from a place of wanting you to succeed", "let's set a plan to improve this", "I appreciate you being open to this conversation", "how do you feel about this feedback", "let's check in on progress", "thank you for hearing me out", "I'm here to support you through this", "let's revisit this in a few weeks", "I value your willingness to grow", "this feedback applies both ways", "let's keep this conversation ongoing"], seedChecked: ["the impact of this was", "my intention in sharing this is", "what support would help you with this", "I want to make sure I understood your feedback correctly", "let's find a path forward together", "I recognize this may be hard to hear", "my hope is that this helps you grow", "can we discuss how to address this"] },
+    { type: "table", key: "practice", label: "Practice", section: "Practice", columns: [
+      { key: "word", label: "Word/Phrase Used", kind: "text" },
+      { key: "sentence", label: "My Sentence", kind: "text" },
+    ], seedRows: [
+      { word: "the impact of this was", sentence: "The impact of this was that the rest of the team stayed late to cover the gap." },
+      { word: "let's set a plan to improve this", sentence: "Let's set a plan to improve this together, not just leave it as a one-time comment." },
+    ] },
+    { type: "text", key: "whereUsed", label: "Where I used this for real", section: "Real application", seed: "A difficult feedback conversation with a close friend" },
+    { type: "text", key: "result", label: "Result", seed: "It stayed focused on the specific behavior instead of becoming personal" },
+  ],
+
+  367: [
+    { type: "checklist", key: "wordBank", label: "Word bank", section: "Word bank", items: ["thank you all for being here", "today I'll be covering", "by the end of this you'll", "let's dive in", "to kick things off", "I'm excited to share", "thank you for joining me today", "over the next few minutes", "my goal today is to", "let's get started", "I want to begin by", "today's agenda includes", "before we begin", "I'll start with", "let me set the stage", "thank you for the opportunity to present", "we'll be covering three key areas", "without further ado", "I appreciate you all being here", "let's jump right in"], seedChecked: ["thank you all for being here", "today I'll be covering", "by the end of this you'll", "let's dive in", "to kick things off", "I'm excited to share", "thank you for joining me today", "over the next few minutes"] },
+    { type: "table", key: "practice", label: "Practice", section: "Practice", columns: [
+      { key: "word", label: "Word/Phrase Used", kind: "text" },
+      { key: "sentence", label: "My Sentence", kind: "text" },
+    ], seedRows: [
+      { word: "today I'll be covering", sentence: "Today I'll be covering three findings from our spring survey." },
+      { word: "by the end of this you'll", sentence: "By the end of this you'll have a clear next step for your own project." },
+    ] },
+    { type: "text", key: "whereUsed", label: "Where I used this for real", section: "Real application", seed: "The opening thirty seconds of a class presentation" },
+    { type: "text", key: "result", label: "Result", seed: "Started confidently instead of the usual \"okay, um, so\"" },
+  ],
+
+  368: [
+    { type: "checklist", key: "wordBank", label: "Word bank", section: "Word bank", items: ["first I'll cover", "moving on to", "to break this down further", "bringing this together", "to wrap up", "let's start with", "next", "building on this", "turning now to", "as we transition to", "in the following section", "to summarize this section", "let's shift focus to", "this leads us to", "following that", "to close this out", "let's take a step back", "in this next part", "as I mentioned earlier", "finally"], seedChecked: ["first I'll cover", "moving on to", "to break this down further", "bringing this together", "to wrap up", "let's start with", "next", "building on this"] },
+    { type: "table", key: "practice", label: "Practice", section: "Practice", columns: [
+      { key: "word", label: "Word/Phrase Used", kind: "text" },
+      { key: "sentence", label: "My Sentence", kind: "text" },
+    ], seedRows: [
+      { word: "moving on to", sentence: "Moving on to the budget, here's where things got tighter than expected." },
+      { word: "to wrap up", sentence: "To wrap up, here's the one decision we need from this group today." },
+    ] },
+    { type: "text", key: "whereUsed", label: "Where I used this for real", section: "Real application", seed: "A multi-section presentation for my capstone project" },
+    { type: "text", key: "result", label: "Result", seed: "The audience could track where I was even without looking at slides" },
+  ],
+
+  369: [
+    { type: "checklist", key: "wordBank", label: "Word bank", section: "Word bank", items: ["the most important thing to remember is", "I want to stress", "this is critical because", "the headline here is", "if you take away one thing", "this is the key insight", "let me emphasize", "this cannot be overstated", "the bottom line is", "what's essential here is", "I want to highlight", "this deserves special attention", "the crux of the matter is", "above all", "most importantly", "this is a game changer", "let me be clear", "the core message is", "this is worth repeating", "the key takeaway is"], seedChecked: ["the most important thing to remember is", "I want to stress", "this is critical because", "the headline here is", "if you take away one thing", "this is the key insight", "let me emphasize", "this cannot be overstated"] },
+    { type: "table", key: "practice", label: "Practice", section: "Practice", columns: [
+      { key: "word", label: "Word/Phrase Used", kind: "text" },
+      { key: "sentence", label: "My Sentence", kind: "text" },
+    ], seedRows: [
+      { word: "if you take away one thing", sentence: "If you take away one thing today, let it be this: start earlier than feels necessary." },
+      { word: "the bottom line is", sentence: "The bottom line is that response time mattered more than response volume." },
+    ] },
+    { type: "text", key: "whereUsed", label: "Where I used this for real", section: "Real application", seed: "The closing line of a project pitch" },
+    { type: "text", key: "result", label: "Result", seed: "Classmates could repeat my main point back to me afterward" },
+  ],
+
+  370: [
+    { type: "checklist", key: "wordBank", label: "Word bank", section: "Word bank", items: ["how many of you have", "I'd love to hear your thoughts", "let's pause here for a moment", "does this resonate with your experience", "what's coming up for you", "show of hands", "I'm curious what you think", "let's take a quick poll", "feel free to jump in", "what questions do you have so far", "let's open this up", "I want to hear from you", "does anyone relate to this", "take a moment to consider", "let's do a quick check-in", "what's your reaction to this", "I'd like your input", "raise your hand if", "let's make this interactive", "over to you"], seedChecked: ["how many of you have", "I'd love to hear your thoughts", "let's pause here for a moment", "does this resonate with your experience", "what's coming up for you", "show of hands", "I'm curious what you think", "let's take a quick poll"] },
+    { type: "table", key: "practice", label: "Practice", section: "Practice", columns: [
+      { key: "word", label: "Word/Phrase Used", kind: "text" },
+      { key: "sentence", label: "My Sentence", kind: "text" },
+    ], seedRows: [
+      { word: "show of hands", sentence: "Show of hands, how many of you have used this tool before?" },
+      { word: "does this resonate with your experience", sentence: "Does this resonate with your experience, or did your team hit a different wall?" },
+    ] },
+    { type: "text", key: "whereUsed", label: "Where I used this for real", section: "Real application", seed: "A workshop I led for my student org" },
+    { type: "text", key: "result", label: "Result", seed: "The room stayed noticeably more attentive after the first show-of-hands moment" },
+  ],
+
+  371: [
+    { type: "checklist", key: "wordBank", label: "Word bank", section: "Word bank", items: ["that's a great question", "let me make sure I understand what you're asking", "to answer directly", "I don't have that specific data but", "I'll follow up with you on that", "that's a fair challenge", "let me address that", "good question", "I appreciate you asking", "to clarify", "that's outside my area but", "let me circle back to your point", "does that answer your question", "happy to go deeper on that", "I want to make sure I heard you correctly", "that's something we're still exploring", "let's take that offline", "thank you for pushing on that", "I'll get back to you with specifics", "great follow-up"], seedChecked: ["that's a great question", "let me make sure I understand what you're asking", "to answer directly", "I don't have that specific data but", "I'll follow up with you on that", "that's a fair challenge", "let me address that", "good question"] },
+    { type: "table", key: "practice", label: "Practice", section: "Practice", columns: [
+      { key: "word", label: "Word/Phrase Used", kind: "text" },
+      { key: "sentence", label: "My Sentence", kind: "text" },
+    ], seedRows: [
+      { word: "I don't have that specific data but", sentence: "I don't have that specific data but, I'll follow up with you on that by Friday." },
+      { word: "that's a fair challenge", sentence: "That's a fair challenge, let me think about how that changes the recommendation." },
+    ] },
+    { type: "text", key: "whereUsed", label: "Where I used this for real", section: "Real application", seed: "Q&A after presenting my research project" },
+    { type: "text", key: "result", label: "Result", seed: "Handled an unexpected question calmly instead of freezing" },
+  ],
+
+  372: [
+    { type: "checklist", key: "wordBank", label: "Word bank", section: "Word bank", items: ["imagine if", "the opportunity here is", "we have the chance to", "what this means for you is", "I'm asking you to", "consider the possibilities", "this is your moment to", "the time to act is now", "together we can", "let's seize this opportunity", "the impact could be significant", "this is bigger than", "I believe in", "join me in", "the choice is clear", "this matters because", "let's make this happen", "I urge you to", "the future depends on", "we owe it to ourselves to"], seedChecked: ["imagine if", "the opportunity here is", "we have the chance to", "what this means for you is", "I'm asking you to", "consider the possibilities", "this is your moment to", "the time to act is now"] },
+    { type: "table", key: "practice", label: "Practice", section: "Practice", columns: [
+      { key: "word", label: "Word/Phrase Used", kind: "text" },
+      { key: "sentence", label: "My Sentence", kind: "text" },
+    ], seedRows: [
+      { word: "I'm asking you to", sentence: "I'm asking you to sign up for one shift, that's genuinely all it takes." },
+      { word: "the time to act is now", sentence: "The time to act is now, the deadline for matching funds is next week." },
+    ] },
+    { type: "text", key: "whereUsed", label: "Where I used this for real", section: "Real application", seed: "The closing line of my club's fundraising pitch" },
+    { type: "text", key: "result", label: "Result", seed: "Three people signed up on the spot instead of \"thinking about it\"" },
+  ],
+
+  373: [
+    { type: "checklist", key: "wordBank", label: "Word bank", section: "Word bank", items: ["it's a pleasure to meet you", "I hope this email finds you well", "great to finally connect", "thanks for taking the time", "I wanted to reach out", "nice to e-meet you", "good morning or good afternoon", "allow me to introduce myself", "thank you for having me", "I've heard great things about", "it's an honor to", "welcome", "glad you could join us", "thanks for making time", "pleased to meet you", "how do you do", "I appreciate you meeting with me", "lovely to see you again", "thank you for the introduction", "looking forward to working together"], seedChecked: ["it's a pleasure to meet you", "I hope this email finds you well", "great to finally connect", "thanks for taking the time", "I wanted to reach out", "nice to e-meet you", "good morning or good afternoon", "allow me to introduce myself"] },
+    { type: "table", key: "practice", label: "Practice", section: "Practice", columns: [
+      { key: "word", label: "Word/Phrase Used", kind: "text" },
+      { key: "sentence", label: "My Sentence", kind: "text" },
+    ], seedRows: [
+      { word: "great to finally connect", sentence: "Great to finally connect after emailing back and forth for a month." },
+      { word: "I've heard great things about", sentence: "I've heard great things about your team's work from a mutual contact." },
+    ] },
+    { type: "text", key: "whereUsed", label: "Where I used this for real", section: "Real application", seed: "A first email to a long-awaited introduction" },
+    { type: "text", key: "result", label: "Result", seed: "Read as noticeably more genuine than my usual generic opener" },
+  ],
+
+  374: [
+    { type: "checklist", key: "wordBank", label: "Word bank", section: "Word bank", items: ["I'm currently", "my focus is on", "what brought me here today is", "I specialize in", "I'm excited about", "my background is in", "I recently", "I'm passionate about", "my role involves", "I've spent the last", "my expertise lies in", "I'm particularly interested in", "prior to this", "my career has focused on", "I bring experience in", "what drew me to this field", "I'm looking to", "my strengths include", "I've had the opportunity to", "I'm eager to"], seedChecked: ["I'm currently", "my focus is on", "what brought me here today is", "I specialize in", "I'm excited about", "my background is in", "I recently", "I'm passionate about"] },
+    { type: "table", key: "practice", label: "Practice", section: "Practice", columns: [
+      { key: "word", label: "Word/Phrase Used", kind: "text" },
+      { key: "sentence", label: "My Sentence", kind: "text" },
+    ], seedRows: [
+      { word: "my focus is on", sentence: "My focus is on brand marketing, specifically for early-stage consumer products." },
+      { word: "I'm particularly interested in", sentence: "I'm particularly interested in how your team measures campaign impact." },
+    ] },
+    { type: "text", key: "whereUsed", label: "Where I used this for real", section: "Real application", seed: "Rewriting my self-introduction for career fairs" },
+    { type: "text", key: "result", label: "Result", seed: "Sounded noticeably more confident, with no hedging language left in it" },
+  ],
+
+  375: [
+    { type: "checklist", key: "wordBank", label: "Word bank", section: "Word bank", items: ["how has your week been", "any fun plans coming up", "what brings you to this event", "I really enjoyed", "it's been a while how have you been", "how do you know", "what do you think of", "have you been to before", "any recommendations for", "this is my first time", "how's business been", "did you catch", "what a great turnout", "small world", "how's everything going", "what's new with you", "I love your", "that's quite a story", "we should catch up soon", "take care"], seedChecked: ["how has your week been", "any fun plans coming up", "what brings you to this event", "I really enjoyed", "it's been a while how have you been", "how do you know", "what do you think of", "have you been to before"] },
+    { type: "table", key: "practice", label: "Practice", section: "Practice", columns: [
+      { key: "word", label: "Word/Phrase Used", kind: "text" },
+      { key: "sentence", label: "My Sentence", kind: "text" },
+    ], seedRows: [
+      { word: "what brings you to this event", sentence: "What brings you to this event, are you also here for the panel?" },
+      { word: "this is my first time", sentence: "This is my first time at one of these, is it usually this busy?" },
+    ] },
+    { type: "text", key: "whereUsed", label: "Where I used this for real", section: "Real application", seed: "The first minute of a networking mixer" },
+    { type: "text", key: "result", label: "Result", seed: "Led naturally into a longer, more substantive conversation" },
+  ],
+
+  376: [
+    { type: "checklist", key: "wordBank", label: "Word bank", section: "Word bank", items: ["just a gentle reminder", "quick update on", "wanted to flag", "not urgent but", "heads up that", "for visibility", "just looping you in", "wanted to give you a heads-up", "quick note", "just so you're aware", "small update", "wanted to keep you posted", "just a heads-up", "for your awareness", "quick FYI", "wanted to surface this", "worth mentioning", "just noting", "for context", "small correction"], seedChecked: ["just a gentle reminder", "quick update on", "wanted to flag", "not urgent but", "heads up that", "for visibility", "just looping you in", "wanted to give you a heads-up"] },
+    { type: "table", key: "practice", label: "Practice", section: "Practice", columns: [
+      { key: "word", label: "Word/Phrase Used", kind: "text" },
+      { key: "sentence", label: "My Sentence", kind: "text" },
+    ], seedRows: [
+      { word: "just a gentle reminder", sentence: "Just a gentle reminder that the form closes Friday at noon." },
+      { word: "wanted to flag", sentence: "Wanted to flag that the numbers in slide 4 changed after the last sync." },
+    ] },
+    { type: "text", key: "whereUsed", label: "Where I used this for real", section: "Real application", seed: "A routine status update to my project group chat" },
+    { type: "text", key: "result", label: "Result", seed: "Struck the right tone, not too formal, not too blunt" },
+  ],
+
+  377: [
+    { type: "checklist", key: "wordBank", label: "Word bank", section: "Word bank", items: ["the main obstacle is", "what's making this difficult is", "we're running into", "a key constraint here is", "this has proven challenging because", "the bottleneck is", "we're facing pushback on", "this is complicated by", "a recurring issue is", "the root cause appears to be", "we're limited by", "this creates friction because", "the sticking point is", "we're navigating", "this presents a real challenge", "we've hit a wall with", "the primary difficulty is", "this is compounded by", "we're grappling with", "the underlying issue is"], seedChecked: ["the main obstacle is", "what's making this difficult is", "we're running into", "a key constraint here is", "this has proven challenging because", "the bottleneck is", "we're facing pushback on", "this is complicated by"] },
+    { type: "table", key: "practice", label: "Practice", section: "Practice", columns: [
+      { key: "word", label: "Word/Phrase Used", kind: "text" },
+      { key: "sentence", label: "My Sentence", kind: "text" },
+    ], seedRows: [
+      { word: "the main obstacle is", sentence: "The main obstacle is coordinating three time zones for a single weekly call." },
+      { word: "the bottleneck is", sentence: "The bottleneck is approvals, not the actual design work itself." },
+    ] },
+    { type: "text", key: "whereUsed", label: "Where I used this for real", section: "Real application", seed: "A status update to my team about a stalled project" },
+    { type: "text", key: "result", label: "Result", seed: "The team could actually propose a fix instead of just sympathizing" },
+  ],
+
+  378: [
+    { type: "checklist", key: "wordBank", label: "Word bank", section: "Word bank", items: ["one option would be", "what if we tried", "an alternative approach could be", "to address this I'd suggest", "we could either... or", "a possible solution is", "one way forward is", "I propose that we", "an option worth considering", "we might try", "a potential fix is", "my recommendation is", "another path could be", "what about trying", "I'd like to suggest", "a workaround might be", "one approach is", "let's consider", "a viable alternative is", "we could pivot to"], seedChecked: ["one option would be", "what if we tried", "an alternative approach could be", "to address this I'd suggest", "we could either... or", "a possible solution is", "one way forward is", "I propose that we"] },
+    { type: "table", key: "practice", label: "Practice", section: "Practice", columns: [
+      { key: "word", label: "Word/Phrase Used", kind: "text" },
+      { key: "sentence", label: "My Sentence", kind: "text" },
+    ], seedRows: [
+      { word: "we could either... or", sentence: "We could either push the deadline a week, or cut the scope down to the core deliverable." },
+      { word: "my recommendation is", sentence: "My recommendation is the second option, it's lower risk given our timeline." },
+    ] },
+    { type: "text", key: "whereUsed", label: "Where I used this for real", section: "Real application", seed: "Proposing options to fix a stalled group project" },
+    { type: "text", key: "result", label: "Result", seed: "The group actually had a real choice instead of one directive" },
+  ],
+
+  379: [
+    { type: "checklist", key: "wordBank", label: "Word bank", section: "Word bank", items: ["on the plus side", "the trade-off here is", "the downside would be", "weighing this against", "the benefit outweighs the cost because", "on the other hand", "the advantage is", "a drawback is", "in favor of this", "against this option", "the upside is", "this comes at the cost of", "balancing this with", "the risk versus reward", "this makes sense if", "the case for this is", "the case against this is", "all things considered", "on balance", "the net benefit is"], seedChecked: ["on the plus side", "the trade-off here is", "the downside would be", "weighing this against", "the benefit outweighs the cost because", "on the other hand", "the advantage is", "a drawback is"] },
+    { type: "table", key: "practice", label: "Practice", section: "Practice", columns: [
+      { key: "word", label: "Word/Phrase Used", kind: "text" },
+      { key: "sentence", label: "My Sentence", kind: "text" },
+    ], seedRows: [
+      { word: "the trade-off here is", sentence: "The trade-off here is a longer commute in exchange for significantly better mentorship." },
+      { word: "all things considered", sentence: "All things considered, the smaller offer was actually the better fit." },
+    ] },
+    { type: "text", key: "whereUsed", label: "Where I used this for real", section: "Real application", seed: "Comparing two internship offers" },
+    { type: "text", key: "result", label: "Result", seed: "The final decision felt genuinely informed instead of just instinctive" },
+  ],
+
+  380: [
+    { type: "checklist", key: "wordBank", label: "Word bank", section: "Word bank", items: ["building on that", "what if we combined", "yes and", "that sparks another idea", "let's push this further", "let's think bigger", "what if we flipped this", "another angle could be", "let's not rule anything out yet", "that's worth exploring", "let's riff on that", "what comes to mind is", "let's brainstorm freely", "no idea is too wild", "let's generate options first", "building off your idea", "that opens up a new direction", "let's capture that", "what else could work", "let's keep the ideas flowing"], seedChecked: ["building on that", "what if we combined", "yes and", "that sparks another idea", "let's push this further", "let's think bigger", "what if we flipped this", "another angle could be"] },
+    { type: "table", key: "practice", label: "Practice", section: "Practice", columns: [
+      { key: "word", label: "Word/Phrase Used", kind: "text" },
+      { key: "sentence", label: "My Sentence", kind: "text" },
+    ], seedRows: [
+      { word: "yes and", sentence: "Yes, and we could pair that with a raffle to boost turnout even more." },
+      { word: "building on that", sentence: "Building on that, what if the raffle prize came from a sponsor instead of our own budget?" },
+    ] },
+    { type: "text", key: "whereUsed", label: "Where I used this for real", section: "Real application", seed: "A brainstorm for my club's spring event" },
+    { type: "text", key: "result", label: "Result", seed: "We generated noticeably more ideas than our usual unstructured sessions" },
+  ],
+
+  381: [
+    { type: "checklist", key: "wordBank", label: "Word bank", section: "Word bank", items: ["what I've learned is", "looking back I would", "this experience taught me", "I've grown in my ability to", "my next step is to", "this challenged me to", "I now approach things differently because", "a turning point for me was", "I've come to realize", "this pushed me outside my comfort zone", "I'm proud of how I", "this shaped my perspective on", "I've become more", "in hindsight", "this reinforced the importance of", "I want to continue developing", "this was a valuable lesson in", "I've built confidence in", "looking ahead I plan to", "this experience shaped who I am today"], seedChecked: ["what I've learned is", "looking back I would", "this experience taught me", "I've grown in my ability to", "my next step is to", "this challenged me to", "I now approach things differently because", "a turning point for me was"] },
+    { type: "table", key: "practice", label: "Practice", section: "Practice", columns: [
+      { key: "word", label: "Word/Phrase Used", kind: "text" },
+      { key: "sentence", label: "My Sentence", kind: "text" },
+    ], seedRows: [
+      { word: "I've grown in my ability to", sentence: "I've grown in my ability to give feedback without softening it into vagueness." },
+      { word: "a turning point for me was", sentence: "A turning point for me was the first time a mentor pushed back on my plan directly." },
+    ] },
+    { type: "text", key: "whereUsed", label: "Where I used this for real", section: "Real application", seed: "Prepping for an interview question about growth" },
+    { type: "text", key: "result", label: "Result", seed: "The answer had a specific example instead of a vague claim" },
+  ],
 };

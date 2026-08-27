@@ -356,6 +356,44 @@ export const COACH_MODE: Record<number, CoachMode> = {
   341: "hybrid",
   342: "reflective",
   343: "reflective",
+  344: "hybrid",
+  345: "hybrid",
+  346: "hybrid",
+  347: "hybrid",
+  348: "hybrid",
+  349: "hybrid",
+  350: "hybrid",
+  351: "hybrid",
+  352: "hybrid",
+  353: "reflective",
+  354: "hybrid",
+  355: "hybrid",
+  356: "hybrid",
+  357: "hybrid",
+  358: "hybrid",
+  359: "hybrid",
+  360: "synthesis",
+  361: "hybrid",
+  362: "hybrid",
+  363: "hybrid",
+  364: "hybrid",
+  365: "hybrid",
+  366: "synthesis",
+  367: "hybrid",
+  368: "hybrid",
+  369: "hybrid",
+  370: "hybrid",
+  371: "hybrid",
+  372: "hybrid",
+  373: "hybrid",
+  374: "hybrid",
+  375: "hybrid",
+  376: "hybrid",
+  377: "hybrid",
+  378: "hybrid",
+  379: "synthesis",
+  380: "hybrid",
+  381: "reflective",
 };
 
 export const LEARN_CONTENT: Record<number, LearnContent> = {
@@ -9868,6 +9906,998 @@ export const LEARN_CONTENT: Record<number, LearnContent> = {
     ],
     successSignal:
       "You can name specific, genuine growth areas and specific remaining challenges, backed by real practice across this stage.",
+    milestoneTies: [],
+  },
+
+  344: {
+    definition:
+      "A First 20 Professional Adjectives Learned is a working command of twenty descriptive words commonly used to characterize professional strengths, such as adaptable, innovative, proactive, diligent, strategic, collaborative, resilient, analytical, resourceful, articulate, efficient, meticulous, organized, versatile, dependable, ambitious, perceptive, and enthusiastic.",
+    whyItMatters:
+      "These adjectives appear constantly in resumes, LinkedIn profiles, cover letters, and performance reviews; genuine command of them lets you describe yourself and others precisely instead of defaulting to the same two or three overused words.",
+    whenWhoWhere: [
+      { label: "When", body: "Build this vocabulary early, before you need it for a real resume or interview, so it's already natural rather than something you're reaching for under pressure." },
+      { label: "Who", body: "No collaborator required, though a writing tutor or native-speaking peer can check that your usage sounds natural." },
+      { label: "Where", body: "Practiced through reading real resumes, LinkedIn profiles, and job descriptions where these words appear in context." },
+    ],
+    howItWorks: [
+      "Study five words at a time.",
+      "For each, write one sentence describing yourself or someone you know using it correctly, then check that sentence against real usage examples.",
+    ],
+    tools: ["A vocabulary flashcard app", "real job descriptions or resumes as authentic source material"],
+    scenario: {
+      title: "Trading \"hardworking\" for something specific",
+      body: "A student who always described herself as \"hardworking\" in every application diversified her resume language after learning this list, describing herself more precisely as \"meticulous\" in one bullet and \"resourceful\" in another, which made her application read as more specific and genuine.",
+    },
+    pitfalls: [
+      "Learning the words' definitions without practicing them in real sentences, which leaves the vocabulary passive rather than genuinely usable.",
+    ],
+    successSignal:
+      "You can use at least five of these words correctly and naturally in a real sentence about your own experience, without needing to look up the definition.",
+    milestoneTies: [],
+  },
+
+  345: {
+    definition:
+      "A First 20 Action Verbs Learned for CVs/Resumes is a working command of twenty strong verbs used to open resume bullet points, such as led, managed, created, implemented, developed, designed, analyzed, coordinated, facilitated, optimized, initiated, executed, researched, presented, achieved, collaborated, mentored, organized, streamlined, and documented.",
+    whyItMatters:
+      "Resume bullets that open with a strong, specific action verb communicate ownership and impact far more effectively than passive phrases like \"was responsible for.\"",
+    whenWhoWhere: [
+      { label: "When", body: "Build this vocabulary before writing or revising your resume, so you have real options beyond the two or three verbs you'd default to otherwise." },
+      { label: "Who", body: "No collaborator required, though a career center advisor can confirm your usage is genuinely accurate." },
+      { label: "Where", body: "Practiced by rewriting your own real resume bullets using this word list." },
+    ],
+    howItWorks: [
+      "Take five of your current resume bullets.",
+      "For each, choose the single most accurate verb from this list and rewrite the bullet to open with it.",
+    ],
+    tools: ["Your existing resume as source material", "this verb list as a reference"],
+    scenario: {
+      title: "From \"responsible for\" to something active",
+      body: "A student whose resume bullets all began with \"responsible for\" rewrote them using specific verbs like \"streamlined\" and \"coordinated\" instead, and a career advisor noted the resume read as noticeably more active and credible.",
+    },
+    pitfalls: [
+      "Choosing a verb that sounds impressive but doesn't accurately describe what you actually did, which can read as exaggeration in an interview.",
+    ],
+    successSignal:
+      "Every bullet on your resume opens with a specific, accurate action verb rather than a passive phrase.",
+    milestoneTies: [],
+  },
+
+  346: {
+    definition:
+      "A First 10 Transition Words for Writing is a working command of ten words that connect ideas logically in writing, such as however, therefore, moreover, consequently, additionally, in contrast, on the other hand, furthermore, similarly, and thus.",
+    whyItMatters:
+      "Transition words signal the logical relationship between ideas, and their absence often makes writing feel choppy or hard to follow even when the underlying content is strong.",
+    whenWhoWhere: [
+      { label: "When", body: "Practice this whenever you're revising a piece of writing, checking whether the logical connections between sentences are actually signaled clearly." },
+      { label: "Who", body: "No collaborator required, though a writing tutor can confirm your usage fits the intended logical relationship." },
+      { label: "Where", body: "Practiced by revising your own real reports, emails, or essays." },
+    ],
+    howItWorks: [
+      "Take a piece of your own writing and identify places where the logical connection between two sentences isn't clearly signaled.",
+      "Add the appropriate transition word.",
+    ],
+    tools: ["Your own draft writing as source material"],
+    scenario: {
+      title: "A disconnected list becomes an argument",
+      body: "A student's report read as a disconnected list of facts until she added transition words like \"consequently\" and \"in contrast\" at key points, which made the same content read as a coherent argument.",
+    },
+    pitfalls: [
+      "Using a transition word that doesn't match the actual logical relationship, such as \"therefore\" when the relationship is actually contrast, not consequence.",
+    ],
+    successSignal:
+      "A reader can follow your argument's logic without confusion, and the transitions you use accurately reflect the relationships between ideas.",
+    milestoneTies: [],
+  },
+
+  347: {
+    definition:
+      "A First 10 Academic Phrases for Reports/Emails is a working command of ten formal phrases used to structure professional writing, such as in conclusion, it is evident that, the purpose of this report, as discussed, according to research, it can be inferred that, based on findings, this demonstrates, it is important to note, and key takeaway.",
+    whyItMatters:
+      "These structural phrases signal to a reader exactly where they are in your argument, making formal writing far easier to navigate than writing without any structural signposting.",
+    whenWhoWhere: [
+      { label: "When", body: "Practice this whenever writing a formal report, memo, or academic-style email." },
+      { label: "Who", body: "No collaborator required." },
+      { label: "Where", body: "Practiced in real reports, memos, or academic emails." },
+    ],
+    howItWorks: [
+      "Draft a short report or memo using at least three of these phrases in their natural structural positions (opening, evidence, conclusion).",
+    ],
+    tools: ["A real report or memo you need to write as practice material"],
+    scenario: {
+      title: "Structure made legible at a skim",
+      body: "A student's report lacked any clear structural signals until she added \"the purpose of this report\" in the opening and \"in conclusion\" before her final recommendation, which made the document's structure immediately legible to a skimming reader.",
+    },
+    pitfalls: [
+      "Overusing these phrases until the writing sounds stiff and overly formal rather than naturally structured.",
+    ],
+    successSignal:
+      "A reader can quickly identify your report's purpose, key evidence, and conclusion just from the structural phrases used.",
+    milestoneTies: [],
+  },
+
+  348: {
+    definition:
+      "A First 20 Workplace Phrases for Communication is a working command of twenty everyday professional phrases, such as please advise, for your review, looking forward to your feedback, let me know your thoughts, as discussed, following up on, kindly note, would you be able to, I appreciate your assistance, thank you in advance, let's schedule a meeting, per our discussion, for your consideration, I would suggest, may I recommend, could you clarify, I will follow up, to confirm, I look forward to, and please find attached.",
+    whyItMatters:
+      "These phrases are the everyday connective tissue of professional email and workplace communication; fluency with them lets you sound naturally professional rather than overly formal or overly casual.",
+    whenWhoWhere: [
+      { label: "When", body: "Build this vocabulary before you need to send professional emails regularly, ideally before Stage Two's email-heavy FIRSTS." },
+      { label: "Who", body: "No collaborator required." },
+      { label: "Where", body: "Practiced in real professional emails and messages." },
+    ],
+    howItWorks: [
+      "Review your last five sent professional emails and identify where a phrase from this list could replace a more casual or awkward equivalent.",
+    ],
+    tools: ["Your own sent email folder as source material"],
+    scenario: {
+      title: "Taken more seriously after a language swap",
+      body: "A student who used to write \"hey can you check this out\" in professional emails replaced it with \"for your review\" and \"kindly note,\" and noticed her emails were taken more seriously by faculty and internship contacts.",
+    },
+    pitfalls: [
+      "Using these phrases so rigidly that every email sounds like a template rather than genuine communication.",
+    ],
+    successSignal:
+      "Your professional emails sound naturally polished without feeling stiff or robotic.",
+    milestoneTies: [],
+  },
+
+  349: {
+    definition:
+      "A First 10 Vocabulary Words for Presentations is a working command of ten words used to structure and deliver spoken presentations, such as highlight, illustrate, emphasize, demonstrate, propose, overview, summary, insight, key point, and takeaway.",
+    whyItMatters:
+      "These words give you precise language for guiding an audience through a presentation's structure, rather than relying on vague filler phrases.",
+    whenWhoWhere: [
+      { label: "When", body: "Practice this before any presentation, using the words to structure your script or outline." },
+      { label: "Who", body: "No collaborator required." },
+      { label: "Where", body: "Practiced in presentation scripts, slide decks, and live delivery." },
+    ],
+    howItWorks: [
+      "Use at least three of these words explicitly in your presentation script, such as \"I want to highlight,\" \"let me illustrate this with an example,\" or \"the key takeaway is.\"",
+    ],
+    tools: ["Your presentation script or outline from Stage Six"],
+    scenario: {
+      title: "Signposting instead of extra slides",
+      body: "A student's presentation felt structurally unclear until she added explicit signposting language like \"I want to emphasize\" and \"the key takeaway is,\" which made her structure obvious to the audience without needing extra slides.",
+    },
+    pitfalls: [
+      "Using vague filler (\"so yeah, this is important\") instead of precise structural language.",
+    ],
+    successSignal:
+      "Your audience can identify your presentation's key points and structure just from your spoken language, without needing to read dense slides.",
+    milestoneTies: [],
+  },
+
+  350: {
+    definition:
+      "A First 10 Words for Networking Conversations is a working command of ten words commonly used in professional networking contexts, such as collaboration, opportunity, insight, connection, initiative, expertise, growth, alignment, innovation, and engagement.",
+    whyItMatters:
+      "These words help you frame networking conversations around genuine professional value rather than purely transactional small talk.",
+    whenWhoWhere: [
+      { label: "When", body: "Practice this before any networking event, using the words to frame your genuine interests and questions." },
+      { label: "Who", body: "No collaborator required." },
+      { label: "Where", body: "Practiced in real networking conversations, informational interviews, and professional messages." },
+    ],
+    howItWorks: [
+      "Use at least two of these words naturally in your next networking conversation, such as asking about someone's \"insight\" on a trend or expressing interest in \"alignment\" between your goals and their work.",
+    ],
+    tools: ["Your prepared conversation starters from Stage Two"],
+    scenario: {
+      title: "Richer conversations from one better question",
+      body: "A student who used to only ask \"what do you do\" in networking conversations started asking about people's \"insight\" on industry trends instead, which consistently produced richer, more memorable conversations.",
+    },
+    pitfalls: [
+      "Using these words so frequently or artificially that the conversation feels scripted rather than genuine.",
+    ],
+    successSignal:
+      "Your networking conversations feel substantive rather than purely transactional, and people respond with more detailed, engaged answers.",
+    milestoneTies: [329],
+  },
+
+  351: {
+    definition:
+      "A First 10 Polite Expressions for Professional Settings is a working command of ten courteous phrases, such as I appreciate your time, thank you for your consideration, I look forward to your response, may I suggest, would it be possible, I value your input, I hope this helps, please let me know, I apologize for any inconvenience, and I am grateful for your support.",
+    whyItMatters:
+      "Politeness expressions signal respect and professionalism, and having a genuine repertoire beyond a single overused phrase makes your communication feel more authentic.",
+    whenWhoWhere: [
+      { label: "When", body: "Practice this whenever writing or speaking in a professional setting requiring courtesy and respect." },
+      { label: "Who", body: "No collaborator required." },
+      { label: "Where", body: "Practiced in professional emails, meetings, and conversations." },
+    ],
+    howItWorks: [
+      "Identify the one polite expression you overuse, and deliberately substitute a different one from this list in your next few communications.",
+    ],
+    tools: ["Your own recent professional communications as source material"],
+    scenario: {
+      title: "Calibrated courtesy instead of one phrase on repeat",
+      body: "A student who used \"thank you so much!!\" in every single email diversified her language with phrases like \"I appreciate your time\" and \"I am grateful for your support,\" which made her communications feel more calibrated to context.",
+    },
+    pitfalls: [
+      "Using so many polite expressions in one message that it feels excessive or insincere.",
+    ],
+    successSignal:
+      "Your professional communications feel genuinely courteous without relying on the same single phrase every time.",
+    milestoneTies: [],
+  },
+
+  352: {
+    definition:
+      "A First 10 Common Academic/Business Idioms is a working command of ten frequently used idiomatic expressions, such as think outside the box, hit the ground running, in the loop, take it offline, raise the bar, on the same page, game changer, cut to the chase, move the needle, and back to the drawing board.",
+    whyItMatters:
+      "These idioms appear constantly in workplace conversation, and understanding them (while using them judiciously) helps you follow and participate in professional discussions naturally.",
+    whenWhoWhere: [
+      { label: "When", body: "Learn to recognize these before entering a professional environment where they'll be used casually and often." },
+      { label: "Who", body: "No collaborator required, though a native-speaking colleague can confirm natural usage and timing." },
+      { label: "Where", body: "Practiced by noticing these idioms in real workplace conversations, articles, or media, and using a few naturally yourself." },
+    ],
+    howItWorks: [
+      "For each idiom, write down what it actually means literally versus idiomatically, then use two or three naturally in a real conversation or piece of writing.",
+    ],
+    tools: ["Business articles, podcasts, or workplace conversations as source material for real usage examples"],
+    scenario: {
+      title: "An idiom decoded mid-meeting",
+      body: "A student unfamiliar with \"take it offline\" was confused when a manager used it in a meeting, until she looked it up and realized it simply meant discussing something separately after the meeting rather than during it.",
+    },
+    pitfalls: [
+      "Overusing idioms in cross-cultural or international settings where they may not translate clearly, potentially causing more confusion than clarity.",
+    ],
+    successSignal:
+      "You can accurately understand these idioms in context, and use two or three of them naturally without sounding forced.",
+    milestoneTies: [],
+  },
+
+  353: {
+    definition:
+      "A First 10 Vocabulary Reflection Exercise uses ten newly learned words or phrases, drawn from any of the vocabulary sets in this stage, in genuine sentences related to your field, networking, or daily life.",
+    whyItMatters:
+      "Vocabulary that's only ever been read passively rarely becomes genuinely usable; actively constructing your own sentences is what converts recognition into real fluency.",
+    whenWhoWhere: [
+      { label: "When", body: "Practice this after completing several of the other vocabulary FIRSTS in this stage, drawing from across the lists you've already studied." },
+      { label: "Who", body: "No collaborator required, though sharing sentences with a writing tutor or peer for feedback deepens the practice." },
+      { label: "Where", body: "Practiced in a dedicated writing session." },
+    ],
+    howItWorks: [
+      "Choose ten words or phrases from across the vocabulary sets in this stage.",
+      "Write one genuine, specific sentence for each, related to your actual field, networking goals, or daily life.",
+    ],
+    tools: ["Your completed vocabulary lists from earlier in this stage"],
+    scenario: {
+      title: "What made the vocabulary actually stick",
+      body: "A student who completed this reflection exercise found that actively writing her own sentences, rather than just reading the word lists, was what actually made the vocabulary stick when she needed it in a real interview weeks later.",
+    },
+    pitfalls: [
+      "Writing generic, textbook-style example sentences instead of ones genuinely connected to your own field or life.",
+    ],
+    successSignal:
+      "You can recall and correctly use at least seven of your ten chosen words without looking back at your list.",
+    milestoneTies: [],
+  },
+
+  354: {
+    definition:
+      "A First Professional Email Vocabulary is a working command of twenty words and phrases for clarity, politeness, and conciseness in email communication: I am writing to, please find below, at your earliest convenience, kindly confirm, I wanted to reach out regarding, for your reference, please see attached, I would appreciate it if, thank you for your patience, please do not hesitate to, I look forward to hearing from you, as per our conversation, I trust this email finds you well, please advise if, in the meantime, should you have any questions, I will keep you updated, thank you for your understanding, please confirm receipt, and best regards.",
+    whyItMatters:
+      "Email is the most common written professional communication channel, and clear, concise, polite vocabulary directly affects how quickly and favorably people respond.",
+    whenWhoWhere: [
+      { label: "When", body: "Build this vocabulary before Stage Two's professional email FIRSTS, so you have real language options ready." },
+      { label: "Who", body: "No collaborator required." },
+      { label: "Where", body: "Practiced in real professional emails." },
+    ],
+    howItWorks: [
+      "Draft an email using at least three phrases specifically chosen for clarity, politeness, or conciseness, and note which purpose each phrase serves.",
+    ],
+    tools: ["Your own draft emails as practice material"],
+    scenario: {
+      title: "Distinguishing clarity, politeness, and conciseness",
+      body: "A student's emails became noticeably more effective once she deliberately distinguished which phrases served clarity (\"to summarize\") versus politeness (\"I would appreciate\") versus conciseness (\"in short\"), rather than using one generic tone throughout.",
+    },
+    pitfalls: [
+      "Prioritizing politeness so heavily that the email becomes long and unclear, burying the actual point.",
+    ],
+    successSignal:
+      "Your email is polite, clear, and concise all at once, without sacrificing one quality for another.",
+    milestoneTies: [],
+  },
+
+  355: {
+    definition:
+      "A First Report & Memo Vocabulary is a working command of twenty terms used to structure ideas professionally in written reports and memos: overview, background, scope, objective, methodology, findings, analysis, recommendations, next steps, executive summary, key findings, limitations, appendix, in summary, the data indicates, conclusion, action plan, timeline, deliverables, and stakeholders.",
+    whyItMatters:
+      "These structural terms are the standard scaffolding of professional reports, and using them correctly signals genuine familiarity with formal business writing conventions.",
+    whenWhoWhere: [
+      { label: "When", body: "Practice this before writing any formal report or memo." },
+      { label: "Who", body: "No collaborator required." },
+      { label: "Where", body: "Practiced in real reports or memos." },
+    ],
+    howItWorks: [
+      "Outline a report using these structural terms as section headers, then fill in brief content under each.",
+    ],
+    tools: ["A real report you need to write as practice material"],
+    scenario: {
+      title: "Standard headers made it navigable",
+      body: "A student's first report lacked any clear section structure until she adopted standard headers like \"Scope\" and \"Recommendations,\" which made the document instantly easier for her manager to navigate.",
+    },
+    pitfalls: [
+      "Using these terms as headers without actually structuring the content underneath to match, resulting in a mismatch between labels and substance.",
+    ],
+    successSignal:
+      "A reader can navigate your report quickly using the structural terms as genuine signposts to the content.",
+    milestoneTies: [],
+  },
+
+  356: {
+    definition:
+      "A First Agenda/Minutes Vocabulary is a working command of twenty terms used to document meetings accurately: action item, owner, deadline, decision made, tabled for discussion, quorum, motion carried, agenda item, call to order, adjourned, roll call, old business, new business, follow-up required, consensus reached, dissenting opinion, minutes approved, meeting objective, time allotted, and attendees.",
+    whyItMatters:
+      "Accurate meeting documentation depends on precise, standard vocabulary that clearly distinguishes decisions from discussion points and assigns real ownership.",
+    whenWhoWhere: [
+      { label: "When", body: "Practice this before taking minutes or preparing an agenda for a real meeting." },
+      { label: "Who", body: "No collaborator required." },
+      { label: "Where", body: "Practiced in real meeting agendas and minutes." },
+    ],
+    howItWorks: [
+      "Draft an agenda or set of minutes using at least four of these terms in their correct context.",
+    ],
+    tools: ["A real upcoming or recent meeting as practice material"],
+    scenario: {
+      title: "Minutes the team actually referenced",
+      body: "A student's meeting minutes used to be a vague narrative until she adopted clear terms like \"action item\" and \"owner\" for each task, which made the minutes something the team actually referenced afterward.",
+    },
+    pitfalls: [
+      "Using vague language (\"we talked about\") instead of precise terms that distinguish decisions, action items, and open discussion.",
+    ],
+    successSignal:
+      "Someone reading your minutes can clearly identify what was decided, what remains open, and who owns each action item.",
+    milestoneTies: [],
+  },
+
+  357: {
+    definition:
+      "A First Vocabulary for Documenting Decisions and Next Steps is a working command of twenty words and phrases for recording what was decided and what happens next: we have agreed to, the decision was made to, moving forward we will, pending confirmation, to be finalized by, action required, responsible party, target date, status update, resolved, outstanding item, agreed upon, subject to change, finalized on, next review date, escalation needed, approved by, deferred to, in progress, and completed.",
+    whyItMatters:
+      "Clear decision-documentation language prevents later confusion about what was actually agreed, a common source of team friction.",
+    whenWhoWhere: [
+      { label: "When", body: "Practice this whenever a real decision needs to be documented, especially in a team or project context." },
+      { label: "Who", body: "No collaborator required." },
+      { label: "Where", body: "Practiced in decision logs, meeting notes, or follow-up emails." },
+    ],
+    howItWorks: [
+      "Document your next real decision using explicit decision language, distinguishing what's confirmed from what's still pending.",
+    ],
+    tools: ["Your Decision-Making Log from Stage Eight as a related practice format"],
+    scenario: {
+      title: "Eliminating ambiguity about what was final",
+      body: "A team's decision documentation used to be ambiguous about what was final versus still under discussion, until adopting clear phrases like \"pending confirmation\" and \"the decision was made to\" eliminated that confusion.",
+    },
+    pitfalls: [
+      "Documenting a decision so vaguely that it's unclear whether it's final or still tentative.",
+    ],
+    successSignal:
+      "Anyone reading your documentation can tell exactly what was decided, what's still pending, and what happens next.",
+    milestoneTies: [326],
+  },
+
+  358: {
+    definition:
+      "A First Vocabulary for Summarizing Findings from Research or Projects is a working command of twenty words and phrases for concisely presenting results: the data suggests, key findings include, notably, this is consistent with, a significant pattern emerged, the results indicate, it was observed that, a notable trend, this finding supports, in comparison to, the analysis revealed, further investigation is needed, this aligns with, the majority of respondents, a clear correlation, this contradicts, preliminary results show, the sample size, statistically significant, and worth noting.",
+    whyItMatters:
+      "Precise summarizing language helps a reader quickly grasp your actual findings without wading through unnecessary detail.",
+    whenWhoWhere: [
+      { label: "When", body: "Practice this whenever summarizing research or project results for a report, presentation, or email." },
+      { label: "Who", body: "No collaborator required." },
+      { label: "Where", body: "Practiced in real research summaries, project reports, or data presentations." },
+    ],
+    howItWorks: [
+      "Take a real dataset or project result and summarize it using at least three phrases from this list.",
+    ],
+    tools: ["Your Data Interpretation Report or Research Summary from Stage Seven as related practice material"],
+    scenario: {
+      title: "Confident, evidence-based language for conclusions",
+      body: "A student's findings summary used vague language (\"it seems like\") until she adopted more precise phrases like \"the data suggests\" and \"a significant pattern emerged,\" which made her conclusions sound appropriately confident and evidence-based.",
+    },
+    pitfalls: [
+      "Overstating certainty with phrases like \"this proves\" when the data only supports a more modest \"suggests\" or \"indicates.\"",
+    ],
+    successSignal:
+      "Your summary accurately conveys both your findings and your appropriate level of confidence in them.",
+    milestoneTies: [216],
+  },
+
+  359: {
+    definition:
+      "A First Meeting/Call Vocabulary is a working command of twenty phrases for effective verbal communication during meetings and calls: shall we get started, to add to that, can I jump in, let's circle back to, to summarize what we've covered, before we wrap up, let's table that for now, moving on to the next item, does anyone have questions, let's take this offline, I'll hand it over to, thanks for joining, can everyone hear me, let's stay on track, to keep us on time, any final thoughts, let's pick this up next time, I'll send a recap, appreciate everyone's time, and let's dive in.",
+    whyItMatters:
+      "These phrases help you participate smoothly in live verbal exchanges, entering and exiting points in the conversation naturally rather than awkwardly interrupting or staying silent.",
+    whenWhoWhere: [
+      { label: "When", body: "Practice this before any meeting or call where you'll need to actively participate." },
+      { label: "Who", body: "No collaborator required, though practicing with a peer builds real comfort." },
+      { label: "Where", body: "Practiced in real meetings, calls, or mock conversations." },
+    ],
+    howItWorks: [
+      "Use at least two of these phrases naturally in your next real meeting, particularly ones for entering (\"can I jump in\") and closing (\"before we wrap up\") the conversation.",
+    ],
+    tools: ["No special tool, real meetings as practice ground"],
+    scenario: {
+      title: "A low-pressure way into the conversation",
+      body: "A student who used to stay silent in meetings because she didn't know how to enter the conversation naturally started using \"to add to that,\" which gave her a smooth, low-pressure way to contribute.",
+    },
+    pitfalls: [
+      "Waiting for a perfect silence to speak instead of using a natural entry phrase to join an ongoing conversation.",
+    ],
+    successSignal:
+      "You participate more actively in meetings because you have natural language for entering and exiting the conversation.",
+    milestoneTies: [],
+  },
+
+  360: {
+    definition:
+      "A First Negotiation & Persuasion Vocabulary is a working command of twenty words and phrases to articulate requests and influence decisions: what if we considered, I'd like to propose, from my perspective, that's a fair point and, let's find a middle ground, what would it take to, I understand your position but, here's what I can offer, let's explore options, that works for me if, I'm open to, under what conditions, would you be willing to, let's meet halfway, I need you to understand, my priority is, that's a dealbreaker for me, let's revisit this point, I appreciate your flexibility, and does that work for both of us.",
+    whyItMatters:
+      "Persuasive, collaborative negotiation language helps you advocate for your position without sounding either weak or adversarial.",
+    whenWhoWhere: [
+      { label: "When", body: "Practice this before any real negotiation, using the language to prepare your framing in advance." },
+      { label: "Who", body: "No collaborator required." },
+      { label: "Where", body: "Practiced in real negotiations, from salary discussions to everyday task division." },
+    ],
+    howItWorks: [
+      "Prepare your negotiation opening using at least two phrases from this list, particularly one that acknowledges the other side's view before stating yours.",
+    ],
+    tools: ["Your Negotiation Exercise prep from Stage Eight"],
+    scenario: {
+      title: "Acknowledgment before argument softened the tone",
+      body: "A student's negotiation felt adversarial until she used \"that's a fair point, and\" to acknowledge the other side before adding her own perspective, which noticeably softened the tone and led to a better outcome.",
+    },
+    pitfalls: [
+      "Using persuasive language to manipulate rather than genuinely find a fair, mutual outcome.",
+    ],
+    successSignal:
+      "Your negotiation language helps you advocate clearly while keeping the conversation collaborative rather than adversarial.",
+    milestoneTies: [280, 316],
+  },
+
+  361: {
+    definition:
+      "A First Follow-Up Vocabulary is a working command of twenty professional ways to maintain engagement after an initial conversation: just circling back on, wanted to check in regarding, any updates on, following up as promised, I wanted to touch base, per my last email, as promised here is, checking in to see, I haven't heard back so, just a friendly reminder, wanted to make sure this didn't slip through, still hoping to connect on, any movement on, wanted to revisit, hope to hear from you soon, bumping this to the top of your inbox, following up one more time, wanted to close the loop, any thoughts on my previous message, and appreciate your patience.",
+    whyItMatters:
+      "Follow-up is where many professional relationships and processes quietly stall; having natural language for it makes the habit easier to maintain consistently.",
+    whenWhoWhere: [
+      { label: "When", body: "Practice this whenever a real follow-up is due, ideally within the timeframe you originally promised." },
+      { label: "Who", body: "No collaborator required." },
+      { label: "Where", body: "Practiced in follow-up emails or messages." },
+    ],
+    howItWorks: [
+      "Send a real follow-up using one phrase from this list, referencing the specific original conversation or commitment.",
+    ],
+    tools: ["Your own list of pending follow-ups as practice material"],
+    scenario: {
+      title: "Confident instead of apologetic",
+      body: "A student who used to open every follow-up with an apologetic \"sorry to bother you again\" switched to a neutral \"just circling back on,\" which read as more confident and professional.",
+    },
+    pitfalls: [
+      "Over-apologizing in follow-up language, which can make a routine, reasonable follow-up sound like an imposition.",
+    ],
+    successSignal:
+      "Your follow-ups read as confident and professional rather than apologetic or uncertain.",
+    milestoneTies: [],
+  },
+
+  362: {
+    definition:
+      "A First Feedback Vocabulary is a working command of twenty words and phrases to give and receive constructive criticism: one thing I'd suggest, what worked well was, have you considered, I hear what you're saying and, that's helpful thank you, let me think about that, constructive criticism, room for improvement, strengths and weaknesses, actionable feedback, specific example, going forward, I'd like to build on, an area to develop, well done on, this could be strengthened by, I appreciate the feedback, let's discuss further, my takeaway is, and thank you for being direct.",
+    whyItMatters:
+      "Precise feedback language helps you deliver criticism kindly and receive it gracefully, both of which depend heavily on word choice, not just tone.",
+    whenWhoWhere: [
+      { label: "When", body: "Practice this whenever giving or receiving real feedback." },
+      { label: "Who", body: "The person you're exchanging feedback with." },
+      { label: "Where", body: "Practiced in real feedback conversations, from peer reviews to manager check-ins." },
+    ],
+    howItWorks: [
+      "Use at least one phrase from this list the next time you give feedback, and one the next time you receive it.",
+    ],
+    tools: ["Your Feedback Given and Feedback Received Gracefully practice from Stage Eight"],
+    scenario: {
+      title: "Easier to receive without becoming defensive",
+      body: "A student who used to say \"this is wrong\" when giving feedback switched to \"one thing I'd suggest,\" which made her feedback noticeably easier for peers to receive without becoming defensive.",
+    },
+    pitfalls: [
+      "Using softening language so heavily that the actual feedback becomes unclear or gets lost entirely.",
+    ],
+    successSignal:
+      "Your feedback is both kind and clear, and you can receive feedback using language that stays open rather than defensive.",
+    milestoneTies: [310, 311],
+  },
+
+  363: {
+    definition:
+      "A First Follow-Up Vocabulary After Networking is a working command of twenty words and phrases specifically for maintaining a new professional connection: it was great connecting with you at, I enjoyed our conversation about, I'd love to stay in touch, would you be open to, following up on our conversation, it was a pleasure meeting you, I wanted to continue our discussion, thank you for the insightful conversation, let's grab coffee sometime, I'd value staying connected, hope our paths cross again, thank you for sharing your perspective, would love to pick your brain further, let's keep in touch, appreciated your insights on, hope to collaborate in the future, thanks again for the conversation, let's schedule a follow-up chat, wonderful meeting you, and looking forward to future conversations.",
+    whyItMatters:
+      "The specific language used in a post-networking follow-up affects whether a new contact perceives it as genuine relationship-building versus a generic, forgettable message.",
+    whenWhoWhere: [
+      { label: "When", body: "Practice this within 24 to 48 hours of meeting a new professional contact." },
+      { label: "Who", body: "The new contact you're following up with." },
+      { label: "Where", body: "Practiced in real follow-up messages after networking events." },
+    ],
+    howItWorks: [
+      "Send a follow-up using a phrase from this list combined with a specific detail from your actual conversation.",
+    ],
+    tools: ["Your Follow-Up Email After Networking FIRST from Stage Six as the related practice format"],
+    scenario: {
+      title: "A specific detail increased her response rate",
+      body: "A student's generic \"nice to meet you\" follow-ups got few responses. Adding \"I enjoyed our conversation about\" plus a specific detail noticeably increased her response rate.",
+    },
+    pitfalls: [
+      "Using this vocabulary without any specific detail from the actual conversation, which reads as a generic template.",
+    ],
+    successSignal:
+      "Your follow-up combines natural language with a specific detail, and gets a genuine response.",
+    milestoneTies: [],
+  },
+
+  364: {
+    definition:
+      "A First Question-Asking Vocabulary is a working command of twenty words and phrases for insightful, open-ended questions: what's your take on, how did you approach, what's been your experience with, what would you do differently, what's driving that decision, can you walk me through, what inspired, how do you see this evolving, what's the reasoning behind, what challenges did you face, how did that come about, what's your perspective on, could you elaborate on, what factors influenced, how would you prioritize, what's the story behind, what surprised you about, how did you decide, what's your advice for, and what would success look like.",
+    whyItMatters:
+      "Open-ended questions produce far richer conversations and more useful information than closed yes/no questions, and precise question language is what makes a question genuinely open-ended.",
+    whenWhoWhere: [
+      { label: "When", body: "Practice this before any conversation where you want genuine insight, from networking to mentoring to interviews." },
+      { label: "Who", body: "No collaborator required." },
+      { label: "Where", body: "Practiced in real conversations, interviews, or mentor check-ins." },
+    ],
+    howItWorks: [
+      "Prepare at least two open-ended questions using phrases from this list before your next substantive conversation.",
+    ],
+    tools: ["Your Mentor Interaction prep from Stage Eight as related practice material"],
+    scenario: {
+      title: "One word swap opened up a richer answer",
+      body: "A student who used to ask \"did you like your internship\" (a closed question) switched to \"what's been your experience with,\" which opened up a much richer, more detailed conversation.",
+    },
+    pitfalls: [
+      "Asking a question that sounds open-ended but is actually easily answered with a single word, missing the intended depth.",
+    ],
+    successSignal:
+      "Your questions consistently produce detailed, substantive answers rather than short, closed responses.",
+    milestoneTies: [331],
+  },
+
+  365: {
+    definition:
+      "A First Listening & Responding Vocabulary is a working command of twenty words and phrases to show engagement and understanding: what I'm hearing is, so if I understand correctly, that makes sense because, I see what you mean, can you say more about, to build on what you said, that's a great point, I hadn't considered that, thank you for clarifying, let me make sure I follow, that resonates with me, I appreciate you sharing that, that's an interesting perspective, to paraphrase, if I'm hearing you right, that helps clarify things, I want to understand better, could you give an example, that changes my thinking on, and I follow you.",
+    whyItMatters:
+      "This vocabulary makes active listening visible to the other person, confirming genuine understanding rather than just passive silence.",
+    whenWhoWhere: [
+      { label: "When", body: "Practice this in any real conversation, especially ones involving genuine listening from Stage Eight." },
+      { label: "Who", body: "Anyone you're in conversation with." },
+      { label: "Where", body: "Practiced in real conversations." },
+    ],
+    howItWorks: [
+      "Use a phrase from this list to paraphrase or confirm understanding at least once in your next real conversation.",
+    ],
+    tools: ["Your Active Listening Exercise and Listening for Understanding Exercise from Stage Eight"],
+    scenario: {
+      title: "Confirming understanding out loud",
+      body: "A student who used to just nod silently while listening started saying \"so if I understand correctly\" before paraphrasing, and noticed people felt more genuinely heard and engaged in the conversation.",
+    },
+    pitfalls: [
+      "Using these phrases mechanically without genuinely following up with an accurate paraphrase.",
+    ],
+    successSignal:
+      "The other person confirms your paraphrase is accurate, and the conversation deepens as a result.",
+    milestoneTies: [294, 301],
+  },
+
+  366: {
+    definition:
+      "A First Vocabulary for Giving and Receiving Constructive Feedback is an extended, more advanced command of twenty feedback phrases for higher-stakes situations: the impact of this was, my intention in sharing this is, what support would help you with this, I want to make sure I understood your feedback correctly, let's find a path forward together, I recognize this may be hard to hear, my hope is that this helps you grow, can we discuss how to address this, I want to understand your perspective too, this comes from a place of wanting you to succeed, let's set a plan to improve this, I appreciate you being open to this conversation, how do you feel about this feedback, let's check in on progress, thank you for hearing me out, I'm here to support you through this, let's revisit this in a few weeks, I value your willingness to grow, this feedback applies both ways, and let's keep this conversation ongoing.",
+    whyItMatters:
+      "Advanced feedback vocabulary handles higher-stakes or more sensitive feedback situations, where basic phrasing alone may not be enough to keep the conversation constructive.",
+    whenWhoWhere: [
+      { label: "When", body: "Practice this for feedback conversations with real emotional or professional stakes, building on the basics from earlier in this stage." },
+      { label: "Who", body: "The person you're exchanging feedback with." },
+      { label: "Where", body: "Practiced in real, higher-stakes feedback conversations." },
+    ],
+    howItWorks: [
+      "Use at least one advanced phrase from this list in your next significant feedback conversation, particularly one that names impact or intention explicitly.",
+    ],
+    tools: ["Your Team Feedback Session Facilitated FIRST from Stage Eight as related practice material"],
+    scenario: {
+      title: "Naming impact kept it about behavior, not the person",
+      body: "A student giving difficult feedback to a close friend used \"the impact of this was\" instead of a vaguer complaint, which kept the conversation focused on the specific behavior rather than becoming personal.",
+    },
+    pitfalls: [
+      "Skipping the more advanced, higher-stakes feedback vocabulary and defaulting to basic phrases that don't carry enough weight for a genuinely significant conversation.",
+    ],
+    successSignal:
+      "Your higher-stakes feedback conversation stays constructive and specific, even when the content is genuinely difficult.",
+    milestoneTies: [],
+  },
+
+  367: {
+    definition:
+      "A First Presentation Introduction Vocabulary is a working command of twenty words and phrases to open meetings and talks confidently: thank you all for being here, today I'll be covering, by the end of this you'll, let's dive in, to kick things off, I'm excited to share, thank you for joining me today, over the next few minutes, my goal today is to, let's get started, I want to begin by, today's agenda includes, before we begin, I'll start with, let me set the stage, thank you for the opportunity to present, we'll be covering three key areas, without further ado, I appreciate you all being here, and let's jump right in.",
+    whyItMatters:
+      "A confident, clear opening sets the tone for the entire presentation, and vague or hesitant opening language can undercut audience confidence before the content even starts.",
+    whenWhoWhere: [
+      { label: "When", body: "Practice this before any presentation, using it to script your opening lines specifically." },
+      { label: "Who", body: "No collaborator required." },
+      { label: "Where", body: "Practiced in presentation scripts and live delivery." },
+    ],
+    howItWorks: [
+      "Script your presentation's first thirty seconds using at least two phrases from this list.",
+    ],
+    tools: ["Your Presentation Script Written FIRST from Stage Six"],
+    scenario: {
+      title: "A scripted opening instead of an awkward \"um\"",
+      body: "A student's presentations used to open with an awkward \"okay, um, so,\" until she scripted a confident \"today I'll be covering\" opening instead, which set a noticeably stronger tone from the first sentence.",
+    },
+    pitfalls: [
+      "Leaving your opening unscripted and improvised, which is exactly when nerves are highest and vague filler is most likely.",
+    ],
+    successSignal:
+      "Your presentation opens confidently and clearly, without hesitation or filler in the first thirty seconds.",
+    milestoneTies: [],
+  },
+
+  368: {
+    definition:
+      "A First Vocabulary for Structuring Presentations is a working command of twenty words and phrases to introduce, explain, and conclude clearly: first I'll cover, moving on to, to break this down further, bringing this together, to wrap up, let's start with, next, building on this, turning now to, as we transition to, in the following section, to summarize this section, let's shift focus to, this leads us to, following that, to close this out, let's take a step back, in this next part, as I mentioned earlier, and finally.",
+    whyItMatters:
+      "Explicit structural language helps an audience track where they are in a presentation, especially important for longer or more complex talks.",
+    whenWhoWhere: [
+      { label: "When", body: "Practice this whenever structuring a presentation with multiple sections." },
+      { label: "Who", body: "No collaborator required." },
+      { label: "Where", body: "Practiced in presentation scripts." },
+    ],
+    howItWorks: [
+      "Add explicit structural language at each major transition point in your presentation script.",
+    ],
+    tools: ["Your presentation outline or script"],
+    scenario: {
+      title: "Signposts made abrupt transitions clear",
+      body: "A student's presentation transitions used to be abrupt and confusing until she added explicit signposts like \"moving on to\" and \"bringing this together,\" which made the structure much easier for her audience to follow.",
+    },
+    pitfalls: [
+      "Assuming your slide transitions alone signal structure clearly enough, without any verbal signposting to match.",
+    ],
+    successSignal:
+      "Your audience can verbally track where you are in the presentation's structure, even without looking at slides.",
+    milestoneTies: [367],
+  },
+
+  369: {
+    definition:
+      "A First Vocabulary for Emphasizing Key Points is a working command of twenty words and phrases to highlight critical information: the most important thing to remember is, I want to stress, this is critical because, the headline here is, if you take away one thing, this is the key insight, let me emphasize, this cannot be overstated, the bottom line is, what's essential here is, I want to highlight, this deserves special attention, the crux of the matter is, above all, most importantly, this is a game changer, let me be clear, the core message is, this is worth repeating, and the key takeaway is.",
+    whyItMatters:
+      "Without explicit emphasis language, an audience may not know which points matter most among everything you've said, especially in a longer presentation.",
+    whenWhoWhere: [
+      { label: "When", body: "Practice this for any presentation with a specific, critical point you want the audience to genuinely retain." },
+      { label: "Who", body: "No collaborator required." },
+      { label: "Where", body: "Practiced in presentation scripts." },
+    ],
+    howItWorks: [
+      "Identify your single most important point, and mark it explicitly using a phrase from this list.",
+    ],
+    tools: ["Your presentation script"],
+    scenario: {
+      title: "Making the one thing that mattered unmistakable",
+      body: "A student's audience remembered scattered details but missed her actual main point until she added \"if you take away one thing\" before her key recommendation, which made it unmistakably clear what mattered most.",
+    },
+    pitfalls: [
+      "Emphasizing too many points, which dilutes the impact of emphasis language and leaves the audience unsure what's actually most important.",
+    ],
+    successSignal:
+      "When asked afterward, your audience can accurately name your single most important point.",
+    milestoneTies: [],
+  },
+
+  370: {
+    definition:
+      "A First Audience Engagement Vocabulary is a working command of twenty words and phrases to ask questions, summarize, and interact with an audience: how many of you have, I'd love to hear your thoughts, let's pause here for a moment, does this resonate with your experience, what's coming up for you, show of hands, I'm curious what you think, let's take a quick poll, feel free to jump in, what questions do you have so far, let's open this up, I want to hear from you, does anyone relate to this, take a moment to consider, let's do a quick check-in, what's your reaction to this, I'd like your input, raise your hand if, let's make this interactive, and over to you.",
+    whyItMatters:
+      "Engagement language turns a one-way presentation into an interactive exchange, which typically increases audience attention and retention.",
+    whenWhoWhere: [
+      { label: "When", body: "Practice this for any presentation where genuine audience interaction would strengthen the impact." },
+      { label: "Who", body: "Your presentation audience." },
+      { label: "Where", body: "Practiced in live presentation delivery." },
+    ],
+    howItWorks: [
+      "Build at least one explicit engagement moment into your presentation using a phrase from this list.",
+    ],
+    tools: ["Your presentation script or outline"],
+    scenario: {
+      title: "A show-of-hands moment changed the room",
+      body: "A student's presentation felt like a one-way lecture until she added \"how many of you have\" as a show-of-hands moment, which visibly increased audience attention for the rest of the talk.",
+    },
+    pitfalls: [
+      "Asking an engagement question but not genuinely pausing for or incorporating the response, which reads as performative rather than genuine.",
+    ],
+    successSignal:
+      "Your audience visibly engages with at least one interactive moment, rather than passively receiving the whole presentation.",
+    milestoneTies: [328],
+  },
+
+  371: {
+    definition:
+      "A First Q&A Handling Vocabulary is a working command of twenty words and phrases to respond confidently and clearly to audience questions: that's a great question, let me make sure I understand what you're asking, to answer directly, I don't have that specific data but, I'll follow up with you on that, that's a fair challenge, let me address that, good question, I appreciate you asking, to clarify, that's outside my area but, let me circle back to your point, does that answer your question, happy to go deeper on that, I want to make sure I heard you correctly, that's something we're still exploring, let's take that offline, thank you for pushing on that, I'll get back to you with specifics, and great follow-up.",
+    whyItMatters:
+      "Precise Q&A language helps you handle unexpected questions gracefully, including ones you don't have a complete answer for, without losing composure.",
+    whenWhoWhere: [
+      { label: "When", body: "Practice this before any presentation with a Q&A component." },
+      { label: "Who", body: "No collaborator required, though practicing with a mock audience helps." },
+      { label: "Where", body: "Practiced in real or mock Q&A sessions." },
+    ],
+    howItWorks: [
+      "Prepare a graceful phrase for handling a question you can't fully answer, such as \"I don't have that specific data, but I'll follow up with you on that.\"",
+    ],
+    tools: ["Your Presentation Handling Q&A FIRST from Stage Eight"],
+    scenario: {
+      title: "Composed instead of caught off guard",
+      body: "A student who used to panic and ramble when she didn't know an answer started using \"I don't have that specific data, but I'll follow up with you on that,\" which came across as composed and professional rather than caught off guard.",
+    },
+    pitfalls: [
+      "Trying to bluff an answer you don't actually have, rather than gracefully acknowledging the gap and following up later.",
+    ],
+    successSignal:
+      "You handle at least one question you can't fully answer gracefully, without losing composure or credibility.",
+    milestoneTies: [334],
+  },
+
+  372: {
+    definition:
+      "A First Persuasive Speaking Vocabulary is a working command of twenty words and phrases to motivate, convince, and inspire action: imagine if, the opportunity here is, we have the chance to, what this means for you is, I'm asking you to, consider the possibilities, this is your moment to, the time to act is now, together we can, let's seize this opportunity, the impact could be significant, this is bigger than, I believe in, join me in, the choice is clear, this matters because, let's make this happen, I urge you to, the future depends on, and we owe it to ourselves to.",
+    whyItMatters:
+      "Persuasive language moves an audience from understanding your point to actually acting on it, a distinct final step beyond mere comprehension.",
+    whenWhoWhere: [
+      { label: "When", body: "Practice this for any presentation or talk with a genuine call to action." },
+      { label: "Who", body: "No collaborator required." },
+      { label: "Where", body: "Practiced in persuasive presentation scripts." },
+    ],
+    howItWorks: [
+      "End your presentation with an explicit, persuasive call to action using a phrase from this list.",
+    ],
+    tools: ["Your Persuasive Presentation FIRST from Stage Six"],
+    scenario: {
+      title: "A flat ending becomes a real ask",
+      body: "A student's presentation ended with a flat \"so yeah, that's basically it\" until she rewrote her closing to \"I'm asking you to consider,\" which gave her talk a genuine, memorable call to action instead of trailing off.",
+    },
+    pitfalls: [
+      "Building a strong persuasive case throughout the presentation but failing to close with an explicit ask, leaving the audience unsure what to actually do next.",
+    ],
+    successSignal:
+      "Your presentation ends with a clear, explicit ask that the audience can act on.",
+    milestoneTies: [],
+  },
+
+  373: {
+    definition:
+      "A First Professional Greeting Vocabulary is a working command of twenty words and phrases for email and in-person introductions: it's a pleasure to meet you, I hope this email finds you well, great to finally connect, thanks for taking the time, I wanted to reach out, nice to e-meet you, good morning or good afternoon, allow me to introduce myself, thank you for having me, I've heard great things about, it's an honor to, welcome, glad you could join us, thanks for making time, pleased to meet you, how do you do, I appreciate you meeting with me, lovely to see you again, thank you for the introduction, and looking forward to working together.",
+    whyItMatters:
+      "A greeting sets the tone for the entire interaction that follows, and having natural, calibrated language avoids either awkward stiffness or excessive casualness.",
+    whenWhoWhere: [
+      { label: "When", body: "Practice this before any new professional introduction, in person or in writing." },
+      { label: "Who", body: "No collaborator required." },
+      { label: "Where", body: "Practiced in real emails and in-person introductions." },
+    ],
+    howItWorks: [
+      "Use a greeting phrase calibrated to the context, formal for a first cold email, warmer for an in-person introduction, and notice how the choice affects the tone of what follows.",
+    ],
+    tools: ["No special tool, real introductions as practice ground"],
+    scenario: {
+      title: "A specific greeting read as more genuine",
+      body: "A student who used the same generic \"hi, hope you're doing well\" for every email realized a more specific \"great to finally connect\" for a long-awaited introduction read as more genuine and attentive.",
+    },
+    pitfalls: [
+      "Using an overly generic greeting that doesn't reflect the actual context or relationship stage.",
+    ],
+    successSignal:
+      "Your greeting matches the actual context and relationship, setting an appropriately calibrated tone for what follows.",
+    milestoneTies: [],
+  },
+
+  374: {
+    definition:
+      "A First Self-Introduction Vocabulary is a working command of twenty words and phrases for clear, confident introductions: I'm currently, my focus is on, what brought me here today is, I specialize in, I'm excited about, my background is in, I recently, I'm passionate about, my role involves, I've spent the last, my expertise lies in, I'm particularly interested in, prior to this, my career has focused on, I bring experience in, what drew me to this field, I'm looking to, my strengths include, I've had the opportunity to, and I'm eager to.",
+    whyItMatters:
+      "Confident, clear self-introduction language directly shapes a listener's first impression, and vague or hedging language undercuts even strong content.",
+    whenWhoWhere: [
+      { label: "When", body: "Practice this before any situation requiring self-introduction, from networking events to interviews." },
+      { label: "Who", body: "No collaborator required." },
+      { label: "Where", body: "Practiced in real introductions or rehearsed aloud." },
+    ],
+    howItWorks: [
+      "Draft your self-introduction using at least two confident, specific phrases from this list, avoiding hedging language like \"I guess\" or \"sort of.\"",
+    ],
+    tools: ["Your Elevator Pitch from Stage Six as related practice material"],
+    scenario: {
+      title: "One phrase swap sounded notably more confident",
+      body: "A student's self-introduction used to start with \"um, so I guess I'm interested in marketing,\" until she rewrote it starting with \"my focus is on brand marketing,\" a small language change that made her sound notably more confident.",
+    },
+    pitfalls: [
+      "Using hedging language (\"I guess,\" \"sort of,\" \"maybe\") that undercuts otherwise strong content.",
+    ],
+    successSignal:
+      "Your self-introduction sounds confident and clear, without hedging language diluting it.",
+    milestoneTies: [],
+  },
+
+  375: {
+    definition:
+      "A First Small Talk Vocabulary is a working command of twenty casual yet professional conversation starters: how has your week been, any fun plans coming up, what brings you to this event, I really enjoyed, it's been a while how have you been, how do you know, what do you think of, have you been to before, any recommendations for, this is my first time, how's business been, did you catch, what a great turnout, small world, how's everything going, what's new with you, I love your, that's quite a story, we should catch up soon, and take care.",
+    whyItMatters:
+      "Small talk is often the entry point to deeper professional conversation, and having natural, easy language for it reduces the awkwardness of the opening moments.",
+    whenWhoWhere: [
+      { label: "When", body: "Practice this before any networking event or casual professional interaction." },
+      { label: "Who", body: "No collaborator required." },
+      { label: "Where", body: "Practiced in real casual professional settings." },
+    ],
+    howItWorks: [
+      "Use one small talk opener from this list at your next networking event or casual professional interaction, and notice how naturally it transitions into deeper conversation.",
+    ],
+    tools: ["No special tool, real events as practice ground"],
+    scenario: {
+      title: "A simple opener led into real conversation",
+      body: "A student who used to freeze at the start of networking conversations started with \"what brings you to this event,\" a simple, natural opener that consistently led into more substantive conversation.",
+    },
+    pitfalls: [
+      "Treating small talk as a chore to rush through, rather than a genuine, low-pressure way to build initial rapport.",
+    ],
+    successSignal:
+      "Your small talk opener feels natural rather than forced, and leads smoothly into deeper conversation.",
+    milestoneTies: [329],
+  },
+
+  376: {
+    definition:
+      "A First Workplace Expression Vocabulary is a working command of twenty words and phrases for polite reminders, suggestions, and updates: just a gentle reminder, quick update on, wanted to flag, not urgent but, heads up that, for visibility, just looping you in, wanted to give you a heads-up, quick note, just so you're aware, small update, wanted to keep you posted, just a heads-up, for your awareness, quick FYI, wanted to surface this, worth mentioning, just noting, for context, and small correction.",
+    whyItMatters:
+      "Everyday workplace expressions like these help you communicate routine information without sounding either overly formal or too casual for the context.",
+    whenWhoWhere: [
+      { label: "When", body: "Practice this for the routine, day-to-day workplace communications that make up most professional correspondence." },
+      { label: "Who", body: "No collaborator required." },
+      { label: "Where", body: "Practiced in everyday workplace messages and emails." },
+    ],
+    howItWorks: [
+      "Use at least one phrase from this list in your next routine workplace update or reminder.",
+    ],
+    tools: ["Your own recent workplace messages as source material"],
+    scenario: {
+      title: "A calibrated tone between too formal and too blunt",
+      body: "A student's reminders used to feel either too formal (\"I am writing to remind you\") or too abrupt (\"don't forget\"), until she adopted \"just a gentle reminder,\" which struck a natural, calibrated tone.",
+    },
+    pitfalls: [
+      "Defaulting to overly formal or overly blunt language for routine, low-stakes communications that call for a lighter touch.",
+    ],
+    successSignal:
+      "Your routine workplace communications sound naturally calibrated to their actual low-stakes context.",
+    milestoneTies: [348],
+  },
+
+  377: {
+    definition:
+      "A First Vocabulary for Articulating Challenges and Obstacles is a working command of twenty words and phrases to name real difficulties clearly: the main obstacle is, what's making this difficult is, we're running into, a key constraint here is, this has proven challenging because, the bottleneck is, we're facing pushback on, this is complicated by, a recurring issue is, the root cause appears to be, we're limited by, this creates friction because, the sticking point is, we're navigating, this presents a real challenge, we've hit a wall with, the primary difficulty is, this is compounded by, we're grappling with, and the underlying issue is.",
+    whyItMatters:
+      "Clearly articulated challenges are the necessary first step toward solving them; vague complaints (\"this isn't working\") don't give a team enough to actually act on.",
+    whenWhoWhere: [
+      { label: "When", body: "Practice this whenever you need to communicate a real difficulty to a team, manager, or collaborator." },
+      { label: "Who", body: "No collaborator required." },
+      { label: "Where", body: "Practiced in team meetings, status updates, or problem-solving discussions." },
+    ],
+    howItWorks: [
+      "Name your next real challenge using a specific phrase from this list, identifying the actual constraint rather than a vague complaint.",
+    ],
+    tools: ["Your Problem-Solving Discussion FIRST from Stage Eight as related practice material"],
+    scenario: {
+      title: "A vague complaint became something a team could fix",
+      body: "A student's vague \"this project is stressful\" complaint became far more actionable once reframed as \"the main obstacle is coordinating three time zones for our calls,\" which let her team actually propose a specific fix.",
+    },
+    pitfalls: [
+      "Naming a challenge so vaguely that a listener can't identify anything specific to help with.",
+    ],
+    successSignal:
+      "Someone hearing your articulated challenge can identify a specific, real constraint, not just a general sense that something is hard.",
+    milestoneTies: [321],
+  },
+
+  378: {
+    definition:
+      "A First Vocabulary for Proposing Solutions and Alternatives is a working command of twenty words and phrases to suggest fixes and options: one option would be, what if we tried, an alternative approach could be, to address this I'd suggest, we could either... or, a possible solution is, one way forward is, I propose that we, an option worth considering, we might try, a potential fix is, my recommendation is, another path could be, what about trying, I'd like to suggest, a workaround might be, one approach is, let's consider, a viable alternative is, and we could pivot to.",
+    whyItMatters:
+      "Solution-proposing language moves a conversation from problem identification to actual forward progress, and precise language helps present multiple real options clearly.",
+    whenWhoWhere: [
+      { label: "When", body: "Practice this after articulating a challenge, moving the conversation toward genuine solutions." },
+      { label: "Who", body: "Your team or collaborator." },
+      { label: "Where", body: "Practiced in problem-solving discussions or proposals." },
+    ],
+    howItWorks: [
+      "Propose at least two real alternative solutions using phrases from this list, rather than presenting only one option as the only path forward.",
+    ],
+    tools: ["Your Process Improvement Proposal FIRST from Stage Seven as related practice material"],
+    scenario: {
+      title: "Laying out two real alternatives",
+      body: "A student who used to present only one solution started using \"we could either... or\" to lay out two real alternatives, which made her team's decision-making noticeably more collaborative.",
+    },
+    pitfalls: [
+      "Presenting only one option as though it's the only possibility, which can feel like you're not genuinely open to other approaches.",
+    ],
+    successSignal:
+      "You present at least two genuine alternatives, giving your team or collaborator a real choice rather than a single directive.",
+    milestoneTies: [238],
+  },
+
+  379: {
+    definition:
+      "A First Vocabulary for Analyzing Pros and Cons is a working command of twenty words and phrases to weigh trade-offs clearly: on the plus side, the trade-off here is, the downside would be, weighing this against, the benefit outweighs the cost because, on the other hand, the advantage is, a drawback is, in favor of this, against this option, the upside is, this comes at the cost of, balancing this with, the risk versus reward, this makes sense if, the case for this is, the case against this is, all things considered, on balance, and the net benefit is.",
+    whyItMatters:
+      "Clear trade-off language helps a team or individual make a genuinely informed decision, rather than defaulting to whichever option was mentioned first or most enthusiastically.",
+    whenWhoWhere: [
+      { label: "When", body: "Practice this whenever comparing real options with genuine trade-offs." },
+      { label: "Who", body: "No collaborator required, though discussing trade-offs with someone else sharpens the analysis." },
+      { label: "Where", body: "Practiced in decision-making discussions or written comparisons." },
+    ],
+    howItWorks: [
+      "Analyze a real current decision using at least one \"on the plus side\" and one \"the trade-off here is\" framing.",
+    ],
+    tools: ["Your Decision Matrix FIRST from Stage Five as a related structured format"],
+    scenario: {
+      title: "Trade-off language made the decision feel informed",
+      body: "A student comparing two internship offers used explicit trade-off language (\"the downside would be a longer commute, but the trade-off is significantly better mentorship\") which made her final decision feel genuinely informed rather than just instinctive.",
+    },
+    pitfalls: [
+      "Only naming the pros of your preferred option, quietly avoiding a genuine, balanced trade-off analysis.",
+    ],
+    successSignal:
+      "Your analysis names real trade-offs on both sides, not just supporting evidence for the option you already favored.",
+    milestoneTies: [107],
+  },
+
+  380: {
+    definition:
+      "A First Vocabulary for Brainstorming and Ideation Sessions is a working command of twenty words and phrases to generate and build on ideas collaboratively: building on that, what if we combined, yes and, that sparks another idea, let's push this further, let's think bigger, what if we flipped this, another angle could be, let's not rule anything out yet, that's worth exploring, let's riff on that, what comes to mind is, let's brainstorm freely, no idea is too wild, let's generate options first, building off your idea, that opens up a new direction, let's capture that, what else could work, and let's keep the ideas flowing.",
+    whyItMatters:
+      "Idea-building language (as opposed to idea-evaluating language) keeps a brainstorming session generative rather than prematurely critical, producing more and better ideas.",
+    whenWhoWhere: [
+      { label: "When", body: "Practice this specifically during the idea-generation phase of a brainstorm, before any evaluation begins." },
+      { label: "Who", body: "Your brainstorming group." },
+      { label: "Where", body: "Practiced in real collaborative brainstorming sessions." },
+    ],
+    howItWorks: [
+      "Use \"yes, and\" or \"building on that\" instead of \"but\" or \"that won't work\" during your next brainstorm's idea-generation phase.",
+    ],
+    tools: ["Your Collaborative Brainstorm FIRST from Stage Eight"],
+    scenario: {
+      title: "\"Yes, and\" produced more ideas than critique",
+      body: "A team's brainstorm produced far more ideas once members consciously used \"yes, and\" to build on each other's suggestions instead of critiquing them in the moment, saving evaluation for a separate, later phase.",
+    },
+    pitfalls: [
+      "Slipping into evaluative language (\"that won't work because\") during the generative phase, which shuts down the flow of ideas prematurely.",
+    ],
+    successSignal:
+      "Your brainstorm produces a genuinely larger volume of ideas because the generative phase stayed free of premature evaluation.",
+    milestoneTies: [320],
+  },
+
+  381: {
+    definition:
+      "A First Vocabulary for Reflecting on Personal Growth and Lessons Learned is a working command of twenty words and phrases to articulate genuine development over time: what I've learned is, looking back I would, this experience taught me, I've grown in my ability to, my next step is to, this challenged me to, I now approach things differently because, a turning point for me was, I've come to realize, this pushed me outside my comfort zone, I'm proud of how I, this shaped my perspective on, I've become more, in hindsight, this reinforced the importance of, I want to continue developing, this was a valuable lesson in, I've built confidence in, looking ahead I plan to, and this experience shaped who I am today.",
+    whyItMatters:
+      "Precise reflective language helps you articulate genuine growth clearly, both to yourself and to others, such as in an interview or performance review.",
+    whenWhoWhere: [
+      { label: "When", body: "Practice this after any significant experience worth reflecting on, and specifically when preparing to discuss growth in an interview or review." },
+      { label: "Who", body: "No collaborator required, though sharing reflections with a mentor deepens them." },
+      { label: "Where", body: "Practiced in journals, interview prep, or performance review conversations." },
+    ],
+    howItWorks: [
+      "Write a reflection on a real recent experience using at least two phrases from this list.",
+    ],
+    tools: ["Your Reflection on Soft Skill Growth and Hard Skill Reflection FIRSTS from Stages Seven and Eight"],
+    scenario: {
+      title: "A specific example made the growth claim credible",
+      body: "A student's interview answer about growth used to be vague (\"I think I've gotten better at stuff\") until she practiced language like \"I've grown in my ability to\" paired with a specific example, which made her answer far more compelling.",
+    },
+    pitfalls: [
+      "Using growth language without pairing it with a specific, concrete example, which leaves the claim of growth unconvincing.",
+    ],
+    successSignal:
+      "Your reflection combines genuine growth language with a specific, real example, making it concrete and credible.",
     milestoneTies: [],
   },
 };
