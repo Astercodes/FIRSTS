@@ -1,9 +1,10 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Link from "next/link";
 import { CANDIDATE_PORTFOLIOS } from "@/lib/sponsorData";
-import { ROLE_TEMPLATES, scoreCandidatesForRole, type RoleFitResult } from "@/lib/roleFit";
+import { ROLE_TEMPLATES, scoreCandidatesForRole, type RoleFitResult, type RoleTemplate } from "@/lib/roleFit";
+import { loadEmployer, MOCK_EMPLOYER } from "@/lib/employerStore";
 
 const ACCENT = "var(--pink-grapefruit)";
 
@@ -15,8 +16,29 @@ function fitLabel(score: number): string {
 }
 
 export function RoleFitView() {
+  const [customRole, setCustomRole] = useState<RoleTemplate | null>(null);
+
+  useEffect(() => {
+    function sync() {
+      const employer = loadEmployer() ?? MOCK_EMPLOYER;
+      if (employer.valuedCategories && employer.valuedCategories.length > 0) {
+        setCustomRole({
+          id: "custom",
+          title: `${employer.company}'s priorities`,
+          description: "Built from what you tagged as important on your company profile.",
+          requirements: employer.valuedCategories.map((category) => ({
+            category: category as RoleTemplate["requirements"][number]["category"],
+            weight: 1,
+          })),
+        });
+      }
+    }
+    sync();
+  }, []);
+
+  const roles = customRole ? [customRole, ...ROLE_TEMPLATES] : ROLE_TEMPLATES;
   const [roleId, setRoleId] = useState(ROLE_TEMPLATES[0].id);
-  const role = ROLE_TEMPLATES.find((r) => r.id === roleId) ?? ROLE_TEMPLATES[0];
+  const role = roles.find((r) => r.id === roleId) ?? roles[0];
   const results = scoreCandidatesForRole(CANDIDATE_PORTFOLIOS, role);
 
   return (
@@ -39,7 +61,7 @@ export function RoleFitView() {
           Role
         </label>
         <div className="flex flex-wrap gap-2">
-          {ROLE_TEMPLATES.map((r) => {
+          {roles.map((r) => {
             const active = r.id === roleId;
             return (
               <button

@@ -42,12 +42,13 @@ export function EmployerTopbar() {
       </div>
 
       <div className="flex items-center gap-3">
-        <span
+        <Link
+          href="/employer/company"
           className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full font-display text-sm font-bold text-white"
           style={{ background: "linear-gradient(135deg, var(--pink-grapefruit), var(--sunshine-orange))" }}
         >
           {initial}
-        </span>
+        </Link>
       </div>
     </header>
   );

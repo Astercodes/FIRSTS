@@ -543,3 +543,8 @@ export function categoryProgressByStage(
     return { stage: s.id, shortLabel: s.shortLabel, categories };
   });
 }
+
+/** The stage a category belongs to, derived from the first FIRST that uses it. */
+export function stageForCategory(category: keyof typeof CATEGORY_META): StageId | undefined {
+  return FIRSTS.find((m) => m.category === category)?.stage;
+}
