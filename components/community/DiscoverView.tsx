@@ -2,6 +2,7 @@
 
 import { useMemo, useState, type ReactNode } from "react";
 import Link from "next/link";
+import { motion, AnimatePresence } from "framer-motion";
 import { STAGES } from "@/lib/dashboardData";
 import { useMyCommunityProfile } from "@/lib/myCommunityProfile";
 import { communityPeers, type PeerCommunityProfile } from "@/lib/communityData";
@@ -94,11 +95,16 @@ export function DiscoverView() {
 
 function Section({ title, subtitle, children }: { title: string; subtitle: string; children: ReactNode }) {
   return (
-    <section className="rounded-3xl border border-ink/10 bg-white p-6 sm:p-7">
+    <motion.section
+      initial={{ opacity: 0, y: 12 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.35, ease: [0.16, 1, 0.3, 1] }}
+      className="rounded-3xl border border-ink/10 bg-white p-6 sm:p-7"
+    >
       <p className="text-xs font-semibold uppercase tracking-[0.15em] text-ink/45">{title}</p>
       <p className="mb-4 mt-0.5 text-sm text-ink/50">{subtitle}</p>
       {children}
-    </section>
+    </motion.section>
   );
 }
 
@@ -140,42 +146,54 @@ function PeerGrid({ peers, following }: { peers: PeerCommunityProfile[]; followi
   }
   return (
     <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
-      {peers.map((peer) => {
-        const isFollowing = following.includes(peer.handle);
-        const stageLabel = STAGES.find((s) => s.id === peer.currentStage)?.shortLabel;
-        return (
-          <div key={peer.handle} className="rounded-2xl border border-ink/8 bg-paper-dim p-4">
-            <div className="flex items-center gap-3">
-              <span
-                className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full font-display text-sm font-bold text-white"
-                style={{ background: "linear-gradient(135deg, var(--neon-pink), var(--tropical-mango))" }}
-              >
-                {peer.name.charAt(0)}
-              </span>
-              <div className="min-w-0">
-                <Link href={`/dashboard/community/u/${peer.handle}`} className="truncate text-sm font-semibold text-ink hover:underline">
-                  {peer.name}
-                </Link>
-                <p className="truncate text-xs text-ink/50">
-                  {peer.school} · {stageLabel}
-                </p>
-              </div>
-            </div>
-            <button
-              type="button"
-              onClick={() => (isFollowing ? unfollow(peer.handle) : follow(peer.handle))}
-              className="mt-3 w-full rounded-full border py-1.5 text-xs font-semibold transition-colors"
-              style={
-                isFollowing
-                  ? { borderColor: ACCENT, color: ACCENT, background: "color-mix(in oklab, var(--neon-pink) 10%, white)" }
-                  : { borderColor: "rgba(11,4,16,0.1)", color: "rgba(11,4,16,0.6)" }
-              }
+      <AnimatePresence initial={false}>
+        {peers.map((peer, i) => {
+          const isFollowing = following.includes(peer.handle);
+          const stageLabel = STAGES.find((s) => s.id === peer.currentStage)?.shortLabel;
+          return (
+            <motion.div
+              key={peer.handle}
+              layout
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, scale: 0.95 }}
+              transition={{ delay: Math.min(i * 0.03, 0.24), duration: 0.25, ease: [0.16, 1, 0.3, 1] }}
+              whileHover={{ y: -3 }}
+              className="rounded-2xl border border-ink/8 bg-paper-dim p-4 shadow-sm transition-shadow hover:shadow-md"
             >
-              {isFollowing ? "Following" : "Follow"}
-            </button>
-          </div>
-        );
-      })}
+              <div className="flex items-center gap-3">
+                <span
+                  className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full font-display text-sm font-bold text-white"
+                  style={{ background: "linear-gradient(135deg, var(--neon-pink), var(--tropical-mango))" }}
+                >
+                  {peer.name.charAt(0)}
+                </span>
+                <div className="min-w-0">
+                  <Link href={`/dashboard/community/u/${peer.handle}`} className="truncate text-sm font-semibold text-ink hover:underline">
+                    {peer.name}
+                  </Link>
+                  <p className="truncate text-xs text-ink/50">
+                    {peer.school} · {stageLabel}
+                  </p>
+                </div>
+              </div>
+              <motion.button
+                whileTap={{ scale: 0.93 }}
+                type="button"
+                onClick={() => (isFollowing ? unfollow(peer.handle) : follow(peer.handle))}
+                className="mt-3 w-full rounded-full border py-1.5 text-xs font-semibold transition-colors"
+                style={
+                  isFollowing
+                    ? { borderColor: ACCENT, color: ACCENT, background: "color-mix(in oklab, var(--neon-pink) 10%, white)" }
+                    : { borderColor: "rgba(11,4,16,0.1)", color: "rgba(11,4,16,0.6)" }
+                }
+              >
+                {isFollowing ? "✓ Following" : "Follow"}
+              </motion.button>
+            </motion.div>
+          );
+        })}
+      </AnimatePresence>
     </div>
   );
 }

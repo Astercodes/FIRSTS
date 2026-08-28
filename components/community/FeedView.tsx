@@ -2,8 +2,10 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import { motion, AnimatePresence } from "framer-motion";
 import { useFirstsWithProgress } from "@/lib/progressStore";
 import { useMyCommunityProfile } from "@/lib/myCommunityProfile";
+import { communityPeers } from "@/lib/communityData";
 import { useFollowing } from "@/lib/followStore";
 import { useFeedPosts, createPost, toggleReaction, addComment, REACTIONS, type FeedPost } from "@/lib/feedStore";
 import { CommunityTabs } from "@/components/community/CommunityTabs";
@@ -26,24 +28,43 @@ export function FeedView() {
   });
 
   const schoolLabel = myProfile.accountType === "independent" ? "Independent students" : myProfile.school;
+  const activeNow = communityPeers()
+    .slice()
+    .sort((a, b) => b.streak - a.streak)
+    .slice(0, 14);
 
   return (
     <div className="mx-auto max-w-2xl space-y-6">
       <CommunityTabs active="feed" />
 
+      <ActiveNowBar peers={activeNow} />
+
       <div className="flex flex-wrap items-center justify-between gap-3">
         <h1 className="font-display text-2xl font-semibold tracking-tight text-ink">Feed</h1>
-        <button
+        <motion.button
+          whileTap={{ scale: 0.94 }}
           type="button"
           onClick={() => setComposerOpen((v) => !v)}
-          className="rounded-full px-4 py-2 text-sm font-semibold text-white transition-opacity hover:opacity-90"
+          className="rounded-full px-4 py-2 text-sm font-semibold text-white shadow-sm"
           style={{ background: ACCENT }}
         >
           {composerOpen ? "Close" : "Share something"}
-        </button>
+        </motion.button>
       </div>
 
-      {composerOpen && <Composer onDone={() => setComposerOpen(false)} />}
+      <AnimatePresence initial={false}>
+        {composerOpen && (
+          <motion.div
+            initial={{ opacity: 0, height: 0 }}
+            animate={{ opacity: 1, height: "auto" }}
+            exit={{ opacity: 0, height: 0 }}
+            transition={{ duration: 0.25, ease: [0.16, 1, 0.3, 1] }}
+            className="overflow-hidden"
+          >
+            <Composer onDone={() => setComposerOpen(false)} />
+          </motion.div>
+        )}
+      </AnimatePresence>
 
       <div className="flex gap-2">
         <TabButton active={tab === "following"} onClick={() => setTab("following")} label="Following" />
@@ -66,11 +87,62 @@ export function FeedView() {
         </div>
       ) : (
         <div className="space-y-4">
-          {filtered.map((post) => (
-            <PostCard key={post.id} post={post} myHandle={myProfile.handle} myName={myProfile.name} />
-          ))}
+          <AnimatePresence initial={false}>
+            {filtered.map((post, i) => (
+              <motion.div
+                key={post.id}
+                layout
+                initial={{ opacity: 0, y: 12 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, scale: 0.97 }}
+                transition={{ duration: 0.3, delay: Math.min(i * 0.03, 0.3), ease: [0.16, 1, 0.3, 1] }}
+              >
+                <PostCard post={post} myHandle={myProfile.handle} myName={myProfile.name} />
+              </motion.div>
+            ))}
+          </AnimatePresence>
         </div>
       )}
+    </div>
+  );
+}
+
+function ActiveNowBar({ peers }: { peers: ReturnType<typeof communityPeers> }) {
+  if (peers.length === 0) return null;
+  return (
+    <div className="rounded-3xl border border-ink/8 bg-white p-4">
+      <p className="mb-3 px-1 text-[11px] font-semibold uppercase tracking-wide text-ink/40">
+        Active in the community
+      </p>
+      <div className="flex gap-4 overflow-x-auto px-1 pb-1">
+        {peers.map((peer, i) => (
+          <motion.div
+            key={peer.handle}
+            initial={{ opacity: 0, x: 12 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ delay: i * 0.03 }}
+          >
+            <Link href={`/dashboard/community/u/${peer.handle}`} className="group flex w-14 shrink-0 flex-col items-center gap-1.5">
+              <span
+                className="flex h-14 w-14 items-center justify-center rounded-full p-[2.5px] transition-transform duration-200 group-hover:scale-105"
+                style={{ background: "linear-gradient(135deg, var(--neon-pink), var(--sunshine-orange), var(--citrus-lime))" }}
+              >
+                <span className="flex h-full w-full items-center justify-center rounded-full bg-white">
+                  <span
+                    className="flex h-[46px] w-[46px] items-center justify-center rounded-full font-display text-sm font-bold text-white"
+                    style={{ background: "linear-gradient(135deg, var(--neon-pink), var(--tropical-mango))" }}
+                  >
+                    {peer.name.charAt(0)}
+                  </span>
+                </span>
+              </span>
+              <span className="w-full truncate text-center text-[10px] font-medium text-ink/60">
+                {peer.name.split(" ")[0]}
+              </span>
+            </Link>
+          </motion.div>
+        ))}
+      </div>
     </div>
   );
 }
@@ -176,6 +248,8 @@ function Composer({ onDone }: { onDone: () => void }) {
 function PostCard({ post, myHandle, myName }: { post: FeedPost; myHandle: string; myName: string }) {
   const [showComments, setShowComments] = useState(false);
   const [commentDraft, setCommentDraft] = useState("");
+  const isMilestone = post.kind === "milestone";
+  const kindColor = isMilestone ? "var(--sunshine-orange)" : "var(--fuchsia-blast)";
 
   function handleComment() {
     const body = commentDraft.trim();
@@ -185,7 +259,8 @@ function PostCard({ post, myHandle, myName }: { post: FeedPost; myHandle: string
   }
 
   return (
-    <div className="rounded-3xl border border-ink/10 bg-white p-6">
+    <div className="relative overflow-hidden rounded-3xl border border-ink/10 bg-white p-6">
+      <span className="absolute inset-y-0 left-0 w-1" style={{ background: kindColor }} />
       <div className="flex items-center gap-3">
         <Link
           href={`/dashboard/community/u/${post.authorHandle}`}
@@ -194,7 +269,7 @@ function PostCard({ post, myHandle, myName }: { post: FeedPost; myHandle: string
         >
           {post.authorName.charAt(0)}
         </Link>
-        <div className="min-w-0">
+        <div className="min-w-0 flex-1">
           <Link href={`/dashboard/community/u/${post.authorHandle}`} className="text-sm font-semibold text-ink hover:underline">
             {post.authorName}
           </Link>
@@ -202,6 +277,12 @@ function PostCard({ post, myHandle, myName }: { post: FeedPost; myHandle: string
             {post.authorSchool} · {post.createdAt}
           </p>
         </div>
+        <span
+          className="shrink-0 rounded-full px-2.5 py-1 text-[10px] font-bold uppercase tracking-wide text-white"
+          style={{ background: kindColor }}
+        >
+          {isMilestone ? "🎯 Milestone" : "💭 Reflection"}
+        </span>
       </div>
 
       <p className="mt-3 text-sm leading-relaxed text-ink/80">{post.body}</p>
@@ -211,18 +292,19 @@ function PostCard({ post, myHandle, myName }: { post: FeedPost; myHandle: string
           const count = post.reactions[r.type].length;
           const reacted = post.reactions[r.type].includes(myHandle);
           return (
-            <button
+            <motion.button
               key={r.type}
+              whileTap={{ scale: 1.3 }}
               type="button"
               onClick={() => toggleReaction(post.id, r.type, myHandle)}
               title={r.label}
               className={`flex items-center gap-1 rounded-full border px-2.5 py-1 text-xs font-semibold transition-colors ${
-                reacted ? "border-[var(--neon-pink)] text-[var(--neon-pink)]" : "border-ink/10 text-ink/50 hover:border-ink/25"
+                reacted ? "border-[var(--neon-pink)] text-[var(--neon-pink)] bg-[color-mix(in_oklab,var(--neon-pink)_10%,white)]" : "border-ink/10 text-ink/50 hover:border-ink/25"
               }`}
             >
               <span>{r.emoji}</span>
               {count > 0 && <span>{count}</span>}
-            </button>
+            </motion.button>
           );
         })}
         <button
@@ -234,38 +316,48 @@ function PostCard({ post, myHandle, myName }: { post: FeedPost; myHandle: string
         </button>
       </div>
 
-      {showComments && (
-        <div className="mt-4 space-y-2.5 border-t border-ink/8 pt-4">
-          {post.comments.map((c) => (
-            <div key={c.id} className="rounded-2xl bg-paper-dim px-3.5 py-2.5 text-sm">
-              <span className="font-semibold text-ink/75">{c.authorName}</span>{" "}
-              <span className="text-ink/65">{c.body}</span>
+      <AnimatePresence initial={false}>
+        {showComments && (
+          <motion.div
+            initial={{ opacity: 0, height: 0 }}
+            animate={{ opacity: 1, height: "auto" }}
+            exit={{ opacity: 0, height: 0 }}
+            transition={{ duration: 0.2 }}
+            className="overflow-hidden"
+          >
+            <div className="mt-4 space-y-2.5 border-t border-ink/8 pt-4">
+              {post.comments.map((c) => (
+                <div key={c.id} className="rounded-2xl bg-paper-dim px-3.5 py-2.5 text-sm">
+                  <span className="font-semibold text-ink/75">{c.authorName}</span>{" "}
+                  <span className="text-ink/65">{c.body}</span>
+                </div>
+              ))}
+              <div className="flex gap-2">
+                <input
+                  value={commentDraft}
+                  onChange={(e) => setCommentDraft(e.target.value)}
+                  onKeyDown={(e) => {
+                    if (e.key === "Enter") {
+                      e.preventDefault();
+                      handleComment();
+                    }
+                  }}
+                  placeholder="Cheer them on…"
+                  className="flex-1 rounded-2xl border border-ink/10 bg-paper-dim px-3.5 py-2 text-sm text-ink outline-none focus:border-ink/25"
+                />
+                <button
+                  type="button"
+                  onClick={handleComment}
+                  disabled={!commentDraft.trim()}
+                  className="shrink-0 rounded-2xl bg-ink px-3.5 py-2 text-xs font-semibold text-paper transition-opacity disabled:opacity-40"
+                >
+                  Send
+                </button>
+              </div>
             </div>
-          ))}
-          <div className="flex gap-2">
-            <input
-              value={commentDraft}
-              onChange={(e) => setCommentDraft(e.target.value)}
-              onKeyDown={(e) => {
-                if (e.key === "Enter") {
-                  e.preventDefault();
-                  handleComment();
-                }
-              }}
-              placeholder="Cheer them on…"
-              className="flex-1 rounded-2xl border border-ink/10 bg-paper-dim px-3.5 py-2 text-sm text-ink outline-none focus:border-ink/25"
-            />
-            <button
-              type="button"
-              onClick={handleComment}
-              disabled={!commentDraft.trim()}
-              className="shrink-0 rounded-2xl bg-ink px-3.5 py-2 text-xs font-semibold text-paper transition-opacity disabled:opacity-40"
-            >
-              Send
-            </button>
-          </div>
-        </div>
-      )}
+          </motion.div>
+        )}
+      </AnimatePresence>
     </div>
   );
 }

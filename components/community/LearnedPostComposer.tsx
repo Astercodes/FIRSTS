@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { motion } from "framer-motion";
 import { useMyCommunityProfile } from "@/lib/myCommunityProfile";
 import { createLearnedPost } from "@/lib/learnedPostStore";
 
@@ -40,10 +41,20 @@ export function LearnedPostComposer({
   }
 
   return (
-    <div className="rounded-2xl border border-ink/8 bg-white p-5">
-      <p className="text-sm font-semibold text-ink/85">
-        You just completed &quot;{moduleTitle}.&quot; Want to share what you learned?
-      </p>
+    <motion.div
+      initial={{ opacity: 0, y: 12, scale: 0.98 }}
+      animate={{ opacity: 1, y: 0, scale: 1 }}
+      transition={{ duration: 0.35, ease: [0.16, 1, 0.3, 1] }}
+      className="rounded-2xl border border-ink/8 bg-white p-5"
+    >
+      <motion.p
+        initial={{ scale: 0.9 }}
+        animate={{ scale: 1 }}
+        transition={{ delay: 0.1, type: "spring", stiffness: 300, damping: 15 }}
+        className="text-sm font-semibold text-ink/85"
+      >
+        🎉 You just completed &quot;{moduleTitle}.&quot; Want to share what you learned?
+      </motion.p>
       <p className="mt-1 text-xs text-ink/50">
         Shows up on this FIRST&apos;s own page, so someone about to start it can read real takeaways
         first.
@@ -71,20 +82,22 @@ export function LearnedPostComposer({
       </div>
 
       <div className="mt-4 flex items-center gap-3">
-        <button
+        <motion.button
+          whileTap={{ scale: 0.94 }}
+          whileHover={canPost ? { scale: 1.02 } : undefined}
           type="button"
           onClick={handlePost}
           disabled={!canPost}
-          className="rounded-full px-4 py-2 text-sm font-semibold text-white transition-opacity disabled:opacity-40"
+          className="rounded-full px-4 py-2 text-sm font-semibold text-white shadow-sm transition-opacity disabled:opacity-40"
           style={{ background: color }}
         >
           Share
-        </button>
+        </motion.button>
         <button type="button" onClick={onSkip} className="text-sm font-medium text-ink/40 hover:text-ink">
           Not now
         </button>
       </div>
-    </div>
+    </motion.div>
   );
 }
 
