@@ -6,6 +6,8 @@ import type { CandidatePortfolio } from "@/lib/sponsorData";
 import { loadEmployer, MOCK_EMPLOYER } from "@/lib/employerStore";
 import { addEmployerFeedback, feedbackForCandidate, useEmployerFeedback } from "@/lib/employerFeedbackStore";
 import { CredentialDetail } from "@/components/employer/CredentialDetail";
+import { OutreachPanel } from "@/components/employer/OutreachPanel";
+import { PIPELINE_STAGES, usePipeline, addToPipeline, setPipelineStage, removeFromPipeline, type PipelineStage } from "@/lib/pipelineStore";
 
 export function PortfolioDetail({ candidate }: { candidate: CandidatePortfolio }) {
   const allFeedback = useEmployerFeedback();
@@ -14,6 +16,9 @@ export function PortfolioDetail({ candidate }: { candidate: CandidatePortfolio }
   const [interviewPerformance, setInterviewPerformance] = useState(0);
   const [comment, setComment] = useState("");
   const [submitted, setSubmitted] = useState(false);
+
+  const pipeline = usePipeline();
+  const pipelineEntry = pipeline[candidate.id];
 
   function submitFeedback() {
     if (hireQuality === 0 || interviewPerformance === 0) return;
@@ -35,20 +40,53 @@ export function PortfolioDetail({ candidate }: { candidate: CandidatePortfolio }
         ← Candidate portfolios
       </Link>
 
-      <div className="flex items-start gap-5">
-        <span
-          className="flex h-16 w-16 shrink-0 items-center justify-center rounded-full font-display text-2xl font-bold text-white"
-          style={{ background: "linear-gradient(135deg, var(--pink-grapefruit), var(--berry-burst))" }}
-        >
-          {candidate.name.charAt(0)}
-        </span>
-        <div>
-          <h1 className="font-display text-2xl font-semibold tracking-tight text-ink">
-            {candidate.name}
-          </h1>
-          <p className="mt-1 text-[15px] text-ink/60">{candidate.headline}</p>
-          <p className="mt-1 text-sm text-ink/40">{candidate.school}</p>
+      <div className="flex flex-wrap items-start justify-between gap-5">
+        <div className="flex items-start gap-5">
+          <span
+            className="flex h-16 w-16 shrink-0 items-center justify-center rounded-full font-display text-2xl font-bold text-white"
+            style={{ background: "linear-gradient(135deg, var(--pink-grapefruit), var(--berry-burst))" }}
+          >
+            {candidate.name.charAt(0)}
+          </span>
+          <div>
+            <h1 className="font-display text-2xl font-semibold tracking-tight text-ink">
+              {candidate.name}
+            </h1>
+            <p className="mt-1 text-[15px] text-ink/60">{candidate.headline}</p>
+            <p className="mt-1 text-sm text-ink/40">{candidate.school}</p>
+          </div>
         </div>
+
+        {pipelineEntry ? (
+          <div className="flex items-center gap-2">
+            <select
+              value={pipelineEntry.stage}
+              onChange={(e) => setPipelineStage(candidate.id, e.target.value as PipelineStage)}
+              className="rounded-full border border-ink/10 bg-paper-dim px-3.5 py-1.5 text-sm font-medium text-ink outline-none focus:border-ink/25"
+            >
+              {PIPELINE_STAGES.map((s) => (
+                <option key={s.id} value={s.id}>
+                  {s.label}
+                </option>
+              ))}
+            </select>
+            <button
+              type="button"
+              onClick={() => removeFromPipeline(candidate.id)}
+              className="text-xs font-medium text-ink/40 underline decoration-ink/20 underline-offset-4 hover:text-ink"
+            >
+              Remove
+            </button>
+          </div>
+        ) : (
+          <button
+            type="button"
+            onClick={() => addToPipeline(candidate.id)}
+            className="rounded-full bg-ink px-4 py-2 text-sm font-semibold text-paper transition-opacity hover:opacity-90"
+          >
+            + Add to pipeline
+          </button>
+        )}
       </div>
 
       <CredentialDetail candidate={candidate} />
@@ -150,6 +188,8 @@ export function PortfolioDetail({ candidate }: { candidate: CandidatePortfolio }
           </div>
         )}
       </div>
+
+      <OutreachPanel candidateId={candidate.id} candidateName={candidate.name} openToOutreach={candidate.openToOutreach} />
 
       <div className="rounded-3xl border border-ink/10 bg-paper-dim p-7">
         <p className="text-sm leading-relaxed text-ink/60">

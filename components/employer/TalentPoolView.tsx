@@ -9,12 +9,21 @@ import {
   candidateInstitutions,
   matchingSharedCandidates,
 } from "@/lib/talentPool";
+import { saveTalentAlert, removeTalentAlert, useTalentAlerts } from "@/lib/alertStore";
 
 const ACCENT = "var(--pink-grapefruit)";
+
+function combinedMatchCount(institution: string, stages: StageId[]): number {
+  const cohortTotal = stageMatchBySponsorship(stages)
+    .filter((m) => institution === "all" || m.institution === institution)
+    .reduce((sum, m) => sum + m.matchCount, 0);
+  return cohortTotal + matchingSharedCandidates(stages, institution).length;
+}
 
 export function TalentPoolView() {
   const [institution, setInstitution] = useState<string>("all");
   const [selectedStages, setSelectedStages] = useState<StageId[]>([]);
+  const alerts = useTalentAlerts();
 
   const institutions = Array.from(new Set([...sponsoredInstitutions(), ...candidateInstitutions()])).sort();
 
@@ -27,6 +36,12 @@ export function TalentPoolView() {
   );
   const totalCohortMatches = cohortMatches.reduce((sum, m) => sum + m.matchCount, 0);
   const sharedMatches = matchingSharedCandidates(selectedStages, institution);
+
+  function handleSaveAlert() {
+    if (selectedStages.length === 0) return;
+    const count = combinedMatchCount(institution, selectedStages);
+    saveTalentAlert(institution, selectedStages, count);
+  }
 
   return (
     <div className="mx-auto max-w-6xl space-y-8">
@@ -89,7 +104,68 @@ export function TalentPoolView() {
             </div>
           </div>
         </div>
+        <div className="mt-5 flex items-center justify-between border-t border-ink/8 pt-4">
+          <p className="text-xs text-ink/45">
+            Save this filter to see how many new matches show up next time you check.
+          </p>
+          <button
+            type="button"
+            onClick={handleSaveAlert}
+            disabled={selectedStages.length === 0}
+            className="shrink-0 rounded-full border border-ink/10 px-4 py-2 text-sm font-semibold text-ink/70 transition-colors hover:border-ink/25 disabled:opacity-40"
+          >
+            Save as alert
+          </button>
+        </div>
       </div>
+
+      {alerts.length > 0 && (
+        <div className="rounded-3xl border border-ink/10 bg-white p-7">
+          <h2 className="mb-1 font-display text-lg font-semibold text-ink">Saved alerts</h2>
+          <p className="mb-5 text-xs text-ink/45">
+            No push notifications behind this, a live count you can check back on whenever you visit.
+          </p>
+          <div className="space-y-3">
+            {alerts.map((alert) => {
+              const currentCount = combinedMatchCount(alert.institution, alert.stages);
+              const delta = currentCount - alert.snapshotCount;
+              return (
+                <div key={alert.id} className="rounded-2xl border border-ink/8 bg-paper-dim p-4">
+                  <div className="flex flex-wrap items-center justify-between gap-2">
+                    <div>
+                      <p className="text-sm font-semibold text-ink/80">
+                        {alert.institution === "all" ? "All institutions" : alert.institution}
+                      </p>
+                      <p className="text-xs text-ink/45">
+                        {alert.stages.map((id) => STAGES.find((s) => s.id === id)?.shortLabel).join(", ")} · saved{" "}
+                        {alert.createdAt}
+                      </p>
+                    </div>
+                    <div className="flex items-center gap-3">
+                      <p className="text-sm font-bold text-ink/70">
+                        {currentCount} match{currentCount === 1 ? "" : "es"}
+                        {delta !== 0 && (
+                          <span className="ml-1.5 font-semibold" style={{ color: delta > 0 ? ACCENT : "rgba(11,4,16,0.4)" }}>
+                            ({delta > 0 ? "+" : ""}
+                            {delta} since saved)
+                          </span>
+                        )}
+                      </p>
+                      <button
+                        type="button"
+                        onClick={() => removeTalentAlert(alert.id)}
+                        className="text-xs font-medium text-ink/35 underline decoration-ink/20 underline-offset-4 hover:text-ink"
+                      >
+                        Remove
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      )}
 
       <div className="rounded-3xl border border-ink/10 bg-white p-7">
         <div className="mb-1 flex items-center justify-between">

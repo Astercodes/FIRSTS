@@ -37,6 +37,13 @@ export type CandidatePortfolio = {
   topValues: string[];
   starStory: { situation: string; task: string; action: string; result: string };
   goalHeadline: string;
+  /**
+   * Separate from sharing a portfolio: whether this candidate has explicitly
+   * opted into being messaged directly by employers. Sharing a portfolio
+   * signals job-search intent, not consent to be contacted, so this stays
+   * its own flag and gates the outreach feature everywhere it's checked.
+   */
+  openToOutreach: boolean;
 };
 
 export const CANDIDATE_PORTFOLIOS: CandidatePortfolio[] = [
@@ -55,6 +62,7 @@ export const CANDIDATE_PORTFOLIOS: CandidatePortfolio[] = [
       result: "Turnout came in 15% above the prior year, and the referral incentive became a standing part of the club's playbook.",
     },
     goalHeadline: "Land a brand strategy internship at a consumer company within 6 months",
+    openToOutreach: true,
   },
   {
     id: "cp-2",
@@ -71,6 +79,7 @@ export const CANDIDATE_PORTFOLIOS: CandidatePortfolio[] = [
       result: "Open rates recovered to 22% within two months, and one re-engagement email brought in the nonprofit's second-largest single donation of the year.",
     },
     goalHeadline: "Move into a full-time lifecycle marketing role after graduation",
+    openToOutreach: true,
   },
   {
     id: "cp-3",
@@ -87,6 +96,7 @@ export const CANDIDATE_PORTFOLIOS: CandidatePortfolio[] = [
       result: "The co-op adopted the model and cut weekly waste from 12% to under 5% within a month.",
     },
     goalHeadline: "Land an entry-level business analyst role in operations or supply chain",
+    openToOutreach: false,
   },
   {
     id: "cp-4",
@@ -103,6 +113,7 @@ export const CANDIDATE_PORTFOLIOS: CandidatePortfolio[] = [
       result: "After the team shipped the change, week-two retention rose from 18% to 31%.",
     },
     goalHeadline: "Break into product analytics at an early-stage tech company",
+    openToOutreach: false,
   },
   {
     id: "cp-5",
@@ -119,6 +130,7 @@ export const CANDIDATE_PORTFOLIOS: CandidatePortfolio[] = [
       result: "The registrar's office adopted the top four fixes for the next release, and the accessibility group asked me to consult on two more campus tools.",
     },
     goalHeadline: "Land a product design role on an accessibility or inclusive design team",
+    openToOutreach: true,
   },
   {
     id: "cp-6",
@@ -135,6 +147,7 @@ export const CANDIDATE_PORTFOLIOS: CandidatePortfolio[] = [
       result: "Average project turnaround dropped from 11 weeks to 6, and membership grew by a third the following semester.",
     },
     goalHeadline: "Land a rotational operations or strategy role at a large consumer company",
+    openToOutreach: false,
   },
   {
     id: "cp-7",
@@ -151,6 +164,7 @@ export const CANDIDATE_PORTFOLIOS: CandidatePortfolio[] = [
       result: "Public criticism died down within a day, and the organization's advisor asked me to write the standing crisis-communication template for future events.",
     },
     goalHeadline: "Move into a corporate communications or public relations role",
+    openToOutreach: true,
   },
   {
     id: "cp-8",
@@ -167,6 +181,7 @@ export const CANDIDATE_PORTFOLIOS: CandidatePortfolio[] = [
       result: "The brief was cited in the local government's next budget planning session, and the research group has used my format as the template since.",
     },
     goalHeadline: "Land an analyst role at a development finance or policy research organization",
+    openToOutreach: false,
   },
 ];
 

@@ -7,6 +7,7 @@ const NAV = [
   { label: "Overview", href: "/employer" },
   { label: "Sponsorships", href: "/employer/sponsorships" },
   { label: "Candidate portfolios", href: "/employer/portfolios" },
+  { label: "Pipeline", href: "/employer/pipeline" },
   { label: "Talent pool", href: "/employer/talent-pool" },
   { label: "School benchmarks", href: "/employer/benchmarks" },
   { label: "Role fit", href: "/employer/role-fit" },

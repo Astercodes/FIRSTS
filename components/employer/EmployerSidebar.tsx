@@ -7,6 +7,7 @@ const NAV = [
   { label: "Overview", href: "/employer", icon: GridIcon },
   { label: "Sponsorships", href: "/employer/sponsorships", icon: BuildingIcon },
   { label: "Candidate portfolios", href: "/employer/portfolios", icon: FolderIcon },
+  { label: "Pipeline", href: "/employer/pipeline", icon: PipelineIcon },
   { label: "Talent pool", href: "/employer/talent-pool", icon: SearchIcon },
   { label: "School benchmarks", href: "/employer/benchmarks", icon: ChartIcon },
   { label: "Role fit", href: "/employer/role-fit", icon: TargetIcon },
@@ -130,6 +131,14 @@ function BadgeIcon({ className }: IconProps) {
     <svg viewBox="0 0 24 24" fill="none" strokeWidth={1.7} className={className}>
       <circle cx="12" cy="9" r="5.5" stroke="currentColor" />
       <path d="M9 13.5L7 20l5-2.5 5 2.5-2-6.5" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" />
+    </svg>
+  );
+}
+
+function PipelineIcon({ className }: IconProps) {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" strokeWidth={1.7} className={className}>
+      <path d="M4 6h16M4 12h10M4 18h6" stroke="currentColor" strokeLinecap="round" />
     </svg>
   );
 }
