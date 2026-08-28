@@ -1,10 +1,37 @@
 "use client";
 
+import Link from "next/link";
 import { useMyCommunityProfile } from "@/lib/myCommunityProfile";
+import { usePartnerState } from "@/lib/partnerStore";
 import { ProfileCard } from "@/components/community/ProfileCard";
+
+const ACCENT = "var(--neon-pink)";
 
 export function CommunityHome() {
   const myProfile = useMyCommunityProfile();
+  const partnerState = usePartnerState();
+
+  const accountability = partnerState.currentPartnerHandle ? (
+    <Link
+      href="/dashboard/community/partner"
+      className="inline-flex items-center gap-2 rounded-full px-3.5 py-1.5 text-xs font-semibold text-white transition-opacity hover:opacity-90"
+      style={{ background: ACCENT }}
+    >
+      Paired with {partnerState.currentPartnerName} →
+    </Link>
+  ) : (
+    <Link
+      href="/dashboard/community/partner"
+      className="inline-flex items-center gap-2 rounded-full border border-ink/15 px-3.5 py-1.5 text-xs font-semibold text-ink/60 transition-colors hover:border-ink/30"
+    >
+      Looking for a partner
+      {partnerState.requests.length > 0 && (
+        <span className="rounded-full px-1.5 py-0.5 text-[10px] font-bold text-white" style={{ background: ACCENT }}>
+          {partnerState.requests.length}
+        </span>
+      )}
+    </Link>
+  );
 
   return (
     <div className="mx-auto max-w-3xl space-y-6">
@@ -21,7 +48,7 @@ export function CommunityHome() {
         </p>
       </div>
 
-      <ProfileCard profile={myProfile} isOwn editHref="/dashboard/community/profile" />
+      <ProfileCard profile={myProfile} isOwn editHref="/dashboard/community/profile" accountability={accountability} />
     </div>
   );
 }

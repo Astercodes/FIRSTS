@@ -1,4 +1,5 @@
 import Link from "next/link";
+import type { ReactNode } from "react";
 import { STAGES } from "@/lib/dashboardData";
 import type { PeerCommunityProfile } from "@/lib/communityData";
 
@@ -8,10 +9,12 @@ export function ProfileCard({
   profile,
   isOwn,
   editHref,
+  accountability,
 }: {
   profile: PeerCommunityProfile;
   isOwn?: boolean;
   editHref?: string;
+  accountability?: ReactNode;
 }) {
   const stageLabel = STAGES.find((s) => s.id === profile.currentStage)?.shortLabel ?? profile.currentStage;
 
@@ -48,6 +51,8 @@ export function ProfileCard({
       </div>
 
       {profile.bio && <p className="mt-4 text-sm leading-relaxed text-ink/65">{profile.bio}</p>}
+
+      {accountability && <div className="mt-4">{accountability}</div>}
 
       <div className="mt-5 rounded-2xl bg-paper-dim px-4 py-3">
         <p className="text-[11px] font-semibold uppercase tracking-wide text-ink/40">Currently</p>
