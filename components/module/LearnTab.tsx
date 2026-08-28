@@ -1,8 +1,9 @@
 import Link from "next/link";
 import type { LearnContent } from "@/lib/moduleContent";
 import { FIRSTS, CATEGORY_META } from "@/lib/dashboardData";
+import { ModuleLearnedFeed } from "@/components/community/ModuleLearnedFeed";
 
-export function LearnTab({ content, color }: { content: LearnContent; color: string }) {
+export function LearnTab({ content, color, moduleId }: { content: LearnContent; color: string; moduleId: number }) {
   const tieModules = FIRSTS.filter((m) => content.milestoneTies.includes(m.id));
 
   return (
@@ -123,6 +124,8 @@ export function LearnTab({ content, color }: { content: LearnContent; color: str
           </div>
         </section>
       )}
+
+      <ModuleLearnedFeed moduleId={moduleId} color={color} />
     </div>
   );
 }

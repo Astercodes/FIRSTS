@@ -1,10 +1,26 @@
 "use client";
 
+import { useState } from "react";
 import { markComplete, markIncomplete, useModuleProgress } from "@/lib/progressStore";
+import { LearnedPostComposer } from "@/components/community/LearnedPostComposer";
 
 export function MarkCompleteButton({ moduleId, color }: { moduleId: number; color: string }) {
   const firstModule = useModuleProgress(moduleId);
   const isComplete = firstModule.status === "complete";
+  const [justCompleted, setJustCompleted] = useState(false);
+  const [sharePromptDone, setSharePromptDone] = useState(false);
+
+  if (isComplete && justCompleted && !sharePromptDone) {
+    return (
+      <LearnedPostComposer
+        moduleId={moduleId}
+        moduleTitle={firstModule.title}
+        color={color}
+        onDone={() => setSharePromptDone(true)}
+        onSkip={() => setSharePromptDone(true)}
+      />
+    );
+  }
 
   if (isComplete) {
     return (
@@ -30,7 +46,10 @@ export function MarkCompleteButton({ moduleId, color }: { moduleId: number; colo
 
   return (
     <button
-      onClick={() => markComplete(moduleId)}
+      onClick={() => {
+        markComplete(moduleId);
+        setJustCompleted(true);
+      }}
       className="w-full rounded-2xl px-6 py-4 text-sm font-semibold text-white transition-transform duration-300 hover:scale-[1.01] active:scale-[0.99]"
       style={{ background: color }}
     >

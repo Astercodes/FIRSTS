@@ -34,7 +34,7 @@ export default async function ModulePage({ params }: { params: Params }) {
       <ModuleTabs
         color={color}
         panels={{
-          learn: <LearnTab content={content} color={color} />,
+          learn: <LearnTab content={content} color={color} moduleId={m.id} />,
           do:
             m.id === 1 ? (
               <DoTab color={color} moduleId={m.id} />
