@@ -7,6 +7,7 @@ const NAV = [
   { label: "Overview", href: "/employer" },
   { label: "Sponsorships", href: "/employer/sponsorships" },
   { label: "Candidate portfolios", href: "/employer/portfolios" },
+  { label: "Talent pool", href: "/employer/talent-pool" },
 ];
 
 export function EmployerMobileNav() {
