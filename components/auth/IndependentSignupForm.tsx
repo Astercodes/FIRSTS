@@ -18,11 +18,18 @@ export function IndependentSignupForm() {
   const [status, setStatus] = useState<string | null>(null);
   const [horizon, setHorizon] = useState<string | null>(null);
   const [name, setName] = useState("");
+  const [gradDate, setGradDate] = useState("");
   const [done, setDone] = useState(false);
 
   function handleSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
-    saveProfile({ ...loadProfile(), name, status: status ?? "", accountType: "independent" });
+    saveProfile({
+      ...loadProfile(),
+      name,
+      status: status ?? "",
+      accountType: "independent",
+      ...(status === "Recent grad" && gradDate ? { gradDate } : {}),
+    });
     setDone(true);
   }
 
@@ -102,6 +109,16 @@ export function IndependentSignupForm() {
             onChange={setStatus}
             color={COLOR}
           />
+          {status === "Recent grad" && (
+            <TextField
+              id="gradDate"
+              type="date"
+              label="Graduation date"
+              hint="Powers a days-since-graduation counter on your dashboard."
+              value={gradDate}
+              onChange={(e) => setGradDate(e.target.value)}
+            />
+          )}
           <PillSelect
             label="Career timeline (optional)"
             options={HORIZON_OPTIONS}

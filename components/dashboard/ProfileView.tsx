@@ -161,6 +161,22 @@ export function ProfileView() {
               );
             })}
           </div>
+          {profile.status === "Recent grad" && (
+            <div className="mt-4">
+              <label className="mb-1.5 block text-xs font-semibold uppercase tracking-wide text-ink/40">
+                Graduation date
+              </label>
+              <input
+                type="date"
+                value={profile.gradDate ?? ""}
+                onChange={(e) => update("gradDate", e.target.value)}
+                className="rounded-2xl border border-ink/10 bg-paper-dim px-4 py-2.5 text-sm text-ink outline-none focus:border-ink/25"
+              />
+              <p className="mt-1.5 text-xs text-ink/40">
+                Powers the days-since-graduation counter on your dashboard.
+              </p>
+            </div>
+          )}
         </div>
       </section>
 

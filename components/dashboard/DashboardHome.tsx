@@ -14,20 +14,23 @@ import { TimeInvestedCard } from "@/components/dashboard/TimeInvestedCard";
 import { MomentumStories } from "@/components/dashboard/MomentumStories";
 import { PeerCompareCard } from "@/components/dashboard/PeerCompareCard";
 import { GoalTracker } from "@/components/dashboard/GoalTracker";
+import { RecentGradSnapshot } from "@/components/dashboard/RecentGradSnapshot";
 import { BadgeShelf } from "@/components/dashboard/BadgeShelf";
 import { useFirstsWithProgress } from "@/lib/progressStore";
 import { completionStats, stageProgress, categoryProgressByStage, STAGES } from "@/lib/dashboardData";
-import { habitStreak, weeklyVelocity, timeInvested, isDeceleration } from "@/lib/momentum";
+import { habitStreak, weeklyVelocity, timeInvested, isDeceleration, parseTimeEstimateMinutes, daysSince } from "@/lib/momentum";
 import { allBadges } from "@/lib/badges";
-import { loadProfile, PROFILE_CHANGE_EVENT } from "@/lib/profileStore";
+import { loadProfile, PROFILE_CHANGE_EVENT, type Profile } from "@/lib/profileStore";
 
 export function DashboardHome() {
   const allModules = useFirstsWithProgress();
+  const [profile, setProfile] = useState<Partial<Profile> | null>(null);
   const [isIndependent, setIsIndependent] = useState(true);
 
   useEffect(() => {
     function sync() {
       const p = loadProfile();
+      setProfile(p);
       setIsIndependent((p?.accountType ?? "independent") === "independent");
     }
     sync();
@@ -38,6 +41,8 @@ export function DashboardHome() {
       window.removeEventListener("storage", sync);
     };
   }, []);
+
+  const isRecentGrad = profile?.status === "Recent grad";
 
   const stats = completionStats(allModules);
   const stages = stageProgress(allModules);
@@ -62,6 +67,24 @@ export function DashboardHome() {
 
   const badges = allBadges(allModules);
 
+  const stageThreeCategories = categoryRows.find((r) => r.stage === "three")?.categories ?? [];
+  const stageThreeModules = allModules.filter((m) => m.stage === "three");
+  const categoryHrefs: Record<string, string> = {};
+  for (const cat of stageThreeCategories) {
+    const next = stageThreeModules.find(
+      (m) => m.category === cat.category && (m.status === "available" || m.status === "in-progress")
+    );
+    categoryHrefs[cat.category] = next ? `/dashboard/stage/${next.id}` : "/dashboard/stage/three";
+  }
+
+  const quickModule = allModules
+    .filter((m) => m.status === "available" || m.status === "in-progress")
+    .map((m) => ({ id: m.id, title: m.title, minutes: parseTimeEstimateMinutes(m.time) }))
+    .filter((m): m is { id: number; title: string; minutes: number } => m.minutes !== null)
+    .sort((a, b) => a.minutes - b.minutes)[0];
+
+  const daysSinceGrad = profile?.gradDate ? daysSince(profile.gradDate) : null;
+
   return (
     <div className="mx-auto max-w-6xl space-y-6">
       <div className="grid gap-6 lg:grid-cols-3">
@@ -81,6 +104,20 @@ export function DashboardHome() {
           </p>
         </div>
       </div>
+
+      {isRecentGrad && (
+        <RecentGradSnapshot
+          daysSinceGrad={daysSinceGrad}
+          overallPct={stats.pct}
+          overallComplete={stats.complete}
+          overallTotal={stats.total}
+          stageThreeCategories={stageThreeCategories}
+          stageThreeHref="/dashboard/stage/three"
+          categoryHrefs={categoryHrefs}
+          decelerating={decelerating}
+          quickModule={quickModule}
+        />
+      )}
 
       {isIndependent && <GoalTracker stages={stages} weeklyAvg={weeklyAvg} />}
 
@@ -107,7 +144,7 @@ export function DashboardHome() {
                 FIRSTS completed per week
               </h2>
             </div>
-            {decelerating && (
+            {decelerating && !isRecentGrad && (
               <span className="rounded-full bg-[color-mix(in_oklab,var(--tropical-mango)_18%,white)] px-3 py-1 text-xs font-semibold text-ink/70">
                 Pace has slowed recently
               </span>

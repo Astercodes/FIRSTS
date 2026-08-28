@@ -21,6 +21,8 @@ export type Profile = {
    * that's the account type with no cohort or advisor context to fall back on.
    */
   accountType?: "independent" | "partner";
+  /** ISO date (YYYY-MM-DD), only collected when status is "Recent grad". Powers the days-since-graduation counter. */
+  gradDate?: string;
 };
 
 const KEY = "firsts:profile";

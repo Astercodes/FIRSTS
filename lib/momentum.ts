@@ -156,3 +156,8 @@ export function isDeceleration(weeks: VelocityWeek[]): boolean {
   const secondHalf = weeks.slice(half).reduce((s, w) => s + w.count, 0);
   return firstHalf >= 2 && secondHalf <= firstHalf / 2;
 }
+
+/** Whole days elapsed since an ISO date (YYYY-MM-DD), floored at 0 for a date in the future. */
+export function daysSince(iso: string, today: Date = new Date()): number {
+  return Math.max(0, Math.floor((today.getTime() - toDateOnly(iso).getTime()) / (1000 * 60 * 60 * 24)));
+}
