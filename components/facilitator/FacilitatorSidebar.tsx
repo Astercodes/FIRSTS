@@ -6,6 +6,8 @@ import { usePathname } from "next/navigation";
 const NAV = [
   { label: "Overview", href: "/facilitator", icon: GridIcon },
   { label: "Training", href: "/facilitator/training", icon: CapIcon },
+  { label: "Resources", href: "/facilitator/resources", icon: FolderIcon },
+  { label: "Sessions", href: "/facilitator/sessions", icon: CalendarIcon },
   { label: "My profile", href: "/facilitator/profile", icon: BadgeIcon },
 ];
 
@@ -88,6 +90,27 @@ function BadgeIcon({ className }: IconProps) {
     <svg viewBox="0 0 24 24" fill="none" strokeWidth={1.7} className={className}>
       <circle cx="12" cy="9" r="5.5" stroke="currentColor" />
       <path d="M9 13.5L7 20l5-2.5 5 2.5-2-6.5" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" />
+    </svg>
+  );
+}
+
+function FolderIcon({ className }: IconProps) {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" strokeWidth={1.7} className={className}>
+      <path
+        d="M3.5 6.5A1.5 1.5 0 0 1 5 5h4l2 2h8a1.5 1.5 0 0 1 1.5 1.5v9A1.5 1.5 0 0 1 19 19H5a1.5 1.5 0 0 1-1.5-1.5v-11Z"
+        stroke="currentColor"
+        strokeLinejoin="round"
+      />
+    </svg>
+  );
+}
+
+function CalendarIcon({ className }: IconProps) {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" strokeWidth={1.7} className={className}>
+      <rect x="4" y="5" width="16" height="15" rx="2" stroke="currentColor" />
+      <path d="M4 9.5h16M8 3v3.5M16 3v3.5" stroke="currentColor" strokeLinecap="round" />
     </svg>
   );
 }

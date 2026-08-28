@@ -67,6 +67,17 @@ export function saveFacilitatorBio(bio: string) {
   writeProfile({ ...existing, bio });
 }
 
+/** Called when a facilitator logs a completed session, rolling its impact into their running totals. */
+export function recordSessionImpact(studentsReached: number) {
+  const existing = readProfile();
+  if (!existing) return;
+  writeProfile({
+    ...existing,
+    sessionsDelivered: existing.sessionsDelivered + 1,
+    studentsReached: existing.studentsReached + studentsReached,
+  });
+}
+
 /**
  * The facilitator portal is gated behind an accepted application (from
  * lib/facilitatorApplicationStore). The first time an accepted applicant's

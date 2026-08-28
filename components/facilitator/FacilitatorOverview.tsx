@@ -5,12 +5,14 @@ import { motion } from "framer-motion";
 import { STAGES } from "@/lib/dashboardData";
 import { useFacilitatorPortal, TIER_META, type FacilitatorTier } from "@/lib/facilitatorStore";
 import { useFacilitatorTraining, computeEarnedTier } from "@/lib/facilitatorTrainingStore";
+import { useFacilitatorSessions } from "@/lib/facilitatorSessionsStore";
 
 const BANNER = "linear-gradient(120deg, var(--fuchsia-blast), var(--neon-pink) 60%, var(--juicy-plum))";
 
 export function FacilitatorOverview() {
   const { application, profile } = useFacilitatorPortal();
   const training = useFacilitatorTraining();
+  const sessions = useFacilitatorSessions();
 
   if (!application || !profile) return null;
 
@@ -119,7 +121,18 @@ export function FacilitatorOverview() {
             note={anyCertified ? undefined : trainingStarted ? "Continue" : "Start"}
             href="/facilitator/training"
           />
-          <ChecklistRow label="Run your first session" state="locked" note="Opens soon" />
+          <ChecklistRow
+            label="Run your first session"
+            state={sessions.some((s) => s.status === "completed") ? "done" : anyCertified ? "current" : "locked"}
+            note={
+              sessions.some((s) => s.status === "completed")
+                ? undefined
+                : anyCertified
+                  ? "Schedule one"
+                  : "Get certified first"
+            }
+            href={anyCertified ? "/facilitator/sessions" : undefined}
+          />
         </div>
       </motion.div>
     </div>
