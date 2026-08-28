@@ -16,6 +16,7 @@ const NAV = [
   { label: "Stage Nine", href: "/dashboard/stage/nine" },
   { label: "AI Coach", href: "/dashboard/coach" },
   { label: "Portfolio", href: "/dashboard/portfolio" },
+  { label: "Community", href: "/dashboard/community" },
 ];
 
 export function MobileNav() {

@@ -25,6 +25,15 @@ export type Profile = {
   accountType?: "independent" | "partner";
   /** ISO date (YYYY-MM-DD), only collected when status is "Recent grad". Powers the days-since-graduation counter. */
   gradDate?: string;
+  /** Community layer, all optional and unset until a student opts in. */
+  communityHandle?: string;
+  currentlyWorkingOn?: string;
+  /**
+   * Defaults to "school" wherever it's read as unset: visible to people at the
+   * same institution (or other independent students), not indexed publicly.
+   * A student has to deliberately widen this, not opt out of a public default.
+   */
+  communityVisibility?: "school" | "public" | "private";
 };
 
 const KEY = "firsts:profile";

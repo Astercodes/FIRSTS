@@ -16,6 +16,7 @@ const NAV = [
   { label: "Stage Nine", href: "/dashboard/stage/nine", icon: LayersIcon },
   { label: "AI Coach", href: "/dashboard/coach", icon: SparkleIcon },
   { label: "Portfolio", href: "/dashboard/portfolio", icon: FolderIcon },
+  { label: "Community", href: "/dashboard/community", icon: CommunityIcon },
 ];
 
 export function Sidebar() {
@@ -110,6 +111,16 @@ function FolderIcon({ className }: IconProps) {
         stroke="currentColor"
         strokeLinejoin="round"
       />
+    </svg>
+  );
+}
+
+function CommunityIcon({ className }: IconProps) {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" strokeWidth={1.7} className={className}>
+      <circle cx="9" cy="8.5" r="3" stroke="currentColor" />
+      <path d="M3.5 19c0-3 2.5-5 5.5-5s5.5 2 5.5 5" stroke="currentColor" strokeLinecap="round" />
+      <path d="M15.5 6.5a3 3 0 0 1 0 5.8M18 19c0-2.4-1.6-4.2-3.7-4.8" stroke="currentColor" strokeLinecap="round" />
     </svg>
   );
 }
