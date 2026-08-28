@@ -8,6 +8,7 @@ import { addEmployerFeedback, feedbackForCandidate, useEmployerFeedback, HIRE_OU
 import { roleFeedbackForCandidate, useRoleFeedback } from "@/lib/roleFeedbackStore";
 import { CredentialDetail } from "@/components/employer/CredentialDetail";
 import { OutreachPanel } from "@/components/employer/OutreachPanel";
+import { SchedulingPanel } from "@/components/employer/SchedulingPanel";
 import { PIPELINE_STAGES, usePipeline, addToPipeline, setPipelineStage, removeFromPipeline, type PipelineStage } from "@/lib/pipelineStore";
 
 const OUTCOME_OPTIONS: HireOutcome[] = ["hired", "still-deciding", "not-selected"];
@@ -257,6 +258,8 @@ export function PortfolioDetail({ candidate }: { candidate: CandidatePortfolio }
       )}
 
       <OutreachPanel candidateId={candidate.id} candidateName={candidate.name} openToOutreach={candidate.openToOutreach} />
+
+      <SchedulingPanel candidateId={candidate.id} candidateName={candidate.name} />
 
       <div className="rounded-3xl border border-ink/10 bg-paper-dim p-7">
         <p className="text-sm leading-relaxed text-ink/60">

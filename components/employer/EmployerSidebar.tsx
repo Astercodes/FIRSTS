@@ -11,6 +11,7 @@ const NAV = [
   { label: "Talent pool", href: "/employer/talent-pool", icon: SearchIcon },
   { label: "School benchmarks", href: "/employer/benchmarks", icon: ChartIcon },
   { label: "Role fit", href: "/employer/role-fit", icon: TargetIcon },
+  { label: "Events", href: "/employer/events", icon: CalendarIcon },
   { label: "Company profile", href: "/employer/company", icon: BadgeIcon },
 ];
 
@@ -139,6 +140,15 @@ function PipelineIcon({ className }: IconProps) {
   return (
     <svg viewBox="0 0 24 24" fill="none" strokeWidth={1.7} className={className}>
       <path d="M4 6h16M4 12h10M4 18h6" stroke="currentColor" strokeLinecap="round" />
+    </svg>
+  );
+}
+
+function CalendarIcon({ className }: IconProps) {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" strokeWidth={1.7} className={className}>
+      <rect x="4" y="5" width="16" height="15" rx="2" stroke="currentColor" />
+      <path d="M4 9.5h16M8 3v3.5M16 3v3.5" stroke="currentColor" strokeLinecap="round" />
     </svg>
   );
 }

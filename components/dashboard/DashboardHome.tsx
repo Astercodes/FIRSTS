@@ -15,6 +15,7 @@ import { MomentumStories } from "@/components/dashboard/MomentumStories";
 import { PeerCompareCard } from "@/components/dashboard/PeerCompareCard";
 import { GoalTracker } from "@/components/dashboard/GoalTracker";
 import { RecentGradSnapshot } from "@/components/dashboard/RecentGradSnapshot";
+import { UpcomingEventsCard } from "@/components/dashboard/UpcomingEventsCard";
 import { BadgeShelf } from "@/components/dashboard/BadgeShelf";
 import { useFirstsWithProgress } from "@/lib/progressStore";
 import { completionStats, stageProgress, categoryProgressByStage, STAGES } from "@/lib/dashboardData";
@@ -217,6 +218,8 @@ export function DashboardHome() {
       </div>
 
       <BadgeShelf stage={badges.stage} standout={badges.standout} />
+
+      <UpcomingEventsCard />
 
       <div className="grid gap-6 lg:grid-cols-3">
         <div className="lg:col-span-2">

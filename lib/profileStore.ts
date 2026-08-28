@@ -11,6 +11,8 @@ export type Profile = {
   /** Only collected if the student opts in to the "Others like you" peer comparison. */
   major?: string;
   gradYear?: string;
+  /** Set at signup for partner-school students via SSO match; used to scope which employer events/what-we-look-for content is relevant. */
+  institution?: string;
   peerCompareOptIn?: boolean;
   /** Whether the student has chosen to make their portfolio viewable via a public link. */
   portfolioPublic?: boolean;

@@ -11,6 +11,7 @@ const NAV = [
   { label: "Talent pool", href: "/employer/talent-pool" },
   { label: "School benchmarks", href: "/employer/benchmarks" },
   { label: "Role fit", href: "/employer/role-fit" },
+  { label: "Events", href: "/employer/events" },
   { label: "Company profile", href: "/employer/company" },
 ];
 

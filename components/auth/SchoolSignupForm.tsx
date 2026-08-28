@@ -46,7 +46,7 @@ export function SchoolSignupForm() {
 
   function handleQuizSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
-    saveProfile({ ...loadProfile(), major, gradYear: year ?? "", accountType: "partner" });
+    saveProfile({ ...loadProfile(), major, gradYear: year ?? "", accountType: "partner", institution: match?.name });
     setStep("done");
   }
 
