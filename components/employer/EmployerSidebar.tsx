@@ -9,6 +9,7 @@ const NAV = [
   { label: "Candidate portfolios", href: "/employer/portfolios", icon: FolderIcon },
   { label: "Talent pool", href: "/employer/talent-pool", icon: SearchIcon },
   { label: "School benchmarks", href: "/employer/benchmarks", icon: ChartIcon },
+  { label: "Role fit", href: "/employer/role-fit", icon: TargetIcon },
 ];
 
 export function EmployerSidebar() {
@@ -109,6 +110,16 @@ function ChartIcon({ className }: IconProps) {
   return (
     <svg viewBox="0 0 24 24" fill="none" strokeWidth={1.7} className={className}>
       <path d="M4 20V10M12 20V4M20 20v-7" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" />
+    </svg>
+  );
+}
+
+function TargetIcon({ className }: IconProps) {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" strokeWidth={1.7} className={className}>
+      <circle cx="12" cy="12" r="8" stroke="currentColor" />
+      <circle cx="12" cy="12" r="4" stroke="currentColor" />
+      <circle cx="12" cy="12" r="0.5" fill="currentColor" stroke="currentColor" />
     </svg>
   );
 }
