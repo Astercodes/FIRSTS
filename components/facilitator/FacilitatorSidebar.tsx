@@ -5,6 +5,7 @@ import { usePathname } from "next/navigation";
 
 const NAV = [
   { label: "Overview", href: "/facilitator", icon: GridIcon },
+  { label: "Training", href: "/facilitator/training", icon: CapIcon },
   { label: "My profile", href: "/facilitator/profile", icon: BadgeIcon },
 ];
 
@@ -68,6 +69,16 @@ function GridIcon({ className }: IconProps) {
       <rect x="13.5" y="3.5" width="7" height="7" rx="1.5" stroke="currentColor" />
       <rect x="3.5" y="13.5" width="7" height="7" rx="1.5" stroke="currentColor" />
       <rect x="13.5" y="13.5" width="7" height="7" rx="1.5" stroke="currentColor" />
+    </svg>
+  );
+}
+
+function CapIcon({ className }: IconProps) {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" strokeWidth={1.7} className={className}>
+      <path d="M12 5 3 9.5 12 14l9-4.5L12 5Z" stroke="currentColor" strokeLinejoin="round" />
+      <path d="M7 11.5V16c0 1.1 2.2 2.5 5 2.5s5-1.4 5-2.5v-4.5" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" />
+      <path d="M20 10v5" stroke="currentColor" strokeLinecap="round" />
     </svg>
   );
 }

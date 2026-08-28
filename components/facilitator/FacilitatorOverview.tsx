@@ -1,18 +1,25 @@
 "use client";
 
+import Link from "next/link";
 import { motion } from "framer-motion";
 import { STAGES } from "@/lib/dashboardData";
-import { useFacilitatorPortal, TIER_META } from "@/lib/facilitatorStore";
+import { useFacilitatorPortal, TIER_META, type FacilitatorTier } from "@/lib/facilitatorStore";
+import { useFacilitatorTraining, computeEarnedTier } from "@/lib/facilitatorTrainingStore";
 
 const BANNER = "linear-gradient(120deg, var(--fuchsia-blast), var(--neon-pink) 60%, var(--juicy-plum))";
 
 export function FacilitatorOverview() {
   const { application, profile } = useFacilitatorPortal();
+  const training = useFacilitatorTraining();
 
   if (!application || !profile) return null;
 
   const stages = STAGES.filter((s) => application.stagesInterested.includes(s.id));
-  const tier = TIER_META[profile.tier];
+  const effectiveTier = Math.max(profile.tier, computeEarnedTier(training)) as FacilitatorTier;
+  const tier = TIER_META[effectiveTier];
+  const trainingStarted =
+    training.fundamentalsComplete.length > 0 || Object.keys(training.stages).length > 0;
+  const anyCertified = Object.values(training.stages).some((s) => s?.apprenticeship === "certified");
 
   return (
     <div className="mx-auto max-w-3xl space-y-6">
@@ -106,7 +113,12 @@ export function FacilitatorOverview() {
         <p className="mb-4 font-display text-base font-semibold text-ink">Getting started</p>
         <div className="space-y-3">
           <ChecklistRow label="Application accepted" state="done" />
-          <ChecklistRow label="Complete stage-specific training" state="locked" note="Opens soon" />
+          <ChecklistRow
+            label="Complete stage-specific training"
+            state={anyCertified ? "done" : "current"}
+            note={anyCertified ? undefined : trainingStarted ? "Continue" : "Start"}
+            href="/facilitator/training"
+          />
           <ChecklistRow label="Run your first session" state="locked" note="Opens soon" />
         </div>
       </motion.div>
@@ -143,29 +155,54 @@ function ChecklistRow({
   label,
   state,
   note,
+  href,
 }: {
   label: string;
-  state: "done" | "locked";
+  state: "done" | "current" | "locked";
   note?: string;
+  href?: string;
 }) {
-  return (
+  const content = (
     <div className="flex items-center gap-3">
       <span
         className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full text-xs"
         style={
           state === "done"
             ? { background: "var(--fuchsia-blast)", color: "white" }
-            : { background: "rgba(11,4,16,0.06)", color: "rgba(11,4,16,0.3)" }
+            : state === "current"
+              ? {
+                  background: "color-mix(in oklab, var(--fuchsia-blast) 16%, white)",
+                  color: "var(--fuchsia-blast)",
+                }
+              : { background: "rgba(11,4,16,0.06)", color: "rgba(11,4,16,0.3)" }
         }
       >
         {state === "done" ? "✓" : "•"}
       </span>
-      <span className={`text-sm font-medium ${state === "done" ? "text-ink" : "text-ink/45"}`}>
+      <span
+        className={`text-sm font-medium ${state === "locked" ? "text-ink/45" : "text-ink"}`}
+      >
         {label}
       </span>
-      {note && <span className="ml-auto text-xs text-ink/35">{note}</span>}
+      {note && (
+        <span
+          className="ml-auto text-xs font-medium"
+          style={{ color: state === "current" ? "var(--fuchsia-blast)" : "rgba(11,4,16,0.35)" }}
+        >
+          {note}
+        </span>
+      )}
     </div>
   );
+
+  if (href && state !== "locked") {
+    return (
+      <Link href={href} className="block rounded-xl transition-opacity hover:opacity-70">
+        {content}
+      </Link>
+    );
+  }
+  return content;
 }
 
 function formatDate(iso: string): string {
