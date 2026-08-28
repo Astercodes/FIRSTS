@@ -13,6 +13,8 @@ const NAV = [
   { label: "Role fit", href: "/employer/role-fit", icon: TargetIcon },
   { label: "Events", href: "/employer/events", icon: CalendarIcon },
   { label: "Company profile", href: "/employer/company", icon: BadgeIcon },
+  { label: "Usage & ROI", href: "/employer/usage", icon: TrendIcon },
+  { label: "Team & access", href: "/employer/account", icon: UsersIcon },
 ];
 
 export function EmployerSidebar() {
@@ -149,6 +151,25 @@ function CalendarIcon({ className }: IconProps) {
     <svg viewBox="0 0 24 24" fill="none" strokeWidth={1.7} className={className}>
       <rect x="4" y="5" width="16" height="15" rx="2" stroke="currentColor" />
       <path d="M4 9.5h16M8 3v3.5M16 3v3.5" stroke="currentColor" strokeLinecap="round" />
+    </svg>
+  );
+}
+
+function TrendIcon({ className }: IconProps) {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" strokeWidth={1.7} className={className}>
+      <path d="M4 16l5-5 4 4 7-8" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" />
+      <path d="M15 7h5v5" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" />
+    </svg>
+  );
+}
+
+function UsersIcon({ className }: IconProps) {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" strokeWidth={1.7} className={className}>
+      <circle cx="9" cy="8.5" r="3" stroke="currentColor" />
+      <path d="M3.5 19c0-3 2.5-5 5.5-5s5.5 2 5.5 5" stroke="currentColor" strokeLinecap="round" />
+      <path d="M15.5 6.5a3 3 0 0 1 0 5.8M18 19c0-2.4-1.6-4.2-3.7-4.8" stroke="currentColor" strokeLinecap="round" />
     </svg>
   );
 }

@@ -13,6 +13,8 @@ const NAV = [
   { label: "Role fit", href: "/employer/role-fit" },
   { label: "Events", href: "/employer/events" },
   { label: "Company profile", href: "/employer/company" },
+  { label: "Usage & ROI", href: "/employer/usage" },
+  { label: "Team & access", href: "/employer/account" },
 ];
 
 export function EmployerMobileNav() {

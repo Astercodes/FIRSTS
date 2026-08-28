@@ -1,11 +1,12 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Link from "next/link";
 import type { CandidatePortfolio } from "@/lib/sponsorData";
 import { loadEmployer, MOCK_EMPLOYER } from "@/lib/employerStore";
 import { addEmployerFeedback, feedbackForCandidate, useEmployerFeedback, HIRE_OUTCOME_LABEL, type HireOutcome } from "@/lib/employerFeedbackStore";
 import { roleFeedbackForCandidate, useRoleFeedback } from "@/lib/roleFeedbackStore";
+import { recordCandidateView } from "@/lib/viewStore";
 import { CredentialDetail } from "@/components/employer/CredentialDetail";
 import { OutreachPanel } from "@/components/employer/OutreachPanel";
 import { SchedulingPanel } from "@/components/employer/SchedulingPanel";
@@ -14,6 +15,10 @@ import { PIPELINE_STAGES, usePipeline, addToPipeline, setPipelineStage, removeFr
 const OUTCOME_OPTIONS: HireOutcome[] = ["hired", "still-deciding", "not-selected"];
 
 export function PortfolioDetail({ candidate }: { candidate: CandidatePortfolio }) {
+  useEffect(() => {
+    recordCandidateView(candidate.id);
+  }, [candidate.id]);
+
   const allFeedback = useEmployerFeedback();
   const existingFeedback = feedbackForCandidate(allFeedback, candidate.id);
   const allRoleFeedback = useRoleFeedback();
