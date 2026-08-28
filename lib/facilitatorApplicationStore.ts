@@ -111,7 +111,16 @@ export function submitApplication(input: {
 
 export function setApplicationStatus(id: string, status: ApplicationStatus) {
   const all = readAll();
-  writeAll(all.map((a) => (a.id === id ? { ...a, status } : a)));
+  if (all.some((a) => a.id === id)) {
+    writeAll(all.map((a) => (a.id === id ? { ...a, status } : a)));
+    return;
+  }
+  // Seeded applicants aren't in localStorage until their status is first
+  // overridden here, since they otherwise only ever exist as the
+  // SEEDED_APPLICATIONS constant.
+  const seeded = SEEDED_APPLICATIONS.find((a) => a.id === id);
+  if (!seeded) return;
+  writeAll([...all, { ...seeded, status }]);
 }
 
 export function myApplication(all: FacilitatorApplication[]): FacilitatorApplication | undefined {

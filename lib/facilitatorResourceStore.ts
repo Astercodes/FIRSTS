@@ -22,6 +22,9 @@ const STAGE_FOCUS: Record<StageId, string> = {
   nine: "English vocabulary, short and drill-based, works well as a recurring session",
 };
 
+/** Stage One's kit was recently revised; version bumps here should flag facilitators still on the old copy. */
+const KIT_VERSIONS: Partial<Record<StageId, number>> = { one: 2 };
+
 export function workshopKit(stageId: StageId): WorkshopKit {
   const stage = STAGES.find((s) => s.id === stageId);
   const label = stage?.shortLabel ?? stageId;
@@ -29,7 +32,7 @@ export function workshopKit(stageId: StageId): WorkshopKit {
 
   return {
     stageId,
-    version: 1,
+    version: KIT_VERSIONS[stageId] ?? 1,
     focus,
     facilitatorGuide: [
       `Open by naming what ${label} is about and why it's ${focus.split(",")[1]?.trim() || "worth the room's attention"}.`,
