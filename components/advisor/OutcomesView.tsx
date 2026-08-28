@@ -10,8 +10,9 @@ import {
   overallOfferRate,
   avgStartingSalary,
   employerFeedbackSummary,
+  hireOutcomeSummary,
 } from "@/lib/placementData";
-import { useEmployerFeedback } from "@/lib/employerFeedbackStore";
+import { useEmployerFeedback, HIRE_OUTCOME_LABEL } from "@/lib/employerFeedbackStore";
 import { TimeToPlacementChart } from "@/components/charts/TimeToPlacementChart";
 
 const COLLAPSED_FEEDBACK = 5;
@@ -41,6 +42,7 @@ export function OutcomesView() {
 
   const feedback = useEmployerFeedback();
   const feedbackSummary = useMemo(() => employerFeedbackSummary(feedback), [feedback]);
+  const hireSummary = useMemo(() => hireOutcomeSummary(feedback), [feedback]);
   const [showAllFeedback, setShowAllFeedback] = useState(false);
   const visibleFeedback = showAllFeedback ? feedback : feedback.slice(0, COLLAPSED_FEEDBACK);
 
@@ -71,7 +73,7 @@ export function OutcomesView() {
         </p>
       </div>
 
-      <div className="grid gap-4 sm:grid-cols-3">
+      <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
         <StatCard label="Modeled offer rate" value={`${offerRate}%`} color="var(--berry-burst)" />
         <StatCard
           label="Avg starting salary (full-time)"
@@ -82,6 +84,11 @@ export function OutcomesView() {
           label="Employer hire-quality rating"
           value={feedbackSummary.count > 0 ? `${feedbackSummary.avgHireQuality}/5` : "No ratings yet"}
           color="#1a8f3c"
+        />
+        <StatCard
+          label={`Reported hires (${hireSummary.reported} outcome${hireSummary.reported === 1 ? "" : "s"} reported)`}
+          value={hireSummary.reported > 0 ? `${hireSummary.hired}/${hireSummary.reported}` : "No outcomes yet"}
+          color="var(--pink-grapefruit)"
         />
       </div>
 
@@ -138,9 +145,14 @@ export function OutcomesView() {
                   <p className="text-sm font-semibold text-ink">{f.candidateName}</p>
                   <p className="text-xs text-ink/45">{f.company} · {f.createdAt}</p>
                 </div>
-                <div className="mt-1.5 flex gap-4 text-xs text-ink/55">
+                <div className="mt-1.5 flex flex-wrap items-center gap-4 text-xs text-ink/55">
                   <span>Hire quality: <strong className="text-ink">{f.hireQuality}/5</strong></span>
                   <span>Interview performance: <strong className="text-ink">{f.interviewPerformance}/5</strong></span>
+                  {f.outcome && (
+                    <span className="font-semibold" style={{ color: "var(--pink-grapefruit)" }}>
+                      {HIRE_OUTCOME_LABEL[f.outcome]}
+                    </span>
+                  )}
                 </div>
                 {f.comment && <p className="mt-2 text-sm leading-relaxed text-ink/70">{f.comment}</p>}
               </div>

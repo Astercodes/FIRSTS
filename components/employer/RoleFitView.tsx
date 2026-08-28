@@ -5,6 +5,7 @@ import Link from "next/link";
 import { CANDIDATE_PORTFOLIOS } from "@/lib/sponsorData";
 import { ROLE_TEMPLATES, scoreCandidatesForRole, type RoleFitResult, type RoleTemplate } from "@/lib/roleFit";
 import { loadEmployer, MOCK_EMPLOYER } from "@/lib/employerStore";
+import { sendRoleFeedback, roleFeedbackForCandidate, useRoleFeedback } from "@/lib/roleFeedbackStore";
 
 const ACCENT = "var(--pink-grapefruit)";
 
@@ -85,7 +86,7 @@ export function RoleFitView() {
 
       <div className="space-y-4">
         {results.map((r) => (
-          <CandidateFitRow key={r.candidate.id} result={r} />
+          <CandidateFitRow key={r.candidate.id} result={r} roleTitle={role.title} />
         ))}
       </div>
 
@@ -101,8 +102,27 @@ export function RoleFitView() {
   );
 }
 
-function CandidateFitRow({ result }: { result: RoleFitResult }) {
+function CandidateFitRow({ result, roleTitle }: { result: RoleFitResult; roleTitle: string }) {
   const { candidate, fitScore, breakdown, strongest, gaps } = result;
+  const allRoleFeedback = useRoleFeedback();
+  const alreadySent = roleFeedbackForCandidate(allRoleFeedback, candidate.id).some((f) => f.roleTitle === roleTitle);
+  const [note, setNote] = useState("");
+  const [composing, setComposing] = useState(false);
+
+  function handleSend() {
+    const employer = loadEmployer() ?? MOCK_EMPLOYER;
+    sendRoleFeedback({
+      candidateId: candidate.id,
+      candidateName: candidate.name,
+      company: employer.company,
+      roleTitle,
+      strengths: strongest ? [strongest.label] : [],
+      gaps: gaps.map((g) => g.label),
+      note: note.trim(),
+    });
+    setComposing(false);
+    setNote("");
+  }
 
   return (
     <div className="rounded-3xl border border-ink/10 bg-white p-7">
@@ -149,6 +169,52 @@ function CandidateFitRow({ result }: { result: RoleFitResult }) {
           <span className="font-semibold text-ink/70">Room to grow: </span>
           {gaps.length > 0 ? gaps.map((g) => `${g.label} (${g.pct}%)`).join(", ") : "No notable gaps for this role"}
         </p>
+      </div>
+
+      <div className="mt-4 border-t border-ink/8 pt-4">
+        {alreadySent ? (
+          <p className="text-xs font-medium text-ink/40">
+            Structured feedback sent to {candidate.name.split(" ")[0]} for this role.
+          </p>
+        ) : composing ? (
+          <div className="space-y-2.5">
+            <p className="text-xs leading-relaxed text-ink/50">
+              Shares the strongest area and gaps above, plus your note, as constructive feedback,
+              a meaningfully different signal than a silent pass.
+            </p>
+            <textarea
+              value={note}
+              onChange={(e) => setNote(e.target.value)}
+              placeholder="Optional: anything else worth adding?"
+              rows={2}
+              className="w-full resize-none rounded-2xl border border-ink/10 bg-paper-dim px-3.5 py-2.5 text-xs text-ink outline-none focus:border-ink/25"
+            />
+            <div className="flex gap-2">
+              <button
+                type="button"
+                onClick={handleSend}
+                className="rounded-full bg-ink px-4 py-1.5 text-xs font-semibold text-paper transition-opacity hover:opacity-90"
+              >
+                Send feedback
+              </button>
+              <button
+                type="button"
+                onClick={() => setComposing(false)}
+                className="text-xs font-medium text-ink/40 hover:text-ink"
+              >
+                Cancel
+              </button>
+            </div>
+          </div>
+        ) : (
+          <button
+            type="button"
+            onClick={() => setComposing(true)}
+            className="text-xs font-semibold text-berry-burst hover:underline"
+          >
+            Send this as feedback →
+          </button>
+        )}
       </div>
     </div>
   );

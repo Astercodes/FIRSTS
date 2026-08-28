@@ -1,5 +1,5 @@
 import type { TaggedStudent } from "./segmentation";
-import type { EmployerFeedback } from "./employerFeedbackStore";
+import type { EmployerFeedback, HireOutcome } from "./employerFeedbackStore";
 
 function hashSeed(seed: string): number {
   let h = 2166136261;
@@ -138,5 +138,27 @@ export function employerFeedbackSummary(feedback: EmployerFeedback[]): EmployerF
     avgInterviewPerformance:
       Math.round((feedback.reduce((s, f) => s + f.interviewPerformance, 0) / feedback.length) * 10) / 10,
     count: feedback.length,
+  };
+}
+
+export type HireOutcomeSummary = { hired: number; notSelected: number; stillDeciding: number; reported: number; hireRatePct: number };
+
+/**
+ * How many of the outcomes employers actually reported back turned into a
+ * hire. This is the number that validates the credential over time, since
+ * hire-quality ratings alone don't say whether anyone was actually hired.
+ */
+export function hireOutcomeSummary(feedback: EmployerFeedback[]): HireOutcomeSummary {
+  const withOutcome = feedback.filter((f): f is EmployerFeedback & { outcome: HireOutcome } => Boolean(f.outcome));
+  const hired = withOutcome.filter((f) => f.outcome === "hired").length;
+  const notSelected = withOutcome.filter((f) => f.outcome === "not-selected").length;
+  const stillDeciding = withOutcome.filter((f) => f.outcome === "still-deciding").length;
+  const reported = withOutcome.length;
+  return {
+    hired,
+    notSelected,
+    stillDeciding,
+    reported,
+    hireRatePct: reported > 0 ? Math.round((hired / reported) * 100) : 0,
   };
 }

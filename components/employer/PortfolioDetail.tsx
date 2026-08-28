@@ -4,17 +4,23 @@ import { useState } from "react";
 import Link from "next/link";
 import type { CandidatePortfolio } from "@/lib/sponsorData";
 import { loadEmployer, MOCK_EMPLOYER } from "@/lib/employerStore";
-import { addEmployerFeedback, feedbackForCandidate, useEmployerFeedback } from "@/lib/employerFeedbackStore";
+import { addEmployerFeedback, feedbackForCandidate, useEmployerFeedback, HIRE_OUTCOME_LABEL, type HireOutcome } from "@/lib/employerFeedbackStore";
+import { roleFeedbackForCandidate, useRoleFeedback } from "@/lib/roleFeedbackStore";
 import { CredentialDetail } from "@/components/employer/CredentialDetail";
 import { OutreachPanel } from "@/components/employer/OutreachPanel";
 import { PIPELINE_STAGES, usePipeline, addToPipeline, setPipelineStage, removeFromPipeline, type PipelineStage } from "@/lib/pipelineStore";
 
+const OUTCOME_OPTIONS: HireOutcome[] = ["hired", "still-deciding", "not-selected"];
+
 export function PortfolioDetail({ candidate }: { candidate: CandidatePortfolio }) {
   const allFeedback = useEmployerFeedback();
   const existingFeedback = feedbackForCandidate(allFeedback, candidate.id);
+  const allRoleFeedback = useRoleFeedback();
+  const existingRoleFeedback = roleFeedbackForCandidate(allRoleFeedback, candidate.id);
   const [hireQuality, setHireQuality] = useState(0);
   const [interviewPerformance, setInterviewPerformance] = useState(0);
   const [comment, setComment] = useState("");
+  const [outcome, setOutcome] = useState<HireOutcome | null>(null);
   const [submitted, setSubmitted] = useState(false);
 
   const pipeline = usePipeline();
@@ -30,6 +36,7 @@ export function PortfolioDetail({ candidate }: { candidate: CandidatePortfolio }
       hireQuality,
       interviewPerformance,
       comment: comment.trim(),
+      outcome: outcome ?? undefined,
     });
     setSubmitted(true);
   }
@@ -153,6 +160,28 @@ export function PortfolioDetail({ candidate }: { candidate: CandidatePortfolio }
           <div className="space-y-4">
             <StarField label="Hire quality" value={hireQuality} onChange={setHireQuality} />
             <StarField label="Interview performance" value={interviewPerformance} onChange={setInterviewPerformance} />
+            <div>
+              <p className="mb-1.5 text-xs font-semibold uppercase tracking-wide text-ink/40">
+                Outcome (optional)
+              </p>
+              <div className="flex flex-wrap gap-2">
+                {OUTCOME_OPTIONS.map((o) => (
+                  <button
+                    key={o}
+                    type="button"
+                    onClick={() => setOutcome((prev) => (prev === o ? null : o))}
+                    className="rounded-full border px-3.5 py-1.5 text-sm font-medium transition-all"
+                    style={
+                      outcome === o
+                        ? { borderColor: "var(--berry-burst)", color: "var(--berry-burst)", background: "color-mix(in oklab, var(--berry-burst) 14%, white)" }
+                        : { borderColor: "rgba(11,4,16,0.1)", color: "rgba(11,4,16,0.55)" }
+                    }
+                  >
+                    {HIRE_OUTCOME_LABEL[o]}
+                  </button>
+                ))}
+              </div>
+            </div>
             <textarea
               value={comment}
               onChange={(e) => setComment(e.target.value)}
@@ -182,12 +211,50 @@ export function PortfolioDetail({ candidate }: { candidate: CandidatePortfolio }
                   <span>{f.company} · {f.createdAt}</span>
                   <span>{f.hireQuality}/5 hire quality · {f.interviewPerformance}/5 interview</span>
                 </div>
+                {f.outcome && (
+                  <p className="mt-1 text-xs font-semibold" style={{ color: "var(--berry-burst)" }}>
+                    {HIRE_OUTCOME_LABEL[f.outcome]}
+                  </p>
+                )}
                 {f.comment && <p className="mt-1.5 text-sm text-ink/70">{f.comment}</p>}
               </div>
             ))}
           </div>
         )}
       </div>
+
+      {existingRoleFeedback.length > 0 && (
+        <div className="rounded-3xl border border-ink/10 bg-white p-7">
+          <p className="mb-1 text-xs font-semibold uppercase tracking-[0.15em] text-ink/45">
+            Role-fit feedback received
+          </p>
+          <p className="mb-4 text-sm text-ink/55">
+            Structured feedback from role-fit reviews, shared as a growth signal rather than a
+            silent pass.
+          </p>
+          <div className="space-y-3">
+            {existingRoleFeedback.map((f) => (
+              <div key={f.id} className="rounded-xl bg-paper-dim p-3">
+                <div className="flex flex-wrap items-center justify-between gap-2 text-xs text-ink/50">
+                  <span>{f.company} · {f.roleTitle}</span>
+                  <span>{f.createdAt}</span>
+                </div>
+                {f.strengths.length > 0 && (
+                  <p className="mt-1.5 text-sm text-ink/70">
+                    <span className="font-semibold">Strong on:</span> {f.strengths.join(", ")}
+                  </p>
+                )}
+                {f.gaps.length > 0 && (
+                  <p className="mt-1 text-sm text-ink/70">
+                    <span className="font-semibold">Room to grow:</span> {f.gaps.join(", ")}
+                  </p>
+                )}
+                {f.note && <p className="mt-1.5 text-sm text-ink/70">{f.note}</p>}
+              </div>
+            ))}
+          </div>
+        </div>
+      )}
 
       <OutreachPanel candidateId={candidate.id} candidateName={candidate.name} openToOutreach={candidate.openToOutreach} />
 

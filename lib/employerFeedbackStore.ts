@@ -2,6 +2,15 @@
 
 import { useEffect, useState } from "react";
 import { CANDIDATE_PORTFOLIOS } from "./sponsorData";
+import { credentialForCandidate, credentialSummary } from "./credentialData";
+
+export type HireOutcome = "hired" | "not-selected" | "still-deciding";
+
+export const HIRE_OUTCOME_LABEL: Record<HireOutcome, string> = {
+  hired: "Hired",
+  "not-selected": "Not selected",
+  "still-deciding": "Still deciding",
+};
 
 export type EmployerFeedback = {
   id: string;
@@ -12,6 +21,8 @@ export type EmployerFeedback = {
   interviewPerformance: number;
   comment: string;
   createdAt: string;
+  /** Optional: what actually happened with this candidate, the signal that validates the credential over time. */
+  outcome?: HireOutcome;
 };
 
 const KEY = "firsts:employer-feedback";
@@ -37,19 +48,21 @@ function seededInt(seed: string, min: number, max: number): number {
  * per candidate so the numbers don't shift on reload.
  */
 export const SEEDED_FEEDBACK: EmployerFeedback[] = CANDIDATE_PORTFOLIOS.map((c, i) => {
-  const base = c.stagesCompleted >= 4 ? 3 : 2;
+  const wellPrepared = credentialSummary(credentialForCandidate(c)).complete >= 5;
+  const base = wellPrepared ? 3 : 2;
+  const hireQuality = Math.min(5, base + seededInt(`${c.id}|hq`, 0, 2));
   return {
     id: `seed-fb-${c.id}`,
     candidateId: c.id,
     candidateName: c.name,
     company: ["Northlight Media", "Verdant Analytics", "Ridgeline Consulting", "Cobalt Systems"][i % 4],
-    hireQuality: Math.min(5, base + seededInt(`${c.id}|hq`, 0, 2)),
+    hireQuality,
     interviewPerformance: Math.min(5, base + seededInt(`${c.id}|ip`, 0, 2)),
-    comment:
-      c.stagesCompleted >= 4
-        ? "Came in with a clear story and specific examples. Ready for real work from day one."
-        : "Good fundamentals, still developing how to talk about impact concretely.",
+    comment: wellPrepared
+      ? "Came in with a clear story and specific examples. Ready for real work from day one."
+      : "Good fundamentals, still developing how to talk about impact concretely.",
     createdAt: "2026-06-10",
+    outcome: hireQuality >= 4 ? "hired" : hireQuality === 3 ? "still-deciding" : "not-selected",
   };
 });
 
@@ -74,6 +87,7 @@ export function addEmployerFeedback(input: {
   hireQuality: number;
   interviewPerformance: number;
   comment: string;
+  outcome?: HireOutcome;
 }): EmployerFeedback {
   const feedback: EmployerFeedback = {
     id: `fb-${Date.now()}-${Math.round(Math.random() * 1e6)}`,
