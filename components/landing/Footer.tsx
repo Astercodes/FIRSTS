@@ -7,6 +7,7 @@ const AUDIENCE_LINKS = [
   { label: "Career centers", href: "/for/career-centers" },
   { label: "Institutions", href: "/for/institutions" },
   { label: "Employers", href: "/for/employers" },
+  { label: "Facilitators", href: "/for/facilitators" },
 ];
 
 export function Footer() {
