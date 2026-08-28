@@ -8,6 +8,7 @@ import { useFirstsWithProgress } from "@/lib/progressStore";
 import { useMyCommunityProfile } from "@/lib/myCommunityProfile";
 import { communityPeers, findPeerByHandle } from "@/lib/communityData";
 import { suggestedPartners } from "@/lib/partnerMatch";
+import { CommunityTabs } from "@/components/community/CommunityTabs";
 import {
   usePartnerState,
   sendPartnerRequest,
@@ -50,6 +51,7 @@ export function PartnerView() {
 
   return (
     <div className="mx-auto max-w-3xl space-y-6">
+      <CommunityTabs active="partner" />
       <div>
         <p className="text-xs font-semibold uppercase tracking-[0.15em] text-ink/45">
           Accountability
@@ -180,6 +182,7 @@ function PairedDashboard({
 
   return (
     <div className="mx-auto max-w-3xl space-y-6">
+      <CommunityTabs active="partner" />
       <div>
         <p className="text-xs font-semibold uppercase tracking-[0.15em] text-ink/45">
           Accountability

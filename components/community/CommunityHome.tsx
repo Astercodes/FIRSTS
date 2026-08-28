@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useMyCommunityProfile } from "@/lib/myCommunityProfile";
 import { usePartnerState } from "@/lib/partnerStore";
 import { ProfileCard } from "@/components/community/ProfileCard";
+import { CommunityTabs } from "@/components/community/CommunityTabs";
 
 const ACCENT = "var(--neon-pink)";
 
@@ -35,6 +36,7 @@ export function CommunityHome() {
 
   return (
     <div className="mx-auto max-w-3xl space-y-6">
+      <CommunityTabs active="home" />
       <div>
         <p className="text-xs font-semibold uppercase tracking-[0.15em] text-ink/45">
           Community
