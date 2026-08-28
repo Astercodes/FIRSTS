@@ -8,6 +8,8 @@ const NAV = [
   { label: "Training", href: "/facilitator/training", icon: CapIcon },
   { label: "Resources", href: "/facilitator/resources", icon: FolderIcon },
   { label: "Sessions", href: "/facilitator/sessions", icon: CalendarIcon },
+  { label: "Recognition", href: "/facilitator/recognition", icon: StarIcon },
+  { label: "Lounge", href: "/facilitator/lounge", icon: ChatIcon },
   { label: "My profile", href: "/facilitator/profile", icon: BadgeIcon },
 ];
 
@@ -90,6 +92,30 @@ function BadgeIcon({ className }: IconProps) {
     <svg viewBox="0 0 24 24" fill="none" strokeWidth={1.7} className={className}>
       <circle cx="12" cy="9" r="5.5" stroke="currentColor" />
       <path d="M9 13.5L7 20l5-2.5 5 2.5-2-6.5" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" />
+    </svg>
+  );
+}
+
+function StarIcon({ className }: IconProps) {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" strokeWidth={1.7} className={className}>
+      <path
+        d="M12 3.5l2.6 5.4 5.9.8-4.3 4.2 1 6-5.2-2.9-5.2 2.9 1-6-4.3-4.2 5.9-.8L12 3.5Z"
+        stroke="currentColor"
+        strokeLinejoin="round"
+      />
+    </svg>
+  );
+}
+
+function ChatIcon({ className }: IconProps) {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" strokeWidth={1.7} className={className}>
+      <path
+        d="M4 6.5A2.5 2.5 0 0 1 6.5 4h11A2.5 2.5 0 0 1 20 6.5v7A2.5 2.5 0 0 1 17.5 16H9l-4 4v-4H6.5A2.5 2.5 0 0 1 4 13.5v-7Z"
+        stroke="currentColor"
+        strokeLinejoin="round"
+      />
     </svg>
   );
 }

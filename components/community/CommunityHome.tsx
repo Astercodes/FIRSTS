@@ -4,6 +4,8 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 import { useMyCommunityProfile } from "@/lib/myCommunityProfile";
 import { usePartnerState } from "@/lib/partnerStore";
+import { useFacilitatorPortal, TIER_META, type FacilitatorTier } from "@/lib/facilitatorStore";
+import { useFacilitatorTraining, computeEarnedTier } from "@/lib/facilitatorTrainingStore";
 import { ProfileCard } from "@/components/community/ProfileCard";
 import { CommunityTabs } from "@/components/community/CommunityTabs";
 
@@ -12,6 +14,17 @@ const ACCENT = "var(--neon-pink)";
 export function CommunityHome() {
   const myProfile = useMyCommunityProfile();
   const partnerState = usePartnerState();
+  const { application: facilitatorApplication, profile: facilitatorProfile } = useFacilitatorPortal();
+  const facilitatorTraining = useFacilitatorTraining();
+  const facilitatorBadge =
+    facilitatorApplication?.status === "accepted" && facilitatorProfile
+      ? {
+          tierLabel: TIER_META[
+            Math.max(facilitatorProfile.tier, computeEarnedTier(facilitatorTraining)) as FacilitatorTier
+          ].label.split(" · ")[0],
+          sessionsDelivered: facilitatorProfile.sessionsDelivered,
+        }
+      : undefined;
 
   const accountability = partnerState.currentPartnerHandle ? (
     <motion.div whileTap={{ scale: 0.96 }} className="inline-block">
@@ -60,7 +73,13 @@ export function CommunityHome() {
         </p>
       </motion.div>
 
-      <ProfileCard profile={myProfile} isOwn editHref="/dashboard/community/profile" accountability={accountability} />
+      <ProfileCard
+        profile={myProfile}
+        isOwn
+        editHref="/dashboard/community/profile"
+        accountability={accountability}
+        facilitatorBadge={facilitatorBadge}
+      />
     </div>
   );
 }

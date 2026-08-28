@@ -35,11 +35,13 @@ export function ProfileCard({
   isOwn,
   editHref,
   accountability,
+  facilitatorBadge,
 }: {
   profile: PeerCommunityProfile;
   isOwn?: boolean;
   editHref?: string;
   accountability?: ReactNode;
+  facilitatorBadge?: { tierLabel: string; sessionsDelivered: number };
 }) {
   const stageIndex = STAGES.findIndex((s) => s.id === profile.currentStage);
   const stageLabel = STAGES[stageIndex]?.shortLabel ?? profile.currentStage;
@@ -89,6 +91,21 @@ export function ProfileCard({
             </Link>
           )}
         </div>
+
+        {facilitatorBadge && (
+          <motion.div
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ delay: 0.15, type: "spring", stiffness: 320, damping: 24 }}
+            className="mt-4 flex items-center gap-2 rounded-full px-3.5 py-1.5 text-xs font-semibold text-white"
+            style={{ background: "linear-gradient(135deg, var(--fuchsia-blast), var(--neon-pink))", width: "fit-content" }}
+          >
+            <span>🎓 Facilitator · {facilitatorBadge.tierLabel}</span>
+            <span className="opacity-80">
+              · {facilitatorBadge.sessionsDelivered} session{facilitatorBadge.sessionsDelivered === 1 ? "" : "s"} run
+            </span>
+          </motion.div>
+        )}
 
         {profile.bio && <p className="mt-4 text-sm leading-relaxed text-ink/65">{profile.bio}</p>}
 
