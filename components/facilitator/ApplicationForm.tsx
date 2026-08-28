@@ -37,12 +37,21 @@ export function ApplicationForm() {
           We&apos;ll match your interests to stage-specific training. You&apos;ll unlock your
           facilitator portal once training opens up.
         </p>
-        <Link
-          href="/for/facilitators"
-          className="mt-6 inline-block rounded-full border border-ink/15 px-5 py-2.5 text-sm font-semibold text-ink/70 transition-colors hover:border-ink/30"
-        >
-          Back to facilitators
-        </Link>
+        <div className="mt-6 flex flex-wrap items-center justify-center gap-3">
+          <Link
+            href="/facilitator"
+            className="inline-block rounded-full px-5 py-2.5 text-sm font-semibold text-white transition-opacity hover:opacity-90"
+            style={{ background: ACCENT }}
+          >
+            Enter your facilitator portal
+          </Link>
+          <Link
+            href="/for/facilitators"
+            className="inline-block rounded-full border border-ink/15 px-5 py-2.5 text-sm font-semibold text-ink/70 transition-colors hover:border-ink/30"
+          >
+            Back to facilitators
+          </Link>
+        </div>
       </div>
     );
   }
