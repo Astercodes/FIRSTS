@@ -5,6 +5,7 @@ import Link from "next/link";
 import type { CandidatePortfolio } from "@/lib/sponsorData";
 import { loadEmployer, MOCK_EMPLOYER } from "@/lib/employerStore";
 import { addEmployerFeedback, feedbackForCandidate, useEmployerFeedback } from "@/lib/employerFeedbackStore";
+import { CredentialDetail } from "@/components/employer/CredentialDetail";
 
 export function PortfolioDetail({ candidate }: { candidate: CandidatePortfolio }) {
   const allFeedback = useEmployerFeedback();
@@ -46,11 +47,11 @@ export function PortfolioDetail({ candidate }: { candidate: CandidatePortfolio }
             {candidate.name}
           </h1>
           <p className="mt-1 text-[15px] text-ink/60">{candidate.headline}</p>
-          <p className="mt-1 text-sm text-ink/40">
-            {candidate.school} · {candidate.stagesCompleted} of 4 stages complete
-          </p>
+          <p className="mt-1 text-sm text-ink/40">{candidate.school}</p>
         </div>
       </div>
+
+      <CredentialDetail candidate={candidate} />
 
       <div className="rounded-3xl border border-ink/10 bg-white p-7">
         <p className="mb-4 text-xs font-semibold uppercase tracking-[0.15em] text-ink/45">
