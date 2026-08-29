@@ -42,7 +42,10 @@ export function Footer() {
             Ayomide Ayeni. A guidance tool, not a licensed counselor.
           </p>
           <p className="text-xs text-ink/45">
-            © {new Date().getFullYear()} FIRSTS
+            © {new Date().getFullYear()} FIRSTS ·{" "}
+            <Link href="/admin/facilitators" className="text-ink/35 underline decoration-ink/15 underline-offset-2 hover:text-ink/60">
+              Admin
+            </Link>
           </p>
         </div>
       </div>
