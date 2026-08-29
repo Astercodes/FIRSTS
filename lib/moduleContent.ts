@@ -424,6 +424,36 @@ export const COACH_MODE: Record<number, CoachMode> = {
   409: "reflective",
   410: "reflective",
   411: "reflective",
+  412: "research",
+  413: "hybrid",
+  414: "hybrid",
+  415: "hybrid",
+  416: "hybrid",
+  417: "hybrid",
+  418: "hybrid",
+  419: "hybrid",
+  420: "hybrid",
+  421: "hybrid",
+  422: "hybrid",
+  423: "hybrid",
+  424: "hybrid",
+  425: "hybrid",
+  426: "research",
+  427: "research",
+  428: "research",
+  429: "hybrid",
+  430: "research",
+  431: "research",
+  432: "research",
+  433: "reflective",
+  434: "hybrid",
+  435: "hybrid",
+  436: "research",
+  437: "hybrid",
+  438: "hybrid",
+  439: "hybrid",
+  440: "synthesis",
+  441: "reflective",
 };
 
 export const LEARN_CONTENT: Record<number, LearnContent> = {
@@ -11711,6 +11741,786 @@ export const LEARN_CONTENT: Record<number, LearnContent> = {
     ],
     successSignal:
       "You can name specific, genuine growth areas and specific remaining challenges across friendships, teamwork, and mentorship alike.",
+    milestoneTies: [],
+  },
+
+  412: {
+    definition:
+      "A First Tool Ecosystem Awareness is a working understanding of the major categories of tools used in academic, professional, and business environments, such as productivity suites, collaboration platforms, project management tools, and data tools.",
+    whyItMatters:
+      "Without a mental map of what categories of tools exist, it's easy to miss entirely relevant tools simply because you didn't know to look for them.",
+    whenWhoWhere: [
+      { label: "When", body: "Build this awareness early, before you're in a role or project where a knowledge gap could genuinely slow you down." },
+      { label: "Who", body: "No collaborator required, though asking a mentor what tools their team relies on can fill in real gaps." },
+      { label: "Where", body: "Built through research, observation, and asking people in your target field what they actually use." },
+    ],
+    howItWorks: [
+      "List the major tool categories (productivity, collaboration, project management, data, automation) and identify at least one specific tool you know of in each.",
+    ],
+    tools: ["A simple spreadsheet or notes doc to map categories against known tools"],
+    scenario: {
+      title: "More categories than \"just Office\"",
+      body: "A student who assumed \"tools\" just meant Microsoft Office was surprised in her first internship by how many categories of tools her team used daily, from project trackers to data visualization platforms she'd never encountered.",
+    },
+    pitfalls: [
+      "Assuming your current tool knowledge (usually just office software) represents the full landscape of what's actually out there.",
+    ],
+    successSignal:
+      "You can name at least one real tool in each of five major categories, even if you haven't used all of them yet.",
+    milestoneTies: [],
+  },
+
+  413: {
+    definition:
+      "A First Productivity Tool Mastery is genuine proficiency with a tool that improves daily productivity and organization, such as a task manager, calendar app, or note-taking system, used consistently rather than just installed and forgotten.",
+    whyItMatters:
+      "A productivity tool only creates value once it's genuinely integrated into your daily routine; installing an app without real adoption is functionally the same as not having it at all.",
+    whenWhoWhere: [
+      { label: "When", body: "Build this once you've identified a genuine productivity gap the tool would address." },
+      { label: "Who", body: "No collaborator required." },
+      { label: "Where", body: "Practiced through daily, real use, not a one-time setup." },
+    ],
+    howItWorks: [
+      "Choose one productivity tool, use it consistently for real tasks for at least two weeks, and refine your setup based on what actually works for you.",
+    ],
+    tools: ["Your Stage Four Productivity Tool Setup as a starting foundation"],
+    scenario: {
+      title: "Consistency over the perfect app",
+      body: "A student who'd downloaded five different productivity apps over a year, none used consistently, finally committed to just one for a full month, and found the consistency itself was more valuable than any specific app's features.",
+    },
+    pitfalls: [
+      "Constantly switching tools looking for the \"perfect\" one, rather than committing to consistent use of a genuinely adequate one.",
+    ],
+    successSignal:
+      "You use the tool daily without having to consciously remember to, and it genuinely reduces the mental load of tracking your own tasks.",
+    milestoneTies: [],
+  },
+
+  414: {
+    definition:
+      "A First Microsoft Office Mastery is practical proficiency in Word, Excel, PowerPoint, and Outlook, the specific set of tools still standard across a large share of professional environments.",
+    whyItMatters:
+      "Despite the rise of alternative tools, Microsoft Office remains the default in many workplaces, and genuine fluency avoids a common early-career stumbling block.",
+    whenWhoWhere: [
+      { label: "When", body: "Build this before an internship or job where Office is likely to be the standard toolset." },
+      { label: "Who", body: "No collaborator required, though a short course or tutorial can accelerate real fluency." },
+      { label: "Where", body: "Practiced through real documents, spreadsheets, and presentations, not just tutorials in isolation." },
+    ],
+    howItWorks: [
+      "Complete one real task in each core application: a formatted document in Word, a formula-driven spreadsheet in Excel, a clean deck in PowerPoint, and an organized inbox system in Outlook.",
+    ],
+    tools: ["Microsoft Office (or Microsoft 365)", "your school or library's often-available free tutorials"],
+    scenario: {
+      title: "A focused weekend closing the gap",
+      body: "A student who'd only ever used Google Docs struggled with basic Word formatting during her first internship task, and spent a focused weekend building real fluency across all four core apps before her next assignment.",
+    },
+    pitfalls: [
+      "Assuming familiarity with one tool (like Google Docs) automatically transfers completely to its Microsoft equivalent, when workflow differences can still trip you up.",
+    ],
+    successSignal:
+      "You can complete a real, moderately complex task in each of the four core apps without needing to look up basic functions.",
+    milestoneTies: [],
+  },
+
+  415: {
+    definition:
+      "A First Google Workspace Mastery is effective use of Docs, Sheets, Slides, Drive, Calendar, and Gmail, the cloud-native alternative to Microsoft Office increasingly common in startups and collaborative environments.",
+    whyItMatters:
+      "Google Workspace's real-time collaboration features work differently from Microsoft Office, and genuine fluency with both toolsets removes friction regardless of which one a given workplace uses.",
+    whenWhoWhere: [
+      { label: "When", body: "Build this alongside Microsoft Office Mastery, since many people move between both environments across their career." },
+      { label: "Who", body: "No collaborator required, though real-time collaboration is easiest to practice with at least one other person." },
+      { label: "Where", body: "Practiced through real, collaborative documents." },
+    ],
+    howItWorks: [
+      "Complete one real collaborative task using Docs, Sheets, and Slides with at least one other person, and set up a genuinely organized Drive folder structure.",
+    ],
+    tools: ["A free Google account and Google Workspace's core apps"],
+    scenario: {
+      title: "Faster than emailing versions back and forth",
+      body: "A student used to Microsoft Office was initially confused by Google Sheets' real-time collaborative editing, until practicing it directly with a classmate revealed how much faster it made joint work compared to emailing versions back and forth.",
+    },
+    pitfalls: [
+      "Assuming Google Workspace is simply a lesser version of Microsoft Office, missing its genuine real-time collaboration advantages.",
+    ],
+    successSignal:
+      "You can collaborate on a real document with someone else in real time, seeing and building on their edits live.",
+    milestoneTies: [],
+  },
+
+  416: {
+    definition:
+      "A First Spreadsheet Tool Mastery uses spreadsheets for calculations, tracking, analysis, and reporting, extending the basic Spreadsheet Mastery FIRST from Stage Seven into genuinely advanced fluency.",
+    whyItMatters:
+      "Spreadsheets remain one of the single most broadly useful tools across nearly every field, and deeper fluency, beyond basic formulas, meaningfully expands what you can do with data.",
+    whenWhoWhere: [
+      { label: "When", body: "Build this once you have basic spreadsheet fluency and want to genuinely deepen it." },
+      { label: "Who", body: "No collaborator required, though online courses can accelerate learning advanced functions." },
+      { label: "Where", body: "Practiced on real, moderately complex datasets." },
+    ],
+    howItWorks: [
+      "Learn one advanced function or feature you don't currently know (pivot tables, VLOOKUP, conditional formatting, data validation) and apply it to a real dataset.",
+    ],
+    tools: ["Excel or Google Sheets", "free tutorials for advanced functions"],
+    scenario: {
+      title: "VLOOKUP in a live interview exercise",
+      body: "A student who could only do basic sums and averages learned VLOOKUP specifically to merge two datasets for a technical interview, a skill that directly impressed her interviewer during a live exercise.",
+    },
+    pitfalls: [
+      "Staying at a basic fluency level indefinitely, missing the significant capability jump that advanced functions provide.",
+    ],
+    successSignal:
+      "You can use at least one advanced spreadsheet function correctly and independently on a real dataset.",
+    milestoneTies: [],
+  },
+
+  417: {
+    definition:
+      "A First Presentation Tool Mastery creates polished, professional presentations using tools like PowerPoint, Google Slides, or Canva, extending the presentation design skills from Stage Seven with deeper tool-specific fluency.",
+    whyItMatters:
+      "Genuine tool fluency, not just design instinct, is what lets you execute a strong presentation concept efficiently rather than fighting the software.",
+    whenWhoWhere: [
+      { label: "When", body: "Build this alongside or after the Presentation Deck Created FIRST from Stage Seven." },
+      { label: "Who", body: "No collaborator required." },
+      { label: "Where", body: "Practiced by building real presentation decks." },
+    ],
+    howItWorks: [
+      "Learn one feature you don't currently use well (master slides, transitions, embedded charts) and apply it to a real deck.",
+    ],
+    tools: ["PowerPoint, Google Slides, or Canva"],
+    scenario: {
+      title: "Master slides instead of manual reformatting",
+      body: "A student who manually reformatted every slide individually learned to use master slides for consistent formatting, cutting her deck-building time significantly while also improving visual consistency.",
+    },
+    pitfalls: [
+      "Fighting the tool inefficiently (manually reformatting each slide) instead of learning the feature that would make the process faster.",
+    ],
+    successSignal:
+      "You can build a polished, consistent deck noticeably faster than before, using at least one tool feature you didn't previously know.",
+    milestoneTies: [],
+  },
+
+  418: {
+    definition:
+      "A First Collaboration Platform Mastery uses tools like Teams, Slack, or Zoom effectively, extending the Digital Collaboration Tool Used FIRST from Stage Seven into deeper, more confident fluency.",
+    whyItMatters:
+      "Collaboration platforms are the default communication infrastructure of most modern workplaces, and genuine fluency, beyond just sending basic messages, meaningfully improves team communication.",
+    whenWhoWhere: [
+      { label: "When", body: "Build this before or during your first team-based internship or job." },
+      { label: "Who", body: "A team or group project to practice with." },
+      { label: "Where", body: "Practiced through genuine, real team communication." },
+    ],
+    howItWorks: [
+      "Learn the platform's less-obvious features (threads, channels, integrations, search) and use them deliberately in real team communication.",
+    ],
+    tools: ["Slack, Microsoft Teams, or Zoom, depending on what's relevant to your context"],
+    scenario: {
+      title: "Threads instead of one crowded channel",
+      body: "A student who only ever used Slack's main channel for everything learned to use threads for side conversations, which noticeably reduced the clutter and confusion in her team's main channel.",
+    },
+    pitfalls: [
+      "Using only the most basic features of a collaboration platform, missing organizational features that genuinely improve team communication.",
+    ],
+    successSignal:
+      "You use at least one less-obvious platform feature deliberately, and it measurably improves your team's communication clarity.",
+    milestoneTies: [],
+  },
+
+  419: {
+    definition:
+      "A First Project Management Tool Mastery uses platforms such as Trello, Asana, Monday, or Jira effectively, building genuine fluency with the tools that structure how modern teams track and manage work.",
+    whyItMatters:
+      "Project management tools are increasingly standard across teams, and fluency with at least one, plus the underlying concepts, transfers readily to whichever specific tool a given workplace uses.",
+    whenWhoWhere: [
+      { label: "When", body: "Build this before or during a team project where structured task tracking would genuinely help." },
+      { label: "Who", body: "Your project team, ideally, though solo practice on personal projects also builds real fluency." },
+      { label: "Where", body: "Practiced through real project tracking, not just a demo account." },
+    ],
+    howItWorks: [
+      "Set up a real project board with tasks, owners, and deadlines, and use it consistently to track actual progress.",
+    ],
+    tools: ["Trello, Asana, Monday.com, or Jira, whichever is free and accessible"],
+    scenario: {
+      title: "Making status visible to the whole team",
+      body: "A student who tracked her capstone project only in her head switched to a Trello board with clear task cards and deadlines, which made the project's actual status visible to her whole team for the first time.",
+    },
+    pitfalls: [
+      "Setting up a board once but never actually maintaining it, letting it drift out of sync with real project status.",
+    ],
+    successSignal:
+      "Your project board accurately reflects real, current status, and your team actually references it rather than tracking things elsewhere.",
+    milestoneTies: [],
+  },
+
+  420: {
+    definition:
+      "A First Documentation Tool Mastery organizes and maintains professional documentation digitally, using tools like Notion, Confluence, or a structured shared drive to keep documentation genuinely findable and current.",
+    whyItMatters:
+      "Documentation that exists but is disorganized or hard to find is nearly as useless as no documentation at all; genuine tool fluency makes documentation actually usable by a team.",
+    whenWhoWhere: [
+      { label: "When", body: "Build this once you have real documentation worth organizing, such as process guides or project references." },
+      { label: "Who", body: "No collaborator required, though team documentation benefits from shared conventions." },
+      { label: "Where", body: "Practiced by organizing and maintaining real documentation." },
+    ],
+    howItWorks: [
+      "Choose a documentation tool, establish a clear structure and naming convention, and migrate or create real documentation within it.",
+    ],
+    tools: ["Notion, Confluence, or a well-organized shared drive"],
+    scenario: {
+      title: "One workspace instead of scattered notes",
+      body: "A student's team documentation was scattered across emails and personal notes until she built a single organized Notion workspace with clear categories, which the whole team started actually using and updating.",
+    },
+    pitfalls: [
+      "Building an elaborate documentation structure that's more complex to maintain than the problem it was meant to solve.",
+    ],
+    successSignal:
+      "Team members can find real, current documentation quickly, and actually keep it updated rather than letting it go stale.",
+    milestoneTies: [],
+  },
+
+  421: {
+    definition:
+      "A First Note-Taking System establishes a reliable digital system for capturing and organizing information, extending the Active Note-Taking System FIRST from Stage Six with a specifically tool-based implementation.",
+    whyItMatters:
+      "A consistent digital note-taking system, used across all contexts (class, meetings, reading), is far more valuable than scattered notes across different apps, paper, and memory.",
+    whenWhoWhere: [
+      { label: "When", body: "Build this before a semester or work period with heavy information intake." },
+      { label: "Who", body: "No collaborator required." },
+      { label: "Where", body: "Applied consistently across all note-taking contexts." },
+    ],
+    howItWorks: [
+      "Choose one digital tool (Notion, OneNote, Evernote, or even a structured Google Doc system) and commit to using it for all your notes, not just some.",
+    ],
+    tools: ["Notion, OneNote, Evernote, or a similar note-taking app"],
+    scenario: {
+      title: "Five places down to one",
+      body: "A student who took notes in five different places (a physical notebook, Google Docs, her phone's notes app, random Slack messages to herself) consolidated everything into one Notion workspace, and found she could actually find and use her past notes for the first time.",
+    },
+    pitfalls: [
+      "Using multiple different note-taking systems simultaneously, which fragments your information and makes it hard to ever find anything later.",
+    ],
+    successSignal:
+      "You can quickly find and reference notes from weeks or months earlier because they all live in one consistent, organized system.",
+    milestoneTies: [],
+  },
+
+  422: {
+    definition:
+      "A First Calendar Management System manages meetings, deadlines, appointments, and priorities digitally, extending the Calendar/Time Management System FIRST from Stage Seven with a more comprehensive, fully adopted system.",
+    whyItMatters:
+      "A calendar that only tracks some commitments, while others live in your memory or scattered notes, isn't actually reliable; full adoption is what makes a calendar system genuinely trustworthy.",
+    whenWhoWhere: [
+      { label: "When", body: "Build this once you have enough competing commitments that partial tracking is starting to fail you." },
+      { label: "Who", body: "No collaborator required." },
+      { label: "Where", body: "Applied consistently across all commitments: classes, meetings, deadlines, personal appointments." },
+    ],
+    howItWorks: [
+      "Enter every real, current commitment into a single digital calendar, using color-coding or categories to distinguish different types.",
+    ],
+    tools: ["Google Calendar, Outlook Calendar, or a similar digital calendar tool"],
+    scenario: {
+      title: "Closing the gap between two calendars",
+      body: "A student who tracked personal appointments separately from academic deadlines missed a doctor's appointment because it wasn't in the same system as everything else. Consolidating everything into one calendar with color-coded categories eliminated the gap.",
+    },
+    pitfalls: [
+      "Maintaining commitments in multiple separate systems, which recreates the exact gap a single reliable calendar is meant to close.",
+    ],
+    successSignal:
+      "Every real commitment lives in one calendar, and you genuinely trust it enough to stop mentally tracking things separately.",
+    milestoneTies: [],
+  },
+
+  423: {
+    definition:
+      "A First Task Management System organizes tasks, priorities, deadlines, and recurring responsibilities in one reliable digital system, extending the Productivity Tool Mastery FIRST earlier in this stage with a specifically task-focused implementation.",
+    whyItMatters:
+      "A task system that only captures some of your responsibilities, while others live in your memory, creates the same unreliability problem as a partial calendar system.",
+    whenWhoWhere: [
+      { label: "When", body: "Build this once you have enough tasks and responsibilities that mental tracking alone is becoming unreliable." },
+      { label: "Who", body: "No collaborator required." },
+      { label: "Where", body: "Applied consistently across all tasks: academic, professional, and personal." },
+    ],
+    howItWorks: [
+      "Capture every current task in one system, including recurring responsibilities, and review and update it daily.",
+    ],
+    tools: ["Todoist, Notion, Asana, or a similar task management tool"],
+    scenario: {
+      title: "Eliminating the mentally-tracked tasks",
+      body: "A student who tracked some tasks in an app and others as mental notes to herself consistently forgot the mentally-tracked ones. Moving everything into one system, reviewed daily, eliminated the dropped tasks.",
+    },
+    pitfalls: [
+      "Setting up a task system but not reviewing it consistently, letting it drift out of sync with what you're actually doing.",
+    ],
+    successSignal:
+      "You review and trust one single task system daily, with nothing significant being tracked purely in memory.",
+    milestoneTies: [],
+  },
+
+  424: {
+    definition:
+      "A First Cloud Storage System organizes and manages files using cloud-based storage, extending the File Management System Set Up FIRST from Stage Seven into a fully cloud-based, accessible-anywhere structure.",
+    whyItMatters:
+      "Cloud storage, organized well, protects against data loss and makes your files accessible from any device, a meaningful upgrade over purely local file storage.",
+    whenWhoWhere: [
+      { label: "When", body: "Build this before you have a genuine data loss scare or need to access files across multiple devices." },
+      { label: "Who", body: "No collaborator required." },
+      { label: "Where", body: "Applied to your full set of academic and professional files." },
+    ],
+    howItWorks: [
+      "Choose a cloud storage platform, migrate your existing files into a clear folder structure, and commit to saving new files there going forward.",
+    ],
+    tools: ["Google Drive, Dropbox, or OneDrive"],
+    scenario: {
+      title: "A hardware failure that cost nothing",
+      body: "A student who kept all her files only on her laptop lost significant work when her laptop was damaged. Migrating to organized cloud storage afterward meant her next hardware issue cost her nothing.",
+    },
+    pitfalls: [
+      "Using cloud storage inconsistently, saving some files locally and others in the cloud, which recreates the exact risk cloud storage is meant to eliminate.",
+    ],
+    successSignal:
+      "All your important files live in the cloud with a clear structure, accessible from any device, with nothing critical existing only locally.",
+    milestoneTies: [],
+  },
+
+  425: {
+    definition:
+      "A First File-Sharing System shares documents securely and efficiently with others, building genuine fluency with permission settings and sharing best practices rather than just sending raw file attachments.",
+    whyItMatters:
+      "Poor file-sharing practices, like emailing large attachments or sharing files with overly broad permissions, create real friction and occasional security risk; genuine fluency avoids both.",
+    whenWhoWhere: [
+      { label: "When", body: "Build this before you need to share files regularly with a team or collaborators." },
+      { label: "Who", body: "Anyone you're sharing files with." },
+      { label: "Where", body: "Applied to any real file-sharing need." },
+    ],
+    howItWorks: [
+      "Learn your cloud storage platform's sharing and permission settings, and use appropriately scoped sharing (view-only versus edit access) rather than defaulting to the broadest option.",
+    ],
+    tools: ["Your cloud storage platform's built-in sharing features"],
+    scenario: {
+      title: "One link instead of bounced attachments",
+      body: "A student who used to email large files as attachments, causing bounced emails and version confusion, switched to sharing a single cloud link with appropriate permissions, which eliminated both problems.",
+    },
+    pitfalls: [
+      "Defaulting to the broadest possible sharing permissions out of convenience, rather than genuinely considering what access level is actually appropriate.",
+    ],
+    successSignal:
+      "You share files efficiently with appropriately scoped permissions, without email attachment issues or unnecessary access risk.",
+    milestoneTies: [],
+  },
+
+  426: {
+    definition:
+      "A First Version Control Awareness is a working understanding of versioning, revisions, and collaborative document management, the underlying concepts that prevent lost work and conflicting edits.",
+    whyItMatters:
+      "Without genuine version control awareness, collaborative document work often produces confusion about which version is current, or accidentally overwritten work.",
+    whenWhoWhere: [
+      { label: "When", body: "Build this before any significant collaborative document project." },
+      { label: "Who", body: "No collaborator required for the awareness itself, though collaborative practice reinforces it." },
+      { label: "Where", body: "Applied to any collaborative document work." },
+    ],
+    howItWorks: [
+      "Learn your tool's version history feature (available in Google Docs, Word, and most cloud tools) and practice reviewing and reverting to a previous version.",
+    ],
+    tools: ["Your document tool's built-in version history feature"],
+    scenario: {
+      title: "Restored within seconds",
+      body: "A student accidentally overwrote a teammate's work in a shared document, but version history let her restore it within seconds, avoiding what would have otherwise been a significant, stressful loss.",
+    },
+    pitfalls: [
+      "Not knowing your tools have version history at all, which turns an easily recoverable mistake into a genuinely lost piece of work.",
+    ],
+    successSignal:
+      "You can locate and use your document tool's version history to review or restore a previous version.",
+    milestoneTies: [],
+  },
+
+  427: {
+    definition:
+      "A First Git & GitHub Exposure is a working understanding of repositories, commits, branches, and collaboration, the version control system underlying most modern software development.",
+    whyItMatters:
+      "Even outside pure engineering roles, Git and GitHub exposure is increasingly valuable given how central they are to how modern technical teams collaborate.",
+    whenWhoWhere: [
+      { label: "When", body: "Build this if your field has any adjacency to technical work, even if you're not planning to code extensively yourself." },
+      { label: "Who", body: "A free online tutorial or course." },
+      { label: "Where", body: "Practiced through a beginner-friendly guided tutorial." },
+    ],
+    howItWorks: [
+      "Complete a beginner Git tutorial covering the core concepts: repository, commit, branch, and pull request, and create one real GitHub repository of your own.",
+    ],
+    tools: ["GitHub's own beginner guides, or a platform like Codecademy"],
+    scenario: {
+      title: "Following engineers' conversations",
+      body: "A marketing student with no coding background completed a beginner Git tutorial before an internship at a tech-adjacent company, and found she could follow her engineering colleagues' conversations far more easily as a result.",
+    },
+    pitfalls: [
+      "Assuming this is only relevant for engineers, when basic Git literacy increasingly helps in cross-functional collaboration with technical teams.",
+    ],
+    successSignal:
+      "You can explain what a commit and a branch are, and have created at least one real GitHub repository yourself.",
+    milestoneTies: [],
+  },
+
+  428: {
+    definition:
+      "A First AI Tool Exploration identifies AI tools that can improve learning, productivity, research, and work, building genuine familiarity with a rapidly evolving category rather than staying purely a passive observer.",
+    whyItMatters:
+      "AI tools are reshaping how work gets done across nearly every field, and hands-on exploration, not just awareness that they exist, is what lets you actually benefit from them.",
+    whenWhoWhere: [
+      { label: "When", body: "Build this now, given how rapidly this category continues to evolve." },
+      { label: "Who", body: "No collaborator required." },
+      { label: "Where", body: "Practiced through direct, hands-on use of real AI tools." },
+    ],
+    howItWorks: [
+      "Try three different AI tools relevant to your work (a writing assistant, a research tool, a data tool) on a genuine real task, not just a toy example.",
+    ],
+    tools: ["Widely available AI tools relevant to your field"],
+    scenario: {
+      title: "Faster research, with real verification still needed",
+      body: "A student who'd only heard about AI tools secondhand tried one on a genuine research task and found it cut her initial research time significantly, though she still needed to verify and refine what it produced.",
+    },
+    pitfalls: [
+      "Treating AI tools as either a complete replacement for your own thinking or dismissing them entirely without ever genuinely trying them.",
+    ],
+    successSignal:
+      "You've used at least three different AI tools on real tasks and can describe specifically what each was and wasn't good for.",
+    milestoneTies: [],
+  },
+
+  429: {
+    definition:
+      "A First AI Productivity Workflow integrates AI into a practical professional workflow, moving beyond one-off exploration into a genuinely repeatable process.",
+    whyItMatters:
+      "The real value of AI tools comes from integrating them into a consistent workflow, not just occasional, one-off experimentation.",
+    whenWhoWhere: [
+      { label: "When", body: "Build this once you've identified, through AI Tool Exploration, a genuine recurring task AI could meaningfully help with." },
+      { label: "Who", body: "No collaborator required." },
+      { label: "Where", body: "Applied to a real, recurring professional or academic task." },
+    ],
+    howItWorks: [
+      "Identify one recurring task, build a specific, repeatable process for using an AI tool as part of it, and use that process consistently for at least two weeks.",
+    ],
+    tools: ["The specific AI tool identified as genuinely useful during your exploration phase"],
+    scenario: {
+      title: "First-pass drafts, always reviewed",
+      body: "A student who used AI ad hoc for occasional help built a consistent workflow using it specifically to draft first-pass outlines for weekly reports, which she then always reviewed and revised herself, saving real time while keeping final judgment in her own hands.",
+    },
+    pitfalls: [
+      "Using AI output without genuine review and revision, which risks passing along errors or a voice that doesn't actually sound like you.",
+    ],
+    successSignal:
+      "You have a specific, repeatable workflow using AI for a real recurring task, with your own review and judgment still genuinely part of the process.",
+    milestoneTies: [],
+  },
+
+  430: {
+    definition:
+      "A First Data Visualization Tool uses a platform such as Power BI, Tableau, or a similar tool, extending the Data Visualization FIRST from Stage Seven with genuine fluency in a dedicated visualization platform.",
+    whyItMatters:
+      "Dedicated visualization tools offer far more powerful, interactive charting capabilities than spreadsheet charts alone, increasingly valuable as data becomes more central to most roles.",
+    whenWhoWhere: [
+      { label: "When", body: "Build this once you have real data worth visualizing beyond what a simple spreadsheet chart can show." },
+      { label: "Who", body: "No collaborator required, though free tutorials accelerate learning." },
+      { label: "Where", body: "Practiced on a real or realistic dataset." },
+    ],
+    howItWorks: [
+      "Complete a beginner tutorial for one visualization tool, then build one real chart or dashboard using your own or sample data.",
+    ],
+    tools: ["Power BI or Tableau both offer free versions or trials for learning"],
+    scenario: {
+      title: "Interactive beats static",
+      body: "A student who'd only made spreadsheet charts built her first interactive dashboard in Tableau for a class project, and the visual polish and interactivity noticeably impressed her professor compared to her classmates' static charts.",
+    },
+    pitfalls: [
+      "Assuming spreadsheet charts are sufficient for all purposes, missing the genuine value of a dedicated, more powerful visualization tool.",
+    ],
+    successSignal:
+      "You've built at least one real chart or dashboard in a dedicated visualization tool, beyond basic spreadsheet charting.",
+    milestoneTies: [],
+  },
+
+  431: {
+    definition:
+      "A First Database Tool Exposure is a working understanding of how databases and database-management tools are used, even without becoming a database expert yourself.",
+    whyItMatters:
+      "Databases underlie most business systems, and basic exposure helps you understand how the data you work with daily is actually stored and structured.",
+    whenWhoWhere: [
+      { label: "When", body: "Build this if your field has any adjacency to data-heavy systems, even if you won't be building databases yourself." },
+      { label: "Who", body: "A free online tutorial or course." },
+      { label: "Where", body: "Practiced through a beginner-friendly guided tutorial." },
+    ],
+    howItWorks: [
+      "Complete a beginner tutorial on basic database concepts (tables, rows, columns, simple queries) and, if possible, explore a real database tool like Airtable, which combines database concepts with a more approachable interface.",
+    ],
+    tools: ["Airtable is a genuinely approachable entry point that combines spreadsheet familiarity with real database concepts"],
+    scenario: {
+      title: "Spreadsheets were databases all along",
+      body: "A marketing student assumed databases were purely an engineering concern until a beginner Airtable tutorial revealed she'd essentially been building simple databases in spreadsheets all along, just without the more powerful relational features a real database offers.",
+    },
+    pitfalls: [
+      "Assuming database concepts are irrelevant outside technical roles, missing how broadly the underlying concepts actually apply.",
+    ],
+    successSignal:
+      "You can explain basic database concepts (tables, rows, columns) and have tried at least one real, approachable database tool.",
+    milestoneTies: [],
+  },
+
+  432: {
+    definition:
+      "A First CRM Tool Exposure is a working understanding of how organizations manage customer and stakeholder information using Customer Relationship Management tools like Salesforce or HubSpot.",
+    whyItMatters:
+      "CRMs are central to how sales, marketing, and customer-facing teams operate, and basic exposure is valuable even outside a dedicated sales role.",
+    whenWhoWhere: [
+      { label: "When", body: "Build this if your field has any adjacency to sales, marketing, or customer relationships." },
+      { label: "Who", body: "A free tutorial, trial account, or a mentor who uses a CRM professionally." },
+      { label: "Where", body: "Practiced through a free trial or guided tutorial." },
+    ],
+    howItWorks: [
+      "Explore a free CRM trial or tutorial, and understand the core concepts: contacts, deals or opportunities, and pipeline stages.",
+    ],
+    tools: ["HubSpot offers a genuinely useful free tier for learning core CRM concepts"],
+    scenario: {
+      title: "The same data behind campaign work",
+      body: "A marketing student assumed CRMs were purely a sales tool until exploring HubSpot's free tier revealed how much her own campaign work depended on the same underlying contact and engagement data.",
+    },
+    pitfalls: [
+      "Assuming CRM tools are irrelevant to your specific role, missing how broadly customer and stakeholder data concepts actually apply.",
+    ],
+    successSignal:
+      "You can explain the core CRM concepts (contacts, deals, pipeline) and have explored a real CRM tool, even briefly.",
+    milestoneTies: [],
+  },
+
+  433: {
+    definition:
+      "A First Automation Tool Exploration identifies repetitive tasks that can be automated, building the specific skill of recognizing automation opportunities before attempting to implement them.",
+    whyItMatters:
+      "Recognizing what's genuinely automatable is a distinct skill from the automation itself, and it's the necessary first step before any real automation work.",
+    whenWhoWhere: [
+      { label: "When", body: "Practice this whenever you notice yourself doing the same manual task repeatedly." },
+      { label: "Who", body: "No collaborator required." },
+      { label: "Where", body: "Applied to your own real, repeated tasks." },
+    ],
+    howItWorks: [
+      "Track your tasks for a few days, and flag any that are genuinely repetitive and rule-based, the kind of task automation tools handle well.",
+    ],
+    tools: ["Your own task log or time-tracking data as source material"],
+    scenario: {
+      title: "A perfect fit hiding in plain sight",
+      body: "A student who manually copied data between two systems every week hadn't considered it a candidate for automation until deliberately auditing her repetitive tasks revealed it was actually a perfect fit.",
+    },
+    pitfalls: [
+      "Assuming automation only applies to obviously technical tasks, missing simpler, everyday repetitive tasks that are just as automatable.",
+    ],
+    successSignal:
+      "You can name at least one genuine repetitive task in your own work that's a strong automation candidate.",
+    milestoneTies: [],
+  },
+
+  434: {
+    definition:
+      "A First Workflow Automation automates a simple repetitive professional process, extending the Task Automation Attempted FIRST from Stage Seven with a genuinely completed, working automation.",
+    whyItMatters:
+      "Actually completing a real automation, not just identifying a candidate for one, is what proves the concept and produces genuine time savings.",
+    whenWhoWhere: [
+      { label: "When", body: "Build this once you've identified a genuine automation candidate through Automation Tool Exploration." },
+      { label: "Who", body: "No collaborator required, though someone experienced with the automation tool can help troubleshoot." },
+      { label: "Where", body: "Applied to the specific repetitive task identified earlier." },
+    ],
+    howItWorks: [
+      "Use a simple automation tool to build a working automation for your identified task, and verify it actually runs correctly.",
+    ],
+    tools: ["Zapier, Make (formerly Integromat), or built-in automation features in tools you already use"],
+    scenario: {
+      title: "Real time saved every week",
+      body: "A student automated the weekly data transfer she'd identified as repetitive, using a simple Zapier automation, which reliably saved her real time every week going forward.",
+    },
+    pitfalls: [
+      "Building an automation but never actually verifying it works correctly over multiple real runs, risking silent failures.",
+    ],
+    successSignal:
+      "Your automation runs correctly and reliably, genuinely saving time compared to the manual process.",
+    milestoneTies: [],
+  },
+
+  435: {
+    definition:
+      "A First Integration Between Tools connects multiple applications to create a more efficient workflow, extending the Cross-Platform Tool Integration FIRST from Stage Seven with a genuinely completed integration.",
+    whyItMatters:
+      "Real workflows rarely live in just one tool; connecting tools to reduce manual re-entry between them meaningfully improves efficiency.",
+    whenWhoWhere: [
+      { label: "When", body: "Build this once you notice yourself regularly moving information manually between two or more tools." },
+      { label: "Who", body: "No collaborator required." },
+      { label: "Where", body: "Applied to your own real, multi-tool workflow." },
+    ],
+    howItWorks: [
+      "Identify two tools you use together regularly, and set up a genuine integration between them, verifying it actually works.",
+    ],
+    tools: ["Zapier, native app integrations, or built-in import/export features"],
+    scenario: {
+      title: "Eliminating duplicate entry for good",
+      body: "A student manually re-entering the same information into both her calendar and her task manager set up a real integration syncing them automatically, eliminating the duplicate entry permanently.",
+    },
+    pitfalls: [
+      "Setting up an integration but never verifying it actually syncs correctly, risking silent data mismatches.",
+    ],
+    successSignal:
+      "Information flows automatically between your tools, verified to work correctly, without manual re-entry.",
+    milestoneTies: [],
+  },
+
+  436: {
+    definition:
+      "A First Tool Comparison Exercise compares tools based on functionality, cost, usability, and business value, building the specific skill of objective tool evaluation before committing to one.",
+    whyItMatters:
+      "Choosing a tool without genuine comparison often means settling for the first one you encounter, rather than the one that actually fits your needs best.",
+    whenWhoWhere: [
+      { label: "When", body: "Practice this whenever you need to choose between multiple real tool options for a genuine need." },
+      { label: "Who", body: "No collaborator required, though input from others who've used the tools helps." },
+      { label: "Where", body: "Applied to any real tool decision." },
+    ],
+    howItWorks: [
+      "Identify two or three real options for a genuine need, and compare them explicitly across functionality, cost, usability, and overall value.",
+    ],
+    tools: ["A simple comparison matrix: tool, functionality, cost, usability, overall value"],
+    scenario: {
+      title: "The assumed favorite scored lowest",
+      body: "A student choosing a project management tool for her club compared three real options across a simple matrix, and found the tool she'd initially assumed was best actually scored lowest on usability for her non-technical members.",
+    },
+    pitfalls: [
+      "Choosing the first tool you encounter, or the most popular one, without genuine comparison against real alternatives.",
+    ],
+    successSignal:
+      "You choose a tool based on an explicit comparison, and can articulate specifically why it beat the alternatives.",
+    milestoneTies: [],
+  },
+
+  437: {
+    definition:
+      "A First Tool Selection Exercise chooses the appropriate tool for a specific problem or workflow, extending the Tool Comparison Exercise into an actual, committed decision.",
+    whyItMatters:
+      "Comparison alone doesn't create value until it leads to a genuine, committed decision; this FIRST closes the loop from evaluation to action.",
+    whenWhoWhere: [
+      { label: "When", body: "Use this immediately after completing a genuine Tool Comparison Exercise." },
+      { label: "Who", body: "No collaborator required, though team buy-in matters for shared tool decisions." },
+      { label: "Where", body: "Applied to the specific need identified during comparison." },
+    ],
+    howItWorks: [
+      "Based on your comparison, commit explicitly to one tool, and implement it for the specific problem or workflow it was chosen for.",
+    ],
+    tools: ["Your completed Tool Comparison Exercise as the basis for the decision"],
+    scenario: {
+      title: "Adoption jumped after a real comparison",
+      body: "After comparing three project management tools, a student committed explicitly to the one that scored highest on usability for her team, and the team's actual adoption rate was noticeably higher than with a previous tool chosen without real comparison.",
+    },
+    pitfalls: [
+      "Completing a genuine comparison but never actually committing to and implementing the winning choice.",
+    ],
+    successSignal:
+      "You've genuinely implemented the tool your comparison identified as the best fit, not just decided on paper.",
+    milestoneTies: [],
+  },
+
+  438: {
+    definition:
+      "A First Software Troubleshooting Exercise diagnoses and resolves a basic software or tool problem, extending the Technical Troubleshooting Exercise FIRST from Stage Seven with a specifically software-focused application.",
+    whyItMatters:
+      "Basic software troubleshooting skill prevents small technical issues from becoming significant blockers, and reduces unnecessary dependence on IT support for simple problems.",
+    whenWhoWhere: [
+      { label: "When", body: "Practice this whenever a genuine software issue arises, treating it as a troubleshooting opportunity rather than immediately escalating." },
+      { label: "Who", body: "No collaborator required for basic issues; escalate to IT support for genuinely complex ones." },
+      { label: "Where", body: "Applied to any real software problem you encounter." },
+    ],
+    howItWorks: [
+      "When an issue arises, isolate the specific point of failure, search for the specific error message or symptom, and try one solution at a time rather than changing multiple things at once.",
+    ],
+    tools: ["Search engines, official tool documentation, and community forums"],
+    scenario: {
+      title: "A documented fix within minutes",
+      body: "A student whose presentation software crashed repeatedly searched the specific error message rather than immediately giving up, and found a documented fix within minutes that resolved the issue permanently.",
+    },
+    pitfalls: [
+      "Immediately escalating every issue to IT support or giving up, without first attempting basic, genuine troubleshooting.",
+    ],
+    successSignal:
+      "You resolve a real software issue yourself, or at minimum narrow it down enough to describe it precisely to IT support.",
+    milestoneTies: [],
+  },
+
+  439: {
+    definition:
+      "A First Digital Security Tool Awareness is a working understanding of tools used to protect accounts, data, and systems, such as password managers, two-factor authentication, and VPNs.",
+    whyItMatters:
+      "Basic digital security practices meaningfully reduce real risk, and genuine awareness of the relevant tools makes good security habits far easier to maintain consistently.",
+    whenWhoWhere: [
+      { label: "When", body: "Build this now, before a genuine security incident makes the gap costly." },
+      { label: "Who", body: "No collaborator required." },
+      { label: "Where", body: "Applied to your own real accounts and devices." },
+    ],
+    howItWorks: [
+      "Set up a password manager, enable two-factor authentication on your most important accounts, and understand when a VPN is genuinely relevant.",
+    ],
+    tools: ["A password manager like Bitwarden or 1Password", "your accounts' built-in two-factor authentication settings"],
+    scenario: {
+      title: "Closing a vulnerability before it hits home",
+      body: "A student who reused the same password across multiple accounts set up a password manager with unique passwords for each after a friend's account was compromised through a reused password, closing a real vulnerability before it affected her.",
+    },
+    pitfalls: [
+      "Assuming security incidents \"won't happen to me,\" which is exactly the assumption that makes basic security gaps costly when they do occur.",
+    ],
+    successSignal:
+      "You use a password manager with unique passwords, and have two-factor authentication enabled on your most important accounts.",
+    milestoneTies: [],
+  },
+
+  440: {
+    definition:
+      "A First Professional Software Stack builds a personal collection of tools for work, learning, and productivity, consolidating everything built throughout this stage into one coherent, intentional set.",
+    whyItMatters:
+      "A deliberately curated set of tools, chosen and understood as a coherent stack rather than a random accumulation, is far more effective than tools adopted piecemeal without any overall coherence.",
+    whenWhoWhere: [
+      { label: "When", body: "Build this once you've explored enough individual tools throughout this stage to make deliberate, informed choices." },
+      { label: "Who", body: "No collaborator required." },
+      { label: "Where", body: "Documented in a single reference for your own use." },
+    ],
+    howItWorks: [
+      "List every tool you've genuinely adopted throughout this stage, organized by category, and identify any remaining gaps worth filling.",
+    ],
+    tools: ["Your accumulated tool choices from throughout this stage"],
+    scenario: {
+      title: "Seeing the whole stack for the first time",
+      body: "A student who'd adopted tools piecemeal throughout the semester documented her full stack for the first time, and realized she had genuine redundancy in two categories while missing a tool entirely in a third.",
+    },
+    pitfalls: [
+      "Never stepping back to see your tool choices as a coherent whole, missing both redundancies and genuine gaps.",
+    ],
+    successSignal:
+      "You have a documented, intentional software stack with a clear tool for each major category, and no significant redundancy or gaps.",
+    milestoneTies: [],
+  },
+
+  441: {
+    definition:
+      "A First Tool Efficiency Audit evaluates which tools genuinely improve productivity and which create unnecessary complexity, extending the Reflection on Tool Efficiency FIRST from Stage Seven to your full, comprehensive stack.",
+    whyItMatters:
+      "Not every adopted tool actually earns its place; periodic honest evaluation prevents your stack from accumulating tools that add complexity without genuine value.",
+    whenWhoWhere: [
+      { label: "When", body: "Conduct this periodically, especially after documenting your full Professional Software Stack." },
+      { label: "Who", body: "No collaborator required." },
+      { label: "Where", body: "Applied to your full current tool stack." },
+    ],
+    howItWorks: [
+      "Review each tool in your stack and honestly assess whether it genuinely improves your work or just adds complexity, and consolidate or drop any that don't earn their place.",
+    ],
+    tools: ["Your documented Professional Software Stack from earlier in this section"],
+    scenario: {
+      title: "Three note apps down to one",
+      body: "A student's tool efficiency audit revealed she was using three different note-taking apps, none fully committed to, and consolidating back to just one significantly reduced her mental overhead without losing any genuine functionality.",
+    },
+    pitfalls: [
+      "Continuing to use tools out of habit or sunk cost, without ever honestly evaluating whether they're still genuinely earning their place.",
+    ],
+    successSignal:
+      "You've dropped or consolidated at least one tool that wasn't genuinely earning its place in your stack.",
     milestoneTies: [],
   },
 };

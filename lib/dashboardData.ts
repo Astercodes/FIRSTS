@@ -1,12 +1,12 @@
 export type ModuleStatus = "complete" | "in-progress" | "available" | "locked";
-export type StageId = "one" | "two" | "three" | "four" | "five" | "six" | "seven" | "eight" | "nine" | "ten";
+export type StageId = "one" | "two" | "three" | "four" | "five" | "six" | "seven" | "eight" | "nine" | "ten" | "eleven";
 
 export type FirstModule = {
   id: number;
   code: string;
   stage: StageId;
   title: string;
-  category: "A" | "B" | "C" | "D" | "E" | "F" | "G" | "H" | "I" | "J" | "K" | "L" | "M" | "N" | "O" | "P" | "Q" | "R" | "S" | "T" | "U" | "V" | "W" | "X" | "Y" | "Z" | "AA" | "BB" | "CC" | "DD" | "EE" | "FF" | "GG" | "HH" | "II" | "JJ" | "KK" | "LL" | "MM" | "NN" | "OO" | "PP" | "QQ" | "RR";
+  category: "A" | "B" | "C" | "D" | "E" | "F" | "G" | "H" | "I" | "J" | "K" | "L" | "M" | "N" | "O" | "P" | "Q" | "R" | "S" | "T" | "U" | "V" | "W" | "X" | "Y" | "Z" | "AA" | "BB" | "CC" | "DD" | "EE" | "FF" | "GG" | "HH" | "II" | "JJ" | "KK" | "LL" | "MM" | "NN" | "OO" | "PP" | "QQ" | "RR" | "SS" | "TT" | "UU";
   time: string;
   difficulty: "Easy" | "Moderate" | "Deep";
   status: ModuleStatus;
@@ -63,6 +63,9 @@ export const CATEGORY_META = {
   PP: { label: "Friendships & Peer Connections", color: "var(--berry-burst)" },
   QQ: { label: "Project Partners & Teamwork", color: "var(--lime-zest)" },
   RR: { label: "Mentorship & Professional Connections", color: "var(--pink-grapefruit)" },
+  SS: { label: "Core Productivity & Office Tools", color: "var(--sunshine-orange)" },
+  TT: { label: "Personal Systems & Technical Foundations", color: "var(--citrus-lime)" },
+  UU: { label: "Advanced Tools, Automation & Optimization", color: "var(--fuchsia-blast)" },
 } as const;
 
 export const STAGES: { id: StageId; label: string; shortLabel: string; href: string }[] = [
@@ -76,6 +79,7 @@ export const STAGES: { id: StageId; label: string; shortLabel: string; href: str
   { id: "eight", label: "Stage Eight · Soft Skills", shortLabel: "Stage Eight", href: "/dashboard/stage/eight" },
   { id: "nine", label: "Stage Nine · English Vocabulary", shortLabel: "Stage Nine", href: "/dashboard/stage/nine" },
   { id: "ten", label: "Stage Ten · Relationships & Connections", shortLabel: "Stage Ten", href: "/dashboard/stage/ten" },
+  { id: "eleven", label: "Stage Eleven · Tools & Technology", shortLabel: "Stage Eleven", href: "/dashboard/stage/eleven" },
 ];
 
 const STAGE_ONE_FIRSTS: FirstModule[] = [
@@ -519,7 +523,40 @@ const STAGE_TEN_FIRSTS: FirstModule[] = [
   { id: 411, code: "N30", stage: "ten", title: "Reflection on Relationship Growth", category: "RR", time: "45 min to 1 hr", difficulty: "Moderate", status: "locked" },
 ];
 
-export const FIRSTS: FirstModule[] = [...STAGE_ONE_FIRSTS, ...STAGE_TWO_FIRSTS, ...STAGE_THREE_FIRSTS, ...STAGE_FOUR_FIRSTS, ...STAGE_FIVE_FIRSTS, ...STAGE_SIX_FIRSTS, ...STAGE_SEVEN_FIRSTS, ...STAGE_EIGHT_FIRSTS, ...STAGE_NINE_FIRSTS, ...STAGE_TEN_FIRSTS];
+const STAGE_ELEVEN_FIRSTS: FirstModule[] = [
+  { id: 412, code: "O1", stage: "eleven", title: "Tool Ecosystem Awareness", category: "SS", time: "30 to 45 min", difficulty: "Easy", status: "complete", thoroughness: 2, completedAt: "2026-07-29" },
+  { id: 413, code: "O2", stage: "eleven", title: "Productivity Tool Mastery", category: "SS", time: "2 weeks", difficulty: "Moderate", status: "locked" },
+  { id: 414, code: "O3", stage: "eleven", title: "Microsoft Office Mastery", category: "SS", time: "Several hours", difficulty: "Moderate", status: "complete", thoroughness: 3, completedAt: "2026-08-01" },
+  { id: 415, code: "O4", stage: "eleven", title: "Google Workspace Mastery", category: "SS", time: "Several hours", difficulty: "Moderate", status: "locked" },
+  { id: 416, code: "O5", stage: "eleven", title: "Spreadsheet Tool Mastery", category: "SS", time: "Several hours", difficulty: "Moderate", status: "complete", thoroughness: 1, completedAt: "2026-08-03" },
+  { id: 417, code: "O6", stage: "eleven", title: "Presentation Tool Mastery", category: "SS", time: "A few hours", difficulty: "Moderate", status: "locked" },
+  { id: 418, code: "O7", stage: "eleven", title: "Collaboration Platform Mastery", category: "SS", time: "Ongoing", difficulty: "Easy", status: "complete", thoroughness: 2, completedAt: "2026-08-05" },
+  { id: 419, code: "O8", stage: "eleven", title: "Project Management Tool Mastery", category: "SS", time: "1 hr to set up", difficulty: "Moderate", status: "locked" },
+  { id: 420, code: "O9", stage: "eleven", title: "Documentation Tool Mastery", category: "SS", time: "Several hours", difficulty: "Moderate", status: "complete", thoroughness: 3, completedAt: "2026-08-07" },
+  { id: 421, code: "O10", stage: "eleven", title: "Note-Taking System", category: "SS", time: "A few hours", difficulty: "Moderate", status: "locked" },
+  { id: 422, code: "O11", stage: "eleven", title: "Calendar Management System", category: "TT", time: "30 min", difficulty: "Easy", status: "complete", thoroughness: 2, completedAt: "2026-08-09" },
+  { id: 423, code: "O12", stage: "eleven", title: "Task Management System", category: "TT", time: "30 min", difficulty: "Easy", status: "locked" },
+  { id: 424, code: "O13", stage: "eleven", title: "Cloud Storage System", category: "TT", time: "A few hours", difficulty: "Moderate", status: "complete", thoroughness: 1, completedAt: "2026-08-11" },
+  { id: 425, code: "O14", stage: "eleven", title: "File-Sharing System", category: "TT", time: "20 min", difficulty: "Easy", status: "locked" },
+  { id: 426, code: "O15", stage: "eleven", title: "Version Control Awareness", category: "TT", time: "15 min", difficulty: "Easy", status: "complete", thoroughness: 2, completedAt: "2026-08-13" },
+  { id: 427, code: "O16", stage: "eleven", title: "Git & GitHub Exposure", category: "TT", time: "A few hours", difficulty: "Moderate", status: "locked" },
+  { id: 428, code: "O17", stage: "eleven", title: "AI Tool Exploration", category: "TT", time: "A few hours", difficulty: "Easy", status: "complete", thoroughness: 3, completedAt: "2026-08-15" },
+  { id: 429, code: "O18", stage: "eleven", title: "AI Productivity Workflow", category: "TT", time: "A few hours", difficulty: "Moderate", status: "locked" },
+  { id: 430, code: "O19", stage: "eleven", title: "Data Visualization Tool", category: "TT", time: "Several hours", difficulty: "Moderate", status: "complete", thoroughness: 2, completedAt: "2026-08-17" },
+  { id: 431, code: "O20", stage: "eleven", title: "Database Tool Exposure", category: "TT", time: "A few hours", difficulty: "Easy", status: "locked" },
+  { id: 432, code: "O21", stage: "eleven", title: "CRM Tool Exposure", category: "UU", time: "A few hours", difficulty: "Easy", status: "complete", thoroughness: 1, completedAt: "2026-08-19" },
+  { id: 433, code: "O22", stage: "eleven", title: "Automation Tool Exploration", category: "UU", time: "A few days", difficulty: "Easy", status: "locked" },
+  { id: 434, code: "O23", stage: "eleven", title: "Workflow Automation", category: "UU", time: "A few hours", difficulty: "Moderate", status: "complete", thoroughness: 3, completedAt: "2026-08-21" },
+  { id: 435, code: "O24", stage: "eleven", title: "Integration Between Tools", category: "UU", time: "30 to 45 min", difficulty: "Moderate", status: "locked" },
+  { id: 436, code: "O25", stage: "eleven", title: "Tool Comparison Exercise", category: "UU", time: "30 to 45 min", difficulty: "Easy", status: "complete", thoroughness: 2, completedAt: "2026-08-23" },
+  { id: 437, code: "O26", stage: "eleven", title: "Tool Selection Exercise", category: "UU", time: "Varies", difficulty: "Easy", status: "locked" },
+  { id: 438, code: "O27", stage: "eleven", title: "Software Troubleshooting Exercise", category: "UU", time: "Varies", difficulty: "Easy", status: "complete", thoroughness: 1, completedAt: "2026-08-25" },
+  { id: 439, code: "O28", stage: "eleven", title: "Digital Security Tool Awareness", category: "UU", time: "1 hr", difficulty: "Easy", status: "locked" },
+  { id: 440, code: "O29", stage: "eleven", title: "Professional Software Stack", category: "UU", time: "45 min", difficulty: "Moderate", status: "complete", thoroughness: 3, completedAt: "2026-08-26" },
+  { id: 441, code: "O30", stage: "eleven", title: "Tool Efficiency Audit", category: "UU", time: "30 to 45 min", difficulty: "Moderate", status: "locked" },
+];
+
+export const FIRSTS: FirstModule[] = [...STAGE_ONE_FIRSTS, ...STAGE_TWO_FIRSTS, ...STAGE_THREE_FIRSTS, ...STAGE_FOUR_FIRSTS, ...STAGE_FIVE_FIRSTS, ...STAGE_SIX_FIRSTS, ...STAGE_SEVEN_FIRSTS, ...STAGE_EIGHT_FIRSTS, ...STAGE_NINE_FIRSTS, ...STAGE_TEN_FIRSTS, ...STAGE_ELEVEN_FIRSTS];
 
 export const MOCK_USER = {
   firstName: "Ada",

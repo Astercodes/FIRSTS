@@ -4035,4 +4035,263 @@ export const WORKSHEET_SCHEMAS: Record<number, WorksheetField[]> = {
     { type: "textarea", key: "remainingChallenge", label: "Area still genuinely difficult", section: "Remaining challenge", rows: 2, seed: "I still avoid conflict with close friends longer than I should." },
     { type: "textarea", key: "nextSteps", label: "What I'll focus on next", section: "Next steps", rows: 2, seed: "Practicing the same direct \"I\" statement approach with friends that I've gotten comfortable using on teams." },
   ],
+
+  412: [
+    { type: "table", key: "categoryMap", label: "Category map", section: "Category map", columns: [
+      { key: "category", label: "Category", kind: "text" },
+      { key: "tool", label: "Specific Tool I Know Of", kind: "text" },
+    ], seedRows: [
+      { category: "Productivity", tool: "Notion" },
+      { category: "Collaboration", tool: "Slack" },
+      { category: "Project management", tool: "Trello" },
+      { category: "Data", tool: "Google Sheets" },
+      { category: "Automation", tool: "Zapier" },
+    ] },
+    { type: "text", key: "gapCategory", label: "Category where I don't yet know a specific tool", section: "Gaps", seed: "Database tools, I couldn't name a single one before this" },
+  ],
+
+  413: [
+    { type: "text", key: "toolChosen", label: "Tool", section: "Tool chosen", seed: "Todoist" },
+    { type: "text", key: "gapAddressed", label: "Gap it addresses", seed: "Tasks currently split between three different apps and my memory" },
+    { type: "table", key: "twoWeekLog", label: "Two-week log", section: "Two-week log", columns: [
+      { key: "day", label: "Day", kind: "text" },
+      { key: "used", label: "Used It? (Y/N)", kind: "text" },
+      { key: "notes", label: "Notes", kind: "text" },
+    ], seedRows: [
+      { day: "Mon", used: "Y", notes: "Had to consciously remember to open it" },
+      { day: "Wed", used: "Y", notes: "Starting to check it without thinking" },
+      { day: "Fri", used: "Y", notes: "Caught a deadline I would have otherwise missed" },
+    ] },
+    { type: "text", key: "automatic", label: "Did it become genuinely automatic?", seed: "By the second week, yes, I open it before I open anything else." },
+  ],
+
+  414: [
+    { type: "table", key: "tasksCompleted", label: "Tasks completed", section: "Tasks completed", columns: [
+      { key: "app", label: "App", kind: "text" },
+      { key: "task", label: "Real Task Completed", kind: "text" },
+    ], seedRows: [
+      { app: "Word", task: "Formatted a resume with proper styles instead of manual spacing" },
+      { app: "Excel", task: "Built a budget tracker with SUM and IF formulas" },
+      { app: "PowerPoint", task: "Rebuilt a deck using a master slide for consistency" },
+      { app: "Outlook", task: "Set up folders and rules to organize my inbox" },
+    ] },
+    { type: "text", key: "leastFamiliar", label: "Which app felt least familiar, and why?", section: "Reflection", seed: "Outlook, I'd only ever used Gmail so the rules and folder system took longest to learn." },
+  ],
+
+  415: [
+    { type: "text", key: "collaborator", label: "Collaborator", section: "The task", seed: "Priya" },
+    { type: "textarea", key: "task", label: "Task completed together", rows: 2, seed: "Built a shared budget spreadsheet for our club event, editing at the same time." },
+    { type: "textarea", key: "comparison", label: "How did real-time collaboration compare to emailing versions?", section: "Reflection", rows: 2, seed: "Much faster, we caught a duplicate line item live instead of after three email round-trips." },
+  ],
+
+  416: [
+    { type: "text", key: "function", label: "Function (e.g. VLOOKUP, pivot table)", section: "Function learned", seed: "VLOOKUP" },
+    { type: "text", key: "dataset", label: "Real dataset it was applied to", section: "Applied", seed: "Merging two club membership spreadsheets that used different ID formats" },
+    { type: "textarea", key: "unlocked", label: "What it let me do that I couldn't before", rows: 2, seed: "Match records across both sheets automatically instead of checking each one by hand." },
+  ],
+
+  417: [
+    { type: "text", key: "feature", label: "Feature (e.g. master slides, transitions)", section: "Feature learned", seed: "Master slides" },
+    { type: "text", key: "deck", label: "Deck it was applied to", section: "Applied", seed: "My internship recap presentation" },
+    { type: "textarea", key: "improvement", label: "Time or quality improvement noticed", rows: 2, seed: "Cut formatting time roughly in half and every slide finally matched." },
+  ],
+
+  418: [
+    { type: "text", key: "featurePlatform", label: "Platform / feature (e.g. Slack threads)", section: "Feature", seed: "Slack threads" },
+    { type: "textarea", key: "result", label: "Did it improve team communication clarity?", section: "Result", rows: 2, seed: "Yes, the main channel stopped filling up with side conversations." },
+  ],
+
+  419: [
+    { type: "text", key: "toolProject", label: "Tool / project", section: "Board setup", seed: "Trello, capstone project" },
+    { type: "table", key: "boardSetup", label: "Board setup", columns: [
+      { key: "task", label: "Task", kind: "text" },
+      { key: "owner", label: "Owner", kind: "text" },
+      { key: "deadline", label: "Deadline", kind: "text" },
+    ], seedRows: [
+      { task: "Literature review", owner: "Me", deadline: "Oct 3" },
+      { task: "Data collection", owner: "Devon", deadline: "Oct 10" },
+      { task: "Final write-up", owner: "Both", deadline: "Oct 20" },
+    ] },
+    { type: "text", key: "maintenance", label: "Does the board still reflect real, current status?", section: "Maintenance check", seed: "Yes, we update it after every check-in call." },
+  ],
+
+  420: [
+    { type: "text", key: "toolChosen", label: "Tool chosen", section: "Setup", seed: "Notion" },
+    { type: "textarea", key: "documentation", label: "Documentation organized", rows: 2, seed: "Our club's event-planning checklist, previously scattered across old emails." },
+    { type: "text", key: "findable", label: "Can others actually find and use it?", section: "Result", seed: "Yes, two members have already used it without asking me where it was." },
+  ],
+
+  421: [
+    { type: "text", key: "toolChosen", label: "Tool", section: "Tool chosen", seed: "Notion" },
+    { type: "text", key: "scattered", label: "Did I use it exclusively, or did notes scatter elsewhere?", section: "Two-week check", seed: "Mostly exclusively, one class where I forgot my laptop and used paper instead." },
+    { type: "text", key: "findQuickly", label: "Could I find an old note quickly when I needed it?", seed: "Yes, search found a two-week-old note in seconds." },
+  ],
+
+  422: [
+    { type: "text", key: "calendarTool", label: "Calendar tool used", section: "Consolidation", seed: "Google Calendar" },
+    { type: "text", key: "categories", label: "Categories / color-coding used", seed: "Blue for classes, orange for work, green for personal" },
+    { type: "textarea", key: "trust", label: "Do I now trust it enough to stop tracking things separately?", section: "Result", rows: 2, seed: "Yes, I deleted the sticky notes I used to keep on my desk for personal appointments." },
+  ],
+
+  423: [
+    { type: "text", key: "toolUsed", label: "Tool used", section: "Setup", seed: "Todoist" },
+    { type: "table", key: "dailyReview", label: "Daily review log", section: "Daily review log", columns: [
+      { key: "day", label: "Day", kind: "text" },
+      { key: "reviewed", label: "Reviewed? (Y/N)", kind: "text" },
+    ], seedRows: [
+      { day: "Mon", reviewed: "Y" },
+      { day: "Tue", reviewed: "Y" },
+      { day: "Wed", reviewed: "Y" },
+      { day: "Thu", reviewed: "N" },
+      { day: "Fri", reviewed: "Y" },
+    ] },
+  ],
+
+  424: [
+    { type: "text", key: "platformChosen", label: "Platform chosen", section: "Setup", seed: "Google Drive" },
+    { type: "text", key: "folderStructure", label: "Folder structure used", seed: "By semester, then by class, then by assignment" },
+    { type: "text", key: "stillLocal", label: "Anything still living only locally?", section: "Result", seed: "Just a few old drafts I don't need anymore, everything current is migrated." },
+  ],
+
+  425: [
+    { type: "text", key: "fileRecipient", label: "File / recipient", section: "The share", seed: "Final report, shared with my group" },
+    { type: "text", key: "permission", label: "Permission level used (view/edit)", seed: "Edit, since we were still revising it together" },
+    { type: "textarea", key: "issueAvoided", label: "Any issue avoided compared to an attachment?", section: "Result", rows: 2, seed: "No version confusion, everyone was editing the same live file instead of five attached copies." },
+  ],
+
+  426: [
+    { type: "text", key: "documentTool", label: "Document / tool", section: "Exploration", seed: "Group project proposal, Google Docs" },
+    { type: "textarea", key: "found", label: "What I found in the version history", rows: 2, seed: "Every edit timestamped by person, going back two weeks." },
+    { type: "textarea", key: "saved", label: "A time this could have (or did) save lost work", section: "Real use", rows: 2, seed: "I accidentally deleted a whole section and restored it from an earlier version in under a minute." },
+  ],
+
+  427: [
+    { type: "text", key: "tutorial", label: "Tutorial completed", section: "Tutorial", seed: "GitHub's \"Hello World\" beginner guide" },
+    { type: "text", key: "repository", label: "Repository created", section: "My repository", seed: "A simple portfolio-notes repo" },
+    { type: "text", key: "explain", label: "Can I explain what a commit and a branch are?", seed: "Yes, a commit is a saved snapshot, a branch is a separate line of changes." },
+  ],
+
+  428: [
+    { type: "table", key: "toolsTried", label: "Tools tried", section: "Tools tried", columns: [
+      { key: "tool", label: "AI Tool", kind: "text" },
+      { key: "task", label: "Real Task", kind: "text" },
+      { key: "goodFor", label: "What It Was/Wasn't Good For", kind: "text" },
+    ], seedRows: [
+      { tool: "A writing assistant", task: "First draft of a cover letter", goodFor: "Good for structure, needed real editing for voice" },
+      { tool: "A research tool", task: "Summarizing five articles for a paper", goodFor: "Fast summaries, missed some nuance I had to add back" },
+      { tool: "A data tool", task: "Cleaning a messy spreadsheet export", goodFor: "Very good, saved a genuinely tedious hour" },
+    ] },
+  ],
+
+  429: [
+    { type: "text", key: "recurringTask", label: "Recurring task", section: "The workflow", seed: "Drafting the weekly club newsletter" },
+    { type: "textarea", key: "aiUsed", label: "AI tool used, and how", rows: 2, seed: "Used it to draft a first-pass outline from my bullet-point notes each week." },
+    { type: "text", key: "reviewStep", label: "My review/revision step", seed: "Always rewrite the opening line myself so it still sounds like me." },
+    { type: "textarea", key: "twoWeekResult", label: "Time saved, and quality maintained?", section: "Two-week check", rows: 2, seed: "Saved about 30 minutes a week, and readers didn't notice any difference in tone." },
+  ],
+
+  430: [
+    { type: "text", key: "tool", label: "Tool (Power BI, Tableau, etc.)", section: "Tutorial", seed: "Tableau" },
+    { type: "text", key: "dataUsed", label: "Data used", section: "My chart", seed: "Club attendance numbers over the past year" },
+    { type: "textarea", key: "revealed", label: "What the visualization revealed", rows: 2, seed: "A seasonal dip every winter that the raw spreadsheet numbers never made obvious." },
+  ],
+
+  431: [
+    { type: "text", key: "tutorialTool", label: "Tutorial / tool (e.g. Airtable)", section: "Tutorial", seed: "Airtable's beginner guide" },
+    { type: "textarea", key: "built", label: "What I built", section: "My table", rows: 2, seed: "A simple table tracking club members, their roles, and event attendance." },
+    { type: "text", key: "explain", label: "Can I explain tables, rows, and columns?", seed: "Yes, tables hold rows of records, columns hold the fields each record has." },
+  ],
+
+  432: [
+    { type: "text", key: "crmExplored", label: "CRM explored", section: "Exploration", seed: "HubSpot's free tier" },
+    { type: "textarea", key: "connection", label: "How this connects to my own field or work", section: "Connection", rows: 2, seed: "The contact and engagement tracking looks a lot like what I'd need for managing sponsor relationships." },
+  ],
+
+  433: [
+    { type: "table", key: "taskLog", label: "Task log", section: "Task log", columns: [
+      { key: "task", label: "Task", kind: "text" },
+      { key: "repetitive", label: "Repetitive? (Y/N)", kind: "text" },
+      { key: "ruleBased", label: "Rule-Based? (Y/N)", kind: "text" },
+    ], seedRows: [
+      { task: "Copying event signups into a spreadsheet", repetitive: "Y", ruleBased: "Y" },
+      { task: "Writing the weekly newsletter", repetitive: "Y", ruleBased: "N" },
+      { task: "Replying to sponsor emails", repetitive: "N", ruleBased: "N" },
+    ] },
+    { type: "text", key: "candidate", label: "Task flagged as the strongest candidate", section: "Automation candidate", seed: "Copying event signups into a spreadsheet" },
+  ],
+
+  434: [
+    { type: "text", key: "taskAutomated", label: "Task automated", section: "The automation", seed: "Copying event signup form responses into our tracking spreadsheet" },
+    { type: "text", key: "toolUsed", label: "Tool used (e.g. Zapier)", seed: "Zapier" },
+    { type: "textarea", key: "verified", label: "Did it run correctly across multiple real uses?", section: "Verification", rows: 2, seed: "Yes, tested it across three real signups before trusting it fully." },
+    { type: "text", key: "timeSaved", label: "Time saved", seed: "About 15 minutes per event" },
+  ],
+
+  435: [
+    { type: "text", key: "tool1", label: "Tool 1", section: "The integration", seed: "Google Calendar" },
+    { type: "text", key: "tool2", label: "Tool 2", seed: "Todoist" },
+    { type: "text", key: "method", label: "Integration method", seed: "Todoist's built-in Google Calendar sync" },
+    { type: "text", key: "syncConfirmed", label: "Confirmed it syncs correctly?", section: "Verification", seed: "Yes, added a test task with a due date and it appeared on the calendar within a minute." },
+  ],
+
+  436: [
+    { type: "table", key: "comparison", label: "Comparison", section: "Comparison", columns: [
+      { key: "tool", label: "Tool", kind: "text" },
+      { key: "functionality", label: "Functionality", kind: "text" },
+      { key: "cost", label: "Cost", kind: "text" },
+      { key: "usability", label: "Usability", kind: "text" },
+      { key: "value", label: "Overall Value", kind: "text" },
+    ], seedRows: [
+      { tool: "Trello", functionality: "Basic boards", cost: "Free", usability: "Very easy", value: "High for a small club" },
+      { tool: "Asana", functionality: "More robust", cost: "Free tier limited", usability: "Moderate", value: "Medium" },
+      { tool: "Monday.com", functionality: "Most features", cost: "Paid", usability: "Steep learning curve", value: "Low for our size" },
+    ] },
+    { type: "text", key: "winner", label: "Which won, and why?", section: "Result", seed: "Trello, since our non-technical members could actually use it without training." },
+  ],
+
+  437: [
+    { type: "text", key: "toolChosen", label: "Tool chosen", section: "Decision", seed: "Trello" },
+    { type: "text", key: "basedOn", label: "Based on which comparison", seed: "The project management tool comparison from this stage" },
+    { type: "textarea", key: "implementation", label: "How it's actually being used now", section: "Implementation", rows: 2, seed: "Every club event now gets its own board with a card per task." },
+  ],
+
+  438: [
+    { type: "text", key: "issue", label: "Issue / error message", section: "The issue", seed: "\"This file is corrupted and cannot be opened\" in PowerPoint" },
+    { type: "textarea", key: "troubleshooting", label: "Steps I tried", section: "Troubleshooting", rows: 2, seed: "Searched the exact error message, found it was a known issue with a specific font, removed the font, and the file opened." },
+    { type: "text", key: "resolution", label: "Resolved myself, or escalated with a precise description?", section: "Resolution", seed: "Resolved it myself in about ten minutes." },
+  ],
+
+  439: [
+    { type: "checklist", key: "setup", label: "Setup", section: "Setup", items: ["Password manager installed", "Unique passwords generated for key accounts", "Two-factor authentication enabled on most important account"], seedChecked: ["Password manager installed", "Unique passwords generated for key accounts", "Two-factor authentication enabled on most important account"] },
+    { type: "textarea", key: "vulnerability", label: "What vulnerability did this close?", section: "Reflection", rows: 2, seed: "I'd been reusing the same password across my email and three other accounts." },
+  ],
+
+  440: [
+    { type: "table", key: "myStack", label: "My stack", section: "My stack", columns: [
+      { key: "category", label: "Category", kind: "text" },
+      { key: "tool", label: "Tool", kind: "text" },
+    ], seedRows: [
+      { category: "Productivity", tool: "Todoist" },
+      { category: "Notes", tool: "Notion" },
+      { category: "Calendar", tool: "Google Calendar" },
+      { category: "Cloud storage", tool: "Google Drive" },
+      { category: "Project management", tool: "Trello" },
+      { category: "Collaboration", tool: "Slack" },
+    ] },
+    { type: "text", key: "redundancy", label: "Redundancy found", section: "Gaps & redundancies", seed: "Notes were split between Notion and a Google Doc, no real reason for both." },
+    { type: "text", key: "gap", label: "Gap found", seed: "No dedicated password manager yet." },
+  ],
+
+  441: [
+    { type: "table", key: "audit", label: "Audit", section: "Audit", columns: [
+      { key: "tool", label: "Tool", kind: "text" },
+      { key: "helps", label: "Genuinely Helps? (Y/N)", kind: "text" },
+    ], seedRows: [
+      { tool: "Todoist", helps: "Y" },
+      { tool: "Notion", helps: "Y" },
+      { tool: "A second notes app I forgot I installed", helps: "N" },
+      { tool: "Trello", helps: "Y" },
+    ] },
+    { type: "textarea", key: "decision", label: "Tool(s) I'm dropping or consolidating", section: "Decision", rows: 2, seed: "Deleting the second notes app, everything moves into Notion for good." },
+  ],
 };

@@ -13,11 +13,15 @@ export function RadarChart({ stages }: { stages: StageProgress[] }) {
   const maxR = size / 2 - 56;
   const n = stages.length;
   const angleFor = (i: number) => (Math.PI * 2 * i) / n - Math.PI / 2;
+  // Rounded so the coordinate is identical whether computed during server render or
+  // client hydration, tiny floating-point differences between the two Math.cos/sin
+  // implementations otherwise trip a hydration mismatch on some stage counts.
+  const round = (v: number) => Math.round(v * 1000) / 1000;
 
   const pointFor = (i: number, pct: number) => {
     const r = (pct / 100) * maxR;
     const a = angleFor(i);
-    return { x: center + r * Math.cos(a), y: center + r * Math.sin(a) };
+    return { x: round(center + r * Math.cos(a)), y: round(center + r * Math.sin(a)) };
   };
 
   const dataPoints = stages.map((s, i) => ({ ...pointFor(i, s.pct), stage: s }));
@@ -82,8 +86,8 @@ export function RadarChart({ stages }: { stages: StageProgress[] }) {
 
         {stages.map((s, i) => {
           const a = angleFor(i);
-          const lx = center + (maxR + 30) * Math.cos(a);
-          const ly = center + (maxR + 30) * Math.sin(a);
+          const lx = round(center + (maxR + 30) * Math.cos(a));
+          const ly = round(center + (maxR + 30) * Math.sin(a));
           const anchor = Math.cos(a) > 0.3 ? "start" : Math.cos(a) < -0.3 ? "end" : "middle";
           return (
             <text

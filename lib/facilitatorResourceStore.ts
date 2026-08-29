@@ -21,6 +21,7 @@ const STAGE_FOCUS: Record<StageId, string> = {
   eight: "soft skills, relies on roleplay and peer feedback to feel real",
   nine: "English vocabulary, short and drill-based, works well as a recurring session",
   ten: "relationships and connections, the stage everything else was building toward, expect real names and real friction to come up in discussion",
+  eleven: "tools and technology, hands-on and software-specific, works best with laptops open in the room",
 };
 
 /** Stage One's kit was recently revised; version bumps here should flag facilitators still on the old copy. */
