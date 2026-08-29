@@ -394,6 +394,36 @@ export const COACH_MODE: Record<number, CoachMode> = {
   379: "synthesis",
   380: "hybrid",
   381: "reflective",
+  382: "reflective",
+  383: "reflective",
+  384: "reflective",
+  385: "reflective",
+  386: "reflective",
+  387: "reflective",
+  388: "reflective",
+  389: "reflective",
+  390: "reflective",
+  391: "reflective",
+  392: "reflective",
+  393: "hybrid",
+  394: "hybrid",
+  395: "hybrid",
+  396: "reflective",
+  397: "reflective",
+  398: "reflective",
+  399: "hybrid",
+  400: "reflective",
+  401: "hybrid",
+  402: "reflective",
+  403: "reflective",
+  404: "reflective",
+  405: "reflective",
+  406: "reflective",
+  407: "reflective",
+  408: "reflective",
+  409: "reflective",
+  410: "reflective",
+  411: "reflective",
 };
 
 export const LEARN_CONTENT: Record<number, LearnContent> = {
@@ -10898,6 +10928,789 @@ export const LEARN_CONTENT: Record<number, LearnContent> = {
     ],
     successSignal:
       "Your reflection combines genuine growth language with a specific, real example, making it concrete and credible.",
+    milestoneTies: [],
+  },
+
+  382: {
+    definition:
+      "A First Genuine Friendship Formed is a real connection built with someone based on shared interests or values, rather than pure proximity or convenience.",
+    whyItMatters:
+      "Genuine friendships, distinct from casual acquaintances, provide real emotional support and often become some of the most durable relationships across your career and life.",
+    whenWhoWhere: [
+      { label: "When", body: "Form these deliberately whenever you notice real alignment with someone, not just circumstantial closeness like a shared class or dorm floor." },
+      { label: "Who", body: "Anyone you notice a genuine, values-based connection with." },
+      { label: "Where", body: "Built through repeated, genuine interaction over time, not a single conversation." },
+    ],
+    howItWorks: [
+      "Notice when a casual acquaintance shares real values or interests with you.",
+      "Invest deliberate time in the relationship rather than letting it stay at surface level.",
+    ],
+    tools: ["No special tool", "genuine curiosity and consistent follow-through"],
+    scenario: {
+      title: "From shared elective to close friend",
+      body: "A student who met a classmate through a shared elective realized months later, after several genuine conversations, that they shared a real commitment to community involvement, which turned a casual acquaintance into one of her closest college friendships.",
+    },
+    pitfalls: [
+      "Confusing proximity (a roommate, a classmate) with genuine friendship, without ever actually investing in the relationship beyond circumstance.",
+    ],
+    successSignal:
+      "The relationship continues and deepens even after the circumstantial connection (the class, the dorm) ends.",
+    milestoneTies: [],
+  },
+
+  383: {
+    definition:
+      "A First Peer Support Exchange helps a friend with a genuine academic, professional, or personal goal, practicing the reciprocal give-and-take that sustains real friendships.",
+    whyItMatters:
+      "Friendships that only run one direction, always giving or always receiving, tend to feel unbalanced over time; genuine reciprocal support sustains a relationship's health.",
+    whenWhoWhere: [
+      { label: "When", body: "Offer this whenever a friend has a genuine goal or struggle you can meaningfully help with." },
+      { label: "Who", body: "A friend with a real, specific need." },
+      { label: "Where", body: "Applied in any real support context: study help, career advice, personal encouragement." },
+    ],
+    howItWorks: [
+      "Notice a friend's genuine struggle or goal, and offer specific, concrete help rather than a vague \"let me know if you need anything.\"",
+    ],
+    tools: ["No special tool", "genuine attention to what a friend is actually going through"],
+    scenario: {
+      title: "A specific offer, not a vague one",
+      body: "A student noticed her friend was struggling with a class she herself had already taken, and offered two specific study sessions rather than a vague offer to help, which the friend gratefully accepted.",
+    },
+    pitfalls: [
+      "Offering vague, low-commitment help (\"let me know if you need anything\") that's easy to offer but rarely actually gets taken up.",
+    ],
+    successSignal:
+      "Your friend accepts and genuinely benefits from the specific help you offered.",
+    milestoneTies: [],
+  },
+
+  384: {
+    definition:
+      "A First Fun/Relaxation Activity with Friends deliberately balances work and life while bonding, protecting genuine downtime as part of a sustainable routine.",
+    whyItMatters:
+      "Relationships and personal wellbeing both suffer when every interaction becomes purely transactional or achievement-focused; deliberate fun is part of a genuinely sustainable life.",
+    whenWhoWhere: [
+      { label: "When", body: "Practice this regularly, especially during high-stress periods when it's tempting to cut social time first." },
+      { label: "Who", body: "Friends you can genuinely relax with." },
+      { label: "Where", body: "Any low-pressure, enjoyable setting: a meal, a game night, a walk." },
+    ],
+    howItWorks: [
+      "Schedule genuine downtime with friends the same way you'd schedule a work commitment, rather than treating it as an afterthought.",
+    ],
+    tools: ["No special tool", "a calendar to actually protect the time"],
+    scenario: {
+      title: "Protecting one weekly hangout",
+      body: "A student who used to cancel social plans first whenever she got busy started explicitly protecting one weekly hangout, and noticed her overall stress dropped even though her workload hadn't actually changed.",
+    },
+    pitfalls: [
+      "Treating social time as the first thing to cut when busy, rather than a genuine, protected part of a sustainable routine.",
+    ],
+    successSignal:
+      "You have genuine, protected downtime with friends even during a busy period, not just during slow ones.",
+    milestoneTies: [],
+  },
+
+  385: {
+    definition:
+      "A First Conflict Resolution with a Friend navigates a genuine disagreement respectfully, applying the conflict resolution skills from Stage Eight specifically to a friendship context.",
+    whyItMatters:
+      "Friendships that avoid all conflict often become shallow or eventually rupture over unaddressed tension; genuine friendships can withstand, and even deepen through, respectful disagreement.",
+    whenWhoWhere: [
+      { label: "When", body: "Use this whenever a genuine disagreement arises with a friend, ideally addressed relatively soon." },
+      { label: "Who", body: "The specific friend you're in disagreement with." },
+      { label: "Where", body: "In a private, calm setting." },
+    ],
+    howItWorks: [
+      "State your perspective honestly using \"I\" statements, genuinely listen to theirs, and focus on preserving the relationship, not just winning the specific disagreement.",
+    ],
+    tools: ["The Conflict Resolution Practice structure from Stage Eight"],
+    scenario: {
+      title: "Naming the tension directly",
+      body: "Two friends avoided addressing a growing tension over unequal effort in planning a trip together, until one finally raised it directly and calmly, which resolved the tension and actually strengthened the friendship afterward.",
+    },
+    pitfalls: [
+      "Avoiding the conflict indefinitely out of fear of damaging the friendship, which often damages it more than a respectful, direct conversation would.",
+    ],
+    successSignal:
+      "The friendship continues, and often feels more genuine and resilient after the disagreement is resolved than before.",
+    milestoneTies: [],
+  },
+
+  386: {
+    definition:
+      "A First Appreciation Note to a Friend acknowledges a friend's genuine support or kindness explicitly, rather than assuming they already know how much it mattered.",
+    whyItMatters:
+      "Genuine appreciation, stated explicitly, strengthens relationships and reinforces the specific behaviors that made the friendship valuable in the first place.",
+    whenWhoWhere: [
+      { label: "When", body: "Practice this whenever a friend has genuinely supported or helped you, especially in a way you haven't yet acknowledged directly." },
+      { label: "Who", body: "A specific friend whose support you genuinely appreciate." },
+      { label: "Where", body: "Delivered as a written note, text, or spoken directly." },
+    ],
+    howItWorks: [
+      "Name the specific thing your friend did and its actual impact, rather than a generic \"thanks for being a good friend.\"",
+    ],
+    tools: ["No special tool", "a moment of genuine, specific reflection"],
+    scenario: {
+      title: "Naming exactly what the support meant",
+      body: "A student sent a specific note to a friend who'd stayed up late helping her prep for an interview, naming exactly what that support meant to her, and the friend said it was one of the most meaningful messages she'd received all year.",
+    },
+    pitfalls: [
+      "Sending a vague, generic thank-you that doesn't actually reflect any genuine, specific reflection on what the friend actually did.",
+    ],
+    successSignal:
+      "Your friend responds with genuine warmth, indicating the specific acknowledgment landed meaningfully.",
+    milestoneTies: [],
+  },
+
+  387: {
+    definition:
+      "A First Reflection on Friendship Qualities identifies the specific traits you genuinely value in others, building self-awareness about what makes your best relationships work.",
+    whyItMatters:
+      "Without deliberate reflection, it's easy to drift into friendships based on convenience rather than genuine compatibility with what you actually value in a relationship.",
+    whenWhoWhere: [
+      { label: "When", body: "Conduct this reflection periodically, especially when evaluating whether to invest more deeply in a newer relationship." },
+      { label: "Who", body: "No collaborator required, though discussing it with a trusted friend can deepen the reflection." },
+      { label: "Where", body: "Done in a private reflective session." },
+    ],
+    howItWorks: [
+      "Reflect on your closest current friendships and identify the specific, recurring qualities that make them genuinely valuable to you.",
+    ],
+    tools: ["A journal for reflection"],
+    scenario: {
+      title: "Honesty, not shared interests, as the common thread",
+      body: "A student reflecting on her closest friendships realized the common thread wasn't shared interests at all, but a consistent quality of honesty, even when it was uncomfortable, a genuine insight that shaped which newer relationships she chose to invest in.",
+    },
+    pitfalls: [
+      "Assuming all your friendships share the same qualities without actually examining what specifically makes your best ones work.",
+    ],
+    successSignal:
+      "You can name two or three specific qualities that consistently show up in your most valued friendships.",
+    milestoneTies: [],
+  },
+
+  388: {
+    definition:
+      "A First Networking through Friendships introduces a friend to a genuine professional contact, extending your network's value to people you care about rather than keeping it purely self-serving.",
+    whyItMatters:
+      "Genuinely helping friends access your professional network, not just using your network for yourself, builds real goodwill and often strengthens both relationships.",
+    whenWhoWhere: [
+      { label: "When", body: "Do this whenever a genuine, relevant connection exists between a friend and someone in your professional network." },
+      { label: "Who", body: "A friend and a professional contact with genuine relevant overlap." },
+      { label: "Where", body: "Facilitated through an introduction email, message, or in-person connection." },
+    ],
+    howItWorks: [
+      "Identify a genuine, specific reason the introduction would benefit both people, and make the introduction with real context for each side.",
+    ],
+    tools: ["No special tool", "genuine judgment about a real, relevant connection"],
+    scenario: {
+      title: "A specific-context introduction",
+      body: "A student introduced a friend interested in sustainability marketing to a contact at her own company, with specific context on both sides, which led to a genuine informational interview and strengthened her friend's trust in her.",
+    },
+    pitfalls: [
+      "Making a vague, low-context introduction (\"you two should meet!\") that doesn't actually give either party a reason to engage.",
+    ],
+    successSignal:
+      "The introduction leads to a genuine, useful connection for your friend, not just a one-time, forgotten exchange.",
+    milestoneTies: [],
+  },
+
+  389: {
+    definition:
+      "A First Collaborative Study Session learns and grows together academically with a peer, practicing genuine mutual support rather than purely solo academic effort.",
+    whyItMatters:
+      "Studying collaboratively, done well, often produces deeper understanding than solo study alone, while also strengthening a genuine peer relationship.",
+    whenWhoWhere: [
+      { label: "When", body: "Use this for any course or material where collaborative learning would genuinely help, not just as a social excuse." },
+      { label: "Who", body: "A classmate or peer studying similar material." },
+      { label: "Where", body: "Any setting conducive to focused, collaborative study." },
+    ],
+    howItWorks: [
+      "Come prepared with specific questions or material to work through together, rather than an unstructured session that drifts off-task.",
+    ],
+    tools: ["Shared notes or practice materials relevant to the course"],
+    scenario: {
+      title: "Teaching each other's strong areas",
+      body: "Two students who each struggled with different parts of the same course material found that teaching each other their respective strong areas produced far deeper understanding than either studying alone.",
+    },
+    pitfalls: [
+      "Letting an unstructured study session drift into purely social time without genuine academic progress.",
+    ],
+    successSignal:
+      "Both people leave with genuinely stronger understanding than they would have gained studying alone.",
+    milestoneTies: [],
+  },
+
+  390: {
+    definition:
+      "A First Trust-Building Exercise shares genuine goals, challenges, or vulnerabilities with a friend, deepening the relationship beyond surface-level interaction.",
+    whyItMatters:
+      "Trust deepens specifically through genuine vulnerability, not just shared activities; friendships that never move past surface-level topics often plateau.",
+    whenWhoWhere: [
+      { label: "When", body: "Practice this once a friendship has enough of a foundation to genuinely handle deeper sharing." },
+      { label: "Who", body: "A friend you trust enough to be genuinely vulnerable with." },
+      { label: "Where", body: "In a private, comfortable setting conducive to real conversation." },
+    ],
+    howItWorks: [
+      "Share something genuinely real, a real goal, fear, or challenge, rather than staying at a surface level, and notice how the friend responds.",
+    ],
+    tools: ["No special tool", "genuine willingness to be vulnerable"],
+    scenario: {
+      title: "Moving past a surface-level friendship",
+      body: "A student who'd kept a friendship at a surface level for months finally shared her genuine anxiety about her job search, and her friend's supportive response deepened the friendship significantly.",
+    },
+    pitfalls: [
+      "Sharing vulnerability with someone who hasn't yet earned that trust, which can feel mismatched or uncomfortable for both people.",
+    ],
+    successSignal:
+      "The friend responds with genuine care, and the friendship feels noticeably deeper afterward.",
+    milestoneTies: [],
+  },
+
+  391: {
+    definition:
+      "A First Group Celebration or Milestone Recognition acknowledges a genuine achievement together with a group of friends, building shared positive memory and reinforcing the relationships.",
+    whyItMatters:
+      "Celebrating milestones together, not just individually, strengthens group bonds and creates shared positive memories that sustain friendships over time.",
+    whenWhoWhere: [
+      { label: "When", body: "Use this whenever a genuine milestone, individual or shared, is worth marking with your friend group." },
+      { label: "Who", body: "Your friend group." },
+      { label: "Where", body: "Any setting appropriate for genuine celebration." },
+    ],
+    howItWorks: [
+      "Organize a genuine, specific celebration marking the actual milestone, rather than letting it pass unacknowledged.",
+    ],
+    tools: ["No special tool", "genuine intentionality about marking the occasion"],
+    scenario: {
+      title: "Deliberately marking real wins",
+      body: "A friend group that used to let real achievements, a job offer, a graduation, a personal milestone, pass without much acknowledgment started deliberately celebrating them together, which noticeably strengthened the group's sense of closeness.",
+    },
+    pitfalls: [
+      "Letting genuine milestones pass unacknowledged because no one takes the initiative to organize a celebration.",
+    ],
+    successSignal:
+      "The group genuinely marks the milestone together, and the shared memory becomes part of what sustains the friendship.",
+    milestoneTies: [],
+  },
+
+  392: {
+    definition:
+      "A First Project Partner Identified deliberately chooses someone reliable and complementary for a collaborative project, rather than defaulting to whoever happens to be nearby.",
+    whyItMatters:
+      "The right project partner meaningfully affects both the quality of the work and the experience of doing it; deliberate selection beats defaulting to convenience.",
+    whenWhoWhere: [
+      { label: "When", body: "Use this at the start of any project where you have real choice over your partner or team." },
+      { label: "Who", body: "A potential partner with complementary skills and a track record of reliability." },
+      { label: "Where", body: "Applied whenever forming project teams, in academic or professional settings." },
+    ],
+    howItWorks: [
+      "Identify what skills or qualities the project genuinely needs, then choose a partner based on complementary strengths and demonstrated reliability, not just familiarity.",
+    ],
+    tools: ["No special tool", "honest assessment of what the project needs and who can provide it"],
+    scenario: {
+      title: "Choosing complementary skills over comfort",
+      body: "A student who used to default to partnering with her closest friend, regardless of the project, deliberately chose a more analytically strong classmate for a data-heavy project instead, and the complementary skills produced much stronger final work.",
+    },
+    pitfalls: [
+      "Defaulting to the most familiar or comfortable choice rather than genuinely evaluating who would be the best complement for the specific project.",
+    ],
+    successSignal:
+      "The partnership produces genuinely stronger work than either person could have on their own, due to real complementary strengths.",
+    milestoneTies: [],
+  },
+
+  393: {
+    definition:
+      "A First Task Delegation Practice assigns roles and responsibilities fairly within a partnership or team, extending the Task Delegation Exercise from Stage Seven to an ongoing partnership context.",
+    whyItMatters:
+      "Fair, clear delegation prevents both resentment from uneven workload and confusion about who owns what, two of the most common sources of project team friction.",
+    whenWhoWhere: [
+      { label: "When", body: "Practice this at the start of any partnership or team project, and revisit it as the project evolves." },
+      { label: "Who", body: "Your project partner or team." },
+      { label: "Where", body: "Applied in any collaborative project context." },
+    ],
+    howItWorks: [
+      "Discuss openly what each person's strengths and availability are, and assign tasks based on genuine fit and fairness, not just who spoke up first.",
+    ],
+    tools: ["A shared task tracker showing clear ownership"],
+    scenario: {
+      title: "Fixing an uneven split before it festers",
+      body: "A project team that let tasks fall to whoever happened to have time each week found the workload became noticeably uneven. Explicitly discussing strengths and availability upfront, and revisiting the split every two weeks, fixed the imbalance.",
+    },
+    pitfalls: [
+      "Letting delegation happen implicitly and unevenly rather than discussing it openly and fairly from the start.",
+    ],
+    successSignal:
+      "Each person's workload genuinely matches their capacity and strengths, and no one feels quietly resentful about the split.",
+    milestoneTies: [],
+  },
+
+  394: {
+    definition:
+      "A First Team Goal Alignment ensures everyone on a team genuinely shares a common objective, catching and resolving misalignment before it causes real friction later.",
+    whyItMatters:
+      "Teams that assume alignment without ever explicitly confirming it often discover mid-project that they were actually working toward subtly different goals, a costly and avoidable problem.",
+    whenWhoWhere: [
+      { label: "When", body: "Confirm this explicitly at the start of any team project, not just assumed based on the shared assignment." },
+      { label: "Who", body: "Your full project team." },
+      { label: "Where", body: "Discussed explicitly in an early team meeting." },
+    ],
+    howItWorks: [
+      "Have each team member state, in their own words, what they understand the project's goal to be.",
+      "Reconcile any differences before proceeding.",
+    ],
+    tools: ["A simple shared goal statement, agreed on explicitly by the whole team"],
+    scenario: {
+      title: "Catching a hidden audience mismatch",
+      body: "A team assumed they were aligned on their project's target audience until an explicit check revealed two team members had assumed completely different audiences, a mismatch that would have caused significant wasted work if caught later.",
+    },
+    pitfalls: [
+      "Assuming alignment based on a shared assignment brief, without ever explicitly confirming everyone interprets it the same way.",
+    ],
+    successSignal:
+      "Every team member can state the shared goal in their own words, and those statements genuinely match.",
+    milestoneTies: [],
+  },
+
+  395: {
+    definition:
+      "A First Collaborative Problem-Solving Session tackles a genuine shared challenge together with a partner or team, extending the collaborative problem-solving skills from earlier stages into an ongoing partnership context.",
+    whyItMatters:
+      "Problems tackled collaboratively often surface better solutions than either person would reach alone, but only when the session is genuinely structured to draw out both perspectives.",
+    whenWhoWhere: [
+      { label: "When", body: "Use this whenever a genuine shared problem arises within an ongoing partnership or team project." },
+      { label: "Who", body: "Your project partner or team." },
+      { label: "Where", body: "In a focused session dedicated to the specific problem." },
+    ],
+    howItWorks: [
+      "State the problem clearly, ensure both perspectives are genuinely heard before converging on a solution, and document the agreed approach.",
+    ],
+    tools: ["The Problem-Solving Discussion structure from Stage Eight"],
+    scenario: {
+      title: "A hybrid approach neither proposed alone",
+      body: "Two project partners stuck on a design direction disagreement worked through it collaboratively by first fully hearing each other's reasoning, which revealed a hybrid approach neither had proposed individually.",
+    },
+    pitfalls: [
+      "Letting one partner's solution dominate without genuinely hearing the other's reasoning first.",
+    ],
+    successSignal:
+      "The solution reached genuinely incorporates both partners' thinking, not just one person's original idea.",
+    milestoneTies: [],
+  },
+
+  396: {
+    definition:
+      "A First Peer Feedback Exchange gives and receives constructive advice on a shared task with a project partner, practicing reciprocal, ongoing feedback within a working partnership.",
+    whyItMatters:
+      "Ongoing feedback within a partnership, not just at the end of a project, catches issues early and builds a genuinely stronger final result.",
+    whenWhoWhere: [
+      { label: "When", body: "Practice this at natural checkpoints throughout a partnership or project, not just at the very end." },
+      { label: "Who", body: "Your project partner." },
+      { label: "Where", body: "Applied at real checkpoints during a shared project." },
+    ],
+    howItWorks: [
+      "Exchange specific, actionable feedback on each other's contributions at a natural project checkpoint, both giving and receiving.",
+    ],
+    tools: ["The Feedback Given and Feedback Received Gracefully structures from Stage Eight"],
+    scenario: {
+      title: "A mid-project checkpoint catches issues in time",
+      body: "Two project partners who only exchanged feedback at the very end of a project found several issues too late to fully fix. Building in a mid-project feedback checkpoint on their next collaboration caught similar issues in time to actually address them.",
+    },
+    pitfalls: [
+      "Waiting until the very end of a project to exchange any feedback, by which point issues are much harder to fix.",
+    ],
+    successSignal:
+      "Feedback exchanged mid-project leads to a genuinely stronger final result than waiting until the end would have produced.",
+    milestoneTies: [],
+  },
+
+  397: {
+    definition:
+      "A First Accountability Partner Agreement tracks progress on shared goals with a partner, extending the accountability partner concept from Stage Four into a formalized, mutual agreement.",
+    whyItMatters:
+      "A formal, mutual agreement, not just a vague intention to \"keep each other accountable,\" is what actually makes accountability partnerships work consistently.",
+    whenWhoWhere: [
+      { label: "When", body: "Establish this at the start of any goal or project where ongoing mutual accountability would genuinely help." },
+      { label: "Who", body: "A partner equally committed to a shared or parallel goal." },
+      { label: "Where", body: "Established through an explicit conversation, then maintained through regular check-ins." },
+    ],
+    howItWorks: [
+      "Agree explicitly on what you're each accountable for, how often you'll check in, and what happens if commitments aren't met.",
+    ],
+    tools: ["Your existing Accountability Check-In structure from Stage Four"],
+    scenario: {
+      title: "Specific numbers, not a vague promise",
+      body: "Two students agreed to hold each other accountable for job search activity, with a specific weekly check-in and specific numbers to report, which produced far more consistent follow-through than either had managed independently before.",
+    },
+    pitfalls: [
+      "Agreeing to \"keep each other accountable\" vaguely, without specifying what that actually means or how often you'll check in.",
+    ],
+    successSignal:
+      "Both partners follow through more consistently than they would have independently, verified through regular check-ins.",
+    milestoneTies: [],
+  },
+
+  398: {
+    definition:
+      "A First Group Reflection & Debrief discusses lessons learned and improvement areas together as a team, extending the individual reflection habits from earlier stages into a genuine group practice.",
+    whyItMatters:
+      "Individual reflection alone misses insights that only surface when a team discusses a shared experience together; a genuine group debrief captures collective learning.",
+    whenWhoWhere: [
+      { label: "When", body: "Conduct this at the conclusion of any team project or significant collaborative effort." },
+      { label: "Who", body: "Your full project team." },
+      { label: "Where", body: "In a dedicated team debrief session." },
+    ],
+    howItWorks: [
+      "Discuss as a team what worked well, what didn't, and what specific changes to make next time, capturing the discussion in writing.",
+    ],
+    tools: ["A simple debrief template: what worked, what didn't, what we'd change"],
+    scenario: {
+      title: "A pattern only the group setting revealed",
+      body: "A team's group debrief revealed that three different members had independently noticed the same communication gap but never mentioned it individually; only the group setting surfaced the shared pattern clearly.",
+    },
+    pitfalls: [
+      "Skipping the group debrief in favor of only individual reflection, missing patterns that only become visible when discussed together.",
+    ],
+    successSignal:
+      "The team identifies a specific, shared lesson or improvement that no individual reflection alone would have surfaced.",
+    milestoneTies: [],
+  },
+
+  399: {
+    definition:
+      "A First Conflict Mediation in a Team resolves a genuine disagreement collaboratively within a team setting, extending the Conflict Mediation Role Played FIRST from Stage Eight to a real, ongoing team context.",
+    whyItMatters:
+      "Team conflicts, left unaddressed, tend to fester and affect the whole team's output; resolving them collaboratively, rather than avoiding them, protects both the project and the relationships.",
+    whenWhoWhere: [
+      { label: "When", body: "Use this whenever a genuine conflict arises within an ongoing team project." },
+      { label: "Who", body: "The team members involved in the conflict." },
+      { label: "Where", body: "In a private, calm setting suited to genuine mediation." },
+    ],
+    howItWorks: [
+      "Facilitate or participate in a structured conversation where each side's perspective is genuinely heard, working toward a specific, mutual resolution.",
+    ],
+    tools: ["The Conflict Mediation Role Played structure from Stage Eight"],
+    scenario: {
+      title: "Surfacing the concern underneath the disagreement",
+      body: "A team split over creative direction resolved their disagreement through a structured mediation conversation that surfaced each side's actual underlying concern, leading to a hybrid direction neither had proposed alone.",
+    },
+    pitfalls: [
+      "Letting the conflict simmer unaddressed, hoping it resolves itself, which usually just makes the eventual conversation harder.",
+    ],
+    successSignal:
+      "The conflict reaches a genuine, mutual resolution, and the team's collaboration continues functionally afterward.",
+    milestoneTies: [],
+  },
+
+  400: {
+    definition:
+      "A First Recognition of Team Contributions celebrates a team's efforts and results together, extending the Peer Recognition Shared FIRST from Stage Eight to a team-wide practice.",
+    whyItMatters:
+      "Teams that never pause to genuinely recognize collective effort and results tend to feel less cohesive and motivated than ones that build in deliberate recognition.",
+    whenWhoWhere: [
+      { label: "When", body: "Use this at natural project milestones or at a project's genuine conclusion." },
+      { label: "Who", body: "Your full project team." },
+      { label: "Where", body: "In a team meeting or shared communication channel." },
+    ],
+    howItWorks: [
+      "Name specific contributions from specific team members, and celebrate the team's collective result, not just individual achievement.",
+    ],
+    tools: ["No special tool", "genuine, specific recognition delivered publicly to the team"],
+    scenario: {
+      title: "A deliberate celebration lifts morale",
+      body: "A team that finished a major project without any real acknowledgment felt strangely deflated despite the strong result. On their next project, a deliberate team celebration with specific individual shoutouts noticeably improved morale heading into the next effort.",
+    },
+    pitfalls: [
+      "Moving straight to the next task without pausing to genuinely acknowledge what the team just accomplished together.",
+    ],
+    successSignal:
+      "The team feels genuinely recognized, both individually and collectively, which measurably supports morale heading into future work.",
+    milestoneTies: [],
+  },
+
+  401: {
+    definition:
+      "A First Leadership or Facilitation Role in a Group guides a project or discussion, extending the Team Role Assumed FIRST from Stage Eight specifically into a leadership or facilitation capacity.",
+    whyItMatters:
+      "Deliberately taking on a leadership or facilitation role, rather than always defaulting to a contributor position, builds skills that are essential for career advancement and team effectiveness alike.",
+    whenWhoWhere: [
+      { label: "When", body: "Volunteer for this whenever a genuine leadership or facilitation opportunity arises within a group." },
+      { label: "Who", body: "Your project team or group." },
+      { label: "Where", body: "Applied in any group project, meeting, or discussion context." },
+    ],
+    howItWorks: [
+      "Volunteer explicitly for the leadership or facilitation role, and actively guide the group's process, not just its content.",
+    ],
+    tools: ["The Discussion Facilitation and Group Decision Facilitated structures from Stages Six and Eight"],
+    scenario: {
+      title: "Leading for the first time",
+      body: "A student who always contributed content but never led volunteered to facilitate her team's next planning meeting, and found the experience revealed real facilitation skills she hadn't known she had.",
+    },
+    pitfalls: [
+      "Continuing to default to a comfortable contributor role indefinitely, missing the growth that comes from actually leading.",
+    ],
+    successSignal:
+      "You can point to a specific group project or discussion where you genuinely led or facilitated, not just contributed content.",
+    milestoneTies: [],
+  },
+
+  402: {
+    definition:
+      "A First Mentor Identified finds someone experienced to guide your growth, deliberately choosing a mentor based on genuine fit rather than accepting whoever happens to be assigned.",
+    whyItMatters:
+      "The right mentor relationship can meaningfully accelerate your growth, but only if you deliberately identify someone with genuine relevant experience and a real willingness to invest in you.",
+    whenWhoWhere: [
+      { label: "When", body: "Begin identifying potential mentors early, before you have an urgent need for guidance." },
+      { label: "Who", body: "Someone with genuine relevant experience in your field or a skill you're developing." },
+      { label: "Where", body: "Identified through professors, internship supervisors, alumni networks, or professional connections." },
+    ],
+    howItWorks: [
+      "Identify someone whose path or expertise genuinely resonates with your own goals, and observe whether they seem genuinely willing to invest time in others before approaching them.",
+    ],
+    tools: ["Your existing professional network and alumni connections as a starting point"],
+    scenario: {
+      title: "Evidence, not just an impressive title",
+      body: "A student identified a potential mentor not just based on an impressive title, but on specific evidence, seeing the person patiently answer a junior colleague's questions at an event, that suggested genuine willingness to invest in others.",
+    },
+    pitfalls: [
+      "Choosing a mentor based purely on prestige or title, without considering genuine fit or willingness to actually invest time in you.",
+    ],
+    successSignal:
+      "You can name a specific person whose experience and apparent willingness to mentor genuinely fits your growth needs.",
+    milestoneTies: [],
+  },
+
+  403: {
+    definition:
+      "A First Mentor Meeting Scheduled initiates a structured conversation with a potential or current mentor, moving from identification to genuine, deliberate engagement.",
+    whyItMatters:
+      "Identifying a potential mentor without ever actually scheduling time together means the relationship never gets the chance to develop.",
+    whenWhoWhere: [
+      { label: "When", body: "Do this once you've identified a potential mentor and have a genuine, specific reason to request their time." },
+      { label: "Who", body: "The mentor you've identified." },
+      { label: "Where", body: "Scheduled via a respectful, clear outreach message." },
+    ],
+    howItWorks: [
+      "Reach out with a specific, genuine reason for wanting to connect, and propose a concrete time and format, rather than a vague, open-ended request.",
+    ],
+    tools: ["The Professional Email Sent and Networking vocabulary from Stages Six and Nine"],
+    scenario: {
+      title: "A specific ask gets a same-day reply",
+      body: "A student's vague \"could I pick your brain sometime?\" message went unanswered for weeks. A specific follow-up proposing a 20-minute call to discuss a particular career question got a same-day response.",
+    },
+    pitfalls: [
+      "Sending a vague, open-ended request that makes it easy for a busy potential mentor to postpone indefinitely.",
+    ],
+    successSignal:
+      "You secure a real, scheduled conversation, not just a vague, indefinite \"let's connect sometime.\"",
+    milestoneTies: [],
+  },
+
+  404: {
+    definition:
+      "A First Thoughtful Question to a Mentor gains genuine insight intentionally, extending the Question-Asking Vocabulary and Mentor Interaction FIRSTS into a specific, prepared mentor conversation.",
+    whyItMatters:
+      "A mentor conversation's value depends heavily on the quality of the questions asked; thoughtful, specific questions produce far more useful guidance than generic ones.",
+    whenWhoWhere: [
+      { label: "When", body: "Prepare this before any mentor conversation, rather than improvising questions in the moment." },
+      { label: "Who", body: "Your mentor." },
+      { label: "Where", body: "Applied in any real mentor conversation." },
+    ],
+    howItWorks: [
+      "Prepare two or three specific, open-ended questions genuinely relevant to your current situation, rather than generic questions you could ask anyone.",
+    ],
+    tools: ["The Question-Asking Vocabulary FIRST from Stage Nine"],
+    scenario: {
+      title: "A tailored question beats a generic one",
+      body: "A student who used to ask generic questions like \"any advice for someone starting out?\" prepared a specific question about a real decision she was facing instead, and got dramatically more useful, tailored guidance in return.",
+    },
+    pitfalls: [
+      "Asking generic questions that could apply to anyone, rather than ones genuinely tailored to your specific situation.",
+    ],
+    successSignal:
+      "The mentor's answer feels specifically useful to your actual situation, not generic advice you could have found anywhere.",
+    milestoneTies: [],
+  },
+
+  405: {
+    definition:
+      "A First Follow-Up with Mentor maintains the relationship professionally after a conversation, extending the Networking Follow-Up Practice FIRST from Stage Eight specifically into a mentorship context.",
+    whyItMatters:
+      "Mentor relationships, like any professional relationship, fade without deliberate follow-up; genuine follow-up is what turns a single conversation into an ongoing relationship.",
+    whenWhoWhere: [
+      { label: "When", body: "Practice this within a few days of any mentor conversation, and periodically afterward to sustain the relationship." },
+      { label: "Who", body: "Your mentor." },
+      { label: "Where", body: "Applied via email, message, or a scheduled follow-up conversation." },
+    ],
+    howItWorks: [
+      "Send a genuine thank-you referencing something specific from the conversation, and follow up later on any advice you actually applied.",
+    ],
+    tools: ["The Follow-Up Vocabulary and Follow-Up Vocabulary After Networking FIRSTS from Stage Nine"],
+    scenario: {
+      title: "Following up with the actual outcome",
+      body: "A student who followed up with her mentor a month later specifically describing how she'd applied his advice, and the outcome, found the relationship deepened significantly compared to mentors she'd never followed up with.",
+    },
+    pitfalls: [
+      "Treating a single mentor conversation as the whole relationship, without any follow-up to sustain it afterward.",
+    ],
+    successSignal:
+      "The mentor relationship continues beyond the single conversation, with genuine engagement on both sides.",
+    milestoneTies: [],
+  },
+
+  406: {
+    definition:
+      "A First Peer Networking Circle Formed creates an accountability or support group with peers, extending the individual Accountability Partner Agreement into a small group format.",
+    whyItMatters:
+      "A small peer circle provides broader perspective and support than a single accountability partner, while still maintaining genuine intimacy and mutual investment.",
+    whenWhoWhere: [
+      { label: "When", body: "Form this once you have a few peers pursuing genuinely similar or complementary goals." },
+      { label: "Who", body: "Three to five peers with genuinely aligned goals or interests." },
+      { label: "Where", body: "Meeting regularly, in person or virtually." },
+    ],
+    howItWorks: [
+      "Identify peers with genuine shared goals, propose a regular cadence, and establish a simple structure for what each meeting covers.",
+    ],
+    tools: ["The Accountability Partner Agreement structure, extended to a small group"],
+    scenario: {
+      title: "A biweekly circle through the job search",
+      body: "A group of five students job searching simultaneously formed a biweekly circle to share leads, practice interviews, and support each other through rejections, which measurably improved everyone's consistency compared to searching alone.",
+    },
+    pitfalls: [
+      "Forming the circle without any real structure, letting meetings drift into purely social time without genuine mutual accountability.",
+    ],
+    successSignal:
+      "The circle meets consistently and each member can point to specific ways it's genuinely supported their progress.",
+    milestoneTies: [],
+  },
+
+  407: {
+    definition:
+      "A First Industry Contact Made connects with a professional in your field, extending the Networking Conversation FIRSTS from earlier stages into a deliberately industry-focused context.",
+    whyItMatters:
+      "Industry contacts provide insight, opportunities, and credibility that are difficult to gain any other way; deliberately building these connections compounds significantly over a career.",
+    whenWhoWhere: [
+      { label: "When", body: "Practice this at any industry event, informational interview, or professional gathering relevant to your target field." },
+      { label: "Who", body: "A professional genuinely working in your target industry." },
+      { label: "Where", body: "At industry events, through alumni networks, or via direct outreach." },
+    ],
+    howItWorks: [
+      "Approach the conversation with genuine curiosity about their work, using the Networking Conversation and Networking Vocabulary skills from earlier stages.",
+    ],
+    tools: ["The Networking Conversation FIRST from Stage Eight and Words for Networking Conversations from Stage Nine"],
+    scenario: {
+      title: "A genuine question after a panel",
+      body: "A student attending an industry panel approached a speaker afterward with a genuine, specific question about her work, which led to a real, ongoing professional connection rather than a forgotten one-time exchange.",
+    },
+    pitfalls: [
+      "Treating the interaction as purely transactional, focused only on what you can get from the contact rather than genuine engagement.",
+    ],
+    successSignal:
+      "The connection continues beyond the initial interaction, through a follow-up or ongoing relationship.",
+    milestoneTies: [],
+  },
+
+  408: {
+    definition:
+      "A First Coffee Chat with a Professional is a casual learning and relationship-building conversation, distinct from a formal informational interview by its lower-stakes, more genuinely conversational format.",
+    whyItMatters:
+      "Coffee chats, done well, build genuine relationships more effectively than formal informational interviews, precisely because the lower-stakes format encourages more authentic conversation.",
+    whenWhoWhere: [
+      { label: "When", body: "Use this whenever a professional contact is open to a casual, in-person or virtual conversation." },
+      { label: "Who", body: "A professional contact genuinely willing to meet casually." },
+      { label: "Where", body: "A coffee shop, casual video call, or similar low-pressure setting." },
+    ],
+    howItWorks: [
+      "Keep the conversation genuinely casual and curious rather than treating it like a formal interview with a rigid question list.",
+    ],
+    tools: ["The Small Talk Vocabulary FIRST from Stage Nine, alongside genuine curiosity"],
+    scenario: {
+      title: "Trading a script for a real conversation",
+      body: "A student's first informational interviews felt stiff and overly formal. Shifting to a genuinely casual coffee chat format with the same contacts produced far more authentic, useful conversations.",
+    },
+    pitfalls: [
+      "Treating a coffee chat like a rigid, formal interview, which undercuts the relaxed format's actual advantage.",
+    ],
+    successSignal:
+      "The conversation feels genuinely relaxed and authentic, not like a scripted formal interview.",
+    milestoneTies: [],
+  },
+
+  409: {
+    definition:
+      "A First Volunteer Collaboration works with others for a genuine cause while building professional relationships, extending the volunteer work concept from Stage Four into a specifically relationship-focused context.",
+    whyItMatters:
+      "Volunteering alongside others builds genuine relationships through shared purpose, often producing more authentic connections than purely networking-focused interactions.",
+    whenWhoWhere: [
+      { label: "When", body: "Use this whenever a genuine volunteer opportunity aligns with both a cause you care about and people you'd like to build relationships with." },
+      { label: "Who", body: "Fellow volunteers and organizers." },
+      { label: "Where", body: "Any volunteer setting involving genuine collaboration with others." },
+    ],
+    howItWorks: [
+      "Engage genuinely with fellow volunteers, not just the task itself, building real relationships through the shared purpose.",
+    ],
+    tools: ["No special tool", "genuine engagement with both the cause and the people involved"],
+    scenario: {
+      title: "More genuine than a formal networking event",
+      body: "A student volunteering for a cause she cared about found she built more genuine professional relationships through consistent volunteer collaboration than through several formal networking events combined.",
+    },
+    pitfalls: [
+      "Treating volunteer work as purely transactional networking, missing the genuine relationship-building the shared purpose enables.",
+    ],
+    successSignal:
+      "You build at least one genuine relationship through volunteer collaboration, not just completed the volunteer task itself.",
+    milestoneTies: [],
+  },
+
+  410: {
+    definition:
+      "A First Peer Recommendation Given strengthens someone else's profile or project through a genuine, specific recommendation, practicing the reciprocal generosity that sustains professional networks.",
+    whyItMatters:
+      "Giving genuine recommendations, not just seeking them, is what makes a professional network mutually beneficial rather than purely self-serving.",
+    whenWhoWhere: [
+      { label: "When", body: "Offer this whenever you can genuinely, credibly vouch for someone's work or character." },
+      { label: "Who", body: "A peer or colleague whose work you can genuinely speak to." },
+      { label: "Where", body: "Given as a LinkedIn recommendation, written reference, or verbal endorsement." },
+    ],
+    howItWorks: [
+      "Write or give a recommendation with specific, genuine detail about the person's actual strengths and contributions, not generic praise.",
+    ],
+    tools: ["LinkedIn's recommendation feature, or a written reference format"],
+    scenario: {
+      title: "The most substantive recommendation on her profile",
+      body: "A student wrote a specific, detailed LinkedIn recommendation for a classmate she'd genuinely worked closely with, and the classmate later said it was one of the most substantive recommendations on her entire profile.",
+    },
+    pitfalls: [
+      "Giving a generic, low-effort recommendation that doesn't actually reflect specific, genuine knowledge of the person's work.",
+    ],
+    successSignal:
+      "Your recommendation is specific and genuine enough that the recipient finds it genuinely valuable, not just a formality.",
+    milestoneTies: [],
+  },
+
+  411: {
+    definition:
+      "A First Reflection on Relationship Growth tracks lessons, strengths, and areas to improve across your relationship-building efforts, closing the loop on this entire stage with comprehensive self-awareness.",
+    whyItMatters:
+      "Looking across your whole relationship-building practice reveals genuine growth patterns that no single relationship or interaction alone would show.",
+    whenWhoWhere: [
+      { label: "When", body: "Conduct this at the end of working through this stage, and periodically afterward as your relationships continue to develop." },
+      { label: "Who", body: "No collaborator required, though discussing this with a trusted friend or mentor deepens the reflection." },
+      { label: "Where", body: "Done in a dedicated, comprehensive reflective session." },
+    ],
+    howItWorks: [
+      "Review your relationship-building efforts across this stage: friendships, project partnerships, and mentorships.",
+      "Identify genuine growth, recurring strengths, and specific areas to keep developing.",
+    ],
+    tools: ["Your accumulated reflections and practice from throughout this stage"],
+    scenario: {
+      title: "An honest, full-picture review",
+      body: "A student's comprehensive reflection revealed that she'd genuinely grown in maintaining professional relationships through consistent follow-up, but still tended to avoid conflict in close friendships, a clear, honest picture to guide her continued growth.",
+    },
+    pitfalls: [
+      "Reviewing only the relationship-building areas that feel comfortable, avoiding honest assessment of genuinely difficult ones.",
+    ],
+    successSignal:
+      "You can name specific, genuine growth areas and specific remaining challenges across friendships, teamwork, and mentorship alike.",
     milestoneTies: [],
   },
 };

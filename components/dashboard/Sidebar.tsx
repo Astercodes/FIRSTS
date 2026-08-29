@@ -14,6 +14,7 @@ const NAV = [
   { label: "Stage Seven", href: "/dashboard/stage/seven", icon: LayersIcon },
   { label: "Stage Eight", href: "/dashboard/stage/eight", icon: LayersIcon },
   { label: "Stage Nine", href: "/dashboard/stage/nine", icon: LayersIcon },
+  { label: "Stage Ten", href: "/dashboard/stage/ten", icon: LayersIcon },
   { label: "AI Coach", href: "/dashboard/coach", icon: SparkleIcon },
   { label: "Portfolio", href: "/dashboard/portfolio", icon: FolderIcon },
   { label: "Community", href: "/dashboard/community", icon: CommunityIcon },

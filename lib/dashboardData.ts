@@ -1,12 +1,12 @@
 export type ModuleStatus = "complete" | "in-progress" | "available" | "locked";
-export type StageId = "one" | "two" | "three" | "four" | "five" | "six" | "seven" | "eight" | "nine";
+export type StageId = "one" | "two" | "three" | "four" | "five" | "six" | "seven" | "eight" | "nine" | "ten";
 
 export type FirstModule = {
   id: number;
   code: string;
   stage: StageId;
   title: string;
-  category: "A" | "B" | "C" | "D" | "E" | "F" | "G" | "H" | "I" | "J" | "K" | "L" | "M" | "N" | "O" | "P" | "Q" | "R" | "S" | "T" | "U" | "V" | "W" | "X" | "Y" | "Z" | "AA" | "BB" | "CC" | "DD" | "EE" | "FF" | "GG" | "HH" | "II" | "JJ" | "KK" | "LL" | "MM" | "NN" | "OO";
+  category: "A" | "B" | "C" | "D" | "E" | "F" | "G" | "H" | "I" | "J" | "K" | "L" | "M" | "N" | "O" | "P" | "Q" | "R" | "S" | "T" | "U" | "V" | "W" | "X" | "Y" | "Z" | "AA" | "BB" | "CC" | "DD" | "EE" | "FF" | "GG" | "HH" | "II" | "JJ" | "KK" | "LL" | "MM" | "NN" | "OO" | "PP" | "QQ" | "RR";
   time: string;
   difficulty: "Easy" | "Moderate" | "Deep";
   status: ModuleStatus;
@@ -60,6 +60,9 @@ export const CATEGORY_META = {
   MM: { label: "Presentation & Persuasion Vocabulary", color: "var(--neon-pink)" },
   NN: { label: "Self-Presentation & Networking Vocabulary", color: "var(--tropical-mango)" },
   OO: { label: "Problem-Solving & Growth Vocabulary", color: "var(--fuchsia-blast)" },
+  PP: { label: "Friendships & Peer Connections", color: "var(--berry-burst)" },
+  QQ: { label: "Project Partners & Teamwork", color: "var(--lime-zest)" },
+  RR: { label: "Mentorship & Professional Connections", color: "var(--pink-grapefruit)" },
 } as const;
 
 export const STAGES: { id: StageId; label: string; shortLabel: string; href: string }[] = [
@@ -72,6 +75,7 @@ export const STAGES: { id: StageId; label: string; shortLabel: string; href: str
   { id: "seven", label: "Stage Seven · Hard Skills", shortLabel: "Stage Seven", href: "/dashboard/stage/seven" },
   { id: "eight", label: "Stage Eight · Soft Skills", shortLabel: "Stage Eight", href: "/dashboard/stage/eight" },
   { id: "nine", label: "Stage Nine · English Vocabulary", shortLabel: "Stage Nine", href: "/dashboard/stage/nine" },
+  { id: "ten", label: "Stage Ten · Relationships & Connections", shortLabel: "Stage Ten", href: "/dashboard/stage/ten" },
 ];
 
 const STAGE_ONE_FIRSTS: FirstModule[] = [
@@ -482,7 +486,40 @@ const STAGE_NINE_FIRSTS: FirstModule[] = [
   { id: 381, code: "M37", stage: "nine", title: "Vocabulary for Reflecting on Personal Growth and Lessons Learned", category: "OO", time: "20 to 30 min", difficulty: "Easy", status: "locked" },
 ];
 
-export const FIRSTS: FirstModule[] = [...STAGE_ONE_FIRSTS, ...STAGE_TWO_FIRSTS, ...STAGE_THREE_FIRSTS, ...STAGE_FOUR_FIRSTS, ...STAGE_FIVE_FIRSTS, ...STAGE_SIX_FIRSTS, ...STAGE_SEVEN_FIRSTS, ...STAGE_EIGHT_FIRSTS, ...STAGE_NINE_FIRSTS];
+const STAGE_TEN_FIRSTS: FirstModule[] = [
+  { id: 382, code: "N1", stage: "ten", title: "Genuine Friendship Formed", category: "PP", time: "Ongoing", difficulty: "Easy", status: "complete", thoroughness: 2, completedAt: "2026-06-01" },
+  { id: 383, code: "N2", stage: "ten", title: "Peer Support Exchange", category: "PP", time: "Varies", difficulty: "Easy", status: "locked" },
+  { id: 384, code: "N3", stage: "ten", title: "Fun/Relaxation Activity with Friends", category: "PP", time: "Ongoing", difficulty: "Easy", status: "complete", thoroughness: 1, completedAt: "2026-06-05" },
+  { id: 385, code: "N4", stage: "ten", title: "Conflict Resolution with a Friend", category: "PP", time: "Varies", difficulty: "Moderate", status: "locked" },
+  { id: 386, code: "N5", stage: "ten", title: "Appreciation Note to a Friend", category: "PP", time: "10 min", difficulty: "Easy", status: "complete", thoroughness: 3, completedAt: "2026-06-09" },
+  { id: 387, code: "N6", stage: "ten", title: "Reflection on Friendship Qualities", category: "PP", time: "20 min", difficulty: "Easy", status: "locked" },
+  { id: 388, code: "N7", stage: "ten", title: "Networking through Friendships", category: "PP", time: "15 min", difficulty: "Easy", status: "complete", thoroughness: 2, completedAt: "2026-06-13" },
+  { id: 389, code: "N8", stage: "ten", title: "Collaborative Study Session", category: "PP", time: "Varies", difficulty: "Easy", status: "locked" },
+  { id: 390, code: "N9", stage: "ten", title: "Trust-Building Exercise", category: "PP", time: "Situational", difficulty: "Moderate", status: "complete", thoroughness: 2, completedAt: "2026-06-17" },
+  { id: 391, code: "N10", stage: "ten", title: "Group Celebration or Milestone Recognition", category: "PP", time: "Varies", difficulty: "Easy", status: "locked" },
+  { id: 392, code: "N11", stage: "ten", title: "Project Partner Identified", category: "QQ", time: "15 min", difficulty: "Easy", status: "complete", thoroughness: 3, completedAt: "2026-06-21" },
+  { id: 393, code: "N12", stage: "ten", title: "Task Delegation Practice", category: "QQ", time: "20 min", difficulty: "Easy", status: "locked" },
+  { id: 394, code: "N13", stage: "ten", title: "Team Goal Alignment", category: "QQ", time: "20 min", difficulty: "Easy", status: "complete", thoroughness: 1, completedAt: "2026-06-25" },
+  { id: 395, code: "N14", stage: "ten", title: "Collaborative Problem-Solving Session", category: "QQ", time: "Varies", difficulty: "Moderate", status: "locked" },
+  { id: 396, code: "N15", stage: "ten", title: "Peer Feedback Exchange", category: "QQ", time: "20 min", difficulty: "Easy", status: "complete", thoroughness: 2, completedAt: "2026-06-29" },
+  { id: 397, code: "N16", stage: "ten", title: "Accountability Partner Agreement", category: "QQ", time: "20 min", difficulty: "Easy", status: "locked" },
+  { id: 398, code: "N17", stage: "ten", title: "Group Reflection & Debrief", category: "QQ", time: "30 to 45 min", difficulty: "Moderate", status: "complete", thoroughness: 3, completedAt: "2026-07-03" },
+  { id: 399, code: "N18", stage: "ten", title: "Conflict Mediation in a Team", category: "QQ", time: "Varies", difficulty: "Deep", status: "locked" },
+  { id: 400, code: "N19", stage: "ten", title: "Recognition of Team Contributions", category: "QQ", time: "15 to 20 min", difficulty: "Easy", status: "complete", thoroughness: 1, completedAt: "2026-07-07" },
+  { id: 401, code: "N20", stage: "ten", title: "Leadership or Facilitation Role in a Group", category: "QQ", time: "Varies", difficulty: "Moderate", status: "locked" },
+  { id: 402, code: "N21", stage: "ten", title: "Mentor Identified", category: "RR", time: "Ongoing", difficulty: "Easy", status: "complete", thoroughness: 2, completedAt: "2026-07-11" },
+  { id: 403, code: "N22", stage: "ten", title: "Mentor Meeting Scheduled", category: "RR", time: "15 min", difficulty: "Easy", status: "locked" },
+  { id: 404, code: "N23", stage: "ten", title: "Thoughtful Question to a Mentor", category: "RR", time: "15 min", difficulty: "Easy", status: "complete", thoroughness: 3, completedAt: "2026-07-15" },
+  { id: 405, code: "N24", stage: "ten", title: "Follow-Up with Mentor", category: "RR", time: "Ongoing", difficulty: "Easy", status: "locked" },
+  { id: 406, code: "N25", stage: "ten", title: "Peer Networking Circle Formed", category: "RR", time: "30 min", difficulty: "Moderate", status: "complete", thoroughness: 2, completedAt: "2026-07-19" },
+  { id: 407, code: "N26", stage: "ten", title: "Industry Contact Made", category: "RR", time: "Ongoing", difficulty: "Easy", status: "locked" },
+  { id: 408, code: "N27", stage: "ten", title: "Coffee Chat with a Professional", category: "RR", time: "30 min", difficulty: "Easy", status: "complete", thoroughness: 1, completedAt: "2026-07-23" },
+  { id: 409, code: "N28", stage: "ten", title: "Volunteer Collaboration", category: "RR", time: "Ongoing", difficulty: "Moderate", status: "locked" },
+  { id: 410, code: "N29", stage: "ten", title: "Peer Recommendation Given", category: "RR", time: "20 to 30 min", difficulty: "Easy", status: "complete", thoroughness: 2, completedAt: "2026-07-27" },
+  { id: 411, code: "N30", stage: "ten", title: "Reflection on Relationship Growth", category: "RR", time: "45 min to 1 hr", difficulty: "Moderate", status: "locked" },
+];
+
+export const FIRSTS: FirstModule[] = [...STAGE_ONE_FIRSTS, ...STAGE_TWO_FIRSTS, ...STAGE_THREE_FIRSTS, ...STAGE_FOUR_FIRSTS, ...STAGE_FIVE_FIRSTS, ...STAGE_SIX_FIRSTS, ...STAGE_SEVEN_FIRSTS, ...STAGE_EIGHT_FIRSTS, ...STAGE_NINE_FIRSTS, ...STAGE_TEN_FIRSTS];
 
 export const MOCK_USER = {
   firstName: "Ada",

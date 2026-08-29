@@ -14,6 +14,7 @@ const NAV = [
   { label: "Stage Seven", href: "/dashboard/stage/seven" },
   { label: "Stage Eight", href: "/dashboard/stage/eight" },
   { label: "Stage Nine", href: "/dashboard/stage/nine" },
+  { label: "Stage Ten", href: "/dashboard/stage/ten" },
   { label: "AI Coach", href: "/dashboard/coach" },
   { label: "Portfolio", href: "/dashboard/portfolio" },
   { label: "Community", href: "/dashboard/community" },

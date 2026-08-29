@@ -3817,4 +3817,222 @@ export const WORKSHEET_SCHEMAS: Record<number, WorksheetField[]> = {
     { type: "text", key: "whereUsed", label: "Where I used this for real", section: "Real application", seed: "Prepping for an interview question about growth" },
     { type: "text", key: "result", label: "Result", seed: "The answer had a specific example instead of a vague claim" },
   ],
+
+  382: [
+    { type: "text", key: "acquaintance", label: "Acquaintance I'm considering", section: "The person", seed: "Priya from my marketing elective" },
+    { type: "textarea", key: "sharedValue", label: "Genuine shared value or interest I've noticed", rows: 2, seed: "We both care a lot about mentoring younger students, it came up naturally twice." },
+    { type: "textarea", key: "conversation", label: "What we actually talked about", section: "The conversation", rows: 2, seed: "Why we both got into a campus tutoring program and what keeps us doing it." },
+    { type: "text", key: "feltGenuine", label: "Did the connection feel genuine?", seed: "Yes, the conversation went well past small talk." },
+  ],
+
+  383: [
+    { type: "text", key: "friendNeed", label: "Friend / their struggle or goal", section: "Their need", seed: "Jordan, struggling with the stats course I took last semester" },
+    { type: "textarea", key: "specificHelp", label: "Specific help I offered (not vague)", rows: 2, seed: "Offered two 45-minute study sessions to go over the exact chapters he was stuck on." },
+    { type: "textarea", key: "result", label: "Did they accept it, and how did it go?", section: "Result", rows: 2, seed: "Yes, he said the second session finally made the concept click." },
+  ],
+
+  384: [
+    { type: "text", key: "activity", label: "Activity", section: "The plan", seed: "Weekly Sunday dinner" },
+    { type: "text", key: "whoInvolved", label: "Who's involved", seed: "My three closest friends from the dorm" },
+    { type: "textarea", key: "protectedTime", label: "Did I protect this time even though I was busy?", section: "Reflection", rows: 2, seed: "Yes, even during midterms week I kept it on the calendar, and it helped more than skipping it would have." },
+  ],
+
+  385: [
+    { type: "text", key: "issue", label: "The issue", section: "The disagreement", seed: "Feeling like I was doing more of the planning for our trip than she was" },
+    { type: "text", key: "iStatement", label: "My \"I\" statement opening", seed: "I've been handling most of the planning and I'd love more input from you." },
+    { type: "textarea", key: "resolved", label: "What was resolved", section: "Resolution", rows: 2, seed: "She hadn't realized how much I'd taken on, and split the remaining tasks with me." },
+    { type: "text", key: "strongerAfter", label: "Did the friendship feel stronger afterward?", seed: "Yes, it felt like we could actually be direct with each other." },
+  ],
+
+  386: [
+    { type: "text", key: "friend", label: "Friend", section: "What they did", seed: "Maya" },
+    { type: "textarea", key: "specificThing", label: "Specific thing they did", rows: 2, seed: "Stayed up late helping me rehearse answers before my first real interview." },
+    { type: "textarea", key: "myNote", label: "My note", section: "My note", rows: 3, seed: "Thank you for staying up with me last night, I walked into that interview so much more prepared because of you." },
+    { type: "textarea", key: "response", label: "How they reacted", section: "Their response", rows: 2, seed: "She said it meant a lot that I called it out specifically instead of a generic thanks." },
+  ],
+
+  387: [
+    { type: "table", key: "closestFriendships", label: "Closest friendships", section: "Closest friendships", columns: [
+      { key: "friend", label: "Friend", kind: "text" },
+      { key: "quality", label: "Quality I Value Most", kind: "text" },
+    ], seedRows: [
+      { friend: "Maya", quality: "Always tells me the truth, even when it's uncomfortable" },
+      { friend: "Devon", quality: "Shows up consistently, no matter how busy he is" },
+      { friend: "Priya", quality: "Genuinely curious about my life, not just her own" },
+    ] },
+    { type: "textarea", key: "commonThread", label: "Quality that shows up across all of them", section: "The common thread", rows: 2, seed: "Consistency, all three show up the same way whether things are easy or hard." },
+  ],
+
+  388: [
+    { type: "text", key: "friend", label: "Friend", section: "The introduction", seed: "Amara, interested in sustainability marketing" },
+    { type: "text", key: "contact", label: "Professional contact", seed: "A brand manager at my internship company" },
+    { type: "textarea", key: "whyMatters", label: "Why this connection genuinely matters for both", rows: 2, seed: "Amara wants to break into the field, and my contact is actively looking for junior talent this cycle." },
+    { type: "textarea", key: "result", label: "What happened after the introduction", section: "Result", rows: 2, seed: "They set up an informational interview, and my contact said she'd keep Amara in mind for an opening." },
+  ],
+
+  389: [
+    { type: "text", key: "classmateCourse", label: "Classmate / course", section: "Session", seed: "Devon, Intro to Statistics" },
+    { type: "textarea", key: "material", label: "Specific material we worked through", rows: 2, seed: "The two regression problem sets neither of us could finish alone." },
+    { type: "textarea", key: "result", label: "Did understanding improve compared to studying alone?", section: "Result", rows: 2, seed: "Yes, teaching him the part I understood clarified it for me too." },
+  ],
+
+  390: [
+    { type: "text", key: "friend", label: "Friend", section: "What I shared", seed: "Maya" },
+    { type: "textarea", key: "shared", label: "The real goal, fear, or challenge I shared", rows: 2, seed: "How anxious I actually am about not having a job lined up yet." },
+    { type: "textarea", key: "response", label: "How they responded", section: "Their response", rows: 2, seed: "She admitted she felt the exact same way, and we ended up making a plan together." },
+    { type: "text", key: "deeper", label: "Did the friendship feel deeper afterward?", seed: "Yes, noticeably." },
+  ],
+
+  391: [
+    { type: "text", key: "milestone", label: "What we're celebrating", section: "The milestone", seed: "Maya's first job offer" },
+    { type: "text", key: "whoInvolved", label: "Who's involved", seed: "Our whole friend group from freshman year" },
+    { type: "textarea", key: "result", label: "How it strengthened the group", section: "Result", rows: 2, seed: "It gave us a reason to all be in one place again, and made the milestone feel shared, not just hers." },
+  ],
+
+  392: [
+    { type: "textarea", key: "projectNeeds", label: "What this project genuinely requires", section: "Project needs", rows: 2, seed: "Someone comfortable with the data analysis, since that's my weakest area." },
+    { type: "text", key: "partnerChosen", label: "Partner selected", section: "Partner chosen", seed: "Devon" },
+    { type: "textarea", key: "strength", label: "Their complementary strength", rows: 2, seed: "Strong with spreadsheets and analysis, which frees me up to focus on the writing and presentation." },
+  ],
+
+  393: [
+    { type: "table", key: "taskSplit", label: "Task split", section: "Task split", columns: [
+      { key: "task", label: "Task", kind: "text" },
+      { key: "owner", label: "Owner", kind: "text" },
+      { key: "why", label: "Why (strength/availability)", kind: "text" },
+    ], seedRows: [
+      { task: "Data analysis", owner: "Devon", why: "Stronger with spreadsheets" },
+      { task: "Written report", owner: "Me", why: "More comfortable writing under a deadline" },
+      { task: "Final presentation", owner: "Both", why: "Splitting slides evenly" },
+    ] },
+    { type: "textarea", key: "checkIn", label: "Does the split still feel fair after revisiting it?", section: "Check-in", rows: 2, seed: "Yes, we checked in after week one and neither of us felt overloaded." },
+  ],
+
+  394: [
+    { type: "table", key: "goalStatements", label: "Goal statements", section: "Goal statements", columns: [
+      { key: "member", label: "Team Member", kind: "text" },
+      { key: "goal", label: "Their Version of the Goal", kind: "text" },
+    ], seedRows: [
+      { member: "Me", goal: "Build a clear before/after case study" },
+      { member: "Jordan", goal: "Focus mainly on the visual design" },
+      { member: "Priya", goal: "Build a clear before/after case study" },
+    ] },
+    { type: "textarea", key: "reconciliation", label: "Any real differences found, and how they were resolved", section: "Reconciliation", rows: 2, seed: "Jordan was treating visuals as the whole point, we agreed the case study comes first and the visuals support it." },
+  ],
+
+  395: [
+    { type: "text", key: "problem", label: "Shared problem", section: "The problem", seed: "Disagreement over which design direction to pursue" },
+    { type: "table", key: "perspectives", label: "Perspectives heard", section: "Perspectives heard", columns: [
+      { key: "person", label: "Person", kind: "text" },
+      { key: "reasoning", label: "Their Reasoning", kind: "text" },
+    ], seedRows: [
+      { person: "Me", reasoning: "Wanted the bolder option because it stood out more" },
+      { person: "Partner", reasoning: "Preferred the safer option because it matched the brand guide" },
+    ] },
+    { type: "textarea", key: "solution", label: "The agreed approach", section: "Solution", rows: 2, seed: "A hybrid: the bolder color palette, but within the safer, guide-compliant layout." },
+  ],
+
+  396: [
+    { type: "textarea", key: "feedbackGiven", label: "Specific, actionable feedback (given)", section: "Feedback I gave", rows: 2, seed: "The intro section runs long, cut it by about a third to leave more room for the results." },
+    { type: "textarea", key: "feedbackReceived", label: "Specific, actionable feedback (received)", section: "Feedback I received", rows: 2, seed: "My charts needed clearer labels, they weren't self-explanatory without me talking over them." },
+    { type: "textarea", key: "result", label: "What changed based on this exchange", section: "Result", rows: 2, seed: "Both sections got noticeably tighter before the final submission." },
+  ],
+
+  397: [
+    { type: "text", key: "partner", label: "Partner", section: "The agreement", seed: "Priya" },
+    { type: "textarea", key: "accountableFor", label: "What we're each accountable for", rows: 2, seed: "Five job applications a week each, with quality over just hitting the number." },
+    { type: "text", key: "frequency", label: "Check-in frequency", seed: "Every Sunday evening" },
+    { type: "textarea", key: "firstCheckIn", label: "Progress reported", section: "First check-in", rows: 2, seed: "I hit four, she hit six, we adjusted my target down slightly since mine take longer to tailor." },
+  ],
+
+  398: [
+    { type: "textarea", key: "whatWorked", label: "What worked", section: "What worked", rows: 2, seed: "Splitting tasks by strength instead of evenly by default." },
+    { type: "textarea", key: "whatDidnt", label: "What didn't", section: "What didn't", rows: 2, seed: "We didn't check in often enough mid-project, so small issues piled up." },
+    { type: "textarea", key: "whatWeChange", label: "What we'd change", section: "What we'd change", rows: 2, seed: "Add a short weekly check-in instead of only meeting at the start and end." },
+    { type: "text", key: "specificChange", label: "Specific change for next time", seed: "A 10-minute Monday check-in call for the whole team." },
+  ],
+
+  399: [
+    { type: "text", key: "teamMembers", label: "Team members involved", section: "The conflict", seed: "Me and Jordan" },
+    { type: "textarea", key: "underlyingConcern", label: "Each side's actual underlying concern", rows: 2, seed: "Jordan felt his design ideas kept getting overruled; I felt like deadlines kept slipping because of redesigns." },
+    { type: "textarea", key: "resolution", label: "Mutual resolution reached", section: "Resolution", rows: 2, seed: "We agreed on one design review checkpoint instead of ongoing changes, so his input has a real moment and the schedule holds." },
+  ],
+
+  400: [
+    { type: "table", key: "contributions", label: "Contributions recognized", section: "Contributions recognized", columns: [
+      { key: "member", label: "Team Member", kind: "text" },
+      { key: "contribution", label: "Specific Contribution", kind: "text" },
+    ], seedRows: [
+      { member: "Devon", contribution: "Caught a data error two days before submission" },
+      { member: "Priya", contribution: "Rewrote the executive summary overnight" },
+      { member: "Jordan", contribution: "Designed the final deck from scratch" },
+    ] },
+    { type: "textarea", key: "result", label: "How the team responded", section: "Result", rows: 2, seed: "Everyone seemed genuinely glad to hear their specific piece called out, not just a generic \"great job team.\"" },
+  ],
+
+  401: [
+    { type: "textarea", key: "roleTaken", label: "What I facilitated or led", section: "The role", rows: 2, seed: "Ran our team's planning meeting for the final project phase." },
+    { type: "text", key: "defaultRole", label: "My usual default role", seed: "Usually just a content contributor, rarely the one leading the room" },
+    { type: "textarea", key: "reflection", label: "What this revealed about my own capabilities", section: "Reflection", rows: 2, seed: "I'm actually good at keeping a meeting on track, I just hadn't tried it before." },
+  ],
+
+  402: [
+    { type: "text", key: "potentialMentor", label: "Potential mentor", section: "The person", seed: "Ms. Alvarez, a senior analyst at my internship" },
+    { type: "textarea", key: "whyResonates", label: "Why their path resonates with my goals", rows: 2, seed: "She moved from a non-target school into the exact analyst track I'm hoping for." },
+    { type: "textarea", key: "evidence", label: "Specific evidence of their willingness to mentor others", section: "Evidence", rows: 2, seed: "I watched her spend twenty extra minutes walking a new intern through a model, unprompted." },
+  ],
+
+  403: [
+    { type: "textarea", key: "reason", label: "Specific reason for wanting to connect", section: "My request", rows: 2, seed: "I wanted her take on whether to specialize early or stay generalist for my first two years." },
+    { type: "textarea", key: "response", label: "Response received", section: "Result", rows: 2, seed: "She replied the same day and offered a 20-minute call the following week." },
+  ],
+
+  404: [
+    { type: "textarea", key: "question", label: "Question, tailored to my specific situation", section: "My question", rows: 2, seed: "Given that I'm choosing between two offers with different growth paths, how did you weigh growth versus stability early on?" },
+    { type: "textarea", key: "answer", label: "What they said", section: "Their answer", rows: 2, seed: "She walked through the actual tradeoff she made and what she'd do differently now." },
+    { type: "text", key: "genuinelyUseful", label: "Was it genuinely useful, not generic?", seed: "Yes, it directly informed which offer I leaned toward." },
+  ],
+
+  405: [
+    { type: "text", key: "adviceGiven", label: "Advice given", section: "What I applied", seed: "Negotiate the start date, not just the salary." },
+    { type: "textarea", key: "howApplied", label: "How I applied it, and the result", rows: 2, seed: "Asked for two extra weeks before starting, and they said yes without any pushback." },
+    { type: "textarea", key: "followUpSent", label: "Follow-up sent", section: "Follow-up sent", rows: 2, seed: "Thank you again for the negotiation tip, I used it and got the extra time I needed before starting." },
+  ],
+
+  406: [
+    { type: "text", key: "peersInvolved", label: "Peers involved (3-5)", section: "The circle", seed: "Priya, Devon, Jordan, and me" },
+    { type: "text", key: "sharedGoal", label: "Shared goal or interest", seed: "All four of us job searching in marketing and analytics this cycle" },
+    { type: "text", key: "cadence", label: "Proposed cadence", seed: "Every other Thursday evening, 30 minutes" },
+    { type: "textarea", key: "firstMeeting", label: "How it went", section: "First meeting", rows: 2, seed: "We each shared one lead and one rejection, it already felt less isolating than searching alone." },
+  ],
+
+  407: [
+    { type: "text", key: "whoMet", label: "Who I met, and where", section: "The contact", seed: "A brand strategist at a career fair panel" },
+    { type: "textarea", key: "genuineQuestion", label: "Genuine question I asked", rows: 2, seed: "I asked how she decided which agency to join out of several offers." },
+    { type: "textarea", key: "result", label: "Did the connection continue beyond the initial interaction?", section: "Result", rows: 2, seed: "Yes, she connected with me on LinkedIn and offered to review my portfolio." },
+  ],
+
+  408: [
+    { type: "text", key: "contact", label: "Professional contact", section: "The chat", seed: "An alum working at a firm I'm interested in" },
+    { type: "textarea", key: "talkedAbout", label: "What we talked about, casually", rows: 2, seed: "Her actual day-to-day, not just the polished version from the company website." },
+    { type: "text", key: "felt", label: "Did it feel genuinely relaxed, not like a formal interview?", seed: "Yes, it felt more like catching up with a friend of a friend." },
+  ],
+
+  409: [
+    { type: "text", key: "cause", label: "Cause / organization", section: "The opportunity", seed: "Local food bank weekend shifts" },
+    { type: "text", key: "fellowVolunteer", label: "Fellow volunteer I connected with", seed: "A grad student named Kwame, also job searching" },
+    { type: "textarea", key: "result", label: "Did a genuine relationship start to form?", section: "Result", rows: 2, seed: "Yes, we started grabbing coffee after shifts and swapping job leads." },
+  ],
+
+  410: [
+    { type: "text", key: "peer", label: "Peer", section: "The peer", seed: "Priya" },
+    { type: "textarea", key: "strength", label: "Specific work or strength I can genuinely vouch for", rows: 2, seed: "She rebuilt our entire data model overnight when our original approach fell apart two days before the deadline." },
+    { type: "textarea", key: "recommendation", label: "My recommendation", section: "My recommendation", rows: 3, seed: "Priya is the person you want on a team when something breaks under deadline pressure, she rebuilt our core analysis overnight without anyone asking her to." },
+  ],
+
+  411: [
+    { type: "textarea", key: "growthArea", label: "Genuine growth area (friendships, teamwork, or mentorship)", section: "Growth", rows: 2, seed: "Following up consistently with mentors instead of letting one good conversation just fade." },
+    { type: "textarea", key: "remainingChallenge", label: "Area still genuinely difficult", section: "Remaining challenge", rows: 2, seed: "I still avoid conflict with close friends longer than I should." },
+    { type: "textarea", key: "nextSteps", label: "What I'll focus on next", section: "Next steps", rows: 2, seed: "Practicing the same direct \"I\" statement approach with friends that I've gotten comfortable using on teams." },
+  ],
 };
