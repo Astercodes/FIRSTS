@@ -454,6 +454,36 @@ export const COACH_MODE: Record<number, CoachMode> = {
   439: "hybrid",
   440: "synthesis",
   441: "reflective",
+  442: "reflective",
+  443: "reflective",
+  444: "reflective",
+  445: "reflective",
+  446: "hybrid",
+  447: "hybrid",
+  448: "hybrid",
+  449: "hybrid",
+  450: "hybrid",
+  451: "hybrid",
+  452: "hybrid",
+  453: "reflective",
+  454: "reflective",
+  455: "reflective",
+  456: "hybrid",
+  457: "hybrid",
+  458: "hybrid",
+  459: "hybrid",
+  460: "hybrid",
+  461: "hybrid",
+  462: "reflective",
+  463: "reflective",
+  464: "hybrid",
+  465: "reflective",
+  466: "reflective",
+  467: "hybrid",
+  468: "reflective",
+  469: "reflective",
+  470: "synthesis",
+  471: "synthesis",
 };
 
 export const LEARN_CONTENT: Record<number, LearnContent> = {
@@ -12521,6 +12551,786 @@ export const LEARN_CONTENT: Record<number, LearnContent> = {
     ],
     successSignal:
       "You've dropped or consolidated at least one tool that wasn't genuinely earning its place in your stack.",
+    milestoneTies: [],
+  },
+
+  442: {
+    definition:
+      "A First Leadership Awareness is a working understanding of what leadership actually is, and how it differs from authority or management, specifically the distinction between having positional power and genuinely earning trust and influence.",
+    whyItMatters:
+      "Many people conflate leadership with title or authority, which leads to a narrow, incomplete view of what actually makes someone effective at guiding others toward a shared goal.",
+    whenWhoWhere: [
+      { label: "When", body: "Build this awareness early, before you're placed in any formal leadership role, so you enter it with a genuine, accurate understanding." },
+      { label: "Who", body: "No collaborator required, though observing leaders you admire and ones you don't sharpens the distinction." },
+      { label: "Where", body: "Built through observation, reading, and reflection on leaders you've encountered." },
+    ],
+    howItWorks: [
+      "Identify one leader you genuinely respect and one authority figure you don't, and articulate specifically what separates them beyond just their title.",
+    ],
+    tools: ["No special tool", "your own observations as source material"],
+    scenario: {
+      title: "Earned trust, not assigned power",
+      body: "A student who assumed leadership just meant being in charge realized, watching a team captain who had no formal authority but whom everyone genuinely followed, that leadership was actually about earned trust, not assigned power.",
+    },
+    pitfalls: [
+      "Assuming a title or position automatically confers leadership, when genuine leadership is earned through trust and demonstrated judgment, not granted by an org chart.",
+    ],
+    successSignal:
+      "You can articulate a clear, specific distinction between authority and genuine leadership, backed by real examples from your own experience.",
+    milestoneTies: [],
+  },
+
+  443: {
+    definition:
+      "A First Leadership Style Assessment identifies your natural leadership tendencies and areas for development, building genuine self-awareness before you're asked to lead under real pressure.",
+    whyItMatters:
+      "Understanding your natural tendencies, both strengths and blind spots, lets you lead more deliberately rather than defaulting unconsciously to whatever comes naturally, for better or worse.",
+    whenWhoWhere: [
+      { label: "When", body: "Conduct this before taking on a significant leadership role, and periodically revisit it as you gain more real leadership experience." },
+      { label: "Who", body: "A mentor or peers who've seen you in group settings can offer valuable outside perspective." },
+      { label: "Where", body: "Done through self-reflection, ideally combined with real feedback from others." },
+    ],
+    howItWorks: [
+      "Reflect honestly on past group situations where you took initiative, and identify recurring patterns in how you naturally tend to lead.",
+    ],
+    tools: ["A simple leadership style framework, or just honest reflection on past group experiences"],
+    scenario: {
+      title: "A blind spot she hadn't named",
+      body: "A student who assumed she was a naturally collaborative leader discovered, through honest reflection on several past group projects, that she actually tended to take over tasks under pressure rather than delegate, a genuine blind spot she hadn't previously named.",
+    },
+    pitfalls: [
+      "Assuming your self-perception is accurate without ever checking it against how others have actually experienced your leadership.",
+    ],
+    successSignal:
+      "You can name a specific natural leadership tendency, and a specific area you genuinely want to develop.",
+    milestoneTies: [],
+  },
+
+  444: {
+    definition:
+      "A First Leadership Responsibility takes genuine ownership for the outcome of a task, project, or group, distinct from simply contributing effort without accepting accountability for the overall result.",
+    whyItMatters:
+      "Genuine ownership, being willing to be accountable for the outcome even when things don't go perfectly, is a distinct and necessary step before anyone will trust you with formal leadership.",
+    whenWhoWhere: [
+      { label: "When", body: "Practice this whenever a genuine opportunity arises to take ownership of an outcome, even without a formal title." },
+      { label: "Who", body: "Your team or group." },
+      { label: "Where", body: "Applied in any real project or task with a genuine outcome at stake." },
+    ],
+    howItWorks: [
+      "Explicitly take ownership of a real outcome, communicate that ownership to your team, and follow through even when it becomes genuinely difficult.",
+    ],
+    tools: ["No special tool", "a genuine willingness to be accountable"],
+    scenario: {
+      title: "Staying late to fix it",
+      body: "A student who used to contribute effort without ever explicitly owning outcomes took clear responsibility for her team's client presentation succeeding, which meant staying late to fix a last-minute issue rather than treating it as someone else's problem.",
+    },
+    pitfalls: [
+      "Contributing effort to a project without ever genuinely accepting accountability for how it actually turns out.",
+    ],
+    successSignal:
+      "You can point to a specific outcome you genuinely took ownership of, including following through when it got difficult.",
+    milestoneTies: [],
+  },
+
+  445: {
+    definition:
+      "A First Leadership Role formally leads a group, project, activity, or initiative, extending Leadership Responsibility into an actual, named leadership position.",
+    whyItMatters:
+      "Taking on a formal leadership role, even a small one, provides genuine experience navigating the specific challenges of leadership that observation and responsibility alone don't fully prepare you for.",
+    whenWhoWhere: [
+      { label: "When", body: "Volunteer for this once you've built genuine leadership responsibility and awareness through the earlier FIRSTS in this stage." },
+      { label: "Who", body: "The group, project, or initiative you're leading." },
+      { label: "Where", body: "Applied in any real leadership opportunity, formal or informal." },
+    ],
+    howItWorks: [
+      "Volunteer explicitly for a leadership role, and actively guide the group's direction, not just contribute content alongside everyone else.",
+    ],
+    tools: ["The Leadership Role Assumed FIRST from Stage Eight as related groundwork"],
+    scenario: {
+      title: "More than any amount of contributing alone",
+      body: "A student who'd only ever contributed to group projects volunteered to formally lead her club's annual event, and found the experience taught her more about real leadership challenges, delegation, motivation, difficult conversations, than any amount of contributing alone ever had.",
+    },
+    pitfalls: [
+      "Continuing to avoid formal leadership roles indefinitely, missing the genuine growth that only comes from actually holding one.",
+    ],
+    successSignal:
+      "You can point to a specific group, project, or initiative you formally led, not just contributed to.",
+    milestoneTies: [],
+  },
+
+  446: {
+    definition:
+      "A First Meeting Led organizes and leads a professional meeting, extending the Discussion Facilitation and Meeting Agenda Prepared FIRSTS from Stage Six into full ownership of a real meeting.",
+    whyItMatters:
+      "Leading a meeting well, not just attending or contributing to one, is a distinct, learnable skill that directly signals leadership capability to others.",
+    whenWhoWhere: [
+      { label: "When", body: "Practice this whenever you have a genuine opportunity to organize and lead a real meeting." },
+      { label: "Who", body: "The meeting's attendees." },
+      { label: "Where", body: "Applied to any real meeting you're responsible for organizing." },
+    ],
+    howItWorks: [
+      "Prepare a clear agenda in advance, actively guide the discussion to stay on track, and close with clear decisions and next steps.",
+    ],
+    tools: ["Your Meeting Agenda Prepared and Discussion Facilitation skills from Stage Six"],
+    scenario: {
+      title: "Managing the room, not just the ideas",
+      body: "A student who'd only ever attended meetings organized and led her team's project kickoff meeting, and found that actively managing the room, not just contributing ideas, revealed genuine leadership skill she hadn't previously had a chance to build.",
+    },
+    pitfalls: [
+      "Preparing an agenda but not actually using it to guide the meeting, letting the discussion drift without real direction.",
+    ],
+    successSignal:
+      "The meeting stays on track, ends with clear decisions, and attendees leave with genuine clarity on next steps.",
+    milestoneTies: [],
+  },
+
+  447: {
+    definition:
+      "A First Team Goal Set establishes a clear objective for a group, extending the Team Goal Alignment FIRST from Stage Ten into actually setting the goal, not just confirming alignment on an existing one.",
+    whyItMatters:
+      "A team without a clear, explicit goal tends to drift, with individual members quietly pursuing their own interpretation of what success looks like.",
+    whenWhoWhere: [
+      { label: "When", body: "Use this at the start of any group project or initiative you're leading." },
+      { label: "Who", body: "Your team or group." },
+      { label: "Where", body: "Established explicitly in an early team meeting." },
+    ],
+    howItWorks: [
+      "Propose a clear, specific goal, invite genuine input and refinement from the team, and confirm shared understanding before moving forward.",
+    ],
+    tools: ["The Team Goal Alignment structure from Stage Ten"],
+    scenario: {
+      title: "Stating it instead of assuming it",
+      body: "A student leading a new club initiative set an explicit, specific goal in the first meeting rather than assuming everyone shared her mental picture, which prevented the kind of goal confusion that had derailed a previous project.",
+    },
+    pitfalls: [
+      "Assuming a shared goal is obvious from context, without ever stating it explicitly and confirming genuine shared understanding.",
+    ],
+    successSignal:
+      "The team can each state the same goal in their own words, because you set it clearly and explicitly from the start.",
+    milestoneTies: [],
+  },
+
+  448: {
+    definition:
+      "A First Vision Communicated explains a desired outcome clearly enough for others to understand and genuinely support it, a distinct skill from simply stating a goal or task list.",
+    whyItMatters:
+      "A compelling vision, not just a task list, is what genuinely motivates a team beyond mere compliance, giving people a real reason to care about the outcome.",
+    whenWhoWhere: [
+      { label: "When", body: "Use this when leading any initiative where genuine buy-in, not just task completion, matters for success." },
+      { label: "Who", body: "Your team or the people you're leading." },
+      { label: "Where", body: "Communicated in a meeting, presentation, or written message." },
+    ],
+    howItWorks: [
+      "Articulate not just what needs to happen, but why it matters and what success will genuinely look like, in language that connects to what your team actually cares about.",
+    ],
+    tools: ["The Persuasive Speaking Vocabulary FIRST from Stage Nine"],
+    scenario: {
+      title: "Impact, not just a task list",
+      body: "A student leading a volunteer initiative found that explaining the specific, tangible impact the project would have, not just listing the tasks involved, noticeably increased genuine volunteer engagement compared to a purely task-focused pitch.",
+    },
+    pitfalls: [
+      "Communicating only the tasks involved without ever articulating why the outcome genuinely matters, which produces compliance rather than real engagement.",
+    ],
+    successSignal:
+      "Your team can articulate not just what they're doing, but why it matters, in their own words.",
+    milestoneTies: [],
+  },
+
+  449: {
+    definition:
+      "A First Task Delegation assigns responsibilities according to people's strengths and capabilities, extending the Task Delegation Practice FIRST from Stage Ten into a genuine leadership context with real accountability for the outcome.",
+    whyItMatters:
+      "Delegation done well, based on genuine fit rather than convenience, both produces better work and develops your team members' own capabilities.",
+    whenWhoWhere: [
+      { label: "When", body: "Use this whenever leading a team with multiple people and tasks to distribute." },
+      { label: "Who", body: "Your team." },
+      { label: "Where", body: "Applied at the start of any team project you're leading." },
+    ],
+    howItWorks: [
+      "Understand each team member's genuine strengths and development goals, and assign tasks that fit both the project's needs and each person's growth.",
+    ],
+    tools: ["The Task Delegation Practice structure from Stage Ten"],
+    scenario: {
+      title: "Assigning for growth, not just comfort",
+      body: "A student leading a project team assigned the most senior task not to her most experienced member by default, but to a less experienced member who'd expressed wanting to grow in that specific area, with appropriate support, which built genuine capability on her team.",
+    },
+    pitfalls: [
+      "Delegating purely based on who's already comfortable with a task, missing opportunities to develop team members' growth areas.",
+    ],
+    successSignal:
+      "Your delegation decisions reflect genuine consideration of both project needs and individual team member growth.",
+    milestoneTies: [],
+  },
+
+  450: {
+    definition:
+      "A First Accountability System Created establishes a method for tracking responsibilities and commitments across a team, extending the Accountability Partner Agreement FIRST from Stage Ten into a full team system.",
+    whyItMatters:
+      "Without a genuine tracking system, commitments made in meetings tend to quietly slip, and a leader needs visibility into what's actually on track versus falling behind.",
+    whenWhoWhere: [
+      { label: "When", body: "Establish this at the start of leading any team project with multiple commitments to track." },
+      { label: "Who", body: "Your team." },
+      { label: "Where", body: "Applied throughout a real team project." },
+    ],
+    howItWorks: [
+      "Set up a simple, visible system tracking who owns what and by when, and review it consistently, not just once at the start.",
+    ],
+    tools: ["A project management tool like Asana or Trello, from your Stage Eleven tool practice"],
+    scenario: {
+      title: "Catching two tasks before they slipped",
+      body: "A student leading a project team set up a shared Asana board tracking every commitment made in meetings, which caught two tasks quietly falling behind before they became genuine problems.",
+    },
+    pitfalls: [
+      "Setting up a tracking system once but never actually reviewing it consistently, letting it drift out of sync with real status.",
+    ],
+    successSignal:
+      "You catch at least one commitment falling behind schedule early enough to address it, because your system made it visible.",
+    milestoneTies: [],
+  },
+
+  451: {
+    definition:
+      "A First Leadership Decision Made makes a decision that affects a group or project, extending the Decision-Making Log FIRST from Stage Eight into the specific context of a leadership role with real stakes for others.",
+    whyItMatters:
+      "Leadership decisions carry weight beyond your own individual choices; genuinely owning a decision that affects others is a distinct responsibility from personal decision-making.",
+    whenWhoWhere: [
+      { label: "When", body: "Use this whenever a genuine decision arises that will affect your team or project, not just yourself." },
+      { label: "Who", body: "Your team or group affected by the decision." },
+      { label: "Where", body: "Applied to any real leadership decision." },
+    ],
+    howItWorks: [
+      "Gather relevant input, make a clear decision within a reasonable timeframe, and communicate both the decision and your reasoning to those affected.",
+    ],
+    tools: ["The Decision-Making Log structure from Stage Eight"],
+    scenario: {
+      title: "Keeping the project moving",
+      body: "A student leading a team project had to decide between two creative directions under a tight deadline, and rather than avoiding the decision or letting it drag on, she gathered quick input, made a clear call, and explained her reasoning to the team, which kept the project moving.",
+    },
+    pitfalls: [
+      "Avoiding or indefinitely delaying a genuine leadership decision out of fear of getting it wrong, which often costs the team more than a reasonably-timed imperfect decision would.",
+    ],
+    successSignal:
+      "You make a real decision affecting your team within a reasonable timeframe, and communicate your reasoning clearly.",
+    milestoneTies: [],
+  },
+
+  452: {
+    definition:
+      "A First Difficult Decision Made makes a responsible decision despite genuine uncertainty or competing interests, extending Leadership Decision Made into a specifically harder, higher-stakes context.",
+    whyItMatters:
+      "Easy decisions don't build much genuine leadership judgment; navigating real uncertainty and competing interests is where leadership capability actually develops.",
+    whenWhoWhere: [
+      { label: "When", body: "Use this whenever a genuine, difficult decision arises with real uncertainty or competing stakeholder interests." },
+      { label: "Who", body: "The stakeholders affected by the decision." },
+      { label: "Where", body: "Applied to any real leadership decision with genuine difficulty." },
+    ],
+    howItWorks: [
+      "Name the competing interests explicitly, gather what information you reasonably can within the available time, and make the decision while acknowledging its genuine difficulty rather than pretending it was obvious.",
+    ],
+    tools: ["The Decision Matrix and Analyzing Pros and Cons frameworks from Stages Five and Nine"],
+    scenario: {
+      title: "A reasoned call between two deserving people",
+      body: "A student leading a team had to decide between two team members for a limited leadership opportunity, both genuinely deserving, and rather than avoiding the decision, she made a reasoned call based on specific, articulable criteria and explained her reasoning honestly to both.",
+    },
+    pitfalls: [
+      "Pretending a genuinely difficult decision was obvious or easy, rather than acknowledging its real difficulty while still making a clear call.",
+    ],
+    successSignal:
+      "You make a genuinely difficult decision, and can articulate the specific reasoning behind it, even to those who didn't get the outcome they wanted.",
+    milestoneTies: [],
+  },
+
+  453: {
+    definition:
+      "A First Leadership Communication communicates expectations, priorities, and responsibilities clearly, extending the communication vocabulary and skills from Stages Six and Nine into a specifically leadership context.",
+    whyItMatters:
+      "Unclear expectations from a leader are one of the most common sources of team friction and dropped responsibilities; clarity here prevents significant downstream confusion.",
+    whenWhoWhere: [
+      { label: "When", body: "Practice this whenever communicating expectations, priorities, or responsibilities to a team you're leading." },
+      { label: "Who", body: "Your team." },
+      { label: "Where", body: "Applied in meetings, written communication, or one-on-one conversations." },
+    ],
+    howItWorks: [
+      "State expectations explicitly and specifically, rather than assuming they're understood from context, and confirm genuine understanding before moving forward.",
+    ],
+    tools: ["The Meeting/Call Vocabulary and Professional Email Vocabulary FIRSTS from Stage Nine"],
+    scenario: {
+      title: "A gap only caught because she checked",
+      body: "A student leading a project used to assume her team understood priorities from a general team meeting, until explicit confirmation revealed two team members had genuinely different understandings of what mattered most, a gap only caught because she checked.",
+    },
+    pitfalls: [
+      "Assuming expectations are understood simply because they were mentioned once, without ever explicitly confirming genuine shared understanding.",
+    ],
+    successSignal:
+      "You explicitly confirm your team's understanding of expectations, and catch at least one genuine gap before it causes a problem.",
+    milestoneTies: [],
+  },
+
+  454: {
+    definition:
+      "A First Team Motivation Exercise encourages others toward a shared objective, extending Vision Communicated into ongoing motivational leadership rather than a single moment of inspiration.",
+    whyItMatters:
+      "Motivation isn't just a single speech; sustaining genuine team engagement over time requires ongoing, deliberate leadership attention.",
+    whenWhoWhere: [
+      { label: "When", body: "Practice this throughout a project, especially during difficult or low-energy stretches." },
+      { label: "Who", body: "Your team." },
+      { label: "Where", body: "Applied throughout a real project, not just at its kickoff." },
+    ],
+    howItWorks: [
+      "Notice when team energy or engagement is flagging, and respond with a specific, genuine motivational action, whether that's recognition, a reminder of the vision, or addressing a real obstacle.",
+    ],
+    tools: ["The Peer Recognition Shared and Recognition of Team Contributions FIRSTS from Stages Eight and Ten"],
+    scenario: {
+      title: "Reconnecting the team to real impact",
+      body: "A student leading a team through a difficult mid-project stretch noticed flagging energy, and rather than ignoring it, held a brief check-in reconnecting the team to the project's real impact, which visibly reenergized the group.",
+    },
+    pitfalls: [
+      "Assuming motivation only matters at a project's kickoff, missing the ongoing attention needed to sustain genuine engagement through difficult stretches.",
+    ],
+    successSignal:
+      "You notice a real dip in team energy and respond with a specific action that measurably reenergizes the group.",
+    milestoneTies: [],
+  },
+
+  455: {
+    definition:
+      "A First Person Mentored intentionally helps someone develop a skill or capability, extending the Peer Mentoring Session FIRST from Stage Eight into a more sustained, leadership-oriented mentoring relationship.",
+    whyItMatters:
+      "Mentoring someone else's development is a distinct leadership skill from doing the work yourself, and it multiplies your impact by building others' genuine capability.",
+    whenWhoWhere: [
+      { label: "When", body: "Use this whenever you have a genuine opportunity to help someone else develop, particularly someone you lead or work alongside." },
+      { label: "Who", body: "The person you're mentoring." },
+      { label: "Where", body: "Applied through ongoing, real mentoring interactions, not just a single conversation." },
+    ],
+    howItWorks: [
+      "Identify a specific skill the person wants to develop, and provide guidance, feedback, and opportunities to practice over time, resisting the urge to just do it for them.",
+    ],
+    tools: ["The Peer Mentoring Session structure from Stage Eight"],
+    scenario: {
+      title: "Watching confidence grow over a project",
+      body: "A student leading a team mentored a junior member specifically in presentation skills, providing structured feedback across several practice rounds, and watched that person's confidence and skill genuinely grow over the course of the project.",
+    },
+    pitfalls: [
+      "Doing the task for the person you're mentoring instead of genuinely developing their own capability over time.",
+    ],
+    successSignal:
+      "You can point to a specific, measurable skill improvement in the person you mentored, not just a single moment of help.",
+    milestoneTies: [],
+  },
+
+  456: {
+    definition:
+      "A First Person Coached helps someone identify a problem and develop their own solution, a distinct skill from mentoring by focusing on drawing out the person's own thinking rather than providing direct guidance.",
+    whyItMatters:
+      "Coaching, asking questions that help someone reach their own solution, builds genuine independent problem-solving capability in a way that simply providing answers doesn't.",
+    whenWhoWhere: [
+      { label: "When", body: "Use this when someone brings you a problem they're capable of solving themselves with the right guiding questions." },
+      { label: "Who", body: "The person you're coaching." },
+      { label: "Where", body: "Applied in a real coaching conversation." },
+    ],
+    howItWorks: [
+      "Resist the urge to provide the answer directly. Ask open-ended questions that help the person work through the problem and arrive at their own solution.",
+    ],
+    tools: ["The Question-Asking Vocabulary FIRST from Stage Nine"],
+    scenario: {
+      title: "A solution she felt genuine ownership over",
+      body: "A student leading a team member through a stuck project decision resisted the urge to just tell her what to do, and instead asked a series of guiding questions that helped the team member arrive at a solution she felt genuine ownership over.",
+    },
+    pitfalls: [
+      "Slipping into mentoring or directly answering the problem, which undercuts the coaching approach's genuine value of building independent capability.",
+    ],
+    successSignal:
+      "The person arrives at their own solution through your guiding questions, rather than you simply providing the answer.",
+    milestoneTies: [],
+  },
+
+  457: {
+    definition:
+      "A First Constructive Feedback Given as a Leader provides feedback that improves performance without discouraging the person, extending the Feedback Given FIRST from Stage Eight into a specifically leadership context with real developmental stakes.",
+    whyItMatters:
+      "Feedback from a leader carries particular weight, and the specific skill of delivering it constructively, improving performance while keeping the person genuinely motivated, matters more in this context than in peer feedback.",
+    whenWhoWhere: [
+      { label: "When", body: "Practice this whenever genuine performance feedback is needed for someone you lead." },
+      { label: "Who", body: "The person receiving feedback." },
+      { label: "Where", body: "Delivered privately, in a setting conducive to a genuine, constructive conversation." },
+    ],
+    howItWorks: [
+      "Lead with genuine strengths, be specific about the improvement area, and frame it in terms of their own growth and the team's shared success, not criticism for its own sake.",
+    ],
+    tools: ["The Feedback Given and Feedback Vocabulary FIRSTS from Stages Eight and Nine"],
+    scenario: {
+      title: "Useful precisely because it wasn't discouraging",
+      body: "A student leading a team gave a team member specific, constructive feedback about presentation pacing, framed around helping them grow into a more senior role, and the team member said afterward it was the most useful feedback they'd received precisely because it didn't feel discouraging.",
+    },
+    pitfalls: [
+      "Softening feedback so much that the actual improvement area gets lost, or delivering it so bluntly that it discourages rather than motivates.",
+    ],
+    successSignal:
+      "The person receives your feedback well and makes a genuine improvement, without feeling discouraged by the conversation.",
+    milestoneTies: [],
+  },
+
+  458: {
+    definition:
+      "A First Difficult Feedback Conversation addresses a performance or behavioral issue professionally, extending Constructive Feedback Given as a Leader into a genuinely harder, higher-stakes conversation.",
+    whyItMatters:
+      "Not all feedback conversations are comfortable; the ability to address a genuinely difficult performance or behavioral issue directly, rather than avoiding it, is a critical leadership skill.",
+    whenWhoWhere: [
+      { label: "When", body: "Use this whenever a genuine, significant performance or behavioral issue needs to be addressed." },
+      { label: "Who", body: "The person whose performance or behavior needs addressing." },
+      { label: "Where", body: "In a private, calm setting suited to a genuinely difficult conversation." },
+    ],
+    howItWorks: [
+      "Prepare specifically what you'll say in advance, state the issue clearly and directly without excessive softening, and focus the conversation on a path forward.",
+    ],
+    tools: ["The Difficult Feedback Conversation prep structure, combining Feedback Vocabulary from Stage Nine with genuine directness"],
+    scenario: {
+      title: "More manageable than she'd feared",
+      body: "A student leading a team had to address a team member's repeated missed deadlines directly, a conversation she'd been avoiding for weeks, and found that preparing specifically what she'd say in advance made the actual conversation far more manageable than she'd feared.",
+    },
+    pitfalls: [
+      "Avoiding a genuinely necessary difficult conversation indefinitely, which usually makes the underlying issue worse and erodes trust in your leadership.",
+    ],
+    successSignal:
+      "You have the difficult conversation, and the issue either genuinely improves or you've at minimum addressed it directly and professionally.",
+    milestoneTies: [],
+  },
+
+  459: {
+    definition:
+      "A First Conflict Handled as a Leader resolves disagreement while maintaining team effectiveness, extending the Conflict Mediation in a Team FIRST from Stage Ten into the specific responsibility of a formal leadership role.",
+    whyItMatters:
+      "As a leader, conflict resolution isn't optional or occasional, it's a core responsibility, since unresolved team conflict directly undermines the team's ability to actually deliver results.",
+    whenWhoWhere: [
+      { label: "When", body: "Use this whenever a genuine conflict arises within a team you're leading." },
+      { label: "Who", body: "The team members in conflict." },
+      { label: "Where", body: "In a private setting suited to genuine mediation, or facilitated within the team as appropriate." },
+    ],
+    howItWorks: [
+      "Address the conflict directly rather than hoping it resolves itself, understand each side's genuine concern, and guide the team toward a resolution that preserves working effectiveness.",
+    ],
+    tools: ["The Conflict Mediation in a Team structure from Stage Ten"],
+    scenario: {
+      title: "Addressed early, before it hit output",
+      body: "A student leading a team addressed a brewing conflict between two members directly and early, before it could affect the team's actual output, and the team's effectiveness measurably improved once the underlying tension was resolved.",
+    },
+    pitfalls: [
+      "Avoiding team conflict out of discomfort, hoping it resolves on its own, which as a leader is a genuine abdication of responsibility that usually makes things worse.",
+    ],
+    successSignal:
+      "The conflict reaches resolution, and the team's actual effectiveness and output improve or stabilize as a result.",
+    milestoneTies: [],
+  },
+
+  460: {
+    definition:
+      "A First Team Performance Review evaluates progress against agreed goals, extending the Group Reflection & Debrief FIRST from Stage Ten into a more formal, leadership-driven evaluation process.",
+    whyItMatters:
+      "Regular, honest performance evaluation against real goals is what lets a leader course-correct before small issues become significant ones.",
+    whenWhoWhere: [
+      { label: "When", body: "Conduct this at natural project checkpoints or at regular intervals for an ongoing team." },
+      { label: "Who", body: "Your team." },
+      { label: "Where", body: "In a dedicated review session." },
+    ],
+    howItWorks: [
+      "Compare actual progress against the goals set at the project's start, honestly assess what's on track and what isn't, and identify specific adjustments needed.",
+    ],
+    tools: ["Your Team Goal Set FIRST earlier in this stage as the basis for comparison"],
+    scenario: {
+      title: "Caught with enough time to fix it",
+      body: "A student leading a team conducted a genuine mid-project performance review against the original goals, and honestly identified that one workstream had drifted off track, catching it with enough time left to actually fix it.",
+    },
+    pitfalls: [
+      "Skipping honest performance evaluation until a project's very end, when there's no longer time to actually course-correct.",
+    ],
+    successSignal:
+      "You identify at least one real gap between actual progress and stated goals, with enough time remaining to genuinely address it.",
+    milestoneTies: [],
+  },
+
+  461: {
+    definition:
+      "A First Leadership Presentation presents an idea, recommendation, or decision to a group, extending the Persuasive Presentation FIRST from Stage Six into the specific context of speaking with genuine leadership authority.",
+    whyItMatters:
+      "Presenting as a leader carries a distinct weight and responsibility, your audience isn't just evaluating the idea, but also your judgment and credibility as someone guiding a decision.",
+    whenWhoWhere: [
+      { label: "When", body: "Use this whenever presenting a genuine leadership recommendation or decision to a group." },
+      { label: "Who", body: "The group receiving the presentation." },
+      { label: "Where", body: "In any real presentation setting where you're speaking with leadership authority." },
+    ],
+    howItWorks: [
+      "Present with genuine confidence and clear ownership of the recommendation, while remaining open to real questions and pushback.",
+    ],
+    tools: ["The Persuasive Presentation FIRST from Stage Six and Leadership Communication earlier in this stage"],
+    scenario: {
+      title: "Owned conviction over hedging",
+      body: "A student presenting her team's recommended direction to stakeholders spoke with clear, owned conviction rather than hedging every point, which noticeably increased stakeholder confidence in both the recommendation and her leadership.",
+    },
+    pitfalls: [
+      "Hedging excessively out of a desire to seem open-minded, which can undermine genuine confidence in your leadership and the recommendation itself.",
+    ],
+    successSignal:
+      "Your audience leaves with genuine confidence in both your recommendation and your leadership judgment.",
+    milestoneTies: [],
+  },
+
+  462: {
+    definition:
+      "A First Cross-Functional Leadership Experience coordinates people from different functions or areas, extending the Cross-Functional Collaboration FIRST from Stage Seven into a genuine leadership role across functional boundaries.",
+    whyItMatters:
+      "Leading across functional boundaries requires translating between different disciplines' priorities and vocabularies, a distinct and valuable leadership skill beyond leading within your own function.",
+    whenWhoWhere: [
+      { label: "When", body: "Use this whenever you have a genuine opportunity to lead an initiative spanning multiple functions or areas." },
+      { label: "Who", body: "People from different functions or disciplines." },
+      { label: "Where", body: "Applied in any genuinely cross-functional leadership context." },
+    ],
+    howItWorks: [
+      "Actively translate your requests and updates into terms that land for each function's specific priorities, rather than assuming one communication style works universally.",
+    ],
+    tools: ["The Cross-Functional Collaboration FIRST from Stage Seven"],
+    scenario: {
+      title: "Framing around what engineering actually cared about",
+      body: "A student leading a cross-functional initiative between marketing and engineering learned to frame requests around technical constraints the engineering team actually cared about, rather than purely marketing language, which noticeably improved the collaboration's effectiveness.",
+    },
+    pitfalls: [
+      "Leading a cross-functional team the same way you'd lead a team within your own function, missing the genuine translation work required.",
+    ],
+    successSignal:
+      "People from different functions on your team feel genuinely understood and effectively coordinated, not just managed from one function's perspective.",
+    milestoneTies: [],
+  },
+
+  463: {
+    definition:
+      "A First Leadership Without Authority influences people even when you do not formally supervise them, one of the most valuable and challenging forms of leadership since it depends entirely on genuine trust and credibility rather than positional power.",
+    whyItMatters:
+      "Most real influence in a career happens without formal authority, colleagues, cross-functional partners, even senior stakeholders, and this skill often matters more than authority-based leadership.",
+    whenWhoWhere: [
+      { label: "When", body: "Practice this whenever you need to influence someone you don't formally supervise, which is most of the time for most people." },
+      { label: "Who", body: "Anyone you need to influence without formal authority over them." },
+      { label: "Where", body: "Applied in any real cross-functional or peer influence situation." },
+    ],
+    howItWorks: [
+      "Build genuine credibility through consistent, reliable work, and frame requests in terms of shared goals rather than personal authority you don't actually have.",
+    ],
+    tools: ["The Stakeholder Influence Exercise later in this stage as related practice"],
+    scenario: {
+      title: "A track record, not a title",
+      body: "A student successfully got a cross-functional team to prioritize her request not through any formal authority, which she didn't have, but through a track record of reliable, credible work and framing the request around a genuinely shared goal.",
+    },
+    pitfalls: [
+      "Attempting to influence through demands or pressure when you lack formal authority, which tends to backfire without the trust and credibility to back it up.",
+    ],
+    successSignal:
+      "You successfully influence someone's priorities or actions without any formal authority over them.",
+    milestoneTies: [],
+  },
+
+  464: {
+    definition:
+      "A First Stakeholder Influence Exercise persuades stakeholders to support an idea or decision, extending Leadership Without Authority into a more structured, deliberate influence effort.",
+    whyItMatters:
+      "Genuine stakeholder influence, understanding what each stakeholder actually cares about and framing your case accordingly, produces far better results than a single generic pitch to everyone.",
+    whenWhoWhere: [
+      { label: "When", body: "Use this whenever you need genuine buy-in from multiple stakeholders with potentially different priorities." },
+      { label: "Who", body: "The specific stakeholders whose support you need." },
+      { label: "Where", body: "Applied through individual conversations or a broader presentation, as appropriate." },
+    ],
+    howItWorks: [
+      "Identify each stakeholder's specific priorities and likely concerns, and tailor your framing to address what each one genuinely cares about.",
+    ],
+    tools: ["The Negotiation & Persuasion Vocabulary FIRST from Stage Nine"],
+    scenario: {
+      title: "Two concerns, two tailored arguments",
+      body: "A student seeking approval for a new initiative identified that one stakeholder cared most about budget impact and another about timeline risk, and tailored her pitch to address each concern specifically rather than using one generic pitch for both.",
+    },
+    pitfalls: [
+      "Using the exact same pitch for every stakeholder, missing the chance to address what each one specifically cares about.",
+    ],
+    successSignal:
+      "You secure genuine support from stakeholders with different priorities, each convinced by an argument tailored to their specific concern.",
+    milestoneTies: [],
+  },
+
+  465: {
+    definition:
+      "A First Crisis Leadership Exercise remains calm and provides direction during an unexpected challenge, a specific test of leadership under genuine, unplanned pressure.",
+    whyItMatters:
+      "How a leader responds to an unexpected crisis, staying calm and providing genuine direction versus panicking or freezing, significantly shapes how the team itself responds.",
+    whenWhoWhere: [
+      { label: "When", body: "This FIRST is inherently situational, applied whenever a genuine, unexpected crisis arises." },
+      { label: "Who", body: "Your team during the actual crisis." },
+      { label: "Where", body: "Wherever the real crisis unfolds." },
+    ],
+    howItWorks: [
+      "In the moment, consciously prioritize staying calm, quickly assess the actual situation, and provide clear, immediate direction rather than either freezing or overreacting.",
+    ],
+    tools: ["The Emotional Regulation Drill FIRST from Stage Eight"],
+    scenario: {
+      title: "Focused, not panicked",
+      body: "A student leading a team whose presentation software failed minutes before a major stakeholder meeting stayed calm, quickly assessed the actual options, and gave the team clear direction to switch to a backup format, which kept the team focused rather than panicked.",
+    },
+    pitfalls: [
+      "Either freezing under the pressure of a genuine crisis, or overreacting in a way that spreads panic through the team rather than calm, clear direction.",
+    ],
+    successSignal:
+      "You remain calm and provide genuine, clear direction during a real unexpected challenge, and your team's response reflects that calm.",
+    milestoneTies: [],
+  },
+
+  466: {
+    definition:
+      "A First Leadership Under Pressure maintains judgment and professionalism in a high-pressure situation, extending Crisis Leadership Exercise into sustained, ongoing pressure rather than a single acute crisis moment.",
+    whyItMatters:
+      "Sustained high-pressure periods, tight deadlines, high stakes, limited resources, test leadership judgment differently than a single acute crisis, requiring sustained composure rather than just a single moment of calm.",
+    whenWhoWhere: [
+      { label: "When", body: "This FIRST applies during any sustained high-pressure period of leadership, such as a demanding project deadline." },
+      { label: "Who", body: "Your team throughout the high-pressure period." },
+      { label: "Where", body: "Applied throughout a genuinely sustained high-pressure situation." },
+    ],
+    howItWorks: [
+      "Maintain your own composure and decision-making quality throughout the pressure, using stress management techniques as needed, and model that composure for your team.",
+    ],
+    tools: ["The Stress Management Technique Practiced FIRST from Stage Eight"],
+    scenario: {
+      title: "Composure that carried the team",
+      body: "A student leading a team through a genuinely demanding launch week maintained clear, calm decision-making throughout, using her own stress management techniques, which kept the team's own stress noticeably more manageable than it would have been otherwise.",
+    },
+    pitfalls: [
+      "Letting sustained pressure erode your judgment or professionalism over time, even if you handled the initial crisis moment well.",
+    ],
+    successSignal:
+      "You maintain genuine judgment and composure throughout a sustained high-pressure period, and your team's stress reflects your own steadiness.",
+    milestoneTies: [],
+  },
+
+  467: {
+    definition:
+      "A First Strategic Leadership Exercise connects immediate actions to broader goals, extending the Strategic Mapping FIRST from Stage Five into a specifically leadership context with real team implications.",
+    whyItMatters:
+      "A leader who only manages immediate tasks without connecting them to broader strategic goals risks leading a team efficiently toward the wrong destination.",
+    whenWhoWhere: [
+      { label: "When", body: "Use this periodically while leading any ongoing initiative, to ensure immediate actions genuinely serve the broader goal." },
+      { label: "Who", body: "No collaborator required for the reflection itself, though sharing it with your team adds valuable alignment." },
+      { label: "Where", body: "Done in a dedicated strategic reflection session." },
+    ],
+    howItWorks: [
+      "Map your team's current activities against the broader strategic goal, and flag any activity that isn't genuinely connected, or any strategic priority with no connected action.",
+    ],
+    tools: ["The Strategic Mapping FIRST from Stage Five"],
+    scenario: {
+      title: "Busywork versus the important workstream",
+      body: "A student leading a team's day-to-day execution paused to map current activities against the broader quarterly goal, and found the team had drifted into busywork on a lower-priority workstream while a genuinely important one had no active work connected to it.",
+    },
+    pitfalls: [
+      "Staying purely tactical, managing immediate tasks well without ever stepping back to confirm they genuinely serve the broader strategic goal.",
+    ],
+    successSignal:
+      "You identify at least one gap between current team activity and the broader strategic goal, and can redirect effort accordingly.",
+    milestoneTies: [],
+  },
+
+  468: {
+    definition:
+      "A First Leadership Feedback Received actively seeks feedback about your leadership effectiveness, extending the Feedback Received Gracefully FIRST from Stage Eight into a specifically leadership-focused, proactive practice.",
+    whyItMatters:
+      "Leaders often receive less honest feedback than they think, since people are naturally hesitant to critique someone with authority over them; actively, genuinely seeking it out is necessary to counter that dynamic.",
+    whenWhoWhere: [
+      { label: "When", body: "Seek this out periodically, especially after leading a significant project or initiative." },
+      { label: "Who", body: "The people you lead, ideally in a setting where they feel genuinely safe being honest." },
+      { label: "Where", body: "Applied through direct requests for feedback, ideally structured to encourage genuine honesty." },
+    ],
+    howItWorks: [
+      "Ask specific, direct questions about your leadership rather than a vague \"any feedback for me,\" and genuinely create safety for honest responses, including considering anonymous options.",
+    ],
+    tools: ["The Feedback Received Gracefully FIRST from Stage Eight"],
+    scenario: {
+      title: "A blind spot no one had said out loud",
+      body: "A student leading a team asked for anonymous feedback after a project's conclusion, specifically because she suspected direct, named feedback would be softened, and the anonymous responses revealed a genuine blind spot about her delegation habits that no one had told her directly.",
+    },
+    pitfalls: [
+      "Only asking for feedback in a setting where people don't feel safe being genuinely honest, which produces artificially positive, unhelpful responses.",
+    ],
+    successSignal:
+      "You receive at least one piece of genuinely honest feedback about your leadership that you wouldn't have otherwise heard.",
+    milestoneTies: [],
+  },
+
+  469: {
+    definition:
+      "A First Leadership Mistake Reflection analyzes a genuine leadership mistake and identifies what should change, extending the Resilience Exercise FIRST from Stage Eight into a specifically leadership-focused reflection.",
+    whyItMatters:
+      "Every leader makes real mistakes; the ones who genuinely grow are the ones who honestly analyze them rather than deflecting or minimizing what happened.",
+    whenWhoWhere: [
+      { label: "When", body: "Conduct this after any genuine leadership mistake, ideally while details are still fresh." },
+      { label: "Who", body: "No collaborator required, though discussing it with a mentor deepens the reflection." },
+      { label: "Where", body: "Done in a private, honest reflective session." },
+    ],
+    howItWorks: [
+      "Describe the mistake honestly, without minimizing it, identify what specifically you'd do differently, and name one concrete change for your future leadership.",
+    ],
+    tools: ["The Resilience Exercise structure from Stage Eight"],
+    scenario: {
+      title: "A process fix instead of blaming a person",
+      body: "A student who'd made a real delegation mistake, assigning a task to someone without adequate context or support, honestly analyzed it rather than blaming the team member, and identified a specific process change (a delegation checklist) that prevented the same mistake from recurring.",
+    },
+    pitfalls: [
+      "Deflecting blame onto others or circumstances, rather than honestly owning your own specific role in the mistake.",
+    ],
+    successSignal:
+      "You can name a specific, honest lesson from a real leadership mistake, and a concrete change you've made as a result.",
+    milestoneTies: [],
+  },
+
+  470: {
+    definition:
+      "A First Leadership Philosophy defines the principles that guide how you lead others, extending the Personal Values Statement Written FIRST from Stage Eight into a specifically leadership-focused articulation.",
+    whyItMatters:
+      "A clear, genuine leadership philosophy helps you lead consistently according to your own real principles, rather than reacting differently in each situation based on mood or circumstance.",
+    whenWhoWhere: [
+      { label: "When", body: "Write this once you have enough real leadership experience, from throughout this stage, to articulate genuine, evidence-based principles." },
+      { label: "Who", body: "No collaborator required, though discussing it with a mentor can sharpen it." },
+      { label: "Where", body: "Written in a dedicated reflective session." },
+    ],
+    howItWorks: [
+      "Reflect on your leadership experiences throughout this stage, and identify two or three genuine principles that have consistently guided your best leadership moments.",
+    ],
+    tools: ["Your accumulated leadership experiences and reflections from throughout this stage"],
+    scenario: {
+      title: "A principle she actually leaned on later",
+      body: "A student's leadership philosophy, \"I lead by being honest even when it's uncomfortable, and I develop others rather than just directing them,\" became something she genuinely referenced when facing a difficult leadership decision months later.",
+    },
+    pitfalls: [
+      "Writing a leadership philosophy that sounds impressive but doesn't actually reflect how you've genuinely led in real situations.",
+    ],
+    successSignal:
+      "You can recall and apply your leadership philosophy in an actual real leadership decision, not just have it written somewhere unused.",
+    milestoneTies: [],
+  },
+
+  471: {
+    definition:
+      "A First Leadership Development Plan establishes specific goals for becoming a stronger leader, extending the Hard Skill Development Plan FIRST from Stage Seven into a specifically leadership-focused, forward-looking plan.",
+    whyItMatters:
+      "A specific, time-bound development plan turns leadership growth from a vague aspiration into a genuine, trackable practice, the same way it does for any other skill.",
+    whenWhoWhere: [
+      { label: "When", body: "Build this at the conclusion of this stage, drawing on your Leadership Style Assessment, Leadership Feedback Received, and Leadership Mistake Reflection." },
+      { label: "Who", body: "A mentor to sanity-check whether the plan is realistic and well-prioritized." },
+      { label: "Where", body: "Written as a dedicated planning document." },
+    ],
+    howItWorks: [
+      "Choose one or two priority leadership growth areas from your accumulated reflections, and set specific milestones over the next several months.",
+    ],
+    tools: ["Your Leadership Style Assessment, Leadership Feedback Received, and Leadership Mistake Reflection from throughout this stage"],
+    scenario: {
+      title: "Concrete growth over a vague intention",
+      body: "A student's leadership development plan, targeting delegation specifically based on real feedback and a genuine mistake she'd reflected on, produced far more concrete growth over the following months than a vague general intention to \"be a better leader\" ever could have.",
+    },
+    pitfalls: [
+      "Setting a plan too broad or unfocused, rather than genuinely prioritizing the specific growth areas your real reflections have surfaced.",
+    ],
+    successSignal:
+      "You can point to specific, planned progress on your priority leadership growth area, not just a vague ongoing intention.",
     milestoneTies: [],
   },
 };

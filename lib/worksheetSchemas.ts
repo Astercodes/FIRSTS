@@ -4294,4 +4294,224 @@ export const WORKSHEET_SCHEMAS: Record<number, WorksheetField[]> = {
     ] },
     { type: "textarea", key: "decision", label: "Tool(s) I'm dropping or consolidating", section: "Decision", rows: 2, seed: "Deleting the second notes app, everything moves into Notion for good." },
   ],
+
+  442: [
+    { type: "text", key: "leaderRespected", label: "Leader I genuinely respect", section: "The leader", seed: "My club's outgoing president" },
+    { type: "text", key: "authorityFigure", label: "Authority figure I don't (no title needed)", seed: "A group project \"lead\" who just assigned tasks and disappeared" },
+    { type: "textarea", key: "distinction", label: "What separates them beyond title", section: "The distinction", rows: 2, seed: "The president actually listened and adjusted plans based on what the group needed; the other person just delegated and vanished." },
+  ],
+
+  443: [
+    { type: "textarea", key: "pastMoments", label: "Past group leadership moments", section: "Past moments", rows: 2, seed: "Leading three group projects over the past year, plus organizing a volunteer event." },
+    { type: "text", key: "tendency", label: "Natural tendency I notice", section: "Pattern", seed: "I tend to take over tasks myself under pressure instead of trusting others with them." },
+    { type: "text", key: "growthArea", label: "Genuine area for growth", seed: "Delegating earlier, before I'm already stressed about the deadline." },
+  ],
+
+  444: [
+    { type: "text", key: "taskProject", label: "Task / project", section: "The outcome", seed: "Our team's client presentation" },
+    { type: "textarea", key: "communicated", label: "How I communicated ownership to the team", rows: 2, seed: "Told the team directly I'd make sure it came together, even if that meant covering gaps myself." },
+    { type: "text", key: "followThrough", label: "Did I follow through when it got difficult?", section: "Follow-through", seed: "Yes, stayed late to fix a slide that broke the night before." },
+  ],
+
+  445: [
+    { type: "text", key: "roleTaken", label: "Group / project / initiative", section: "The role", seed: "Formally leading my club's annual fundraiser" },
+    { type: "textarea", key: "reflection", label: "What this taught me that contributing alone hadn't", section: "Reflection", rows: 2, seed: "How much of leading is actually about delegation and motivation, not just doing good work myself." },
+  ],
+
+  446: [
+    { type: "table", key: "agenda", label: "Agenda", section: "Agenda", columns: [
+      { key: "topic", label: "Topic", kind: "text" },
+      { key: "time", label: "Time", kind: "text" },
+      { key: "objective", label: "Objective", kind: "text" },
+    ], seedRows: [
+      { topic: "Project status", time: "10 min", objective: "Confirm everyone's on track" },
+      { topic: "Blockers", time: "10 min", objective: "Surface anything stuck" },
+      { topic: "Next steps", time: "10 min", objective: "Assign clear owners and dates" },
+    ] },
+    { type: "text", key: "result", label: "Did it stay on track and end with clear next steps?", section: "Result", seed: "Yes, we finished two minutes early with every action item assigned." },
+  ],
+
+  447: [
+    { type: "textarea", key: "goalProposed", label: "Goal proposed", section: "The goal", rows: 2, seed: "Grow our club's active membership by 20% by the end of the semester." },
+    { type: "text", key: "confirmation", label: "Can each team member state it in their own words?", section: "Confirmation", seed: "Yes, went around the room and everyone restated it accurately." },
+  ],
+
+  448: [
+    { type: "text", key: "whatWereDoing", label: "What we're doing", section: "The vision", seed: "Running a mentorship program pairing upperclassmen with new members" },
+    { type: "textarea", key: "whyMatters", label: "Why it genuinely matters", rows: 2, seed: "New members who don't find a mentor in their first semester are the ones most likely to drop out of the club entirely." },
+    { type: "text", key: "result", label: "Could the team articulate the \"why,\" not just the \"what\"?", section: "Result", seed: "Yes, several volunteers repeated the retention point unprompted when recruiting mentors." },
+  ],
+
+  449: [
+    { type: "text", key: "task", label: "Task", section: "The assignment", seed: "Leading the sponsor outreach emails" },
+    { type: "textarea", key: "memberGoal", label: "Team member, and their growth goal", rows: 2, seed: "Jordan, who wants more experience with professional communication before graduating." },
+    { type: "textarea", key: "result", label: "How it went, and what support they needed", section: "Result", rows: 2, seed: "Went well after I reviewed his first draft email with him, he needed one round of feedback then ran with it." },
+  ],
+
+  450: [
+    { type: "text", key: "toolMethod", label: "Tool / method used", section: "The system", seed: "A shared Trello board" },
+    { type: "table", key: "commitments", label: "Commitments", columns: [
+      { key: "commitment", label: "Commitment", kind: "text" },
+      { key: "owner", label: "Owner", kind: "text" },
+      { key: "deadline", label: "Deadline", kind: "text" },
+    ], seedRows: [
+      { commitment: "Sponsor outreach", owner: "Jordan", deadline: "Oct 5" },
+      { commitment: "Venue booking", owner: "Priya", deadline: "Oct 8" },
+      { commitment: "Marketing graphics", owner: "Devon", deadline: "Oct 10" },
+    ] },
+    { type: "textarea", key: "result", label: "Did it catch anything falling behind early?", section: "Result", rows: 2, seed: "Yes, caught the venue booking stalled a week before it would have become a real problem." },
+  ],
+
+  451: [
+    { type: "text", key: "decision", label: "Decision made", section: "The decision", seed: "Going with the simpler event format instead of the more ambitious one we'd originally planned" },
+    { type: "textarea", key: "reasoning", label: "My reasoning", rows: 2, seed: "We didn't have enough volunteer hours confirmed to pull off the bigger version well, and a smaller event done well beats a big one done poorly." },
+    { type: "textarea", key: "communication", label: "How I explained it to those affected", section: "Communication", rows: 2, seed: "Told the team directly why, with the volunteer-hours math, so it didn't read as me just giving up on the bigger idea." },
+  ],
+
+  452: [
+    { type: "textarea", key: "competingInterests", label: "Competing interests at stake", section: "The decision", rows: 2, seed: "Two equally capable members wanted the same limited leadership slot on the planning committee." },
+    { type: "text", key: "criteria", label: "Explicit criteria used", seed: "Who had shown more initiative on unglamorous tasks over the past semester, not just visible ones." },
+    { type: "textarea", key: "callShared", label: "Decision made, and reasoning shared with those affected", section: "The call", rows: 2, seed: "Chose based on that criteria, and explained it honestly to both, including to the person who didn't get the slot." },
+  ],
+
+  453: [
+    { type: "text", key: "expectation", label: "Expectation communicated", section: "The expectation", seed: "That draft materials need to be shared 48 hours before any deadline, not the night before" },
+    { type: "textarea", key: "confirmed", label: "How I confirmed understanding", section: "Confirmation", rows: 2, seed: "Asked each person to repeat back what the 48-hour rule meant for their specific task." },
+    { type: "text", key: "gapCaught", label: "Any gap caught?", seed: "Yes, one person thought it meant 48 business hours, not calendar hours." },
+  ],
+
+  454: [
+    { type: "textarea", key: "dipNoticed", label: "What I noticed", section: "The dip", rows: 2, seed: "Meeting energy dropped noticeably in week three, shorter answers, fewer volunteers speaking up." },
+    { type: "text", key: "actionTaken", label: "Specific action", section: "Action taken", seed: "Shared a short update on the real impact of our work so far, with a specific number." },
+    { type: "text", key: "reenergized", label: "Did it genuinely reenergize the team?", seed: "Yes, noticeably more engagement in the very next meeting." },
+  ],
+
+  455: [
+    { type: "text", key: "personSkill", label: "Person / skill", section: "The mentorship", seed: "Devon, presentation skills" },
+    { type: "table", key: "progress", label: "Progress", section: "Progress", columns: [
+      { key: "session", label: "Session", kind: "text" },
+      { key: "focus", label: "Focus", kind: "text" },
+      { key: "progress", label: "Progress Noted", kind: "text" },
+    ], seedRows: [
+      { session: "1", focus: "Pacing", progress: "Still rushing the middle section" },
+      { session: "2", focus: "Pacing", progress: "Noticeably slower, more natural" },
+      { session: "3", focus: "Handling questions", progress: "Confident, no longer visibly rattled" },
+    ] },
+  ],
+
+  456: [
+    { type: "textarea", key: "problemBrought", label: "Person / problem they brought", section: "The problem", rows: 2, seed: "Priya, unsure how to handle a sponsor who kept changing their ask." },
+    { type: "textarea", key: "questions", label: "Guiding questions I asked", section: "Guiding questions", rows: 2, seed: "What does the sponsor actually need from this? What have you already tried?" },
+    { type: "textarea", key: "theirSolution", label: "Solution they arrived at themselves", section: "Their solution", rows: 2, seed: "She decided to send one clarifying email locking down scope before doing any more work, instead of continuing to guess." },
+  ],
+
+  457: [
+    { type: "text", key: "personStrength", label: "Person / genuine strength I led with", section: "The feedback", seed: "Jordan, his emails are always clear and well-organized" },
+    { type: "text", key: "improvementArea", label: "Specific improvement area", seed: "He tends to bury the actual ask at the end of long emails" },
+    { type: "textarea", key: "result", label: "How it was received", section: "Result", rows: 2, seed: "Well, he said he'd never noticed the pattern and started leading with the ask in his next few emails." },
+  ],
+
+  458: [
+    { type: "text", key: "issue", label: "Issue being addressed", section: "Prep", seed: "A team member missing three deadlines in a row without flagging it in advance" },
+    { type: "textarea", key: "wentActually", label: "How the conversation actually went", section: "Result", rows: 2, seed: "Tense at first, but calmer once I focused on what would help going forward instead of just listing the misses." },
+  ],
+
+  459: [
+    { type: "textarea", key: "teamIssue", label: "Team members / issue", section: "The conflict", rows: 2, seed: "Two members disagreeing over who owned the final say on design decisions." },
+    { type: "textarea", key: "resolved", label: "How it was resolved", section: "Resolution", rows: 2, seed: "Agreed one person owns final visual decisions, the other owns final copy decisions, removing the overlap." },
+    { type: "text", key: "effectiveness", label: "Did team effectiveness improve?", seed: "Yes, decisions stopped stalling in back-and-forth." },
+  ],
+
+  460: [
+    { type: "table", key: "review", label: "Review", section: "Review", columns: [
+      { key: "goal", label: "Goal", kind: "text" },
+      { key: "onTrack", label: "On Track? (Y/N)", kind: "text" },
+      { key: "adjustment", label: "Adjustment Needed", kind: "text" },
+    ], seedRows: [
+      { goal: "20% membership growth", onTrack: "Y", adjustment: "None yet" },
+      { goal: "Sponsor funding secured", onTrack: "N", adjustment: "Reassign outreach to someone with more bandwidth" },
+      { goal: "Event venue booked", onTrack: "Y", adjustment: "None" },
+    ] },
+  ],
+
+  461: [
+    { type: "textarea", key: "recommendation", label: "Recommendation presented", section: "The presentation", rows: 2, seed: "Recommended we scale the event down to fit our confirmed volunteer hours rather than push the original bigger plan." },
+    { type: "textarea", key: "result", label: "Audience reaction / confidence in the recommendation", section: "Result", rows: 2, seed: "Team accepted it quickly once I stated it plainly instead of hedging with \"maybe we could consider.\"" },
+  ],
+
+  462: [
+    { type: "text", key: "functions", label: "Functions involved", section: "The team", seed: "Marketing and logistics volunteers on the same event" },
+    { type: "textarea", key: "translation", label: "How I adapted communication for a different function", section: "Translation", rows: 2, seed: "Framed marketing's request for more lead time around the logistics team's own printing deadlines, not just \"we need this sooner.\"" },
+  ],
+
+  463: [
+    { type: "text", key: "personAsk", label: "Person / what I needed from them", section: "The ask", seed: "A classmate in a different club, needed her team's help promoting our joint event" },
+    { type: "text", key: "sharedGoal", label: "Shared goal I framed it around", seed: "Both our clubs benefit from higher turnout at a joint event" },
+    { type: "text", key: "worked", label: "Did it work?", section: "Result", seed: "Yes, her team posted about it without me having any authority over them." },
+  ],
+
+  464: [
+    { type: "table", key: "stakeholderMap", label: "Stakeholder map", section: "Stakeholder map", columns: [
+      { key: "stakeholder", label: "Stakeholder", kind: "text" },
+      { key: "priority", label: "Their Priority", kind: "text" },
+      { key: "tailored", label: "How I Tailored My Pitch", kind: "text" },
+    ], seedRows: [
+      { stakeholder: "Faculty advisor", priority: "Budget responsibility", tailored: "Led with the cost breakdown and how it stayed within last year's budget" },
+      { stakeholder: "Club treasurer", priority: "Timeline risk", tailored: "Led with the fallback plan if a sponsor falls through" },
+    ] },
+    { type: "text", key: "result", label: "Did both genuinely buy in?", section: "Result", seed: "Yes, both approved without pushback once their specific concern was addressed." },
+  ],
+
+  465: [
+    { type: "textarea", key: "whatHappened", label: "What happened", section: "The crisis", rows: 2, seed: "Our venue cancelled two days before the event with no warning." },
+    { type: "textarea", key: "responded", label: "How I responded in the moment", rows: 2, seed: "Called the two backup venues on our list immediately instead of first venting to the team about it." },
+    { type: "textarea", key: "wouldChange", label: "What I'd do differently for clearer direction", section: "Reflection", rows: 2, seed: "Should have assigned someone to call sponsors with the update while I handled the venue, instead of doing both myself." },
+  ],
+
+  466: [
+    { type: "text", key: "situation", label: "Current high-pressure situation", section: "The pressure", seed: "Final week before the event, with three workstreams all due at once" },
+    { type: "text", key: "technique", label: "Technique I'll use to sustain my composure", section: "Technique", seed: "A 10-minute walk before any high-stakes call, so I show up steady instead of frazzled" },
+    { type: "text", key: "teamReflected", label: "Did my team's stress reflect my own steadiness?", seed: "Mostly, one member said my calm updates kept the group from spiraling." },
+  ],
+
+  467: [
+    { type: "table", key: "mapping", label: "Mapping", section: "Mapping", columns: [
+      { key: "activity", label: "Current Activity", kind: "text" },
+      { key: "goal", label: "Connected to Which Strategic Goal?", kind: "text" },
+    ], seedRows: [
+      { activity: "Weekly social media posts", goal: "Membership growth" },
+      { activity: "Redesigning the club logo", goal: "None, purely aesthetic" },
+      { activity: "Sponsor outreach", goal: "Event funding" },
+    ] },
+    { type: "textarea", key: "gapFound", label: "Activity with no real strategic connection, or goal with no active work", section: "Gap found", rows: 2, seed: "The logo redesign was consuming real volunteer time with no connection to our actual goals this semester, paused it." },
+  ],
+
+  468: [
+    { type: "text", key: "howAsked", label: "How I asked (format, anonymity, etc.)", section: "The ask", seed: "An anonymous form sent after the event wrapped" },
+    { type: "textarea", key: "learned", label: "Genuine feedback received", section: "What I learned", rows: 2, seed: "Several people said I tend to make decisions quickly without checking in first, even when there's time to ask." },
+    { type: "text", key: "surprised", label: "Did anything surprise me?", seed: "Yes, I thought I was pretty collaborative, this was a real blind spot." },
+  ],
+
+  469: [
+    { type: "textarea", key: "mistake", label: "What happened, honestly", section: "The mistake", rows: 2, seed: "Assigned a sponsor call to someone without giving them any context on what had already been discussed, so the call went badly." },
+    { type: "textarea", key: "wouldDo", label: "What I'd do differently", section: "The lesson", rows: 2, seed: "Always do a two-minute handoff briefing before delegating anything with external stakeholders involved." },
+    { type: "text", key: "concreteChange", label: "Concrete change I've made", seed: "Created a one-page \"handoff note\" template I now fill out before delegating anything external." },
+  ],
+
+  470: [
+    { type: "textarea", key: "sourceExperiences", label: "Source experiences", section: "Source experiences", rows: 2, seed: "Leading the fundraiser, mentoring Devon, the venue crisis, and the anonymous feedback round." },
+    { type: "textarea", key: "philosophy", label: "My philosophy", section: "My philosophy", rows: 3, seed: "I lead by being direct even when it's uncomfortable, and I'd rather over-communicate a decision's reasoning than leave people guessing." },
+  ],
+
+  471: [
+    { type: "text", key: "priorityArea", label: "Growth area, based on this stage's reflections", section: "Priority area", seed: "Checking in with the team before making fast decisions, not just after" },
+    { type: "table", key: "milestones", label: "Milestones", section: "Milestones", columns: [
+      { key: "milestone", label: "Milestone", kind: "text" },
+      { key: "targetDate", label: "Target Date", kind: "text" },
+    ], seedRows: [
+      { milestone: "Ask one clarifying question before any fast call on the next project", targetDate: "Next project kickoff" },
+      { milestone: "Run a mid-project anonymous check-in", targetDate: "Project midpoint" },
+      { milestone: "Get explicit feedback from a mentor on this specific habit", targetDate: "End of semester" },
+    ] },
+  ],
 };

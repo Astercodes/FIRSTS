@@ -1,12 +1,12 @@
 export type ModuleStatus = "complete" | "in-progress" | "available" | "locked";
-export type StageId = "one" | "two" | "three" | "four" | "five" | "six" | "seven" | "eight" | "nine" | "ten" | "eleven";
+export type StageId = "one" | "two" | "three" | "four" | "five" | "six" | "seven" | "eight" | "nine" | "ten" | "eleven" | "twelve";
 
 export type FirstModule = {
   id: number;
   code: string;
   stage: StageId;
   title: string;
-  category: "A" | "B" | "C" | "D" | "E" | "F" | "G" | "H" | "I" | "J" | "K" | "L" | "M" | "N" | "O" | "P" | "Q" | "R" | "S" | "T" | "U" | "V" | "W" | "X" | "Y" | "Z" | "AA" | "BB" | "CC" | "DD" | "EE" | "FF" | "GG" | "HH" | "II" | "JJ" | "KK" | "LL" | "MM" | "NN" | "OO" | "PP" | "QQ" | "RR" | "SS" | "TT" | "UU";
+  category: "A" | "B" | "C" | "D" | "E" | "F" | "G" | "H" | "I" | "J" | "K" | "L" | "M" | "N" | "O" | "P" | "Q" | "R" | "S" | "T" | "U" | "V" | "W" | "X" | "Y" | "Z" | "AA" | "BB" | "CC" | "DD" | "EE" | "FF" | "GG" | "HH" | "II" | "JJ" | "KK" | "LL" | "MM" | "NN" | "OO" | "PP" | "QQ" | "RR" | "SS" | "TT" | "UU" | "VV" | "WW" | "XX";
   time: string;
   difficulty: "Easy" | "Moderate" | "Deep";
   status: ModuleStatus;
@@ -66,6 +66,9 @@ export const CATEGORY_META = {
   SS: { label: "Core Productivity & Office Tools", color: "var(--sunshine-orange)" },
   TT: { label: "Personal Systems & Technical Foundations", color: "var(--citrus-lime)" },
   UU: { label: "Advanced Tools, Automation & Optimization", color: "var(--fuchsia-blast)" },
+  VV: { label: "Leadership Foundations", color: "var(--berry-burst)" },
+  WW: { label: "Leading & Developing People", color: "var(--sunshine-orange)" },
+  XX: { label: "Advanced & Reflective Leadership", color: "var(--juicy-plum)" },
 } as const;
 
 export const STAGES: { id: StageId; label: string; shortLabel: string; href: string }[] = [
@@ -80,6 +83,7 @@ export const STAGES: { id: StageId; label: string; shortLabel: string; href: str
   { id: "nine", label: "Stage Nine · English Vocabulary", shortLabel: "Stage Nine", href: "/dashboard/stage/nine" },
   { id: "ten", label: "Stage Ten · Relationships & Connections", shortLabel: "Stage Ten", href: "/dashboard/stage/ten" },
   { id: "eleven", label: "Stage Eleven · Tools & Technology", shortLabel: "Stage Eleven", href: "/dashboard/stage/eleven" },
+  { id: "twelve", label: "Stage Twelve · Leadership", shortLabel: "Stage Twelve", href: "/dashboard/stage/twelve" },
 ];
 
 const STAGE_ONE_FIRSTS: FirstModule[] = [
@@ -556,7 +560,40 @@ const STAGE_ELEVEN_FIRSTS: FirstModule[] = [
   { id: 441, code: "O30", stage: "eleven", title: "Tool Efficiency Audit", category: "UU", time: "30 to 45 min", difficulty: "Moderate", status: "locked" },
 ];
 
-export const FIRSTS: FirstModule[] = [...STAGE_ONE_FIRSTS, ...STAGE_TWO_FIRSTS, ...STAGE_THREE_FIRSTS, ...STAGE_FOUR_FIRSTS, ...STAGE_FIVE_FIRSTS, ...STAGE_SIX_FIRSTS, ...STAGE_SEVEN_FIRSTS, ...STAGE_EIGHT_FIRSTS, ...STAGE_NINE_FIRSTS, ...STAGE_TEN_FIRSTS, ...STAGE_ELEVEN_FIRSTS];
+const STAGE_TWELVE_FIRSTS: FirstModule[] = [
+  { id: 442, code: "P1", stage: "twelve", title: "Leadership Awareness", category: "VV", time: "30 min", difficulty: "Easy", status: "complete", thoroughness: 2, completedAt: "2026-06-02" },
+  { id: 443, code: "P2", stage: "twelve", title: "Leadership Style Assessment", category: "VV", time: "30 to 45 min", difficulty: "Easy", status: "locked" },
+  { id: 444, code: "P3", stage: "twelve", title: "Leadership Responsibility", category: "VV", time: "Situational", difficulty: "Moderate", status: "complete", thoroughness: 3, completedAt: "2026-06-06" },
+  { id: 445, code: "P4", stage: "twelve", title: "Leadership Role", category: "VV", time: "Situational", difficulty: "Deep", status: "locked" },
+  { id: 446, code: "P5", stage: "twelve", title: "Meeting Led", category: "VV", time: "30 to 45 min", difficulty: "Moderate", status: "complete", thoroughness: 1, completedAt: "2026-06-10" },
+  { id: 447, code: "P6", stage: "twelve", title: "Team Goal Set", category: "VV", time: "20 to 30 min", difficulty: "Easy", status: "locked" },
+  { id: 448, code: "P7", stage: "twelve", title: "Vision Communicated", category: "VV", time: "30 min", difficulty: "Moderate", status: "complete", thoroughness: 2, completedAt: "2026-06-14" },
+  { id: 449, code: "P8", stage: "twelve", title: "Task Delegation", category: "VV", time: "30 min", difficulty: "Moderate", status: "locked" },
+  { id: 450, code: "P9", stage: "twelve", title: "Accountability System Created", category: "VV", time: "Ongoing", difficulty: "Easy", status: "complete", thoroughness: 3, completedAt: "2026-06-18" },
+  { id: 451, code: "P10", stage: "twelve", title: "Leadership Decision Made", category: "VV", time: "Situational", difficulty: "Moderate", status: "locked" },
+  { id: 452, code: "P11", stage: "twelve", title: "Difficult Decision Made", category: "WW", time: "Situational", difficulty: "Deep", status: "complete", thoroughness: 1, completedAt: "2026-06-22" },
+  { id: 453, code: "P12", stage: "twelve", title: "Leadership Communication", category: "WW", time: "Ongoing", difficulty: "Easy", status: "locked" },
+  { id: 454, code: "P13", stage: "twelve", title: "Team Motivation Exercise", category: "WW", time: "Ongoing", difficulty: "Moderate", status: "complete", thoroughness: 2, completedAt: "2026-06-26" },
+  { id: 455, code: "P14", stage: "twelve", title: "Person Mentored", category: "WW", time: "Ongoing", difficulty: "Deep", status: "locked" },
+  { id: 456, code: "P15", stage: "twelve", title: "Person Coached", category: "WW", time: "20 to 30 min", difficulty: "Moderate", status: "complete", thoroughness: 3, completedAt: "2026-06-30" },
+  { id: 457, code: "P16", stage: "twelve", title: "Constructive Feedback Given as a Leader", category: "WW", time: "15 to 20 min", difficulty: "Moderate", status: "locked" },
+  { id: 458, code: "P17", stage: "twelve", title: "Difficult Feedback Conversation", category: "WW", time: "Varies", difficulty: "Deep", status: "complete", thoroughness: 1, completedAt: "2026-07-04" },
+  { id: 459, code: "P18", stage: "twelve", title: "Conflict Handled as a Leader", category: "WW", time: "Varies", difficulty: "Deep", status: "locked" },
+  { id: 460, code: "P19", stage: "twelve", title: "Team Performance Review", category: "WW", time: "30 to 45 min", difficulty: "Moderate", status: "complete", thoroughness: 2, completedAt: "2026-07-08" },
+  { id: 461, code: "P20", stage: "twelve", title: "Leadership Presentation", category: "WW", time: "Varies", difficulty: "Deep", status: "locked" },
+  { id: 462, code: "P21", stage: "twelve", title: "Cross-Functional Leadership Experience", category: "XX", time: "Ongoing", difficulty: "Deep", status: "complete", thoroughness: 3, completedAt: "2026-07-12" },
+  { id: 463, code: "P22", stage: "twelve", title: "Leadership Without Authority", category: "XX", time: "Ongoing", difficulty: "Deep", status: "locked" },
+  { id: 464, code: "P23", stage: "twelve", title: "Stakeholder Influence Exercise", category: "XX", time: "Varies", difficulty: "Deep", status: "complete", thoroughness: 1, completedAt: "2026-07-16" },
+  { id: 465, code: "P24", stage: "twelve", title: "Crisis Leadership Exercise", category: "XX", time: "Situational", difficulty: "Deep", status: "locked" },
+  { id: 466, code: "P25", stage: "twelve", title: "Leadership Under Pressure", category: "XX", time: "Sustained", difficulty: "Deep", status: "complete", thoroughness: 2, completedAt: "2026-07-20" },
+  { id: 467, code: "P26", stage: "twelve", title: "Strategic Leadership Exercise", category: "XX", time: "45 min to 1 hr", difficulty: "Moderate", status: "locked" },
+  { id: 468, code: "P27", stage: "twelve", title: "Leadership Feedback Received", category: "XX", time: "30 min", difficulty: "Moderate", status: "complete", thoroughness: 3, completedAt: "2026-07-24" },
+  { id: 469, code: "P28", stage: "twelve", title: "Leadership Mistake Reflection", category: "XX", time: "30 min", difficulty: "Moderate", status: "locked" },
+  { id: 470, code: "P29", stage: "twelve", title: "Leadership Philosophy", category: "XX", time: "45 min", difficulty: "Moderate", status: "complete", thoroughness: 2, completedAt: "2026-07-28" },
+  { id: 471, code: "P30", stage: "twelve", title: "Leadership Development Plan", category: "XX", time: "1 hr", difficulty: "Moderate", status: "locked" },
+];
+
+export const FIRSTS: FirstModule[] = [...STAGE_ONE_FIRSTS, ...STAGE_TWO_FIRSTS, ...STAGE_THREE_FIRSTS, ...STAGE_FOUR_FIRSTS, ...STAGE_FIVE_FIRSTS, ...STAGE_SIX_FIRSTS, ...STAGE_SEVEN_FIRSTS, ...STAGE_EIGHT_FIRSTS, ...STAGE_NINE_FIRSTS, ...STAGE_TEN_FIRSTS, ...STAGE_ELEVEN_FIRSTS, ...STAGE_TWELVE_FIRSTS];
 
 export const MOCK_USER = {
   firstName: "Ada",
