@@ -484,6 +484,36 @@ export const COACH_MODE: Record<number, CoachMode> = {
   469: "reflective",
   470: "synthesis",
   471: "synthesis",
+  472: "hybrid",
+  473: "hybrid",
+  474: "hybrid",
+  475: "hybrid",
+  476: "hybrid",
+  477: "hybrid",
+  478: "hybrid",
+  479: "hybrid",
+  480: "hybrid",
+  481: "hybrid",
+  482: "hybrid",
+  483: "hybrid",
+  484: "hybrid",
+  485: "research",
+  486: "research",
+  487: "hybrid",
+  488: "hybrid",
+  489: "hybrid",
+  490: "hybrid",
+  491: "hybrid",
+  492: "reflective",
+  493: "reflective",
+  494: "hybrid",
+  495: "hybrid",
+  496: "reflective",
+  497: "reflective",
+  498: "reflective",
+  499: "reflective",
+  500: "synthesis",
+  501: "synthesis",
 };
 
 export const LEARN_CONTENT: Record<number, LearnContent> = {
@@ -13331,6 +13361,786 @@ export const LEARN_CONTENT: Record<number, LearnContent> = {
     ],
     successSignal:
       "You can point to specific, planned progress on your priority leadership growth area, not just a vague ongoing intention.",
+    milestoneTies: [],
+  },
+
+  472: {
+    definition:
+      "A First Team Formation intentionally forms or joins a team around a shared objective, distinct from simply being assigned to a group by circumstance.",
+    whyItMatters:
+      "Teams formed with deliberate intention around a genuinely shared objective tend to function far better than ones assembled purely by default or convenience.",
+    whenWhoWhere: [
+      { label: "When", body: "Practice this whenever you have real choice in forming or joining a team, not just when one is assigned to you." },
+      { label: "Who", body: "Potential teammates with genuine alignment to the shared objective." },
+      { label: "Where", body: "Applied whenever forming or choosing to join a real team." },
+    ],
+    howItWorks: [
+      "Before joining or forming a team, confirm genuine alignment around the actual objective, not just convenience or existing familiarity with the people involved.",
+    ],
+    tools: ["No special tool; honest reflection on genuine fit before committing."],
+    scenario: {
+      title: "Seeking real fit over convenience",
+      body: "A student who used to default to teaming up with whoever was nearest deliberately sought out teammates with genuinely complementary skills and real interest in the specific project, and the resulting team's chemistry was noticeably stronger than her past default groupings.",
+    },
+    pitfalls: [
+      "Forming a team purely based on convenience or existing friendship, without checking for genuine alignment around the actual shared objective.",
+    ],
+    successSignal:
+      "Your team forms around genuine, confirmed alignment, not just circumstance or convenience.",
+    milestoneTies: [],
+  },
+
+  473: {
+    definition:
+      "A First Team Goal Alignment ensures everyone understands and agrees on the team's objective, extending the Team Goal Alignment FIRST from Stage Ten from a two-person partnership into a full team context.",
+    whyItMatters:
+      "A team without genuinely confirmed alignment on its objective risks members quietly pursuing different interpretations of success, a costly and avoidable problem.",
+    whenWhoWhere: [
+      { label: "When", body: "Confirm this explicitly at the start of any team project, regardless of team size." },
+      { label: "Who", body: "Your full team." },
+      { label: "Where", body: "Discussed explicitly in an early team meeting." },
+    ],
+    howItWorks: [
+      "Have each team member state the objective in their own words, and reconcile any real differences before proceeding.",
+    ],
+    tools: ["The Team Goal Alignment structure from Stage Ten, scaled to a full team."],
+    scenario: {
+      title: "A mismatch caught before it cost anything",
+      body: "A five-person team assumed alignment on their project's scope until an explicit check revealed two genuinely different interpretations, a mismatch caught early enough to resolve before it cost real wasted work.",
+    },
+    pitfalls: [
+      "Assuming a larger team naturally shares the same understanding just because everyone attended the same kickoff meeting.",
+    ],
+    successSignal:
+      "Every team member can state the same objective in their own words, confirmed explicitly, not just assumed.",
+    milestoneTies: [],
+  },
+
+  474: {
+    definition:
+      "A First Team Roles Defined clarifies responsibilities, ownership, and expectations across a full team, ensuring each member genuinely understands not just their own role but how it connects to everyone else's.",
+    whyItMatters:
+      "Unclear roles produce either duplicated effort or genuine gaps where important work falls through the cracks because everyone assumed someone else owned it.",
+    whenWhoWhere: [
+      { label: "When", body: "Define this explicitly at the start of any team project." },
+      { label: "Who", body: "Your full team." },
+      { label: "Where", body: "Discussed explicitly in an early team meeting." },
+    ],
+    howItWorks: [
+      "Map out every major responsibility, assign clear ownership for each, and confirm the whole team understands not just their own role but the full picture.",
+    ],
+    tools: ["A simple roles and responsibilities matrix."],
+    scenario: {
+      title: "The gap two people each assumed was covered",
+      body: "A team's first project had an important task fall through entirely because two members each assumed the other owned it. Their next project's explicit roles matrix eliminated that exact kind of gap.",
+    },
+    pitfalls: [
+      "Defining only your own role clearly while leaving the rest of the team's responsibilities vague or assumed.",
+    ],
+    successSignal:
+      "Every team member can name who owns every major responsibility, not just their own.",
+    milestoneTies: [],
+  },
+
+  475: {
+    definition:
+      "A First Team Working Agreement establishes norms for communication, deadlines, meetings, and accountability, creating an explicit shared understanding of how the team will actually operate.",
+    whyItMatters:
+      "Teams that never explicitly agree on working norms tend to develop mismatched expectations, some members expecting instant responses, others comfortable with days of delay, which creates avoidable friction.",
+    whenWhoWhere: [
+      { label: "When", body: "Establish this at the very start of any new team, before real work begins." },
+      { label: "Who", body: "Your full team." },
+      { label: "Where", body: "Discussed and agreed explicitly in an early team meeting." },
+    ],
+    howItWorks: [
+      "Discuss and agree explicitly on communication norms, response time expectations, meeting cadence, and how accountability will work, and write it down.",
+    ],
+    tools: ["A simple written working agreement document."],
+    scenario: {
+      title: "A 24-hour norm that ended the mismatch",
+      body: "A team that never discussed communication norms had one member expecting same-day Slack responses and another checking messages only once daily, a mismatch causing real frustration until they explicitly agreed on a 24-hour response norm.",
+    },
+    pitfalls: [
+      "Assuming working norms are obvious or will naturally align, without ever explicitly discussing and agreeing on them.",
+    ],
+    successSignal:
+      "Your team has a written, explicitly agreed working agreement that genuinely reduces friction around communication and expectations.",
+    milestoneTies: [],
+  },
+
+  476: {
+    definition:
+      "A First Collaborative Planning Session plans a project or task collectively, extending individual planning skills from Stage Seven into a genuinely shared, collaborative planning process.",
+    whyItMatters:
+      "Plans built collectively, with genuine input from the full team, tend to be both more realistic and more genuinely owned by everyone than plans handed down from a single planner.",
+    whenWhoWhere: [
+      { label: "When", body: "Use this at the start of any team project requiring real planning." },
+      { label: "Who", body: "Your full team." },
+      { label: "Where", body: "In a dedicated collaborative planning session." },
+    ],
+    howItWorks: [
+      "Bring the team together to jointly map tasks, timeline, and dependencies, ensuring genuine input from everyone rather than one person presenting a plan for approval.",
+    ],
+    tools: ["The Project Plan Drafted structure from Stage Seven, applied collaboratively."],
+    scenario: {
+      title: "The scheduling conflict only one person knew about",
+      body: "A team's plan built collectively surfaced a scheduling conflict early that a single planner working alone would likely have missed, since only one team member knew about an upcoming personal commitment that affected the timeline.",
+    },
+    pitfalls: [
+      "Having one person build the plan alone and simply present it for approval, missing the genuine input and buy-in a real collaborative process provides.",
+    ],
+    successSignal:
+      "The resulting plan reflects genuine input from the whole team, not just one person's initial draft.",
+    milestoneTies: [],
+  },
+
+  477: {
+    definition:
+      "A First Collaborative Brainstorming Session generates ideas with a group, extending the Collaborative Brainstorm FIRST from Stage Eight into a genuinely structured, full-team ideation process.",
+    whyItMatters:
+      "Structured group brainstorming, done well, produces both more ideas and better ones than individual brainstorming or unstructured group discussion.",
+    whenWhoWhere: [
+      { label: "When", body: "Use this whenever your team needs to generate genuine new ideas together." },
+      { label: "Who", body: "Your full team." },
+      { label: "Where", body: "In a setting conducive to focused, uninterrupted group ideation." },
+    ],
+    howItWorks: [
+      "Set a time limit and clear prompt, generate quantity first without judgment, then group and evaluate ideas together afterward.",
+    ],
+    tools: ["A whiteboard, sticky notes, or a shared document for capturing ideas."],
+    scenario: {
+      title: "More and better ideas, once judgment waited",
+      body: "A team's structured brainstorm, with an explicit judgment-free generation phase before any evaluation, produced noticeably more and better ideas than their previous unstructured discussions had.",
+    },
+    pitfalls: [
+      "Judging or discussing ideas during the generation phase, which suppresses the range of ideas produced by the group.",
+    ],
+    successSignal:
+      "The session produces a genuinely larger and more varied set of ideas than an unstructured discussion would have.",
+    milestoneTies: [],
+  },
+
+  478: {
+    definition:
+      "A First Shared Decision-Making Exercise makes an important decision collectively, distinct from a single leader deciding alone or from informal consensus that never gets explicitly confirmed.",
+    whyItMatters:
+      "Genuinely shared decisions, where the whole team has real input and confirmed buy-in, tend to be both better decisions and ones the team actually commits to executing well.",
+    whenWhoWhere: [
+      { label: "When", body: "Use this for genuinely significant team decisions where collective input meaningfully improves the outcome." },
+      { label: "Who", body: "Your full team." },
+      { label: "Where", body: "In a dedicated decision-making session." },
+    ],
+    howItWorks: [
+      "Ensure every team member's perspective is genuinely heard, work toward a decision with real, confirmed buy-in, not just the absence of vocal disagreement.",
+    ],
+    tools: ["The Group Decision Facilitated structure from Stage Eight."],
+    scenario: {
+      title: "Stronger follow-through than two loud voices alone",
+      body: "A team's decision on their project's creative direction, made through a structured process ensuring every voice was genuinely heard, produced stronger buy-in and follow-through than a previous decision made by just the two most vocal members.",
+    },
+    pitfalls: [
+      "Mistaking silence for genuine agreement, rather than actively confirming real buy-in from quieter team members.",
+    ],
+    successSignal:
+      "The decision has genuine, confirmed buy-in from the whole team, not just an absence of vocal objection.",
+    milestoneTies: [],
+  },
+
+  479: {
+    definition:
+      "A First Team Task Delegation distributes responsibilities fairly and strategically across a full team, extending Task Delegation Practice from Stage Ten and Leadership's Task Delegation FIRST into a genuinely team-wide distribution process.",
+    whyItMatters:
+      "Fair, strategic delegation across an entire team, not just between two partners, prevents both uneven workload and mismatched task-to-skill fit at scale.",
+    whenWhoWhere: [
+      { label: "When", body: "Use this at the start of any team project with multiple people and tasks to distribute." },
+      { label: "Who", body: "Your full team." },
+      { label: "Where", body: "Applied at the start of any team project." },
+    ],
+    howItWorks: [
+      "Understand each team member's genuine strengths and capacity, and distribute tasks accordingly, checking in on fairness as the project evolves.",
+    ],
+    tools: ["A shared task tracker showing clear ownership across the full team."],
+    scenario: {
+      title: "Stronger work once fit replaced first-to-speak",
+      body: "A team's task distribution, built around genuine strengths and capacity rather than who volunteered first, produced noticeably stronger individual work than their previous project's more haphazard distribution.",
+    },
+    pitfalls: [
+      "Distributing tasks based purely on who spoke up first in a meeting, rather than genuine fit and fairness across the whole team.",
+    ],
+    successSignal:
+      "Every team member's workload genuinely matches their capacity and strengths, confirmed through a real check-in, not just assumed.",
+    milestoneTies: [],
+  },
+
+  480: {
+    definition:
+      "A First Team Accountability System creates a process for tracking individual and shared responsibilities across a full team, extending the Accountability System Created FIRST from Stage Twelve with a specifically peer-level, team-wide implementation.",
+    whyItMatters:
+      "A team without a genuine, visible tracking system risks commitments quietly slipping, with no one, leader or peer, having clear visibility into what's actually on track.",
+    whenWhoWhere: [
+      { label: "When", body: "Establish this at the start of any team project with multiple commitments to track." },
+      { label: "Who", body: "Your full team." },
+      { label: "Where", body: "Applied throughout a real team project." },
+    ],
+    howItWorks: [
+      "Set up a shared, visible system tracking who owns what and by when, and review it consistently as a team, not just by one designated leader.",
+    ],
+    tools: ["A project management tool like Asana or Trello, from your Stage Eleven tool practice."],
+    scenario: {
+      title: "No formal leader, still caught the slip",
+      body: "A team without a formal leader set up a shared accountability board together, which caught a task quietly falling behind before it became a genuine problem, without needing any single person to be the one enforcing it.",
+    },
+    pitfalls: [
+      "Assuming accountability tracking is only a leader's responsibility, missing the value of a genuinely shared, peer-visible system.",
+    ],
+    successSignal:
+      "Your team catches at least one commitment falling behind early enough to address it, through a system the whole team, not one person, actually uses.",
+    milestoneTies: [],
+  },
+
+  481: {
+    definition:
+      "A First Team Check-In establishes regular communication about progress and obstacles, a lightweight, recurring practice distinct from a full formal meeting.",
+    whyItMatters:
+      "Regular, lightweight check-ins catch small obstacles before they become significant blockers, without requiring the overhead of a full formal meeting every time.",
+    whenWhoWhere: [
+      { label: "When", body: "Establish this as a recurring practice throughout any real team project." },
+      { label: "Who", body: "Your full team." },
+      { label: "Where", body: "Applied consistently throughout a project, whether in person, virtually, or asynchronously." },
+    ],
+    howItWorks: [
+      "Establish a consistent, lightweight check-in cadence, focused specifically on progress and obstacles, not a full status meeting.",
+    ],
+    tools: ["A quick recurring Slack check-in, or a brief daily or weekly standup format."],
+    scenario: {
+      title: "A day instead of a week to catch it",
+      body: "A team that only communicated through occasional full meetings missed a genuine obstacle for over a week until their next scheduled meeting. Adding a lightweight daily check-in caught the same kind of issue within a day on their next project.",
+    },
+    pitfalls: [
+      "Treating every check-in as a full formal meeting, which adds unnecessary overhead and discourages the team from actually doing it consistently.",
+    ],
+    successSignal:
+      "Your team catches a real obstacle within a day or two of it arising, because your check-in cadence is lightweight enough to actually happen consistently.",
+    milestoneTies: [],
+  },
+
+  482: {
+    definition:
+      "A First Collaborative Problem-Solving Exercise solves a challenge collectively, extending the Problem-Solving Discussion FIRST from Stage Eight into a full-team, deliberate practice.",
+    whyItMatters:
+      "Problems tackled collectively often surface better solutions than any individual would reach alone, but only when the exercise is genuinely structured to draw out the whole team's thinking.",
+    whenWhoWhere: [
+      { label: "When", body: "Use this whenever a genuine shared problem affects your team." },
+      { label: "Who", body: "Your full team." },
+      { label: "Where", body: "In a dedicated, focused problem-solving session." },
+    ],
+    howItWorks: [
+      "State the problem clearly, ensure every team member's perspective is genuinely heard before converging, and document the agreed approach.",
+    ],
+    tools: ["The Problem-Solving Discussion structure from Stage Eight."],
+    scenario: {
+      title: "Three different readings of the same brief",
+      body: "A team struggling with an unclear project scope held a structured problem-solving session where every member shared their understanding first, revealing that the confusion stemmed from three genuinely different interpretations of the original brief.",
+    },
+    pitfalls: [
+      "Letting the most vocal team member's solution dominate without genuinely hearing quieter members' perspectives first.",
+    ],
+    successSignal:
+      "The solution reached genuinely incorporates the whole team's thinking, not just the loudest voice's original idea.",
+    milestoneTies: [],
+  },
+
+  483: {
+    definition:
+      "A First Team Documentation System creates shared documentation that everyone can access and update, extending the Documentation Tool Mastery FIRST from Stage Eleven into a genuinely collaborative, team-maintained system.",
+    whyItMatters:
+      "Documentation maintained by only one person tends to go stale, while genuinely shared, team-maintained documentation stays current because everyone has both access and ownership.",
+    whenWhoWhere: [
+      { label: "When", body: "Establish this at the start of any team project with information worth documenting for the whole team." },
+      { label: "Who", body: "Your full team." },
+      { label: "Where", body: "Applied to real, ongoing team documentation." },
+    ],
+    howItWorks: [
+      "Set up a shared documentation space, establish clear conventions for updating it, and ensure every team member, not just one designated person, actually contributes.",
+    ],
+    tools: ["Notion, Confluence, or a well-organized shared drive."],
+    scenario: {
+      title: "Out of one person's head, into the team's",
+      body: "A team's documentation used to live only in one member's head until they built a shared Notion workspace with clear conventions, and the whole team, not just the original owner, started actually keeping it updated.",
+    },
+    pitfalls: [
+      "Setting up shared documentation but having only one person actually maintain it, which recreates the same single-point-of-failure problem shared documentation is meant to solve.",
+    ],
+    successSignal:
+      "Multiple team members, not just one, are actively contributing to and relying on the shared documentation.",
+    milestoneTies: [],
+  },
+
+  484: {
+    definition:
+      "A First Collaborative Digital Workspace works together using a shared digital platform, extending the Digital Collaboration Tool Used and Project Management Tool Mastery FIRSTS from Stages Seven and Eleven into full-team adoption.",
+    whyItMatters:
+      "A digital workspace only creates value once the full team genuinely adopts it together; partial adoption recreates the exact coordination problems a shared workspace is meant to solve.",
+    whenWhoWhere: [
+      { label: "When", body: "Establish this at the start of any team project with real coordination needs." },
+      { label: "Who", body: "Your full team." },
+      { label: "Where", body: "Applied to a real, shared digital platform." },
+    ],
+    howItWorks: [
+      "Choose a shared platform together, and ensure every team member, not just some, genuinely adopts it for real, ongoing work.",
+    ],
+    tools: ["Trello, Asana, Notion, or a similar collaborative platform."],
+    scenario: {
+      title: "Useful only once everyone actually used it",
+      body: "A team where only half the members actually used the shared project board found the tool added confusion rather than clarity, until the whole team explicitly committed to full adoption, after which the board became genuinely useful.",
+    },
+    pitfalls: [
+      "Setting up a shared workspace that only some team members actually use, which creates confusion about where real, current information lives.",
+    ],
+    successSignal:
+      "Every team member, not just some, genuinely uses the shared workspace for real, current work.",
+    milestoneTies: [],
+  },
+
+  485: {
+    definition:
+      "A First Cross-Functional Team Experience collaborates with people from different professional areas, extending the Cross-Functional Collaboration FIRST from Stage Seven into a sustained, full-team experience.",
+    whyItMatters:
+      "Cross-functional teams require genuine translation between different disciplines' vocabularies and priorities, a skill built through sustained experience, not a single interaction.",
+    whenWhoWhere: [
+      { label: "When", body: "Seek this out whenever a genuine opportunity arises to work on a team spanning multiple functions." },
+      { label: "Who", body: "Team members from different functions or disciplines." },
+      { label: "Where", body: "Applied in any genuinely cross-functional team context." },
+    ],
+    howItWorks: [
+      "Actively ask about each function's priorities and vocabulary rather than assuming your own frame applies universally, and adjust your own communication accordingly.",
+    ],
+    tools: ["The Cross-Cultural Communication Exercise FIRST from Stage Six as related groundwork."],
+    scenario: {
+      title: "Framing requests around what engineering actually cared about",
+      body: "A student on a cross-functional team spanning marketing and engineering learned over the course of the project to frame requests around technical constraints the engineering members actually cared about, which measurably improved the team's collaboration.",
+    },
+    pitfalls: [
+      "Assuming your own function's vocabulary and priorities translate directly to a genuinely different discipline without adjustment.",
+    ],
+    successSignal:
+      "You can communicate effectively with teammates from a different function without them needing to translate your language themselves.",
+    milestoneTies: [],
+  },
+
+  486: {
+    definition:
+      "A First Multicultural Team Experience works effectively with people from different cultural backgrounds, extending the Cultural Awareness Reflection FIRST from Stage Eight into a sustained, team-based experience.",
+    whyItMatters:
+      "Multicultural teams bring genuine strengths through diverse perspectives, but require real awareness of different communication norms and expectations to collaborate effectively.",
+    whenWhoWhere: [
+      { label: "When", body: "Seek this out whenever a genuine opportunity arises to work on a culturally diverse team." },
+      { label: "Who", body: "Teammates from different cultural backgrounds." },
+      { label: "Where", body: "Applied in any genuinely multicultural team context." },
+    ],
+    howItWorks: [
+      "Approach cultural differences with genuine curiosity rather than assumption, and adjust your own communication style based on what you actually learn about your teammates' preferences.",
+    ],
+    tools: ["The Cultural Awareness Reflection FIRST from Stage Eight."],
+    scenario: {
+      title: "Reading indirectness as preference, not disengagement",
+      body: "A student on a multicultural team learned that a teammate's more indirect communication style reflected a genuine cultural preference, not disengagement, an insight that changed how she interpreted and responded to that teammate going forward.",
+    },
+    pitfalls: [
+      "Assuming your own default communication style is culturally neutral, missing genuine differences in how teammates from other backgrounds prefer to communicate.",
+    ],
+    successSignal:
+      "You can name a specific, genuine adjustment you made based on a teammate's cultural communication preference.",
+    milestoneTies: [],
+  },
+
+  487: {
+    definition:
+      "A First Remote Team Experience collaborates effectively in a virtual environment, extending the Adaptation to Remote/Virtual Work FIRST from Stage Eight into a sustained, full-team remote experience.",
+    whyItMatters:
+      "Remote collaboration requires different habits than in-person work, more deliberate communication, since informal cues and hallway conversations are largely lost.",
+    whenWhoWhere: [
+      { label: "When", body: "Practice this whenever collaborating with a team that's primarily or entirely remote." },
+      { label: "Who", body: "Your remote team." },
+      { label: "Where", body: "Applied in virtual meetings, shared documents, and asynchronous communication." },
+    ],
+    howItWorks: [
+      "Over-communicate slightly compared to in-person settings, use video when possible for anything with real emotional or interpretive stakes, and establish explicit norms for remote-specific coordination.",
+    ],
+    tools: ["Video conferencing tools, shared documents, and the Remote/Virtual Work adaptation habits from Stage Eight."],
+    scenario: {
+      title: "Video for the moments that carried real stakes",
+      body: "A fully remote team's early text-only communication caused several tone-related misunderstandings, until they established a norm of using brief video check-ins for anything with real emotional stakes, which resolved the pattern going forward.",
+    },
+    pitfalls: [
+      "Assuming remote communication carries the same context as in-person, missing the extra deliberate effort genuine remote collaboration requires.",
+    ],
+    successSignal:
+      "Your remote team communicates as effectively as an equivalent in-person team would, with measurably fewer misunderstandings from lost context.",
+    milestoneTies: [],
+  },
+
+  488: {
+    definition:
+      "A First Asynchronous Collaboration Exercise completes work effectively without everyone being online simultaneously, a distinct skill from real-time remote collaboration.",
+    whyItMatters:
+      "Asynchronous work, common across time zones and flexible schedules, requires genuinely different habits than real-time collaboration, particularly around clear, self-contained communication.",
+    whenWhoWhere: [
+      { label: "When", body: "Practice this whenever your team spans different schedules or time zones, making real-time collaboration genuinely difficult." },
+      { label: "Who", body: "Your team, working across different schedules." },
+      { label: "Where", body: "Applied through written updates, recorded messages, and shared documents." },
+    ],
+    howItWorks: [
+      "Write genuinely self-contained updates that don't require real-time back-and-forth to understand, and build in enough lead time for asynchronous responses.",
+    ],
+    tools: ["Loom for recorded video updates, and clearly structured written status updates."],
+    scenario: {
+      title: "Real-time meetings that never worked for everyone",
+      body: "A team spanning three time zones initially struggled with constant real-time meeting attempts that never worked for everyone, until they shifted to detailed written updates and recorded video walkthroughs that anyone could engage with on their own schedule.",
+    },
+    pitfalls: [
+      "Writing updates that assume real-time clarifying questions will be possible, which breaks down when team members are never online at the same time.",
+    ],
+    successSignal:
+      "Your team makes genuine progress despite never being online simultaneously, through clear, self-contained asynchronous communication.",
+    milestoneTies: [],
+  },
+
+  489: {
+    definition:
+      "A First Team Handoff transfers work or responsibility to another team member clearly, ensuring genuine continuity rather than lost context or dropped work.",
+    whyItMatters:
+      "Poorly executed handoffs are a common source of lost work and repeated mistakes; a clear, deliberate handoff process protects genuine continuity.",
+    whenWhoWhere: [
+      { label: "When", body: "Use this whenever work or responsibility genuinely transfers from one team member to another." },
+      { label: "Who", body: "The team member receiving the handoff." },
+      { label: "Where", body: "Applied to any real transfer of work or responsibility." },
+    ],
+    howItWorks: [
+      "Document the current status, key context, and any open questions clearly, and confirm the receiving team member genuinely understands before considering the handoff complete.",
+    ],
+    tools: ["A simple handoff document template: status, context, open questions."],
+    scenario: {
+      title: "A handoff that let the project keep moving",
+      body: "A team member going on a planned leave documented a clear, thorough handoff before leaving, which meant the project continued smoothly rather than stalling while others tried to reconstruct her context from scratch.",
+    },
+    pitfalls: [
+      "Handing off work with only a brief verbal summary, missing the important context that only becomes apparent once someone else tries to actually pick up the work.",
+    ],
+    successSignal:
+      "The person receiving the handoff can continue the work smoothly, without needing to reconstruct significant missing context.",
+    milestoneTies: [],
+  },
+
+  490: {
+    definition:
+      "A First Peer Review Within a Team reviews a teammate's work constructively, extending the Peer Review Participation FIRST from Stage Eight into an ongoing, team-embedded practice.",
+    whyItMatters:
+      "Regular peer review within a team catches issues earlier and builds a shared standard of quality, rather than relying solely on a single leader's review.",
+    whenWhoWhere: [
+      { label: "When", body: "Practice this at natural checkpoints throughout a team project." },
+      { label: "Who", body: "Your teammates." },
+      { label: "Where", body: "Applied to real team deliverables at real checkpoints." },
+    ],
+    howItWorks: [
+      "Review a teammate's work with specific, actionable feedback tied to concrete examples, delivered constructively.",
+    ],
+    tools: ["The Peer Review Participation structure from Stage Eight."],
+    scenario: {
+      title: "Checkpoints, not just a final review",
+      body: "A team that built in regular peer review checkpoints, not just a single leader's final review, caught several issues earlier and built a genuinely stronger shared sense of quality across the whole team.",
+    },
+    pitfalls: [
+      "Relying solely on a single leader's review, missing the broader quality-catching and skill-building value of genuine peer-to-peer review.",
+    ],
+    successSignal:
+      "Peer review catches at least one real issue that a single reviewer alone might have missed.",
+    milestoneTies: [],
+  },
+
+  491: {
+    definition:
+      "A First Team Feedback Session gives and receives feedback collectively, extending the Team Feedback Session Facilitated FIRST from Stage Eight into a regular, embedded team practice.",
+    whyItMatters:
+      "Regular, structured team feedback sessions build a genuine culture of continuous improvement, rather than feedback only happening reactively when something goes wrong.",
+    whenWhoWhere: [
+      { label: "When", body: "Conduct this at natural project checkpoints, not just when a problem arises." },
+      { label: "Who", body: "Your full team." },
+      { label: "Where", body: "In a dedicated team feedback session." },
+    ],
+    howItWorks: [
+      "Set clear ground rules (specific, kind, actionable), and structure the session so everyone both gives and receives feedback, not just a designated few.",
+    ],
+    tools: ["The Team Feedback Session Facilitated structure from Stage Eight."],
+    scenario: {
+      title: "A proactive monthly habit instead of only reacting",
+      body: "A team that only gave feedback reactively when problems arose built in a proactive monthly feedback session instead, which surfaced smaller issues before they became genuine problems and built a noticeably more open team culture.",
+    },
+    pitfalls: [
+      "Only holding feedback sessions reactively after something has already gone wrong, missing the proactive, culture-building value of regular practice.",
+    ],
+    successSignal:
+      "Every team member both gives and receives feedback in the session, and the practice happens proactively, not just reactively.",
+    milestoneTies: [],
+  },
+
+  492: {
+    definition:
+      "A First Team Conflict Resolution helps resolve disagreement between team members, distinct from Stage Twelve's leadership-specific conflict handling by being a genuinely peer-level intervention, not one backed by formal authority.",
+    whyItMatters:
+      "Conflict resolution isn't only a designated leader's job; any team member genuinely capable of helping resolve a disagreement contributes real value to the team's overall effectiveness.",
+    whenWhoWhere: [
+      { label: "When", body: "Use this whenever a genuine conflict arises between teammates and you're in a position to help, regardless of formal role." },
+      { label: "Who", body: "The teammates in conflict." },
+      { label: "Where", body: "In a setting suited to a genuine, calm conversation." },
+    ],
+    howItWorks: [
+      "Help each side state their genuine concern, listen actively to both, and guide toward a resolution without taking sides.",
+    ],
+    tools: ["The Conflict Mediation Role Played structure from Stage Eight."],
+    scenario: {
+      title: "Neutral ground, no formal role required",
+      body: "A student without any formal leadership role helped two teammates work through a growing tension over creative direction, staying genuinely neutral and helping each articulate their actual concern, which resolved the conflict before it affected the team's output.",
+    },
+    pitfalls: [
+      "Assuming conflict resolution is only a designated leader's responsibility, missing the value any team member can bring as a peer mediator.",
+    ],
+    successSignal:
+      "The conflict reaches a genuine resolution, facilitated by a peer rather than requiring formal leadership intervention.",
+    milestoneTies: [],
+  },
+
+  493: {
+    definition:
+      "A First Difficult Teammate Experience learns to work professionally with a challenging personality, building the specific skill of maintaining productive collaboration despite genuine interpersonal friction.",
+    whyItMatters:
+      "Not every teammate will be someone you'd naturally choose to work with, and the ability to remain professional and productive despite genuine friction is a distinct, valuable skill.",
+    whenWhoWhere: [
+      { label: "When", body: "This FIRST applies whenever you find yourself working with a genuinely difficult teammate." },
+      { label: "Who", body: "The specific teammate you find genuinely challenging." },
+      { label: "Where", body: "Applied throughout the real working relationship." },
+    ],
+    howItWorks: [
+      "Focus on the specific behaviors causing friction rather than the person's character, and maintain professional boundaries and communication regardless of your personal feelings.",
+    ],
+    tools: ["The Boundary Setting Exercise FIRST from Stage Eight."],
+    scenario: {
+      title: "Separating delivery style from the actual content",
+      body: "A student working with a teammate whose blunt communication style initially felt abrasive learned to separate the delivery style from the actual content, and found she could work productively with him once she stopped taking the bluntness personally.",
+    },
+    pitfalls: [
+      "Letting personal frustration with a difficult teammate visibly affect the quality or professionalism of your actual collaboration.",
+    ],
+    successSignal:
+      "You maintain genuinely professional, productive collaboration with the difficult teammate, regardless of your personal feelings about them.",
+    milestoneTies: [],
+  },
+
+  494: {
+    definition:
+      "A First Team Consensus Exercise guides a group toward an agreed decision, extending Shared Decision-Making from earlier in this stage with a specific focus on reaching genuine, full consensus rather than majority agreement.",
+    whyItMatters:
+      "Consensus, genuine agreement from the whole team, produces stronger follow-through than a decision made by majority vote with a dissenting minority left unaddressed.",
+    whenWhoWhere: [
+      { label: "When", body: "Use this for decisions where genuine, full team buy-in meaningfully matters for successful execution." },
+      { label: "Who", body: "Your full team." },
+      { label: "Where", body: "In a dedicated consensus-building session." },
+    ],
+    howItWorks: [
+      "Surface every team member's genuine concerns, work through them explicitly rather than overriding them, and confirm real agreement, not just the absence of continued objection.",
+    ],
+    tools: ["The Group Decision Facilitated structure from Stage Eight."],
+    scenario: {
+      title: "The quiet reservation a vote would have missed",
+      body: "A team working toward consensus on their project's approach surfaced one member's quiet reservation that a simple vote would have missed entirely, and addressing it directly led to a stronger final decision with genuine full buy-in.",
+    },
+    pitfalls: [
+      "Mistaking a majority vote for genuine consensus, when a dissenting minority's unaddressed concerns can still undermine execution.",
+    ],
+    successSignal:
+      "The team reaches genuine consensus, with every member's concerns explicitly surfaced and addressed, not just outvoted.",
+    milestoneTies: [],
+  },
+
+  495: {
+    definition:
+      "A First Team Compromise balances competing preferences to reach a workable solution, distinct from consensus by genuinely acknowledging that not everyone gets their full preference, while still reaching a solution everyone can genuinely support.",
+    whyItMatters:
+      "Not every team disagreement can reach full consensus; the ability to find a genuine, workable compromise, rather than forcing a false consensus or an unresolved standoff, keeps the team moving forward.",
+    whenWhoWhere: [
+      { label: "When", body: "Use this when team preferences genuinely conflict and full consensus isn't realistically achievable." },
+      { label: "Who", body: "The team members with genuinely competing preferences." },
+      { label: "Where", body: "In a dedicated conversation working toward compromise." },
+    ],
+    howItWorks: [
+      "Name the genuine trade-offs explicitly, and work toward a solution that each side can authentically support, even if it's not their first choice.",
+    ],
+    tools: ["The Analyzing Pros and Cons Vocabulary FIRST from Stage Nine."],
+    scenario: {
+      title: "Neither side's first choice, both sides' real support",
+      body: "A team split between two genuinely strong creative directions found a compromise that combined key elements of both, which neither side got exactly what they'd originally wanted, but both could genuinely support the final result.",
+    },
+    pitfalls: [
+      "Forcing a false consensus by pressuring the dissenting side to simply go along, rather than finding a genuine compromise both sides can authentically support.",
+    ],
+    successSignal:
+      "The compromise solution has genuine, authentic support from both sides, not just resigned acceptance.",
+    milestoneTies: [],
+  },
+
+  496: {
+    definition:
+      "A First Team Recognition Practice intentionally acknowledges another person's contribution, extending the Peer Recognition Shared FIRST from Stage Eight into a deliberate, ongoing team habit.",
+    whyItMatters:
+      "Genuine contributions often go unnoticed without deliberate acknowledgment, and consistent recognition builds team morale and reinforces the behaviors worth repeating.",
+    whenWhoWhere: [
+      { label: "When", body: "Practice this as an ongoing habit throughout any team project, not just at major milestones." },
+      { label: "Who", body: "Your teammates." },
+      { label: "Where", body: "In team meetings, shared channels, or direct messages." },
+    ],
+    howItWorks: [
+      "Notice and name specific, genuine contributions as they happen, not just at a project's formal conclusion.",
+    ],
+    tools: ["No special tool; genuine, specific, timely recognition."],
+    scenario: {
+      title: "Morale that improved throughout, not just at the end",
+      body: "A team member who started acknowledging specific contributions as they happened, rather than saving all recognition for a final wrap-up, noticed the team's overall morale and engagement measurably improved throughout the project, not just at the end.",
+    },
+    pitfalls: [
+      "Saving all recognition for a project's formal conclusion, missing the ongoing morale benefit of timely, in-the-moment acknowledgment.",
+    ],
+    successSignal:
+      "You recognize a specific contribution in the moment it happens, not just retrospectively at a project's end.",
+    milestoneTies: [],
+  },
+
+  497: {
+    definition:
+      "A First Team Celebration recognizes a completed milestone or achievement, extending the Group Celebration or Milestone Recognition FIRST from Stage Ten into a specifically work-team context.",
+    whyItMatters:
+      "Celebrating milestones together builds shared positive memory and reinforces the team's sense of collective accomplishment, not just individual task completion.",
+    whenWhoWhere: [
+      { label: "When", body: "Use this whenever your team reaches a genuine milestone worth marking." },
+      { label: "Who", body: "Your full team." },
+      { label: "Where", body: "In a setting appropriate for genuine celebration." },
+    ],
+    howItWorks: [
+      "Organize a genuine, specific celebration marking the actual milestone, rather than letting it pass unacknowledged in the rush to the next task.",
+    ],
+    tools: ["No special tool; genuine intentionality about marking the occasion."],
+    scenario: {
+      title: "A pause that strengthened the team going forward",
+      body: "A team that used to move immediately from one project to the next without pause started deliberately celebrating major milestones together, which noticeably strengthened the team's collective identity and morale heading into future projects.",
+    },
+    pitfalls: [
+      "Moving immediately to the next task without pausing to genuinely mark a real accomplishment together.",
+    ],
+    successSignal:
+      "The team genuinely pauses to celebrate together, building a shared positive memory of the accomplishment.",
+    milestoneTies: [],
+  },
+
+  498: {
+    definition:
+      "A First Team Retrospective reviews what worked, what failed, and what should change, extending the Group Reflection & Debrief FIRST from Stage Ten into a more structured, standard practice.",
+    whyItMatters:
+      "A genuine retrospective, honestly examining both successes and failures, is what turns a team's experience into real, actionable learning for future work.",
+    whenWhoWhere: [
+      { label: "When", body: "Conduct this at the conclusion of any significant team project." },
+      { label: "Who", body: "Your full team." },
+      { label: "Where", body: "In a dedicated retrospective session." },
+    ],
+    howItWorks: [
+      "Structure the discussion around what worked, what didn't, and what specifically to change, capturing the discussion in writing for future reference.",
+    ],
+    tools: ["A simple retrospective template: what worked, what didn't, what we'll change."],
+    scenario: {
+      title: "A structural gap, not anyone's fault",
+      body: "A team's honest retrospective revealed that their biggest failure point wasn't any individual's fault but a structural gap in their handoff process, an insight that led to a concrete process change for their next project.",
+    },
+    pitfalls: [
+      "Conducting a retrospective that only covers what went well, avoiding the harder, more valuable honest examination of what genuinely failed.",
+    ],
+    successSignal:
+      "Your retrospective surfaces at least one honest, specific lesson that leads to a concrete change for future team projects.",
+    milestoneTies: [],
+  },
+
+  499: {
+    definition:
+      "A First Team Performance Assessment evaluates how effectively the team achieved its objective, distinct from Stage Twelve's leader-driven Team Performance Review by being a genuinely collective, full-team self-assessment.",
+    whyItMatters:
+      "A team's own honest, collective self-assessment of its performance builds shared ownership of both successes and shortfalls, rather than leaving evaluation solely to a designated leader.",
+    whenWhoWhere: [
+      { label: "When", body: "Conduct this at a project's conclusion, alongside or complementing your team retrospective." },
+      { label: "Who", body: "Your full team." },
+      { label: "Where", body: "In a dedicated assessment session." },
+    ],
+    howItWorks: [
+      "As a full team, compare actual outcomes against the original objective, and honestly assess where the team succeeded and fell short.",
+    ],
+    tools: ["Your Team Goal Alignment FIRST earlier in this stage as the basis for comparison."],
+    scenario: {
+      title: "A fuller picture than any single view",
+      body: "A team's collective performance assessment, done together rather than left to a single leader, produced a more honest and complete picture than any individual's assessment alone would have, since different members had noticed different genuine gaps.",
+    },
+    pitfalls: [
+      "Leaving performance assessment solely to a designated leader, missing the more complete picture a genuinely collective assessment provides.",
+    ],
+    successSignal:
+      "The team collectively identifies both genuine successes and shortfalls, not just a single person's perspective on performance.",
+    milestoneTies: [],
+  },
+
+  500: {
+    definition:
+      "A First Team Lesson-Learned Document records insights for future collaboration, extending the Team Retrospective FIRST earlier in this section into a genuine, lasting written artifact.",
+    whyItMatters:
+      "Lessons learned that only live in memory tend to fade and get relearned the hard way on future projects; a genuine written document preserves them for real future use.",
+    whenWhoWhere: [
+      { label: "When", body: "Create this immediately following a team retrospective, while the insights are still fresh." },
+      { label: "Who", body: "Your full team, or whoever owns capturing the document." },
+      { label: "Where", body: "Written in a format the team, and future teams, can genuinely reference." },
+    ],
+    howItWorks: [
+      "Capture specific, actionable lessons, not vague generalities, in a format that will genuinely be useful to reference on a future project.",
+    ],
+    tools: ["A shared document or your Team Documentation System from earlier in this stage."],
+    scenario: {
+      title: "A lesson a later team actually used",
+      body: "A team's lesson-learned document from a project with a rocky start became something a similar future team actually referenced and applied, preventing them from repeating the same specific structural mistake.",
+    },
+    pitfalls: [
+      "Writing lessons so vague (\"communicate better\") that they provide no genuine, actionable guidance for a future team to actually apply.",
+    ],
+    successSignal:
+      "Your lesson-learned document contains specific, actionable insights that a future team could genuinely apply, not vague generalities.",
+    milestoneTies: [],
+  },
+
+  501: {
+    definition:
+      "A First High-Performing Team Experience intentionally applies practices that enable a team to perform at a high level, closing this entire stage by deliberately combining everything built throughout it.",
+    whyItMatters:
+      "High-performing teams don't happen by accident; they result from the deliberate application of practices like the ones built throughout this entire stage, working together intentionally rather than in isolation.",
+    whenWhoWhere: [
+      { label: "When", body: "Apply this once you've built genuine practice with the individual FIRSTS throughout this stage, combining them deliberately on a real team." },
+      { label: "Who", body: "Your full team." },
+      { label: "Where", body: "Applied throughout a genuine, real team project." },
+    ],
+    howItWorks: [
+      "Deliberately combine multiple practices from this stage, goal alignment, clear roles, regular check-ins, proactive feedback, genuine recognition, on a single team project, and notice the compounding effect.",
+    ],
+    tools: ["Your accumulated practices from throughout this entire stage."],
+    scenario: {
+      title: "Stronger together than any one practice alone",
+      body: "A student who deliberately combined clear goal alignment, defined roles, a working agreement, regular check-ins, and proactive feedback on a single team project found the team's performance and cohesion were noticeably stronger than any team she'd been part of using just one or two of these practices in isolation.",
+    },
+    pitfalls: [
+      "Applying these practices in isolation across different projects without ever deliberately combining them together on a single team to see the genuine compounding effect.",
+    ],
+    successSignal:
+      "You can point to a specific team experience where deliberately combining multiple practices from this stage produced genuinely higher team performance.",
     milestoneTies: [],
   },
 };

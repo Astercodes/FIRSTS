@@ -21,6 +21,7 @@ const STAGE_PACE_BENCHMARKS: Record<StageId, { p90: number; p75: number; p50: nu
   ten: { p90: 30, p75: 17, p50: 6 },
   eleven: { p90: 28, p75: 16, p50: 6 },
   twelve: { p90: 25, p75: 14, p50: 5 },
+  thirteen: { p90: 26, p75: 15, p50: 6 },
 };
 
 export type PaceBand = {

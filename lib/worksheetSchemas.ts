@@ -4514,4 +4514,266 @@ export const WORKSHEET_SCHEMAS: Record<number, WorksheetField[]> = {
       { milestone: "Get explicit feedback from a mentor on this specific habit", targetDate: "End of semester" },
     ] },
   ],
+
+  472: [
+    { type: "text", key: "teamObjective", label: "Team / objective", section: "The team", seed: "Capstone marketing project team, four members, presenting to a real local business" },
+    { type: "textarea", key: "alignmentConfirmed", label: "Genuine alignment I confirmed, not just convenience", rows: 2, seed: "Checked that everyone actually wanted the retail client over the nonprofit option, not just went along with whoever spoke first." },
+    { type: "text", key: "chemistry", label: "How is the team's chemistry so far?", section: "Reflection", seed: "Strong, everyone's contributed ideas in the first two meetings without anyone dominating." },
+  ],
+
+  473: [
+    { type: "table", key: "goalStatements", label: "Goal statements", section: "Goal statements", columns: [
+      { key: "member", label: "Team Member", kind: "text" },
+      { key: "version", label: "Their Version of the Objective", kind: "text" },
+    ], seedRows: [
+      { member: "Devon", version: "Win the client pitch with the boldest creative concept" },
+      { member: "Priya", version: "Deliver a plan the client can realistically execute on their budget" },
+      { member: "Me", version: "Build something we're proud enough of to put in our portfolios" },
+    ] },
+    { type: "textarea", key: "reconciliation", label: "Any real differences found, and how resolved", section: "Reconciliation", rows: 2, seed: "Devon and Priya's versions were in real tension, we agreed the concept had to be bold but costed realistically before we presented it." },
+  ],
+
+  474: [
+    { type: "table", key: "rolesMap", label: "Roles map", section: "Roles map", columns: [
+      { key: "responsibility", label: "Responsibility", kind: "text" },
+      { key: "owner", label: "Owner", kind: "text" },
+    ], seedRows: [
+      { responsibility: "Client research and brief", owner: "Priya" },
+      { responsibility: "Creative concept", owner: "Devon" },
+      { responsibility: "Budget and timeline", owner: "Me" },
+      { responsibility: "Final deck design", owner: "Jordan" },
+    ] },
+    { type: "text", key: "check", label: "Does everyone know who owns what, not just their own role?", section: "Check", seed: "Yes, confirmed out loud in our kickoff meeting and it's pinned in our shared doc." },
+  ],
+
+  475: [
+    { type: "text", key: "commNorm", label: "Communication norm", section: "Norms", seed: "Slack for quick things, email for anything needing a paper trail" },
+    { type: "text", key: "responseTime", label: "Response time expectation", seed: "Within 24 hours on weekdays" },
+    { type: "text", key: "meetingCadence", label: "Meeting cadence", seed: "Twice a week, Tuesdays and Fridays, 30 minutes" },
+    { type: "text", key: "result", label: "Has friction genuinely decreased since agreeing on this?", section: "Result", seed: "Yes, no more wondering why someone hasn't replied yet." },
+  ],
+
+  476: [
+    { type: "text", key: "project", label: "Project", section: "Session", seed: "Client pitch deck and presentation" },
+    { type: "table", key: "planTable", label: "Plan", columns: [
+      { key: "task", label: "Task", kind: "text" },
+      { key: "owner", label: "Owner", kind: "text" },
+      { key: "timeline", label: "Timeline", kind: "text" },
+    ], seedRows: [
+      { task: "Client research", owner: "Priya", timeline: "Week 1" },
+      { task: "Concept sketches", owner: "Devon", timeline: "Week 1 to 2" },
+      { task: "Budget draft", owner: "Me", timeline: "Week 2" },
+      { task: "Deck build", owner: "Jordan", timeline: "Week 3" },
+    ] },
+    { type: "text", key: "reflection", label: "Did collective input catch something one planner might have missed?", section: "Reflection", seed: "Yes, Jordan flagged that the deck deadline needed to be a full week before the pitch for design revisions." },
+  ],
+
+  477: [
+    { type: "text", key: "prompt", label: "Prompt / problem", section: "Prompt", seed: "How do we make the client's loyalty program actually feel different from every other punch card?" },
+    { type: "textarea", key: "ideas", label: "Ideas generated", section: "Ideas generated", rows: 4, seed: "Tiered rewards, surprise perks, a referral bonus, a birthday month freebie, a local-artist collab card design, a digital stamp app." },
+    { type: "text", key: "topIdea", label: "Top idea(s) after evaluation", section: "Best ideas", seed: "Tiered rewards plus the local-artist card design, felt distinctive and realistic for their budget." },
+  ],
+
+  478: [
+    { type: "text", key: "decision", label: "Decision being made", section: "The decision", seed: "Whether to pitch the bold rebrand concept or the safer refresh concept" },
+    { type: "table", key: "buyIn", label: "Buy-in check", section: "Buy-in check", columns: [
+      { key: "member", label: "Team Member", kind: "text" },
+      { key: "onBoard", label: "Genuinely On Board? (Y/N)", kind: "text" },
+    ], seedRows: [
+      { member: "Devon", onBoard: "Y" },
+      { member: "Priya", onBoard: "Y, once we costed it out" },
+      { member: "Jordan", onBoard: "Y" },
+      { member: "Me", onBoard: "Y" },
+    ] },
+  ],
+
+  479: [
+    { type: "table", key: "distribution", label: "Distribution", section: "Distribution", columns: [
+      { key: "task", label: "Task", kind: "text" },
+      { key: "owner", label: "Owner", kind: "text" },
+      { key: "fitCheck", label: "Fit / Fairness Check", kind: "text" },
+    ], seedRows: [
+      { task: "Client research", owner: "Priya", fitCheck: "Matches her strength, she's detail-oriented" },
+      { task: "Creative concept", owner: "Devon", fitCheck: "His strongest skill, confirmed with him directly" },
+      { task: "Deck design", owner: "Jordan", fitCheck: "Volunteered and has real design experience" },
+      { task: "Budget and timeline", owner: "Me", fitCheck: "Matches my strength, checked I had capacity" },
+    ] },
+    { type: "text", key: "adjustment", label: "Any rebalancing needed?", section: "Adjustment", seed: "Moved research support to Jordan once deck design finished early, so Priya wasn't carrying it alone." },
+  ],
+
+  480: [
+    { type: "text", key: "tool", label: "Tool / method", section: "The system", seed: "Shared Trello board with due dates and owner tags" },
+    { type: "text", key: "result", label: "Did it catch something falling behind early?", section: "Result", seed: "Yes, caught that the budget draft was two days behind before it became a real problem." },
+  ],
+
+  481: [
+    { type: "text", key: "cadence", label: "Check-in format and frequency", section: "Cadence", seed: "Quick Slack thread every morning, one line each: today's focus and any blockers" },
+    { type: "table", key: "log", label: "Log", section: "Log", columns: [
+      { key: "date", label: "Date", kind: "text" },
+      { key: "obstacle", label: "Obstacle Caught?", kind: "text" },
+    ], seedRows: [
+      { date: "Week 1, Tue", obstacle: "None" },
+      { date: "Week 1, Thu", obstacle: "Priya blocked on client email reply" },
+      { date: "Week 2, Mon", obstacle: "None" },
+    ] },
+  ],
+
+  482: [
+    { type: "text", key: "problem", label: "Shared problem", section: "The problem", seed: "The pitch deck kept growing past the client's 15-minute time slot" },
+    { type: "table", key: "perspectives", label: "Perspectives heard", section: "Perspectives heard", columns: [
+      { key: "person", label: "Person", kind: "text" },
+      { key: "perspective", label: "Their Perspective", kind: "text" },
+    ], seedRows: [
+      { person: "Devon", perspective: "Wanted to keep every concept slide, worried we'd lose the wow factor" },
+      { person: "Priya", perspective: "Wanted to cut to just the numbers that mattered to the client" },
+      { person: "Jordan", perspective: "Suggested moving extra concepts to an appendix instead of cutting them" },
+    ] },
+    { type: "text", key: "solution", label: "Agreed approach", section: "Solution", seed: "Kept the core concept slides, moved alternates to an appendix we'd only open if asked." },
+  ],
+
+  483: [
+    { type: "text", key: "toolConventions", label: "Tool / conventions", section: "Setup", seed: "Shared Notion page, one section per workstream, whoever finishes a task updates it same day" },
+    { type: "text", key: "adoptionCheck", label: "Is more than one person actually contributing to it?", section: "Adoption check", seed: "Yes, all four of us have edited it in the past week." },
+  ],
+
+  484: [
+    { type: "table", key: "adoptionCheck", label: "Adoption check", section: "Adoption check", columns: [
+      { key: "member", label: "Team Member", kind: "text" },
+      { key: "using", label: "Genuinely Using It? (Y/N)", kind: "text" },
+    ], seedRows: [
+      { member: "Devon", using: "Y" },
+      { member: "Priya", using: "Y" },
+      { member: "Jordan", using: "Y, once we moved off email threads" },
+      { member: "Me", using: "Y" },
+    ] },
+    { type: "text", key: "gap", label: "Gap identified, and fix", section: "Gaps", seed: "Jordan was still emailing design files instead of uploading them, fixed by adding a dedicated files folder in the workspace." },
+  ],
+
+  485: [
+    { type: "text", key: "functions", label: "Functions represented", section: "The team", seed: "Marketing concept team plus the client's own operations manager" },
+    { type: "textarea", key: "translation", label: "What I learned about a different function's priorities", section: "Translation", rows: 2, seed: "The operations manager cared far more about how easy the loyalty program was to run day-to-day than how creative it looked." },
+    { type: "text", key: "adapted", label: "How I adapted my request", seed: "Reframed our pitch around staff training time instead of just visual appeal." },
+  ],
+
+  486: [
+    { type: "text", key: "teammate", label: "Teammate / cultural background", section: "The observation", seed: "Amara, raised in a culture where disagreement is voiced indirectly through questions" },
+    { type: "text", key: "preference", label: "Communication preference I noticed", seed: "She raised concerns as questions (\"have we considered...\") rather than direct pushback" },
+    { type: "text", key: "adjustment", label: "How I adjusted my own approach", section: "Adjustment", seed: "Started treating her questions as real flags worth addressing, not just curiosity." },
+  ],
+
+  487: [
+    { type: "text", key: "norm", label: "Norm established", section: "The norm", seed: "Any update with real emotional or interpretive stakes gets a 2-minute video, not just text" },
+    { type: "text", key: "result", label: "Did misunderstandings genuinely decrease?", section: "Result", seed: "Yes, one tense budget disagreement was resolved fast once we hopped on video instead of trading terse Slack messages." },
+  ],
+
+  488: [
+    { type: "textarea", key: "update", label: "Update written", section: "The update", rows: 3, seed: "Recorded a 3-minute Loom walking through the revised budget, explained the reasoning for each line so no one needed to ask me live." },
+    { type: "text", key: "result", label: "Did the team make progress without real-time back-and-forth?", section: "Result", seed: "Yes, Priya approved the budget from her phone between classes without us needing to meet." },
+  ],
+
+  489: [
+    { type: "text", key: "status", label: "Current status", section: "Handoff document", seed: "Budget draft is complete except the printing line item, still waiting on a vendor quote" },
+    { type: "text", key: "context", label: "Key context", seed: "Vendor usually replies within 2 business days, quote request went out Monday" },
+    { type: "text", key: "openQuestions", label: "Open questions", seed: "Whether we go with the cheaper vendor if the quote comes in high" },
+    { type: "text", key: "result", label: "Could the receiving person continue smoothly?", section: "Result", seed: "Yes, Jordan picked it up and closed out the line item without needing to ask me anything." },
+  ],
+
+  490: [
+    { type: "text", key: "reviewed", label: "Teammate / work reviewed", section: "The review", seed: "Devon's concept slides, before the client draft was due" },
+    { type: "textarea", key: "feedback", label: "Specific, actionable feedback given", rows: 2, seed: "Suggested leading with the tiered rewards visual instead of the logo concept, since that's what tested best in our brainstorm." },
+    { type: "text", key: "result", label: "Did it catch something a single reviewer might have missed?", section: "Result", seed: "Yes, he'd buried the strongest idea on slide six instead of slide one." },
+  ],
+
+  491: [
+    { type: "textarea", key: "groundRules", label: "Ground rules", section: "Ground rules", rows: 2, seed: "Specific, kind, and actionable, everyone gives and receives, no one skips their turn." },
+    { type: "table", key: "exchange", label: "Feedback exchanged", section: "Feedback exchanged", columns: [
+      { key: "member", label: "Team Member", kind: "text" },
+      { key: "given", label: "Feedback Given", kind: "text" },
+      { key: "received", label: "Feedback Received", kind: "text" },
+    ], seedRows: [
+      { member: "Devon", given: "Slow down before sending, drafts sometimes go out with typos", received: "Concepts land, sometimes needs a partner check before client-facing drafts" },
+      { member: "Me", given: "Budget updates are clear and timely", received: "Speak up sooner when timeline pressure builds" },
+    ] },
+  ],
+
+  492: [
+    { type: "text", key: "teammates", label: "Teammates involved", section: "The conflict", seed: "Devon and Priya, over how bold the final concept should be" },
+    { type: "text", key: "concerns", label: "Each side's genuine concern", seed: "Devon worried a safe concept wouldn't win the pitch; Priya worried a bold one would blow the client's budget" },
+    { type: "text", key: "outcome", label: "Outcome reached", section: "Resolution", seed: "Agreed to pitch the bold concept with a costed, scaled-back fallback option built in" },
+  ],
+
+  493: [
+    { type: "text", key: "behavior", label: "Specific behavior causing friction", section: "The friction", seed: "Kwame's blunt, no-preamble feedback in group calls felt harsh at first" },
+    { type: "text", key: "approach", label: "How I addressed it professionally", section: "Approach", seed: "Asked him directly if he could lead with one specific thing that worked before the critique, he adjusted without issue" },
+    { type: "text", key: "improved", label: "Did collaboration genuinely improve?", seed: "Yes, his feedback is still direct but easier to hear now" },
+  ],
+
+  494: [
+    { type: "text", key: "decision", label: "Decision being made", section: "The decision", seed: "Final tagline for the loyalty program" },
+    { type: "table", key: "concerns", label: "Concerns surfaced", section: "Concerns surfaced", columns: [
+      { key: "member", label: "Team Member", kind: "text" },
+      { key: "concern", label: "Concern Raised", kind: "text" },
+    ], seedRows: [
+      { member: "Jordan", concern: "Worried the tagline sounded too close to a competitor's" },
+      { member: "Priya", concern: "Wanted something shorter for the storefront sign" },
+    ] },
+    { type: "text", key: "result", label: "Genuine consensus reached?", section: "Result", seed: "Yes, revised the tagline to address both concerns and everyone actively agreed, not just stayed quiet." },
+  ],
+
+  495: [
+    { type: "text", key: "prefA", label: "Preference A", section: "Competing preferences", seed: "Devon wanted a full rebrand of the loyalty card design" },
+    { type: "text", key: "prefB", label: "Preference B", seed: "Priya wanted to keep the existing card design to save on print costs" },
+    { type: "text", key: "solution", label: "Solution reached", section: "Compromise", seed: "Redesigned just the front face of the card, kept the existing back layout to control cost" },
+    { type: "text", key: "support", label: "Can both sides genuinely support it?", seed: "Yes, both said it felt like a real win rather than a forced middle ground" },
+  ],
+
+  496: [
+    { type: "text", key: "contribution", label: "Teammate / contribution", section: "The contribution", seed: "Jordan staying late to fix the deck layout the night before the pitch" },
+    { type: "text", key: "acknowledged", label: "How I acknowledged it, in the moment", seed: "Called it out in our group chat right then, not just at the wrap-up" },
+    { type: "text", key: "reaction", label: "Their reaction", section: "Result", seed: "Said it meant a lot that someone noticed before the pitch was even over" },
+  ],
+
+  497: [
+    { type: "text", key: "milestone", label: "Milestone reached", section: "The milestone", seed: "Client accepted our loyalty program pitch" },
+    { type: "text", key: "celebration", label: "How we marked it together", section: "Celebration", seed: "Got food together right after the pitch instead of scattering to our next classes" },
+  ],
+
+  498: [
+    { type: "textarea", key: "worked", label: "What worked", section: "What worked", rows: 2, seed: "The kickoff working agreement genuinely prevented the communication friction we'd had on past projects." },
+    { type: "textarea", key: "didnt", label: "What didn't", section: "What didn't", rows: 2, seed: "We underestimated how long the deck design pass would take and nearly missed our internal deadline." },
+    { type: "text", key: "change", label: "Specific change for next time", section: "What we'll change", seed: "Build in a buffer day before any client-facing deliverable, not just before the actual due date." },
+  ],
+
+  499: [
+    { type: "table", key: "assessment", label: "Assessment", section: "Assessment", columns: [
+      { key: "objective", label: "Original Objective", kind: "text" },
+      { key: "outcome", label: "Actual Outcome", kind: "text" },
+      { key: "gap", label: "Honest Gap", kind: "text" },
+    ], seedRows: [
+      { objective: "Win the client pitch", outcome: "Client accepted the concept", gap: "None, met it fully" },
+      { objective: "Stay within our own time budget", outcome: "Ran two days over on deck design", gap: "Underestimated design revision time" },
+    ] },
+  ],
+
+  500: [
+    { type: "table", key: "lessons", label: "Lessons", section: "Lessons", columns: [
+      { key: "lesson", label: "Specific Lesson", kind: "text" },
+      { key: "application", label: "How Future Teams Should Apply It", kind: "text" },
+    ], seedRows: [
+      { lesson: "Deck design revisions took twice as long as planned", application: "Budget a buffer day before any client-facing deadline" },
+      { lesson: "A daily one-line check-in caught blockers fast", application: "Start every team project with this from day one, not partway through" },
+    ] },
+  ],
+
+  501: [
+    { type: "table", key: "practicesCombined", label: "Practices combined", section: "Practices combined", columns: [
+      { key: "practice", label: "Practice", kind: "text" },
+      { key: "application", label: "How It Was Applied", kind: "text" },
+    ], seedRows: [
+      { practice: "Team Goal Alignment", application: "Reconciled Devon and Priya's different versions of the objective before work began" },
+      { practice: "Team Working Agreement", application: "Set response-time norms that held for the whole project" },
+      { practice: "Team Check-In", application: "Daily one-line updates caught two real blockers early" },
+    ] },
+    { type: "text", key: "reflection", label: "Compounding effect noticed, compared to using these in isolation", section: "Reflection", seed: "Together they meant the team caught problems before they became crises, instead of any single practice catching just one kind of issue." },
+  ],
 };

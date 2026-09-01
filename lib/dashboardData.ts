@@ -1,12 +1,12 @@
 export type ModuleStatus = "complete" | "in-progress" | "available" | "locked";
-export type StageId = "one" | "two" | "three" | "four" | "five" | "six" | "seven" | "eight" | "nine" | "ten" | "eleven" | "twelve";
+export type StageId = "one" | "two" | "three" | "four" | "five" | "six" | "seven" | "eight" | "nine" | "ten" | "eleven" | "twelve" | "thirteen";
 
 export type FirstModule = {
   id: number;
   code: string;
   stage: StageId;
   title: string;
-  category: "A" | "B" | "C" | "D" | "E" | "F" | "G" | "H" | "I" | "J" | "K" | "L" | "M" | "N" | "O" | "P" | "Q" | "R" | "S" | "T" | "U" | "V" | "W" | "X" | "Y" | "Z" | "AA" | "BB" | "CC" | "DD" | "EE" | "FF" | "GG" | "HH" | "II" | "JJ" | "KK" | "LL" | "MM" | "NN" | "OO" | "PP" | "QQ" | "RR" | "SS" | "TT" | "UU" | "VV" | "WW" | "XX";
+  category: "A" | "B" | "C" | "D" | "E" | "F" | "G" | "H" | "I" | "J" | "K" | "L" | "M" | "N" | "O" | "P" | "Q" | "R" | "S" | "T" | "U" | "V" | "W" | "X" | "Y" | "Z" | "AA" | "BB" | "CC" | "DD" | "EE" | "FF" | "GG" | "HH" | "II" | "JJ" | "KK" | "LL" | "MM" | "NN" | "OO" | "PP" | "QQ" | "RR" | "SS" | "TT" | "UU" | "VV" | "WW" | "XX" | "AAA" | "BBB" | "CCC";
   time: string;
   difficulty: "Easy" | "Moderate" | "Deep";
   status: ModuleStatus;
@@ -69,6 +69,9 @@ export const CATEGORY_META = {
   VV: { label: "Leadership Foundations", color: "var(--berry-burst)" },
   WW: { label: "Leading & Developing People", color: "var(--sunshine-orange)" },
   XX: { label: "Advanced & Reflective Leadership", color: "var(--juicy-plum)" },
+  AAA: { label: "Team Foundations", color: "var(--tropical-mango)" },
+  BBB: { label: "Working Together in Practice", color: "var(--neon-pink)" },
+  CCC: { label: "Navigating Difficulty & Closing Out", color: "var(--sunshine-orange)" },
 } as const;
 
 export const STAGES: { id: StageId; label: string; shortLabel: string; href: string }[] = [
@@ -84,6 +87,7 @@ export const STAGES: { id: StageId; label: string; shortLabel: string; href: str
   { id: "ten", label: "Stage Ten · Relationships & Connections", shortLabel: "Stage Ten", href: "/dashboard/stage/ten" },
   { id: "eleven", label: "Stage Eleven · Tools & Technology", shortLabel: "Stage Eleven", href: "/dashboard/stage/eleven" },
   { id: "twelve", label: "Stage Twelve · Leadership", shortLabel: "Stage Twelve", href: "/dashboard/stage/twelve" },
+  { id: "thirteen", label: "Stage Thirteen · Teamwork & Collaboration", shortLabel: "Stage Thirteen", href: "/dashboard/stage/thirteen" },
 ];
 
 const STAGE_ONE_FIRSTS: FirstModule[] = [
@@ -593,7 +597,40 @@ const STAGE_TWELVE_FIRSTS: FirstModule[] = [
   { id: 471, code: "P30", stage: "twelve", title: "Leadership Development Plan", category: "XX", time: "1 hr", difficulty: "Moderate", status: "locked" },
 ];
 
-export const FIRSTS: FirstModule[] = [...STAGE_ONE_FIRSTS, ...STAGE_TWO_FIRSTS, ...STAGE_THREE_FIRSTS, ...STAGE_FOUR_FIRSTS, ...STAGE_FIVE_FIRSTS, ...STAGE_SIX_FIRSTS, ...STAGE_SEVEN_FIRSTS, ...STAGE_EIGHT_FIRSTS, ...STAGE_NINE_FIRSTS, ...STAGE_TEN_FIRSTS, ...STAGE_ELEVEN_FIRSTS, ...STAGE_TWELVE_FIRSTS];
+const STAGE_THIRTEEN_FIRSTS: FirstModule[] = [
+  { id: 472, code: "Q1", stage: "thirteen", title: "Team Formation", category: "AAA", time: "20 to 30 min", difficulty: "Easy", status: "complete", thoroughness: 2, completedAt: "2026-08-01" },
+  { id: 473, code: "Q2", stage: "thirteen", title: "Team Goal Alignment", category: "AAA", time: "20 to 30 min", difficulty: "Easy", status: "locked" },
+  { id: 474, code: "Q3", stage: "thirteen", title: "Team Roles Defined", category: "AAA", time: "30 min", difficulty: "Easy", status: "complete", thoroughness: 1, completedAt: "2026-08-03" },
+  { id: 475, code: "Q4", stage: "thirteen", title: "Team Working Agreement", category: "AAA", time: "30 to 45 min", difficulty: "Easy", status: "locked" },
+  { id: 476, code: "Q5", stage: "thirteen", title: "Collaborative Planning Session", category: "AAA", time: "45 min to 1 hr", difficulty: "Moderate", status: "complete", thoroughness: 3, completedAt: "2026-08-05" },
+  { id: 477, code: "Q6", stage: "thirteen", title: "Collaborative Brainstorming Session", category: "AAA", time: "30 to 45 min", difficulty: "Easy", status: "locked" },
+  { id: 478, code: "Q7", stage: "thirteen", title: "Shared Decision-Making Exercise", category: "AAA", time: "Varies", difficulty: "Moderate", status: "complete", thoroughness: 2, completedAt: "2026-08-07" },
+  { id: 479, code: "Q8", stage: "thirteen", title: "Team Task Delegation", category: "AAA", time: "30 to 45 min", difficulty: "Moderate", status: "locked" },
+  { id: 480, code: "Q9", stage: "thirteen", title: "Team Accountability System", category: "AAA", time: "Ongoing", difficulty: "Easy", status: "complete", thoroughness: 1, completedAt: "2026-08-09" },
+  { id: 481, code: "Q10", stage: "thirteen", title: "Team Check-In", category: "AAA", time: "Ongoing", difficulty: "Easy", status: "locked" },
+  { id: 482, code: "Q11", stage: "thirteen", title: "Collaborative Problem-Solving Exercise", category: "BBB", time: "Varies", difficulty: "Moderate", status: "complete", thoroughness: 3, completedAt: "2026-08-11" },
+  { id: 483, code: "Q12", stage: "thirteen", title: "Team Documentation System", category: "BBB", time: "Several hrs, ongoing", difficulty: "Moderate", status: "locked" },
+  { id: 484, code: "Q13", stage: "thirteen", title: "Collaborative Digital Workspace", category: "BBB", time: "Ongoing", difficulty: "Easy", status: "complete", thoroughness: 2, completedAt: "2026-08-13" },
+  { id: 485, code: "Q14", stage: "thirteen", title: "Cross-Functional Team Experience", category: "BBB", time: "Sustained", difficulty: "Deep", status: "locked" },
+  { id: 486, code: "Q15", stage: "thirteen", title: "Multicultural Team Experience", category: "BBB", time: "Sustained", difficulty: "Deep", status: "complete", thoroughness: 1, completedAt: "2026-08-15" },
+  { id: 487, code: "Q16", stage: "thirteen", title: "Remote Team Experience", category: "BBB", time: "Ongoing", difficulty: "Moderate", status: "locked" },
+  { id: 488, code: "Q17", stage: "thirteen", title: "Asynchronous Collaboration Exercise", category: "BBB", time: "Ongoing", difficulty: "Moderate", status: "complete", thoroughness: 3, completedAt: "2026-08-17" },
+  { id: 489, code: "Q18", stage: "thirteen", title: "Team Handoff", category: "BBB", time: "30 to 45 min", difficulty: "Moderate", status: "locked" },
+  { id: 490, code: "Q19", stage: "thirteen", title: "Peer Review Within a Team", category: "BBB", time: "20 to 30 min", difficulty: "Moderate", status: "complete", thoroughness: 2, completedAt: "2026-08-19" },
+  { id: 491, code: "Q20", stage: "thirteen", title: "Team Feedback Session", category: "BBB", time: "30 to 45 min", difficulty: "Deep", status: "locked" },
+  { id: 492, code: "Q21", stage: "thirteen", title: "Team Conflict Resolution", category: "CCC", time: "One conversation", difficulty: "Deep", status: "complete", thoroughness: 1, completedAt: "2026-08-21" },
+  { id: 493, code: "Q22", stage: "thirteen", title: "Difficult Teammate Experience", category: "CCC", time: "Sustained", difficulty: "Deep", status: "locked" },
+  { id: 494, code: "Q23", stage: "thirteen", title: "Team Consensus Exercise", category: "CCC", time: "Varies", difficulty: "Deep", status: "complete", thoroughness: 3, completedAt: "2026-08-23" },
+  { id: 495, code: "Q24", stage: "thirteen", title: "Team Compromise", category: "CCC", time: "Varies", difficulty: "Moderate", status: "locked" },
+  { id: 496, code: "Q25", stage: "thirteen", title: "Team Recognition Practice", category: "CCC", time: "Ongoing", difficulty: "Easy", status: "complete", thoroughness: 2, completedAt: "2026-08-25" },
+  { id: 497, code: "Q26", stage: "thirteen", title: "Team Celebration", category: "CCC", time: "Varies", difficulty: "Easy", status: "locked" },
+  { id: 498, code: "Q27", stage: "thirteen", title: "Team Retrospective", category: "CCC", time: "45 min to 1 hr", difficulty: "Moderate", status: "complete", thoroughness: 1, completedAt: "2026-08-27" },
+  { id: 499, code: "Q28", stage: "thirteen", title: "Team Performance Assessment", category: "CCC", time: "30 to 45 min", difficulty: "Moderate", status: "locked" },
+  { id: 500, code: "Q29", stage: "thirteen", title: "Team Lesson-Learned Document", category: "CCC", time: "30 min", difficulty: "Easy", status: "complete", thoroughness: 3, completedAt: "2026-08-29" },
+  { id: 501, code: "Q30", stage: "thirteen", title: "High-Performing Team Experience", category: "CCC", time: "Sustained", difficulty: "Deep", status: "locked" },
+];
+
+export const FIRSTS: FirstModule[] = [...STAGE_ONE_FIRSTS, ...STAGE_TWO_FIRSTS, ...STAGE_THREE_FIRSTS, ...STAGE_FOUR_FIRSTS, ...STAGE_FIVE_FIRSTS, ...STAGE_SIX_FIRSTS, ...STAGE_SEVEN_FIRSTS, ...STAGE_EIGHT_FIRSTS, ...STAGE_NINE_FIRSTS, ...STAGE_TEN_FIRSTS, ...STAGE_ELEVEN_FIRSTS, ...STAGE_TWELVE_FIRSTS, ...STAGE_THIRTEEN_FIRSTS];
 
 export const MOCK_USER = {
   firstName: "Ada",
