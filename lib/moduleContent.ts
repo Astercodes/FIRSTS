@@ -514,6 +514,36 @@ export const COACH_MODE: Record<number, CoachMode> = {
   499: "reflective",
   500: "synthesis",
   501: "synthesis",
+  502: "reflective",
+  503: "hybrid",
+  504: "hybrid",
+  505: "research",
+  506: "hybrid",
+  507: "hybrid",
+  508: "hybrid",
+  509: "hybrid",
+  510: "hybrid",
+  511: "hybrid",
+  512: "research",
+  513: "hybrid",
+  514: "hybrid",
+  515: "reflective",
+  516: "hybrid",
+  517: "hybrid",
+  518: "hybrid",
+  519: "hybrid",
+  520: "reflective",
+  521: "hybrid",
+  522: "research",
+  523: "research",
+  524: "hybrid",
+  525: "reflective",
+  526: "hybrid",
+  527: "reflective",
+  528: "hybrid",
+  529: "hybrid",
+  530: "synthesis",
+  531: "synthesis",
 };
 
 export const LEARN_CONTENT: Record<number, LearnContent> = {
@@ -14141,6 +14171,786 @@ export const LEARN_CONTENT: Record<number, LearnContent> = {
     ],
     successSignal:
       "You can point to a specific team experience where deliberately combining multiple practices from this stage produced genuinely higher team performance.",
+    milestoneTies: [],
+  },
+
+  502: {
+    definition:
+      "A First Project Management Awareness is a working understanding of the basic project lifecycle from initiation through closure: initiation, planning, execution, monitoring, and closure.",
+    whyItMatters:
+      "Without a mental map of the full project lifecycle, it's easy to skip genuinely important phases, like formal closure, simply because you didn't know they were a distinct, necessary step.",
+    whenWhoWhere: [
+      { label: "When", body: "Build this awareness early, before you're responsible for managing any real project." },
+      { label: "Who", body: "No collaborator required, though observing how experienced project managers structure their work helps." },
+      { label: "Where", body: "Built through observation, reading, and reflection on projects you've been part of." },
+    ],
+    howItWorks: [
+      "Map a past project you were part of against the five lifecycle phases, and identify which phases were handled well and which were skipped or rushed.",
+    ],
+    tools: ["A simple five-phase project lifecycle diagram as a reference."],
+    scenario: {
+      title: "Realizing closure had been skipped entirely",
+      body: "A student who'd only ever thought of projects as \"do the work, then it's done\" realized, mapping a past group project against the full lifecycle, that the team had entirely skipped formal closure, missing the chance to capture real lessons learned.",
+    },
+    pitfalls: [
+      "Assuming project management is just about the execution phase, missing the genuine value of formal initiation, planning, and closure.",
+    ],
+    successSignal:
+      "You can name all five lifecycle phases and identify a specific phase a past project of yours handled poorly.",
+    milestoneTies: [],
+  },
+
+  503: {
+    definition:
+      "A First Project Initiation formally defines a project, its purpose, and desired outcome, the deliberate first step that too many projects skip in favor of jumping straight to execution.",
+    whyItMatters:
+      "Projects that begin without a formal, explicit definition of purpose and outcome often drift, with different stakeholders quietly assuming different things about what success looks like.",
+    whenWhoWhere: [
+      { label: "When", body: "Use this at the genuine start of any project, before any real planning or execution begins." },
+      { label: "Who", body: "The project's key stakeholders." },
+      { label: "Where", body: "Documented in a brief, formal project charter or initiation document." },
+    ],
+    howItWorks: [
+      "Write a concise statement of the project's purpose, its desired outcome, and why it matters, and confirm it with key stakeholders before proceeding.",
+    ],
+    tools: ["A simple project charter template: purpose, outcome, why it matters, key stakeholders."],
+    scenario: {
+      title: "A mismatch surfaced by the process itself",
+      body: "A student who used to just start working on group projects immediately wrote a brief initiation document for her next one, and the process itself surfaced a stakeholder assumption mismatch that would have caused real problems later.",
+    },
+    pitfalls: [
+      "Skipping formal initiation because a project feels urgent, when the time spent clarifying purpose upfront usually pays for itself many times over.",
+    ],
+    successSignal:
+      "You have a brief, written initiation document that stakeholders have genuinely confirmed before real work begins.",
+    milestoneTies: [],
+  },
+
+  504: {
+    definition:
+      "A First Project Scope Defined establishes what is and is not included in a project, an explicit boundary that prevents the project from quietly expanding beyond what was originally planned.",
+    whyItMatters:
+      "Undefined scope is one of the most common sources of project failure, since work quietly expands (\"scope creep\") without anyone explicitly deciding it should.",
+    whenWhoWhere: [
+      { label: "When", body: "Define this explicitly at the start of any project, immediately following initiation." },
+      { label: "Who", body: "The project's key stakeholders." },
+      { label: "Where", body: "Documented in a written scope statement." },
+    ],
+    howItWorks: [
+      "Write an explicit list of what's included and, just as importantly, what's explicitly excluded from the project.",
+    ],
+    tools: ["A simple in-scope / out-of-scope table."],
+    scenario: {
+      title: "A boundary that stopped quiet expansion",
+      body: "A student's project scope, left undefined, quietly grew from a single campaign to covering three additional related tasks that were never actually agreed to, causing real timeline strain. Her next project's explicit scope document prevented that exact pattern.",
+    },
+    pitfalls: [
+      "Only defining what's included, without explicitly naming what's excluded, which leaves the boundary genuinely ambiguous.",
+    ],
+    successSignal:
+      "You have an explicit in-scope and out-of-scope list, confirmed by stakeholders, that you can point to if scope creep is later proposed.",
+    milestoneTies: [],
+  },
+
+  505: {
+    definition:
+      "A First Project Requirements Gathered identifies what stakeholders genuinely need from the project, distinct from what they initially say they want or what you assume they need.",
+    whyItMatters:
+      "Projects built on assumed requirements, rather than genuinely gathered ones, often deliver something technically complete but not actually what stakeholders needed.",
+    whenWhoWhere: [
+      { label: "When", body: "Gather this explicitly during the planning phase, before significant execution begins." },
+      { label: "Who", body: "The project's key stakeholders." },
+      { label: "Where", body: "Gathered through direct conversations, surveys, or structured requirements sessions." },
+    ],
+    howItWorks: [
+      "Ask stakeholders open-ended questions about their genuine needs, not just what feature or output they initially requested, and document the requirements explicitly.",
+    ],
+    tools: ["The Question-Asking Vocabulary FIRST from Stage Nine."],
+    scenario: {
+      title: "The requested feature that wouldn't have solved it",
+      body: "A student gathering requirements for an internal tool project asked stakeholders what problem they were actually trying to solve, not just what feature they'd requested, and discovered the requested feature wouldn't have actually solved their real underlying problem.",
+    },
+    pitfalls: [
+      "Taking a stakeholder's initial request at face value without probing for the genuine underlying need it's meant to address.",
+    ],
+    successSignal:
+      "Your documented requirements reflect stakeholders' genuine underlying needs, not just their initial surface-level request.",
+    milestoneTies: [],
+  },
+
+  506: {
+    definition:
+      "A First Project Deliverables Defined establishes the specific outputs a project must produce, translating gathered requirements into concrete, tangible things the project will actually deliver.",
+    whyItMatters:
+      "Vague deliverables (\"improve the process\") make it genuinely impossible to know when a project is actually complete; specific deliverables give the project a real, checkable finish line.",
+    whenWhoWhere: [
+      { label: "When", body: "Define this once requirements are gathered, translating them into concrete outputs." },
+      { label: "Who", body: "The project's key stakeholders, to confirm the deliverables genuinely address the gathered requirements." },
+      { label: "Where", body: "Documented in a written deliverables list." },
+    ],
+    howItWorks: [
+      "Translate each gathered requirement into a specific, tangible deliverable, and confirm with stakeholders that the list is genuinely complete.",
+    ],
+    tools: ["A simple requirements-to-deliverables mapping table."],
+    scenario: {
+      title: "A gap caught before delivery",
+      body: "A student's project deliverables list, translated explicitly from gathered requirements rather than assumed, revealed one requirement had no corresponding deliverable at all, a gap caught before it became a genuine problem at delivery.",
+    },
+    pitfalls: [
+      "Defining deliverables vaguely enough that it's unclear whether the project has actually produced them or not.",
+    ],
+    successSignal:
+      "Every gathered requirement maps to a specific, tangible deliverable, confirmed complete by stakeholders.",
+    milestoneTies: [],
+  },
+
+  507: {
+    definition:
+      "A First Project Timeline Created establishes milestones, deadlines, and dependencies, extending the Project Plan Drafted FIRST from Stage Seven with a more formal, comprehensive timeline structure.",
+    whyItMatters:
+      "A genuine timeline, not just a task list, gives the whole team and stakeholders a shared, explicit understanding of when things will actually happen and in what order.",
+    whenWhoWhere: [
+      { label: "When", body: "Create this once deliverables are defined, during the planning phase." },
+      { label: "Who", body: "Your project team." },
+      { label: "Where", body: "Documented in a shared timeline or Gantt-style view." },
+    ],
+    howItWorks: [
+      "Map each deliverable to a realistic deadline, identify key milestones, and note dependencies between tasks explicitly.",
+    ],
+    tools: ["The Project Plan Drafted structure from Stage Seven, or a dedicated timeline tool."],
+    scenario: {
+      title: "A parallel-plan conflict caught early",
+      body: "A student's project timeline, built explicitly with milestones and dependencies rather than just a task list, revealed that two tasks she'd planned to run in parallel actually depended on each other, a conflict caught before it caused a real delay.",
+    },
+    pitfalls: [
+      "Building a task list without explicit milestones or dependencies, which misses genuine scheduling conflicts until they actually happen.",
+    ],
+    successSignal:
+      "Your timeline explicitly shows milestones and dependencies, and catches at least one real scheduling conflict before it happens.",
+    milestoneTies: [],
+  },
+
+  508: {
+    definition:
+      "A First Project Work Breakdown divides a project into manageable tasks and activities, a formal Work Breakdown Structure that decomposes deliverables into concrete, assignable work.",
+    whyItMatters:
+      "A deliverable that's too large or vague to actually assign and track needs to be broken down into genuinely manageable pieces before real execution can begin.",
+    whenWhoWhere: [
+      { label: "When", body: "Create this once deliverables are defined, before assigning specific tasks to team members." },
+      { label: "Who", body: "Your project team." },
+      { label: "Where", body: "Documented in a structured work breakdown, often hierarchical." },
+    ],
+    howItWorks: [
+      "Break each deliverable down into specific, assignable tasks, small enough that each one has a clear, checkable definition of done.",
+    ],
+    tools: ["A simple hierarchical work breakdown structure: deliverable, sub-tasks, individual activities."],
+    scenario: {
+      title: "Too large to assign until it was broken down",
+      body: "A student's deliverable, \"build the leadership presentation,\" was too large to actually assign until she broke it into specific tasks: gather data, build slides, write narrative, design review, each with a clear owner and checkable completion.",
+    },
+    pitfalls: [
+      "Leaving deliverables too large or vague to actually assign, which makes it unclear who owns what or when something is genuinely done.",
+    ],
+    successSignal:
+      "Every deliverable is broken into specific, assignable tasks small enough to have a clear, checkable definition of done.",
+    milestoneTies: [],
+  },
+
+  509: {
+    definition:
+      "A First Project Resource Plan identifies the people, tools, money, and materials required for a project, ensuring the project's actual needs are explicitly accounted for rather than assumed to be available.",
+    whyItMatters:
+      "Projects that don't explicitly plan resources often discover mid-project that a needed tool, budget, or person's time genuinely isn't available, causing avoidable delays.",
+    whenWhoWhere: [
+      { label: "When", body: "Create this during the planning phase, once the work breakdown is complete." },
+      { label: "Who", body: "No collaborator required for drafting, though confirming availability with resource owners is essential." },
+      { label: "Where", body: "Documented in a resource plan covering people, tools, budget, and materials." },
+    ],
+    howItWorks: [
+      "For each major task in your work breakdown, identify what people, tools, budget, or materials it genuinely requires, and confirm availability before committing to the timeline.",
+    ],
+    tools: ["A simple resource plan table: task, resource needed, confirmed available (Y/N)."],
+    scenario: {
+      title: "A two-week approval an explicit plan would have caught",
+      body: "A student's project timeline assumed a specific software license would be available, only to discover mid-project it required a budget approval that took two weeks, a delay an explicit resource plan would have caught during initial planning.",
+    },
+    pitfalls: [
+      "Assuming needed resources will be available without explicitly confirming it during planning, discovering gaps only once execution has already begun.",
+    ],
+    successSignal:
+      "You've explicitly confirmed availability for every major resource your project needs, before committing to the timeline.",
+    milestoneTies: [],
+  },
+
+  510: {
+    definition:
+      "A First Project Risk Register identifies potential risks and how they will be addressed, extending the Risk Assessment FIRST from Stage Seven into a formal, ongoing tracking document.",
+    whyItMatters:
+      "Risks identified proactively, before they become real problems, can be planned for; risks discovered only once they've already happened are far more costly to address.",
+    whenWhoWhere: [
+      { label: "When", body: "Create this during the planning phase, and revisit it throughout the project as new risks emerge." },
+      { label: "Who", body: "Your project team." },
+      { label: "Where", body: "Documented in a living risk register, reviewed periodically." },
+    ],
+    howItWorks: [
+      "Identify potential risks, assess their likelihood and impact, and document a specific mitigation or contingency plan for each significant one.",
+    ],
+    tools: ["The Risk Assessment structure from Stage Seven."],
+    scenario: {
+      title: "A plan ready when the risk actually materialized",
+      body: "A student's risk register flagged \"key team member unavailability\" as a real risk with a specific contingency plan, which meant when that exact risk materialized mid-project, the team had an existing plan ready rather than scrambling.",
+    },
+    pitfalls: [
+      "Creating a risk register once at project kickoff but never revisiting it as the project evolves and new risks emerge.",
+    ],
+    successSignal:
+      "Your risk register includes specific mitigation plans, and at least one identified risk's plan proves genuinely useful during the project.",
+    milestoneTies: [],
+  },
+
+  511: {
+    definition:
+      "A First Project Dependency Map identifies tasks or activities that depend on one another, making explicit the sequencing constraints that determine what can happen in parallel versus what must happen in order.",
+    whyItMatters:
+      "Dependencies left implicit are easy to miss until a task is blocked waiting on another that hasn't actually started yet, causing avoidable delays.",
+    whenWhoWhere: [
+      { label: "When", body: "Create this alongside your project timeline, during the planning phase." },
+      { label: "Who", body: "Your project team." },
+      { label: "Where", body: "Documented in a visual dependency map or explicit list." },
+    ],
+    howItWorks: [
+      "For each task, explicitly identify what it depends on and what depends on it, and visualize the resulting chain to spot genuine bottlenecks.",
+    ],
+    tools: ["A simple dependency diagram, or your project management tool's built-in dependency feature."],
+    scenario: {
+      title: "One task blocking three others",
+      body: "A student's dependency map revealed that a single task, sourcing verification, was a genuine bottleneck blocking three other downstream tasks, an insight that led the team to prioritize that task specifically rather than treating all tasks as equally urgent.",
+    },
+    pitfalls: [
+      "Treating all tasks as independent when genuine dependencies exist, which leads to tasks starting before their prerequisites are actually complete.",
+    ],
+    successSignal:
+      "You identify at least one genuine bottleneck task through explicit dependency mapping that wasn't obvious from the task list alone.",
+    milestoneTies: [],
+  },
+
+  512: {
+    definition:
+      "A First Project Stakeholder Map identifies people affected by or influential to the project, extending the Stakeholder Influence Exercise FIRST from Stage Twelve into a formal, comprehensive mapping document.",
+    whyItMatters:
+      "Projects that don't explicitly map all relevant stakeholders often miss someone genuinely important until late in the project, when their input or buy-in is far harder to incorporate.",
+    whenWhoWhere: [
+      { label: "When", body: "Create this during the planning phase, before significant execution begins." },
+      { label: "Who", body: "Anyone with a genuine stake in the project's outcome or process." },
+      { label: "Where", body: "Documented in a stakeholder map, often organized by influence and interest." },
+    ],
+    howItWorks: [
+      "List everyone with a genuine stake in the project, and categorize each by their level of influence and interest, to determine how much engagement each one needs.",
+    ],
+    tools: ["A simple influence-interest grid: high influence/high interest, high influence/low interest, and so on."],
+    scenario: {
+      title: "A high-influence person almost left out",
+      body: "A student's stakeholder map revealed a department head with high influence but who'd been assumed low-interest and left out of updates, a gap that, once caught, prevented a late-stage objection that could have derailed the project.",
+    },
+    pitfalls: [
+      "Only mapping the most obvious, directly involved stakeholders, missing higher-influence people who aren't part of day-to-day execution.",
+    ],
+    successSignal:
+      "Your stakeholder map includes at least one genuinely important person you hadn't initially considered.",
+    milestoneTies: [],
+  },
+
+  513: {
+    definition:
+      "A First Project Communication Plan determines what information needs to be communicated, to whom, and when, extending the Leadership Communication FIRST from Stage Twelve into a formal, documented plan.",
+    whyItMatters:
+      "Ad hoc communication tends to leave some stakeholders over-informed and others genuinely out of the loop; a deliberate plan ensures the right information reaches the right people consistently.",
+    whenWhoWhere: [
+      { label: "When", body: "Create this during the planning phase, based on your stakeholder map." },
+      { label: "Who", body: "Your project's stakeholders, based on their mapped influence and interest." },
+      { label: "Where", body: "Documented in a written communication plan." },
+    ],
+    howItWorks: [
+      "For each stakeholder group, specify what information they need, how often, and through what channel, based on their level of influence and interest.",
+    ],
+    tools: ["Your Project Stakeholder Map from earlier in this section."],
+    scenario: {
+      title: "Neither under- nor over-informed",
+      body: "A student's communication plan specified weekly detailed updates for the core team but only monthly high-level summaries for less-involved stakeholders, which prevented both under-informing key people and over-informing peripheral ones.",
+    },
+    pitfalls: [
+      "Using the same communication frequency and detail level for every stakeholder, regardless of their actual need for information.",
+    ],
+    successSignal:
+      "Your communication plan tailors frequency and detail to each stakeholder group's actual need, based on your stakeholder map.",
+    milestoneTies: [],
+  },
+
+  514: {
+    definition:
+      "A First Project Status Report communicates project progress, risks, and next steps, extending the Status Update FIRST from Stage Six into a formal, standardized project management artifact.",
+    whyItMatters:
+      "A consistent status report format lets stakeholders quickly track a project's real health over time, rather than needing to reconstruct it from scattered updates each time.",
+    whenWhoWhere: [
+      { label: "When", body: "Produce this on a regular cadence, per your communication plan." },
+      { label: "Who", body: "Your project's stakeholders." },
+      { label: "Where", body: "Documented in a consistent, recurring report format." },
+    ],
+    howItWorks: [
+      "Use a consistent format covering progress against the timeline, current risks, and next steps, delivered on the cadence your communication plan specifies.",
+    ],
+    tools: ["A simple status report template: progress, risks, next steps."],
+    scenario: {
+      title: "A worsening trend spotted across reports",
+      body: "A student's consistent weekly status report format meant a stakeholder could quickly spot a worsening risk trend across several reports, catching a problem earlier than a series of inconsistent, ad hoc updates would have allowed.",
+    },
+    pitfalls: [
+      "Varying the report's format or content each time, which makes it harder for stakeholders to track genuine trends over multiple updates.",
+    ],
+    successSignal:
+      "Your status reports use a consistent format that lets a stakeholder track real progress and risk trends over time.",
+    milestoneTies: [],
+  },
+
+  515: {
+    definition:
+      "A First Project Milestone Achieved successfully completes a significant project checkpoint, confirming the project is genuinely progressing as planned, not just that time has passed.",
+    whyItMatters:
+      "Milestones give a project concrete, checkable points to confirm real progress, rather than only discovering at the very end whether the project actually succeeded.",
+    whenWhoWhere: [
+      { label: "When", body: "This FIRST applies at each significant milestone defined in your project timeline." },
+      { label: "Who", body: "Your project team and relevant stakeholders." },
+      { label: "Where", body: "Confirmed against the specific milestone criteria defined in your timeline." },
+    ],
+    howItWorks: [
+      "At each milestone, explicitly confirm the specific criteria were genuinely met, not just that the target date arrived.",
+    ],
+    tools: ["Your Project Timeline Created FIRST earlier in this stage, with explicit milestone criteria."],
+    scenario: {
+      title: "A false sense of progress caught in time",
+      body: "A student's team initially treated a milestone date as automatically \"achieved\" once it arrived, until an explicit criteria check revealed the underlying work wasn't actually complete, catching a false sense of progress before it compounded into a bigger problem later.",
+    },
+    pitfalls: [
+      "Treating a milestone as achieved simply because its target date has passed, without explicitly confirming the underlying criteria were genuinely met.",
+    ],
+    successSignal:
+      "You explicitly confirm milestone criteria were met, not just that the calendar date arrived, at least once during your project.",
+    milestoneTies: [],
+  },
+
+  516: {
+    definition:
+      "A First Project Change Request formally manages a change to project scope or requirements, ensuring changes are deliberately evaluated rather than silently absorbed into the project.",
+    whyItMatters:
+      "Unmanaged changes to scope, absorbed without formal evaluation, are one of the most common ways projects quietly exceed their original timeline and budget.",
+    whenWhoWhere: [
+      { label: "When", body: "Use this whenever a genuine change to scope or requirements is proposed during a project." },
+      { label: "Who", body: "The project's key stakeholders, to evaluate and approve or reject the change." },
+      { label: "Where", body: "Documented in a formal change request." },
+    ],
+    howItWorks: [
+      "Document the proposed change, its impact on timeline, budget, and resources, and get explicit stakeholder approval before incorporating it.",
+    ],
+    tools: ["A simple change request template: proposed change, impact, approval status."],
+    scenario: {
+      title: "Protecting the deadline for everything else",
+      body: "A student's team received a mid-project request to add a new feature, and rather than silently absorbing it, documented the change's real timeline impact and got explicit stakeholder sign-off, which protected the original deadline for everything else.",
+    },
+    pitfalls: [
+      "Silently absorbing scope changes to avoid a difficult conversation, which erodes the project's timeline and budget without any explicit, informed decision.",
+    ],
+    successSignal:
+      "A proposed change goes through explicit evaluation and approval, with its real impact on timeline and budget documented, before being incorporated.",
+    milestoneTies: [],
+  },
+
+  517: {
+    definition:
+      "A First Project Issue Log documents problems and tracks them through resolution, distinct from a risk register by tracking issues that have already occurred, not just potential future risks.",
+    whyItMatters:
+      "Issues tracked only in memory or scattered messages tend to get lost or forgotten before they're genuinely resolved; a formal log ensures real accountability for resolution.",
+    whenWhoWhere: [
+      { label: "When", body: "Use this whenever a genuine issue arises during project execution." },
+      { label: "Who", body: "Your project team." },
+      { label: "Where", body: "Documented in a living issue log, reviewed regularly." },
+    ],
+    howItWorks: [
+      "Log each issue with a clear description, owner, and status, and review the log regularly to ensure genuine progress toward resolution.",
+    ],
+    tools: ["A simple issue log template: issue, owner, status, resolution date."],
+    scenario: {
+      title: "Forgotten for two weeks, until there was a log",
+      body: "A student's team tracked issues only in scattered Slack messages until one significant issue was genuinely forgotten for two weeks. A formal issue log on their next project ensured every logged issue had a clear owner and got resolved.",
+    },
+    pitfalls: [
+      "Tracking issues only in scattered, informal messages, which makes it easy for a genuine issue to get lost or forgotten.",
+    ],
+    successSignal:
+      "Every issue in your log has a clear owner and status, and you can point to at least one issue that reached genuine resolution through the log.",
+    milestoneTies: [],
+  },
+
+  518: {
+    definition:
+      "A First Project Risk Mitigation actively reduces the likelihood or impact of a project risk, extending the Project Risk Register FIRST earlier in this stage from identification into genuine action.",
+    whyItMatters:
+      "A risk register that only identifies risks without ever actually acting on the mitigation plans provides false comfort rather than genuine protection.",
+    whenWhoWhere: [
+      { label: "When", body: "Use this whenever a significant risk from your risk register genuinely warrants active mitigation." },
+      { label: "Who", body: "Your project team." },
+      { label: "Where", body: "Applied to a specific, real risk from your risk register." },
+    ],
+    howItWorks: [
+      "Take the specific, concrete action your risk register's mitigation plan called for, rather than just having the plan documented but unexecuted.",
+    ],
+    tools: ["Your Project Risk Register from earlier in this stage."],
+    scenario: {
+      title: "Cross-training that paid off when it mattered",
+      body: "A student's risk register flagged \"key team member unavailability\" with a mitigation plan to cross-train a backup person, and when she actually executed that mitigation before the risk materialized, the team absorbed the eventual unavailability smoothly instead of scrambling.",
+    },
+    pitfalls: [
+      "Documenting a mitigation plan in your risk register but never actually executing it, which provides no real protection when the risk materializes.",
+    ],
+    successSignal:
+      "You can point to a specific, real mitigation action taken, not just a documented plan that was never executed.",
+    milestoneTies: [],
+  },
+
+  519: {
+    definition:
+      "A First Project Budget Created estimates and tracks project costs, extending the Budget/Expense Sheet Prepared FIRST from Stage Seven into a formal, ongoing project management practice.",
+    whyItMatters:
+      "A project without an explicit budget, tracked against actual spending, risks discovering cost overruns only once they've already happened, rather than catching them early enough to course-correct.",
+    whenWhoWhere: [
+      { label: "When", body: "Create this during the planning phase, alongside your resource plan." },
+      { label: "Who", body: "No collaborator required for creation, though budget owners should confirm figures." },
+      { label: "Where", body: "Documented in a budget tracking spreadsheet or tool." },
+    ],
+    howItWorks: [
+      "Estimate costs for each major resource identified in your resource plan, and track actual spending against the estimate throughout the project.",
+    ],
+    tools: ["The Budget/Expense Sheet Prepared structure from Stage Seven."],
+    scenario: {
+      title: "An overrun caught early enough to offset",
+      body: "A student's project budget, tracked weekly against actual spending, caught a cost overrun in one category early enough to adjust spending elsewhere and stay within the overall budget, rather than discovering the overrun only at the project's end.",
+    },
+    pitfalls: [
+      "Creating a budget estimate at the start but never actually tracking real spending against it throughout the project.",
+    ],
+    successSignal:
+      "You catch at least one real variance between estimated and actual spending early enough to genuinely adjust course.",
+    milestoneTies: [],
+  },
+
+  520: {
+    definition:
+      "A First Project Schedule Updated adjusts timelines based on actual progress, extending the Project Tracking Log Maintained FIRST from Stage Seven with formal, disciplined schedule revision.",
+    whyItMatters:
+      "A schedule that's never updated to reflect real progress quickly becomes fiction, useless for anyone trying to genuinely understand where the project actually stands.",
+    whenWhoWhere: [
+      { label: "When", body: "Update this regularly throughout project execution, whenever real progress diverges from the original plan." },
+      { label: "Who", body: "Your project team." },
+      { label: "Where", body: "Applied to your living project timeline." },
+    ],
+    howItWorks: [
+      "Compare actual progress against the planned schedule regularly, and update the schedule honestly to reflect genuine current reality, not the original optimistic plan.",
+    ],
+    tools: ["The Project Tracking Log Maintained structure from Stage Seven."],
+    scenario: {
+      title: "Weekly honesty instead of a stale fiction",
+      body: "A student's team kept referencing an outdated schedule that no longer reflected two weeks of real delays, causing confused expectations, until they adopted a discipline of updating the schedule honestly every week based on actual progress.",
+    },
+    pitfalls: [
+      "Leaving an outdated schedule unrevised because updating it feels like admitting the project is behind, which just delays the reckoning and confuses everyone relying on it.",
+    ],
+    successSignal:
+      "Your schedule genuinely reflects current reality, updated regularly, not the original optimistic plan from project kickoff.",
+    milestoneTies: [],
+  },
+
+  521: {
+    definition:
+      "A First Project Management Tool Used manages a project through dedicated software, extending the Project Management Tool Mastery FIRST from Stage Eleven into full, comprehensive project management, not just task tracking.",
+    whyItMatters:
+      "Dedicated project management tools offer far more structured support, timelines, dependencies, resource tracking, than an ad hoc task list, especially as project complexity grows.",
+    whenWhoWhere: [
+      { label: "When", body: "Use this for any project complex enough to genuinely benefit from dedicated tool support." },
+      { label: "Who", body: "Your project team." },
+      { label: "Where", body: "Applied throughout a real project using dedicated software." },
+    ],
+    howItWorks: [
+      "Set up your current project fully within a dedicated tool, timeline, tasks, dependencies, resources, rather than tracking these elements separately across different documents.",
+    ],
+    tools: ["Asana, Monday.com, or a similar dedicated project management platform."],
+    scenario: {
+      title: "One tool catching what three documents missed",
+      body: "A student who'd been tracking her project's timeline, tasks, and budget in three separate documents consolidated everything into one dedicated tool, and found the tool's built-in dependency and timeline views caught scheduling conflicts the separate documents had missed.",
+    },
+    pitfalls: [
+      "Using a project management tool for only task tracking while keeping timeline, budget, and risk information in separate, disconnected documents.",
+    ],
+    successSignal:
+      "Your project's full management, timeline, tasks, dependencies, and resources, lives within one dedicated tool.",
+    milestoneTies: [],
+  },
+
+  522: {
+    definition:
+      "A First Agile Project Experience participates in an Agile-style project environment, characterized by iterative work, frequent feedback, and adaptive planning rather than a single fixed upfront plan.",
+    whyItMatters:
+      "Agile approaches are increasingly standard across many industries, and genuine hands-on experience with iterative, adaptive planning is distinct from, and complements, the more traditional planning skills built earlier in this stage.",
+    whenWhoWhere: [
+      { label: "When", body: "Seek this out whenever a genuine opportunity arises to work within an Agile-style project." },
+      { label: "Who", body: "An Agile project team." },
+      { label: "Where", body: "Applied within a real Agile-style project environment." },
+    ],
+    howItWorks: [
+      "Participate genuinely in the iterative cycle, delivering work in short cycles and incorporating feedback rather than working toward one single, fixed final delivery.",
+    ],
+    tools: ["No special tool; genuine participation in the iterative process itself."],
+    scenario: {
+      title: "A rhythm that took getting used to",
+      body: "A student used to traditional, fully-planned-upfront projects found her first Agile project genuinely different: instead of one big plan, the team delivered in two-week cycles and adjusted based on real feedback each time, a rhythm she initially found uncomfortable but came to appreciate.",
+    },
+    pitfalls: [
+      "Trying to force a traditional, fully-fixed upfront plan onto a genuinely Agile project, missing the point of its iterative, adaptive structure.",
+    ],
+    successSignal:
+      "You can describe a specific way your project adapted based on feedback partway through, rather than following one fixed original plan.",
+    milestoneTies: [],
+  },
+
+  523: {
+    definition:
+      "A First Scrum Experience understands and participates in Scrum ceremonies and responsibilities, a specific, structured Agile framework with defined roles and recurring meetings.",
+    whyItMatters:
+      "Scrum is one of the most widely adopted specific Agile frameworks, and genuine familiarity with its ceremonies (sprint planning, daily standups, sprint review, retrospective) and roles is broadly valuable.",
+    whenWhoWhere: [
+      { label: "When", body: "Seek this out whenever a genuine opportunity arises to participate in a Scrum-run team." },
+      { label: "Who", body: "A Scrum team, including a Scrum Master and Product Owner if formally structured." },
+      { label: "Where", body: "Applied within a real Scrum-run project." },
+    ],
+    howItWorks: [
+      "Participate genuinely in each Scrum ceremony, and understand the distinct purpose each one serves, rather than treating them as generic meetings.",
+    ],
+    tools: ["No special tool; genuine participation in the Scrum ceremonies themselves."],
+    scenario: {
+      title: "Understanding the standup's actual purpose",
+      body: "A student's first daily standup felt like just another status meeting until she understood its actual purpose, surfacing blockers quickly, not giving a detailed report, which changed how she participated in it going forward.",
+    },
+    pitfalls: [
+      "Treating Scrum ceremonies as generic meetings without understanding the distinct, specific purpose each one is actually designed to serve.",
+    ],
+    successSignal:
+      "You can explain the specific purpose of at least three different Scrum ceremonies, based on genuine participation, not just definition.",
+    milestoneTies: [],
+  },
+
+  524: {
+    definition:
+      "A First Kanban Workflow manages work visually using a Kanban system, a visual workflow management method distinct from Scrum's structured, time-boxed sprints.",
+    whyItMatters:
+      "Kanban's visual, continuous-flow approach suits certain kinds of work, particularly ongoing or unpredictable work, better than Scrum's fixed sprint structure, and genuine familiarity with both broadens your practical toolkit.",
+    whenWhoWhere: [
+      { label: "When", body: "Use this for work genuinely suited to continuous flow rather than fixed sprint cycles." },
+      { label: "Who", body: "Your team using the Kanban board." },
+      { label: "Where", body: "Applied through a visual Kanban board, physical or digital." },
+    ],
+    howItWorks: [
+      "Set up a board with clear columns representing your workflow stages, and manage work by moving items through the columns as their status genuinely changes.",
+    ],
+    tools: ["Trello, or any tool with a genuine Kanban board view."],
+    scenario: {
+      title: "A better fit for unpredictable work",
+      body: "A student managing ongoing, unpredictable support requests found Kanban's continuous-flow visual board fit the work far better than a fixed-sprint Scrum structure would have, since new requests arrived unpredictably rather than in planned batches.",
+    },
+    pitfalls: [
+      "Forcing a Kanban board onto work that would actually benefit more from Scrum's structured sprint planning, or vice versa.",
+    ],
+    successSignal:
+      "You can articulate why Kanban's continuous-flow approach specifically fit your work, compared to a fixed-sprint alternative.",
+    milestoneTies: [],
+  },
+
+  525: {
+    definition:
+      "A First Project Progress Review assesses whether a project is on track, extending the Team Performance Review FIRST from Stage Twelve into a formal, project-management-specific practice.",
+    whyItMatters:
+      "Regular, honest progress review is what lets a project manager course-correct before small delays or issues compound into significant, harder-to-fix problems.",
+    whenWhoWhere: [
+      { label: "When", body: "Conduct this at regular intervals throughout project execution, not just at major milestones." },
+      { label: "Who", body: "Your project team." },
+      { label: "Where", body: "In a dedicated review session." },
+    ],
+    howItWorks: [
+      "Compare actual progress against the planned schedule and budget, honestly assess whether the project is genuinely on track, and identify specific course corrections if not.",
+    ],
+    tools: ["Your Project Schedule Updated and Project Budget Created FIRSTS from earlier in this stage."],
+    scenario: {
+      title: "Caught early enough to adjust resourcing",
+      body: "A student's regular progress reviews, conducted honestly rather than optimistically, caught a project drifting behind schedule early enough to adjust resourcing, rather than discovering the delay only near the original deadline.",
+    },
+    pitfalls: [
+      "Conducting progress reviews optimistically rather than honestly, glossing over real delays or issues rather than genuinely confronting them.",
+    ],
+    successSignal:
+      "Your progress review honestly identifies at least one real gap between planned and actual progress, with a specific course correction.",
+    milestoneTies: [],
+  },
+
+  526: {
+    definition:
+      "A First Project Escalation appropriately raises an issue that cannot be resolved at your level, a distinct skill from avoiding the issue or trying to force a resolution beyond your actual authority.",
+    whyItMatters:
+      "Knowing when and how to escalate appropriately, rather than either avoiding a genuine blocker or trying to force a resolution you don't have the authority for, is a critical project management skill.",
+    whenWhoWhere: [
+      { label: "When", body: "Use this whenever a genuine issue exceeds your ability to resolve at your current level." },
+      { label: "Who", body: "The appropriate person with the authority to actually resolve the issue." },
+      { label: "Where", body: "Applied through a clear, professional escalation communication." },
+    ],
+    howItWorks: [
+      "Clearly state the issue, what you've already tried, and what specific decision or action you need from the person you're escalating to.",
+    ],
+    tools: ["The Leadership Without Authority FIRST from Stage Twelve as related groundwork."],
+    scenario: {
+      title: "A specific ask instead of stalling or overreaching",
+      body: "A student facing a budget approval genuinely beyond her authority escalated clearly and professionally, stating the specific decision needed and by when, rather than either quietly stalling the project or trying to approve something she didn't actually have authority for.",
+    },
+    pitfalls: [
+      "Either avoiding a necessary escalation out of a desire to seem self-sufficient, or escalating vaguely without a specific, clear ask.",
+    ],
+    successSignal:
+      "Your escalation is clear and specific, and results in the genuine resolution the project needed.",
+    milestoneTies: [],
+  },
+
+  527: {
+    definition:
+      "A First Project Recovery Plan develops a plan to bring a delayed or struggling project back on track, a distinct, deliberate response to genuine project trouble rather than just continuing forward and hoping.",
+    whyItMatters:
+      "Projects that fall behind rarely recover by simply continuing as before; a deliberate recovery plan, addressing the actual root cause, is what genuinely gets a struggling project back on track.",
+    whenWhoWhere: [
+      { label: "When", body: "Use this whenever a genuine progress review reveals a project meaningfully off track." },
+      { label: "Who", body: "Your project team and key stakeholders." },
+      { label: "Where", body: "Documented in a specific recovery plan." },
+    ],
+    howItWorks: [
+      "Identify the genuine root cause of the delay, not just its symptoms, and develop a specific plan, which may include re-scoping, additional resources, or a revised timeline, to address it.",
+    ],
+    tools: ["Your Project Risk Register and Issue Log from earlier in this stage."],
+    scenario: {
+      title: "Re-scoping instead of hoping to catch up",
+      body: "A student's project, delayed due to an underestimated task complexity, developed a specific recovery plan re-scoping the remaining work and adding a resource for the critical path, rather than just hoping the team would somehow catch up on the original plan.",
+    },
+    pitfalls: [
+      "Responding to a struggling project by just pushing harder on the original plan, without addressing the genuine root cause of why it fell behind.",
+    ],
+    successSignal:
+      "Your recovery plan addresses the actual root cause of the delay, and the project's subsequent progress reflects genuine improvement.",
+    milestoneTies: [],
+  },
+
+  528: {
+    definition:
+      "A First Project Handoff transfers completed work to the appropriate person or team, extending the Team Handoff FIRST from Stage Thirteen into a formal, project-level transition.",
+    whyItMatters:
+      "A project's completed work only creates lasting value if it's genuinely handed off with enough context for the receiving person or team to actually maintain or use it going forward.",
+    whenWhoWhere: [
+      { label: "When", body: "Use this at a project's completion, or whenever significant completed work transfers to another owner." },
+      { label: "Who", body: "The person or team receiving the handoff." },
+      { label: "Where", body: "Documented in a formal handoff package." },
+    ],
+    howItWorks: [
+      "Document the completed work's status, key context, ongoing maintenance needs, and any open items, and confirm the receiving party genuinely understands before considering the handoff complete.",
+    ],
+    tools: ["The Team Handoff structure from Stage Thirteen."],
+    scenario: {
+      title: "Context that let the receiving team adapt it intelligently",
+      body: "A student's project handoff to the team that would maintain the new process going forward included not just the final deliverable but the genuine context behind key decisions, which meant the receiving team could actually adapt it intelligently rather than treating it as a fixed black box.",
+    },
+    pitfalls: [
+      "Handing off only the final deliverable without the genuine context behind it, leaving the receiving team unable to intelligently maintain or adapt the work.",
+    ],
+    successSignal:
+      "The receiving person or team can genuinely maintain and build on the work, not just use it as-is without understanding it.",
+    milestoneTies: [],
+  },
+
+  529: {
+    definition:
+      "A First Project Closure formally completes and closes a project, the deliberate final phase that confirms the project is genuinely finished, not just that people have stopped actively working on it.",
+    whyItMatters:
+      "Projects that fade out rather than formally close often leave loose ends unaddressed and miss the genuine opportunity to confirm all deliverables were actually met.",
+    whenWhoWhere: [
+      { label: "When", body: "Use this at the genuine, confirmed completion of any project." },
+      { label: "Who", body: "Key stakeholders, to confirm formal acceptance of the completed work." },
+      { label: "Where", body: "Documented in a formal closure confirmation." },
+    ],
+    howItWorks: [
+      "Confirm every deliverable was genuinely met, close out the risk register and issue log, and get explicit stakeholder sign-off that the project is formally complete.",
+    ],
+    tools: ["Your Project Deliverables Defined FIRST earlier in this stage as the basis for confirmation."],
+    scenario: {
+      title: "An issue only discovered months later",
+      body: "A student's project quietly faded out without ever confirming one deliverable was genuinely complete, an issue only discovered months later. Her next project's formal closure process explicitly confirmed every deliverable before considering it done.",
+    },
+    pitfalls: [
+      "Letting a project quietly fade out as people move to other work, rather than a deliberate, formal closure confirming genuine completion.",
+    ],
+    successSignal:
+      "You have explicit stakeholder confirmation that every deliverable was genuinely met, not just an assumption the project is done.",
+    milestoneTies: [],
+  },
+
+  530: {
+    definition:
+      "A First Project Lessons Learned documents what should be repeated, changed, or avoided, extending the Team Lesson-Learned Document FIRST from Stage Thirteen into a formal project management closure artifact.",
+    whyItMatters:
+      "Lessons that only live in memory tend to fade and get relearned the hard way on future projects; a genuine, specific written document preserves them for real future use.",
+    whenWhoWhere: [
+      { label: "When", body: "Create this immediately following project closure, while the insights are still fresh." },
+      { label: "Who", body: "Your full project team." },
+      { label: "Where", body: "Written in a format future project teams can genuinely reference." },
+    ],
+    howItWorks: [
+      "Capture specific, actionable lessons, not vague generalities, covering what worked, what didn't, and what to change for future projects.",
+    ],
+    tools: ["The Team Lesson-Learned Document structure from Stage Thirteen."],
+    scenario: {
+      title: "An underestimate a future project avoided",
+      body: "A student's project lessons learned document specifically noted that the resource plan had underestimated design time by 30%, an insight a future project explicitly built into its own resource planning, avoiding the same underestimate.",
+    },
+    pitfalls: [
+      "Writing lessons so vague (\"communicate better\") that they provide no genuine, actionable guidance for a future project to actually apply.",
+    ],
+    successSignal:
+      "Your lessons learned document contains specific, actionable insights that a future project could genuinely apply, not vague generalities.",
+    milestoneTies: [],
+  },
+
+  531: {
+    definition:
+      "A First End-to-End Project Managed independently coordinates a project from initiation through completion, the capstone FIRST that closes this entire stage by combining every practice built throughout it.",
+    whyItMatters:
+      "Managing a full project independently, from genuine initiation through formal closure, is what actually proves the accumulated project management skill built throughout this stage, not any single practice in isolation.",
+    whenWhoWhere: [
+      { label: "When", body: "Apply this once you've built genuine practice with the individual FIRSTS throughout this stage." },
+      { label: "Who", body: "Your project team and stakeholders." },
+      { label: "Where", body: "Applied throughout a genuine, real project you independently manage." },
+    ],
+    howItWorks: [
+      "Independently apply the full project management lifecycle, initiation, planning, execution, monitoring, and formal closure, to a real project, rather than any single phase in isolation.",
+    ],
+    tools: ["Your accumulated practices and documents from throughout this entire stage."],
+    scenario: {
+      title: "The accumulated practices compounding into something smoother",
+      body: "A student who'd practiced individual project management skills across several smaller tasks independently managed her capstone project end-to-end for the first time, initiation charter through formal closure, and found the accumulated practices genuinely compounded into a noticeably smoother, more controlled project than her earlier, less structured ones.",
+    },
+    pitfalls: [
+      "Applying individual project management practices in isolation across different projects without ever independently managing one project through its full lifecycle.",
+    ],
+    successSignal:
+      "You can point to one specific project you independently managed from genuine initiation through formal closure, using the practices built throughout this stage.",
     milestoneTies: [],
   },
 };

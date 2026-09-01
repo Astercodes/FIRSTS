@@ -4776,4 +4776,288 @@ export const WORKSHEET_SCHEMAS: Record<number, WorksheetField[]> = {
     ] },
     { type: "text", key: "reflection", label: "Compounding effect noticed, compared to using these in isolation", section: "Reflection", seed: "Together they meant the team caught problems before they became crises, instead of any single practice catching just one kind of issue." },
   ],
+
+  502: [
+    { type: "text", key: "pastProject", label: "Past project", section: "The project", seed: "The fundraiser event from last semester" },
+    { type: "table", key: "lifecycleMap", label: "Lifecycle map", section: "Lifecycle map", columns: [
+      { key: "phase", label: "Phase", kind: "text" },
+      { key: "handledWell", label: "Handled Well? (Y/N)", kind: "text" },
+    ], seedRows: [
+      { phase: "Initiation", handledWell: "N, we just started planning without a real charter" },
+      { phase: "Planning", handledWell: "Y" },
+      { phase: "Execution", handledWell: "Y" },
+      { phase: "Monitoring", handledWell: "N, no regular check-ins against the plan" },
+      { phase: "Closure", handledWell: "N, we never formally wrapped it up" },
+    ] },
+    { type: "text", key: "skipped", label: "Phase that was skipped or rushed", section: "Reflection", seed: "Closure, we just moved on to the next thing without a debrief" },
+  ],
+
+  503: [
+    { type: "text", key: "purpose", label: "Project purpose", section: "Initiation document", seed: "Build a simple digital membership system for the makerspace club" },
+    { type: "text", key: "outcome", label: "Desired outcome", seed: "Members can sign up and check in online instead of a paper sheet" },
+    { type: "text", key: "whyMatters", label: "Why it matters", seed: "The paper sign-in sheet keeps getting lost and we have no real membership count" },
+    { type: "text", key: "stakeholders", label: "Key stakeholders", seed: "Faculty advisor, club treasurer, current volunteer leads" },
+    { type: "text", key: "confirmed", label: "Did stakeholders confirm before work began?", section: "Confirmation", seed: "Yes, reviewed and approved by the faculty advisor and treasurer" },
+  ],
+
+  504: [
+    { type: "textarea", key: "inScope", label: "In scope", section: "In scope", rows: 3, seed: "Online sign-up form, digital check-in at events, a basic member list export" },
+    { type: "textarea", key: "outScope", label: "Out of scope", section: "Out of scope", rows: 3, seed: "Payment processing, automated email reminders, integration with the school's official roster system" },
+  ],
+
+  505: [
+    { type: "text", key: "stakeholder", label: "Stakeholder", section: "The question", seed: "The club treasurer" },
+    { type: "textarea", key: "underlyingProblem", label: "Underlying problem, beyond their initial request", rows: 2, seed: "She asked for \"a spreadsheet,\" but the real problem was not knowing who'd actually paid dues before letting them into events" },
+    { type: "text", key: "requirement", label: "Requirement, based on the real underlying need", section: "Documented requirement", seed: "Check-in must show dues status, not just name, at the door" },
+  ],
+
+  506: [
+    { type: "table", key: "reqToDeliverables", label: "Requirements to deliverables", section: "Requirements to deliverables", columns: [
+      { key: "requirement", label: "Requirement", kind: "text" },
+      { key: "deliverable", label: "Deliverable", kind: "text" },
+    ], seedRows: [
+      { requirement: "See dues status at check-in", deliverable: "Check-in screen showing paid/unpaid status" },
+      { requirement: "Know how many members we have", deliverable: "Exportable member count report" },
+      { requirement: "Let members sign up without a paper form", deliverable: "Online sign-up form" },
+    ] },
+    { type: "text", key: "gapCheck", label: "Any requirement without a corresponding deliverable?", section: "Gap check", seed: "None, all three were covered" },
+  ],
+
+  507: [
+    { type: "table", key: "timeline", label: "Timeline", section: "Timeline", columns: [
+      { key: "milestone", label: "Milestone", kind: "text" },
+      { key: "deadline", label: "Deadline", kind: "text" },
+      { key: "dependsOn", label: "Depends On", kind: "text" },
+    ], seedRows: [
+      { milestone: "Sign-up form live", deadline: "Week 2", dependsOn: "None" },
+      { milestone: "Check-in screen built", deadline: "Week 4", dependsOn: "Sign-up form live" },
+      { milestone: "Pilot at one event", deadline: "Week 5", dependsOn: "Check-in screen built" },
+    ] },
+    { type: "text", key: "conflictCheck", label: "Any scheduling conflict caught?", section: "Conflict check", seed: "Yes, the check-in screen can't be built until the sign-up form defines the data fields it needs" },
+  ],
+
+  508: [
+    { type: "text", key: "deliverable", label: "Deliverable", section: "Work breakdown", seed: "Check-in screen" },
+    { type: "table", key: "breakdown", label: "Breakdown", columns: [
+      { key: "task", label: "Task", kind: "text" },
+      { key: "owner", label: "Owner", kind: "text" },
+      { key: "dod", label: "Definition of Done", kind: "text" },
+    ], seedRows: [
+      { task: "Design the check-in screen layout", owner: "Jordan", dod: "Mockup approved by the team" },
+      { task: "Connect it to the member list", owner: "Me", dod: "Pulls real dues status correctly" },
+      { task: "Test at a mock event", owner: "Priya", dod: "Five test check-ins run without errors" },
+    ] },
+  ],
+
+  509: [
+    { type: "table", key: "resourcePlan", label: "Resource plan", section: "Resource plan", columns: [
+      { key: "task", label: "Task", kind: "text" },
+      { key: "resource", label: "Resource Needed", kind: "text" },
+      { key: "confirmed", label: "Confirmed Available? (Y/N)", kind: "text" },
+    ], seedRows: [
+      { task: "Build the sign-up form", resource: "Google Forms account", confirmed: "Y" },
+      { task: "Host the check-in screen", resource: "Club's existing website hosting", confirmed: "Y" },
+      { task: "Design mockups", resource: "Jordan's design time, roughly 4 hours", confirmed: "Y, confirmed with him directly" },
+    ] },
+  ],
+
+  510: [
+    { type: "table", key: "riskRegister", label: "Risk register", section: "Risk register", columns: [
+      { key: "risk", label: "Risk", kind: "text" },
+      { key: "likelihood", label: "Likelihood", kind: "text" },
+      { key: "impact", label: "Impact", kind: "text" },
+      { key: "mitigation", label: "Mitigation Plan", kind: "text" },
+    ], seedRows: [
+      { risk: "Jordan unavailable during design week", likelihood: "Medium", impact: "High", mitigation: "Cross-train Priya on basic mockup tools as backup" },
+      { risk: "Hosting account access lost", likelihood: "Low", impact: "High", mitigation: "Get a second admin added now, not after it's needed" },
+    ] },
+  ],
+
+  511: [
+    { type: "table", key: "dependencyMap", label: "Dependency map", section: "Dependency map", columns: [
+      { key: "task", label: "Task", kind: "text" },
+      { key: "dependsOn", label: "Depends On", kind: "text" },
+      { key: "blocks", label: "Blocks", kind: "text" },
+    ], seedRows: [
+      { task: "Define data fields", dependsOn: "None", blocks: "Sign-up form, check-in screen" },
+      { task: "Sign-up form live", dependsOn: "Define data fields", blocks: "Check-in screen testing" },
+      { task: "Check-in screen built", dependsOn: "Sign-up form live", blocks: "Pilot event" },
+    ] },
+    { type: "text", key: "bottleneck", label: "Genuine bottleneck identified", section: "Bottleneck found", seed: "Defining data fields early, since everything else waits on it" },
+  ],
+
+  512: [
+    { type: "table", key: "stakeholderMap", label: "Stakeholder map", section: "Stakeholder map", columns: [
+      { key: "stakeholder", label: "Stakeholder", kind: "text" },
+      { key: "influence", label: "Influence (H/L)", kind: "text" },
+      { key: "interest", label: "Interest (H/L)", kind: "text" },
+    ], seedRows: [
+      { stakeholder: "Faculty advisor", influence: "H", interest: "L" },
+      { stakeholder: "Club treasurer", influence: "H", interest: "H" },
+      { stakeholder: "General members", influence: "L", interest: "H" },
+    ] },
+    { type: "text", key: "check", label: "Anyone genuinely important I hadn't initially considered?", section: "Check", seed: "The outgoing club president, who still has admin access to some of our accounts" },
+  ],
+
+  513: [
+    { type: "table", key: "commPlan", label: "Communication plan", section: "Communication plan", columns: [
+      { key: "group", label: "Stakeholder Group", kind: "text" },
+      { key: "need", label: "What They Need", kind: "text" },
+      { key: "frequency", label: "Frequency", kind: "text" },
+      { key: "channel", label: "Channel", kind: "text" },
+    ], seedRows: [
+      { group: "Faculty advisor", need: "High-level status only", frequency: "Monthly", channel: "Email" },
+      { group: "Club treasurer", need: "Detailed progress and budget", frequency: "Weekly", channel: "Slack" },
+      { group: "General members", need: "Launch date announcement", frequency: "Once, at launch", channel: "Group chat" },
+    ] },
+  ],
+
+  514: [
+    { type: "textarea", key: "progress", label: "Progress", section: "Progress", rows: 2, seed: "Sign-up form is live, check-in screen is 80% built" },
+    { type: "textarea", key: "risks", label: "Risks", section: "Risks", rows: 2, seed: "Jordan's out next week, mockup revisions may slip a few days" },
+    { type: "textarea", key: "nextSteps", label: "Next steps", section: "Next steps", rows: 2, seed: "Finish check-in screen, schedule the pilot test event" },
+  ],
+
+  515: [
+    { type: "text", key: "milestone", label: "Milestone", section: "The milestone", seed: "Check-in screen built" },
+    { type: "text", key: "criteria", label: "Specific criteria for completion", seed: "Pulls correct dues status for five test members with zero errors" },
+    { type: "text", key: "verified", label: "Were the criteria genuinely met, not just the date arrived?", section: "Verification", seed: "Yes, ran the five test check-ins myself before marking it done" },
+  ],
+
+  516: [
+    { type: "text", key: "proposedChange", label: "Proposed change", section: "Change request", seed: "Treasurer asked to add a payment-tracking feature mid-project" },
+    { type: "text", key: "impact", label: "Impact on timeline, budget, resources", seed: "Would add roughly two weeks and require a paid form-processing plan" },
+    { type: "text", key: "approvalStatus", label: "Approval status", seed: "Deferred to a phase two, kept out of the original launch" },
+  ],
+
+  517: [
+    { type: "table", key: "issueLog", label: "Issue log", section: "Issue log", columns: [
+      { key: "issue", label: "Issue", kind: "text" },
+      { key: "owner", label: "Owner", kind: "text" },
+      { key: "status", label: "Status", kind: "text" },
+      { key: "resolutionDate", label: "Resolution Date", kind: "text" },
+    ], seedRows: [
+      { issue: "Check-in screen showed wrong dues status for one test member", owner: "Me", status: "Resolved", resolutionDate: "Week 4" },
+      { issue: "Sign-up form missing a phone number field", owner: "Priya", status: "In progress", resolutionDate: "TBD" },
+    ] },
+  ],
+
+  518: [
+    { type: "text", key: "risk", label: "Risk from your register", section: "The risk", seed: "Jordan unavailable during design week" },
+    { type: "text", key: "plannedMitigation", label: "Planned mitigation", seed: "Cross-train Priya on the mockup tool as backup" },
+    { type: "text", key: "actionTaken", label: "What I actually did", section: "Action taken", seed: "Walked Priya through the tool this week, before Jordan's actual absence" },
+  ],
+
+  519: [
+    { type: "table", key: "budget", label: "Budget", section: "Budget", columns: [
+      { key: "category", label: "Category", kind: "text" },
+      { key: "estimated", label: "Estimated", kind: "text" },
+      { key: "actual", label: "Actual", kind: "text" },
+    ], seedRows: [
+      { category: "Form hosting", estimated: "$0, free tier", actual: "$0" },
+      { category: "Design tool subscription", estimated: "$15", actual: "$15" },
+      { category: "Printing launch flyers", estimated: "$20", actual: "$34" },
+    ] },
+    { type: "text", key: "variance", label: "Where did actual differ most from estimate?", section: "Variance", seed: "Flyer printing ran over because we ordered a second batch" },
+  ],
+
+  520: [
+    { type: "table", key: "scheduleCheck", label: "Schedule check", section: "Schedule check", columns: [
+      { key: "task", label: "Task", kind: "text" },
+      { key: "original", label: "Original Deadline", kind: "text" },
+      { key: "revised", label: "Revised Deadline", kind: "text" },
+    ], seedRows: [
+      { task: "Check-in screen built", original: "Week 4", revised: "Week 5, Jordan's absence pushed it" },
+      { task: "Pilot event", original: "Week 5", revised: "Week 6" },
+    ] },
+    { type: "text", key: "honestReflection", label: "What's genuinely different from the original plan?", section: "Honest reflection", seed: "We're a full week behind on the pilot, updated the schedule instead of pretending otherwise" },
+  ],
+
+  521: [
+    { type: "text", key: "toolChosen", label: "Tool chosen", section: "Setup", seed: "Trello, with a board for this project's timeline, tasks, and dependencies" },
+    { type: "text", key: "consolidationCheck", label: "Is everything genuinely in one place now?", section: "Consolidation check", seed: "Yes, moved the budget and risk register into it too instead of keeping them in separate docs" },
+  ],
+
+  522: [
+    { type: "text", key: "agileProject", label: "Agile project / team", section: "The project", seed: "A part-time internship project run in two-week sprints" },
+    { type: "textarea", key: "adaptation", label: "How the plan adapted based on real feedback", section: "The adaptation", rows: 2, seed: "Dropped a planned feature after the first sprint review showed users didn't actually want it, and added a simpler one they asked for instead" },
+  ],
+
+  523: [
+    { type: "table", key: "ceremonies", label: "Ceremonies", section: "Ceremonies", columns: [
+      { key: "ceremony", label: "Ceremony", kind: "text" },
+      { key: "purpose", label: "Its Specific Purpose", kind: "text" },
+    ], seedRows: [
+      { ceremony: "Daily standup", purpose: "Surface blockers fast, not give a detailed report" },
+      { ceremony: "Sprint planning", purpose: "Agree what's realistic to commit to this sprint" },
+      { ceremony: "Sprint review", purpose: "Show real working progress and get genuine feedback" },
+      { ceremony: "Retrospective", purpose: "Improve how the team works, not just what it built" },
+    ] },
+  ],
+
+  524: [
+    { type: "text", key: "columns", label: "Columns / workflow stages", section: "The board", seed: "To Do, In Progress, Waiting on Review, Done" },
+    { type: "text", key: "reflection", label: "Why did continuous flow fit this work better than a fixed sprint?", section: "Reflection", seed: "Support requests arrived unpredictably, a fixed two-week sprint would have left the board either empty or overloaded depending on the week" },
+  ],
+
+  525: [
+    { type: "text", key: "plannedProgress", label: "Planned progress", section: "Review", seed: "Check-in screen should be fully built and tested by now" },
+    { type: "text", key: "actualProgress", label: "Actual progress", seed: "Built but only tested with two members, not the full five" },
+    { type: "text", key: "gapCorrection", label: "Genuine gap, and course correction", seed: "Behind on testing, blocking an hour tomorrow specifically to finish it rather than letting it slip further" },
+  ],
+
+  526: [
+    { type: "text", key: "issue", label: "The issue", section: "Escalation", seed: "Hosting costs would exceed the club's approved budget if we add the payment feature" },
+    { type: "text", key: "alreadyTried", label: "What I've already tried", seed: "Looked at two cheaper hosting options, neither supports what we'd need" },
+    { type: "text", key: "specificAsk", label: "Specific decision or action needed, and from whom", seed: "Need the treasurer to either approve the extra $10/month or confirm we defer the feature" },
+  ],
+
+  527: [
+    { type: "text", key: "delay", label: "The delay", section: "Root cause", seed: "Pilot event pushed back a full week" },
+    { type: "text", key: "rootCause", label: "Genuine root cause, not just the symptom", seed: "Underestimated how long real device testing would take, not just Jordan's absence" },
+    { type: "text", key: "recoveryPlan", label: "Specific plan to address the root cause", section: "Recovery plan", seed: "Add a dedicated testing day before every future pilot instead of testing same-day" },
+  ],
+
+  528: [
+    { type: "text", key: "status", label: "Status", section: "Handoff package", seed: "Membership system fully built and piloted successfully" },
+    { type: "text", key: "context", label: "Key context", seed: "Login credentials and the reasoning behind why we chose Trello over Asana" },
+    { type: "text", key: "maintenanceNeeds", label: "Ongoing maintenance needs", seed: "Someone needs to export the member list at the start of each semester" },
+    { type: "text", key: "openItems", label: "Open items", seed: "The deferred payment-tracking feature, still on the wishlist for next year" },
+  ],
+
+  529: [
+    { type: "table", key: "closureChecklist", label: "Closure checklist", section: "Closure checklist", columns: [
+      { key: "deliverable", label: "Deliverable", kind: "text" },
+      { key: "confirmed", label: "Confirmed Met? (Y/N)", kind: "text" },
+    ], seedRows: [
+      { deliverable: "Online sign-up form", confirmed: "Y" },
+      { deliverable: "Check-in screen with dues status", confirmed: "Y" },
+      { deliverable: "Exportable member list", confirmed: "Y" },
+    ] },
+    { type: "text", key: "signOff", label: "Stakeholder confirmation received", section: "Sign-off", seed: "Yes, treasurer and faculty advisor both confirmed in writing" },
+  ],
+
+  530: [
+    { type: "table", key: "lessons", label: "Lessons", section: "Lessons", columns: [
+      { key: "lesson", label: "Lesson", kind: "text" },
+      { key: "action", label: "Specific Action for Next Time", kind: "text" },
+    ], seedRows: [
+      { lesson: "Device testing took twice as long as planned", action: "Budget a dedicated testing day in the timeline, not same-day as the pilot" },
+      { lesson: "A payment feature request came in mid-project", action: "Ask stakeholders about future-phase wishes during initiation, not just current needs" },
+    ] },
+  ],
+
+  531: [
+    { type: "text", key: "project", label: "Project", section: "The project", seed: "Organizing the club's spring fundraiser end-to-end, as the lead" },
+    { type: "table", key: "lifecycleCommitment", label: "Lifecycle commitment", section: "Lifecycle commitment", columns: [
+      { key: "phase", label: "Phase", kind: "text" },
+      { key: "practice", label: "Practice From This Stage I'll Apply", kind: "text" },
+    ], seedRows: [
+      { phase: "Initiation", practice: "Write a real charter and confirm it with the treasurer and advisor" },
+      { phase: "Planning", practice: "Full scope, WBS, risk register, and budget before any work starts" },
+      { phase: "Execution", practice: "Weekly status reports and an honest, updated schedule" },
+      { phase: "Monitoring", practice: "Regular progress reviews, not just checking in when something breaks" },
+      { phase: "Closure", practice: "Formal sign-off and a real lessons-learned document" },
+    ] },
+  ],
 };

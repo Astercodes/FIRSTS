@@ -1,12 +1,12 @@
 export type ModuleStatus = "complete" | "in-progress" | "available" | "locked";
-export type StageId = "one" | "two" | "three" | "four" | "five" | "six" | "seven" | "eight" | "nine" | "ten" | "eleven" | "twelve" | "thirteen";
+export type StageId = "one" | "two" | "three" | "four" | "five" | "six" | "seven" | "eight" | "nine" | "ten" | "eleven" | "twelve" | "thirteen" | "fourteen";
 
 export type FirstModule = {
   id: number;
   code: string;
   stage: StageId;
   title: string;
-  category: "A" | "B" | "C" | "D" | "E" | "F" | "G" | "H" | "I" | "J" | "K" | "L" | "M" | "N" | "O" | "P" | "Q" | "R" | "S" | "T" | "U" | "V" | "W" | "X" | "Y" | "Z" | "AA" | "BB" | "CC" | "DD" | "EE" | "FF" | "GG" | "HH" | "II" | "JJ" | "KK" | "LL" | "MM" | "NN" | "OO" | "PP" | "QQ" | "RR" | "SS" | "TT" | "UU" | "VV" | "WW" | "XX" | "AAA" | "BBB" | "CCC";
+  category: "A" | "B" | "C" | "D" | "E" | "F" | "G" | "H" | "I" | "J" | "K" | "L" | "M" | "N" | "O" | "P" | "Q" | "R" | "S" | "T" | "U" | "V" | "W" | "X" | "Y" | "Z" | "AA" | "BB" | "CC" | "DD" | "EE" | "FF" | "GG" | "HH" | "II" | "JJ" | "KK" | "LL" | "MM" | "NN" | "OO" | "PP" | "QQ" | "RR" | "SS" | "TT" | "UU" | "VV" | "WW" | "XX" | "AAA" | "BBB" | "CCC" | "DDD" | "EEE" | "FFF";
   time: string;
   difficulty: "Easy" | "Moderate" | "Deep";
   status: ModuleStatus;
@@ -72,6 +72,9 @@ export const CATEGORY_META = {
   AAA: { label: "Team Foundations", color: "var(--tropical-mango)" },
   BBB: { label: "Working Together in Practice", color: "var(--neon-pink)" },
   CCC: { label: "Navigating Difficulty & Closing Out", color: "var(--sunshine-orange)" },
+  DDD: { label: "Project Planning Foundations", color: "var(--fuchsia-blast)" },
+  EEE: { label: "Managing Execution", color: "var(--citrus-lime)" },
+  FFF: { label: "Modern Methodologies & Closing Out", color: "var(--berry-burst)" },
 } as const;
 
 export const STAGES: { id: StageId; label: string; shortLabel: string; href: string }[] = [
@@ -88,6 +91,7 @@ export const STAGES: { id: StageId; label: string; shortLabel: string; href: str
   { id: "eleven", label: "Stage Eleven · Tools & Technology", shortLabel: "Stage Eleven", href: "/dashboard/stage/eleven" },
   { id: "twelve", label: "Stage Twelve · Leadership", shortLabel: "Stage Twelve", href: "/dashboard/stage/twelve" },
   { id: "thirteen", label: "Stage Thirteen · Teamwork & Collaboration", shortLabel: "Stage Thirteen", href: "/dashboard/stage/thirteen" },
+  { id: "fourteen", label: "Stage Fourteen · Project Management", shortLabel: "Stage Fourteen", href: "/dashboard/stage/fourteen" },
 ];
 
 const STAGE_ONE_FIRSTS: FirstModule[] = [
@@ -630,7 +634,40 @@ const STAGE_THIRTEEN_FIRSTS: FirstModule[] = [
   { id: 501, code: "Q30", stage: "thirteen", title: "High-Performing Team Experience", category: "CCC", time: "Sustained", difficulty: "Deep", status: "locked" },
 ];
 
-export const FIRSTS: FirstModule[] = [...STAGE_ONE_FIRSTS, ...STAGE_TWO_FIRSTS, ...STAGE_THREE_FIRSTS, ...STAGE_FOUR_FIRSTS, ...STAGE_FIVE_FIRSTS, ...STAGE_SIX_FIRSTS, ...STAGE_SEVEN_FIRSTS, ...STAGE_EIGHT_FIRSTS, ...STAGE_NINE_FIRSTS, ...STAGE_TEN_FIRSTS, ...STAGE_ELEVEN_FIRSTS, ...STAGE_TWELVE_FIRSTS, ...STAGE_THIRTEEN_FIRSTS];
+const STAGE_FOURTEEN_FIRSTS: FirstModule[] = [
+  { id: 502, code: "R1", stage: "fourteen", title: "Project Management Awareness", category: "DDD", time: "30 to 45 min", difficulty: "Easy", status: "complete", thoroughness: 2, completedAt: "2026-07-01" },
+  { id: 503, code: "R2", stage: "fourteen", title: "Project Initiation", category: "DDD", time: "30 min", difficulty: "Easy", status: "locked" },
+  { id: 504, code: "R3", stage: "fourteen", title: "Project Scope Defined", category: "DDD", time: "30 min", difficulty: "Easy", status: "complete", thoroughness: 1, completedAt: "2026-07-03" },
+  { id: 505, code: "R4", stage: "fourteen", title: "Project Requirements Gathered", category: "DDD", time: "Varies", difficulty: "Moderate", status: "locked" },
+  { id: 506, code: "R5", stage: "fourteen", title: "Project Deliverables Defined", category: "DDD", time: "30 to 45 min", difficulty: "Easy", status: "complete", thoroughness: 3, completedAt: "2026-07-05" },
+  { id: 507, code: "R6", stage: "fourteen", title: "Project Timeline Created", category: "DDD", time: "45 min to 1 hr", difficulty: "Moderate", status: "locked" },
+  { id: 508, code: "R7", stage: "fourteen", title: "Project Work Breakdown", category: "DDD", time: "45 min to 1 hr", difficulty: "Moderate", status: "complete", thoroughness: 2, completedAt: "2026-07-07" },
+  { id: 509, code: "R8", stage: "fourteen", title: "Project Resource Plan", category: "DDD", time: "30 to 45 min", difficulty: "Moderate", status: "locked" },
+  { id: 510, code: "R9", stage: "fourteen", title: "Project Risk Register", category: "DDD", time: "30 to 45 min, ongoing", difficulty: "Moderate", status: "complete", thoroughness: 1, completedAt: "2026-07-09" },
+  { id: 511, code: "R10", stage: "fourteen", title: "Project Dependency Map", category: "DDD", time: "30 to 45 min", difficulty: "Moderate", status: "locked" },
+  { id: 512, code: "R11", stage: "fourteen", title: "Project Stakeholder Map", category: "EEE", time: "30 min", difficulty: "Easy", status: "complete", thoroughness: 3, completedAt: "2026-07-11" },
+  { id: 513, code: "R12", stage: "fourteen", title: "Project Communication Plan", category: "EEE", time: "30 min", difficulty: "Easy", status: "locked" },
+  { id: 514, code: "R13", stage: "fourteen", title: "Project Status Report", category: "EEE", time: "15 to 20 min", difficulty: "Easy", status: "complete", thoroughness: 2, completedAt: "2026-07-13" },
+  { id: 515, code: "R14", stage: "fourteen", title: "Project Milestone Achieved", category: "EEE", time: "Situational", difficulty: "Easy", status: "locked" },
+  { id: 516, code: "R15", stage: "fourteen", title: "Project Change Request", category: "EEE", time: "20 to 30 min", difficulty: "Moderate", status: "complete", thoroughness: 1, completedAt: "2026-07-15" },
+  { id: 517, code: "R16", stage: "fourteen", title: "Project Issue Log", category: "EEE", time: "Ongoing", difficulty: "Easy", status: "locked" },
+  { id: 518, code: "R17", stage: "fourteen", title: "Project Risk Mitigation", category: "EEE", time: "Situational", difficulty: "Moderate", status: "complete", thoroughness: 3, completedAt: "2026-07-17" },
+  { id: 519, code: "R18", stage: "fourteen", title: "Project Budget Created", category: "EEE", time: "30 to 45 min, ongoing", difficulty: "Moderate", status: "locked" },
+  { id: 520, code: "R19", stage: "fourteen", title: "Project Schedule Updated", category: "EEE", time: "Ongoing", difficulty: "Easy", status: "complete", thoroughness: 2, completedAt: "2026-07-19" },
+  { id: 521, code: "R20", stage: "fourteen", title: "Project Management Tool Used", category: "EEE", time: "Several hrs", difficulty: "Moderate", status: "locked" },
+  { id: 522, code: "R21", stage: "fourteen", title: "Agile Project Experience", category: "FFF", time: "Sustained", difficulty: "Moderate", status: "complete", thoroughness: 1, completedAt: "2026-07-21" },
+  { id: 523, code: "R22", stage: "fourteen", title: "Scrum Experience", category: "FFF", time: "Sustained", difficulty: "Moderate", status: "locked" },
+  { id: 524, code: "R23", stage: "fourteen", title: "Kanban Workflow", category: "FFF", time: "Ongoing", difficulty: "Easy", status: "complete", thoroughness: 3, completedAt: "2026-07-23" },
+  { id: 525, code: "R24", stage: "fourteen", title: "Project Progress Review", category: "FFF", time: "30 to 45 min", difficulty: "Moderate", status: "locked" },
+  { id: 526, code: "R25", stage: "fourteen", title: "Project Escalation", category: "FFF", time: "Situational", difficulty: "Moderate", status: "complete", thoroughness: 2, completedAt: "2026-07-25" },
+  { id: 527, code: "R26", stage: "fourteen", title: "Project Recovery Plan", category: "FFF", time: "Varies", difficulty: "Deep", status: "locked" },
+  { id: 528, code: "R27", stage: "fourteen", title: "Project Handoff", category: "FFF", time: "45 min to 1 hr", difficulty: "Moderate", status: "complete", thoroughness: 1, completedAt: "2026-07-27" },
+  { id: 529, code: "R28", stage: "fourteen", title: "Project Closure", category: "FFF", time: "30 to 45 min", difficulty: "Moderate", status: "locked" },
+  { id: 530, code: "R29", stage: "fourteen", title: "Project Lessons Learned", category: "FFF", time: "30 to 45 min", difficulty: "Easy", status: "complete", thoroughness: 3, completedAt: "2026-07-29" },
+  { id: 531, code: "R30", stage: "fourteen", title: "End-to-End Project Managed", category: "FFF", time: "Sustained", difficulty: "Deep", status: "locked" },
+];
+
+export const FIRSTS: FirstModule[] = [...STAGE_ONE_FIRSTS, ...STAGE_TWO_FIRSTS, ...STAGE_THREE_FIRSTS, ...STAGE_FOUR_FIRSTS, ...STAGE_FIVE_FIRSTS, ...STAGE_SIX_FIRSTS, ...STAGE_SEVEN_FIRSTS, ...STAGE_EIGHT_FIRSTS, ...STAGE_NINE_FIRSTS, ...STAGE_TEN_FIRSTS, ...STAGE_ELEVEN_FIRSTS, ...STAGE_TWELVE_FIRSTS, ...STAGE_THIRTEEN_FIRSTS, ...STAGE_FOURTEEN_FIRSTS];
 
 export const MOCK_USER = {
   firstName: "Ada",
