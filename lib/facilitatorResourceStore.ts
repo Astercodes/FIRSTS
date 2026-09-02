@@ -25,6 +25,7 @@ const STAGE_FOCUS: Record<StageId, string> = {
   twelve: "leadership, the culminating stage, expect students with real, sometimes raw stories about leading and being led",
   thirteen: "teamwork and collaboration, the peer-level counterpart to leadership, expect stories about difficult teammates and real team friction, not just leaders",
   fourteen: "project management, the most formal and document-heavy stage, expect students to lean on templates heavily at first, the charters, risk registers, and status reports take real repetition before they feel natural",
+  fifteen: "business and organizational acumen, students without much workplace exposure yet will lean hardest on conversations with managers and colleagues to answer these honestly, encourage that rather than guessing",
 };
 
 /** Stage One's kit was recently revised; version bumps here should flag facilitators still on the old copy. */

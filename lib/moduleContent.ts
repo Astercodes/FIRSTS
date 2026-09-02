@@ -544,6 +544,31 @@ export const COACH_MODE: Record<number, CoachMode> = {
   529: "hybrid",
   530: "synthesis",
   531: "synthesis",
+  532: "research",
+  533: "research",
+  534: "research",
+  535: "research",
+  536: "research",
+  537: "research",
+  538: "hybrid",
+  539: "research",
+  540: "hybrid",
+  541: "hybrid",
+  542: "hybrid",
+  543: "hybrid",
+  544: "hybrid",
+  545: "hybrid",
+  546: "hybrid",
+  547: "hybrid",
+  548: "research",
+  549: "research",
+  550: "research",
+  551: "hybrid",
+  552: "reflective",
+  553: "research",
+  554: "hybrid",
+  555: "research",
+  556: "synthesis",
 };
 
 export const LEARN_CONTENT: Record<number, LearnContent> = {
@@ -14951,6 +14976,656 @@ export const LEARN_CONTENT: Record<number, LearnContent> = {
     ],
     successSignal:
       "You can point to one specific project you independently managed from genuine initiation through formal closure, using the practices built throughout this stage.",
+    milestoneTies: [],
+  },
+
+  532: {
+    definition:
+      "A First Business Model Awareness is a working understanding of how an organization creates, delivers, and captures value, the fundamental logic underlying why the business exists and how it sustains itself.",
+    whyItMatters:
+      "Without understanding an organization's basic business model, it's easy to make recommendations or decisions that technically work but don't actually serve how the business genuinely makes money and creates value.",
+    whenWhoWhere: [
+      { label: "When", body: "Build this awareness early in any new role, before making significant recommendations or decisions." },
+      { label: "Who", body: "No collaborator required, though a mentor or manager can clarify parts that aren't obvious from the outside." },
+      { label: "Where", body: "Built through observation, company materials, and direct questions to colleagues." },
+    ],
+    howItWorks: [
+      "Identify specifically how your organization creates value for customers, how it delivers that value, and how it captures value back as revenue.",
+    ],
+    tools: ["Your company's own public materials, investor documents, or a direct conversation with a manager."],
+    scenario: {
+      title: "A subscription line she hadn't accounted for",
+      body: "A new marketing hire assumed her company's business model was purely about product sales, until a conversation with a colleague revealed a significant portion of value actually came from a subscription service, which reshaped how she thought about her own campaign priorities.",
+    },
+    pitfalls: [
+      "Assuming you understand the business model based on the product alone, without examining how value is genuinely captured as revenue.",
+    ],
+    successSignal:
+      "You can explain your organization's business model in three sentences: how it creates value, delivers it, and captures it back as revenue.",
+    milestoneTies: [],
+  },
+
+  533: {
+    definition:
+      "A First Organizational Structure Awareness is a working understanding of departments, reporting lines, and organizational hierarchy, the formal structure that shapes how decisions and information actually flow.",
+    whyItMatters:
+      "Understanding the genuine organizational structure, not just your own immediate team, helps you navigate decisions, escalations, and cross-functional work far more effectively.",
+    whenWhoWhere: [
+      { label: "When", body: "Build this awareness early in any new organization." },
+      { label: "Who", body: "No collaborator required, though an org chart or a conversation with HR or a manager helps." },
+      { label: "Where", body: "Built through an org chart, company materials, or direct observation." },
+    ],
+    howItWorks: [
+      "Map out the organization's major departments and reporting lines, and identify where your own role sits within the larger structure.",
+    ],
+    tools: ["Your organization's official org chart, if available."],
+    scenario: {
+      title: "A sign-off two levels higher than assumed",
+      body: "A new hire who'd only ever interacted with her immediate team mapped the full org structure and realized a decision she'd assumed her manager could make actually required sign-off two levels higher, a gap that would have caused a real delay if not caught early.",
+    },
+    pitfalls: [
+      "Only understanding your immediate team's structure, missing how the broader organization actually makes and escalates decisions.",
+    ],
+    successSignal:
+      "You can draw a basic map of your organization's structure and correctly identify where a specific type of decision would actually need approval.",
+    milestoneTies: [],
+  },
+
+  534: {
+    definition:
+      "A First Department Function Mapping is a working understanding of how major departments contribute to organizational goals, extending Organizational Structure Awareness from the formal hierarchy into what each department actually does.",
+    whyItMatters:
+      "Understanding what each department genuinely contributes, beyond just its name, helps you collaborate more effectively and know who to actually approach for a given need.",
+    whenWhoWhere: [
+      { label: "When", body: "Build this once you have a basic structural map from Organizational Structure Awareness." },
+      { label: "Who", body: "Colleagues in different departments, ideally, to confirm your understanding is genuinely accurate." },
+      { label: "Where", body: "Built through conversations with colleagues across different departments." },
+    ],
+    howItWorks: [
+      "For each major department, identify its core function and how it genuinely contributes to the organization's overall goals, confirming with a real colleague where possible.",
+    ],
+    tools: ["Your Organizational Structure Awareness map from earlier in this section."],
+    scenario: {
+      title: "A strategic role beyond just tracking spending",
+      body: "A student assumed the finance department's role was purely about tracking spending, until a conversation with someone on that team revealed they also played a genuine strategic role in evaluating new initiatives, reshaping how she approached a future budget request.",
+    },
+    pitfalls: [
+      "Assuming a department's function based on its name alone, without confirming what it genuinely does day to day.",
+    ],
+    successSignal:
+      "You can name the genuine core function of at least three departments beyond your own, confirmed through a real conversation.",
+    milestoneTies: [],
+  },
+
+  535: {
+    definition:
+      "A First Revenue Model Awareness is a working understanding of how an organization generates revenue, extending Business Model Awareness with specific focus on the revenue side of the equation.",
+    whyItMatters:
+      "Understanding specifically how revenue is generated, subscriptions, one-time sales, advertising, licensing, shapes what kinds of decisions and priorities genuinely matter to the organization's financial health.",
+    whenWhoWhere: [
+      { label: "When", body: "Build this alongside Business Model Awareness, early in any new role." },
+      { label: "Who", body: "No collaborator required, though finance or sales colleagues can clarify specifics." },
+      { label: "Where", body: "Built through company materials or direct conversation." },
+    ],
+    howItWorks: [
+      "Identify the specific revenue streams your organization relies on, and their relative importance to overall revenue.",
+    ],
+    tools: ["Company financial summaries or investor materials, if available."],
+    scenario: {
+      title: "A smaller stream getting the real strategic attention",
+      body: "A student assumed her company's revenue came primarily from one flagship product, until researching further revealed a smaller but faster-growing revenue stream was actually where leadership's real strategic attention was focused.",
+    },
+    pitfalls: [
+      "Assuming all revenue streams are equally important without understanding their actual relative scale or growth trajectory.",
+    ],
+    successSignal:
+      "You can name your organization's primary revenue streams and roughly rank their relative importance.",
+    milestoneTies: [],
+  },
+
+  536: {
+    definition:
+      "A First Cost Structure Awareness is a working understanding of the major categories of organizational expenses, the counterpart to Revenue Model Awareness on the cost side of the business.",
+    whyItMatters:
+      "Understanding what genuinely drives costs helps you evaluate the real financial impact of decisions and recommendations, not just their revenue potential.",
+    whenWhoWhere: [
+      { label: "When", body: "Build this alongside Revenue Model Awareness." },
+      { label: "Who", body: "No collaborator required, though finance colleagues can clarify specifics." },
+      { label: "Where", body: "Built through company materials or direct conversation." },
+    ],
+    howItWorks: [
+      "Identify the major categories of organizational expense, such as personnel, materials, marketing, or overhead, and their relative scale.",
+    ],
+    tools: ["Company financial summaries, if available, or a conversation with a finance colleague."],
+    scenario: {
+      title: "Personnel time, not marketing, was the real constraint",
+      body: "A student proposing a new initiative assumed the main cost would be the marketing spend, until understanding the organization's cost structure revealed personnel time was actually the larger, more constrained cost, which changed how she scoped her proposal.",
+    },
+    pitfalls: [
+      "Assuming the most visible cost category is necessarily the largest or most constrained one.",
+    ],
+    successSignal:
+      "You can name your organization's major cost categories and roughly rank their relative scale.",
+    milestoneTies: [],
+  },
+
+  537: {
+    definition:
+      "A First Budget Awareness is a working understanding of how organizational budgets are created and managed, extending your personal Budget/Expense Sheet experience from Stage Seven into an organizational context.",
+    whyItMatters:
+      "Understanding how budgets genuinely get created and approved helps you navigate resource requests and understand why certain asks are easier or harder to get approved.",
+    whenWhoWhere: [
+      { label: "When", body: "Build this once you're in a position to genuinely need or influence a budget request." },
+      { label: "Who", body: "A manager or finance colleague who can explain the real budget process." },
+      { label: "Where", body: "Built through direct conversation and observation of real budget cycles." },
+    ],
+    howItWorks: [
+      "Ask a manager or finance colleague to explain how your organization's budget is genuinely created, approved, and reviewed throughout the year.",
+    ],
+    tools: ["The Budget/Expense Sheet Prepared FIRST from Stage Seven as related personal-scale groundwork."],
+    scenario: {
+      title: "A planning window she hadn't accounted for",
+      body: "A student assumed budget requests could be made anytime, until learning her organization's genuine annual budget cycle meant most new requests needed to align with a specific planning window, reshaping how she timed a future proposal.",
+    },
+    pitfalls: [
+      "Assuming budget requests work the same way regardless of timing, missing genuine organizational cycles that affect what's realistically approvable when.",
+    ],
+    successSignal:
+      "You can explain your organization's actual budget cycle and what that means for timing a real resource request.",
+    milestoneTies: [],
+  },
+
+  538: {
+    definition:
+      "A First Profit & Loss Awareness is a working understanding of basic revenue, expenses, profit, and loss, the fundamental financial statement structure underlying how a business's health is genuinely measured.",
+    whyItMatters:
+      "A basic understanding of profit and loss lets you interpret genuine business performance rather than relying purely on secondhand summaries or assumptions.",
+    whenWhoWhere: [
+      { label: "When", body: "Build this once you have basic Revenue Model and Cost Structure Awareness." },
+      { label: "Who", body: "No collaborator required, though a finance colleague can clarify specifics." },
+      { label: "Where", body: "Built through a basic P&L statement, real or illustrative." },
+    ],
+    howItWorks: [
+      "Review a basic profit and loss statement (your organization's if available, or a sample) and identify how revenue, expenses, and the resulting profit or loss connect.",
+    ],
+    tools: ["A sample P&L statement template, or your organization's real one if accessible."],
+    scenario: {
+      title: "Seeing the direct connection to the bottom line",
+      body: "A student who'd only ever heard \"profit\" used casually reviewed an actual P&L statement for the first time and realized how directly her own department's spending connected to the organization's bottom line in a way she hadn't previously visualized.",
+    },
+    pitfalls: [
+      "Treating \"profit\" as an abstract concept rather than a concrete, calculable result of specific revenue and expense figures.",
+    ],
+    successSignal:
+      "You can read a basic P&L statement and correctly identify whether the organization is profitable and by roughly how much.",
+    milestoneTies: [],
+  },
+
+  539: {
+    definition:
+      "A First Business KPI Awareness is a working understanding of how organizations measure performance through Key Performance Indicators, the specific metrics leadership actually tracks to judge success.",
+    whyItMatters:
+      "Understanding what your organization genuinely measures as success helps you align your own work and recommendations with what leadership actually cares about.",
+    whenWhoWhere: [
+      { label: "When", body: "Build this once you understand the basic business and revenue model." },
+      { label: "Who", body: "A manager who can explain what KPIs matter most for your team or organization." },
+      { label: "Where", body: "Built through direct conversation or company dashboards." },
+    ],
+    howItWorks: [
+      "Identify the specific KPIs your organization or team tracks, and understand why those specific metrics were chosen over others.",
+    ],
+    tools: ["Company dashboards or a direct conversation with a manager."],
+    scenario: {
+      title: "Engagement rate, not volume, was the real measure",
+      body: "A student assumed her team's success was measured by total content output, until learning the actual tracked KPI was engagement rate, not volume, which reshaped her own priorities toward quality over quantity.",
+    },
+    pitfalls: [
+      "Assuming you know what's being measured without confirming the actual tracked KPIs, which can lead to optimizing for the wrong thing.",
+    ],
+    successSignal:
+      "You can name the specific KPIs your team or organization tracks, and explain why those metrics matter more than obvious alternatives.",
+    milestoneTies: [],
+  },
+
+  540: {
+    definition:
+      "A First Operational Metrics Exercise identifies metrics used to evaluate a business process, extending Business KPI Awareness from organization-wide metrics into a specific, granular process context.",
+    whyItMatters:
+      "Operational metrics, specific to individual processes, give you a more granular understanding of performance than high-level organizational KPIs alone.",
+    whenWhoWhere: [
+      { label: "When", body: "Use this whenever evaluating a specific business process's real performance." },
+      { label: "Who", body: "No collaborator required, though process owners can confirm what's actually tracked." },
+      { label: "Where", body: "Applied to a specific, real business process." },
+    ],
+    howItWorks: [
+      "Identify the specific metrics used to evaluate a real process (turnaround time, error rate, throughput), and understand what a genuinely good or poor result looks like.",
+    ],
+    tools: ["The Operational Metrics from your own team's dashboards or reports."],
+    scenario: {
+      title: "A gap invisible without looking at the actual number",
+      body: "A student evaluating her team's content review process identified turnaround time as the key operational metric, and discovered the actual average was significantly slower than the target, a gap that hadn't been visible without looking at that specific metric directly.",
+    },
+    pitfalls: [
+      "Evaluating a process based on general impression rather than the actual, specific metric used to track its real performance.",
+    ],
+    successSignal:
+      "You can identify the specific metric used to evaluate a real process, and assess whether current performance is genuinely good or poor against it.",
+    milestoneTies: [],
+  },
+
+  541: {
+    definition:
+      "A First Stakeholder Mapping Exercise identifies internal and external stakeholders, extending the Project Stakeholder Map FIRST from Stage Fourteen into a broader, organizational business context.",
+    whyItMatters:
+      "Understanding the full set of internal and external stakeholders affected by or influential to a business initiative helps you anticipate genuine concerns and build broader support.",
+    whenWhoWhere: [
+      { label: "When", body: "Use this at the start of any significant business initiative or analysis." },
+      { label: "Who", body: "Anyone with a genuine stake in the initiative or analysis." },
+      { label: "Where", body: "Documented in a stakeholder map covering both internal and external parties." },
+    ],
+    howItWorks: [
+      "List every internal stakeholder (departments, leadership) and external stakeholder (customers, partners, regulators) genuinely relevant to the initiative.",
+    ],
+    tools: ["The Project Stakeholder Map structure from Stage Fourteen, extended to include external parties."],
+    scenario: {
+      title: "A regulatory consideration found before it became a problem",
+      body: "A student analyzing a new product feature initially only mapped internal stakeholders, until explicitly considering external ones revealed a regulatory consideration that would have caused a significant problem if discovered later.",
+    },
+    pitfalls: [
+      "Only mapping internal stakeholders, missing genuinely important external parties like customers, partners, or regulators.",
+    ],
+    successSignal:
+      "Your stakeholder map includes both internal and external parties, and surfaces at least one consideration you hadn't initially thought of.",
+    milestoneTies: [],
+  },
+
+  542: {
+    definition:
+      "A First Customer Journey Mapping is a working understanding of how customers interact with an organization, from initial awareness through purchase and ongoing relationship.",
+    whyItMatters:
+      "Understanding the genuine customer journey, not just your own department's touchpoint within it, reveals how your work connects to the broader customer experience.",
+    whenWhoWhere: [
+      { label: "When", body: "Use this whenever you need to understand how customers genuinely experience your organization, not just your own piece of it." },
+      { label: "Who", body: "Colleagues across different customer-facing functions, ideally." },
+      { label: "Where", body: "Documented in a visual customer journey map." },
+    ],
+    howItWorks: [
+      "Map every stage of a customer's genuine interaction with your organization, from initial awareness through purchase and ongoing relationship, identifying your own touchpoint within the broader journey.",
+    ],
+    tools: ["A simple customer journey map template: awareness, consideration, purchase, onboarding, ongoing relationship."],
+    scenario: {
+      title: "A frustrating onboarding undermining her own campaigns",
+      body: "A student in marketing had only ever thought about the awareness stage of the customer journey, until mapping the full journey revealed her campaigns were bringing in customers who then had a frustrating onboarding experience, undermining her own team's efforts.",
+    },
+    pitfalls: [
+      "Only understanding your own department's touchpoint in the customer journey, missing how it connects to the broader, genuine customer experience.",
+    ],
+    successSignal:
+      "You can map the full customer journey and identify how your own role's touchpoint connects to stages before and after it.",
+    milestoneTies: [],
+  },
+
+  543: {
+    definition:
+      "A First Process Mapping Exercise builds a working understanding of how work moves through an organization, extending the Workflow Diagram Created FIRST from Stage Seven into a broader, cross-functional process context.",
+    whyItMatters:
+      "Understanding how work genuinely flows across multiple people or departments, not just your own individual tasks, reveals bottlenecks and inefficiencies invisible from any single vantage point.",
+    whenWhoWhere: [
+      { label: "When", body: "Use this whenever analyzing a process that genuinely spans multiple people or departments." },
+      { label: "Who", body: "Everyone genuinely involved in the process across its full span." },
+      { label: "Where", body: "Documented in a visual process map." },
+    ],
+    howItWorks: [
+      "Map every step of a real cross-functional process, including handoffs between people or departments, and identify where the process genuinely slows down or breaks.",
+    ],
+    tools: ["The Workflow Diagram Created structure from Stage Seven, extended across department boundaries."],
+    scenario: {
+      title: "A handoff invisible from within one department",
+      body: "A student mapping her organization's product launch process discovered a handoff between marketing and legal was the single largest source of delay, an insight invisible from within marketing alone but obvious once the full cross-functional process was mapped.",
+    },
+    pitfalls: [
+      "Mapping only your own team's portion of a process, missing genuine bottlenecks that occur at handoffs between departments.",
+    ],
+    successSignal:
+      "Your process map identifies at least one genuine bottleneck or inefficiency that wasn't visible from any single department's perspective alone.",
+    milestoneTies: [],
+  },
+
+  544: {
+    definition:
+      "A First Business Problem Analysis analyzes a real organizational problem, extending the Root Cause Analysis and Analytical Problem Solved FIRSTS from earlier stages into a specifically business-oriented context.",
+    whyItMatters:
+      "Genuine business problems rarely have obvious causes; systematic analysis, rather than jumping to the first plausible explanation, produces more accurate and useful conclusions.",
+    whenWhoWhere: [
+      { label: "When", body: "Use this whenever a genuine business problem needs real analysis." },
+      { label: "Who", body: "Colleagues with relevant context on the problem." },
+      { label: "Where", body: "Applied to a real, current business problem." },
+    ],
+    howItWorks: [
+      "Define the problem clearly, gather relevant data and context, and work systematically toward the genuine root cause rather than the first plausible explanation.",
+    ],
+    tools: ["The Root Cause Analysis and 5-Whys structures from Stage Five."],
+    scenario: {
+      title: "An algorithm change, not content quality",
+      body: "A student analyzing declining engagement on a company channel initially assumed the content quality had dropped, until systematic analysis revealed the actual cause was a platform algorithm change affecting reach, not content quality at all.",
+    },
+    pitfalls: [
+      "Jumping to the first plausible explanation for a business problem without genuinely verifying it against the actual data.",
+    ],
+    successSignal:
+      "Your analysis reaches a genuine root cause, verified against real data, not just the first plausible explanation.",
+    milestoneTies: [],
+  },
+
+  545: {
+    definition:
+      "A First Business Case Created presents the rationale for an organizational initiative, extending the Business Proposal FIRST from Stage Seven into a more formal, comprehensive business case format.",
+    whyItMatters:
+      "A genuine business case, covering the problem, proposed solution, costs, benefits, and risks, gives decision-makers what they actually need to evaluate an initiative, rather than just an enthusiastic pitch.",
+    whenWhoWhere: [
+      { label: "When", body: "Create this whenever proposing a genuine organizational initiative requiring real resources or approval." },
+      { label: "Who", body: "The decision-makers who need to evaluate and approve the initiative." },
+      { label: "Where", body: "Documented in a formal business case." },
+    ],
+    howItWorks: [
+      "Cover the problem, proposed solution, expected costs and benefits, key risks, and a clear recommendation, backed by real evidence throughout.",
+    ],
+    tools: ["A business case template: problem, solution, costs, benefits, risks, recommendation."],
+    scenario: {
+      title: "Approved on the first review, once the rigor was there",
+      body: "A student's initial pitch for a new initiative was purely enthusiastic and got genuine pushback for lacking rigor. Her revised business case, covering costs, benefits, and risks explicitly, got approved on the first review.",
+    },
+    pitfalls: [
+      "Presenting an enthusiastic pitch without the rigor of a genuine business case, covering real costs, benefits, and risks.",
+    ],
+    successSignal:
+      "Your business case gets a genuine, substantive response from decision-makers, not just polite acknowledgment.",
+    milestoneTies: [],
+  },
+
+  546: {
+    definition:
+      "A First Cost-Benefit Analysis compares the expected benefits and costs of a decision, extending the Analyzing Pros and Cons Vocabulary FIRST from Stage Nine into a more quantitative, rigorous business analysis.",
+    whyItMatters:
+      "A genuine cost-benefit analysis, with real numbers rather than just qualitative pros and cons, gives decision-makers a clearer basis for comparing options.",
+    whenWhoWhere: [
+      { label: "When", body: "Use this whenever comparing options with genuinely quantifiable costs and benefits." },
+      { label: "Who", body: "No collaborator required, though input from finance or relevant experts sharpens accuracy." },
+      { label: "Where", body: "Documented in a structured cost-benefit analysis." },
+    ],
+    howItWorks: [
+      "Quantify the real costs and benefits of each option as specifically as possible, and compare them explicitly rather than relying purely on qualitative impressions.",
+    ],
+    tools: ["A simple cost-benefit table: option, quantified costs, quantified benefits, net value."],
+    scenario: {
+      title: "The pricier option was actually the better value",
+      body: "A student comparing two vendor options initially favored the cheaper one based on sticker price alone, until a genuine cost-benefit analysis, including the more expensive option's efficiency savings, revealed it was actually the better value over time.",
+    },
+    pitfalls: [
+      "Comparing options based on the most visible cost alone, without genuinely quantifying the full range of costs and benefits.",
+    ],
+    successSignal:
+      "Your cost-benefit analysis reveals a genuine insight that wasn't obvious from qualitative impressions alone.",
+    milestoneTies: [],
+  },
+
+  547: {
+    definition:
+      "A First Business Recommendation provides a recommendation based on evidence and analysis, the culminating step that turns genuine analysis into a clear, actionable business decision point.",
+    whyItMatters:
+      "Analysis alone doesn't drive action; a clear, evidence-based recommendation is what actually moves a decision-maker toward a genuine decision.",
+    whenWhoWhere: [
+      { label: "When", body: "Provide this once your analysis (business case, cost-benefit, or problem analysis) is genuinely complete." },
+      { label: "Who", body: "The decision-maker receiving the recommendation." },
+      { label: "Where", body: "Delivered in a presentation, memo, or direct conversation." },
+    ],
+    howItWorks: [
+      "State your recommendation clearly and directly, backed by the specific evidence from your analysis, rather than presenting analysis without a clear conclusion.",
+    ],
+    tools: ["Your completed Business Case, Cost-Benefit Analysis, or Business Problem Analysis from earlier in this stage."],
+    scenario: {
+      title: "A decision made within the same meeting",
+      body: "A student's thorough analysis initially ended without a clear recommendation, leaving the decision-maker unsure what she actually wanted. Adding an explicit, evidence-backed recommendation to her next analysis got a decision made within the same meeting.",
+    },
+    pitfalls: [
+      "Presenting thorough analysis without ever stating a clear recommendation, leaving the decision-maker to draw their own conclusion.",
+    ],
+    successSignal:
+      "Your recommendation is clear enough that a decision-maker can act on it directly, without needing to ask what you actually think should happen.",
+    milestoneTies: [],
+  },
+
+  548: {
+    definition:
+      "A First Market Research Exercise investigates customers, competitors, or market conditions, extending the Online Research Exercise FIRST from Stage Six into a specifically business-oriented research context.",
+    whyItMatters:
+      "Decisions made without genuine market research risk being based on internal assumptions rather than the actual external reality of customers, competitors, and market conditions.",
+    whenWhoWhere: [
+      { label: "When", body: "Use this whenever a genuine business decision would benefit from external market understanding." },
+      { label: "Who", body: "No collaborator required, though customer or industry contacts add real insight." },
+      { label: "Where", body: "Conducted through research, surveys, or direct conversations with customers or industry contacts." },
+    ],
+    howItWorks: [
+      "Investigate a specific market question, customer needs, competitor positioning, or market trends, using credible external sources.",
+    ],
+    tools: ["The Online Research Exercise FIRST from Stage Six, and credible industry sources."],
+    scenario: {
+      title: "Customers cared about something the team hadn't assumed",
+      body: "A student's assumption about customer priorities, based purely on internal team discussion, was revised significantly after actual market research revealed customers cared about a genuinely different factor than the team had assumed.",
+    },
+    pitfalls: [
+      "Relying purely on internal assumptions about the market, without genuine external research to verify or challenge them.",
+    ],
+    successSignal:
+      "Your market research reveals at least one genuine insight that challenged an internal assumption.",
+    milestoneTies: [],
+  },
+
+  549: {
+    definition:
+      "A First Competitive Analysis compares an organization against competitors, extending the Tool Comparison Exercise FIRST from Stage Eleven into a broader, organizational competitive context.",
+    whyItMatters:
+      "Understanding genuine competitive positioning, strengths and weaknesses relative to real competitors, helps you evaluate your own organization's decisions and opportunities more accurately.",
+    whenWhoWhere: [
+      { label: "When", body: "Use this whenever a genuine strategic decision would benefit from competitive context." },
+      { label: "Who", body: "No collaborator required, though colleagues in strategy or sales roles often have real competitive insight." },
+      { label: "Where", body: "Documented in a structured competitive comparison." },
+    ],
+    howItWorks: [
+      "Identify your organization's genuine key competitors, and compare specific dimensions (pricing, features, positioning) explicitly rather than relying on vague impressions.",
+    ],
+    tools: ["A simple competitive comparison matrix: your organization versus key competitors, across specific dimensions."],
+    scenario: {
+      title: "A pricing advantage that had already eroded",
+      body: "A student's competitive analysis revealed her organization's assumed pricing advantage had actually eroded as a competitor recently repositioned, a genuine shift the team hadn't yet accounted for in their own strategy.",
+    },
+    pitfalls: [
+      "Relying on outdated or vague impressions of competitors rather than genuinely current, specific research.",
+    ],
+    successSignal:
+      "Your competitive analysis reveals at least one genuine, current insight that updates an outdated internal assumption.",
+    milestoneTies: [],
+  },
+
+  550: {
+    definition:
+      "A First Industry Analysis is a working understanding of trends, threats, opportunities, and major players in an industry, extending Competitive Analysis from a single-organization comparison into the broader industry context.",
+    whyItMatters:
+      "Understanding genuine industry-level trends and dynamics, beyond just direct competitors, helps you anticipate broader shifts that could affect your organization's strategy.",
+    whenWhoWhere: [
+      { label: "When", body: "Use this whenever a genuine strategic decision would benefit from broader industry context." },
+      { label: "Who", body: "No collaborator required, though industry contacts and analyst reports add real insight." },
+      { label: "Where", body: "Conducted through industry research, reports, and analysis." },
+    ],
+    howItWorks: [
+      "Research your industry's genuine major trends, threats, opportunities, and key players, beyond just your organization's direct competitors.",
+    ],
+    tools: ["Industry analyst reports, trade publications, or a structured framework like PESTLE."],
+    scenario: {
+      title: "An early signal ahead of a reactive scramble",
+      body: "A student's industry analysis revealed a regulatory trend that hadn't yet directly affected her organization but was already reshaping competitor strategies, an early signal that informed a genuinely proactive recommendation rather than a reactive one.",
+    },
+    pitfalls: [
+      "Focusing only on direct competitors, missing broader industry trends and threats that could reshape the competitive landscape entirely.",
+    ],
+    successSignal:
+      "Your industry analysis identifies a genuine trend or threat your organization hadn't yet directly addressed.",
+    milestoneTies: [],
+  },
+
+  551: {
+    definition:
+      "A First Strategic Objective Analysis connects organizational activities to strategic goals, extending the Strategic Leadership Exercise FIRST from Stage Twelve into a broader business acumen context.",
+    whyItMatters:
+      "Activities disconnected from genuine strategic goals, even well-executed ones, don't actually move the organization toward what it's genuinely trying to achieve.",
+    whenWhoWhere: [
+      { label: "When", body: "Use this whenever evaluating whether current activities genuinely serve stated strategic goals." },
+      { label: "Who", body: "No collaborator required, though leadership can clarify genuine strategic priorities." },
+      { label: "Where", body: "Applied to your team's or organization's real current activities." },
+    ],
+    howItWorks: [
+      "Map current activities against stated strategic goals, and identify any activity that isn't genuinely connected, or any goal with no active work supporting it.",
+    ],
+    tools: ["The Strategic Leadership Exercise structure from Stage Twelve."],
+    scenario: {
+      title: "Well-run activities with no genuine strategic connection",
+      body: "A student's team was executing several well-run activities that, once mapped against the organization's actual stated strategic goals, turned out to have no genuine connection to any of them, a disconnect leadership hadn't previously flagged either.",
+    },
+    pitfalls: [
+      "Assuming an activity is strategically valuable simply because it's being executed well, without confirming genuine connection to actual stated goals.",
+    ],
+    successSignal:
+      "You identify at least one real gap between current activities and stated strategic goals.",
+    milestoneTies: [],
+  },
+
+  552: {
+    definition:
+      "A First Executive Perspective Exercise analyzes a problem from an executive decision-maker's perspective, deliberately shifting vantage point from your own role to a genuinely broader, higher-stakes view.",
+    whyItMatters:
+      "Understanding how a genuine executive would weigh a problem, considering broader organizational implications you might not naturally think about, sharpens both your analysis and your ability to communicate with leadership.",
+    whenWhoWhere: [
+      { label: "When", body: "Use this whenever analyzing a problem with genuine organizational significance." },
+      { label: "Who", body: "No collaborator required, though an actual executive's perspective, if accessible, adds real insight." },
+      { label: "Where", body: "Applied to a real business problem or decision." },
+    ],
+    howItWorks: [
+      "Deliberately consider a real problem from a genuine executive's vantage point: broader organizational risk, resource trade-offs, and strategic implications beyond your own immediate role's concerns.",
+    ],
+    tools: ["No special tool; deliberate perspective-shifting."],
+    scenario: {
+      title: "A compliance risk her own view had missed",
+      body: "A student analyzing a process inefficiency from her own role's perspective focused purely on the time saved, until deliberately considering an executive's perspective revealed the change also carried a genuine compliance risk that needed addressing in the recommendation.",
+    },
+    pitfalls: [
+      "Analyzing a problem purely from your own role's immediate concerns, missing broader organizational implications an executive would genuinely weigh.",
+    ],
+    successSignal:
+      "Your analysis, viewed from a genuine executive perspective, surfaces a consideration you hadn't included from your own role's view alone.",
+    milestoneTies: [],
+  },
+
+  553: {
+    definition:
+      "A First Organizational Decision Analysis examines why an organization made a particular decision, building genuine understanding of organizational decision-making by analyzing a real, already-made decision.",
+    whyItMatters:
+      "Analyzing real past organizational decisions, understanding the actual reasoning and trade-offs behind them, builds genuine business judgment that's hard to develop any other way.",
+    whenWhoWhere: [
+      { label: "When", body: "Use this whenever a genuine organizational decision, past or current, is worth understanding more deeply." },
+      { label: "Who", body: "Colleagues who have real context on the decision, if accessible." },
+      { label: "Where", body: "Applied to a real organizational decision." },
+    ],
+    howItWorks: [
+      "Investigate the genuine reasoning behind a real organizational decision, including the trade-offs considered and why the chosen option won out over alternatives.",
+    ],
+    tools: ["Direct conversations with people who had real context on the decision."],
+    scenario: {
+      title: "A more nuanced mix than the assumed single cause",
+      body: "A student initially assumed her organization's decision to discontinue a product line was purely financial, until investigating further revealed a more nuanced mix of financial and genuine strategic repositioning reasons behind it.",
+    },
+    pitfalls: [
+      "Assuming a simple, single-factor explanation for a genuinely complex organizational decision, without investigating the real, fuller reasoning.",
+    ],
+    successSignal:
+      "You understand a real organizational decision's genuine reasoning in more nuanced detail than your initial assumption.",
+    milestoneTies: [],
+  },
+
+  554: {
+    definition:
+      "A First Business Process Improvement identifies and improves an inefficient organizational process, extending the Process Improvement Proposal FIRST from Stage Seven and Process Mapping Exercise earlier in this stage into genuine, implemented change.",
+    whyItMatters:
+      "Identifying an inefficient process is only valuable once it leads to a genuine, implemented improvement, not just an observation that goes nowhere.",
+    whenWhoWhere: [
+      { label: "When", body: "Use this once you've identified a genuine process inefficiency worth improving, ideally through Process Mapping Exercise earlier in this stage." },
+      { label: "Who", body: "Everyone genuinely involved in the process." },
+      { label: "Where", body: "Applied to a real, identified process inefficiency." },
+    ],
+    howItWorks: [
+      "Propose a specific improvement to the identified inefficiency, and see it through to genuine implementation, not just a proposal that goes unactioned.",
+    ],
+    tools: ["Your Process Mapping Exercise and Process Improvement Proposal structures from earlier in this stage and Stage Seven."],
+    scenario: {
+      title: "A streamlined approval process that measurably worked",
+      body: "A student who'd mapped a genuine bottleneck in her organization's approval process proposed and successfully implemented a streamlined version, which measurably reduced the average approval time going forward.",
+    },
+    pitfalls: [
+      "Identifying a genuine inefficiency but never actually seeing an improvement through to real implementation.",
+    ],
+    successSignal:
+      "You can point to a specific process improvement you identified and saw through to genuine, implemented change, with a measurable result.",
+    milestoneTies: [],
+  },
+
+  555: {
+    definition:
+      "A First Organizational Change Awareness is a working understanding of how businesses implement significant change, the deliberate process organizations use to manage genuine transformation rather than change happening haphazardly.",
+    whyItMatters:
+      "Understanding how genuine organizational change is deliberately managed, communication, phased rollout, addressing resistance, helps you navigate change more effectively, whether you're leading it or affected by it.",
+    whenWhoWhere: [
+      { label: "When", body: "Build this awareness before or during any genuine organizational change you're part of." },
+      { label: "Who", body: "Colleagues who've navigated genuine organizational change, if accessible." },
+      { label: "Where", body: "Built through observation of a real organizational change, or through change management frameworks." },
+    ],
+    howItWorks: [
+      "Observe or research how your organization deliberately manages significant change, and identify the specific practices used to build buy-in and reduce resistance.",
+    ],
+    tools: ["A basic change management framework, such as ADKAR (awareness, desire, knowledge, ability, reinforcement)."],
+    scenario: {
+      title: "Reasoning behind each phase, once she saw the framework",
+      body: "A student navigating a genuine organizational restructuring initially found the process confusing, until understanding the deliberate change management framework her organization was using revealed the specific reasoning behind each phase of the rollout.",
+    },
+    pitfalls: [
+      "Assuming organizational change happens haphazardly, missing the genuine, deliberate process many organizations use to manage it.",
+    ],
+    successSignal:
+      "You can identify the specific change management practices your organization used during a real change, and why they were chosen.",
+    milestoneTies: [],
+  },
+
+  556: {
+    definition:
+      "A First Business Acumen Reflection identifies gaps in your understanding of how organizations operate, closing this entire stage with honest, comprehensive self-assessment.",
+    whyItMatters:
+      "Looking across your whole business acumen practice reveals genuine growth patterns and remaining gaps that no single FIRST alone would show.",
+    whenWhoWhere: [
+      { label: "When", body: "Conduct this at the end of working through this stage, and periodically afterward as your business understanding continues to develop." },
+      { label: "Who", body: "A mentor for outside perspective, if available." },
+      { label: "Where", body: "Done in a dedicated, comprehensive reflective session." },
+    ],
+    howItWorks: [
+      "Review your practice across this stage's FIRSTS, and identify which areas of business understanding feel genuinely solid, and which remain real gaps worth continuing to develop.",
+    ],
+    tools: ["Your accumulated practice and reflections from throughout this stage."],
+    scenario: {
+      title: "A clear, honest picture of where the gap really was",
+      body: "A student's comprehensive reflection revealed she'd genuinely internalized how her own department connected to organizational strategy, but still had a real gap in understanding financial statements beyond a basic level, a clear, honest picture to guide her continued growth.",
+    },
+    pitfalls: [
+      "Reviewing only the areas that feel comfortable, avoiding honest assessment of genuinely difficult or unfamiliar ones, like financial literacy.",
+    ],
+    successSignal:
+      "You can name specific, genuine areas of business acumen strength and specific remaining gaps, backed by real practice across this stage.",
     milestoneTies: [],
   },
 };

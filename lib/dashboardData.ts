@@ -1,12 +1,12 @@
 export type ModuleStatus = "complete" | "in-progress" | "available" | "locked";
-export type StageId = "one" | "two" | "three" | "four" | "five" | "six" | "seven" | "eight" | "nine" | "ten" | "eleven" | "twelve" | "thirteen" | "fourteen";
+export type StageId = "one" | "two" | "three" | "four" | "five" | "six" | "seven" | "eight" | "nine" | "ten" | "eleven" | "twelve" | "thirteen" | "fourteen" | "fifteen";
 
 export type FirstModule = {
   id: number;
   code: string;
   stage: StageId;
   title: string;
-  category: "A" | "B" | "C" | "D" | "E" | "F" | "G" | "H" | "I" | "J" | "K" | "L" | "M" | "N" | "O" | "P" | "Q" | "R" | "S" | "T" | "U" | "V" | "W" | "X" | "Y" | "Z" | "AA" | "BB" | "CC" | "DD" | "EE" | "FF" | "GG" | "HH" | "II" | "JJ" | "KK" | "LL" | "MM" | "NN" | "OO" | "PP" | "QQ" | "RR" | "SS" | "TT" | "UU" | "VV" | "WW" | "XX" | "AAA" | "BBB" | "CCC" | "DDD" | "EEE" | "FFF";
+  category: "A" | "B" | "C" | "D" | "E" | "F" | "G" | "H" | "I" | "J" | "K" | "L" | "M" | "N" | "O" | "P" | "Q" | "R" | "S" | "T" | "U" | "V" | "W" | "X" | "Y" | "Z" | "AA" | "BB" | "CC" | "DD" | "EE" | "FF" | "GG" | "HH" | "II" | "JJ" | "KK" | "LL" | "MM" | "NN" | "OO" | "PP" | "QQ" | "RR" | "SS" | "TT" | "UU" | "VV" | "WW" | "XX" | "AAA" | "BBB" | "CCC" | "DDD" | "EEE" | "FFF" | "GGG" | "HHH" | "III";
   time: string;
   difficulty: "Easy" | "Moderate" | "Deep";
   status: ModuleStatus;
@@ -75,6 +75,9 @@ export const CATEGORY_META = {
   DDD: { label: "Project Planning Foundations", color: "var(--fuchsia-blast)" },
   EEE: { label: "Managing Execution", color: "var(--citrus-lime)" },
   FFF: { label: "Modern Methodologies & Closing Out", color: "var(--berry-burst)" },
+  GGG: { label: "Understanding How Organizations Work", color: "var(--pink-grapefruit)" },
+  HHH: { label: "Analyzing the Business", color: "var(--lime-zest)" },
+  III: { label: "Strategic & Reflective Business Thinking", color: "var(--juicy-plum)" },
 } as const;
 
 export const STAGES: { id: StageId; label: string; shortLabel: string; href: string }[] = [
@@ -92,6 +95,7 @@ export const STAGES: { id: StageId; label: string; shortLabel: string; href: str
   { id: "twelve", label: "Stage Twelve · Leadership", shortLabel: "Stage Twelve", href: "/dashboard/stage/twelve" },
   { id: "thirteen", label: "Stage Thirteen · Teamwork & Collaboration", shortLabel: "Stage Thirteen", href: "/dashboard/stage/thirteen" },
   { id: "fourteen", label: "Stage Fourteen · Project Management", shortLabel: "Stage Fourteen", href: "/dashboard/stage/fourteen" },
+  { id: "fifteen", label: "Stage Fifteen · Business & Organizational Acumen", shortLabel: "Stage Fifteen", href: "/dashboard/stage/fifteen" },
 ];
 
 const STAGE_ONE_FIRSTS: FirstModule[] = [
@@ -667,7 +671,35 @@ const STAGE_FOURTEEN_FIRSTS: FirstModule[] = [
   { id: 531, code: "R30", stage: "fourteen", title: "End-to-End Project Managed", category: "FFF", time: "Sustained", difficulty: "Deep", status: "locked" },
 ];
 
-export const FIRSTS: FirstModule[] = [...STAGE_ONE_FIRSTS, ...STAGE_TWO_FIRSTS, ...STAGE_THREE_FIRSTS, ...STAGE_FOUR_FIRSTS, ...STAGE_FIVE_FIRSTS, ...STAGE_SIX_FIRSTS, ...STAGE_SEVEN_FIRSTS, ...STAGE_EIGHT_FIRSTS, ...STAGE_NINE_FIRSTS, ...STAGE_TEN_FIRSTS, ...STAGE_ELEVEN_FIRSTS, ...STAGE_TWELVE_FIRSTS, ...STAGE_THIRTEEN_FIRSTS, ...STAGE_FOURTEEN_FIRSTS];
+const STAGE_FIFTEEN_FIRSTS: FirstModule[] = [
+  { id: 532, code: "S1", stage: "fifteen", title: "Business Model Awareness", category: "GGG", time: "30 to 45 min", difficulty: "Easy", status: "complete", thoroughness: 2, completedAt: "2026-04-01" },
+  { id: 533, code: "S2", stage: "fifteen", title: "Organizational Structure Awareness", category: "GGG", time: "30 min", difficulty: "Easy", status: "locked" },
+  { id: 534, code: "S3", stage: "fifteen", title: "Department Function Mapping", category: "GGG", time: "30 to 45 min", difficulty: "Easy", status: "complete", thoroughness: 1, completedAt: "2026-04-04" },
+  { id: 535, code: "S4", stage: "fifteen", title: "Revenue Model Awareness", category: "GGG", time: "30 min", difficulty: "Easy", status: "locked" },
+  { id: 536, code: "S5", stage: "fifteen", title: "Cost Structure Awareness", category: "GGG", time: "30 min", difficulty: "Easy", status: "complete", thoroughness: 3, completedAt: "2026-04-07" },
+  { id: 537, code: "S6", stage: "fifteen", title: "Budget Awareness", category: "GGG", time: "30 min", difficulty: "Easy", status: "locked" },
+  { id: 538, code: "S7", stage: "fifteen", title: "Profit & Loss Awareness", category: "GGG", time: "30 to 45 min", difficulty: "Easy", status: "complete", thoroughness: 2, completedAt: "2026-04-10" },
+  { id: 539, code: "S8", stage: "fifteen", title: "Business KPI Awareness", category: "GGG", time: "30 min", difficulty: "Easy", status: "locked" },
+  { id: 540, code: "S9", stage: "fifteen", title: "Operational Metrics Exercise", category: "GGG", time: "30 min", difficulty: "Easy", status: "complete", thoroughness: 1, completedAt: "2026-04-13" },
+  { id: 541, code: "S10", stage: "fifteen", title: "Stakeholder Mapping Exercise", category: "HHH", time: "30 to 45 min", difficulty: "Easy", status: "locked" },
+  { id: 542, code: "S11", stage: "fifteen", title: "Customer Journey Mapping", category: "HHH", time: "45 min to 1 hr", difficulty: "Moderate", status: "complete", thoroughness: 3, completedAt: "2026-04-16" },
+  { id: 543, code: "S12", stage: "fifteen", title: "Process Mapping Exercise", category: "HHH", time: "45 min to 1 hr", difficulty: "Moderate", status: "locked" },
+  { id: 544, code: "S13", stage: "fifteen", title: "Business Problem Analysis", category: "HHH", time: "Varies", difficulty: "Moderate", status: "complete", thoroughness: 2, completedAt: "2026-04-19" },
+  { id: 545, code: "S14", stage: "fifteen", title: "Business Case Created", category: "HHH", time: "Several hrs", difficulty: "Deep", status: "locked" },
+  { id: 546, code: "S15", stage: "fifteen", title: "Cost-Benefit Analysis", category: "HHH", time: "45 min to 1 hr", difficulty: "Moderate", status: "complete", thoroughness: 1, completedAt: "2026-04-22" },
+  { id: 547, code: "S16", stage: "fifteen", title: "Business Recommendation", category: "HHH", time: "20 to 30 min", difficulty: "Easy", status: "locked" },
+  { id: 548, code: "S17", stage: "fifteen", title: "Market Research Exercise", category: "HHH", time: "Several hrs", difficulty: "Moderate", status: "complete", thoroughness: 3, completedAt: "2026-04-25" },
+  { id: 549, code: "S18", stage: "fifteen", title: "Competitive Analysis", category: "HHH", time: "Several hrs", difficulty: "Moderate", status: "locked" },
+  { id: 550, code: "S19", stage: "fifteen", title: "Industry Analysis", category: "HHH", time: "Several hrs to a day", difficulty: "Deep", status: "complete", thoroughness: 2, completedAt: "2026-04-28" },
+  { id: 551, code: "S20", stage: "fifteen", title: "Strategic Objective Analysis", category: "III", time: "45 min to 1 hr", difficulty: "Moderate", status: "locked" },
+  { id: 552, code: "S21", stage: "fifteen", title: "Executive Perspective Exercise", category: "III", time: "30 to 45 min", difficulty: "Moderate", status: "complete", thoroughness: 1, completedAt: "2026-05-01" },
+  { id: 553, code: "S22", stage: "fifteen", title: "Organizational Decision Analysis", category: "III", time: "Varies", difficulty: "Moderate", status: "locked" },
+  { id: 554, code: "S23", stage: "fifteen", title: "Business Process Improvement", category: "III", time: "Varies", difficulty: "Deep", status: "complete", thoroughness: 3, completedAt: "2026-05-04" },
+  { id: 555, code: "S24", stage: "fifteen", title: "Organizational Change Awareness", category: "III", time: "45 min", difficulty: "Moderate", status: "locked" },
+  { id: 556, code: "S25", stage: "fifteen", title: "Business Acumen Reflection", category: "III", time: "45 min to 1 hr", difficulty: "Moderate", status: "complete", thoroughness: 2, completedAt: "2026-05-07" },
+];
+
+export const FIRSTS: FirstModule[] = [...STAGE_ONE_FIRSTS, ...STAGE_TWO_FIRSTS, ...STAGE_THREE_FIRSTS, ...STAGE_FOUR_FIRSTS, ...STAGE_FIVE_FIRSTS, ...STAGE_SIX_FIRSTS, ...STAGE_SEVEN_FIRSTS, ...STAGE_EIGHT_FIRSTS, ...STAGE_NINE_FIRSTS, ...STAGE_TEN_FIRSTS, ...STAGE_ELEVEN_FIRSTS, ...STAGE_TWELVE_FIRSTS, ...STAGE_THIRTEEN_FIRSTS, ...STAGE_FOURTEEN_FIRSTS, ...STAGE_FIFTEEN_FIRSTS];
 
 export const MOCK_USER = {
   firstName: "Ada",

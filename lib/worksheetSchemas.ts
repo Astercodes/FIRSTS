@@ -5060,4 +5060,204 @@ export const WORKSHEET_SCHEMAS: Record<number, WorksheetField[]> = {
       { phase: "Closure", practice: "Formal sign-off and a real lessons-learned document" },
     ] },
   ],
+
+  532: [
+    { type: "text", key: "createsValue", label: "How it creates value", section: "The model", seed: "Makes budgeting feel achievable through a simple app instead of intimidating spreadsheets" },
+    { type: "text", key: "deliversValue", label: "How it delivers value", seed: "A mobile app with bank account syncing and weekly spending summaries" },
+    { type: "text", key: "capturesValue", label: "How it captures value as revenue", seed: "A monthly subscription for the premium tier, free tier funded by a small referral partnership" },
+  ],
+
+  533: [
+    { type: "table", key: "structureMap", label: "Structure map", section: "Structure map", columns: [
+      { key: "department", label: "Department", kind: "text" },
+      { key: "reportsTo", label: "Reports To", kind: "text" },
+    ], seedRows: [
+      { department: "Marketing", reportsTo: "VP of Growth" },
+      { department: "Product", reportsTo: "VP of Product" },
+      { department: "Customer Support", reportsTo: "VP of Operations" },
+      { department: "Finance", reportsTo: "CFO" },
+    ] },
+    { type: "text", key: "myPlace", label: "Where my role sits within this structure", section: "My place in it", seed: "Marketing intern, reporting to the Content Marketing Manager, who reports to the VP of Growth" },
+  ],
+
+  534: [
+    { type: "text", key: "department", label: "Department", section: "The department", seed: "Finance" },
+    { type: "text", key: "colleague", label: "Colleague I spoke with", seed: "Marcus, a financial analyst" },
+    { type: "textarea", key: "function", label: "Their genuine core function", section: "What I learned", rows: 2, seed: "Not just tracking spending, they also evaluate whether new initiatives are worth funding before marketing even pitches them" },
+  ],
+
+  535: [
+    { type: "table", key: "revenueStreams", label: "Revenue streams", section: "Revenue streams", columns: [
+      { key: "stream", label: "Revenue Stream", kind: "text" },
+      { key: "importance", label: "Relative Importance", kind: "text" },
+    ], seedRows: [
+      { stream: "Premium subscriptions", importance: "Primary, roughly 70% of revenue" },
+      { stream: "Referral partnership fees", importance: "Secondary, growing fast" },
+      { stream: "One-time financial coaching add-on", importance: "Small, under 5%" },
+    ] },
+  ],
+
+  536: [
+    { type: "table", key: "costCategories", label: "Cost categories", section: "Cost categories", columns: [
+      { key: "category", label: "Cost Category", kind: "text" },
+      { key: "scale", label: "Relative Scale", kind: "text" },
+    ], seedRows: [
+      { category: "Engineering salaries", scale: "Largest single category" },
+      { category: "Customer support staffing", scale: "Second largest" },
+      { category: "Marketing spend", scale: "Smaller than I assumed" },
+    ] },
+  ],
+
+  537: [
+    { type: "text", key: "whoAsked", label: "Who I asked", section: "The cycle", seed: "My manager and the finance team's budget lead" },
+    { type: "textarea", key: "cycleExplained", label: "How the budget cycle actually works", rows: 2, seed: "Department budgets are set annually each October for the following calendar year, with a smaller mid-year adjustment window in April" },
+    { type: "text", key: "implication", label: "What this means for timing a real request", section: "Implication", seed: "A new tool request I want to make should go in during the October planning window, not whenever I think of it" },
+  ],
+
+  538: [
+    { type: "text", key: "revenue", label: "Revenue", section: "P&L review", seed: "$4.2M for the year" },
+    { type: "text", key: "expenses", label: "Expenses", seed: "$3.6M for the year" },
+    { type: "text", key: "result", label: "Profit or loss, and by roughly how much", seed: "Profitable, roughly $600K net" },
+  ],
+
+  539: [
+    { type: "table", key: "kpis", label: "KPIs", section: "KPIs", columns: [
+      { key: "kpi", label: "KPI", kind: "text" },
+      { key: "why", label: "Why It Was Chosen", kind: "text" },
+    ], seedRows: [
+      { kpi: "Monthly active users", why: "Better predictor of renewal than signups alone" },
+      { kpi: "Churn rate", why: "Directly tied to the subscription revenue model" },
+    ] },
+  ],
+
+  540: [
+    { type: "text", key: "process", label: "Process", section: "The process", seed: "Customer support ticket resolution" },
+    { type: "text", key: "metric", label: "Metric used to evaluate it", seed: "Average time to first response" },
+    { type: "text", key: "assessment", label: "Current performance, genuinely good or poor?", section: "Assessment", seed: "Poor, averaging 6 hours against a stated 2-hour target" },
+  ],
+
+  541: [
+    { type: "textarea", key: "internal", label: "Internal stakeholders", section: "Internal stakeholders", rows: 3, seed: "Product team, customer support, finance, the VP of Growth" },
+    { type: "textarea", key: "external", label: "External stakeholders", section: "External stakeholders", rows: 3, seed: "Existing subscribers, the referral partner bank, app store reviewers" },
+  ],
+
+  542: [
+    { type: "table", key: "journeyMap", label: "Journey map", section: "Journey map", columns: [
+      { key: "stage", label: "Stage", kind: "text" },
+      { key: "whatHappens", label: "What Happens", kind: "text" },
+    ], seedRows: [
+      { stage: "Awareness", whatHappens: "Sees a social ad or referral link" },
+      { stage: "Consideration", whatHappens: "Downloads the free tier, tries it for two weeks" },
+      { stage: "Purchase", whatHappens: "Upgrades to premium after hitting the free tier's limit" },
+      { stage: "Onboarding", whatHappens: "Links a bank account and sets a first budget" },
+      { stage: "Ongoing relationship", whatHappens: "Gets weekly spending summaries, renews monthly" },
+    ] },
+    { type: "text", key: "touchpoint", label: "Where my role connects to this journey", section: "My touchpoint", seed: "My content sits at awareness and consideration, but onboarding friction affects whether that traffic ever converts" },
+  ],
+
+  543: [
+    { type: "table", key: "processMap", label: "Process map", section: "Process map", columns: [
+      { key: "step", label: "Step", kind: "text" },
+      { key: "owner", label: "Owner", kind: "text" },
+      { key: "handoffTo", label: "Handoff To", kind: "text" },
+    ], seedRows: [
+      { step: "Draft campaign brief", owner: "Marketing", handoffTo: "Legal for compliance review" },
+      { step: "Compliance review", owner: "Legal", handoffTo: "Marketing for revisions" },
+      { step: "Final approval", owner: "VP of Growth", handoffTo: "Marketing for launch" },
+    ] },
+    { type: "text", key: "bottleneck", label: "Genuine bottleneck identified", section: "Bottleneck", seed: "The legal compliance review, which regularly takes over a week with no set turnaround expectation" },
+  ],
+
+  544: [
+    { type: "text", key: "problem", label: "Problem", section: "The problem", seed: "Newsletter open rates dropped sharply over the past month" },
+    { type: "textarea", key: "analysis", label: "Analysis", section: "Analysis", rows: 3, seed: "Checked send time, subject lines, and list size first, all unchanged. Then compared against industry benchmarks and found other senders on the same platform saw a similar drop." },
+    { type: "text", key: "rootCause", label: "Genuine root cause, verified against real data", section: "Root cause", seed: "A platform-wide deliverability issue, not anything specific to our content" },
+  ],
+
+  545: [
+    { type: "text", key: "problem", label: "Problem", section: "Business case", seed: "Support tickets are taking too long to resolve, hurting renewal rates" },
+    { type: "text", key: "solution", label: "Proposed solution", seed: "Add a tier-one chatbot to triage simple questions before they reach a human agent" },
+    { type: "text", key: "costsBenefits", label: "Expected costs and benefits", seed: "$8K/year for the tool, projected to cut average response time by half" },
+    { type: "text", key: "risks", label: "Key risks", seed: "Customers frustrated by bot responses before reaching a real person" },
+    { type: "text", key: "recommendation", label: "Recommendation", seed: "Pilot it on the lowest-complexity ticket category first, expand only if satisfaction holds" },
+  ],
+
+  546: [
+    { type: "table", key: "comparison", label: "Comparison", section: "Comparison", columns: [
+      { key: "option", label: "Option", kind: "text" },
+      { key: "costs", label: "Quantified Costs", kind: "text" },
+      { key: "benefits", label: "Quantified Benefits", kind: "text" },
+    ], seedRows: [
+      { option: "Cheaper support tool", costs: "$3K/year", benefits: "Saves roughly 2 hours/week of manual sorting" },
+      { option: "Pricier support tool", costs: "$8K/year", benefits: "Saves roughly 10 hours/week, faster resolution" },
+    ] },
+    { type: "text", key: "insight", label: "Insight this revealed", section: "Conclusion", seed: "The pricier tool pays for itself in staff time within four months, the cheaper one doesn't come close" },
+  ],
+
+  547: [
+    { type: "text", key: "analysisBase", label: "Analysis this is based on", section: "The analysis", seed: "My cost-benefit analysis on the two support tool options" },
+    { type: "textarea", key: "recommendation", label: "My recommendation", section: "My recommendation", rows: 2, seed: "Go with the pricier tool. It pays for itself in four months through staff time saved and the faster resolution should help retention." },
+  ],
+
+  548: [
+    { type: "text", key: "question", label: "Market question", section: "The question", seed: "Do our customers actually want budgeting categories, or just a simple spending total?" },
+    { type: "textarea", key: "findings", label: "What the research revealed", section: "Findings", rows: 2, seed: "A quick survey of 40 users showed most only check the total, category breakdowns were rarely opened" },
+    { type: "text", key: "challenged", label: "Internal assumption this challenged", seed: "The team assumed detailed categories were a core value driver, they're barely used" },
+  ],
+
+  549: [
+    { type: "table", key: "comparison", label: "Comparison", section: "Comparison", columns: [
+      { key: "dimension", label: "Dimension", kind: "text" },
+      { key: "us", label: "Us", kind: "text" },
+      { key: "competitor", label: "Competitor", kind: "text" },
+    ], seedRows: [
+      { dimension: "Monthly price", us: "$9.99", competitor: "$7.99" },
+      { dimension: "Bank sync reliability", us: "Strong", competitor: "Frequent complaints online" },
+      { dimension: "Free tier limits", us: "30 days", competitor: "Unlimited but ad-supported" },
+    ] },
+  ],
+
+  550: [
+    { type: "text", key: "trend", label: "Trend or threat", section: "The trend", seed: "New open banking regulation requiring easier account-switching between fintech apps" },
+    { type: "text", key: "relevance", label: "How this could affect the organization", section: "Relevance", seed: "Could lower switching costs for our users to leave for a competitor, or make it easier for us to win theirs" },
+  ],
+
+  551: [
+    { type: "table", key: "mapping", label: "Mapping", section: "Mapping", columns: [
+      { key: "activity", label: "Activity", kind: "text" },
+      { key: "goal", label: "Connected Strategic Goal", kind: "text" },
+    ], seedRows: [
+      { activity: "Weekly newsletter", goal: "Increase premium conversion" },
+      { activity: "Redesigning the app icon", goal: "None, purely aesthetic" },
+      { activity: "Referral partnership expansion", goal: "User growth target" },
+    ] },
+    { type: "text", key: "gap", label: "Genuine disconnect found", section: "Gap", seed: "The icon redesign consumed real design hours with no connection to this quarter's actual goals" },
+  ],
+
+  552: [
+    { type: "text", key: "myView", label: "Problem, from my own role's perspective", section: "My view", seed: "The support delays are frustrating for users and make my job explaining features harder" },
+    { type: "text", key: "executiveView", label: "Broader consideration an executive would weigh", section: "Executive view", seed: "The delays could be driving churn that shows up in a metric leadership actually reports to the board" },
+  ],
+
+  553: [
+    { type: "text", key: "decision", label: "Decision", section: "The decision", seed: "The company discontinued the free financial coaching calls last year" },
+    { type: "text", key: "initialAssumption", label: "My initial assumption about why", seed: "Assumed it was just a cost-cutting move" },
+    { type: "textarea", key: "fullerReasoning", label: "Genuine, fuller reasoning", section: "What I learned", rows: 2, seed: "It was partly cost, but also that the calls weren't actually moving the retention metric leadership cared about most" },
+  ],
+
+  554: [
+    { type: "text", key: "inefficiency", label: "Process / inefficiency", section: "The inefficiency", seed: "The legal compliance review bottleneck from my process map" },
+    { type: "text", key: "improvement", label: "Proposed improvement", section: "Improvement", seed: "A same-day turnaround SLA for low-risk campaign types, reserving full review for higher-risk ones" },
+    { type: "text", key: "result", label: "Measurable result once implemented", section: "Implementation", seed: "Average review time dropped from 8 days to 2 for low-risk campaigns" },
+  ],
+
+  555: [
+    { type: "text", key: "change", label: "Change", section: "The change", seed: "The company's shift from a generalist support team to specialized tiers" },
+    { type: "textarea", key: "practices", label: "Practices used", section: "Practices used", rows: 3, seed: "An all-hands announcement explaining why, a two-week overlap period with the old structure still running, and a survey after rollout to catch resistance early" },
+  ],
+
+  556: [
+    { type: "text", key: "strength", label: "Strongest area of business acumen", section: "Strength", seed: "Understanding how my own content work connects to the subscription revenue model and renewal metrics" },
+    { type: "text", key: "gap", label: "Most significant remaining gap", section: "Gap", seed: "Still fuzzy on how to read a full P&L beyond the basic revenue-minus-expenses level" },
+  ],
 };
