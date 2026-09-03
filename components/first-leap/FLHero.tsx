@@ -61,58 +61,10 @@ export function FLHero() {
           But you should have the opportunity to discover it intentionally.
         </motion.p>
 
-        <motion.p
-          initial="hidden"
-          animate="show"
-          custom={3}
-          variants={FADE_UP}
-          className="mt-6 max-w-xl text-[15px] leading-relaxed text-paper/65"
-        >
-          There is a difference between simply choosing a path and
-          understanding why it is the right path for you.
-        </motion.p>
-
-        <motion.p
-          initial="hidden"
-          animate="show"
-          custom={4}
-          variants={FADE_UP}
-          className="mt-6 max-w-2xl text-lg font-medium leading-relaxed text-paper/90"
-        >
-          First Leap is a guided career and business discovery and
-          development program that helps you understand yourself, explore
-          what is possible, experience potential directions, and make an
-          informed decision about what you want to pursue next.
-        </motion.p>
-
-        <motion.p
-          initial="hidden"
-          animate="show"
-          custom={5}
-          variants={FADE_UP}
-          className="mt-5 max-w-xl text-[15px] leading-relaxed text-paper/65"
-        >
-          Powered by the <strong className="text-paper/90">FIRSTS</strong>{" "}
-          platform and supported by trained mentors and facilitators, First
-          Leap turns uncertainty into exploration, and exploration into
-          direction.
-        </motion.p>
-
-        <motion.p
-          initial="hidden"
-          animate="show"
-          custom={6}
-          variants={FADE_UP}
-          className="mt-8 max-w-xl text-base font-semibold leading-relaxed text-paper"
-        >
-          Discover yourself. Explore your possibilities. Experience before
-          you decide. Choose your direction. Take your First Leap.
-        </motion.p>
-
         <motion.div
           initial="hidden"
           animate="show"
-          custom={7}
+          custom={3}
           variants={FADE_UP}
           className="mt-9 flex flex-col items-center gap-4 sm:flex-row"
         >
