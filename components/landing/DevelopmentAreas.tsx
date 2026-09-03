@@ -75,7 +75,7 @@ export function DevelopmentAreas() {
 
       <Reveal className="mt-12 flex justify-center">
         <Link
-          href="/onboarding"
+          href="/development-areas"
           className="rounded-full bg-ink px-7 py-3.5 text-sm font-semibold text-paper transition-transform duration-300 hover:scale-[1.03] active:scale-[0.98]"
         >
           Explore All Development Areas

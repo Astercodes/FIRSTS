@@ -5,7 +5,7 @@ const COLUMNS: { title: string; links: { label: string; href: string }[] }[] = [
     title: "Explore",
     links: [
       { label: "My FIRSTS", href: "/dashboard/portfolio" },
-      { label: "Development Areas", href: "/#areas" },
+      { label: "Development Areas", href: "/development-areas" },
       { label: "Experiences", href: "/#explore" },
       { label: "Career Exploration", href: "/first-leap#career" },
       { label: "Business Exploration", href: "/first-leap#business" },
