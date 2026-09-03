@@ -1,43 +1,100 @@
 import Link from "next/link";
 
-const AUDIENCE_LINKS = [
-  { label: "Partner-school students", href: "/for/partner-schools" },
-  { label: "Recent grads & professionals", href: "/for/professionals" },
-  { label: "Independent students", href: "/for/independent-students" },
-  { label: "Career centers", href: "/for/career-centers" },
-  { label: "Institutions", href: "/for/institutions" },
-  { label: "Employers", href: "/for/employers" },
-  { label: "Facilitators", href: "/for/facilitators" },
+const COLUMNS: { title: string; links: { label: string; href: string }[] }[] = [
+  {
+    title: "Explore",
+    links: [
+      { label: "My FIRSTS", href: "/dashboard/portfolio" },
+      { label: "Development Areas", href: "/#areas" },
+      { label: "Experiences", href: "/#explore" },
+      { label: "Career Exploration", href: "/#first-leap" },
+      { label: "Business Exploration", href: "/#first-leap" },
+      { label: "First Leap", href: "/#first-leap" },
+    ],
+  },
+  {
+    title: "Programs",
+    links: [
+      { label: "First Leap: Career", href: "/#first-leap" },
+      { label: "First Leap: Business", href: "/#first-leap" },
+    ],
+  },
+  {
+    title: "Get Involved",
+    links: [
+      { label: "Become a Mentor", href: "/for/facilitators" },
+      { label: "Become a Facilitator", href: "/for/facilitators/apply" },
+      { label: "Partner With Us", href: "/request-demo" },
+      { label: "For Schools & Universities", href: "/for/partner-schools" },
+      { label: "For Employers", href: "/for/employers" },
+    ],
+  },
+  {
+    title: "About",
+    links: [
+      { label: "Our Vision", href: "/#top" },
+      { label: "How FIRSTS Works", href: "/#pillars" },
+      { label: "Impact", href: "/#progress" },
+      { label: "Community", href: "/dashboard/community/discover" },
+      { label: "Contact", href: "/request-demo" },
+    ],
+  },
 ];
+
+const LEGAL = ["Privacy", "Terms", "Accessibility", "Help"];
 
 export function Footer() {
   return (
-    <footer className="border-t border-ink/10 bg-paper px-6 py-12">
+    <footer className="border-t border-ink/10 bg-paper px-6 py-16">
       <div className="mx-auto max-w-6xl">
-        <div className="flex flex-wrap justify-center gap-x-6 gap-y-2 border-b border-ink/10 pb-8 sm:justify-start">
-          {AUDIENCE_LINKS.map((l) => (
-            <Link
-              key={l.href}
-              href={l.href}
-              className="text-xs font-medium text-ink/50 transition-colors hover:text-ink"
-            >
-              {l.label}
-            </Link>
+        <div className="grid gap-12 border-b border-ink/10 pb-12 sm:grid-cols-2 lg:grid-cols-[1.2fr_repeat(4,1fr)]">
+          <div>
+            <div className="flex items-center gap-2">
+              <span className="relative flex h-6 w-6 items-center justify-center rounded-full bg-gradient-to-br from-[var(--neon-pink)] via-[var(--sunshine-orange)] to-[var(--lime-zest)]">
+                <span className="font-display text-[10px] font-bold text-ink">
+                  F
+                </span>
+              </span>
+              <span className="font-display text-sm font-semibold text-ink">
+                FIRSTS
+              </span>
+            </div>
+            <p className="mt-3 max-w-[220px] text-sm text-ink/50">
+              One first can begin something bigger.
+            </p>
+          </div>
+
+          {COLUMNS.map((col) => (
+            <div key={col.title}>
+              <p className="text-xs font-semibold uppercase tracking-[0.15em] text-ink/40">
+                {col.title}
+              </p>
+              <ul className="mt-4 space-y-2.5">
+                {col.links.map((l) => (
+                  <li key={l.label}>
+                    <Link
+                      href={l.href}
+                      className="text-sm text-ink/60 transition-colors hover:text-ink"
+                    >
+                      {l.label}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
           ))}
         </div>
 
-        <div className="flex flex-col items-center justify-between gap-6 pt-8 sm:flex-row">
-          <div className="flex items-center gap-2">
-            <span className="relative flex h-6 w-6 items-center justify-center rounded-full bg-gradient-to-br from-[var(--neon-pink)] via-[var(--sunshine-orange)] to-[var(--lime-zest)]">
-              <span className="font-display text-[10px] font-bold text-ink">
-                F
-              </span>
+        <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 border-b border-ink/10 py-6 sm:justify-start">
+          {LEGAL.map((label) => (
+            <span key={label} className="text-xs font-medium text-ink/35">
+              {label}
             </span>
-            <span className="font-display text-sm font-semibold text-ink">
-              FIRSTS
-            </span>
-          </div>
-          <p className="text-xs text-ink/45">
+          ))}
+        </div>
+
+        <div className="flex flex-col items-center justify-between gap-4 pt-8 sm:flex-row">
+          <p className="max-w-md text-center text-xs text-ink/45 sm:text-left">
             Based on <em>FIRSTS: Career Launch &amp; Foundation</em> by
             Ayomide Ayeni. A guidance tool, not a licensed counselor.
           </p>

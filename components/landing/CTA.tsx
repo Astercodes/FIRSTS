@@ -18,18 +18,18 @@ export function CTA() {
 
       <Reveal className="relative mx-auto flex max-w-3xl flex-col items-center text-center text-paper">
         <h2 className="font-display text-4xl font-semibold leading-tight tracking-tight sm:text-5xl">
-          Your first FIRST takes 30 minutes.
+          Your next first is 30 minutes away.
         </h2>
         <p className="mt-4 max-w-lg text-[15px] text-paper/85">
-          No credit card, no commitment to finish all 18 today. Just Core
-          Values Audit, and a coach that asks better questions.
+          No credit card, no commitment to finish everything today. Just one
+          first, and a platform built to help you keep going.
         </p>
         <div className="mt-9 flex flex-col items-center gap-4 sm:flex-row">
           <Link
             href="/onboarding"
             className="rounded-full bg-ink px-8 py-3.5 text-sm font-semibold text-paper transition-transform duration-300 hover:scale-[1.04] active:scale-[0.98]"
           >
-            Start free
+            Start Your Journey
           </Link>
           <Link
             href="/onboarding#advisor"

@@ -5,8 +5,8 @@ import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
 
 const LINKS = [
-  { label: "The Stages", href: "/#stages" },
-  { label: "AI Coach", href: "/#coach" },
+  { label: "Development Areas", href: "/#areas" },
+  { label: "First Leap", href: "/#first-leap" },
 ];
 
 const AUDIENCE_LINKS = [

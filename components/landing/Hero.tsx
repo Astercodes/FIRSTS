@@ -120,7 +120,7 @@ export function Hero() {
           variants={FADE_UP}
           className="mb-6 text-xs font-semibold uppercase tracking-[0.25em] text-[var(--lime-zest)]"
         >
-          Structured career readiness infrastructure
+          A personal and professional development platform
         </motion.p>
 
         <motion.h1
@@ -130,10 +130,8 @@ export function Hero() {
           variants={FADE_UP}
           className="font-display text-5xl font-semibold leading-[1.05] tracking-tight sm:text-6xl md:text-7xl"
         >
-          Know yourself
-          <br />
-          before you{" "}
-          <span className="text-gradient-citrus">choose a career.</span>
+          Every future is built on{" "}
+          <span className="text-gradient-citrus">a series of firsts.</span>
         </motion.h1>
 
         <motion.p
@@ -143,9 +141,11 @@ export function Hero() {
           variants={FADE_UP}
           className="mt-6 max-w-xl text-balance text-lg text-paper/70"
         >
-          FIRSTS turns career readiness from a vague checklist into a
-          visible, sequenced system: built for the student, and for the
-          institution that has to prove it&apos;s working.
+          Your first discovery. Your first skill. Your first mentor. Your
+          first opportunity. FIRSTS helps you intentionally build the
+          knowledge, skills, habits, experiences, relationships, and
+          confidence you need for where you&apos;re going, one first at a
+          time.
         </motion.p>
 
         <motion.div
@@ -163,13 +163,13 @@ export function Hero() {
                 "linear-gradient(100deg, var(--neon-pink), var(--sunshine-orange) 60%, var(--lime-zest))",
             }}
           >
-            Start Stage One
+            Start Your Journey
           </Link>
           <a
-            href="#stages"
+            href="#pillars"
             className="rounded-full border border-white/20 px-7 py-3.5 text-sm font-semibold text-paper/90 backdrop-blur transition-colors hover:border-white/40 hover:bg-white/5"
           >
-            Explore the FIRSTS
+            Explore FIRSTS
           </a>
         </motion.div>
 
