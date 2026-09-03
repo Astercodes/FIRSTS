@@ -1,6 +1,7 @@
 "use client";
 
 import { FirstsList } from "@/components/dashboard/FirstsList";
+import { StageToolsPanel } from "@/components/dashboard/StageToolsPanel";
 import { PaceBandPill } from "@/components/dashboard/PaceBandPill";
 import { useFirstsWithProgress } from "@/lib/progressStore";
 import { STAGES, completionStats, type StageId } from "@/lib/dashboardData";
@@ -35,6 +36,7 @@ export function StageOverview({ stage }: { stage: StageId }) {
         eyebrow={current.shortLabel}
         title={`All ${stats.total} FIRSTS`}
       />
+      <StageToolsPanel modules={modules} />
     </div>
   );
 }
