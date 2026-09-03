@@ -1,5 +1,6 @@
 import { Nav } from "@/components/landing/Nav";
 import { Hero } from "@/components/landing/Hero";
+import { Manifesto } from "@/components/landing/Manifesto";
 import { Audiences } from "@/components/landing/Audiences";
 import { Pillars } from "@/components/landing/Pillars";
 import { DevelopmentAreas } from "@/components/landing/DevelopmentAreas";
@@ -16,6 +17,7 @@ export default function Home() {
       <Nav />
       <main>
         <Hero />
+        <Manifesto />
         <Audiences />
         <Pillars />
         <DevelopmentAreas />

@@ -139,7 +139,7 @@ export function Hero() {
           animate="show"
           custom={2}
           variants={FADE_UP}
-          className="mt-6 max-w-xl text-balance text-lg text-paper/70"
+          className="mt-6 max-w-xl text-balance text-base text-paper/70"
         >
           Your first discovery. Your first skill. Your first mentor. Your
           first opportunity. FIRSTS helps you intentionally build the
@@ -172,17 +172,6 @@ export function Hero() {
             Explore FIRSTS
           </a>
         </motion.div>
-
-        <motion.p
-          initial="hidden"
-          animate="show"
-          custom={4}
-          variants={FADE_UP}
-          className="mt-8 text-xs uppercase tracking-[0.2em] text-paper/40"
-        >
-          For students · recent grads · career centers · institutions ·
-          employers
-        </motion.p>
       </div>
     </section>
   );
