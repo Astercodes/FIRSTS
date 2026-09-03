@@ -32,16 +32,6 @@ export function DAHero() {
       <div className="noise-layer" aria-hidden />
 
       <div className="relative z-10 mx-auto flex max-w-2xl flex-col items-center text-center">
-        <motion.p
-          initial="hidden"
-          animate="show"
-          custom={0}
-          variants={FADE_UP}
-          className="mb-6 text-xs font-semibold uppercase tracking-[0.3em] text-[var(--lime-zest)]"
-        >
-          Development Areas
-        </motion.p>
-
         <motion.h1
           initial="hidden"
           animate="show"

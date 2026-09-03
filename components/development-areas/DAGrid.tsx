@@ -5,22 +5,22 @@ import { Reveal } from "@/components/ui/Reveal";
 import { FIRSTS as ALL_FIRSTS, STAGES } from "@/lib/dashboardData";
 
 const BLURBS: Record<string, string> = {
-  one: "Understand who you are, what you value, and where you're headed.",
-  two: "Shape how you present yourself, online and in person.",
-  three: "Learn to apply, interview, and stand out for the right reasons.",
-  four: "Build the habits and mindset that make consistency possible.",
-  five: "Sharpen how you think, decide, and solve problems.",
-  six: "Speak, read, and write with clarity and confidence.",
-  seven: "Build the technical skills your field actually runs on.",
-  eight: "Develop the interpersonal skills that make you easy to work with.",
-  nine: "Expand the vocabulary that sharpens every conversation you have.",
-  ten: "Build the relationships and mentorships that open doors.",
-  eleven: "Get fluent with the tools and technology your work depends on.",
-  twelve: "Learn to lead, even before you have the title.",
-  thirteen: "Work well with others toward a shared goal.",
-  fourteen: "Plan, organize, and deliver work that actually gets done.",
-  fifteen: "Understand how organizations actually work and make decisions.",
-  sixteen: "Show up with the professionalism and integrity workplaces expect.",
+  one: "Understand who you are before you decide where to go. Explore your values, strengths, personality, interests, and the experiences that shaped you, then use what you find to bring your direction into focus.",
+  two: "Shape how you present yourself, online and in person. Build a personal brand narrative, a professional presence, and the confidence to introduce yourself in a way that actually represents you.",
+  three: "Learn the mechanics of standing out for the right reasons: resumes, cover letters, applications, and interviews that reflect who you are, not just what you think employers want to hear.",
+  four: "Build the habits, focus, and mindset that make consistency possible. This is where discipline gets designed instead of hoped for, from daily systems to how you handle setbacks.",
+  five: "Sharpen how you think, decide, and solve problems. Learn the mental models and reasoning habits that help you cut through noise and make better calls under uncertainty.",
+  six: "Speak, read, and write with clarity and confidence. Strengthen the everyday communication skills that shape how well your ideas land, in conversation, in writing, and in front of a room.",
+  seven: "Build the technical skills your field actually runs on. This area is where you go deep on the practical, job-specific capabilities that make you competent, not just interested.",
+  eight: "Develop the interpersonal skills that make you easy to work with: empathy, adaptability, conflict resolution, and the everyday behaviors that build trust with the people around you.",
+  nine: "Expand the vocabulary that sharpens every conversation you have. Precise language makes you clearer, more persuasive, and more confident in professional settings.",
+  ten: "Build the relationships and mentorships that open doors. Learn how to network with intention, maintain connections over time, and turn conversations into real opportunities.",
+  eleven: "Get fluent with the tools and technology your work depends on, from everyday software to the platforms specific to your field, so the tools never slow you down.",
+  twelve: "Learn to lead, even before you have the title. Build the judgment, communication, and influence it takes to guide others and take ownership of outcomes.",
+  thirteen: "Work well with others toward a shared goal. Learn how to contribute inside a team, navigate disagreement, and help a group perform better than any one person could alone.",
+  fourteen: "Plan, organize, and deliver work that actually gets done. Build the systems for scoping, sequencing, and following through on projects from start to finish.",
+  fifteen: "Understand how organizations actually work and make decisions: how strategy, operations, and incentives fit together, so you can operate effectively inside any organization.",
+  sixteen: "Show up with the professionalism and integrity workplaces expect. Learn the unwritten rules of workplace conduct and how to build a reputation people trust.",
 };
 
 const COLORS = [
