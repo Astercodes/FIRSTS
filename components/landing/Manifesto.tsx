@@ -32,14 +32,22 @@ export function Manifesto() {
         viewport={{ once: true, margin: "-80px" }}
         className="relative mx-auto flex max-w-3xl flex-col items-center text-center"
       >
-        <motion.h2
+        <motion.p
           custom={0}
+          variants={FADE_UP}
+          className="mb-6 text-xs font-semibold uppercase tracking-[0.25em] text-[var(--lime-zest)]"
+        >
+          A personal and professional development platform
+        </motion.p>
+
+        <motion.h2
+          custom={1}
           variants={FADE_UP}
           className="font-display text-3xl font-semibold leading-tight tracking-tight sm:text-4xl"
         >
           Your future won&apos;t arrive all at once.
         </motion.h2>
-        <motion.p custom={1} variants={FADE_UP} className="mt-3 text-lg text-paper/70">
+        <motion.p custom={2} variants={FADE_UP} className="mt-3 text-lg text-paper/70">
           It will be built through decisions.
         </motion.p>
 
@@ -47,7 +55,7 @@ export function Manifesto() {
           {WORDS.map((w, i) => (
             <motion.span
               key={w}
-              custom={i + 2}
+              custom={i + 3}
               variants={FADE_UP}
               className="rounded-full border border-white/15 bg-white/5 px-4 py-2 text-sm font-medium text-paper/85"
             >
@@ -57,7 +65,7 @@ export function Manifesto() {
         </div>
 
         <motion.p
-          custom={WORDS.length + 2}
+          custom={WORDS.length + 3}
           variants={FADE_UP}
           className="mt-8 text-lg text-paper/70"
         >
@@ -65,7 +73,7 @@ export function Manifesto() {
         </motion.p>
 
         <motion.h3
-          custom={WORDS.length + 3}
+          custom={WORDS.length + 4}
           variants={FADE_UP}
           className="mt-10 font-display text-2xl font-semibold tracking-tight sm:text-3xl"
         >
@@ -74,7 +82,7 @@ export function Manifesto() {
           <span className="text-gradient-citrus">Start with your next FIRST.</span>
         </motion.h3>
 
-        <motion.div custom={WORDS.length + 4} variants={FADE_UP} className="mt-9">
+        <motion.div custom={WORDS.length + 5} variants={FADE_UP} className="mt-9">
           <Link
             href="/onboarding"
             className="group relative overflow-hidden rounded-full px-7 py-3.5 text-sm font-semibold text-ink shadow-[0_0_0_1px_rgba(255,255,255,0.1)] transition-transform duration-300 hover:scale-[1.03] active:scale-[0.98]"

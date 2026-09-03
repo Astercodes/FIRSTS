@@ -6,7 +6,7 @@ import { motion, AnimatePresence } from "framer-motion";
 
 const LINKS = [
   { label: "Development Areas", href: "/#areas" },
-  { label: "First Leap", href: "/#first-leap" },
+  { label: "First Leap", href: "/first-leap" },
 ];
 
 const AUDIENCE_LINKS = [

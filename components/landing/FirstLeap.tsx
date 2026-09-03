@@ -61,7 +61,7 @@ export function FirstLeap() {
               actually fits who they are.
             </p>
             <Link
-              href="/onboarding"
+              href="/first-leap#career"
               className="mt-6 inline-flex justify-center rounded-full bg-ink px-6 py-3 text-sm font-semibold text-paper transition-colors hover:bg-ink/85"
             >
               Explore First Leap: Career
@@ -78,7 +78,7 @@ export function FirstLeap() {
               their own.
             </p>
             <Link
-              href="/onboarding"
+              href="/first-leap#business"
               className="mt-6 inline-flex justify-center rounded-full bg-ink px-6 py-3 text-sm font-semibold text-paper transition-colors hover:bg-ink/85"
             >
               Explore First Leap: Business
@@ -97,7 +97,7 @@ export function FirstLeap() {
           way.
         </p>
         <Link
-          href="/onboarding"
+          href="/first-leap"
           className="mt-7 rounded-full bg-ink px-7 py-3.5 text-sm font-semibold text-paper transition-transform duration-300 hover:scale-[1.03] active:scale-[0.98]"
         >
           Join First Leap

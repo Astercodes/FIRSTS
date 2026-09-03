@@ -113,16 +113,6 @@ export function Hero() {
       </div>
 
       <div className="relative z-10 flex max-w-4xl flex-col items-center text-center">
-        <motion.p
-          initial="hidden"
-          animate="show"
-          custom={0}
-          variants={FADE_UP}
-          className="mb-6 text-xs font-semibold uppercase tracking-[0.25em] text-[var(--lime-zest)]"
-        >
-          A personal and professional development platform
-        </motion.p>
-
         <motion.h1
           initial="hidden"
           animate="show"

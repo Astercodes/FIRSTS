@@ -7,23 +7,23 @@ const COLUMNS: { title: string; links: { label: string; href: string }[] }[] = [
       { label: "My FIRSTS", href: "/dashboard/portfolio" },
       { label: "Development Areas", href: "/#areas" },
       { label: "Experiences", href: "/#explore" },
-      { label: "Career Exploration", href: "/#first-leap" },
-      { label: "Business Exploration", href: "/#first-leap" },
-      { label: "First Leap", href: "/#first-leap" },
+      { label: "Career Exploration", href: "/first-leap#career" },
+      { label: "Business Exploration", href: "/first-leap#business" },
+      { label: "First Leap", href: "/first-leap" },
     ],
   },
   {
     title: "Programs",
     links: [
-      { label: "First Leap: Career", href: "/#first-leap" },
-      { label: "First Leap: Business", href: "/#first-leap" },
+      { label: "First Leap: Career", href: "/first-leap#career" },
+      { label: "First Leap: Business", href: "/first-leap#business" },
     ],
   },
   {
     title: "Get Involved",
     links: [
-      { label: "Become a Mentor", href: "/for/facilitators" },
-      { label: "Become a Facilitator", href: "/for/facilitators/apply" },
+      { label: "Become a Mentor", href: "/first-leap#get-involved" },
+      { label: "Become a Facilitator", href: "/first-leap#get-involved" },
       { label: "Partner With Us", href: "/request-demo" },
       { label: "For Schools & Universities", href: "/for/partner-schools" },
       { label: "For Employers", href: "/for/employers" },
@@ -93,11 +93,7 @@ export function Footer() {
           ))}
         </div>
 
-        <div className="flex flex-col items-center justify-between gap-4 pt-8 sm:flex-row">
-          <p className="max-w-md text-center text-xs text-ink/45 sm:text-left">
-            Based on <em>FIRSTS: Career Launch &amp; Foundation</em> by
-            Ayomide Ayeni. A guidance tool, not a licensed counselor.
-          </p>
+        <div className="flex flex-col items-center justify-center gap-4 pt-8 sm:flex-row sm:justify-between">
           <p className="text-xs text-ink/45">
             © {new Date().getFullYear()} FIRSTS ·{" "}
             <Link href="/admin/facilitators" className="text-ink/35 underline decoration-ink/15 underline-offset-2 hover:text-ink/60">
