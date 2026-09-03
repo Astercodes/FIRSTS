@@ -5260,4 +5260,258 @@ export const WORKSHEET_SCHEMAS: Record<number, WorksheetField[]> = {
     { type: "text", key: "strength", label: "Strongest area of business acumen", section: "Strength", seed: "Understanding how my own content work connects to the subscription revenue model and renewal metrics" },
     { type: "text", key: "gap", label: "Most significant remaining gap", section: "Gap", seed: "Still fuzzy on how to read a full P&L beyond the basic revenue-minus-expenses level" },
   ],
+
+  557: [
+    { type: "text", key: "unclear", label: "Expectation or policy", section: "What's unclear", seed: "Whether it's okay to work from home on Fridays like some teammates seem to" },
+    { type: "text", key: "clarification", label: "Who I asked, and what I learned", section: "Clarification", seed: "Asked my manager directly, turns out Friday WFH is fine as long as I'm online for the 10am standup" },
+  ],
+
+  558: [
+    { type: "text", key: "startDay", label: "How I start the day", section: "My routine", seed: "Review my calendar and top three priorities before opening email" },
+    { type: "text", key: "coreBlocks", label: "Core work blocks", seed: "9:30 to 11:30 deep work, meetings clustered in the afternoon" },
+    { type: "text", key: "closeOut", label: "How I close out", seed: "Write tomorrow's top three priorities before logging off" },
+    { type: "text", key: "weekCheck", label: "Did I follow it consistently?", section: "One-week check", seed: "Four out of five days, skipped the close-out once during a launch crunch" },
+  ],
+
+  559: [
+    { type: "textarea", key: "observations", label: "Observations", section: "Observations", rows: 3, seed: "Meetings start exactly on time, camera-on is the norm, and people rarely message after 6pm even though no one said so explicitly" },
+    { type: "text", key: "genuineNorm", label: "Norm I hadn't expected", section: "Genuine norm", seed: "People thank each other by name in Slack threads even for small things, more than I expected" },
+  ],
+
+  560: [
+    { type: "text", key: "observation", label: "What I've observed", section: "Observation", seed: "Casual, most people wear jeans and sneakers, a few dress up only for client calls" },
+    { type: "text", key: "confirmation", label: "Direct clarification, if needed", section: "Confirmation", seed: "Confirmed with my manager, casual is fine except investor meetings" },
+  ],
+
+  561: [
+    { type: "table", key: "weeklyLog", label: "Weekly log", section: "Weekly log", columns: [
+      { key: "day", label: "Day", kind: "text" },
+      { key: "commitment", label: "Commitment", kind: "text" },
+      { key: "onTime", label: "On Time? (Y/N)", kind: "text" },
+    ], seedRows: [
+      { day: "Monday", commitment: "10am standup", onTime: "Y" },
+      { day: "Tuesday", commitment: "1pm client call", onTime: "Y" },
+      { day: "Wednesday", commitment: "10am standup", onTime: "N, 3 min late" },
+      { day: "Thursday", commitment: "3pm 1:1 with manager", onTime: "Y" },
+      { day: "Friday", commitment: "10am standup", onTime: "Y" },
+    ] },
+  ],
+
+  562: [
+    { type: "text", key: "situation", label: "Situation", section: "What happened", seed: "Sent a newsletter draft with an outdated stat that made it to the client review" },
+    { type: "textarea", key: "ownership", label: "How I took ownership", section: "My ownership", rows: 2, seed: "Flagged it to my manager the moment I noticed, explained what happened, and sent a corrected version before it went further" },
+  ],
+
+  563: [
+    { type: "text", key: "problem", label: "Problem", section: "The problem", seed: "Noticed the shared onboarding doc had a broken link nobody had reported" },
+    { type: "text", key: "action", label: "What I did, proactively", section: "My action", seed: "Fixed the link myself and posted a quick note in the team channel" },
+  ],
+
+  564: [
+    { type: "text", key: "opportunity", label: "Opportunity noticed", section: "The opportunity", seed: "Our weekly report took 45 minutes to compile manually every time" },
+    { type: "text", key: "initiative", label: "What I proposed or did", section: "My initiative", seed: "Built a simple template that auto-pulls the numbers, cutting it to 10 minutes" },
+  ],
+
+  565: [
+    { type: "text", key: "difference", label: "Genuine norm difference", section: "The difference", seed: "My internship moved fast with quick verbal approvals, here decisions go through a written sign-off first" },
+    { type: "text", key: "adaptation", label: "How I adjusted", section: "My adaptation", seed: "Started drafting a short written summary before asking for approval, instead of just asking out loud" },
+  ],
+
+  566: [
+    { type: "table", key: "policies", label: "Policies reviewed", section: "Policies reviewed", columns: [
+      { key: "policy", label: "Policy", kind: "text" },
+      { key: "takeaway", label: "Key Takeaway", kind: "text" },
+    ], seedRows: [
+      { policy: "Expense reimbursement", takeaway: "Receipts required for anything over $25, submitted within 30 days" },
+      { policy: "Remote work", takeaway: "Two WFH days per week, must be online for core hours" },
+      { policy: "PTO request", takeaway: "Two weeks notice for anything over 3 days" },
+    ] },
+  ],
+
+  567: [
+    { type: "textarea", key: "whatsConfidential", label: "What's confidential", section: "What's confidential", rows: 2, seed: "Client budget figures, unreleased product roadmap, and anything in the internal Slack #leadership channel" },
+    { type: "text", key: "handling", label: "How this should genuinely be handled", section: "Handling requirements", seed: "Never referenced outside the company, and only shared internally on a need-to-know basis" },
+  ],
+
+  568: [
+    { type: "text", key: "boundary", label: "Boundary I've been avoiding", section: "The boundary", seed: "Being messaged about non-urgent things after 7pm" },
+    { type: "text", key: "result", label: "How I communicated it, and the result", section: "How it went", seed: "Told my manager directly I'd respond to non-urgent messages the next morning, she was completely fine with it" },
+  ],
+
+  569: [
+    { type: "table", key: "demands", label: "The demands", section: "The demands", columns: [
+      { key: "demand", label: "Demand", kind: "text" },
+      { key: "urgency", label: "Urgency", kind: "text" },
+      { key: "importance", label: "Importance", kind: "text" },
+    ], seedRows: [
+      { demand: "Client deck due Friday", urgency: "High", importance: "High" },
+      { demand: "Internal report due Monday", urgency: "Low", importance: "Medium" },
+    ] },
+    { type: "text", key: "confirmedPriority", label: "What my manager confirmed", section: "Confirmed priority", seed: "Confirmed the internal report could slip a day if needed, client deck comes first" },
+  ],
+
+  570: [
+    { type: "textarea", key: "warrants", label: "What warrants escalation", section: "What warrants escalation", rows: 2, seed: "Anything involving client-facing errors, budget overages, or a safety or harassment concern" },
+    { type: "text", key: "process", label: "Appropriate person and process", section: "The process", seed: "Direct manager first, HR directly for anything involving conduct" },
+  ],
+
+  571: [
+    { type: "text", key: "whatHappened", label: "What happened", section: "The mistake", seed: "Sent a client email with the wrong attachment" },
+    { type: "textarea", key: "recovery", label: "How I owned it and focused on the fix", section: "My recovery", rows: 2, seed: "Emailed immediately with the correct file and a brief, non-groveling apology, then double-checked attachments going forward" },
+  ],
+
+  572: [
+    { type: "text", key: "missed", label: "Missed responsibility", section: "The conversation", seed: "A teammate had missed two consecutive deadlines on a shared deliverable" },
+    { type: "text", key: "result", label: "How the conversation went", section: "Result", seed: "Addressed it directly and calmly, he admitted he was overloaded and we worked out a rebalanced plan together" },
+  ],
+
+  573: [
+    { type: "textarea", key: "examples", label: "My examples", section: "My examples", rows: 2, seed: "The report template I built that saved the team time, and the client project I owned end to end" },
+    { type: "textarea", key: "questions", label: "My questions", section: "My questions", rows: 2, seed: "What would it take for me to take on more client-facing work, and where do I have the biggest growth opportunity" },
+  ],
+
+  574: [
+    { type: "text", key: "weakness", label: "Specific weakness", section: "The weakness", seed: "Written reports sometimes bury the key takeaway too far down" },
+    { type: "table", key: "milestones", label: "Milestones", section: "Milestones", columns: [
+      { key: "milestone", label: "Milestone", kind: "text" },
+      { key: "targetDate", label: "Target Date", kind: "text" },
+    ], seedRows: [
+      { milestone: "Lead with a one-line summary on every report", targetDate: "Starting next report" },
+      { milestone: "Get peer review on structure before sending three reports", targetDate: "End of month" },
+    ] },
+  ],
+
+  575: [
+    { type: "text", key: "question", label: "Specific question asked", section: "My question", seed: "What's one thing I could have done better on the client presentation?" },
+    { type: "text", key: "learned", label: "What I learned", section: "Their answer", seed: "The data was strong but I should have led with the recommendation instead of the analysis" },
+  ],
+
+  576: [
+    { type: "text", key: "recognition", label: "Recognition received", section: "The recognition", seed: "The client specifically praised the clarity of my budget summary in a follow-up email" },
+    { type: "text", key: "ledToIt", label: "Specifically what I did", section: "What led to it", seed: "Led with the bottom-line number before any supporting detail, instead of building up to it" },
+  ],
+
+  577: [
+    { type: "text", key: "reported", label: "Problem reported", section: "The problem", seed: "Flagged a recurring data sync error two weeks ago, no one had picked it up since" },
+    { type: "text", key: "resolution", label: "How I saw it through", section: "Resolution", seed: "Investigated the root cause myself, found a broken integration setting, and fixed it directly" },
+  ],
+
+  578: [
+    { type: "text", key: "description", label: "What they said", section: "Their description", seed: "Reliable and clear, but a colleague mentioned I sometimes take too long to respond on non-urgent Slack threads" },
+    { type: "text", key: "comparison", label: "How this compares to my own self-perception", section: "Comparison", seed: "I thought I was pretty responsive, this was a genuine gap I hadn't noticed" },
+  ],
+
+  579: [
+    { type: "textarea", key: "observations", label: "Observations", section: "Observations", rows: 2, seed: "Decisions on client work move fast and informally, but budget decisions go through a much slower, formal approval chain" },
+    { type: "text", key: "comparison", label: "Comparison to stated values", section: "Gap or alignment", seed: "The stated value is \"move fast,\" which genuinely holds for client work but not for anything touching budget" },
+  ],
+
+  580: [
+    { type: "text", key: "strength", label: "Strongest area", section: "Strength", seed: "Punctuality and following through on commitments" },
+    { type: "text", key: "gap", label: "Most significant remaining gap", section: "Gap", seed: "Still hesitant to escalate things quickly enough when genuinely stuck" },
+  ],
+
+  581: [
+    { type: "textarea", key: "standards", label: "My standards", section: "My standards", rows: 3, seed: "I respond to messages within a business day even when busy, I flag problems the moment I notice them rather than hoping they resolve themselves, and I own my mistakes directly instead of waiting to be asked." },
+  ],
+
+  582: [
+    { type: "textarea", key: "principles", label: "Underlying principles", section: "Underlying principles", rows: 3, seed: "Honesty in how we represent our work to clients, fairness in how credit and workload are distributed, and respect for confidentiality even in casual conversation" },
+  ],
+
+  583: [
+    { type: "text", key: "situation", label: "Situation", section: "The difficulty", seed: "Noticed a small billing discrepancy that would have benefited our team financially if left unflagged" },
+    { type: "text", key: "choice", label: "What I chose, and why", section: "My choice", seed: "Flagged it directly, even though it meant extra work to correct, because staying quiet would have been dishonest" },
+  ],
+
+  584: [
+    { type: "textarea", key: "disclosure", label: "What would require disclosure", section: "What would require disclosure", rows: 2, seed: "Evaluating any vendor where I have a personal connection, or recommending a tool built by a friend or family member" },
+  ],
+
+  585: [
+    { type: "text", key: "information", label: "What I'm entrusted with", section: "The information", seed: "A colleague's personal health situation, shared with me in confidence" },
+    { type: "text", key: "care", label: "How I'm genuinely protecting it", section: "My care", seed: "Haven't mentioned it to anyone, including when it would have been an easy, harmless-seeming explanation for her schedule changes" },
+  ],
+
+  586: [
+    { type: "text", key: "practice", label: "Data practice", section: "The practice", seed: "Using anonymized user behavior data to improve the app's onboarding flow" },
+    { type: "text", key: "ethical", label: "Beyond technical legality, is this genuinely ethical?", section: "Ethical consideration", seed: "Yes, it's aggregated and anonymized, and it's being used for the exact purpose users would reasonably expect" },
+  ],
+
+  587: [
+    { type: "text", key: "decision", label: "Technology decision", section: "The decision", seed: "Proposing an automated response system for common support tickets" },
+    { type: "textarea", key: "consequences", label: "What I considered beyond immediate function", section: "Broader consequences", rows: 2, seed: "Whether it would remove the human touch users specifically valued in genuinely stressful financial situations, decided to keep a human option always visible" },
+  ],
+
+  588: [
+    { type: "textarea", key: "understanding", label: "My understanding", section: "My understanding", rows: 2, seed: "Work I create during my role belongs to the company, but I can list it generically on my resume without sharing proprietary specifics" },
+  ],
+
+  589: [
+    { type: "text", key: "work", label: "Work / project", section: "The work", seed: "A market comparison slide that built on a framework a colleague had developed previously" },
+    { type: "text", key: "attribution", label: "Who or what I explicitly credited", section: "Attribution given", seed: "Named the colleague directly in the slide notes and thanked her when presenting it" },
+  ],
+
+  590: [
+    { type: "text", key: "truth", label: "Uncomfortable truth", section: "The truth", seed: "The project timeline I'd agreed to genuinely wasn't achievable given a scope change" },
+    { type: "text", key: "communicated", label: "How the conversation went", section: "How I communicated it", seed: "Told my manager proactively, two weeks before the deadline, with a proposed revised timeline attached" },
+  ],
+
+  591: [
+    { type: "text", key: "situation", label: "Situation", section: "The dilemma", seed: "A teammate asked me to cover for a missed deadline rather than mention it in the team update" },
+    { type: "textarea", key: "values", label: "Competing values", section: "Competing values", rows: 2, seed: "Loyalty to a struggling teammate versus honesty with the team about real project status" },
+    { type: "text", key: "conclusion", label: "Reasoned conclusion", section: "My conclusion", seed: "Was honest in the update but also explained his workload context and offered to help rebalance it" },
+  ],
+
+  592: [
+    { type: "table", key: "rules", label: "Relevant rules", section: "Relevant rules", columns: [
+      { key: "rule", label: "Rule / Regulation", kind: "text" },
+      { key: "consequence", label: "Consequence of Non-Compliance", kind: "text" },
+    ], seedRows: [
+      { rule: "Financial advertising claim regulations", consequence: "Regulatory fines and required public correction" },
+      { rule: "Data retention policy", consequence: "Compliance audit failure" },
+    ] },
+  ],
+
+  593: [
+    { type: "text", key: "practice", label: "Specific ethical practice (verification, disclosure, etc.)", section: "My practice", seed: "Always verifying AI-drafted statistics against the original source before including them anywhere client-facing" },
+    { type: "text", key: "example", label: "A real instance I applied it", section: "Example", seed: "Caught an AI-generated summary that misstated a growth percentage, corrected it before sending" },
+  ],
+
+  594: [
+    { type: "text", key: "handled", label: "Personal information I handle", section: "Information handled", seed: "Customer email addresses, spending categories, and occasionally income ranges from support tickets" },
+    { type: "text", key: "responsibilities", label: "My genuine privacy responsibilities for it", section: "Responsibilities", seed: "Never export it outside approved tools, and never discuss specific customer details even anonymized in casual conversation" },
+  ],
+
+  595: [
+    { type: "text", key: "situation", label: "Situation", section: "The pressure", seed: "Deadline pressure to skip a data verification step before a client report went out" },
+    { type: "text", key: "response", label: "Did I maintain my genuine ethical standard?", section: "My response", seed: "Yes, told my manager the report would be a day late rather than send unverified numbers" },
+  ],
+
+  596: [
+    { type: "textarea", key: "principles", label: "My ethical leadership principles", section: "My ethical leadership principles", rows: 2, seed: "I will never ask someone to do something I wouldn't do myself, and I will protect my team's honesty even when it's inconvenient for me." },
+  ],
+
+  597: [
+    { type: "text", key: "standard", label: "Standard I stated earlier", section: "My standard", seed: "I respond to messages within a business day even when busy" },
+    { type: "text", key: "gap", label: "Genuine gap identified, if any", section: "Honest comparison", seed: "Let this slip during a particularly busy sprint last month, a real gap worth watching" },
+  ],
+
+  598: [
+    { type: "textarea", key: "channels", label: "Speak-up channels", section: "Speak-up channels", rows: 2, seed: "Direct manager, HR, or the anonymous ethics hotline listed in the employee handbook" },
+    { type: "text", key: "protections", label: "Real protections in place", section: "Protections", seed: "Explicit non-retaliation policy covering anyone who raises a concern in good faith" },
+  ],
+
+  599: [
+    { type: "textarea", key: "framework", label: "Questions or steps I'll apply", section: "My framework", rows: 3, seed: "1. Who is genuinely affected by this? 2. Would I be comfortable if this became public? 3. Does this align with my stated professional standards?" },
+  ],
+
+  600: [
+    { type: "textarea", key: "commitments", label: "My commitments", section: "My commitments", rows: 3, seed: "I will disclose conflicts of interest even when inconvenient, and I will verify before I trust, especially with AI-generated content." },
+  ],
+
+  601: [
+    { type: "text", key: "strength", label: "Genuine strongest area of integrity", section: "Strength", seed: "Owning mistakes directly and communicating uncomfortable truths proactively" },
+    { type: "text", key: "gap", label: "Most significant remaining gap", section: "Gap", seed: "Being honest with myself about capacity limits instead of quietly absorbing extra work" },
+  ],
 };

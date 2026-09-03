@@ -1,12 +1,12 @@
 export type ModuleStatus = "complete" | "in-progress" | "available" | "locked";
-export type StageId = "one" | "two" | "three" | "four" | "five" | "six" | "seven" | "eight" | "nine" | "ten" | "eleven" | "twelve" | "thirteen" | "fourteen" | "fifteen";
+export type StageId = "one" | "two" | "three" | "four" | "five" | "six" | "seven" | "eight" | "nine" | "ten" | "eleven" | "twelve" | "thirteen" | "fourteen" | "fifteen" | "sixteen";
 
 export type FirstModule = {
   id: number;
   code: string;
   stage: StageId;
   title: string;
-  category: "A" | "B" | "C" | "D" | "E" | "F" | "G" | "H" | "I" | "J" | "K" | "L" | "M" | "N" | "O" | "P" | "Q" | "R" | "S" | "T" | "U" | "V" | "W" | "X" | "Y" | "Z" | "AA" | "BB" | "CC" | "DD" | "EE" | "FF" | "GG" | "HH" | "II" | "JJ" | "KK" | "LL" | "MM" | "NN" | "OO" | "PP" | "QQ" | "RR" | "SS" | "TT" | "UU" | "VV" | "WW" | "XX" | "AAA" | "BBB" | "CCC" | "DDD" | "EEE" | "FFF" | "GGG" | "HHH" | "III";
+  category: "A" | "B" | "C" | "D" | "E" | "F" | "G" | "H" | "I" | "J" | "K" | "L" | "M" | "N" | "O" | "P" | "Q" | "R" | "S" | "T" | "U" | "V" | "W" | "X" | "Y" | "Z" | "AA" | "BB" | "CC" | "DD" | "EE" | "FF" | "GG" | "HH" | "II" | "JJ" | "KK" | "LL" | "MM" | "NN" | "OO" | "PP" | "QQ" | "RR" | "SS" | "TT" | "UU" | "VV" | "WW" | "XX" | "AAA" | "BBB" | "CCC" | "DDD" | "EEE" | "FFF" | "GGG" | "HHH" | "III" | "JJJ" | "KKK" | "LLL" | "MMM" | "NNN";
   time: string;
   difficulty: "Easy" | "Moderate" | "Deep";
   status: ModuleStatus;
@@ -78,6 +78,11 @@ export const CATEGORY_META = {
   GGG: { label: "Understanding How Organizations Work", color: "var(--pink-grapefruit)" },
   HHH: { label: "Analyzing the Business", color: "var(--lime-zest)" },
   III: { label: "Strategic & Reflective Business Thinking", color: "var(--juicy-plum)" },
+  JJJ: { label: "Workplace Fundamentals", color: "var(--neon-pink)" },
+  KKK: { label: "Navigating Workplace Situations", color: "var(--sunshine-orange)" },
+  LLL: { label: "Performance & Professional Identity", color: "var(--citrus-lime)" },
+  MMM: { label: "Ethical Foundations & Responsibilities", color: "var(--fuchsia-blast)" },
+  NNN: { label: "Applied Ethics & Integrity Reflection", color: "var(--berry-burst)" },
 } as const;
 
 export const STAGES: { id: StageId; label: string; shortLabel: string; href: string }[] = [
@@ -96,6 +101,7 @@ export const STAGES: { id: StageId; label: string; shortLabel: string; href: str
   { id: "thirteen", label: "Stage Thirteen · Teamwork & Collaboration", shortLabel: "Stage Thirteen", href: "/dashboard/stage/thirteen" },
   { id: "fourteen", label: "Stage Fourteen · Project Management", shortLabel: "Stage Fourteen", href: "/dashboard/stage/fourteen" },
   { id: "fifteen", label: "Stage Fifteen · Business & Organizational Acumen", shortLabel: "Stage Fifteen", href: "/dashboard/stage/fifteen" },
+  { id: "sixteen", label: "Stage Sixteen · Workplace Professionalism & Ethics", shortLabel: "Stage Sixteen", href: "/dashboard/stage/sixteen" },
 ];
 
 const STAGE_ONE_FIRSTS: FirstModule[] = [
@@ -699,7 +705,55 @@ const STAGE_FIFTEEN_FIRSTS: FirstModule[] = [
   { id: 556, code: "S25", stage: "fifteen", title: "Business Acumen Reflection", category: "III", time: "45 min to 1 hr", difficulty: "Moderate", status: "complete", thoroughness: 2, completedAt: "2026-05-07" },
 ];
 
-export const FIRSTS: FirstModule[] = [...STAGE_ONE_FIRSTS, ...STAGE_TWO_FIRSTS, ...STAGE_THREE_FIRSTS, ...STAGE_FOUR_FIRSTS, ...STAGE_FIVE_FIRSTS, ...STAGE_SIX_FIRSTS, ...STAGE_SEVEN_FIRSTS, ...STAGE_EIGHT_FIRSTS, ...STAGE_NINE_FIRSTS, ...STAGE_TEN_FIRSTS, ...STAGE_ELEVEN_FIRSTS, ...STAGE_TWELVE_FIRSTS, ...STAGE_THIRTEEN_FIRSTS, ...STAGE_FOURTEEN_FIRSTS, ...STAGE_FIFTEEN_FIRSTS];
+const STAGE_SIXTEEN_FIRSTS: FirstModule[] = [
+  { id: 557, code: "T1", stage: "sixteen", title: "Workplace Orientation", category: "JJJ", time: "Several hrs", difficulty: "Easy", status: "complete", thoroughness: 2, completedAt: "2026-01-05" },
+  { id: 558, code: "T2", stage: "sixteen", title: "Professional Workplace Routine", category: "JJJ", time: "Ongoing", difficulty: "Easy", status: "locked" },
+  { id: 559, code: "T3", stage: "sixteen", title: "Workplace Etiquette Awareness", category: "JJJ", time: "Ongoing", difficulty: "Easy", status: "complete", thoroughness: 1, completedAt: "2026-01-08" },
+  { id: 560, code: "T4", stage: "sixteen", title: "Professional Appearance Standard", category: "JJJ", time: "A few days", difficulty: "Easy", status: "locked" },
+  { id: 561, code: "T5", stage: "sixteen", title: "Workplace Punctuality Habit", category: "JJJ", time: "Ongoing", difficulty: "Easy", status: "complete", thoroughness: 3, completedAt: "2026-01-11" },
+  { id: 562, code: "T6", stage: "sixteen", title: "Workplace Accountability Practice", category: "JJJ", time: "Situational", difficulty: "Moderate", status: "locked" },
+  { id: 563, code: "T7", stage: "sixteen", title: "Workplace Ownership Experience", category: "JJJ", time: "Situational", difficulty: "Moderate", status: "complete", thoroughness: 2, completedAt: "2026-01-14" },
+  { id: 564, code: "T8", stage: "sixteen", title: "Workplace Initiative", category: "JJJ", time: "Situational", difficulty: "Moderate", status: "locked" },
+  { id: 565, code: "T9", stage: "sixteen", title: "Workplace Adaptation", category: "JJJ", time: "Sustained", difficulty: "Moderate", status: "complete", thoroughness: 1, completedAt: "2026-01-17" },
+  { id: 566, code: "T10", stage: "sixteen", title: "Workplace Policy Review", category: "KKK", time: "1 to 2 hrs", difficulty: "Easy", status: "locked" },
+  { id: 567, code: "T11", stage: "sixteen", title: "Confidentiality Awareness", category: "KKK", time: "30 to 45 min", difficulty: "Easy", status: "complete", thoroughness: 3, completedAt: "2026-01-20" },
+  { id: 568, code: "T12", stage: "sixteen", title: "Professional Boundary", category: "KKK", time: "Situational", difficulty: "Moderate", status: "locked" },
+  { id: 569, code: "T13", stage: "sixteen", title: "Workplace Prioritization Exercise", category: "KKK", time: "Situational", difficulty: "Moderate", status: "complete", thoroughness: 2, completedAt: "2026-01-23" },
+  { id: 570, code: "T14", stage: "sixteen", title: "Workplace Escalation", category: "KKK", time: "Situational", difficulty: "Moderate", status: "locked" },
+  { id: 571, code: "T15", stage: "sixteen", title: "Workplace Mistake Recovery", category: "KKK", time: "Situational", difficulty: "Moderate", status: "complete", thoroughness: 1, completedAt: "2026-01-26" },
+  { id: 572, code: "T16", stage: "sixteen", title: "Workplace Accountability Conversation", category: "KKK", time: "Situational", difficulty: "Deep", status: "locked" },
+  { id: 573, code: "T17", stage: "sixteen", title: "Performance Review", category: "LLL", time: "Varies", difficulty: "Moderate", status: "complete", thoroughness: 3, completedAt: "2026-01-29" },
+  { id: 574, code: "T18", stage: "sixteen", title: "Performance Improvement Plan", category: "LLL", time: "1 hr", difficulty: "Moderate", status: "locked" },
+  { id: 575, code: "T19", stage: "sixteen", title: "Workplace Feedback Request", category: "LLL", time: "Ongoing", difficulty: "Easy", status: "complete", thoroughness: 2, completedAt: "2026-02-01" },
+  { id: 576, code: "T20", stage: "sixteen", title: "Workplace Recognition", category: "LLL", time: "Situational", difficulty: "Easy", status: "locked" },
+  { id: 577, code: "T21", stage: "sixteen", title: "Workplace Problem Ownership", category: "LLL", time: "Situational", difficulty: "Deep", status: "complete", thoroughness: 1, completedAt: "2026-02-04" },
+  { id: 578, code: "T22", stage: "sixteen", title: "Professional Reputation Audit", category: "LLL", time: "30 to 45 min", difficulty: "Moderate", status: "locked" },
+  { id: 579, code: "T23", stage: "sixteen", title: "Workplace Culture Analysis", category: "LLL", time: "Sustained", difficulty: "Deep", status: "complete", thoroughness: 3, completedAt: "2026-02-07" },
+  { id: 580, code: "T24", stage: "sixteen", title: "Workplace Readiness Assessment", category: "LLL", time: "30 to 45 min", difficulty: "Moderate", status: "locked" },
+  { id: 581, code: "T25", stage: "sixteen", title: "Professional Standard Statement", category: "LLL", time: "45 min", difficulty: "Moderate", status: "complete", thoroughness: 2, completedAt: "2026-02-10" },
+  { id: 582, code: "T26", stage: "sixteen", title: "Professional Ethics Awareness", category: "MMM", time: "30 to 45 min", difficulty: "Easy", status: "locked" },
+  { id: 583, code: "T27", stage: "sixteen", title: "Integrity Decision", category: "MMM", time: "Situational", difficulty: "Deep", status: "complete", thoroughness: 1, completedAt: "2026-02-13" },
+  { id: 584, code: "T28", stage: "sixteen", title: "Conflict of Interest Awareness", category: "MMM", time: "30 min", difficulty: "Easy", status: "locked" },
+  { id: 585, code: "T29", stage: "sixteen", title: "Confidential Information Responsibility", category: "MMM", time: "Ongoing", difficulty: "Easy", status: "complete", thoroughness: 3, completedAt: "2026-02-16" },
+  { id: 586, code: "T30", stage: "sixteen", title: "Data Ethics Awareness", category: "MMM", time: "Situational", difficulty: "Moderate", status: "locked" },
+  { id: 587, code: "T31", stage: "sixteen", title: "Technology Ethics Awareness", category: "MMM", time: "Situational", difficulty: "Moderate", status: "complete", thoroughness: 2, completedAt: "2026-02-19" },
+  { id: 588, code: "T32", stage: "sixteen", title: "Intellectual Property Awareness", category: "MMM", time: "30 min", difficulty: "Easy", status: "locked" },
+  { id: 589, code: "T33", stage: "sixteen", title: "Citation & Attribution Practice", category: "MMM", time: "Ongoing", difficulty: "Easy", status: "complete", thoroughness: 1, completedAt: "2026-02-22" },
+  { id: 590, code: "T34", stage: "sixteen", title: "Professional Honesty Challenge", category: "MMM", time: "Situational", difficulty: "Deep", status: "locked" },
+  { id: 591, code: "T35", stage: "sixteen", title: "Ethical Dilemma Analysis", category: "MMM", time: "Situational", difficulty: "Deep", status: "complete", thoroughness: 3, completedAt: "2026-02-25" },
+  { id: 592, code: "T36", stage: "sixteen", title: "Compliance Awareness", category: "NNN", time: "30 to 45 min", difficulty: "Easy", status: "locked" },
+  { id: 593, code: "T37", stage: "sixteen", title: "Responsible AI Awareness", category: "NNN", time: "Ongoing", difficulty: "Moderate", status: "complete", thoroughness: 2, completedAt: "2026-02-28" },
+  { id: 594, code: "T38", stage: "sixteen", title: "Privacy Awareness", category: "NNN", time: "30 min", difficulty: "Easy", status: "locked" },
+  { id: 595, code: "T39", stage: "sixteen", title: "Accountability Under Pressure", category: "NNN", time: "Situational", difficulty: "Deep", status: "complete", thoroughness: 1, completedAt: "2026-03-03" },
+  { id: 596, code: "T40", stage: "sixteen", title: "Ethical Leadership Reflection", category: "NNN", time: "30 to 45 min", difficulty: "Moderate", status: "locked" },
+  { id: 597, code: "T41", stage: "sixteen", title: "Professional Integrity Reflection", category: "NNN", time: "30 to 45 min", difficulty: "Moderate", status: "complete", thoroughness: 3, completedAt: "2026-03-06" },
+  { id: 598, code: "T42", stage: "sixteen", title: "Speak-Up Awareness", category: "NNN", time: "30 min", difficulty: "Easy", status: "locked" },
+  { id: 599, code: "T43", stage: "sixteen", title: "Ethical Decision Framework", category: "NNN", time: "45 min", difficulty: "Moderate", status: "complete", thoroughness: 2, completedAt: "2026-03-09" },
+  { id: 600, code: "T44", stage: "sixteen", title: "Professional Responsibility Statement", category: "NNN", time: "30 to 45 min", difficulty: "Moderate", status: "locked" },
+  { id: 601, code: "T45", stage: "sixteen", title: "Integrity Audit", category: "NNN", time: "1 hr", difficulty: "Deep", status: "complete", thoroughness: 1, completedAt: "2026-03-12" },
+];
+
+export const FIRSTS: FirstModule[] = [...STAGE_ONE_FIRSTS, ...STAGE_TWO_FIRSTS, ...STAGE_THREE_FIRSTS, ...STAGE_FOUR_FIRSTS, ...STAGE_FIVE_FIRSTS, ...STAGE_SIX_FIRSTS, ...STAGE_SEVEN_FIRSTS, ...STAGE_EIGHT_FIRSTS, ...STAGE_NINE_FIRSTS, ...STAGE_TEN_FIRSTS, ...STAGE_ELEVEN_FIRSTS, ...STAGE_TWELVE_FIRSTS, ...STAGE_THIRTEEN_FIRSTS, ...STAGE_FOURTEEN_FIRSTS, ...STAGE_FIFTEEN_FIRSTS, ...STAGE_SIXTEEN_FIRSTS];
 
 export const MOCK_USER = {
   firstName: "Ada",

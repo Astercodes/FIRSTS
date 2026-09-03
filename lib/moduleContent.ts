@@ -569,6 +569,51 @@ export const COACH_MODE: Record<number, CoachMode> = {
   554: "hybrid",
   555: "research",
   556: "synthesis",
+  557: "hybrid",
+  558: "hybrid",
+  559: "research",
+  560: "research",
+  561: "hybrid",
+  562: "reflective",
+  563: "hybrid",
+  564: "hybrid",
+  565: "reflective",
+  566: "research",
+  567: "research",
+  568: "hybrid",
+  569: "hybrid",
+  570: "hybrid",
+  571: "reflective",
+  572: "hybrid",
+  573: "hybrid",
+  574: "hybrid",
+  575: "hybrid",
+  576: "reflective",
+  577: "hybrid",
+  578: "reflective",
+  579: "research",
+  580: "reflective",
+  581: "synthesis",
+  582: "research",
+  583: "reflective",
+  584: "research",
+  585: "reflective",
+  586: "reflective",
+  587: "reflective",
+  588: "research",
+  589: "hybrid",
+  590: "reflective",
+  591: "hybrid",
+  592: "research",
+  593: "reflective",
+  594: "research",
+  595: "reflective",
+  596: "synthesis",
+  597: "reflective",
+  598: "research",
+  599: "synthesis",
+  600: "synthesis",
+  601: "synthesis",
 };
 
 export const LEARN_CONTENT: Record<number, LearnContent> = {
@@ -15626,6 +15671,1176 @@ export const LEARN_CONTENT: Record<number, LearnContent> = {
     ],
     successSignal:
       "You can name specific, genuine areas of business acumen strength and specific remaining gaps, backed by real practice across this stage.",
+    milestoneTies: [],
+  },
+
+  557: {
+    definition:
+      "A First Workplace Orientation is a working understanding of expectations, policies, culture, and responsibilities in a professional environment, the genuine baseline knowledge every new role requires.",
+    whyItMatters:
+      "Entering a new role without genuinely understanding its expectations and culture leads to avoidable missteps that a deliberate orientation period would have prevented.",
+    whenWhoWhere: [
+      { label: "When", body: "Complete this during your first days or weeks in any new role." },
+      { label: "Who", body: "A manager, HR contact, or onboarding buddy." },
+      { label: "Where", body: "Built through onboarding materials, direct conversations, and observation." },
+    ],
+    howItWorks: [
+      "Actively seek out and confirm your understanding of expectations, policies, and cultural norms, rather than passively waiting for them to become apparent over time.",
+    ],
+    tools: ["Your organization's onboarding materials and employee handbook, if available."],
+    scenario: {
+      title: "A policy a direct question would have caught",
+      body: "A new hire who assumed workplace norms would become obvious over time missed an important policy about expense reporting for her first month, an issue a direct question during orientation would have easily prevented.",
+    },
+    pitfalls: [
+      "Assuming workplace norms will become obvious over time, rather than actively seeking clarity during the genuine orientation window when questions are most expected.",
+    ],
+    successSignal:
+      "You can articulate your role's key expectations, relevant policies, and cultural norms within your first few weeks.",
+    milestoneTies: [],
+  },
+
+  558: {
+    definition:
+      "A First Professional Workplace Routine establishes a reliable daily work routine, extending the personal productivity habits from Stage Four into a specifically professional, workplace context.",
+    whyItMatters:
+      "A reliable daily routine reduces decision fatigue and builds a genuine reputation for consistency, both of which matter significantly in a professional setting.",
+    whenWhoWhere: [
+      { label: "When", body: "Establish this within your first weeks in a new role, once you understand its basic rhythms." },
+      { label: "Who", body: "No collaborator required." },
+      { label: "Where", body: "Applied to your own daily professional routine." },
+    ],
+    howItWorks: [
+      "Establish a consistent routine for starting your day, managing your core work blocks, and closing out, adapted to your specific role's actual demands.",
+    ],
+    tools: ["Your Productivity Tool Mastery and Time Management habits from Stages Four and Eleven."],
+    scenario: {
+      title: "Trading reactive email-first mornings for a planning review",
+      body: "A new hire who started each day reactively, checking email first and letting it dictate her priorities, switched to a routine starting with a brief planning review, which noticeably improved her sense of control over her actual workday.",
+    },
+    pitfalls: [
+      "Letting your workday be dictated entirely by whatever arrives first (emails, messages) rather than a deliberate routine you control.",
+    ],
+    successSignal:
+      "You have a consistent daily routine that you follow most days, adapted specifically to your role's real demands.",
+    milestoneTies: [],
+  },
+
+  559: {
+    definition:
+      "A First Workplace Etiquette Awareness is a working understanding of appropriate professional behavior, the genuine social norms that govern how people are expected to interact in a professional setting.",
+    whyItMatters:
+      "Workplace etiquette, while sometimes unwritten, genuinely shapes how colleagues perceive your professionalism, and violating it unknowingly can create real friction.",
+    whenWhoWhere: [
+      { label: "When", body: "Build this awareness early in any new role, observing genuine norms before assuming your own defaults apply." },
+      { label: "Who", body: "Colleagues whose professional conduct you can observe." },
+      { label: "Where", body: "Built through observation of real workplace interactions." },
+    ],
+    howItWorks: [
+      "Observe genuine norms around communication style, meeting behavior, and interpersonal conduct, and adjust your own behavior to fit rather than assuming your prior context's norms transfer directly.",
+    ],
+    tools: ["No special tool; deliberate observation."],
+    scenario: {
+      title: "Adjusting after noticing a more measured email tone",
+      body: "A student who was used to a very casual communication style at her internship had to consciously adjust to a more formal norm at her next role, after noticing colleagues' more measured email tone in her first week.",
+    },
+    pitfalls: [
+      "Assuming the etiquette norms from a prior role or context automatically transfer to a new one, without genuinely observing what's actually expected here.",
+    ],
+    successSignal:
+      "You can identify at least one genuine etiquette norm specific to your current workplace that differs from a prior context.",
+    milestoneTies: [],
+  },
+
+  560: {
+    definition:
+      "A First Professional Appearance Standard establishes an appropriate standard of workplace presentation, understanding your specific workplace's genuine norms rather than assuming a universal standard applies.",
+    whyItMatters:
+      "Professional appearance norms vary significantly across industries and organizations, and genuinely understanding your specific context avoids both under- and over-dressing relative to actual expectations.",
+    whenWhoWhere: [
+      { label: "When", body: "Establish this before or during your first days in a new role." },
+      { label: "Who", body: "A manager or colleague who can clarify genuine expectations." },
+      { label: "Where", body: "Built through observation and, if needed, a direct question." },
+    ],
+    howItWorks: [
+      "Observe your workplace's actual norms, and ask directly if genuinely unclear, rather than assuming a generic standard.",
+    ],
+    tools: ["No special tool; observation and direct clarification."],
+    scenario: {
+      title: "Casual, not formal, once she actually looked",
+      body: "A student assumed her new tech company would have a formal dress code like her prior internship, until observing her first week revealed a genuinely casual norm, prompting her to adjust rather than remain overdressed relative to actual expectations.",
+    },
+    pitfalls: [
+      "Assuming a generic professional standard applies universally, without confirming your specific workplace's actual norms.",
+    ],
+    successSignal:
+      "Your presentation genuinely matches your specific workplace's actual norms, confirmed through observation or direct clarification.",
+    milestoneTies: [],
+  },
+
+  561: {
+    definition:
+      "A First Workplace Punctuality Habit consistently arrives prepared and on time, a genuinely foundational professional habit that disproportionately shapes early impressions of reliability.",
+    whyItMatters:
+      "Punctuality, though seemingly simple, is one of the most visible and consistently judged professional habits, and genuine consistency here builds trust that compounds over time.",
+    whenWhoWhere: [
+      { label: "When", body: "Establish this from your very first day in any role." },
+      { label: "Who", body: "No collaborator required." },
+      { label: "Where", body: "Applied to every meeting, deadline, and workday start." },
+    ],
+    howItWorks: [
+      "Build in genuine buffer time for commute or preparation, and treat being on time as a non-negotiable professional standard, not a flexible target.",
+    ],
+    tools: ["Your Calendar Management System from Stage Eleven."],
+    scenario: {
+      title: "A pattern that changed once she heard the real impact",
+      body: "A new hire who was chronically five minutes late to meetings in her first month, treating it as a minor issue, noticed her manager's feedback made clear it was affecting genuine perceptions of her reliability, prompting a real change in her own habits.",
+    },
+    pitfalls: [
+      "Treating minor lateness as inconsequential, without recognizing how genuinely it shapes early professional reputation.",
+    ],
+    successSignal:
+      "You consistently arrive on time and prepared, across meetings and deadlines, for at least several consecutive weeks.",
+    milestoneTies: [],
+  },
+
+  562: {
+    definition:
+      "A First Workplace Accountability Practice takes ownership of responsibilities and outcomes, extending the Leadership Responsibility FIRST from Stage Twelve into a genuine, foundational individual contributor context.",
+    whyItMatters:
+      "Genuine ownership, distinct from simply completing assigned tasks, is what builds real trust with managers and colleagues that you can be relied upon.",
+    whenWhoWhere: [
+      { label: "When", body: "Practice this from your first real responsibilities in any role." },
+      { label: "Who", body: "Your manager and colleagues affected by your work." },
+      { label: "Where", body: "Applied to any real responsibility or task." },
+    ],
+    howItWorks: [
+      "Take genuine ownership of outcomes, not just task completion, following through even when something doesn't go as planned rather than deflecting responsibility.",
+    ],
+    tools: ["The Leadership Responsibility structure from Stage Twelve."],
+    scenario: {
+      title: "Flagging the error before being asked",
+      body: "A new hire whose deliverable had a genuine error didn't wait to be asked, she proactively flagged it, explained what happened, and proposed a fix, which her manager specifically noted built more trust than if the mistake had never happened at all.",
+    },
+    pitfalls: [
+      "Completing assigned tasks without genuinely taking ownership of their actual outcomes, especially when something goes wrong.",
+    ],
+    successSignal:
+      "You can point to a specific instance where you took genuine ownership of an outcome, including proactively addressing a real problem.",
+    milestoneTies: [],
+  },
+
+  563: {
+    definition:
+      "A First Workplace Ownership Experience solves a problem without waiting to be instructed, extending Workplace Accountability Practice into genuinely proactive problem-solving.",
+    whyItMatters:
+      "Waiting to be told exactly what to do for every problem limits your genuine value; proactively solving problems within your own judgment builds real trust and capability.",
+    whenWhoWhere: [
+      { label: "When", body: "Practice this whenever a genuine problem arises that's within your reasonable judgment to address." },
+      { label: "Who", body: "No collaborator required, though checking in with a manager on genuinely ambiguous calls is wise." },
+      { label: "Where", body: "Applied to any real problem within your scope." },
+    ],
+    howItWorks: [
+      "When you notice a genuine problem within your reasonable judgment, take action to solve it rather than waiting for explicit instruction.",
+    ],
+    tools: ["No special tool; genuine judgment about what's within your reasonable scope to act on."],
+    scenario: {
+      title: "Fixing the template instead of waiting to be assigned it",
+      body: "A new hire who noticed a recurring small formatting error in a shared template didn't wait for someone to assign her the fix, she just fixed it and let the team know, which her manager specifically praised as exactly the kind of initiative that builds trust.",
+    },
+    pitfalls: [
+      "Waiting for explicit instruction on problems genuinely within your reasonable judgment to just solve directly.",
+    ],
+    successSignal:
+      "You can point to a specific problem you solved proactively, without waiting for explicit instruction.",
+    milestoneTies: [],
+  },
+
+  564: {
+    definition:
+      "A First Workplace Initiative proactively identifies and acts on an opportunity to improve something, extending Workplace Ownership Experience from solving existing problems into genuinely identifying new opportunities.",
+    whyItMatters:
+      "Initiative that identifies genuine opportunities, not just fixes existing problems, is what distinguishes truly proactive contributors from merely reliable ones.",
+    whenWhoWhere: [
+      { label: "When", body: "Practice this whenever you notice a genuine opportunity for improvement, even one no one has explicitly flagged." },
+      { label: "Who", body: "Relevant colleagues or your manager, to confirm the improvement is genuinely worth pursuing." },
+      { label: "Where", body: "Applied to any real opportunity you notice." },
+    ],
+    howItWorks: [
+      "Notice a genuine opportunity for improvement, and take initiative to propose or act on it, rather than waiting for someone else to notice it first.",
+    ],
+    tools: ["The Process Improvement Proposal FIRST from Stage Seven."],
+    scenario: {
+      title: "Updating outdated onboarding docs without being asked",
+      body: "A new hire noticed the team's onboarding documentation was outdated and, without being asked, updated it and shared the improved version, an initiative that got specifically recognized in her next performance review.",
+    },
+    pitfalls: [
+      "Only ever responding to explicitly assigned problems, missing genuine opportunities to improve something no one has yet flagged.",
+    ],
+    successSignal:
+      "You can point to a specific improvement you proactively identified and acted on, not just an assigned task.",
+    milestoneTies: [],
+  },
+
+  565: {
+    definition:
+      "A First Workplace Adaptation successfully adjusts to a new organizational environment, extending the Adaptability Exercise FIRST from Stage Eight into a sustained, workplace-specific context.",
+    whyItMatters:
+      "Genuine adaptation to a new organizational environment, its norms, pace, and expectations, takes deliberate effort and doesn't happen automatically just by showing up.",
+    whenWhoWhere: [
+      { label: "When", body: "This FIRST applies throughout your first months in any new organizational environment." },
+      { label: "Who", body: "Colleagues and mentors who can help you understand the new environment." },
+      { label: "Where", body: "Applied throughout your transition into a new organization." },
+    ],
+    howItWorks: [
+      "Actively observe and adjust to the new environment's genuine norms, rather than assuming your prior context's approach will work identically here.",
+    ],
+    tools: ["The Adaptability Exercise structure from Stage Eight."],
+    scenario: {
+      title: "Recalibrating decision-making speed at a more structured company",
+      body: "A student who moved from a fast-paced startup internship to a more structured corporate role had to genuinely adjust her expectation for decision-making speed, initially frustrating until she recognized and adapted to the new environment's real rhythm.",
+    },
+    pitfalls: [
+      "Assuming your prior organizational context's norms and pace will transfer directly, without genuinely adapting to the new environment's actual reality.",
+    ],
+    successSignal:
+      "You can name a specific way you genuinely adapted your own approach to fit a new organizational environment.",
+    milestoneTies: [],
+  },
+
+  566: {
+    definition:
+      "A First Workplace Policy Review builds a working understanding of the policies governing your role, extending Workplace Orientation into a more thorough, deliberate review of formal policy.",
+    whyItMatters:
+      "Genuine familiarity with the formal policies governing your role, not just the informal culture, protects you from unknowingly violating a real requirement.",
+    whenWhoWhere: [
+      { label: "When", body: "Complete this within your first weeks, once basic orientation is complete." },
+      { label: "Who", body: "HR or a manager who can clarify unclear policies." },
+      { label: "Where", body: "Built through your organization's formal policy documentation." },
+    ],
+    howItWorks: [
+      "Read through your organization's key policies relevant to your role, and note any genuinely unclear points to clarify directly.",
+    ],
+    tools: ["Your organization's employee handbook or policy portal."],
+    scenario: {
+      title: "An easily avoidable mistake, caught too late",
+      body: "A new hire who skimmed the employee handbook without genuinely reading the expense policy submitted a reimbursement request that violated a specific rule she hadn't actually registered, an easily avoidable mistake with a more thorough review.",
+    },
+    pitfalls: [
+      "Skimming policy documentation without genuinely absorbing the specific rules relevant to your actual role.",
+    ],
+    successSignal:
+      "You can accurately describe at least three specific policies genuinely relevant to your role.",
+    milestoneTies: [],
+  },
+
+  567: {
+    definition:
+      "A First Confidentiality Awareness is a working understanding of how to properly handle sensitive information, recognizing what genuinely counts as confidential and how it should be protected.",
+    whyItMatters:
+      "Mishandling confidential information, even unintentionally, can cause genuine harm to colleagues, clients, or the organization, and awareness prevents that harm before it happens.",
+    whenWhoWhere: [
+      { label: "When", body: "Build this awareness early, before you're handling any genuinely sensitive information." },
+      { label: "Who", body: "A manager or compliance contact who can clarify what's genuinely confidential in your context." },
+      { label: "Where", body: "Built through policy review and direct clarification." },
+    ],
+    howItWorks: [
+      "Identify what specifically counts as confidential in your role (client data, internal strategy, personnel information), and understand the genuine handling requirements for each.",
+    ],
+    tools: ["Your organization's confidentiality or data handling policy."],
+    scenario: {
+      title: "A boundary learned the hard way, then carried forward",
+      body: "A new hire who casually mentioned a client's business details in a public setting, not realizing the information was genuinely confidential, learned afterward the specific boundary she hadn't understood, a lesson she carried forward carefully.",
+    },
+    pitfalls: [
+      "Assuming information is fine to share casually without genuinely confirming its actual confidentiality status.",
+    ],
+    successSignal:
+      "You can name specifically what counts as confidential in your role and how it should genuinely be handled.",
+    milestoneTies: [],
+  },
+
+  568: {
+    definition:
+      "A First Professional Boundary establishes an appropriate workplace boundary, extending the Boundary Setting Exercise FIRST from Stage Eight into a specifically professional, workplace context.",
+    whyItMatters:
+      "Professional boundaries, around time, workload, or personal topics, protect your genuine wellbeing and sustainability without damaging professional relationships when communicated well.",
+    whenWhoWhere: [
+      { label: "When", body: "Establish this whenever a genuine professional boundary is needed." },
+      { label: "Who", body: "The colleague or manager the boundary needs to be communicated to." },
+      { label: "Where", body: "Applied in any real situation requiring a professional limit." },
+    ],
+    howItWorks: [
+      "State the boundary calmly and professionally, without over-apologizing, focusing on what you can genuinely offer rather than just what you can't.",
+    ],
+    tools: ["The Boundary Setting Exercise structure from Stage Eight."],
+    scenario: {
+      title: "Respected once stated calmly and clearly",
+      body: "A new hire who felt pressure to respond to work messages late at night established a clear, professional boundary around her actual availability, communicated calmly, which was respected without any real friction once stated clearly.",
+    },
+    pitfalls: [
+      "Avoiding stating a genuine boundary out of fear it will seem unprofessional, when a calmly communicated boundary is itself a professional skill.",
+    ],
+    successSignal:
+      "You state a genuine professional boundary calmly, and it's respected without damaging the working relationship.",
+    milestoneTies: [],
+  },
+
+  569: {
+    definition:
+      "A First Workplace Prioritization Exercise manages competing professional demands, extending the Task Prioritization Exercise FIRST from Stage Eight into a genuine, real workplace context with real stakes.",
+    whyItMatters:
+      "Competing professional demands are inevitable, and the ability to genuinely prioritize, rather than treating everything as equally urgent, is a core professional skill.",
+    whenWhoWhere: [
+      { label: "When", body: "Practice this whenever genuine competing demands arise." },
+      { label: "Who", body: "Your manager, to confirm your prioritization matches genuine organizational priorities." },
+      { label: "Where", body: "Applied to a real situation with competing demands." },
+    ],
+    howItWorks: [
+      "Assess competing demands by genuine urgency and importance, and confirm your prioritization with your manager when the stakes or ambiguity are high.",
+    ],
+    tools: ["The Task Prioritization Exercise (Eisenhower Matrix) structure from Stage Eight."],
+    scenario: {
+      title: "A deadline that turned out more flexible than assumed",
+      body: "A new hire facing two competing deadlines from different stakeholders checked in directly with her manager rather than guessing, which revealed one deadline was actually more flexible than she'd assumed, a clarification that changed her real prioritization.",
+    },
+    pitfalls: [
+      "Guessing at priority without confirming with your manager when the stakes or ambiguity are genuinely high.",
+    ],
+    successSignal:
+      "You navigate a real competing-demands situation, confirming priority with your manager when genuinely ambiguous.",
+    milestoneTies: [],
+  },
+
+  570: {
+    definition:
+      "A First Workplace Escalation knows when and how to escalate an issue, extending the Project Escalation FIRST from Stage Fourteen into a broader, general workplace context beyond just project management.",
+    whyItMatters:
+      "Knowing when a genuine issue exceeds your level to resolve, and escalating it clearly and professionally, is a critical skill that prevents both unnecessary escalation and dangerous under-escalation.",
+    whenWhoWhere: [
+      { label: "When", body: "Use this whenever a genuine issue exceeds your reasonable ability or authority to resolve." },
+      { label: "Who", body: "The appropriate person with the authority to genuinely address the issue." },
+      { label: "Where", body: "Applied through a clear, professional escalation communication." },
+    ],
+    howItWorks: [
+      "Clearly state the issue, what you've already tried, and what specific action or decision you need, rather than either avoiding escalation or escalating vaguely.",
+    ],
+    tools: ["The Project Escalation structure from Stage Fourteen."],
+    scenario: {
+      title: "Escalating a safety concern immediately and clearly",
+      body: "A new hire noticing a genuine safety concern escalated it immediately and clearly to her manager, rather than either ignoring it or trying to handle something outside her authority, which was exactly the appropriate response.",
+    },
+    pitfalls: [
+      "Either avoiding a necessary escalation out of fear of seeming unable to handle things independently, or escalating vaguely without a clear ask.",
+    ],
+    successSignal:
+      "Your escalation is clear and appropriately timed, resulting in the genuine resolution the situation needed.",
+    milestoneTies: [],
+  },
+
+  571: {
+    definition:
+      "A First Workplace Mistake Recovery responds professionally after making an error, a genuinely critical skill since every professional makes real mistakes, and the recovery matters as much as the mistake itself.",
+    whyItMatters:
+      "How you respond to a genuine mistake, owning it directly and focusing on the fix, shapes professional trust far more than the mistake itself typically does.",
+    whenWhoWhere: [
+      { label: "When", body: "Use this whenever you make a genuine, real workplace mistake." },
+      { label: "Who", body: "Whoever is affected by or needs to know about the mistake." },
+      { label: "Where", body: "Applied to a real mistake, addressed directly and promptly." },
+    ],
+    howItWorks: [
+      "Own the mistake directly and promptly, without excessive self-flagellation or deflection, and focus the conversation on the fix and any needed follow-up.",
+    ],
+    tools: ["The Leadership Mistake Reflection structure from Stage Twelve."],
+    scenario: {
+      title: "Owning the error before the client noticed",
+      body: "A new hire who sent a report with an error to a client owned it immediately and directly, proposing a fix, rather than hoping no one would notice, and her manager specifically noted the recovery reflected well on her professionalism.",
+    },
+    pitfalls: [
+      "Either hiding a mistake hoping it goes unnoticed, or over-apologizing to the point of undermining confidence in the actual fix.",
+    ],
+    successSignal:
+      "You respond to a real mistake by owning it directly and focusing on a genuine fix, without either hiding it or over-apologizing.",
+    milestoneTies: [],
+  },
+
+  572: {
+    definition:
+      "A First Workplace Accountability Conversation addresses a missed responsibility or expectation, extending the Difficult Feedback Conversation FIRST from Stage Twelve into a specifically peer-level or upward accountability context.",
+    whyItMatters:
+      "Not every accountability conversation happens top-down; genuinely addressing a missed responsibility, whether your own or a peer's, is a skill needed at every level.",
+    whenWhoWhere: [
+      { label: "When", body: "Use this whenever a genuine missed responsibility or expectation needs to be addressed." },
+      { label: "Who", body: "The person whose responsibility or expectation was missed, whether that's yourself, a peer, or occasionally someone above you." },
+      { label: "Where", body: "Applied in a direct, professional conversation." },
+    ],
+    howItWorks: [
+      "Address the missed responsibility directly and specifically, focusing on a path forward rather than blame.",
+    ],
+    tools: ["The Difficult Feedback Conversation structure from Stage Twelve."],
+    scenario: {
+      title: "Addressing a missed deadline directly, not to others",
+      body: "A new hire who noticed a peer had repeatedly missed a shared deadline addressed it directly and calmly, rather than either staying silent or complaining to others, which resolved the pattern and strengthened, not damaged, the working relationship.",
+    },
+    pitfalls: [
+      "Avoiding a genuinely necessary accountability conversation out of discomfort, which usually lets the pattern continue and erodes trust more than the conversation itself would.",
+    ],
+    successSignal:
+      "You have the accountability conversation directly and professionally, and the missed responsibility genuinely improves afterward.",
+    milestoneTies: [],
+  },
+
+  573: {
+    definition:
+      "A First Performance Review participates in a formal evaluation of your work, a genuinely structured moment to understand how your performance is officially perceived.",
+    whyItMatters:
+      "A formal performance review, engaged with genuinely rather than passively endured, is a valuable opportunity to understand real strengths and growth areas from your manager's actual perspective.",
+    whenWhoWhere: [
+      { label: "When", body: "This FIRST applies during any formal performance review cycle." },
+      { label: "Who", body: "Your manager conducting the review." },
+      { label: "Where", body: "Applied in the formal review conversation." },
+    ],
+    howItWorks: [
+      "Prepare genuinely for the review by reflecting on your own performance in advance, and engage actively during the conversation rather than passively receiving it.",
+    ],
+    tools: ["The Feedback Received Gracefully structure from Stage Eight."],
+    scenario: {
+      title: "A more substantive conversation because she came prepared",
+      body: "A new hire who prepared specific examples of her own work before her first performance review found the conversation far more substantive and useful than a colleague who walked in without any preparation and received more generic feedback as a result.",
+    },
+    pitfalls: [
+      "Treating a performance review as something that happens to you passively, rather than genuinely preparing and engaging with it.",
+    ],
+    successSignal:
+      "You leave your performance review with specific, genuine understanding of your real strengths and growth areas.",
+    milestoneTies: [],
+  },
+
+  574: {
+    definition:
+      "A First Performance Improvement Plan creates a concrete plan to improve a professional weakness, extending the Leadership Development Plan FIRST from Stage Twelve into a genuinely individual, performance-focused context.",
+    whyItMatters:
+      "A specific, concrete plan turns a genuine performance weakness from a vague worry into a trackable, actionable path toward real improvement.",
+    whenWhoWhere: [
+      { label: "When", body: "Create this once you've identified a genuine, specific performance weakness worth addressing." },
+      { label: "Who", body: "A manager or mentor to sanity-check whether the plan is realistic and well-prioritized." },
+      { label: "Where", body: "Documented as a dedicated improvement plan." },
+    ],
+    howItWorks: [
+      "Identify a specific weakness, set concrete milestones, and track genuine progress over a defined period.",
+    ],
+    tools: ["The Leadership Development Plan structure from Stage Twelve."],
+    scenario: {
+      title: "Milestones that produced measurable improvement",
+      body: "A new hire whose feedback consistently flagged unclear written communication built a specific plan with concrete milestones (a writing course, peer review on three real reports), and her subsequent feedback showed measurable, genuine improvement.",
+    },
+    pitfalls: [
+      "Responding to a genuine weakness with a vague intention to \"do better,\" rather than a specific, trackable plan.",
+    ],
+    successSignal:
+      "You can point to specific, planned progress on a real performance weakness, not just a vague intention to improve.",
+    milestoneTies: [],
+  },
+
+  575: {
+    definition:
+      "A First Workplace Feedback Request intentionally asks a supervisor or colleague for feedback, extending the Leadership Feedback Received FIRST from Stage Twelve into a proactive, individual contributor practice.",
+    whyItMatters:
+      "Proactively requesting feedback, rather than only receiving it during formal reviews, surfaces genuine, timely insight that would otherwise wait months to reach you.",
+    whenWhoWhere: [
+      { label: "When", body: "Practice this periodically, especially after completing significant work." },
+      { label: "Who", body: "A supervisor or colleague with genuine insight into your work." },
+      { label: "Where", body: "Applied through a direct, specific request." },
+    ],
+    howItWorks: [
+      "Ask a specific, direct question about your recent work, rather than a vague \"any feedback for me,\" to elicit genuinely useful, specific responses.",
+    ],
+    tools: ["The Leadership Feedback Received structure from Stage Twelve."],
+    scenario: {
+      title: "A specific question that produced a specific answer",
+      body: "A new hire who asked her manager the specific question \"what's one thing I could have done better on this project?\" after a project's completion got a far more useful, specific answer than a colleague's vague \"how am I doing?\" had produced.",
+    },
+    pitfalls: [
+      "Asking vague feedback questions that produce equally vague, unhelpful responses.",
+    ],
+    successSignal:
+      "Your specific feedback request produces a genuinely useful, actionable response.",
+    milestoneTies: [],
+  },
+
+  576: {
+    definition:
+      "A First Workplace Recognition receives or earns recognition for professional performance, a genuine milestone confirming your work has had real, visible impact.",
+    whyItMatters:
+      "Genuine recognition, earned through real performance, is a concrete signal that your work is landing the way you intended, distinct from simply completing tasks without visible acknowledgment.",
+    whenWhoWhere: [
+      { label: "When", body: "This FIRST applies whenever you genuinely earn recognition for your work." },
+      { label: "Who", body: "Whoever offers the recognition, a manager, colleague, or client." },
+      { label: "Where", body: "Received in any real professional context." },
+    ],
+    howItWorks: [
+      "When you genuinely earn recognition, receive it graciously, and reflect on what specifically led to it, so you can genuinely repeat it.",
+    ],
+    tools: ["No special tool; genuine reflection on what earned the recognition."],
+    scenario: {
+      title: "Repeating the exact approach that earned the praise",
+      body: "A new hire who received specific praise from a client for a report's clarity reflected on what specifically she'd done differently for that report, and deliberately repeated that same approach in future work.",
+    },
+    pitfalls: [
+      "Receiving genuine recognition without reflecting on what specifically earned it, missing the chance to deliberately repeat it.",
+    ],
+    successSignal:
+      "You can name a specific piece of genuine recognition you've earned, and what specifically led to it.",
+    milestoneTies: [],
+  },
+
+  577: {
+    definition:
+      "A First Workplace Problem Ownership takes responsibility for resolving a problem beyond simply reporting it, extending Workplace Ownership Experience from earlier in this stage into a more sustained, resolution-focused context.",
+    whyItMatters:
+      "Reporting a problem without genuinely following it through to resolution leaves real work unfinished; genuine ownership includes seeing it through.",
+    whenWhoWhere: [
+      { label: "When", body: "Use this whenever a genuine problem you've identified or been assigned needs to be seen through to actual resolution." },
+      { label: "Who", body: "Colleagues or stakeholders affected by the problem." },
+      { label: "Where", body: "Applied to a real problem, from identification through genuine resolution." },
+    ],
+    howItWorks: [
+      "Don't stop at reporting or flagging a problem; take genuine responsibility for seeing it through to an actual resolution.",
+    ],
+    tools: ["The Business Process Improvement structure from Stage Fifteen."],
+    scenario: {
+      title: "Fixing the root cause herself when no one else did",
+      body: "A new hire who noticed a recurring data error reported it initially, but when no one else picked it up, she took genuine ownership of investigating and fixing the root cause herself, rather than considering her responsibility complete once reported.",
+    },
+    pitfalls: [
+      "Considering your responsibility complete once a problem is reported, without following through to genuine resolution.",
+    ],
+    successSignal:
+      "You can point to a specific problem you saw through to genuine resolution, not just reported and left.",
+    milestoneTies: [],
+  },
+
+  578: {
+    definition:
+      "A First Professional Reputation Audit evaluates how colleagues and supervisors perceive your reliability and professionalism, building genuine, honest self-awareness through real outside perspective.",
+    whyItMatters:
+      "Your own self-perception of your professional reputation often differs from how you're genuinely perceived; an honest audit closes that gap.",
+    whenWhoWhere: [
+      { label: "When", body: "Conduct this periodically, especially after several months in a role." },
+      { label: "Who", body: "Colleagues and supervisors who can offer genuine, honest perspective." },
+      { label: "Where", body: "Applied through direct, honest conversations or feedback requests." },
+    ],
+    howItWorks: [
+      "Ask trusted colleagues directly how they'd describe your reliability and professionalism, and compare it honestly against your own self-perception.",
+    ],
+    tools: ["The Communication Style Awareness structure from Stage Eight, applied to professional reputation broadly."],
+    scenario: {
+      title: "A gap between assumed and actual responsiveness",
+      body: "A new hire who assumed she was seen as highly responsive was surprised to learn, through an honest conversation with a trusted colleague, that her response time on non-urgent items was actually perceived as slower than she'd realized, a genuine gap worth addressing.",
+    },
+    pitfalls: [
+      "Assuming your own self-perception of your professional reputation matches how you're genuinely perceived, without ever checking.",
+    ],
+    successSignal:
+      "You identify at least one genuine gap between your self-perception and how you're actually perceived professionally.",
+    milestoneTies: [],
+  },
+
+  579: {
+    definition:
+      "A First Workplace Culture Analysis intentionally studies how an organization actually operates, extending Workplace Adaptation from earlier in this stage into a more deliberate, analytical study of genuine organizational culture.",
+    whyItMatters:
+      "Genuinely understanding how an organization actually operates, beyond its stated values, helps you navigate it more effectively and evaluate real fit.",
+    whenWhoWhere: [
+      { label: "When", body: "Conduct this once you have enough real experience in an organization to observe genuine patterns, not just stated values." },
+      { label: "Who", body: "No collaborator required, though colleague perspectives add real insight." },
+      { label: "Where", body: "Built through sustained observation." },
+    ],
+    howItWorks: [
+      "Observe genuine patterns in how decisions actually get made, how conflict is genuinely handled, and what behaviors are actually rewarded, comparing this against the organization's stated values.",
+    ],
+    tools: ["No special tool; deliberate, sustained observation."],
+    scenario: {
+      title: "Collaborative on paper, top-down in practice",
+      body: "A student's organization's stated values emphasized collaboration, but genuine observation revealed decisions were actually made quite top-down, a real gap between stated and actual culture worth understanding for how to navigate it effectively.",
+    },
+    pitfalls: [
+      "Taking an organization's stated values at face value without genuinely observing how it actually operates day to day.",
+    ],
+    successSignal:
+      "You can articulate at least one genuine gap or alignment between your organization's stated values and its actual, observed culture.",
+    milestoneTies: [],
+  },
+
+  580: {
+    definition:
+      "A First Workplace Readiness Assessment evaluates your preparedness for professional responsibilities, an honest, comprehensive self-assessment of your genuine readiness across the FIRSTS built throughout this section.",
+    whyItMatters:
+      "An honest assessment of your genuine readiness, not just an assumption that you're prepared, reveals real gaps worth addressing before they become genuine problems.",
+    whenWhoWhere: [
+      { label: "When", body: "Conduct this periodically, especially before taking on genuinely new or expanded responsibilities." },
+      { label: "Who", body: "A mentor or manager for outside perspective, if available." },
+      { label: "Where", body: "Done in a dedicated, honest reflective session." },
+    ],
+    howItWorks: [
+      "Honestly assess your readiness across the workplace professionalism FIRSTS built throughout this section, identifying genuine strengths and real remaining gaps.",
+    ],
+    tools: ["Your accumulated practice and reflections from throughout this section."],
+    scenario: {
+      title: "Confident on habits, uncertain on escalations",
+      body: "A student's honest readiness assessment revealed she'd genuinely internalized punctuality and accountability habits, but still felt uncertain handling genuine escalations, a clear, honest picture that shaped what she prioritized learning next.",
+    },
+    pitfalls: [
+      "Assuming readiness without honestly assessing it, risking being caught unprepared by a genuinely new responsibility.",
+    ],
+    successSignal:
+      "You can name specific, genuine areas of workplace readiness strength and specific remaining gaps.",
+    milestoneTies: [],
+  },
+
+  581: {
+    definition:
+      "A First Professional Standard Statement defines the standards you expect from yourself at work, extending the Leadership Philosophy FIRST from Stage Twelve into a personal, individual-contributor professional standard.",
+    whyItMatters:
+      "A genuine, self-defined professional standard, distinct from just following external rules, helps you maintain consistent quality and conduct even when no one is explicitly checking.",
+    whenWhoWhere: [
+      { label: "When", body: "Write this once you have enough real workplace experience to articulate genuine, evidence-based standards." },
+      { label: "Who", body: "No collaborator required, though discussing it with a mentor can sharpen it." },
+      { label: "Where", body: "Written in a dedicated reflective session." },
+    ],
+    howItWorks: [
+      "Reflect on your workplace experiences throughout this section, and articulate two or three genuine standards you hold yourself to, regardless of external enforcement.",
+    ],
+    tools: ["Your accumulated reflections from throughout this stage."],
+    scenario: {
+      title: "A statement she actually referenced under real temptation",
+      body: "A student's professional standard statement, \"I respond to messages within 24 hours even when busy, and I own my mistakes immediately rather than hoping they go unnoticed,\" became something she genuinely referenced when tempted to cut a corner months later.",
+    },
+    pitfalls: [
+      "Writing standards that sound impressive but don't actually reflect how you've genuinely behaved in real workplace situations.",
+    ],
+    successSignal:
+      "You can recall and apply your professional standard statement in an actual real workplace moment, not just have it written somewhere unused.",
+    milestoneTies: [],
+  },
+
+  582: {
+    definition:
+      "A First Professional Ethics Awareness is a working understanding of the principles that guide responsible professional conduct, the genuine foundation underlying every other ethics and integrity FIRST in this stage.",
+    whyItMatters:
+      "Genuine ethical awareness, understanding the actual principles at stake, not just rule-following, prepares you to navigate situations no specific policy explicitly covers.",
+    whenWhoWhere: [
+      { label: "When", body: "Build this awareness early, before facing a genuine ethical situation without preparation." },
+      { label: "Who", body: "No collaborator required, though your organization's ethics resources or training can clarify specifics." },
+      { label: "Where", body: "Built through your organization's ethics training, codes of conduct, or direct reflection." },
+    ],
+    howItWorks: [
+      "Review your organization's code of conduct or ethics resources, and identify the genuine underlying principles, not just specific rules.",
+    ],
+    tools: ["Your organization's code of conduct or ethics training materials."],
+    scenario: {
+      title: "Principles meant to guide the situations no rule covers",
+      body: "A student who'd only ever thought of ethics as \"following the rules\" realized, reviewing her organization's actual code of conduct, that the underlying principles (honesty, fairness, respect) were meant to guide her through situations no specific rule explicitly covered.",
+    },
+    pitfalls: [
+      "Treating ethics as purely rule-following, missing the underlying principles that guide situations no specific rule explicitly addresses.",
+    ],
+    successSignal:
+      "You can articulate the genuine underlying ethical principles guiding your organization, not just specific rules.",
+    milestoneTies: [],
+  },
+
+  583: {
+    definition:
+      "A First Integrity Decision chooses the ethical course of action when faced with a difficult situation, moving from ethical awareness into genuine, real decision-making under real pressure.",
+    whyItMatters:
+      "Ethical awareness alone doesn't guarantee ethical action; a genuine integrity decision, made under real pressure or temptation, is what actually proves and builds character.",
+    whenWhoWhere: [
+      { label: "When", body: "This FIRST applies whenever a genuine ethical difficulty arises." },
+      { label: "Who", body: "Whoever is affected by the decision." },
+      { label: "Where", body: "Applied to a real, difficult ethical situation." },
+    ],
+    howItWorks: [
+      "When facing a genuine ethical difficulty, choose the course of action that genuinely aligns with your principles, even when a shortcut or easier path is available.",
+    ],
+    tools: ["The Professional Ethics Awareness FIRST earlier in this section."],
+    scenario: {
+      title: "Flagging the billing error instead of staying quiet",
+      body: "A student who could have quietly let a small billing error benefit her team financially chose instead to flag it directly, a genuinely harder short-term choice that reinforced her own sense of integrity and her team's trust in her.",
+    },
+    pitfalls: [
+      "Rationalizing a genuinely unethical shortcut because it's convenient or because \"no one would know,\" rather than choosing the harder, genuinely ethical path.",
+    ],
+    successSignal:
+      "You can point to a specific, real instance where you chose the genuinely ethical path despite a real, available shortcut.",
+    milestoneTies: [],
+  },
+
+  584: {
+    definition:
+      "A First Conflict of Interest Awareness recognizes situations where personal interests may affect professional judgment, a specific, genuinely important category of ethical awareness.",
+    whyItMatters:
+      "Conflicts of interest can compromise genuine professional judgment even unintentionally, and awareness is what lets you recognize and properly disclose them before they cause real harm.",
+    whenWhoWhere: [
+      { label: "When", body: "Build this awareness before you're in a position where a genuine conflict could arise." },
+      { label: "Who", body: "A manager or compliance contact who can clarify your organization's specific disclosure process." },
+      { label: "Where", body: "Built through policy review and genuine self-reflection." },
+    ],
+    howItWorks: [
+      "Understand what genuinely counts as a conflict of interest in your role, and know the proper disclosure process if one arises.",
+    ],
+    tools: ["Your organization's conflict of interest policy."],
+    scenario: {
+      title: "Disclosing the friend's vendor connection upfront",
+      body: "A student who was asked to evaluate a vendor proposal realized a personal friend worked at one of the competing vendors, a genuine conflict she properly disclosed rather than either hiding it or assuming it didn't matter.",
+    },
+    pitfalls: [
+      "Assuming a genuine conflict of interest doesn't matter if you believe you can remain personally objective, rather than properly disclosing it regardless.",
+    ],
+    successSignal:
+      "You can identify what genuinely counts as a conflict of interest in your role, and know the proper disclosure process.",
+    milestoneTies: [],
+  },
+
+  585: {
+    definition:
+      "A First Confidential Information Responsibility properly protects information entrusted to you, extending the Confidentiality Awareness FIRST from earlier in this stage into a specifically ethical, values-based framing.",
+    whyItMatters:
+      "Protecting confidential information is both a policy requirement and a genuine ethical responsibility, since real trust is placed in you when sensitive information is shared.",
+    whenWhoWhere: [
+      { label: "When", body: "This responsibility applies continuously, whenever you're entrusted with genuinely confidential information." },
+      { label: "Who", body: "Whoever entrusted you with the information." },
+      { label: "Where", body: "Applied to any real confidential information you handle." },
+    ],
+    howItWorks: [
+      "Treat confidential information with the genuine care and respect the person who entrusted it to you would expect, beyond just minimal policy compliance.",
+    ],
+    tools: ["The Confidentiality Awareness structure from earlier in this stage."],
+    scenario: {
+      title: "Protecting a colleague's confidence as ethical weight, not policy checkbox",
+      body: "A student who was told something in confidence by a colleague, going through a genuinely difficult personal situation, protected that information carefully, recognizing the ethical weight of the trust placed in her, not just a policy requirement.",
+    },
+    pitfalls: [
+      "Treating confidentiality as purely a compliance checkbox, missing the genuine ethical weight of the trust actually placed in you.",
+    ],
+    successSignal:
+      "You can point to a specific instance where you protected confidential information with genuine care, not just minimal compliance.",
+    milestoneTies: [],
+  },
+
+  586: {
+    definition:
+      "A First Data Ethics Awareness is a working understanding of ethical responsibilities surrounding data collection, use, and sharing, an increasingly important area given how central data has become to most roles.",
+    whyItMatters:
+      "Data, even when technically legal to collect or use, can be handled in genuinely unethical ways, and awareness of that distinction matters increasingly across nearly every field.",
+    whenWhoWhere: [
+      { label: "When", body: "Build this awareness if your role involves any genuine data collection, analysis, or use." },
+      { label: "Who", body: "A data privacy or compliance contact, if your organization has one." },
+      { label: "Where", body: "Built through your organization's data policies and genuine ethical reflection." },
+    ],
+    howItWorks: [
+      "Consider not just whether a data practice is technically legal, but whether it genuinely respects the people the data represents.",
+    ],
+    tools: ["Your organization's data privacy and ethics policies."],
+    scenario: {
+      title: "Choosing narrower use than technically permitted",
+      body: "A student analyzing customer survey data considered not just what was technically permitted, but whether using an open-ended comment field's content for a purpose customers hadn't genuinely anticipated felt ethically appropriate, ultimately deciding to use it more narrowly than technically allowed.",
+    },
+    pitfalls: [
+      "Treating \"technically legal\" as the same as \"genuinely ethical\" when it comes to data use, missing situations where the two diverge.",
+    ],
+    successSignal:
+      "You can identify a specific instance where you considered the genuine ethics of a data practice beyond its technical legality.",
+    milestoneTies: [],
+  },
+
+  587: {
+    definition:
+      "A First Technology Ethics Awareness considers the social and professional consequences of technology decisions, extending Data Ethics Awareness into a broader technology context.",
+    whyItMatters:
+      "Technology decisions, even well-intentioned ones, can have genuine unintended social or professional consequences worth considering before implementation.",
+    whenWhoWhere: [
+      { label: "When", body: "Build this awareness whenever making or influencing a genuine technology decision." },
+      { label: "Who", body: "Colleagues who might be affected by the technology decision." },
+      { label: "Where", body: "Applied to a real technology decision." },
+    ],
+    howItWorks: [
+      "Before implementing a technology decision, consider its genuine broader consequences, not just its immediate technical function.",
+    ],
+    tools: ["No special tool; deliberate, broader reflection before technology decisions."],
+    scenario: {
+      title: "A hybrid approach that preserved human review",
+      body: "A student proposing an automated approval process considered not just its efficiency benefits, but the genuine consequence of removing human judgment from certain edge cases, ultimately proposing a hybrid approach that preserved human review for genuinely ambiguous situations.",
+    },
+    pitfalls: [
+      "Evaluating technology decisions purely on efficiency or technical merit, without considering genuine broader social or professional consequences.",
+    ],
+    successSignal:
+      "You can point to a specific technology decision where you considered genuine broader consequences beyond immediate function.",
+    milestoneTies: [],
+  },
+
+  588: {
+    definition:
+      "A First Intellectual Property Awareness is a working understanding of ownership and appropriate use of professional and creative work, recognizing what genuinely belongs to whom.",
+    whyItMatters:
+      "Genuine IP awareness protects both your own work and respects others', preventing unintentional infringement or improper use.",
+    whenWhoWhere: [
+      { label: "When", body: "Build this awareness before creating or using any genuinely significant professional or creative work." },
+      { label: "Who", body: "A legal or compliance contact for genuinely unclear situations." },
+      { label: "Where", body: "Built through your organization's IP policies and general awareness." },
+    ],
+    howItWorks: [
+      "Understand what genuinely counts as your organization's intellectual property versus your own, and what constitutes appropriate use of others' work.",
+    ],
+    tools: ["Your organization's intellectual property policy."],
+    scenario: {
+      title: "Checking before reusing a template at the next job",
+      body: "A student who created a genuinely useful template during her internship checked with her manager about ownership before using a similar version at her next job, learning the specific boundary between what she could and couldn't genuinely reuse.",
+    },
+    pitfalls: [
+      "Assuming work created during a role automatically belongs to you personally, without confirming your organization's actual IP policy.",
+    ],
+    successSignal:
+      "You can articulate your organization's genuine IP ownership policy and how it applies to your own work.",
+    milestoneTies: [],
+  },
+
+  589: {
+    definition:
+      "A First Citation & Attribution Practice properly acknowledges sources and contributions, extending IP Awareness into the specific, genuine practice of giving credit where it's due.",
+    whyItMatters:
+      "Genuine attribution, both of external sources and colleagues' contributions, is a foundational integrity practice that builds trust and respects others' real work.",
+    whenWhoWhere: [
+      { label: "When", body: "Practice this whenever using external sources or building on colleagues' genuine contributions." },
+      { label: "Who", body: "The original source or contributor being credited." },
+      { label: "Where", body: "Applied in any real work drawing on outside sources or contributions." },
+    ],
+    howItWorks: [
+      "Explicitly credit sources and genuine contributors, even when it would be easy to present the work as entirely your own.",
+    ],
+    tools: ["Standard citation practices relevant to your field."],
+    scenario: {
+      title: "Crediting the colleague whose framework the analysis built on",
+      body: "A student presenting a data analysis that built substantially on a colleague's earlier framework made sure to explicitly credit that colleague's genuine contribution, rather than presenting the work as entirely her own original idea.",
+    },
+    pitfalls: [
+      "Presenting work as entirely your own when it genuinely builds substantially on others' sources or contributions.",
+    ],
+    successSignal:
+      "You can point to a specific instance where you explicitly credited a genuine source or contributor, even when it would have been easy not to.",
+    milestoneTies: [],
+  },
+
+  590: {
+    definition:
+      "A First Professional Honesty Challenge communicates truthfully even when the truth is uncomfortable, a genuinely difficult but foundational integrity practice.",
+    whyItMatters:
+      "Honesty is easy when it's comfortable; genuine integrity is proven specifically in moments when the truth is uncomfortable to share.",
+    whenWhoWhere: [
+      { label: "When", body: "This FIRST applies whenever a genuinely uncomfortable truth needs to be communicated." },
+      { label: "Who", body: "Whoever needs to hear the uncomfortable truth." },
+      { label: "Where", body: "Applied in a real, direct conversation." },
+    ],
+    howItWorks: [
+      "Communicate the genuine truth clearly and professionally, even when a more comfortable, less honest alternative is available.",
+    ],
+    tools: ["The Professional Honesty vocabulary and directness practices from Stage Nine."],
+    scenario: {
+      title: "Proactively flagging a timeline that wouldn't be met",
+      body: "A student who knew a project's timeline genuinely wouldn't be met communicated that uncomfortable truth to her manager proactively, rather than letting the team discover it only once the deadline had already passed.",
+    },
+    pitfalls: [
+      "Softening or delaying an uncomfortable truth to avoid short-term discomfort, which usually makes the eventual reckoning worse.",
+    ],
+    successSignal:
+      "You can point to a specific instance where you communicated a genuinely uncomfortable truth clearly and proactively.",
+    milestoneTies: [],
+  },
+
+  591: {
+    definition:
+      "A First Ethical Dilemma Analysis systematically evaluates an ethical workplace situation, extending the systematic problem-solving skills from Stage Five into a specifically ethical context.",
+    whyItMatters:
+      "Genuine ethical dilemmas, situations where multiple values genuinely conflict, benefit from systematic analysis rather than pure gut instinct alone.",
+    whenWhoWhere: [
+      { label: "When", body: "Use this whenever a genuine ethical dilemma, with real competing values, arises." },
+      { label: "Who", body: "A trusted mentor or colleague to sanity-check your analysis, if the situation allows." },
+      { label: "Where", body: "Applied to a real ethical dilemma." },
+    ],
+    howItWorks: [
+      "Identify the genuine competing values at stake, consider the real consequences of different courses of action, and reach a reasoned, not just instinctive, conclusion.",
+    ],
+    tools: ["The Root Cause Analysis and systematic problem-solving frameworks from Stage Five."],
+    scenario: {
+      title: "Choosing transparency while still advocating for a struggling teammate",
+      body: "A student facing a genuine dilemma between loyalty to a struggling teammate and honesty with her manager about a missed deadline systematically worked through the competing values, ultimately choosing transparency while also advocating for her teammate's genuine circumstances to be considered.",
+    },
+    pitfalls: [
+      "Relying purely on gut instinct for a genuinely complex ethical dilemma, missing a more systematic consideration of the real competing values at stake.",
+    ],
+    successSignal:
+      "Your analysis of a real ethical dilemma identifies the genuine competing values, not just an instinctive first reaction.",
+    milestoneTies: [],
+  },
+
+  592: {
+    definition:
+      "A First Compliance Awareness is a working understanding of the rules and regulations relevant to your role, the formal, legally-grounded counterpart to broader ethical awareness.",
+    whyItMatters:
+      "Genuine compliance awareness protects you and your organization from real legal and regulatory risk, distinct from but related to broader ethical principles.",
+    whenWhoWhere: [
+      { label: "When", body: "Build this awareness early in any role with genuine regulatory exposure." },
+      { label: "Who", body: "A compliance contact or legal colleague who can clarify specifics." },
+      { label: "Where", body: "Built through your organization's compliance training and policies." },
+    ],
+    howItWorks: [
+      "Identify the specific rules and regulations genuinely relevant to your role, and understand the real consequences of non-compliance.",
+    ],
+    tools: ["Your organization's compliance training materials."],
+    scenario: {
+      title: "Realizing regulatory compliance directly touched her own work",
+      body: "A student in a marketing role assumed regulatory compliance was purely a legal team concern, until genuine compliance training revealed specific advertising claim regulations that directly applied to her own daily work.",
+    },
+    pitfalls: [
+      "Assuming compliance is purely someone else's concern, missing genuine regulatory requirements that directly apply to your own role.",
+    ],
+    successSignal:
+      "You can name specific regulations or rules genuinely relevant to your role, and the real consequences of non-compliance.",
+    milestoneTies: [],
+  },
+
+  593: {
+    definition:
+      "A First Responsible AI Awareness is a working understanding of ethical considerations when using artificial intelligence, an increasingly relevant, genuinely new category of professional ethics.",
+    whyItMatters:
+      "AI tools, genuinely powerful and increasingly widespread, raise specific ethical considerations, accuracy, bias, appropriate disclosure, that didn't exist in the same form before.",
+    whenWhoWhere: [
+      { label: "When", body: "Build this awareness now, given how rapidly AI tool use continues to expand." },
+      { label: "Who", body: "No collaborator required, though your organization's AI usage policy, if any, should be consulted." },
+      { label: "Where", body: "Built through direct reflection and any organizational AI policy." },
+    ],
+    howItWorks: [
+      "Consider genuine ethical questions around AI use in your work: accuracy verification, appropriate disclosure of AI involvement, and potential bias in AI-generated content.",
+    ],
+    tools: ["Your organization's AI usage policy, if one exists, and the AI Productivity Workflow FIRST from Stage Eleven."],
+    scenario: {
+      title: "Verifying every factual claim before sharing an AI-assisted draft",
+      body: "A student using an AI tool to draft a first-pass report made sure to genuinely verify every factual claim before sharing it, recognizing that AI-generated content carries a real risk of inaccuracy she was ethically responsible for catching.",
+    },
+    pitfalls: [
+      "Treating AI-generated content as automatically accurate or appropriate to use without genuine verification and disclosure where relevant.",
+    ],
+    successSignal:
+      "You can articulate a specific ethical consideration you genuinely apply when using AI tools in your work.",
+    milestoneTies: [],
+  },
+
+  594: {
+    definition:
+      "A First Privacy Awareness is a working understanding of responsibilities surrounding personal and sensitive information, extending Confidential Information Responsibility into a specifically privacy-focused context.",
+    whyItMatters:
+      "Privacy, distinct from general confidentiality, specifically concerns individuals' personal information and carries genuine ethical and often legal weight.",
+    whenWhoWhere: [
+      { label: "When", body: "Build this awareness if your role involves any genuine handling of personal information." },
+      { label: "Who", body: "A privacy or compliance contact, if your organization has one." },
+      { label: "Where", body: "Built through your organization's privacy policy and genuine reflection." },
+    ],
+    howItWorks: [
+      "Understand what genuinely counts as personal information in your context, and your real responsibilities in handling it appropriately.",
+    ],
+    tools: ["Your organization's privacy policy."],
+    scenario: {
+      title: "Anonymizing survey data before broader analysis",
+      body: "A student handling customer survey responses made sure to genuinely anonymize personal identifiers before sharing analysis broadly, recognizing the real privacy weight of the information even though it was for legitimate internal analysis.",
+    },
+    pitfalls: [
+      "Treating personal information casually because it's being used for a legitimate purpose, missing genuine privacy responsibilities regardless of purpose.",
+    ],
+    successSignal:
+      "You can articulate your genuine privacy responsibilities for the specific personal information you handle.",
+    milestoneTies: [],
+  },
+
+  595: {
+    definition:
+      "A First Accountability Under Pressure maintains ethical standards when facing pressure to compromise them, a genuinely difficult test of integrity under real, sustained stress.",
+    whyItMatters:
+      "Ethical standards are easiest to maintain without pressure; genuine integrity is proven specifically when there's real pressure, time, financial, or social, to compromise them.",
+    whenWhoWhere: [
+      { label: "When", body: "This FIRST applies whenever you face genuine pressure to compromise an ethical standard." },
+      { label: "Who", body: "Whoever is applying the pressure, and whoever is affected by your response." },
+      { label: "Where", body: "Applied to a real, high-pressure situation." },
+    ],
+    howItWorks: [
+      "Maintain your genuine ethical standard despite real pressure, even when the pressure comes from someone with authority over you.",
+    ],
+    tools: ["Your Integrity Decision practice from earlier in this section."],
+    scenario: {
+      title: "Holding the verification step despite deadline pressure",
+      body: "A student facing real pressure from a deadline to skip a genuine verification step maintained the standard anyway, communicating honestly about the resulting delay rather than compromising the verification to meet an artificial deadline.",
+    },
+    pitfalls: [
+      "Rationalizing a genuine ethical compromise because of real pressure, especially pressure from someone with authority over you.",
+    ],
+    successSignal:
+      "You can point to a specific instance where you maintained a genuine ethical standard despite real, significant pressure to compromise it.",
+    milestoneTies: [],
+  },
+
+  596: {
+    definition:
+      "A First Ethical Leadership Reflection defines the principles you want your leadership to demonstrate, extending the Leadership Philosophy FIRST from Stage Twelve with a specifically ethical focus.",
+    whyItMatters:
+      "A leadership philosophy grounded explicitly in ethical principles, not just effectiveness, shapes how you'll genuinely lead others when real ethical questions arise.",
+    whenWhoWhere: [
+      { label: "When", body: "Write this once you have some genuine leadership experience to reflect on, building on Stage Twelve's broader leadership philosophy." },
+      { label: "Who", body: "No collaborator required, though discussing it with a mentor sharpens it." },
+      { label: "Where", body: "Written in a dedicated reflective session." },
+    ],
+    howItWorks: [
+      "Reflect specifically on the ethical dimension of your leadership experiences, and articulate the genuine ethical principles you want to guide how you lead others.",
+    ],
+    tools: ["Your Leadership Philosophy FIRST from Stage Twelve as a starting foundation."],
+    scenario: {
+      title: "A touchstone she referenced in a real difficult moment",
+      body: "A student's ethical leadership reflection, \"I will never ask someone to do something I wouldn't do myself, and I will protect my team's honesty even when it's inconvenient for me,\" became a genuine touchstone she referenced during a real difficult leadership moment.",
+    },
+    pitfalls: [
+      "Writing an ethical leadership reflection disconnected from your actual, broader leadership philosophy from Stage Twelve, rather than genuinely integrating the two.",
+    ],
+    successSignal:
+      "You can recall and apply your ethical leadership principles in an actual real leadership moment.",
+    milestoneTies: [],
+  },
+
+  597: {
+    definition:
+      "A First Professional Integrity Reflection evaluates whether your actions consistently match your stated values, an honest, comprehensive self-assessment of genuine alignment.",
+    whyItMatters:
+      "Genuine integrity means your actions consistently match your stated values, not just having good values in theory; honest reflection is what reveals real gaps.",
+    whenWhoWhere: [
+      { label: "When", body: "Conduct this periodically, comparing your genuine actions against your stated professional standards." },
+      { label: "Who", body: "No collaborator required, though a mentor's honest outside perspective adds real value." },
+      { label: "Where", body: "Done in a dedicated, honest reflective session." },
+    ],
+    howItWorks: [
+      "Compare your real, recent actions against your stated Professional Standard Statement, honestly identifying any genuine gaps.",
+    ],
+    tools: ["Your Professional Standard Statement from earlier in this stage."],
+    scenario: {
+      title: "A slip she hadn't consciously noticed until reflecting",
+      body: "A student's honest integrity reflection revealed that while her stated standard was to respond to messages within 24 hours, she'd genuinely let that slip during a particularly busy month, a real gap she hadn't consciously noticed until reflecting deliberately.",
+    },
+    pitfalls: [
+      "Assuming your actions automatically match your stated values without ever honestly checking, missing genuine gaps that develop over time.",
+    ],
+    successSignal:
+      "You identify at least one genuine gap between your stated values and your actual, recent actions.",
+    milestoneTies: [],
+  },
+
+  598: {
+    definition:
+      "A First Speak-Up Awareness is a working understanding of when and how to raise concerns appropriately, a genuinely important skill for maintaining ethical standards beyond just your own individual conduct.",
+    whyItMatters:
+      "Genuine ethical responsibility sometimes extends beyond your own conduct to speaking up about concerning conduct you observe in others, done through appropriate channels.",
+    whenWhoWhere: [
+      { label: "When", body: "Build this awareness before you're in a position where you'd need to genuinely speak up about a concern." },
+      { label: "Who", body: "The appropriate channel for raising concerns, whether a manager, HR, or an ethics hotline." },
+      { label: "Where", body: "Built through understanding your organization's genuine speak-up channels and process." },
+    ],
+    howItWorks: [
+      "Understand your organization's actual channels for raising ethical concerns, and the genuine protections in place for doing so appropriately.",
+    ],
+    tools: ["Your organization's speak-up policy or ethics hotline information, if available."],
+    scenario: {
+      title: "Finding a clear channel once she actually looked",
+      body: "A student who witnessed a colleague's genuinely concerning behavior wasn't sure how to raise it, until reviewing her organization's actual speak-up policy revealed a clear, appropriate channel and real protections for doing so in good faith.",
+    },
+    pitfalls: [
+      "Assuming you have no appropriate way to raise a genuine concern, without actually checking your organization's real speak-up channels.",
+    ],
+    successSignal:
+      "You can identify your organization's genuine speak-up channels and the real protections in place for using them appropriately.",
+    milestoneTies: [],
+  },
+
+  599: {
+    definition:
+      "A First Ethical Decision Framework establishes a repeatable process for evaluating difficult professional decisions, turning the systematic analysis from Ethical Dilemma Analysis into a genuine, reusable tool.",
+    whyItMatters:
+      "A repeatable framework, rather than reasoning from scratch each time, helps you navigate genuinely difficult ethical decisions more consistently and confidently.",
+    whenWhoWhere: [
+      { label: "When", body: "Build this framework once you've practiced enough individual Ethical Dilemma Analyses to identify genuine, recurring patterns." },
+      { label: "Who", body: "No collaborator required, though testing it against real past dilemmas with a mentor sharpens it." },
+      { label: "Where", body: "Documented as a personal, reusable framework." },
+    ],
+    howItWorks: [
+      "Build a simple, repeatable set of questions or steps you'll genuinely apply to future ethical decisions, based on patterns from your own real experience.",
+    ],
+    tools: ["Your accumulated Ethical Dilemma Analysis practice from earlier in this section."],
+    scenario: {
+      title: "A three-question framework applied almost automatically",
+      body: "A student built a simple three-question framework, who is genuinely affected, what would happen if this became public, and does this align with my stated values, which she found herself genuinely applying almost automatically in a difficult moment months later.",
+    },
+    pitfalls: [
+      "Building a framework too complex or theoretical to genuinely apply quickly in a real, live difficult moment.",
+    ],
+    successSignal:
+      "You have a genuine, repeatable framework simple enough to actually apply when a real ethical decision arises.",
+    milestoneTies: [],
+  },
+
+  600: {
+    definition:
+      "A First Professional Responsibility Statement defines the ethical standards you commit to maintaining, extending the Professional Standard Statement FIRST from earlier in this stage into a specifically ethics-focused commitment.",
+    whyItMatters:
+      "A genuine, explicit ethical commitment, distinct from your broader professional standards, keeps your specific ethical responsibilities visible and intentional.",
+    whenWhoWhere: [
+      { label: "When", body: "Write this once you have genuine ethical experience from throughout this section to draw on." },
+      { label: "Who", body: "No collaborator required, though discussing it with a mentor sharpens it." },
+      { label: "Where", body: "Written in a dedicated reflective session." },
+    ],
+    howItWorks: [
+      "Articulate two or three specific, genuine ethical commitments you'll hold yourself to, distinct from but complementary to your broader professional standards.",
+    ],
+    tools: ["Your accumulated ethics and integrity practice from throughout this section."],
+    scenario: {
+      title: "A specific commitment she could reference directly",
+      body: "A student's professional responsibility statement, \"I will disclose conflicts of interest even when inconvenient, and I will verify before I trust, especially with AI-generated content,\" became a genuine, specific commitment she could reference directly.",
+    },
+    pitfalls: [
+      "Writing an ethical commitment so generic it provides no genuine, specific guidance for real situations.",
+    ],
+    successSignal:
+      "Your professional responsibility statement is specific enough to genuinely guide a real ethical decision.",
+    milestoneTies: [],
+  },
+
+  601: {
+    definition:
+      "A First Integrity Audit reviews your professional habits for areas where greater integrity or accountability is needed, closing this entire stage with comprehensive, honest self-assessment.",
+    whyItMatters:
+      "Looking across your whole professionalism and ethics practice reveals genuine growth patterns and remaining gaps that no single FIRST alone would show.",
+    whenWhoWhere: [
+      { label: "When", body: "Conduct this at the end of working through this stage, and periodically afterward as your professional practice continues to develop." },
+      { label: "Who", body: "A mentor for outside perspective, if available." },
+      { label: "Where", body: "Done in a dedicated, comprehensive, honest reflective session." },
+    ],
+    howItWorks: [
+      "Review your practice across this entire stage, both workplace professionalism and ethics, and identify genuine areas of strength and specific remaining gaps needing greater integrity or accountability.",
+    ],
+    tools: ["Your accumulated practice and reflections from throughout this entire stage."],
+    scenario: {
+      title: "An integrity gap hiding inside a habit that looked like generosity",
+      body: "A student's comprehensive integrity audit revealed she'd genuinely internalized punctuality, ownership, and honest communication, but identified that her habit of quietly absorbing extra work without discussing genuine capacity limits was actually its own kind of integrity gap, being honest with herself about her real limits.",
+    },
+    pitfalls: [
+      "Reviewing only the areas that feel comfortable, avoiding honest assessment of genuinely difficult or uncomfortable ones.",
+    ],
+    successSignal:
+      "You can name specific, genuine areas of professional integrity strength and specific remaining gaps, backed by real practice across this entire stage.",
     milestoneTies: [],
   },
 };

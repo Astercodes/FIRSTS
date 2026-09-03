@@ -1,6 +1,5 @@
 "use client";
 
-import Link from "next/link";
 import { FirstsList } from "@/components/dashboard/FirstsList";
 import { PaceBandPill } from "@/components/dashboard/PaceBandPill";
 import { useFirstsWithProgress } from "@/lib/progressStore";
@@ -16,20 +15,6 @@ export function StageOverview({ stage }: { stage: StageId }) {
 
   return (
     <div className="mx-auto max-w-4xl space-y-6">
-      <div className="flex gap-2 overflow-x-auto pb-1">
-        {STAGES.map((s) => (
-          <Link
-            key={s.id}
-            href={s.href}
-            className={`shrink-0 rounded-full px-4 py-1.5 text-sm font-medium transition-colors ${
-              s.id === stage ? "bg-ink text-paper" : "bg-paper-dim text-ink/60 hover:text-ink"
-            }`}
-          >
-            {s.shortLabel}
-          </Link>
-        ))}
-      </div>
-
       <div>
         <p className="text-xs font-semibold uppercase tracking-[0.15em] text-berry-burst">
           {current.label}

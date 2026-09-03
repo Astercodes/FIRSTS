@@ -26,6 +26,7 @@ const STAGE_FOCUS: Record<StageId, string> = {
   thirteen: "teamwork and collaboration, the peer-level counterpart to leadership, expect stories about difficult teammates and real team friction, not just leaders",
   fourteen: "project management, the most formal and document-heavy stage, expect students to lean on templates heavily at first, the charters, risk registers, and status reports take real repetition before they feel natural",
   fifteen: "business and organizational acumen, students without much workplace exposure yet will lean hardest on conversations with managers and colleagues to answer these honestly, encourage that rather than guessing",
+  sixteen: "workplace professionalism and ethics, the longest stage by far at 45 FIRSTS, expect students without a current role to lean on internships or past jobs, and be ready for genuinely sensitive disclosures in the ethics and integrity sections",
 };
 
 /** Stage One's kit was recently revised; version bumps here should flag facilitators still on the old copy. */
