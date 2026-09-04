@@ -74,42 +74,6 @@ export const AUDIENCES: Record<string, AudienceConfig> = {
     ctaBody: "Sign in with your school email, there's no separate account to manage.",
   },
 
-  professionals: {
-    slug: "professionals",
-    metaTitle: "For early professionals & recent grads | FIRSTS",
-    kicker: "For early professionals & recent grads",
-    headline: "Clarity doesn't end ",
-    highlight: "at graduation.",
-    subheadline:
-      "FIRSTS wasn't built for freshman year alone. Stage Two covers professional identity and personal brand, Stage Three covers job applications and interviews, and Stage Four covers the mindset and habits that keep you moving after you're hired.",
-    primaryCta: { label: "Start free", href: "/onboarding/independent" },
-    secondaryCta: { label: `See all ${TOTAL_STAGES} stages`, href: "/#stages" },
-    color: "var(--sunshine-orange)",
-    colorSecondary: "var(--tropical-mango)",
-    stats: [
-      { value: `${TOTAL_STAGES}`, label: "stages, not just one" },
-      { value: "25", label: "FIRSTS in Stage Four alone: mindset, productivity, habits" },
-      { value: "1 min", label: "to sign up, no institution required" },
-    ],
-    features: [
-      { title: "Skip what you've outgrown", body: "Switch on Free Explore Mode and go straight to Stage Two or Three, you don't have to redo self-discovery you've already done." },
-      { title: "Build the brand, not just the resume", body: "Stage Two's Personal Brand Narrative and LinkedIn-ready summaries go further than a bullet-point resume." },
-      { title: "Practice what actually stalls offers", body: "Stage Three drills the STAR method, offer comparison, and the interview prep most job searches skip." },
-      { title: "Keep momentum after you're hired", body: "Stage Four's Time Management Matrix and Habit Stacking Routine are built for your first year on the job, not just the search." },
-    ],
-    steps: [
-      { title: "Sign up in a minute", body: "Email, Google, Apple, or LinkedIn, no institution required." },
-      { title: "Switch on Free Explore Mode", body: "Skip straight to Stage Two, Three, or Four if Stage One doesn't apply to you anymore." },
-      { title: "Work the FIRSTS that match where you are", body: "Job search, first year on the job, or a career change, pick what's relevant." },
-      { title: "Export a portfolio that's actual evidence", body: "Real worksheets, not just claims on a resume." },
-    ],
-    scenarioTitle: "What it looks like six months in",
-    scenarioBody:
-      "A recent grad six months into her first job skipped straight to Stage Four and worked through the Time Management Matrix and Habit Stacking Routine, the two FIRSTS she actually needed at that point.",
-    ctaHeadline: "Start wherever you actually are.",
-    ctaBody: "No institution required, no obligation to start at First 01.",
-  },
-
   "independent-students": {
     slug: "independent-students",
     metaTitle: "For students at non-partner schools | FIRSTS",

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Nav } from "@/components/landing/Nav";
 import { Footer } from "@/components/landing/Footer";
 import { FLHero } from "@/components/first-leap/FLHero";
+import { FLIntro } from "@/components/first-leap/FLIntro";
 import { FLQuestions } from "@/components/first-leap/FLQuestions";
 import { FLStages } from "@/components/first-leap/FLStages";
 import { FLCareer } from "@/components/first-leap/FLCareer";
@@ -27,6 +28,7 @@ export default function FirstLeapPage() {
       <Nav />
       <main>
         <FLHero />
+        <FLIntro />
         <FLQuestions />
         <FLStages />
         <FLCareer />

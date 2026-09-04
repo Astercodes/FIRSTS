@@ -96,7 +96,7 @@ const STAGES = [
 
 export function FLStages() {
   return (
-    <section id="what-is-first-leap" className="relative bg-paper-dim px-6 py-28">
+    <section id="what-is-first-leap" className="relative bg-paper px-6 py-28">
       <Reveal className="mx-auto mb-14 max-w-2xl text-center">
         <p className="mb-3 text-xs font-semibold uppercase tracking-[0.2em] text-berry-burst">
           What is First Leap?
