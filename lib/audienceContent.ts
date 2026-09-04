@@ -74,42 +74,6 @@ export const AUDIENCES: Record<string, AudienceConfig> = {
     ctaBody: "Sign in with your school email, there's no separate account to manage.",
   },
 
-  "independent-students": {
-    slug: "independent-students",
-    metaTitle: "For students at non-partner schools | FIRSTS",
-    kicker: "For students at non-partner schools",
-    headline: "Your school hasn't signed up yet. ",
-    highlight: "You still can.",
-    subheadline:
-      `FIRSTS doesn't require an institution. Sign up with your personal email, work through all ${TOTAL_STAGES} stages at your own pace, and build a portfolio no career center gatekeeps.`,
-    primaryCta: { label: "Start free", href: "/onboarding/independent" },
-    secondaryCta: { label: "Tell your career center about FIRSTS", href: "/for/institutions" },
-    color: "var(--citrus-lime)",
-    colorSecondary: "var(--lime-zest)",
-    stats: [
-      { value: `${TOTAL_FIRSTS}`, label: "guided FIRSTS, the same set partner-school students get" },
-      { value: `${TOTAL_STAGES}`, label: "stages, unlocked as you go or all at once" },
-      { value: "1 min", label: "to sign up, no invite code needed" },
-    ],
-    features: [
-      { title: "No school required", body: `An independent account gets you the identical ${TOTAL_FIRSTS} FIRSTS a partner-school student gets, nothing held back.` },
-      { title: "Self-paced, start to finish", body: `Work through all ${TOTAL_STAGES} stages in order, or switch on Free Explore Mode and jump around.` },
-      { title: "A coach on your side", body: "The same AI Coach hub, grounded in your real progress, not a stripped-down version." },
-      { title: "A portfolio that travels with you", body: "Export your work and take it anywhere, it's not tied to an institution that might never sign up." },
-    ],
-    steps: [
-      { title: "Sign up with any email", body: "No .edu address, no invite code, no waiting on your school." },
-      { title: "Start Stage One: Core Values Audit", body: "The same first module every student gets, partner school or not." },
-      { title: "Unlock Stage Two through Four as you go", body: "Or switch on Free Explore Mode and start wherever makes sense." },
-      { title: "Export your portfolio when you're ready", body: "Take it into applications, interviews, or a conversation with a mentor." },
-    ],
-    scenarioTitle: "What it looks like without a career center",
-    scenarioBody:
-      "A student whose university had no career center account finished all 18 FIRSTS in Stage One over a single semester, entirely on her own schedule.",
-    ctaHeadline: "Don't wait for your school to catch up.",
-    ctaBody: "Sign up in under a minute, no invite code required.",
-  },
-
   "career-centers": {
     slug: "career-centers",
     metaTitle: "For career centers | FIRSTS",
