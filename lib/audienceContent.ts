@@ -74,43 +74,6 @@ export const AUDIENCES: Record<string, AudienceConfig> = {
     ctaBody: "Sign in with your school email, there's no separate account to manage.",
   },
 
-  institutions: {
-    slug: "institutions",
-    metaTitle: "For institutions | FIRSTS",
-    kicker: "For institutions",
-    headline: "Structured career readiness infrastructure, ",
-    highlight: "for your whole campus.",
-    subheadline:
-      "FIRSTS gives every student a sequenced, guided practice for career clarity, and gives your institution the completion data to show it's working, semester over semester.",
-    primaryCta: { label: "Verify your institution", href: "/onboarding/advisor" },
-    secondaryCta: { label: "See the career center view", href: "/for/career-centers" },
-    tertiaryCta: { label: "Request a demo", href: "/request-demo?for=institutions" },
-    color: "var(--berry-burst)",
-    colorSecondary: "var(--neon-pink)",
-    stats: [
-      { value: `${TOTAL_FIRSTS}`, label: "guided FIRSTS, one framework for every major" },
-      { value: `${TOTAL_STAGES}`, label: "sequenced stages, self-discovery through habits" },
-      { value: "1", label: "dashboard covering every cohort you run" },
-    ],
-    features: [
-      { title: "One framework, every student", body: "The same 4-stage sequence works whether a student is undecided or already interviewing." },
-      { title: "Data your institution can report on", body: "Completion trends and cohort comparisons built for the reports you already have to produce." },
-      { title: "Privacy your legal team will sign off on", body: "Advisors never see raw student reflections by default, only completion status." },
-      { title: "No new system to maintain", body: "SSO and roster sync fit into what your registrar already runs, no separate LMS to stand up." },
-    ],
-    steps: [
-      { title: "Verify your institution", body: "One verification covers every career center staff member at your school." },
-      { title: "Roll out to a single cohort or your whole class", body: "Start small and expand once you've seen it work." },
-      { title: "Career centers get cohort dashboards", body: "Advisors see completion and at-risk flags at the cohort level." },
-      { title: "Your institution gets the aggregate view", body: "Completion trends across every cohort you run, semester over semester." },
-    ],
-    scenarioTitle: "What it looks like across a semester",
-    scenarioBody:
-      "Across three cohorts totaling 240 students, an institution watched completion trend upward each semester, real evidence for a program review instead of an attendance count.",
-    ctaHeadline: "Bring structured career readiness to your whole campus.",
-    ctaBody: "Verify your institution to start with a single cohort, expand when you're ready.",
-  },
-
   employers: {
     slug: "employers",
     metaTitle: "For employers | FIRSTS",
