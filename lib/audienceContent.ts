@@ -74,43 +74,6 @@ export const AUDIENCES: Record<string, AudienceConfig> = {
     ctaBody: "Sign in with your school email, there's no separate account to manage.",
   },
 
-  "career-centers": {
-    slug: "career-centers",
-    metaTitle: "For career centers | FIRSTS",
-    kicker: "For career centers",
-    headline: "See who's engaged, ",
-    highlight: "who's stuck, who needs a nudge.",
-    subheadline:
-      "Roster sync, SSO, and a cohort dashboard built around completion status, not surveillance. You see progress. Students control how much of their actual work you see.",
-    primaryCta: { label: "Verify your institution", href: "/onboarding/advisor" },
-    secondaryCta: { label: "Talk to us about your campus", href: "/for/institutions" },
-    tertiaryCta: { label: "Request a demo", href: "/request-demo?for=career-centers" },
-    color: "var(--juicy-plum)",
-    colorSecondary: "var(--berry-burst)",
-    stats: [
-      { value: "18", label: "guided FIRSTS in Stage One alone" },
-      { value: "3", label: "sources cross-checked per salary figure" },
-      { value: "21d", label: "of inactivity flags an at-risk student" },
-    ],
-    features: [
-      { title: "A dashboard, not a firehose", body: "Cohort-level completion and at-risk flags, not a feed of everything every student wrote." },
-      { title: "Privacy by design", body: "Advisors see status by default. Students opt in per module to share the actual work behind it." },
-      { title: "Roster sync and SSO", body: "No manual account matching, students land in the right cohort automatically." },
-      { title: "Evidence for the annual report", body: "Completion data that proves engagement, not just enrollment numbers." },
-    ],
-    steps: [
-      { title: "Verify your institution email", body: "Confirms you're staff at a partner school before any roster access opens up." },
-      { title: "Sync your roster or share an invite link", body: "Students land in the correct cohort with no manual setup on your end." },
-      { title: "Open your cohort dashboard", body: "See completion by module, at-risk flags, and where a cohort is stalling." },
-      { title: "Step in when it counts", body: "21 days of inactivity surfaces a flag, students choose whether to share what they've actually written." },
-    ],
-    scenarioTitle: "What it looks like for a cohort",
-    scenarioBody:
-      "A career center rolled FIRSTS out to its marketing cohort. Within two weeks, 84% had started the Core Values Audit, and the center could see exactly who hadn't, without reading anyone's answers.",
-    ctaHeadline: "Prove engagement, not just enrollment.",
-    ctaBody: "Verify your institution email to set up your first cohort.",
-  },
-
   institutions: {
     slug: "institutions",
     metaTitle: "For institutions | FIRSTS",
