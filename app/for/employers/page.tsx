@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Nav } from "@/components/landing/Nav";
 import { Footer } from "@/components/landing/Footer";
 import { FEHero } from "@/components/employers/FEHero";
+import { FEIntro } from "@/components/employers/FEIntro";
 import { FEEvidence } from "@/components/employers/FEEvidence";
 import { FEInterviewPrep } from "@/components/employers/FEInterviewPrep";
 import { FEConsistentStructure } from "@/components/employers/FEConsistentStructure";
@@ -34,6 +35,7 @@ export default function EmployersPage() {
       <Nav />
       <main>
         <FEHero />
+        <FEIntro />
         <FEEvidence />
         <FEInterviewPrep />
         <FEConsistentStructure />

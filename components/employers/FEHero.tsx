@@ -12,19 +12,6 @@ const FADE_UP: Variants = {
   }),
 };
 
-const THOUGHT_ON = [
-  "Their strengths",
-  "Their values",
-  "Their professional identity",
-  "Their experiences",
-  "Their goals",
-  "Their communication",
-  "Their interview stories",
-  "Their career direction",
-  "Their workplace readiness",
-  "Their development gaps",
-];
-
 export function FEHero() {
   return (
     <section
@@ -79,36 +66,6 @@ export function FEHero() {
           initial="hidden"
           animate="show"
           custom={3}
-          variants={FADE_UP}
-          className="mt-6 flex max-w-xl flex-wrap justify-center gap-2"
-        >
-          {THOUGHT_ON.map((t) => (
-            <span
-              key={t}
-              className="rounded-full border border-white/15 bg-white/5 px-3.5 py-1.5 text-xs font-medium text-paper/70 backdrop-blur"
-            >
-              {t}
-            </span>
-          ))}
-        </motion.div>
-
-        <motion.p
-          initial="hidden"
-          animate="show"
-          custom={4}
-          variants={FADE_UP}
-          className="mt-6 max-w-xl text-[15px] leading-relaxed text-paper/65"
-        >
-          <strong className="text-paper">
-            FIRSTS does not replace your hiring process.
-          </strong>{" "}
-          It helps candidates arrive better prepared for it.
-        </motion.p>
-
-        <motion.div
-          initial="hidden"
-          animate="show"
-          custom={5}
           variants={FADE_UP}
           className="mt-9 flex flex-col items-center gap-4 sm:flex-row"
         >

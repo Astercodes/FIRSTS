@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Nav } from "@/components/landing/Nav";
 import { Footer } from "@/components/landing/Footer";
 import { FFHero } from "@/components/facilitators/FFHero";
+import { FFIntro } from "@/components/facilitators/FFIntro";
 import { FFRoleDefinition } from "@/components/facilitators/FFRoleDefinition";
 import { FFSpecialize } from "@/components/facilitators/FFSpecialize";
 import { FFChooseTrack } from "@/components/facilitators/FFChooseTrack";
@@ -34,6 +35,7 @@ export default function FacilitatorsMarketingPage() {
       <Nav />
       <main>
         <FFHero />
+        <FFIntro />
         <FFRoleDefinition />
         <FFSpecialize />
         <FFChooseTrack />

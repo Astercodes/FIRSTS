@@ -12,14 +12,6 @@ const FADE_UP: Variants = {
   }),
 };
 
-const MOMENTS = [
-  "Create the right conversation",
-  "Guide an activity",
-  "Help them reflect",
-  "Notice when they are stuck",
-  "Challenge them to go deeper",
-];
-
 export function FFHero() {
   return (
     <section
@@ -74,37 +66,6 @@ export function FFHero() {
           initial="hidden"
           animate="show"
           custom={3}
-          variants={FADE_UP}
-          className="mt-6 flex max-w-xl flex-wrap justify-center gap-2"
-        >
-          {MOMENTS.map((m) => (
-            <span
-              key={m}
-              className="rounded-full border border-white/15 bg-white/5 px-3.5 py-1.5 text-xs font-medium text-paper/70 backdrop-blur"
-            >
-              {m}
-            </span>
-          ))}
-        </motion.div>
-
-        <motion.p
-          initial="hidden"
-          animate="show"
-          custom={4}
-          variants={FADE_UP}
-          className="mt-6 max-w-xl text-[15px] leading-relaxed text-paper/65"
-        >
-          FIRSTS Facilitators help participants engage intentionally with
-          their development, one FIRST at a time. You do not need to
-          arrive knowing how to facilitate every part of FIRSTS. We train
-          you, you practice, you observe experienced facilitators, you
-          co-lead, and you specialize.
-        </motion.p>
-
-        <motion.div
-          initial="hidden"
-          animate="show"
-          custom={5}
           variants={FADE_UP}
           className="mt-9 flex flex-col items-center gap-4 sm:flex-row"
         >
