@@ -73,42 +73,6 @@ export const AUDIENCES: Record<string, AudienceConfig> = {
     ctaHeadline: "Your school already pays for this.",
     ctaBody: "Sign in with your school email, there's no separate account to manage.",
   },
-
-  facilitators: {
-    slug: "facilitators",
-    metaTitle: "For facilitators | FIRSTS",
-    kicker: "For facilitators",
-    headline: "Lead the sessions ",
-    highlight: "you wish you'd had.",
-    subheadline:
-      `Volunteer to run FIRSTS workshops and get real training, a growth path, and a credential for it, not just a line that says you helped. Specialize in the stages you know best instead of a flat, one-size onboarding across all ${TOTAL_STAGES}.`,
-    primaryCta: { label: "Apply to facilitate", href: "/for/facilitators/apply" },
-    secondaryCta: { label: "See the stages", href: "/#stages" },
-    color: "var(--fuchsia-blast)",
-    colorSecondary: "var(--neon-pink)",
-    stats: [
-      { value: "3", label: "certification tiers, co-facilitator through training other facilitators" },
-      { value: `${TOTAL_STAGES}`, label: "stages you can specialize in, not one generic onboarding" },
-      { value: "0", label: "cost to you, real training and a credential in return" },
-    ],
-    features: [
-      { title: "A real exchange, not just an ask", body: "Training, leadership experience, a facilitator community, and a credential you can put on a resume, alongside the mission." },
-      { title: "Specialize, don't generalize", body: "Stage-specific micro-certifications mean you train for the stages you're actually suited to, not every stage at once." },
-      { title: "Shadow before you solo", body: "Shadow an experienced facilitator, co-lead, then run your own sessions, a standard apprenticeship, not a sink-or-swim start." },
-      { title: "Everything provided", body: "A resource library per FIRST: slide templates, facilitator guides, printable worksheets, discussion prompts, timing guides." },
-    ],
-    steps: [
-      { title: "Apply", body: "Tell us your background, which stages you're drawn to, your availability, and online or offline preference." },
-      { title: "Train stage by stage", body: "Complete stage-specific training, then shadow an experienced facilitator running a real session." },
-      { title: "Co-lead, then run your own", body: "Co-facilitate a session or two, then get certified to lead solo and schedule your own workshops." },
-      { title: "Grow into leadership", body: "Build a track record and ratings, then progress toward training other facilitators yourself." },
-    ],
-    scenarioTitle: "What a first term looks like",
-    scenarioBody:
-      "A facilitator interested in Stage One and Stage Four shadowed two sessions, co-led three, then ran eight solo workshops that term, reaching 140 students and earning her Tier 2 certification.",
-    ctaHeadline: "Lead a session, not just a lecture.",
-    ctaBody: "Tell us which stages you're drawn to and when you're free, training starts from there.",
-  },
 };
 
 export function getAudience(slug: string): AudienceConfig | undefined {
