@@ -74,55 +74,6 @@ export const AUDIENCES: Record<string, AudienceConfig> = {
     ctaBody: "Sign in with your school email, there's no separate account to manage.",
   },
 
-  employers: {
-    slug: "employers",
-    metaTitle: "For employers | FIRSTS",
-    kicker: "For employers",
-    headline: "Candidates who've ",
-    highlight: "already done the work.",
-    subheadline:
-      "Every FIRSTS graduate builds a portfolio as they go: a Core Values Audit, a STAR-method interview bank, a Strategic Goal Sheet, real artifacts, not just adjectives on a resume. It's evidence behind the resume, not a replacement for your own interview process.",
-    primaryCta: { label: "Request a demo", href: "/request-demo?for=employers" },
-    secondaryCta: { label: "Sponsor a cohort or school", href: "/request-demo?for=employer-sponsor" },
-    tertiaryCta: { label: "Preview the employer portal", href: "/employer/login" },
-    color: "var(--pink-grapefruit)",
-    colorSecondary: "var(--sunshine-orange)",
-    stats: [
-      { value: `${TOTAL_FIRSTS}`, label: "guided FIRSTS behind every completed portfolio" },
-      { value: "STAR", label: "method interview bank, rehearsed before the phone screen" },
-      { value: "0", label: "sign-up required on your end" },
-    ],
-    features: [
-      { title: "Evidence, not adjectives", body: "A values audit, a strengths inventory, and a goal sheet, real artifacts behind the resume claims." },
-      { title: "A consistent format", body: "Every FIRSTS portfolio follows the same structure, easy to scan across candidates." },
-      { title: "Interview prep already done", body: "Candidates who finish Stage Three arrive with rehearsed STAR-method answers, not first drafts." },
-      { title: "Nothing for you to set up", body: "Candidates share what they've built as part of their application, like any other material." },
-    ],
-    steps: [
-      { title: "A candidate builds their portfolio through FIRSTS", body: "Values, strengths, interview prep, and goals, built stage by stage." },
-      { title: "They share it as part of their application", body: "A link or an export, alongside their resume and cover letter." },
-      { title: "You review it like any other application material", body: "It's a conversation starter, not a replacement for your process." },
-      { title: "The interview moves faster", body: "Both sides already know which stories are worth digging into." },
-    ],
-    scenarioTitle: "What it looks like in a phone screen",
-    scenarioBody:
-      "A hiring manager reviewing two similar resumes asked one candidate for her FIRSTS portfolio. The STAR bank made the phone screen faster, both sides already knew which stories to dig into.",
-    ctaHeadline: "Ask your next candidate for their FIRSTS portfolio.",
-    ctaBody: "It's free for candidates to build, there's nothing for you to sign up for.",
-    partnerSection: {
-      kicker: "Beyond hiring",
-      title: "Sponsor access for a cohort, a school, or your own workforce.",
-      body: "Some employers don't just want better candidates, they want to fund the pipeline. FIRSTS can be sponsored for a specific cohort, a student group, a school or department, or rolled out to your own employees as a professional development benefit.",
-      bullets: [
-        "Sponsor a cohort at a partner school",
-        "Sponsor a student group or department",
-        "Partner directly with a school to bring FIRSTS to their students",
-        "Make FIRSTS accessible to your own employees",
-      ],
-      cta: { label: "Talk to us about sponsorship", href: "/request-demo?for=employer-sponsor" },
-    },
-  },
-
   facilitators: {
     slug: "facilitators",
     metaTitle: "For facilitators | FIRSTS",
