@@ -25,6 +25,11 @@ const STAGE_DOCUMENTS: Partial<Record<StageId, KitDocument[]>> = {
       href: "/facilitator-kits/stage-one/session-plan.pdf",
     },
     {
+      title: "Facilitator Guide",
+      description: "Learning objectives, talking points, and misconceptions to preempt for all 18 FIRSTS.",
+      href: "/facilitator-kits/stage-one/facilitator-guide.pdf",
+    },
+    {
       title: "Session Slides (PDF)",
       description: "Presentation slides for all three sessions, ready to project.",
       href: "/facilitator-kits/stage-one/session-slides.pdf",
@@ -88,6 +93,28 @@ const STAGE_DOCUMENTS: Partial<Record<StageId, KitDocument[]>> = {
       title: "Facilitator Feedback Form",
       description: "A lightweight way to flag what worked and what didn't, cohort to cohort.",
       href: "/facilitator-kits/stage-one/facilitator-feedback-form.pdf",
+    },
+  ],
+  two: [
+    {
+      title: "Completion Criteria",
+      description: "What counts as done, and how it triggers the Stage Two credential.",
+      href: "/facilitator-kits/stage-two/completion-criteria.pdf",
+    },
+    {
+      title: "FAQ",
+      description: "Anticipated participant questions and suggested facilitator responses.",
+      href: "/facilitator-kits/stage-two/faq.pdf",
+    },
+    {
+      title: "Session Debrief / Close-Out Script",
+      description: "How to end each session, summarize, and bridge to what's next.",
+      href: "/facilitator-kits/stage-two/debrief-close-out-script.pdf",
+    },
+    {
+      title: "Facilitator Feedback Form",
+      description: "A lightweight way to flag what worked and what didn't, cohort to cohort.",
+      href: "/facilitator-kits/stage-two/facilitator-feedback-form.pdf",
     },
   ],
 };
