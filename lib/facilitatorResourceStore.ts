@@ -167,6 +167,33 @@ const STAGE_DOCUMENTS: Partial<Record<StageId, KitDocument[]>> = {
       href: "/facilitator-kits/stage-two/facilitator-feedback-form.pdf",
     },
   ],
+  three: [
+    {
+      title: "Session Slides (PDF)",
+      description: "Presentation slides for every session, ready to project.",
+      href: "/facilitator-kits/stage-three/session-slides.pdf",
+    },
+    {
+      title: "Session Slides (PPTX)",
+      description: "The same deck as an editable PowerPoint file, in case you want to adapt it.",
+      href: "/facilitator-kits/stage-three/session-slides.pptx",
+    },
+    {
+      title: "Facilitator Notes / Script",
+      description: "Suggested language for openings, transitions, and prompting discussion, with extra attention to rejection, interview anxiety, and negotiation guilt.",
+      href: "/facilitator-kits/stage-three/facilitator-script.pdf",
+    },
+    {
+      title: "Adaptation Notes",
+      description: "Online vs. in-person format notes for mock interviews, negotiation role-plays, and presentation practice.",
+      href: "/facilitator-kits/stage-three/adaptation-notes.pdf",
+    },
+    {
+      title: "FAQ",
+      description: "Anticipated participant questions and suggested facilitator responses.",
+      href: "/facilitator-kits/stage-three/faq.pdf",
+    },
+  ],
 };
 
 export function stageDocuments(stageId: StageId): KitDocument[] {
