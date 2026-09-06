@@ -97,9 +97,29 @@ const STAGE_DOCUMENTS: Partial<Record<StageId, KitDocument[]>> = {
   ],
   two: [
     {
-      title: "Completion Criteria",
-      description: "What counts as done, and how it triggers the Stage Two credential.",
-      href: "/facilitator-kits/stage-two/completion-criteria.pdf",
+      title: "Session Slides (PDF)",
+      description: "Presentation slides for all six sessions, ready to project.",
+      href: "/facilitator-kits/stage-two/session-slides.pdf",
+    },
+    {
+      title: "Session Slides (PPTX)",
+      description: "The same deck as an editable PowerPoint file, in case you want to adapt it.",
+      href: "/facilitator-kits/stage-two/session-slides.pptx",
+    },
+    {
+      title: "Facilitator Notes / Script",
+      description: "Suggested language for openings, transitions, and prompting discussion, leaning heavily on the vulnerable moments this stage involves.",
+      href: "/facilitator-kits/stage-two/facilitator-script.pdf",
+    },
+    {
+      title: "Adaptation Notes",
+      description: "Online vs. in-person format notes for every hands-on, device-dependent activity in this stage.",
+      href: "/facilitator-kits/stage-two/adaptation-notes.pdf",
+    },
+    {
+      title: "Participant Pre-Work",
+      description: "A short primer to send before each session, so people arrive with the accounts and materials this stage needs.",
+      href: "/facilitator-kits/stage-two/participant-pre-work.pdf",
     },
     {
       title: "FAQ",
@@ -110,6 +130,11 @@ const STAGE_DOCUMENTS: Partial<Record<StageId, KitDocument[]>> = {
       title: "Session Debrief / Close-Out Script",
       description: "How to end each session, summarize, and bridge to what's next.",
       href: "/facilitator-kits/stage-two/debrief-close-out-script.pdf",
+    },
+    {
+      title: "Completion Criteria",
+      description: "What counts as done, and how it triggers the Stage Two credential.",
+      href: "/facilitator-kits/stage-two/completion-criteria.pdf",
     },
     {
       title: "Facilitator Feedback Form",
