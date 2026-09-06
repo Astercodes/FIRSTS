@@ -169,6 +169,16 @@ const STAGE_DOCUMENTS: Partial<Record<StageId, KitDocument[]>> = {
   ],
   three: [
     {
+      title: "Session Plan",
+      description: "Three sessions, mapped and timed, to run all 20 FIRSTS as a live workshop.",
+      href: "/facilitator-kits/stage-three/session-plan.pdf",
+    },
+    {
+      title: "Facilitator Guide",
+      description: "Learning objectives, talking points, and misconceptions to preempt for all 20 FIRSTS.",
+      href: "/facilitator-kits/stage-three/facilitator-guide.pdf",
+    },
+    {
       title: "Session Slides (PDF)",
       description: "Presentation slides for every session, ready to project.",
       href: "/facilitator-kits/stage-three/session-slides.pdf",
@@ -189,9 +199,24 @@ const STAGE_DOCUMENTS: Partial<Record<StageId, KitDocument[]>> = {
       href: "/facilitator-kits/stage-three/adaptation-notes.pdf",
     },
     {
+      title: "Participant Pre-Work",
+      description: "A short primer to send before each session, so people arrive with a real resume, cover letter, and target listings ready.",
+      href: "/facilitator-kits/stage-three/participant-pre-work.pdf",
+    },
+    {
       title: "FAQ",
       description: "Anticipated participant questions and suggested facilitator responses.",
       href: "/facilitator-kits/stage-three/faq.pdf",
+    },
+    {
+      title: "Session Debrief / Close-Out Script",
+      description: "How to end each session, summarize, and bridge to what's next, closing on an encouraging note given how much of this stage touches rejection and anxiety.",
+      href: "/facilitator-kits/stage-three/debrief-close-out-script.pdf",
+    },
+    {
+      title: "Completion Criteria",
+      description: "What counts as done, and how it triggers the Stage Three credential.",
+      href: "/facilitator-kits/stage-three/completion-criteria.pdf",
     },
   ],
 };
