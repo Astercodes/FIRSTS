@@ -10,6 +10,47 @@ export type WorkshopKit = {
   worksheetNote: string;
 };
 
+export type KitDocument = {
+  title: string;
+  description: string;
+  href: string;
+};
+
+/** Real, downloadable facilitator resource documents, added stage by stage as they're written. */
+const STAGE_DOCUMENTS: Partial<Record<StageId, KitDocument[]>> = {
+  one: [
+    {
+      title: "Participant Pre-Work",
+      description: "A short primer to send before each session, so people arrive oriented.",
+      href: "/facilitator-kits/stage-one/participant-pre-work.pdf",
+    },
+    {
+      title: "FAQ",
+      description: "Anticipated participant questions and suggested facilitator responses.",
+      href: "/facilitator-kits/stage-one/faq.pdf",
+    },
+    {
+      title: "Session Debrief / Close-Out Script",
+      description: "How to end each session, summarize, and bridge to what's next.",
+      href: "/facilitator-kits/stage-one/debrief-close-out-script.pdf",
+    },
+    {
+      title: "Completion Criteria",
+      description: "What counts as done, and how it triggers the Stage One credential.",
+      href: "/facilitator-kits/stage-one/completion-criteria.pdf",
+    },
+    {
+      title: "Facilitator Feedback Form",
+      description: "A lightweight way to flag what worked and what didn't, cohort to cohort.",
+      href: "/facilitator-kits/stage-one/facilitator-feedback-form.pdf",
+    },
+  ],
+};
+
+export function stageDocuments(stageId: StageId): KitDocument[] {
+  return STAGE_DOCUMENTS[stageId] ?? [];
+}
+
 const STAGE_FOCUS: Record<StageId, string> = {
   one: "self-awareness and career clarity, often the most emotionally loaded stage",
   two: "professional identity and personal brand, students tend to underclaim here",

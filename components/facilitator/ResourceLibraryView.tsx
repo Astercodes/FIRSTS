@@ -4,7 +4,7 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { STAGES } from "@/lib/dashboardData";
 import { useFacilitatorPortal } from "@/lib/facilitatorStore";
-import { workshopKit } from "@/lib/facilitatorResourceStore";
+import { workshopKit, stageDocuments } from "@/lib/facilitatorResourceStore";
 
 const ACCENT = "var(--fuchsia-blast)";
 
@@ -30,6 +30,7 @@ export function ResourceLibraryView() {
     <div className="mx-auto max-w-2xl space-y-4">
       {stages.map((stage, i) => {
         const kit = workshopKit(stage.id);
+        const documents = stageDocuments(stage.id);
         const open = openId === stage.id;
         return (
           <motion.div
@@ -48,7 +49,10 @@ export function ResourceLibraryView() {
                 <p className="font-display text-base font-semibold text-ink">
                   {stage.shortLabel} workshop kit
                 </p>
-                <p className="mt-0.5 text-xs text-ink/45">v{kit.version} · guide, prompts, timing, worksheet</p>
+                <p className="mt-0.5 text-xs text-ink/45">
+                  v{kit.version} · guide, prompts, timing, worksheet
+                  {documents.length > 0 ? `, ${documents.length} documents` : ""}
+                </p>
               </div>
               <motion.span
                 animate={{ rotate: open ? 180 : 0 }}
@@ -69,6 +73,39 @@ export function ResourceLibraryView() {
                   className="overflow-hidden"
                 >
                   <div className="space-y-5 border-t border-ink/8 px-7 py-6">
+                    {documents.length > 0 && (
+                      <div>
+                        <p className="mb-2 text-[11px] font-semibold uppercase tracking-wide text-ink/40">
+                          Resource kit documents
+                        </p>
+                        <div className="space-y-2">
+                          {documents.map((doc) => (
+                            <a
+                              key={doc.href}
+                              href={doc.href}
+                              download
+                              className="flex items-center justify-between gap-4 rounded-2xl border border-ink/10 px-4 py-3 transition-colors hover:border-ink/25 hover:bg-paper-dim"
+                            >
+                              <span>
+                                <span className="block text-sm font-semibold text-ink">
+                                  {doc.title}
+                                </span>
+                                <span className="block text-xs text-ink/50">
+                                  {doc.description}
+                                </span>
+                              </span>
+                              <span
+                                className="shrink-0 text-xs font-semibold"
+                                style={{ color: ACCENT }}
+                              >
+                                Download
+                              </span>
+                            </a>
+                          ))}
+                        </div>
+                      </div>
+                    )}
+
                     <div>
                       <p className="mb-2 text-[11px] font-semibold uppercase tracking-wide text-ink/40">
                         Facilitator guide
