@@ -20,6 +20,31 @@ export type KitDocument = {
 const STAGE_DOCUMENTS: Partial<Record<StageId, KitDocument[]>> = {
   one: [
     {
+      title: "Session Slides (PDF)",
+      description: "Presentation slides for all three sessions, ready to project.",
+      href: "/facilitator-kits/stage-one/session-slides.pdf",
+    },
+    {
+      title: "Session Slides (PPTX)",
+      description: "The same deck as an editable PowerPoint file, in case you want to adapt it.",
+      href: "/facilitator-kits/stage-one/session-slides.pptx",
+    },
+    {
+      title: "Facilitator Notes / Script",
+      description: "Suggested language for openings, transitions, and prompting discussion.",
+      href: "/facilitator-kits/stage-one/facilitator-script.pdf",
+    },
+    {
+      title: "Group Versions of Key Exercises",
+      description: "Live, group-adapted versions of the FIRSTS that benefit most from interaction.",
+      href: "/facilitator-kits/stage-one/group-exercises.pdf",
+    },
+    {
+      title: "Adaptation Notes",
+      description: "Online vs. in-person format notes for every activity that changes shape.",
+      href: "/facilitator-kits/stage-one/adaptation-notes.pdf",
+    },
+    {
       title: "Participant Pre-Work",
       description: "A short primer to send before each session, so people arrive oriented.",
       href: "/facilitator-kits/stage-one/participant-pre-work.pdf",
