@@ -194,6 +194,21 @@ const STAGE_DOCUMENTS: Partial<Record<StageId, KitDocument[]>> = {
       href: "/facilitator-kits/stage-three/facilitator-script.pdf",
     },
     {
+      title: "Icebreakers / Openers",
+      description: "One warm-up per session that leans into the shared discomfort of rejection and bad interviews, to lower the stakes before the real prep work begins.",
+      href: "/facilitator-kits/stage-three/icebreakers.pdf",
+    },
+    {
+      title: "Group Versions of Key Exercises",
+      description: "Eight FIRSTS adapted into pair, small-group, or full-panel formats, since interviewing is fundamentally a live, social skill.",
+      href: "/facilitator-kits/stage-three/group-exercises.pdf",
+    },
+    {
+      title: "Discussion Prompts",
+      description: "Open-ended questions to seed group conversation beyond the worksheets, giving real anxiety and war stories genuine room.",
+      href: "/facilitator-kits/stage-three/discussion-prompts.pdf",
+    },
+    {
       title: "Adaptation Notes",
       description: "Online vs. in-person format notes for mock interviews, negotiation role-plays, and presentation practice.",
       href: "/facilitator-kits/stage-three/adaptation-notes.pdf",
@@ -217,6 +232,11 @@ const STAGE_DOCUMENTS: Partial<Record<StageId, KitDocument[]>> = {
       title: "Completion Criteria",
       description: "What counts as done, and how it triggers the Stage Three credential.",
       href: "/facilitator-kits/stage-three/completion-criteria.pdf",
+    },
+    {
+      title: "Facilitator Feedback Form",
+      description: "A lightweight way to flag what worked and what didn't, cohort to cohort.",
+      href: "/facilitator-kits/stage-three/facilitator-feedback-form.pdf",
     },
   ],
 };
