@@ -97,6 +97,16 @@ const STAGE_DOCUMENTS: Partial<Record<StageId, KitDocument[]>> = {
   ],
   two: [
     {
+      title: "Session Plan",
+      description: "Six sessions, mapped and timed, to run all 40 FIRSTS as a live workshop.",
+      href: "/facilitator-kits/stage-two/session-plan.pdf",
+    },
+    {
+      title: "Facilitator Guide",
+      description: "Learning objectives, talking points, and misconceptions to preempt for all 40 FIRSTS.",
+      href: "/facilitator-kits/stage-two/facilitator-guide.pdf",
+    },
+    {
       title: "Session Slides (PDF)",
       description: "Presentation slides for all six sessions, ready to project.",
       href: "/facilitator-kits/stage-two/session-slides.pdf",
@@ -110,6 +120,21 @@ const STAGE_DOCUMENTS: Partial<Record<StageId, KitDocument[]>> = {
       title: "Facilitator Notes / Script",
       description: "Suggested language for openings, transitions, and prompting discussion, leaning heavily on the vulnerable moments this stage involves.",
       href: "/facilitator-kits/stage-two/facilitator-script.pdf",
+    },
+    {
+      title: "Icebreakers / Openers",
+      description: "One diagnostic warm-up per section, built from Stage Two's actual content.",
+      href: "/facilitator-kits/stage-two/icebreakers.pdf",
+    },
+    {
+      title: "Group Versions of Key Exercises",
+      description: "Ten FIRSTS across all six sections adapted into pair, small-group, or role-play formats.",
+      href: "/facilitator-kits/stage-two/group-exercises.pdf",
+    },
+    {
+      title: "Discussion Prompts",
+      description: "Open-ended questions to seed group conversation beyond the worksheets.",
+      href: "/facilitator-kits/stage-two/discussion-prompts.pdf",
     },
     {
       title: "Adaptation Notes",
