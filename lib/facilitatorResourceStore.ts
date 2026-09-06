@@ -20,6 +20,11 @@ export type KitDocument = {
 const STAGE_DOCUMENTS: Partial<Record<StageId, KitDocument[]>> = {
   one: [
     {
+      title: "Session Plan",
+      description: "Three sessions, mapped and timed, to run all 18 FIRSTS as a live workshop.",
+      href: "/facilitator-kits/stage-one/session-plan.pdf",
+    },
+    {
       title: "Session Slides (PDF)",
       description: "Presentation slides for all three sessions, ready to project.",
       href: "/facilitator-kits/stage-one/session-slides.pdf",
@@ -35,9 +40,24 @@ const STAGE_DOCUMENTS: Partial<Record<StageId, KitDocument[]>> = {
       href: "/facilitator-kits/stage-one/facilitator-script.pdf",
     },
     {
+      title: "Group Facilitation Toolkit",
+      description: "Icebreakers, group-adapted exercises, and discussion prompts for live sessions, bundled in one file.",
+      href: "/facilitator-kits/stage-one/group-facilitation-toolkit.pdf",
+    },
+    {
+      title: "Icebreakers / Openers",
+      description: "Short, stage-themed warm-ups tied to what each session actually covers.",
+      href: "/facilitator-kits/stage-one/icebreakers.pdf",
+    },
+    {
       title: "Group Versions of Key Exercises",
       description: "Live, group-adapted versions of the FIRSTS that benefit most from interaction.",
       href: "/facilitator-kits/stage-one/group-exercises.pdf",
+    },
+    {
+      title: "Discussion Prompts",
+      description: "Open-ended questions to seed group conversation beyond the worksheets.",
+      href: "/facilitator-kits/stage-one/discussion-prompts.pdf",
     },
     {
       title: "Adaptation Notes",
