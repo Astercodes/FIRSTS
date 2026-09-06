@@ -61,6 +61,12 @@ function writeProfile(profile: FacilitatorProfile) {
   window.dispatchEvent(new Event(EVENT_NAME));
 }
 
+/** Clears this browser's facilitator profile, used when starting a fresh application. */
+export function clearFacilitatorProfile() {
+  window.localStorage.removeItem(KEY);
+  window.dispatchEvent(new Event(EVENT_NAME));
+}
+
 export function saveFacilitatorBio(bio: string) {
   const existing = readProfile();
   if (!existing) return;

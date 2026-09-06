@@ -3,7 +3,8 @@
 import { useState } from "react";
 import Link from "next/link";
 import { STAGES, type StageId } from "@/lib/dashboardData";
-import { submitApplication, myApplication, useFacilitatorApplications, type FormatPreference } from "@/lib/facilitatorApplicationStore";
+import { submitApplication, myApplication, clearMyApplication, useFacilitatorApplications, type FormatPreference } from "@/lib/facilitatorApplicationStore";
+import { clearFacilitatorProfile } from "@/lib/facilitatorStore";
 
 const ACCENT = "var(--fuchsia-blast)";
 const AVAILABILITY_OPTIONS = ["1 to 3 hrs/month", "4 to 6 hrs/month", "8 to 10 hrs/month", "10+ hrs/month"];
@@ -21,6 +22,19 @@ export function ApplicationForm() {
   const [availability, setAvailability] = useState<string | null>(null);
   const [formatPreference, setFormatPreference] = useState<FormatPreference | null>(null);
   const [submitted, setSubmitted] = useState(false);
+
+  function startOver() {
+    clearMyApplication();
+    clearFacilitatorProfile();
+    setName("");
+    setEmail("");
+    setBackground("");
+    setStagesInterested([]);
+    setPriorExperience("");
+    setAvailability(null);
+    setFormatPreference(null);
+    setSubmitted(false);
+  }
 
   if (existing || submitted) {
     return (
@@ -52,6 +66,13 @@ export function ApplicationForm() {
             Back to facilitators
           </Link>
         </div>
+        <button
+          type="button"
+          onClick={startOver}
+          className="mt-8 text-xs font-medium text-ink/40 underline decoration-ink/20 underline-offset-4 transition-colors hover:text-ink/60"
+        >
+          Not you, or want to change your stages? Start a new application
+        </button>
       </div>
     );
   }

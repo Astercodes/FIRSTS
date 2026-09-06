@@ -123,6 +123,12 @@ export function setApplicationStatus(id: string, status: ApplicationStatus) {
   writeAll([...all, { ...seeded, status }]);
 }
 
+/** Clears this browser's own application, so a new person can apply fresh from a blank form. */
+export function clearMyApplication() {
+  const others = readAll().filter((a) => !a.isMine);
+  writeAll(others);
+}
+
 export function myApplication(all: FacilitatorApplication[]): FacilitatorApplication | undefined {
   return all.find((a) => a.isMine);
 }

@@ -1,9 +1,29 @@
 "use client";
 
 import Link from "next/link";
-import { useFacilitatorPortal } from "@/lib/facilitatorStore";
+import { useRouter } from "next/navigation";
+import { useFacilitatorPortal, clearFacilitatorProfile } from "@/lib/facilitatorStore";
+import { clearMyApplication } from "@/lib/facilitatorApplicationStore";
 
 const COLOR = "var(--fuchsia-blast)";
+
+function StartOverLink() {
+  const router = useRouter();
+  function startOver() {
+    clearMyApplication();
+    clearFacilitatorProfile();
+    router.push("/for/facilitators/apply");
+  }
+  return (
+    <button
+      type="button"
+      onClick={startOver}
+      className="mt-2 text-xs font-medium text-paper/40 underline decoration-paper/20 underline-offset-4 transition-colors hover:text-paper/60"
+    >
+      Not you? Apply as a new facilitator
+    </button>
+  );
+}
 
 export function FacilitatorLoginPanel() {
   const { application, loaded } = useFacilitatorPortal();
@@ -32,10 +52,13 @@ export function FacilitatorLoginPanel() {
 
   if (application.status === "declined") {
     return (
-      <p className="text-center text-sm leading-relaxed text-paper/60">
-        Your application wasn&apos;t accepted this round. Reach out if your availability or focus
-        has changed.
-      </p>
+      <div className="space-y-2 text-center">
+        <p className="text-sm leading-relaxed text-paper/60">
+          Your application wasn&apos;t accepted this round. Reach out if your availability or
+          focus has changed.
+        </p>
+        <StartOverLink />
+      </div>
     );
   }
 
@@ -52,6 +75,7 @@ export function FacilitatorLoginPanel() {
           Thanks, {application.name.split(" ")[0]}. We&apos;re still reviewing your application.
           Your portal unlocks the moment you&apos;re accepted.
         </p>
+        <StartOverLink />
       </div>
     );
   }
@@ -69,6 +93,7 @@ export function FacilitatorLoginPanel() {
       >
         Enter your facilitator portal
       </Link>
+      <StartOverLink />
     </div>
   );
 }
