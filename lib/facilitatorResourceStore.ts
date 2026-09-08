@@ -239,6 +239,33 @@ const STAGE_DOCUMENTS: Partial<Record<StageId, KitDocument[]>> = {
       href: "/facilitator-kits/stage-three/facilitator-feedback-form.pdf",
     },
   ],
+  four: [
+    {
+      title: "Participant Pre-Work",
+      description: "A short primer to send before each session, so people arrive oriented.",
+      href: "/facilitator-kits/stage-four/participant-pre-work.pdf",
+    },
+    {
+      title: "FAQ",
+      description: "Anticipated participant questions and suggested facilitator responses.",
+      href: "/facilitator-kits/stage-four/faq.pdf",
+    },
+    {
+      title: "Session Debrief / Close-Out Script",
+      description: "How to end each session, summarize, and bridge to what's next, closing on genuine commitment rather than just information covered.",
+      href: "/facilitator-kits/stage-four/debrief-close-out-script.pdf",
+    },
+    {
+      title: "Completion Criteria",
+      description: "What counts as done, and how it triggers the Stage Four credential, defined by genuine first use of a habit rather than just a written plan.",
+      href: "/facilitator-kits/stage-four/completion-criteria.pdf",
+    },
+    {
+      title: "Facilitator Feedback Form",
+      description: "A lightweight way to flag what worked and what didn't, cohort to cohort.",
+      href: "/facilitator-kits/stage-four/facilitator-feedback-form.pdf",
+    },
+  ],
 };
 
 export function stageDocuments(stageId: StageId): KitDocument[] {
