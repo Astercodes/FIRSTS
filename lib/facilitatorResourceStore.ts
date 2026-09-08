@@ -241,6 +241,31 @@ const STAGE_DOCUMENTS: Partial<Record<StageId, KitDocument[]>> = {
   ],
   four: [
     {
+      title: "Session Plan",
+      description: "Three sessions, mapped and timed, to run all 25 FIRSTS as a live workshop.",
+      href: "/facilitator-kits/stage-four/session-plan.pdf",
+    },
+    {
+      title: "Facilitator Guide",
+      description: "Learning objectives, talking points, and misconceptions to preempt for all 25 FIRSTS.",
+      href: "/facilitator-kits/stage-four/facilitator-guide.pdf",
+    },
+    {
+      title: "Session Slides (PDF)",
+      description: "Presentation slides for every session, ready to project.",
+      href: "/facilitator-kits/stage-four/session-slides.pdf",
+    },
+    {
+      title: "Facilitator Notes / Script",
+      description: "Suggested language for openings, transitions, and prompting discussion, with extra attention to the rejection, self-doubt, and hardship this stage can surface.",
+      href: "/facilitator-kits/stage-four/facilitator-script.pdf",
+    },
+    {
+      title: "Adaptation Notes",
+      description: "Online vs. in-person format notes for the confidence routine, resilience debrief, and guided visualization.",
+      href: "/facilitator-kits/stage-four/adaptation-notes.pdf",
+    },
+    {
       title: "Participant Pre-Work",
       description: "A short primer to send before each session, so people arrive oriented.",
       href: "/facilitator-kits/stage-four/participant-pre-work.pdf",
