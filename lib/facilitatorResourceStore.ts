@@ -256,9 +256,29 @@ const STAGE_DOCUMENTS: Partial<Record<StageId, KitDocument[]>> = {
       href: "/facilitator-kits/stage-four/session-slides.pdf",
     },
     {
+      title: "Session Slides (PPTX)",
+      description: "The same deck as an editable PowerPoint file, in case you want to adapt it.",
+      href: "/facilitator-kits/stage-four/session-slides.pptx",
+    },
+    {
       title: "Facilitator Notes / Script",
       description: "Suggested language for openings, transitions, and prompting discussion, with extra attention to the rejection, self-doubt, and hardship this stage can surface.",
       href: "/facilitator-kits/stage-four/facilitator-script.pdf",
+    },
+    {
+      title: "Icebreakers / Openers",
+      description: "One warm-up per session that works by confession and humor, so the room admits everyone struggles with this before the real content lands.",
+      href: "/facilitator-kits/stage-four/icebreakers.pdf",
+    },
+    {
+      title: "Group Versions of Key Exercises",
+      description: "Seven FIRSTS adapted into pair, small-group, or full-room formats, for the ones that genuinely strengthen with accountability or outside perspective.",
+      href: "/facilitator-kits/stage-four/group-exercises.pdf",
+    },
+    {
+      title: "Discussion Prompts",
+      description: "Open-ended questions to seed group conversation beyond the worksheets, reading the room before pushing any of these to a full-group share.",
+      href: "/facilitator-kits/stage-four/discussion-prompts.pdf",
     },
     {
       title: "Adaptation Notes",
