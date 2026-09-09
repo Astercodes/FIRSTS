@@ -337,6 +337,31 @@ const STAGE_DOCUMENTS: Partial<Record<StageId, KitDocument[]>> = {
       description: "Open-ended questions to seed group conversation beyond the worksheets, surfacing where each framework has shown up in real, lived decisions.",
       href: "/facilitator-kits/stage-five/discussion-prompts.pdf",
     },
+    {
+      title: "Participant Pre-Work",
+      description: "A short primer to send before each session, so people arrive with a real decision or problem in mind rather than a hypothetical one.",
+      href: "/facilitator-kits/stage-five/participant-pre-work.pdf",
+    },
+    {
+      title: "FAQ",
+      description: "Anticipated participant questions and suggested facilitator responses.",
+      href: "/facilitator-kits/stage-five/faq.pdf",
+    },
+    {
+      title: "Session Debrief / Close-Out Script",
+      description: "How to end each session, summarize, and bridge to what's next, reinforcing which of the thirty frameworks build on which.",
+      href: "/facilitator-kits/stage-five/debrief-close-out-script.pdf",
+    },
+    {
+      title: "Completion Criteria",
+      description: "What counts as done, and how it triggers the Stage Five credential, screening for genuine application over abstract or hypothetical answers.",
+      href: "/facilitator-kits/stage-five/completion-criteria.pdf",
+    },
+    {
+      title: "Facilitator Feedback Form",
+      description: "A lightweight way to flag what worked and what didn't, cohort to cohort.",
+      href: "/facilitator-kits/stage-five/facilitator-feedback-form.pdf",
+    },
   ],
 };
 
