@@ -311,6 +311,33 @@ const STAGE_DOCUMENTS: Partial<Record<StageId, KitDocument[]>> = {
       href: "/facilitator-kits/stage-four/facilitator-feedback-form.pdf",
     },
   ],
+  five: [
+    {
+      title: "Session Plan",
+      description: "Four sessions, mapped and timed, to run all 30 FIRSTS as a live workshop.",
+      href: "/facilitator-kits/stage-five/session-plan.pdf",
+    },
+    {
+      title: "Facilitator Guide",
+      description: "Learning objectives, talking points, and misconceptions to preempt for all 30 FIRSTS.",
+      href: "/facilitator-kits/stage-five/facilitator-guide.pdf",
+    },
+    {
+      title: "Icebreakers / Openers",
+      description: "One opener per session built directly from that session's content, making an abstract reasoning concept concrete before any formal teaching.",
+      href: "/facilitator-kits/stage-five/icebreakers.pdf",
+    },
+    {
+      title: "Group Versions of Key Exercises",
+      description: "Seven FIRSTS adapted into pair or small-group formats, for the blind spots that are genuinely hard to catch working alone.",
+      href: "/facilitator-kits/stage-five/group-exercises.pdf",
+    },
+    {
+      title: "Discussion Prompts",
+      description: "Open-ended questions to seed group conversation beyond the worksheets, surfacing where each framework has shown up in real, lived decisions.",
+      href: "/facilitator-kits/stage-five/discussion-prompts.pdf",
+    },
+  ],
 };
 
 export function stageDocuments(stageId: StageId): KitDocument[] {
