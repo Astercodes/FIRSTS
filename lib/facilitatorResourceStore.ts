@@ -323,6 +323,21 @@ const STAGE_DOCUMENTS: Partial<Record<StageId, KitDocument[]>> = {
       href: "/facilitator-kits/stage-five/facilitator-guide.pdf",
     },
     {
+      title: "Session Slides (PDF)",
+      description: "Presentation slides for every session, ready to project.",
+      href: "/facilitator-kits/stage-five/session-slides.pdf",
+    },
+    {
+      title: "Session Slides (PPTX)",
+      description: "The same deck as an editable PowerPoint file, in case you want to adapt it.",
+      href: "/facilitator-kits/stage-five/session-slides.pptx",
+    },
+    {
+      title: "Facilitator Notes / Script",
+      description: "Suggested language for openings, transitions, and prompting discussion, aimed at pulling participants back to real, concrete examples whenever the conversation drifts abstract.",
+      href: "/facilitator-kits/stage-five/facilitator-script.pdf",
+    },
+    {
       title: "Icebreakers / Openers",
       description: "One opener per session built directly from that session's content, making an abstract reasoning concept concrete before any formal teaching.",
       href: "/facilitator-kits/stage-five/icebreakers.pdf",
@@ -336,6 +351,11 @@ const STAGE_DOCUMENTS: Partial<Record<StageId, KitDocument[]>> = {
       title: "Discussion Prompts",
       description: "Open-ended questions to seed group conversation beyond the worksheets, surfacing where each framework has shown up in real, lived decisions.",
       href: "/facilitator-kits/stage-five/discussion-prompts.pdf",
+    },
+    {
+      title: "Adaptation Notes",
+      description: "Online vs. in-person format notes for every group activity that changes shape, from collaborative map-building to the failure auction.",
+      href: "/facilitator-kits/stage-five/adaptation-notes.pdf",
     },
     {
       title: "Participant Pre-Work",
