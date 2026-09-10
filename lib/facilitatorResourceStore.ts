@@ -385,6 +385,26 @@ const STAGE_DOCUMENTS: Partial<Record<StageId, KitDocument[]>> = {
   ],
   six: [
     {
+      title: "Session Slides (PDF)",
+      description: "Presentation slides for every session, ready to project.",
+      href: "/facilitator-kits/stage-six/session-slides.pdf",
+    },
+    {
+      title: "Session Slides (PPTX)",
+      description: "The same deck as an editable PowerPoint file, in case you want to adapt it.",
+      href: "/facilitator-kits/stage-six/session-slides.pptx",
+    },
+    {
+      title: "Facilitator Notes / Script",
+      description: "Suggested language for openings, transitions, and prompting discussion, leaning heavily on the on-camera and on-the-spot moments this stage involves.",
+      href: "/facilitator-kits/stage-six/facilitator-script.pdf",
+    },
+    {
+      title: "Adaptation Notes",
+      description: "Online vs. in-person format notes for every activity that changes shape, from role-play pairs to the rotating facilitator handoff.",
+      href: "/facilitator-kits/stage-six/adaptation-notes.pdf",
+    },
+    {
       title: "Participant Pre-Work",
       description: "A short primer to send before each session, so people arrive with real material, emails, a reading, a piece of their own work, rather than preparing in the abstract.",
       href: "/facilitator-kits/stage-six/participant-pre-work.pdf",
