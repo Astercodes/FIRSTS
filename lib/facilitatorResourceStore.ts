@@ -455,6 +455,33 @@ const STAGE_DOCUMENTS: Partial<Record<StageId, KitDocument[]>> = {
       href: "/facilitator-kits/stage-six/facilitator-feedback-form.pdf",
     },
   ],
+  seven: [
+    {
+      title: "Participant Pre-Work",
+      description: "A short primer to send before each section, so people arrive with the real dataset, project, or portfolio each section's continuity depends on.",
+      href: "/facilitator-kits/stage-seven/participant-pre-work.pdf",
+    },
+    {
+      title: "FAQ",
+      description: "Anticipated participant questions and suggested facilitator responses, several addressing this stage's scale and pacing directly.",
+      href: "/facilitator-kits/stage-seven/faq.pdf",
+    },
+    {
+      title: "Session Debrief / Close-Out Script",
+      description: "How to end each section and bridge to what's next across all thirteen sub-sessions, so the stage's ninety FIRSTS read as one coherent arc.",
+      href: "/facilitator-kits/stage-seven/debrief-close-out-script.pdf",
+    },
+    {
+      title: "Completion Criteria",
+      description: "What counts as done, and how it triggers the Stage Seven credential, built around spot-checking by section given the stage's genuine scale.",
+      href: "/facilitator-kits/stage-seven/completion-criteria.pdf",
+    },
+    {
+      title: "Facilitator Feedback Form",
+      description: "A lightweight way to flag what worked and what didn't, cohort to cohort.",
+      href: "/facilitator-kits/stage-seven/facilitator-feedback-form.pdf",
+    },
+  ],
 };
 
 export function stageDocuments(stageId: StageId): KitDocument[] {
