@@ -457,6 +457,16 @@ const STAGE_DOCUMENTS: Partial<Record<StageId, KitDocument[]>> = {
   ],
   seven: [
     {
+      title: "Session Plan",
+      description: "Thirteen sub-sessions, mapped and timed, to run all 90 FIRSTS as a live workshop.",
+      href: "/facilitator-kits/stage-seven/session-plan.pdf",
+    },
+    {
+      title: "Facilitator Guide",
+      description: "Learning objectives, talking points, and misconceptions to preempt for all 90 FIRSTS.",
+      href: "/facilitator-kits/stage-seven/facilitator-guide.pdf",
+    },
+    {
       title: "Session Slides (PDF)",
       description: "Presentation slides for every sub-session, ready to project.",
       href: "/facilitator-kits/stage-seven/session-slides.pdf",
@@ -470,6 +480,16 @@ const STAGE_DOCUMENTS: Partial<Record<StageId, KitDocument[]>> = {
       title: "Facilitator Notes / Script",
       description: "Suggested language for openings, transitions, and prompting discussion across all thirteen sub-sessions.",
       href: "/facilitator-kits/stage-seven/facilitator-script.pdf",
+    },
+    {
+      title: "Icebreakers / Openers",
+      description: "One opener per sub-session, thirteen in total, leaning into shared, self-deprecating experience with tools and tech.",
+      href: "/facilitator-kits/stage-seven/icebreakers.pdf",
+    },
+    {
+      title: "Group Versions of Key Exercises",
+      description: "Twelve FIRSTS spanning all six sections adapted into pair, small-group, or role-play formats, for the ones a solo version alone would miss.",
+      href: "/facilitator-kits/stage-seven/group-exercises.pdf",
     },
     {
       title: "Discussion Prompts",
