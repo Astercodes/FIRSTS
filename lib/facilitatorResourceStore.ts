@@ -553,6 +553,26 @@ const STAGE_DOCUMENTS: Partial<Record<StageId, KitDocument[]>> = {
       description: "Open-ended questions to seed group conversation beyond the worksheets, working especially well as closing questions given how interpersonal this stage already is.",
       href: "/facilitator-kits/stage-eight/discussion-prompts.pdf",
     },
+    {
+      title: "FAQ",
+      description: "Anticipated participant questions and suggested facilitator responses, including how to handle a role-play that starts to feel like a real disagreement.",
+      href: "/facilitator-kits/stage-eight/faq.pdf",
+    },
+    {
+      title: "Session Debrief / Close-Out Script",
+      description: "How to end each session, summarize, and bridge to what's next, giving participants genuine closure in a stage that can leave people reflective or vulnerable.",
+      href: "/facilitator-kits/stage-eight/debrief-close-out-script.pdf",
+    },
+    {
+      title: "Completion Criteria",
+      description: "What counts as done, and how it triggers the Stage Eight credential, leaning more heavily on facilitator observation than most stages given how much learning here is live and interpersonal.",
+      href: "/facilitator-kits/stage-eight/completion-criteria.pdf",
+    },
+    {
+      title: "Facilitator Feedback Form",
+      description: "A lightweight way to flag what worked and what didn't, cohort to cohort.",
+      href: "/facilitator-kits/stage-eight/facilitator-feedback-form.pdf",
+    },
   ],
 };
 
