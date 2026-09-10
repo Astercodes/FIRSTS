@@ -527,6 +527,33 @@ const STAGE_DOCUMENTS: Partial<Record<StageId, KitDocument[]>> = {
       href: "/facilitator-kits/stage-seven/facilitator-feedback-form.pdf",
     },
   ],
+  eight: [
+    {
+      title: "Session Plan",
+      description: "Six sessions, mapped and timed, to run all 50 FIRSTS as a live workshop.",
+      href: "/facilitator-kits/stage-eight/session-plan.pdf",
+    },
+    {
+      title: "Facilitator Guide",
+      description: "Learning objectives, talking points, and misconceptions to preempt for all 50 FIRSTS.",
+      href: "/facilitator-kits/stage-eight/facilitator-guide.pdf",
+    },
+    {
+      title: "Icebreakers / Openers",
+      description: "One warm-up per session that exercises the specific muscle, listening, feedback, collaborating, speaking, that session is about to work more seriously.",
+      href: "/facilitator-kits/stage-eight/icebreakers.pdf",
+    },
+    {
+      title: "Group Versions of Key Exercises",
+      description: "Ten FIRSTS across all six sections given a fuller live facilitation script, an observer role, a fishbowl, a rotation, for the ones structure genuinely changes the outcome.",
+      href: "/facilitator-kits/stage-eight/group-exercises.pdf",
+    },
+    {
+      title: "Discussion Prompts",
+      description: "Open-ended questions to seed group conversation beyond the worksheets, working especially well as closing questions given how interpersonal this stage already is.",
+      href: "/facilitator-kits/stage-eight/discussion-prompts.pdf",
+    },
+  ],
 };
 
 export function stageDocuments(stageId: StageId): KitDocument[] {
