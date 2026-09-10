@@ -539,6 +539,21 @@ const STAGE_DOCUMENTS: Partial<Record<StageId, KitDocument[]>> = {
       href: "/facilitator-kits/stage-eight/facilitator-guide.pdf",
     },
     {
+      title: "Session Slides (PDF)",
+      description: "Presentation slides for every session, ready to project.",
+      href: "/facilitator-kits/stage-eight/session-slides.pdf",
+    },
+    {
+      title: "Session Slides (PPTX)",
+      description: "The same deck as an editable PowerPoint file, in case you want to adapt it.",
+      href: "/facilitator-kits/stage-eight/session-slides.pptx",
+    },
+    {
+      title: "Facilitator Notes / Script",
+      description: "Suggested language for openings, transitions, and prompting discussion, aimed at holding space for the emotional and interpersonal weight this stage carries.",
+      href: "/facilitator-kits/stage-eight/facilitator-script.pdf",
+    },
+    {
       title: "Icebreakers / Openers",
       description: "One warm-up per session that exercises the specific muscle, listening, feedback, collaborating, speaking, that session is about to work more seriously.",
       href: "/facilitator-kits/stage-eight/icebreakers.pdf",
@@ -552,6 +567,16 @@ const STAGE_DOCUMENTS: Partial<Record<StageId, KitDocument[]>> = {
       title: "Discussion Prompts",
       description: "Open-ended questions to seed group conversation beyond the worksheets, working especially well as closing questions given how interpersonal this stage already is.",
       href: "/facilitator-kits/stage-eight/discussion-prompts.pdf",
+    },
+    {
+      title: "Adaptation Notes",
+      description: "Online vs. in-person format notes for every activity that changes shape, with extra emphasis on privacy and psychological safety for the hybrid case.",
+      href: "/facilitator-kits/stage-eight/adaptation-notes.pdf",
+    },
+    {
+      title: "Participant Pre-Work",
+      description: "A short primer to send before each session, helping people arrive emotionally prepared as well as logistically ready.",
+      href: "/facilitator-kits/stage-eight/participant-pre-work.pdf",
     },
     {
       title: "FAQ",
