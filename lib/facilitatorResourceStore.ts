@@ -601,6 +601,11 @@ const STAGE_DOCUMENTS: Partial<Record<StageId, KitDocument[]>> = {
   ],
   nine: [
     {
+      title: "Facilitator Notes / Script",
+      description: "Suggested language for openings, transitions, and prompting discussion, leaning into the accent self-consciousness and live-speaking nervousness this stage surfaces.",
+      href: "/facilitator-kits/stage-nine/facilitator-script.pdf",
+    },
+    {
       title: "Icebreakers / Openers",
       description: "Six fast, physical warm-ups, one per session, each rehearsing that session's core skill before its vocabulary list is formally introduced.",
       href: "/facilitator-kits/stage-nine/icebreakers.pdf",
@@ -614,6 +619,26 @@ const STAGE_DOCUMENTS: Partial<Record<StageId, KitDocument[]>> = {
       title: "Discussion Prompts",
       description: "Open-ended questions to seed group conversation beyond the worksheets, connecting each session's vocabulary to a genuine memory or experience.",
       href: "/facilitator-kits/stage-nine/discussion-prompts.pdf",
+    },
+    {
+      title: "Adaptation Notes",
+      description: "Online vs. in-person format notes for every activity that changes shape, with a single shared clock recommended for the stage's timed games in hybrid settings.",
+      href: "/facilitator-kits/stage-nine/adaptation-notes.pdf",
+    },
+    {
+      title: "Participant Pre-Work",
+      description: "A short primer to send before each session, lighter than most stages but with a real writing sample requested ahead of Session 2.",
+      href: "/facilitator-kits/stage-nine/participant-pre-work.pdf",
+    },
+    {
+      title: "FAQ",
+      description: "Anticipated participant questions and suggested facilitator responses, including how to reassure participants worried about accent or non-native fluency.",
+      href: "/facilitator-kits/stage-nine/faq.pdf",
+    },
+    {
+      title: "Session Debrief / Close-Out Script",
+      description: "How to end each session, summarize, and bridge to what's next, reinforcing that active use, not passive recognition, is the actual goal.",
+      href: "/facilitator-kits/stage-nine/debrief-close-out-script.pdf",
     },
     {
       title: "Completion Criteria",
