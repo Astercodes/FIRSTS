@@ -599,6 +599,33 @@ const STAGE_DOCUMENTS: Partial<Record<StageId, KitDocument[]>> = {
       href: "/facilitator-kits/stage-eight/facilitator-feedback-form.pdf",
     },
   ],
+  nine: [
+    {
+      title: "Icebreakers / Openers",
+      description: "Six fast, physical warm-ups, one per session, each rehearsing that session's core skill before its vocabulary list is formally introduced.",
+      href: "/facilitator-kits/stage-nine/icebreakers.pdf",
+    },
+    {
+      title: "Group Versions of Key Exercises",
+      description: "Ten FIRSTS across all six sections adapted into circle drills, relay exercises, mock simulations, and games that test whether vocabulary has become usable under real, live conditions.",
+      href: "/facilitator-kits/stage-nine/group-exercises.pdf",
+    },
+    {
+      title: "Discussion Prompts",
+      description: "Open-ended questions to seed group conversation beyond the worksheets, connecting each session's vocabulary to a genuine memory or experience.",
+      href: "/facilitator-kits/stage-nine/discussion-prompts.pdf",
+    },
+    {
+      title: "Completion Criteria",
+      description: "What counts as done, and how it triggers the Stage Nine credential, with a standard explicitly stricter about originality and live spoken participation than a stage built around reflection alone.",
+      href: "/facilitator-kits/stage-nine/completion-criteria.pdf",
+    },
+    {
+      title: "Facilitator Feedback Form",
+      description: "A lightweight way to flag what worked and what didn't, cohort to cohort.",
+      href: "/facilitator-kits/stage-nine/facilitator-feedback-form.pdf",
+    },
+  ],
 };
 
 export function stageDocuments(stageId: StageId): KitDocument[] {
