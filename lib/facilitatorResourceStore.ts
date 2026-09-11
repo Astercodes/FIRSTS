@@ -601,6 +601,26 @@ const STAGE_DOCUMENTS: Partial<Record<StageId, KitDocument[]>> = {
   ],
   nine: [
     {
+      title: "Session Plan",
+      description: "Six sessions, mapped and timed, to run all 38 FIRSTS as a live workshop.",
+      href: "/facilitator-kits/stage-nine/session-plan.pdf",
+    },
+    {
+      title: "Facilitator Guide",
+      description: "Learning objectives, talking points, and misconceptions to preempt for all 38 FIRSTS.",
+      href: "/facilitator-kits/stage-nine/facilitator-guide.pdf",
+    },
+    {
+      title: "Session Slides (PDF)",
+      description: "Presentation slides for every session, ready to project.",
+      href: "/facilitator-kits/stage-nine/session-slides.pdf",
+    },
+    {
+      title: "Session Slides (PPTX)",
+      description: "The same deck as an editable PowerPoint file, in case you want to adapt it.",
+      href: "/facilitator-kits/stage-nine/session-slides.pptx",
+    },
+    {
       title: "Facilitator Notes / Script",
       description: "Suggested language for openings, transitions, and prompting discussion, leaning into the accent self-consciousness and live-speaking nervousness this stage surfaces.",
       href: "/facilitator-kits/stage-nine/facilitator-script.pdf",
