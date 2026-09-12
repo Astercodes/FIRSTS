@@ -745,6 +745,31 @@ const STAGE_DOCUMENTS: Partial<Record<StageId, KitDocument[]>> = {
   ],
   eleven: [
     {
+      title: "Session Slides (PDF)",
+      description: "Presentation slides for every session, ready to project.",
+      href: "/facilitator-kits/stage-eleven/session-slides.pdf",
+    },
+    {
+      title: "Session Slides (PPTX)",
+      description: "The same deck as an editable PowerPoint file, in case you want to adapt it.",
+      href: "/facilitator-kits/stage-eleven/session-slides.pptx",
+    },
+    {
+      title: "Facilitator Notes / Script",
+      description: "Suggested language for openings, transitions, and prompting discussion, aimed at normalizing tool-gap embarrassment rather than the vulnerability other stages surface.",
+      href: "/facilitator-kits/stage-eleven/facilitator-script.pdf",
+    },
+    {
+      title: "Discussion Prompts",
+      description: "Open-ended questions to seed group conversation beyond the worksheets, surfacing real, lived experience with tools, habits, and technology.",
+      href: "/facilitator-kits/stage-eleven/discussion-prompts.pdf",
+    },
+    {
+      title: "Adaptation Notes",
+      description: "Online vs. in-person format notes for every activity that changes shape, with specific attention to screen-sharing needs for hands-on tool practice.",
+      href: "/facilitator-kits/stage-eleven/adaptation-notes.pdf",
+    },
+    {
       title: "Participant Pre-Work",
       description: "A short primer to send before each session, with real GitHub and AI tool account setup requested ahead of time so session time goes to practice, not setup.",
       href: "/facilitator-kits/stage-eleven/participant-pre-work.pdf",
