@@ -673,6 +673,31 @@ const STAGE_DOCUMENTS: Partial<Record<StageId, KitDocument[]>> = {
   ],
   ten: [
     {
+      title: "Session Slides (PDF)",
+      description: "Presentation slides for every session, ready to project.",
+      href: "/facilitator-kits/stage-ten/session-slides.pdf",
+    },
+    {
+      title: "Session Slides (PPTX)",
+      description: "The same deck as an editable PowerPoint file, in case you want to adapt it.",
+      href: "/facilitator-kits/stage-ten/session-slides.pptx",
+    },
+    {
+      title: "Facilitator Notes / Script",
+      description: "Suggested language for openings, transitions, and prompting discussion, with a Tricky Moments section for the most personally revealing stage in the program so far.",
+      href: "/facilitator-kits/stage-ten/facilitator-script.pdf",
+    },
+    {
+      title: "Discussion Prompts",
+      description: "Open-ended questions to seed group conversation beyond the worksheets, with extra attention to consent given how personal this stage's material is.",
+      href: "/facilitator-kits/stage-ten/discussion-prompts.pdf",
+    },
+    {
+      title: "Adaptation Notes",
+      description: "Online vs. in-person format notes for every activity that changes shape, flagging the trust-building exercise as one that genuinely works better in person.",
+      href: "/facilitator-kits/stage-ten/adaptation-notes.pdf",
+    },
+    {
       title: "Participant Pre-Work",
       description: "A short primer to send before each session, asking people to arrive with a real friendship, project, or mentor prospect in mind rather than a hypothetical one.",
       href: "/facilitator-kits/stage-ten/participant-pre-work.pdf",
