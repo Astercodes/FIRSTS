@@ -745,6 +745,16 @@ const STAGE_DOCUMENTS: Partial<Record<StageId, KitDocument[]>> = {
   ],
   eleven: [
     {
+      title: "Session Plan",
+      description: "Three sessions, mapped and timed, to run all 30 FIRSTS as a live workshop.",
+      href: "/facilitator-kits/stage-eleven/session-plan.pdf",
+    },
+    {
+      title: "Facilitator Guide",
+      description: "Learning objectives, talking points, and misconceptions to preempt for all 30 FIRSTS.",
+      href: "/facilitator-kits/stage-eleven/facilitator-guide.pdf",
+    },
+    {
       title: "Session Slides (PDF)",
       description: "Presentation slides for every session, ready to project.",
       href: "/facilitator-kits/stage-eleven/session-slides.pdf",
@@ -758,6 +768,16 @@ const STAGE_DOCUMENTS: Partial<Record<StageId, KitDocument[]>> = {
       title: "Facilitator Notes / Script",
       description: "Suggested language for openings, transitions, and prompting discussion, aimed at normalizing tool-gap embarrassment rather than the vulnerability other stages surface.",
       href: "/facilitator-kits/stage-eleven/facilitator-script.pdf",
+    },
+    {
+      title: "Icebreakers / Openers",
+      description: "One warm-up per session, each using a real device or tool already open so the warm-up itself is a small piece of genuine hands-on practice.",
+      href: "/facilitator-kits/stage-eleven/icebreakers.pdf",
+    },
+    {
+      title: "Group Versions of Key Exercises",
+      description: "Seven FIRSTS across all three sections adapted into pair, small-group, or peer-teaching formats, since explaining a feature you just learned confirms you've actually learned it.",
+      href: "/facilitator-kits/stage-eleven/group-exercises.pdf",
     },
     {
       title: "Discussion Prompts",
