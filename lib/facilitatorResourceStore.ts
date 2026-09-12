@@ -743,6 +743,33 @@ const STAGE_DOCUMENTS: Partial<Record<StageId, KitDocument[]>> = {
       href: "/facilitator-kits/stage-ten/facilitator-feedback-form.pdf",
     },
   ],
+  eleven: [
+    {
+      title: "Participant Pre-Work",
+      description: "A short primer to send before each session, with real GitHub and AI tool account setup requested ahead of time so session time goes to practice, not setup.",
+      href: "/facilitator-kits/stage-eleven/participant-pre-work.pdf",
+    },
+    {
+      title: "FAQ",
+      description: "Anticipated participant questions and suggested facilitator responses, including how to reassure participants who feel behind on basic tools everyone else already knows.",
+      href: "/facilitator-kits/stage-eleven/faq.pdf",
+    },
+    {
+      title: "Session Debrief / Close-Out Script",
+      description: "How to end each session, summarize, and bridge to what's next, reassuring participants that partial or imperfect completion of a technical exercise is still genuine progress.",
+      href: "/facilitator-kits/stage-eleven/debrief-close-out-script.pdf",
+    },
+    {
+      title: "Completion Criteria",
+      description: "What counts as done, and how it triggers the Stage Eleven credential, leaning on direct facilitator spot-check of hands-on artifacts rather than self-report alone.",
+      href: "/facilitator-kits/stage-eleven/completion-criteria.pdf",
+    },
+    {
+      title: "Facilitator Feedback Form",
+      description: "A lightweight way to flag what worked and what didn't, cohort to cohort.",
+      href: "/facilitator-kits/stage-eleven/facilitator-feedback-form.pdf",
+    },
+  ],
 };
 
 export function stageDocuments(stageId: StageId): KitDocument[] {
