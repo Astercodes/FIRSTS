@@ -673,6 +673,16 @@ const STAGE_DOCUMENTS: Partial<Record<StageId, KitDocument[]>> = {
   ],
   ten: [
     {
+      title: "Session Plan",
+      description: "Three sessions, mapped and timed, to run all 30 FIRSTS as a live workshop.",
+      href: "/facilitator-kits/stage-ten/session-plan.pdf",
+    },
+    {
+      title: "Facilitator Guide",
+      description: "Learning objectives, talking points, and misconceptions to preempt for all 30 FIRSTS.",
+      href: "/facilitator-kits/stage-ten/facilitator-guide.pdf",
+    },
+    {
       title: "Session Slides (PDF)",
       description: "Presentation slides for every session, ready to project.",
       href: "/facilitator-kits/stage-ten/session-slides.pdf",
@@ -686,6 +696,16 @@ const STAGE_DOCUMENTS: Partial<Record<StageId, KitDocument[]>> = {
       title: "Facilitator Notes / Script",
       description: "Suggested language for openings, transitions, and prompting discussion, with a Tricky Moments section for the most personally revealing stage in the program so far.",
       href: "/facilitator-kits/stage-ten/facilitator-script.pdf",
+    },
+    {
+      title: "Icebreakers / Openers",
+      description: "One warm-up per session, each surfacing in the group's own words the exact distinction that session's formal FIRSTS are about to name explicitly.",
+      href: "/facilitator-kits/stage-ten/icebreakers.pdf",
+    },
+    {
+      title: "Group Versions of Key Exercises",
+      description: "Eight FIRSTS across all three sections given a fuller live facilitation script, kept at appropriate stakes for a workshop setting given how much real vulnerability this stage touches.",
+      href: "/facilitator-kits/stage-ten/group-exercises.pdf",
     },
     {
       title: "Discussion Prompts",
