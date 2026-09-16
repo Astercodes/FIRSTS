@@ -889,6 +889,16 @@ const STAGE_DOCUMENTS: Partial<Record<StageId, KitDocument[]>> = {
   ],
   thirteen: [
     {
+      title: "Session Plan",
+      description: "The three sessions mapped and timed, Team Foundations, Working Together in Practice, and Navigating Difficulty & Closing Out, so all thirty FIRSTS run as a live workshop.",
+      href: "/facilitator-kits/stage-thirteen/session-plan.pdf",
+    },
+    {
+      title: "Facilitator Guide",
+      description: "Learning objectives, key talking points, and common misconceptions to preempt for every FIRST in the stage.",
+      href: "/facilitator-kits/stage-thirteen/facilitator-guide.pdf",
+    },
+    {
       title: "Session Slides (PDF)",
       description: "Presentation slides for every session, ready to project.",
       href: "/facilitator-kits/stage-thirteen/session-slides.pdf",
@@ -907,6 +917,16 @@ const STAGE_DOCUMENTS: Partial<Record<StageId, KitDocument[]>> = {
       title: "Discussion Prompts",
       description: "Open-ended questions to seed group conversation beyond the worksheets, drawing on participants' real, lived experience of being on a team, good and bad.",
       href: "/facilitator-kits/stage-thirteen/discussion-prompts.pdf",
+    },
+    {
+      title: "Icebreakers / Openers",
+      description: "Short, session-themed warm-ups that let participants feel a version of the session's core lesson in miniature before it's named explicitly.",
+      href: "/facilitator-kits/stage-thirteen/icebreakers.pdf",
+    },
+    {
+      title: "Group Versions of Key Exercises",
+      description: "Live, group-adapted versions of the FIRSTS that benefit most from a real team, from a simultaneous-reveal goal check to a concerns-first consensus build.",
+      href: "/facilitator-kits/stage-thirteen/group-exercises.pdf",
     },
     {
       title: "Adaptation Notes",
