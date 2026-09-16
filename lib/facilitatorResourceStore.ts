@@ -817,6 +817,16 @@ const STAGE_DOCUMENTS: Partial<Record<StageId, KitDocument[]>> = {
   ],
   twelve: [
     {
+      title: "Session Plan",
+      description: "The three sessions mapped and timed, Leadership Foundations, Leading & Developing People, and Advanced & Reflective Leadership, so all thirty FIRSTS run as a live workshop.",
+      href: "/facilitator-kits/stage-twelve/session-plan.pdf",
+    },
+    {
+      title: "Facilitator Guide",
+      description: "Learning objectives, key talking points, and common misconceptions to preempt for every FIRST in the stage.",
+      href: "/facilitator-kits/stage-twelve/facilitator-guide.pdf",
+    },
+    {
       title: "Session Slides (PDF)",
       description: "Presentation slides for every session, ready to project.",
       href: "/facilitator-kits/stage-twelve/session-slides.pdf",
@@ -835,6 +845,16 @@ const STAGE_DOCUMENTS: Partial<Record<StageId, KitDocument[]>> = {
       title: "Discussion Prompts",
       description: "Open-ended questions to seed group conversation beyond the worksheets, working just as well drawing on being led by someone else as on participants' own leadership experience.",
       href: "/facilitator-kits/stage-twelve/discussion-prompts.pdf",
+    },
+    {
+      title: "Icebreakers / Openers",
+      description: "Short, session-themed warm-ups that surface participants' existing lived experience with leadership before any formal teaching begins.",
+      href: "/facilitator-kits/stage-twelve/icebreakers.pdf",
+    },
+    {
+      title: "Group Versions of Key Exercises",
+      description: "Live, group-adapted versions of the FIRSTS that benefit most from an actual listener, from peer-mirrored style assessment to a mediator fishbowl for conflict handling.",
+      href: "/facilitator-kits/stage-twelve/group-exercises.pdf",
     },
     {
       title: "Adaptation Notes",
