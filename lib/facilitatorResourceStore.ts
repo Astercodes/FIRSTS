@@ -889,6 +889,31 @@ const STAGE_DOCUMENTS: Partial<Record<StageId, KitDocument[]>> = {
   ],
   thirteen: [
     {
+      title: "Session Slides (PDF)",
+      description: "Presentation slides for every session, ready to project.",
+      href: "/facilitator-kits/stage-thirteen/session-slides.pdf",
+    },
+    {
+      title: "Session Slides (PPTX)",
+      description: "The same deck as an editable PowerPoint file, in case you want to adapt it.",
+      href: "/facilitator-kits/stage-thirteen/session-slides.pptx",
+    },
+    {
+      title: "Facilitator Notes / Script",
+      description: "Suggested language for openings, transitions, in-the-moment discussion prompting, and tricky moments where real team dynamics commonly complicate an exercise.",
+      href: "/facilitator-kits/stage-thirteen/facilitator-script.pdf",
+    },
+    {
+      title: "Discussion Prompts",
+      description: "Open-ended questions to seed group conversation beyond the worksheets, drawing on participants' real, lived experience of being on a team, good and bad.",
+      href: "/facilitator-kits/stage-thirteen/discussion-prompts.pdf",
+    },
+    {
+      title: "Adaptation Notes",
+      description: "Online vs. in-person format notes for every structured team exercise that changes shape, from simultaneous reveals to the start/stop/continue retrospective.",
+      href: "/facilitator-kits/stage-thirteen/adaptation-notes.pdf",
+    },
+    {
       title: "Participant Pre-Work",
       description: "A short primer to send before each session, so people arrive with a real team project to reference throughout the stage.",
       href: "/facilitator-kits/stage-thirteen/participant-pre-work.pdf",
