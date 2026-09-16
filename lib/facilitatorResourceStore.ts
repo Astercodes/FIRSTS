@@ -822,6 +822,31 @@ const STAGE_DOCUMENTS: Partial<Record<StageId, KitDocument[]>> = {
       href: "/facilitator-kits/stage-twelve/session-slides.pdf",
     },
     {
+      title: "Session Slides (PPTX)",
+      description: "The same deck as an editable PowerPoint file, in case you want to adapt it.",
+      href: "/facilitator-kits/stage-twelve/session-slides.pptx",
+    },
+    {
+      title: "Facilitator Notes / Script",
+      description: "Suggested language for openings, transitions, and prompting discussion, with specific support for participants who don't yet have real leadership context to draw on.",
+      href: "/facilitator-kits/stage-twelve/facilitator-script.pdf",
+    },
+    {
+      title: "Discussion Prompts",
+      description: "Open-ended questions to seed group conversation beyond the worksheets, working just as well drawing on being led by someone else as on participants' own leadership experience.",
+      href: "/facilitator-kits/stage-twelve/discussion-prompts.pdf",
+    },
+    {
+      title: "Adaptation Notes",
+      description: "Online vs. in-person format notes for every activity that changes shape, with attention to keeping fishbowl volunteers in the same medium in a hybrid session.",
+      href: "/facilitator-kits/stage-twelve/adaptation-notes.pdf",
+    },
+    {
+      title: "Participant Pre-Work",
+      description: "A short primer to send before each session, asking people to arrive with a real person, decision, or influence situation already in mind.",
+      href: "/facilitator-kits/stage-twelve/participant-pre-work.pdf",
+    },
+    {
       title: "FAQ",
       description: "Anticipated participant questions and suggested facilitator responses, including what to do without a formal leadership title or a current difficult decision to reference.",
       href: "/facilitator-kits/stage-twelve/faq.pdf",
