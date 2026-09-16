@@ -815,6 +815,33 @@ const STAGE_DOCUMENTS: Partial<Record<StageId, KitDocument[]>> = {
       href: "/facilitator-kits/stage-eleven/facilitator-feedback-form.pdf",
     },
   ],
+  twelve: [
+    {
+      title: "Session Slides (PDF)",
+      description: "Presentation slides for every session, ready to project.",
+      href: "/facilitator-kits/stage-twelve/session-slides.pdf",
+    },
+    {
+      title: "FAQ",
+      description: "Anticipated participant questions and suggested facilitator responses, including what to do without a formal leadership title or a current difficult decision to reference.",
+      href: "/facilitator-kits/stage-twelve/faq.pdf",
+    },
+    {
+      title: "Session Debrief / Close-Out Script",
+      description: "How to end each session, summarize, and bridge to what's next, helping participants see the throughline across thirty FIRSTS rather than a disconnected list.",
+      href: "/facilitator-kits/stage-twelve/debrief-close-out-script.pdf",
+    },
+    {
+      title: "Completion Criteria",
+      description: "What counts as done, and how it triggers the Stage Twelve credential, with particular attention to whether the capstone Leadership Philosophy and Development Plan are genuinely specific rather than generic.",
+      href: "/facilitator-kits/stage-twelve/completion-criteria.pdf",
+    },
+    {
+      title: "Facilitator Feedback Form",
+      description: "A lightweight way to flag what worked and what didn't, cohort to cohort.",
+      href: "/facilitator-kits/stage-twelve/facilitator-feedback-form.pdf",
+    },
+  ],
 };
 
 export function stageDocuments(stageId: StageId): KitDocument[] {
