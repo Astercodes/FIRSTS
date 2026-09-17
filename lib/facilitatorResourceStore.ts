@@ -1031,6 +1031,33 @@ const STAGE_DOCUMENTS: Partial<Record<StageId, KitDocument[]>> = {
       href: "/facilitator-kits/stage-fourteen/facilitator-feedback-form.pdf",
     },
   ],
+  fifteen: [
+    {
+      title: "Session Plan",
+      description: "The three sessions mapped and timed, Understanding How Organizations Work, Analyzing the Business, and Strategic & Reflective Business Thinking, so all twenty-five FIRSTS run as a live workshop.",
+      href: "/facilitator-kits/stage-fifteen/session-plan.pdf",
+    },
+    {
+      title: "Facilitator Guide",
+      description: "Learning objectives, key talking points, and common misconceptions to preempt for every FIRST in the stage.",
+      href: "/facilitator-kits/stage-fifteen/facilitator-guide.pdf",
+    },
+    {
+      title: "Icebreakers / Openers",
+      description: "Short, session-themed warm-ups designed to produce a genuine aha before any formal teaching begins, previewing the exact skill each session's FIRSTS are about to build.",
+      href: "/facilitator-kits/stage-fifteen/icebreakers.pdf",
+    },
+    {
+      title: "Group Versions of Key Exercises",
+      description: "Live, pair-adapted versions of the FIRSTS that benefit most from genuine scrutiny, from a devil's-advocate root-cause challenge to a mock executive panel.",
+      href: "/facilitator-kits/stage-fifteen/group-exercises.pdf",
+    },
+    {
+      title: "Discussion Prompts",
+      description: "Open-ended questions to seed group conversation beyond the worksheets, drawing on participants' real, lived experience of trying to understand and analyze an organization.",
+      href: "/facilitator-kits/stage-fifteen/discussion-prompts.pdf",
+    },
+  ],
 };
 
 export function stageDocuments(stageId: StageId): KitDocument[] {
