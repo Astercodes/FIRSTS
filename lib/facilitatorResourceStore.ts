@@ -971,6 +971,21 @@ const STAGE_DOCUMENTS: Partial<Record<StageId, KitDocument[]>> = {
       href: "/facilitator-kits/stage-fourteen/facilitator-guide.pdf",
     },
     {
+      title: "Session Slides (PDF)",
+      description: "Presentation slides for every session, ready to project.",
+      href: "/facilitator-kits/stage-fourteen/session-slides.pdf",
+    },
+    {
+      title: "Session Slides (PPTX)",
+      description: "The same deck as an editable PowerPoint file, in case you want to adapt it.",
+      href: "/facilitator-kits/stage-fourteen/session-slides.pptx",
+    },
+    {
+      title: "Facilitator Notes / Script",
+      description: "Suggested language for openings, transitions, in-the-moment discussion prompting, and tricky moments where participants commonly get stuck or hesitant.",
+      href: "/facilitator-kits/stage-fourteen/facilitator-script.pdf",
+    },
+    {
       title: "Icebreakers / Openers",
       description: "Short, session-themed warm-ups that start from familiar, non-technical experience so the formal project management vocabulary lands as naming something participants already understand.",
       href: "/facilitator-kits/stage-fourteen/icebreakers.pdf",
@@ -984,6 +999,11 @@ const STAGE_DOCUMENTS: Partial<Record<StageId, KitDocument[]>> = {
       title: "Discussion Prompts",
       description: "Open-ended questions to seed group conversation beyond the worksheets, drawing on participants' real, lived experience of projects going right or wrong.",
       href: "/facilitator-kits/stage-fourteen/discussion-prompts.pdf",
+    },
+    {
+      title: "Adaptation Notes",
+      description: "Online vs. in-person format notes for every pair and small-group exercise that changes shape, from screen-sharing a stakeholder map to pacing a risk speed-round.",
+      href: "/facilitator-kits/stage-fourteen/adaptation-notes.pdf",
     },
     {
       title: "Participant Pre-Work",
