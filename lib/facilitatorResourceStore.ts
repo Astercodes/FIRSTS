@@ -959,6 +959,33 @@ const STAGE_DOCUMENTS: Partial<Record<StageId, KitDocument[]>> = {
       href: "/facilitator-kits/stage-thirteen/facilitator-feedback-form.pdf",
     },
   ],
+  fourteen: [
+    {
+      title: "Session Plan",
+      description: "The three sessions mapped and timed, Project Planning Foundations, Managing Execution, and Modern Methodologies & Closing Out, so all thirty FIRSTS run as a live workshop.",
+      href: "/facilitator-kits/stage-fourteen/session-plan.pdf",
+    },
+    {
+      title: "Facilitator Guide",
+      description: "Learning objectives, key talking points, and common misconceptions to preempt for every FIRST in the stage.",
+      href: "/facilitator-kits/stage-fourteen/facilitator-guide.pdf",
+    },
+    {
+      title: "Icebreakers / Openers",
+      description: "Short, session-themed warm-ups that start from familiar, non-technical experience so the formal project management vocabulary lands as naming something participants already understand.",
+      href: "/facilitator-kits/stage-fourteen/icebreakers.pdf",
+    },
+    {
+      title: "Group Versions of Key Exercises",
+      description: "Live, pair-adapted versions of the FIRSTS that benefit most from an outside partner probing for a specific blind spot, from stakeholder gaps to vague lessons learned.",
+      href: "/facilitator-kits/stage-fourteen/group-exercises.pdf",
+    },
+    {
+      title: "Discussion Prompts",
+      description: "Open-ended questions to seed group conversation beyond the worksheets, drawing on participants' real, lived experience of projects going right or wrong.",
+      href: "/facilitator-kits/stage-fourteen/discussion-prompts.pdf",
+    },
+  ],
 };
 
 export function stageDocuments(stageId: StageId): KitDocument[] {
