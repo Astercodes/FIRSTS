@@ -985,6 +985,31 @@ const STAGE_DOCUMENTS: Partial<Record<StageId, KitDocument[]>> = {
       description: "Open-ended questions to seed group conversation beyond the worksheets, drawing on participants' real, lived experience of projects going right or wrong.",
       href: "/facilitator-kits/stage-fourteen/discussion-prompts.pdf",
     },
+    {
+      title: "Participant Pre-Work",
+      description: "A short primer to send before each session, so people arrive with one real project in mind to carry across the whole stage.",
+      href: "/facilitator-kits/stage-fourteen/participant-pre-work.pdf",
+    },
+    {
+      title: "FAQ",
+      description: "Anticipated participant questions and suggested facilitator responses, including what to do without a formal budget or Agile experience.",
+      href: "/facilitator-kits/stage-fourteen/faq.pdf",
+    },
+    {
+      title: "Session Debrief / Close-Out Script",
+      description: "How to end each session, summarize, and bridge to what's next, helping participants see the throughline across thirty FIRSTS rather than a disconnected checklist.",
+      href: "/facilitator-kits/stage-fourteen/debrief-close-out-script.pdf",
+    },
+    {
+      title: "Completion Criteria",
+      description: "What counts as done, and how it triggers the Stage Fourteen credential, with particular attention to whether planning artifacts are consistently grounded in one real project.",
+      href: "/facilitator-kits/stage-fourteen/completion-criteria.pdf",
+    },
+    {
+      title: "Facilitator Feedback Form",
+      description: "A lightweight way to flag what worked and what didn't, cohort to cohort.",
+      href: "/facilitator-kits/stage-fourteen/facilitator-feedback-form.pdf",
+    },
   ],
 };
 
