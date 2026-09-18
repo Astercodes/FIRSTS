@@ -1082,6 +1082,26 @@ const STAGE_DOCUMENTS: Partial<Record<StageId, KitDocument[]>> = {
       description: "A short primer to send before each session, so people arrive with a real organization in mind to reference throughout the stage.",
       href: "/facilitator-kits/stage-fifteen/participant-pre-work.pdf",
     },
+    {
+      title: "FAQ",
+      description: "Anticipated participant questions and suggested facilitator responses, including how much detail a business case actually needs and what to do without real financial documents.",
+      href: "/facilitator-kits/stage-fifteen/faq.pdf",
+    },
+    {
+      title: "Session Debrief / Close-Out Script",
+      description: "How to end each session, summarize, and bridge to what's next, closing the stage with a shared, honest strength and gap from each participant.",
+      href: "/facilitator-kits/stage-fifteen/debrief-close-out-script.pdf",
+    },
+    {
+      title: "Completion Criteria",
+      description: "What counts as done, and how it triggers the Stage Fifteen credential, with particular weight on whether the Business Case Created is genuinely specific rather than left substantially blank.",
+      href: "/facilitator-kits/stage-fifteen/completion-criteria.pdf",
+    },
+    {
+      title: "Facilitator Feedback Form",
+      description: "A lightweight way to flag what worked and what didn't, cohort to cohort.",
+      href: "/facilitator-kits/stage-fifteen/facilitator-feedback-form.pdf",
+    },
   ],
 };
 
