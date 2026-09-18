@@ -1103,6 +1103,33 @@ const STAGE_DOCUMENTS: Partial<Record<StageId, KitDocument[]>> = {
       href: "/facilitator-kits/stage-fifteen/facilitator-feedback-form.pdf",
     },
   ],
+  sixteen: [
+    {
+      title: "Participant Pre-Work",
+      description: "A short primer to send before each of the five sessions, so people arrive oriented and bring forward what each later session needs, including the Session 3 standard statement.",
+      href: "/facilitator-kits/stage-sixteen/participant-pre-work.pdf",
+    },
+    {
+      title: "FAQ",
+      description: "Anticipated participant questions and suggested facilitator responses, including how to handle a genuine conflict of interest and what counts as a workplace to reference.",
+      href: "/facilitator-kits/stage-sixteen/faq.pdf",
+    },
+    {
+      title: "Session Debrief / Close-Out Script",
+      description: "How to end each of the five sessions, summarize, and bridge to what's next, with particular care easing participants out of Session 4's harder ethical material.",
+      href: "/facilitator-kits/stage-sixteen/debrief-close-out-script.pdf",
+    },
+    {
+      title: "Completion Criteria",
+      description: "What counts as done, and how it triggers the Stage Sixteen credential and the full 16-stage program certificate check.",
+      href: "/facilitator-kits/stage-sixteen/completion-criteria.pdf",
+    },
+    {
+      title: "Facilitator Feedback Form",
+      description: "A lightweight way to flag what worked and what didn't, cohort to cohort, with particular attention to how the ethics-focused sessions landed.",
+      href: "/facilitator-kits/stage-sixteen/facilitator-feedback-form.pdf",
+    },
+  ],
 };
 
 export function stageDocuments(stageId: StageId): KitDocument[] {
