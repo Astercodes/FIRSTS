@@ -1105,6 +1105,16 @@ const STAGE_DOCUMENTS: Partial<Record<StageId, KitDocument[]>> = {
   ],
   sixteen: [
     {
+      title: "Session Plan",
+      description: "All five sessions mapped and timed to run the full 45 FIRSTS as a live workshop, with pre-work and facilitator notes for each.",
+      href: "/facilitator-kits/stage-sixteen/session-plan.pdf",
+    },
+    {
+      title: "Facilitator Guide",
+      description: "A learning objective, key talking points, and common misconceptions to preempt for all 45 FIRSTS across both the workplace professionalism and ethics halves of the stage.",
+      href: "/facilitator-kits/stage-sixteen/facilitator-guide.pdf",
+    },
+    {
       title: "Session Slides (PDF)",
       description: "Slide deck for all five sessions, from Workplace Fundamentals through Applied Ethics & Integrity Reflection, ready to project as-is.",
       href: "/facilitator-kits/stage-sixteen/session-slides.pdf",
@@ -1118,6 +1128,16 @@ const STAGE_DOCUMENTS: Partial<Record<StageId, KitDocument[]>> = {
       title: "Facilitator Notes / Script",
       description: "Session-by-session opening and transition language, discussion-prompting guidance, and notes for handling four particularly tricky moments.",
       href: "/facilitator-kits/stage-sixteen/facilitator-script.pdf",
+    },
+    {
+      title: "Icebreakers / Openers",
+      description: "One warm-up per session built directly from that session's content, with lower-key, reflective openers for the ethics-focused Sessions 4 and 5.",
+      href: "/facilitator-kits/stage-sixteen/icebreakers.pdf",
+    },
+    {
+      title: "Group Versions of Key Exercises",
+      description: "Pair, small-group, and structured-debate adaptations of eight FIRSTS across all five sessions, kept at an appropriate stakes level for the ethics-focused exercises.",
+      href: "/facilitator-kits/stage-sixteen/group-exercises.pdf",
     },
     {
       title: "Discussion Prompts",
