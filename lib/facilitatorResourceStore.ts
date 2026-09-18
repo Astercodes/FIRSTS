@@ -1105,6 +1105,31 @@ const STAGE_DOCUMENTS: Partial<Record<StageId, KitDocument[]>> = {
   ],
   sixteen: [
     {
+      title: "Session Slides (PDF)",
+      description: "Slide deck for all five sessions, from Workplace Fundamentals through Applied Ethics & Integrity Reflection, ready to project as-is.",
+      href: "/facilitator-kits/stage-sixteen/session-slides.pdf",
+    },
+    {
+      title: "Session Slides (PPTX)",
+      description: "The same five-session deck in editable PowerPoint form, for facilitators who want to adapt slides to their own cohort.",
+      href: "/facilitator-kits/stage-sixteen/session-slides.pptx",
+    },
+    {
+      title: "Facilitator Notes / Script",
+      description: "Session-by-session opening and transition language, discussion-prompting guidance, and notes for handling four particularly tricky moments.",
+      href: "/facilitator-kits/stage-sixteen/facilitator-script.pdf",
+    },
+    {
+      title: "Discussion Prompts",
+      description: "Four discussion prompts per session across all five sessions, with an explicit sensitivity note for the ethics-focused Sessions 4 and 5.",
+      href: "/facilitator-kits/stage-sixteen/discussion-prompts.pdf",
+    },
+    {
+      title: "Adaptation Notes",
+      description: "Format adjustments for key exercises like the Norm Detective Panel, Boundary Script Swap, and Competing Values Debate, plus notes on running full-group share-outs.",
+      href: "/facilitator-kits/stage-sixteen/adaptation-notes.pdf",
+    },
+    {
       title: "Participant Pre-Work",
       description: "A short primer to send before each of the five sessions, so people arrive oriented and bring forward what each later session needs, including the Session 3 standard statement.",
       href: "/facilitator-kits/stage-sixteen/participant-pre-work.pdf",
