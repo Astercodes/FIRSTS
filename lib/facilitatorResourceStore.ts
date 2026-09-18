@@ -1043,6 +1043,21 @@ const STAGE_DOCUMENTS: Partial<Record<StageId, KitDocument[]>> = {
       href: "/facilitator-kits/stage-fifteen/facilitator-guide.pdf",
     },
     {
+      title: "Session Slides (PDF)",
+      description: "Presentation slides for every session, ready to project.",
+      href: "/facilitator-kits/stage-fifteen/session-slides.pdf",
+    },
+    {
+      title: "Session Slides (PPTX)",
+      description: "The same deck as an editable PowerPoint file, in case you want to adapt it.",
+      href: "/facilitator-kits/stage-fifteen/session-slides.pptx",
+    },
+    {
+      title: "Facilitator Notes / Script",
+      description: "Suggested language for openings, transitions, in-the-moment discussion prompting, and tricky moments where participants commonly get stuck or discouraged.",
+      href: "/facilitator-kits/stage-fifteen/facilitator-script.pdf",
+    },
+    {
       title: "Icebreakers / Openers",
       description: "Short, session-themed warm-ups designed to produce a genuine aha before any formal teaching begins, previewing the exact skill each session's FIRSTS are about to build.",
       href: "/facilitator-kits/stage-fifteen/icebreakers.pdf",
@@ -1056,6 +1071,16 @@ const STAGE_DOCUMENTS: Partial<Record<StageId, KitDocument[]>> = {
       title: "Discussion Prompts",
       description: "Open-ended questions to seed group conversation beyond the worksheets, drawing on participants' real, lived experience of trying to understand and analyze an organization.",
       href: "/facilitator-kits/stage-fifteen/discussion-prompts.pdf",
+    },
+    {
+      title: "Adaptation Notes",
+      description: "Online vs. in-person format notes for every pair and small-group exercise that changes shape, from a visual competitive-matrix comparison to the Devil's Advocate Round.",
+      href: "/facilitator-kits/stage-fifteen/adaptation-notes.pdf",
+    },
+    {
+      title: "Participant Pre-Work",
+      description: "A short primer to send before each session, so people arrive with a real organization in mind to reference throughout the stage.",
+      href: "/facilitator-kits/stage-fifteen/participant-pre-work.pdf",
     },
   ],
 };
