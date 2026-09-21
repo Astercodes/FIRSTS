@@ -32,7 +32,7 @@ export function FacilitatorProfileView() {
         initial={{ opacity: 0, y: 12 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.35, ease: [0.16, 1, 0.3, 1] }}
-        className="rounded-3xl border border-ink/8 bg-white p-7"
+        className="surface-card rounded-3xl p-7"
       >
         <p className="mb-4 font-display text-base font-semibold text-ink">Your bio</p>
         <textarea
@@ -59,7 +59,7 @@ export function FacilitatorProfileView() {
         initial={{ opacity: 0, y: 12 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.05, duration: 0.35, ease: [0.16, 1, 0.3, 1] }}
-        className="rounded-3xl border border-ink/8 bg-white p-7"
+        className="surface-card rounded-3xl p-7"
       >
         <p className="mb-4 font-display text-base font-semibold text-ink">Application details</p>
         <dl className="space-y-4 text-sm">

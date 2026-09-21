@@ -40,7 +40,7 @@ export function LoungeView() {
         </p>
       </motion.div>
 
-      <div className="rounded-3xl border border-ink/8 bg-white p-5">
+      <div className="surface-card rounded-3xl p-5">
         <textarea
           value={draft}
           onChange={(e) => setDraft(e.target.value)}
@@ -70,7 +70,7 @@ export function LoungeView() {
               initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: Math.min(i * 0.03, 0.3), duration: 0.3 }}
-              className="rounded-3xl border border-ink/8 bg-white p-5"
+              className="surface-card surface-card-interactive rounded-3xl p-5"
             >
               <div className="flex items-center gap-2">
                 <span

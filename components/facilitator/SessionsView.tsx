@@ -59,7 +59,7 @@ export function SessionsView() {
       </AnimatePresence>
 
       {sessions.length === 0 && !showForm && (
-        <div className="rounded-3xl border border-ink/8 bg-white p-7 text-center">
+        <div className="surface-card rounded-3xl p-7 text-center">
           <p className="text-sm text-ink/50">No sessions yet, create your first one above.</p>
         </div>
       )}
@@ -104,7 +104,7 @@ function NewSessionForm({
       exit={{ opacity: 0, height: 0 }}
       transition={{ duration: 0.25, ease: [0.16, 1, 0.3, 1] }}
       onSubmit={handleSubmit}
-      className="overflow-hidden rounded-3xl border border-ink/8 bg-white"
+      className="surface-card overflow-hidden rounded-3xl"
     >
       <div className="space-y-4 p-7">
         <div>
@@ -216,7 +216,7 @@ function SessionCard({ session }: { session: FacilitatorSession }) {
       animate={{ opacity: 1, y: 0 }}
       exit={{ opacity: 0, height: 0 }}
       transition={{ duration: 0.3, ease: [0.16, 1, 0.3, 1] }}
-      className="rounded-3xl border border-ink/8 bg-white p-6"
+      className="surface-card surface-card-interactive rounded-3xl p-6"
     >
       <div className="flex items-start justify-between gap-4">
         <div>

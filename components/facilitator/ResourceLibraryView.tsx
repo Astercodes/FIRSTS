@@ -4,13 +4,21 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { STAGES } from "@/lib/dashboardData";
 import { useFacilitatorPortal } from "@/lib/facilitatorStore";
-import { workshopKit, stageDocuments } from "@/lib/facilitatorResourceStore";
+import { workshopKit, stageDocuments, type KitDocument } from "@/lib/facilitatorResourceStore";
+import { DocumentViewerModal } from "@/components/facilitator/DocumentViewerModal";
 
 const ACCENT = "var(--fuchsia-blast)";
+
+function extensionOf(href: string): string {
+  const clean = href.split(/[?#]/)[0];
+  const dot = clean.lastIndexOf(".");
+  return dot === -1 ? "" : clean.slice(dot + 1).toLowerCase();
+}
 
 export function ResourceLibraryView() {
   const { application } = useFacilitatorPortal();
   const [openId, setOpenId] = useState<string | null>(null);
+  const [viewing, setViewing] = useState<KitDocument | null>(null);
 
   if (!application) return null;
 
@@ -18,7 +26,7 @@ export function ResourceLibraryView() {
 
   if (stages.length === 0) {
     return (
-      <div className="mx-auto max-w-2xl rounded-3xl border border-ink/8 bg-white p-7 text-center">
+      <div className="surface-card mx-auto max-w-2xl rounded-3xl p-7 text-center">
         <p className="text-sm text-ink/50">
           Kits unlock for the stages you applied to facilitate. Nothing here yet.
         </p>
@@ -38,26 +46,34 @@ export function ResourceLibraryView() {
             initial={{ opacity: 0, y: 12 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: i * 0.05, duration: 0.35, ease: [0.16, 1, 0.3, 1] }}
-            className="overflow-hidden rounded-3xl border border-ink/8 bg-white"
+            className="surface-card surface-card-interactive overflow-hidden rounded-3xl"
           >
             <button
               type="button"
               onClick={() => setOpenId(open ? null : stage.id)}
-              className="flex w-full items-center justify-between px-7 py-5 text-left"
+              className="flex w-full items-center justify-between gap-4 px-7 py-5 text-left"
             >
-              <div>
-                <p className="font-display text-base font-semibold text-ink">
-                  {stage.shortLabel} workshop kit
-                </p>
-                <p className="mt-0.5 text-xs text-ink/45">
-                  v{kit.version} · guide, prompts, timing, worksheet
-                  {documents.length > 0 ? `, ${documents.length} documents` : ""}
-                </p>
+              <div className="flex items-center gap-3.5">
+                <span
+                  className="flex h-10 w-10 shrink-0 items-center justify-center rounded-2xl text-sm font-bold text-white"
+                  style={{ background: "linear-gradient(135deg, var(--fuchsia-blast), var(--neon-pink))" }}
+                >
+                  {stage.shortLabel.charAt(0)}
+                </span>
+                <div>
+                  <p className="font-display text-base font-semibold text-ink">
+                    {stage.shortLabel} workshop kit
+                  </p>
+                  <p className="mt-0.5 text-xs text-ink/45">
+                    v{kit.version}
+                    {documents.length > 0 ? ` · ${documents.length} documents` : " · no documents yet"}
+                  </p>
+                </div>
               </div>
               <motion.span
                 animate={{ rotate: open ? 180 : 0 }}
                 transition={{ duration: 0.2 }}
-                className="text-ink/40"
+                className="shrink-0 text-ink/40"
               >
                 ▾
               </motion.span>
@@ -72,97 +88,57 @@ export function ResourceLibraryView() {
                   transition={{ duration: 0.25, ease: [0.16, 1, 0.3, 1] }}
                   className="overflow-hidden"
                 >
-                  <div className="space-y-5 border-t border-ink/8 px-7 py-6">
-                    {documents.length > 0 && (
+                  <div className="border-t border-ink/8 px-7 py-6">
+                    {documents.length > 0 ? (
                       <div>
                         <p className="mb-2 text-[11px] font-semibold uppercase tracking-wide text-ink/40">
                           Resource kit documents
                         </p>
                         <div className="space-y-2">
-                          {documents.map((doc) => (
-                            <a
-                              key={doc.href}
-                              href={doc.href}
-                              download
-                              className="flex items-center justify-between gap-4 rounded-2xl border border-ink/10 px-4 py-3 transition-colors hover:border-ink/25 hover:bg-paper-dim"
-                            >
-                              <span>
-                                <span className="block text-sm font-semibold text-ink">
-                                  {doc.title}
-                                </span>
-                                <span className="block text-xs text-ink/50">
-                                  {doc.description}
-                                </span>
-                              </span>
-                              <span
-                                className="shrink-0 text-xs font-semibold"
-                                style={{ color: ACCENT }}
+                          {documents.map((doc) => {
+                            const ext = extensionOf(doc.href);
+                            const canPreview = ext === "pdf";
+                            return (
+                              <div
+                                key={doc.href}
+                                className="flex items-center gap-4 rounded-2xl border border-ink/10 px-4 py-3 transition-colors hover:border-ink/25 hover:bg-paper-dim"
                               >
-                                Download
-                              </span>
-                            </a>
-                          ))}
+                                <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-paper-dim text-[10px] font-bold uppercase tracking-wide text-ink/50">
+                                  {ext || "file"}
+                                </span>
+                                <div className="min-w-0 flex-1">
+                                  <p className="truncate text-sm font-semibold text-ink">{doc.title}</p>
+                                  <p className="line-clamp-2 text-xs text-ink/50">{doc.description}</p>
+                                </div>
+                                <div className="flex shrink-0 items-center gap-1.5">
+                                  {canPreview && (
+                                    <button
+                                      type="button"
+                                      onClick={() => setViewing(doc)}
+                                      className="rounded-full px-3 py-1.5 text-xs font-semibold text-white transition-opacity hover:opacity-90"
+                                      style={{ background: ACCENT }}
+                                    >
+                                      View
+                                    </button>
+                                  )}
+                                  <a
+                                    href={doc.href}
+                                    download
+                                    className="rounded-full border border-ink/10 px-3 py-1.5 text-xs font-semibold text-ink/60 transition-colors hover:border-ink/25 hover:bg-white"
+                                  >
+                                    Download
+                                  </a>
+                                </div>
+                              </div>
+                            );
+                          })}
                         </div>
                       </div>
+                    ) : (
+                      <p className="text-sm text-ink/45">
+                        This kit&apos;s documents are still being prepared, check back soon.
+                      </p>
                     )}
-
-                    <div>
-                      <p className="mb-2 text-[11px] font-semibold uppercase tracking-wide text-ink/40">
-                        Facilitator guide
-                      </p>
-                      <ol className="space-y-1.5">
-                        {kit.facilitatorGuide.map((line, idx) => (
-                          <li key={idx} className="flex gap-2 text-sm text-ink/70">
-                            <span className="font-semibold" style={{ color: ACCENT }}>
-                              {idx + 1}.
-                            </span>
-                            {line}
-                          </li>
-                        ))}
-                      </ol>
-                    </div>
-
-                    <div>
-                      <p className="mb-2 text-[11px] font-semibold uppercase tracking-wide text-ink/40">
-                        Discussion prompts
-                      </p>
-                      <ul className="space-y-1.5">
-                        {kit.discussionPrompts.map((p, idx) => (
-                          <li key={idx} className="text-sm text-ink/70">
-                            &ldquo;{p}&rdquo;
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-
-                    <div>
-                      <p className="mb-2 text-[11px] font-semibold uppercase tracking-wide text-ink/40">
-                        Timing guide
-                      </p>
-                      <div className="space-y-1.5">
-                        {kit.timingGuide.map((t) => (
-                          <div key={t.segment} className="flex items-center justify-between text-sm">
-                            <span className="text-ink/70">{t.segment}</span>
-                            <span className="font-semibold text-ink/50">{t.minutes} min</span>
-                          </div>
-                        ))}
-                      </div>
-                    </div>
-
-                    <div className="rounded-2xl bg-paper-dim px-4 py-3">
-                      <p className="text-[11px] font-semibold uppercase tracking-wide text-ink/40">
-                        Printable worksheet
-                      </p>
-                      <p className="mt-1 text-xs text-ink/55">{kit.worksheetNote}</p>
-                    </div>
-
-                    <button
-                      type="button"
-                      onClick={() => window.print()}
-                      className="w-full rounded-2xl border border-ink/10 px-5 py-2.5 text-sm font-semibold text-ink/70 transition-colors hover:border-ink/25 hover:bg-paper-dim"
-                    >
-                      Print this kit
-                    </button>
                   </div>
                 </motion.div>
               )}
@@ -170,6 +146,8 @@ export function ResourceLibraryView() {
           </motion.div>
         );
       })}
+
+      <DocumentViewerModal document={viewing} onClose={() => setViewing(null)} />
     </div>
   );
 }

@@ -7,7 +7,7 @@ import { FacilitatorPortalGate } from "@/components/facilitator/FacilitatorPorta
 export default function FacilitatorPortalLayout({ children }: { children: ReactNode }) {
   return (
     <FacilitatorPortalGate>
-      <div className="min-h-[100svh] bg-paper-dim print:bg-white">
+      <div className="portal-bg min-h-[100svh] print:bg-white">
         <FacilitatorSidebar />
         <div className="lg:pl-64 print:pl-0">
           <FacilitatorTopbar />

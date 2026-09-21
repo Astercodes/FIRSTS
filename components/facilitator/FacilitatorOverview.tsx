@@ -29,10 +29,11 @@ export function FacilitatorOverview() {
         initial={{ opacity: 0, y: 16 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.4, ease: [0.16, 1, 0.3, 1] }}
-        className="overflow-hidden rounded-3xl border border-ink/8 bg-white"
+        className="surface-card overflow-hidden rounded-3xl"
       >
-        <div className="relative h-24" style={{ background: BANNER }}>
+        <div className="relative h-28" style={{ background: BANNER }}>
           <div className="absolute inset-0 opacity-20 [background-image:radial-gradient(circle_at_20%_30%,white,transparent_35%),radial-gradient(circle_at_80%_70%,white,transparent_30%)]" />
+          <div className="noise-layer" />
         </div>
 
         <div className="px-7 pb-7">
@@ -110,7 +111,7 @@ export function FacilitatorOverview() {
         initial={{ opacity: 0, y: 12 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.15, duration: 0.4, ease: [0.16, 1, 0.3, 1] }}
-        className="rounded-3xl border border-ink/8 bg-white p-6"
+        className="surface-card rounded-3xl p-6"
       >
         <p className="mb-4 font-display text-base font-semibold text-ink">Getting started</p>
         <div className="space-y-3">
@@ -155,7 +156,7 @@ function StatCard({
       initial={{ opacity: 0, y: 12 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ delay, duration: 0.35, ease: [0.16, 1, 0.3, 1] }}
-      className="rounded-2xl border border-ink/8 bg-white p-5"
+      className="surface-card surface-card-interactive rounded-2xl p-5"
     >
       <p className="font-display text-2xl font-bold text-ink">{value}</p>
       <p className="mt-1 text-xs font-semibold uppercase tracking-wide text-ink/40">{label}</p>

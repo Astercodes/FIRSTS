@@ -97,6 +97,62 @@ body {
   }
 }
 
+/* ---------- Facilitator portal: premium surfaces ---------- */
+
+.portal-bg {
+  background-color: var(--paper-dim);
+  background-image:
+    radial-gradient(60% 50% at 8% 0%, color-mix(in oklab, var(--fuchsia-blast) 7%, transparent) 0%, transparent 60%),
+    radial-gradient(45% 40% at 100% 10%, color-mix(in oklab, var(--tropical-mango) 10%, transparent) 0%, transparent 60%),
+    radial-gradient(50% 45% at 50% 100%, color-mix(in oklab, var(--lime-zest) 6%, transparent) 0%, transparent 65%);
+  background-attachment: fixed;
+}
+
+.surface-card {
+  background: var(--paper);
+  border: 1px solid color-mix(in oklab, var(--ink) 7%, transparent);
+  box-shadow:
+    0 1px 2px color-mix(in oklab, var(--ink) 4%, transparent),
+    0 14px 36px -20px color-mix(in oklab, var(--ink) 24%, transparent);
+}
+
+.surface-card-interactive {
+  transition: box-shadow 0.25s ease, border-color 0.25s ease, transform 0.25s ease;
+}
+
+.surface-card-interactive:hover {
+  border-color: color-mix(in oklab, var(--ink) 12%, transparent);
+  box-shadow:
+    0 1px 2px color-mix(in oklab, var(--ink) 4%, transparent),
+    0 20px 44px -18px color-mix(in oklab, var(--ink) 28%, transparent);
+}
+
+.sidebar-glow {
+  background:
+    radial-gradient(80% 60% at 0% 0%, color-mix(in oklab, var(--fuchsia-blast) 35%, transparent) 0%, transparent 60%),
+    radial-gradient(70% 50% at 100% 100%, color-mix(in oklab, var(--sunshine-orange) 22%, transparent) 0%, transparent 60%),
+    var(--ink);
+}
+
+.btn-citrus {
+  background: linear-gradient(135deg, var(--fuchsia-blast), var(--neon-pink));
+  box-shadow:
+    0 1px 1px color-mix(in oklab, var(--neon-pink) 40%, transparent),
+    0 10px 24px -8px color-mix(in oklab, var(--neon-pink) 60%, transparent);
+  transition: box-shadow 0.2s ease, transform 0.2s ease, opacity 0.2s ease;
+}
+
+.btn-citrus:hover:not(:disabled) {
+  box-shadow:
+    0 1px 1px color-mix(in oklab, var(--neon-pink) 45%, transparent),
+    0 14px 32px -8px color-mix(in oklab, var(--neon-pink) 65%, transparent);
+  transform: translateY(-1px);
+}
+
+.btn-citrus:active:not(:disabled) {
+  transform: translateY(0);
+}
+
 /* Custom scrollbar, thin, brand-tinted */
 ::-webkit-scrollbar {
   width: 10px;

@@ -15,7 +15,7 @@ export function CertificateView() {
 
   if (tier === 0) {
     return (
-      <div className="mx-auto max-w-lg rounded-3xl border border-ink/8 bg-white p-7 text-center print:hidden">
+      <div className="surface-card mx-auto max-w-lg rounded-3xl p-7 text-center print:hidden">
         <p className="text-sm text-ink/55">
           Your certificate unlocks once you earn your first tier, complete training and shadow a
           session to get there.

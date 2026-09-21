@@ -106,7 +106,7 @@ function Card({ children, delay }: { children: React.ReactNode; delay: number })
       initial={{ opacity: 0, y: 12 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ delay, duration: 0.35, ease: [0.16, 1, 0.3, 1] }}
-      className="rounded-3xl border border-ink/8 bg-white p-6"
+      className="surface-card surface-card-interactive rounded-3xl p-6"
     >
       {children}
     </motion.div>
