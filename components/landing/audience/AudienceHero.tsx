@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { motion, type Variants } from "framer-motion";
+import { MiniPeopleBand } from "@/components/illustrations/Scenes";
 import type { AudienceConfig } from "@/lib/audienceContent";
 
 const FADE_UP: Variants = {
@@ -119,6 +120,8 @@ export function AudienceHero({ config }: { config: AudienceConfig }) {
             </div>
           ))}
         </motion.div>
+
+        <MiniPeopleBand className="mt-10" />
       </div>
     </section>
   );

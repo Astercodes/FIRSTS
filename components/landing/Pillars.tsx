@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { Reveal } from "@/components/ui/Reveal";
+import { MentorScene } from "@/components/illustrations/Scenes";
 
 const PILLARS = [
   {
@@ -40,6 +41,9 @@ export function Pillars() {
   return (
     <section id="pillars" className="relative bg-paper px-6 py-28">
       <Reveal className="mx-auto mb-16 max-w-2xl text-center">
+        <div className="mb-6 flex justify-center">
+          <MentorScene className="h-32 sm:h-36" />
+        </div>
         <h2 className="font-display text-4xl font-semibold tracking-tight text-ink sm:text-5xl">
           You don&apos;t have to have everything figured out.
           <br />

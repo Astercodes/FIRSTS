@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { Reveal } from "@/components/ui/Reveal";
+import { CommunityScene } from "@/components/illustrations/Scenes";
 
 const EXPLORE_ITEMS = [
   "Career Spotlights",
@@ -20,6 +21,9 @@ export function Explore() {
   return (
     <section id="explore" className="relative bg-paper-dim px-6 py-28">
       <Reveal className="mx-auto max-w-2xl text-center">
+        <div className="mb-4 flex justify-center">
+          <CommunityScene className="h-28 sm:h-32" />
+        </div>
         <h2 className="font-display text-4xl font-semibold tracking-tight text-ink sm:text-5xl">
           Explore before you decide.
         </h2>

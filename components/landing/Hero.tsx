@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { motion, type Variants } from "framer-motion";
+import { HeroPeopleBand } from "@/components/illustrations/Scenes";
 
 const FADE_UP: Variants = {
   hidden: { opacity: 0, y: 28 },
@@ -163,6 +164,19 @@ export function Hero() {
           </a>
         </motion.div>
       </div>
+
+      <motion.div
+        initial={{ opacity: 0, y: 30 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.9, delay: 1.2, ease: [0.16, 1, 0.3, 1] as const }}
+        className="pointer-events-none absolute inset-x-0 bottom-0 z-[1] hidden justify-center pb-0 sm:flex"
+      >
+        <HeroPeopleBand />
+      </motion.div>
+      <div
+        aria-hidden
+        className="pointer-events-none absolute inset-x-0 bottom-0 z-[2] h-24 bg-gradient-to-t from-[var(--ink)] to-transparent"
+      />
     </section>
   );
 }

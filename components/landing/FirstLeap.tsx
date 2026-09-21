@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { Reveal } from "@/components/ui/Reveal";
+import { CollabScene } from "@/components/illustrations/Scenes";
 
 const QUESTIONS = [
   "Who am I?",
@@ -88,6 +89,7 @@ export function FirstLeap() {
       </div>
 
       <Reveal delay={0.15} className="mx-auto mt-16 flex max-w-2xl flex-col items-center text-center">
+        <CollabScene className="mb-4 h-28 sm:h-32" />
         <h3 className="font-display text-2xl font-semibold text-ink">
           You won&apos;t make the leap alone.
         </h3>

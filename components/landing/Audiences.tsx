@@ -2,14 +2,27 @@
 
 import Link from "next/link";
 import { Reveal } from "@/components/ui/Reveal";
+import { Person, type Pose, type SkinTone, type HairStyle } from "@/components/illustrations/People";
 
-const AUDIENCES = [
+const AUDIENCES: {
+  tag: string;
+  title: string;
+  body: string;
+  color: string;
+  href: string;
+  pose: Pose;
+  skin: SkinTone;
+  hair: HairStyle;
+}[] = [
   {
     tag: "Path A",
     title: "I'm a student at a partner school",
     body: "SSO or roster invite, auto-joined to your cohort, your advisor sees your progress, never your raw reflections, unless you share.",
     color: "var(--neon-pink)",
     href: "/for/partner-schools",
+    pose: "wave",
+    skin: "s2",
+    hair: "curly",
   },
   {
     tag: "Path B",
@@ -17,6 +30,9 @@ const AUDIENCES = [
     body: "Students, grads, and career-changers. Sign up in a minute, work through Stage One at your own pace, export a portfolio when you're ready.",
     color: "var(--sunshine-orange)",
     href: "/for/independent-students",
+    pose: "walk",
+    skin: "s4",
+    hair: "long",
   },
   {
     tag: "Path C",
@@ -24,6 +40,9 @@ const AUDIENCES = [
     body: "Cohort dashboards, at-risk flags, roster sync, and completion analytics, all without ever seeing a student's private reflection.",
     color: "var(--citrus-lime)",
     href: "/for/career-centers",
+    pose: "point",
+    skin: "s1",
+    hair: "bun",
   },
 ];
 
@@ -51,6 +70,13 @@ export function Audiences() {
                   className="absolute -right-10 -top-10 h-32 w-32 rounded-full opacity-15 blur-2xl transition-all duration-500 group-hover:scale-150 group-hover:opacity-25"
                   style={{ background: a.color }}
                   aria-hidden
+                />
+                <Person
+                  pose={a.pose}
+                  skin={a.skin}
+                  hair={a.hair}
+                  outfit={a.color}
+                  className="pointer-events-none absolute -right-2 -top-2 h-24 w-auto opacity-90 transition-transform duration-500 group-hover:-translate-y-1"
                 />
                 <span
                   className="mb-6 inline-block rounded-full px-3 py-1 text-xs font-bold uppercase tracking-wider"

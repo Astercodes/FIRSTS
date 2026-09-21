@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { motion, type Variants } from "framer-motion";
+import { MiniPeopleBand } from "@/components/illustrations/Scenes";
 
 const FADE_UP: Variants = {
   hidden: { opacity: 0, y: 28 },
@@ -88,6 +89,8 @@ export function ISHero() {
             Tell Your School About FIRSTS
           </Link>
         </motion.div>
+
+        <MiniPeopleBand className="mt-12" />
       </div>
     </section>
   );

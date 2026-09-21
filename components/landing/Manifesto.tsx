@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { motion, type Variants } from "framer-motion";
+import { StudyScene } from "@/components/illustrations/Scenes";
 
 const WORDS = [
   "Experiences.",
@@ -25,6 +26,10 @@ export function Manifesto() {
   return (
     <section className="relative overflow-hidden bg-ink px-6 py-28 text-paper">
       <div className="noise-layer" aria-hidden />
+
+      <div className="pointer-events-none absolute bottom-0 left-[4%] hidden opacity-90 lg:block">
+        <StudyScene className="scale-90" />
+      </div>
 
       <motion.div
         initial="hidden"

@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { Reveal } from "@/components/ui/Reveal";
+import { ClosingFigures } from "@/components/illustrations/Scenes";
 
 const MOMENTS = [
   "The question you asked.",
@@ -24,6 +25,8 @@ export function FFClosing() {
         }}
       />
       <div className="noise-layer" aria-hidden />
+
+      <ClosingFigures />
 
       <Reveal className="relative mx-auto flex max-w-2xl flex-col items-center text-center text-paper">
         <h2 className="font-display text-3xl font-semibold leading-tight tracking-tight sm:text-4xl">
