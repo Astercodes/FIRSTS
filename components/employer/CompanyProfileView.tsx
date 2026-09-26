@@ -79,7 +79,7 @@ export function CompanyProfileView() {
         </span>
       </div>
 
-      <section className="rounded-3xl border border-ink/10 bg-white p-6 sm:p-8">
+      <section className="workspace-card rounded-3xl border border-ink/10 bg-white p-6 sm:p-8">
         <p className="mb-3 text-xs font-semibold uppercase tracking-[0.15em] text-ink/45">
           Basics
         </p>
@@ -104,7 +104,7 @@ export function CompanyProfileView() {
         </div>
       </section>
 
-      <section className="rounded-3xl border border-ink/10 bg-white p-6 sm:p-8">
+      <section className="workspace-card rounded-3xl border border-ink/10 bg-white p-6 sm:p-8">
         <p className="mb-3 text-xs font-semibold uppercase tracking-[0.15em] text-ink/45">
           Roles you typically hire for
         </p>
@@ -149,7 +149,7 @@ export function CompanyProfileView() {
         </div>
       </section>
 
-      <section className="rounded-3xl border border-ink/10 bg-white p-6 sm:p-8">
+      <section className="workspace-card rounded-3xl border border-ink/10 bg-white p-6 sm:p-8">
         <p className="mb-1 text-xs font-semibold uppercase tracking-[0.15em] text-ink/45">
           What you look for
         </p>
@@ -192,7 +192,7 @@ export function CompanyProfileView() {
         </div>
       </section>
 
-      <section className="rounded-3xl border border-ink/10 bg-white p-6 sm:p-8">
+      <section className="workspace-card rounded-3xl border border-ink/10 bg-white p-6 sm:p-8">
         <div className="flex items-center justify-between gap-4">
           <div>
             <p className="text-xs font-semibold uppercase tracking-[0.15em] text-ink/45">

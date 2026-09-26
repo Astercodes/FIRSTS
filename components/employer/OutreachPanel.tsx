@@ -29,7 +29,7 @@ export function OutreachPanel({ candidateId, candidateName, openToOutreach }: { 
   }
 
   return (
-    <div className="rounded-3xl border border-ink/10 bg-white p-7">
+    <div className="workspace-card rounded-3xl border border-ink/10 bg-white p-7">
       <p className="mb-1 text-xs font-semibold uppercase tracking-[0.15em] text-ink/45">Message</p>
       <p className="mb-4 text-sm text-ink/55">
         {candidateName.split(" ")[0]} has opted into direct messages from employers.

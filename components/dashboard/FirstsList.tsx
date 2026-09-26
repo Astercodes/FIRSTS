@@ -25,7 +25,7 @@ export function FirstsList({
     .filter((c) => c.items.length > 0);
 
   return (
-    <div className="rounded-3xl border border-ink/8 bg-white p-6 sm:p-7">
+    <div className="workspace-card rounded-3xl border border-ink/8 bg-white p-6 sm:p-7">
       <div className="mb-6 flex flex-wrap items-center justify-between gap-4">
         <div>
           <p className="text-xs font-semibold uppercase tracking-[0.15em] text-ink/45">

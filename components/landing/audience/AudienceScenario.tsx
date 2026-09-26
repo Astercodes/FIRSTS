@@ -5,7 +5,7 @@ import type { AudienceConfig } from "@/lib/audienceContent";
 
 export function AudienceScenario({ config }: { config: AudienceConfig }) {
   return (
-    <section className="relative bg-paper-dim px-6 py-24">
+    <section className="marketing-section relative bg-paper-dim px-6 py-24">
       <div className="mx-auto grid max-w-6xl items-start gap-14 lg:grid-cols-[0.9fr_1.1fr]">
         <Reveal>
           <p

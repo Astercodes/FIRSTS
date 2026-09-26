@@ -18,7 +18,7 @@ const STEPS = [
 
 export function FFHowItWorks() {
   return (
-    <section className="relative bg-paper-dim px-6 py-28">
+    <section className="marketing-section relative bg-paper-dim px-6 py-28">
       <Reveal className="mx-auto max-w-2xl text-center">
         <h2 className="font-display text-4xl font-semibold tracking-tight text-ink sm:text-5xl">
           How it works.
@@ -28,7 +28,7 @@ export function FFHowItWorks() {
       <div className="mx-auto mt-12 max-w-2xl space-y-4">
         {STEPS.map((s, i) => (
           <Reveal key={s.title} delay={(i % 5) * 0.05}>
-            <div className="flex gap-4 rounded-2xl border border-ink/10 bg-white p-5">
+            <div className="design-card flex gap-4 rounded-2xl border border-ink/10 bg-white p-5">
               <span className="font-display text-lg font-bold text-[var(--fuchsia-blast)]">
                 {i + 1}
               </span>

@@ -58,7 +58,7 @@ export function SchemaDoTab({ fields, color, moduleId }: { fields: WorksheetFiel
                 {field.section}
               </p>
             )}
-            <section className="rounded-3xl border border-ink/8 bg-white p-7 sm:p-8">
+            <section className="workspace-card rounded-3xl border border-ink/8 bg-white p-7 sm:p-8">
               <p className="mb-1 text-sm font-semibold text-ink">{field.label}</p>
               {field.hint && <p className="mb-4 text-sm text-ink/55">{field.hint}</p>}
               <div className={field.hint ? "" : "mt-4"}>

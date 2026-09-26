@@ -61,7 +61,7 @@ export function PeerCompareCard({
   const peerAvg = hasDetails ? peerPaceAverage(major, gradYear, stage) : 0;
 
   return (
-    <div className="flex h-full flex-col rounded-3xl border border-ink/8 bg-white p-7">
+    <div className="workspace-card flex h-full flex-col rounded-3xl border border-ink/8 bg-white p-7">
       <div className="flex items-start justify-between gap-3">
         <div>
           <p className="text-xs font-semibold uppercase tracking-[0.15em] text-ink/45">

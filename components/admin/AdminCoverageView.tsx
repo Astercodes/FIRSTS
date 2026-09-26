@@ -10,7 +10,7 @@ export function AdminCoverageView({ roster }: { roster: AdminFacilitatorRecord[]
   const maxCertified = Math.max(1, ...coverage.map((c) => c.certified));
 
   return (
-    <section className="rounded-3xl border border-ink/8 bg-white p-6">
+    <section className="workspace-card rounded-3xl border border-ink/8 bg-white p-6">
       <p className="mb-1 font-display text-base font-semibold text-ink">Coverage by stage</p>
       <p className="mb-5 text-xs text-ink/45">
         Certified facilitators per stage, gaps are where a workshop request would go unfilled.

@@ -68,7 +68,7 @@ export function CoachTab({
   }
 
   return (
-    <div className="rounded-3xl border border-ink/8 bg-white p-6 sm:p-7">
+    <div className="workspace-card rounded-3xl border border-ink/8 bg-white p-6 sm:p-7">
       <span
         className="mb-4 inline-block rounded-full px-3 py-1 text-[11px] font-bold uppercase tracking-wider"
         style={{ color, background: `color-mix(in oklab, ${color} 14%, white)` }}

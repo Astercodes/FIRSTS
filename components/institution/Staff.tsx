@@ -67,7 +67,7 @@ export function Staff() {
       {showInvite && (
         <form
           onSubmit={handleInvite}
-          className="grid gap-4 rounded-3xl border border-ink/10 bg-white p-7 sm:grid-cols-2"
+          className="workspace-card grid gap-4 rounded-3xl border border-ink/10 bg-white p-7 sm:grid-cols-2"
         >
           <label className="block">
             <span className="mb-1.5 block text-xs font-semibold uppercase tracking-wide text-ink/45">Full name</span>
@@ -126,7 +126,7 @@ export function Staff() {
         </form>
       )}
 
-      <div className="rounded-3xl border border-ink/10 bg-white p-2">
+      <div className="workspace-card rounded-3xl border border-ink/10 bg-white p-2">
         <div className="overflow-x-auto">
           <table className="w-full min-w-[640px] border-collapse text-sm">
             <thead>

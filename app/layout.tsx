@@ -1,17 +1,29 @@
 import type { Metadata } from "next";
-import { Bricolage_Grotesque, Inter } from "next/font/google";
+import localFont from "next/font/local";
 import "./globals.css";
+import { MotionProvider } from "@/components/ui/MotionProvider";
 
-const bricolage = Bricolage_Grotesque({
+const bricolage = localFont({
   variable: "--font-bricolage",
-  subsets: ["latin"],
-  weight: ["400", "500", "600", "700", "800"],
+  display: "swap",
+  src: [
+    { path: "../public/fonts/bricolage-400.ttf", weight: "400" },
+    { path: "../public/fonts/bricolage-500.ttf", weight: "500" },
+    { path: "../public/fonts/bricolage-600.ttf", weight: "600" },
+    { path: "../public/fonts/bricolage-700.ttf", weight: "700" },
+    { path: "../public/fonts/bricolage-800.ttf", weight: "800" },
+  ],
 });
 
-const inter = Inter({
+const inter = localFont({
   variable: "--font-inter",
-  subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
+  display: "swap",
+  src: [
+    { path: "../public/fonts/inter-400.ttf", weight: "400" },
+    { path: "../public/fonts/inter-500.ttf", weight: "500" },
+    { path: "../public/fonts/inter-600.ttf", weight: "600" },
+    { path: "../public/fonts/inter-700.ttf", weight: "700" },
+  ],
 });
 
 export const metadata: Metadata = {
@@ -27,7 +39,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       className={`${bricolage.variable} ${inter.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col bg-paper text-ink">
-        {children}
+        <MotionProvider>{children}</MotionProvider>
       </body>
     </html>
   );

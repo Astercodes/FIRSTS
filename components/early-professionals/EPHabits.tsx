@@ -40,7 +40,7 @@ const EXAMPLES = [
 
 export function EPHabits() {
   return (
-    <section className="relative bg-paper-dim px-6 py-28">
+    <section className="marketing-section relative bg-paper-dim px-6 py-28">
       <Reveal className="mx-auto max-w-2xl text-center">
         <h2 className="font-display text-4xl font-semibold tracking-tight text-ink sm:text-5xl">
           Your first job is another beginning.
@@ -94,7 +94,7 @@ export function EPHabits() {
       <div className="mx-auto mt-10 grid max-w-4xl gap-5 sm:grid-cols-3">
         {EXAMPLES.map((e, i) => (
           <Reveal key={e.title} delay={i * 0.08}>
-            <div className="h-full rounded-2xl border border-ink/10 bg-white p-6">
+            <div className="design-card h-full rounded-2xl border border-ink/10 bg-white p-6">
               <h4 className="font-display text-base font-semibold text-ink">
                 {e.title}
               </h4>

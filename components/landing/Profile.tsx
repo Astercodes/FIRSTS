@@ -25,7 +25,7 @@ const COLUMNS = [
 
 export function Profile() {
   return (
-    <section className="relative overflow-hidden bg-mesh-dark px-6 py-28 text-paper">
+    <section className="marketing-section profile-section relative overflow-hidden bg-mesh-dark px-6 py-28 text-paper">
       <div
         aria-hidden
         className="pointer-events-none absolute left-[-8%] bottom-[-15%] h-[380px] w-[380px] animate-blob-drift-slow rounded-full opacity-40 blur-[110px]"
@@ -47,7 +47,7 @@ export function Profile() {
       <div className="relative mx-auto grid max-w-5xl gap-5 sm:grid-cols-2 lg:grid-cols-4">
         {COLUMNS.map((c, i) => (
           <Reveal key={c.title} delay={i * 0.08}>
-            <div className="h-full rounded-2xl border border-white/10 bg-white/5 p-6">
+            <div className="design-card h-full rounded-2xl border border-white/10 bg-white/5 p-6">
               <h3 className="font-display text-lg font-semibold">{c.title}</h3>
               <p className="mt-2 text-sm leading-relaxed text-paper/65">
                 {c.body}

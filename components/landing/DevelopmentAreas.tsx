@@ -32,7 +32,7 @@ const COLORS = [
 
 export function DevelopmentAreas() {
   return (
-    <section id="areas" className="relative bg-paper-dim px-6 py-28">
+    <section id="areas" className="marketing-section relative bg-paper-dim px-6 py-28 development-section">
       <Reveal className="mx-auto mb-14 max-w-2xl text-center">
         <p className="mb-3 text-xs font-semibold uppercase tracking-[0.2em] text-berry-burst">
           Career readiness is bigger than getting a job
@@ -51,7 +51,7 @@ export function DevelopmentAreas() {
           const title = stage.label.split(" · ")[1] ?? stage.label;
           return (
             <Reveal key={stage.id} delay={(i % 8) * 0.05}>
-              <div className="h-full rounded-2xl border border-ink/10 bg-white p-5">
+              <div className="design-card h-full rounded-2xl border border-ink/10 bg-white p-5">
                 <div className="mb-3 flex items-center gap-2">
                   <span
                     className="h-1.5 w-1.5 shrink-0 rounded-full"

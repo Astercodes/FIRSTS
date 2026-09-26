@@ -25,7 +25,7 @@ const MOCK_ROWS = [
 
 export function Progress() {
   return (
-    <section id="progress" className="relative bg-paper px-6 py-28">
+    <section id="progress" className="marketing-section relative bg-paper px-6 py-28">
       <div className="mx-auto grid max-w-6xl items-start gap-14 lg:grid-cols-[1.1fr_0.9fr]">
         <Reveal>
           <p className="mb-3 text-xs font-semibold uppercase tracking-[0.2em] text-berry-burst">
@@ -60,7 +60,7 @@ export function Progress() {
         </Reveal>
 
         <Reveal delay={0.15}>
-          <div className="rounded-3xl border border-ink/10 bg-white p-2 shadow-xl">
+          <div className="design-card rounded-3xl border border-ink/10 bg-white p-2 shadow-xl">
             <div className="rounded-2xl bg-paper-dim p-6">
               <div className="mb-5 flex items-center justify-between">
                 <p className="font-display text-sm font-semibold text-ink">

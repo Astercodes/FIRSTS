@@ -54,7 +54,7 @@ export function PublicEmployerGate({ slug }: { slug: string }) {
   return (
     <div className="min-h-screen bg-paper-dim px-4 py-14 sm:px-8">
       <div className="mx-auto max-w-2xl space-y-8">
-        <div className="rounded-3xl border border-ink/10 bg-white p-8 text-center">
+        <div className="workspace-card rounded-3xl border border-ink/10 bg-white p-8 text-center">
           <span className="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full font-display text-2xl font-bold text-white" style={{ background: "linear-gradient(135deg, var(--pink-grapefruit), var(--berry-burst))" }}>
             {profile.company.charAt(0)}
           </span>
@@ -66,7 +66,7 @@ export function PublicEmployerGate({ slug }: { slug: string }) {
         </div>
 
         {profile.culture && (
-          <div className="rounded-3xl border border-ink/10 bg-white p-7">
+          <div className="workspace-card rounded-3xl border border-ink/10 bg-white p-7">
             <p className="mb-3 text-xs font-semibold uppercase tracking-[0.15em] text-ink/45">
               Culture
             </p>
@@ -75,7 +75,7 @@ export function PublicEmployerGate({ slug }: { slug: string }) {
         )}
 
         {(profile.rolesHiredFor?.length ?? 0) > 0 && (
-          <div className="rounded-3xl border border-ink/10 bg-white p-7">
+          <div className="workspace-card rounded-3xl border border-ink/10 bg-white p-7">
             <p className="mb-3 text-xs font-semibold uppercase tracking-[0.15em] text-ink/45">
               Roles they hire for
             </p>
@@ -90,7 +90,7 @@ export function PublicEmployerGate({ slug }: { slug: string }) {
         )}
 
         {valuedByStage.length > 0 && (
-          <div className="rounded-3xl border border-ink/10 bg-white p-7">
+          <div className="workspace-card rounded-3xl border border-ink/10 bg-white p-7">
             <p className="mb-1 text-xs font-semibold uppercase tracking-[0.15em] text-ink/45">
               What they look for
             </p>

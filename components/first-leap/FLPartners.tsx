@@ -31,7 +31,7 @@ const ORG_TYPES = [
 export function FLPartners() {
   return (
     <>
-      <section id="schools" className="relative bg-paper px-6 py-28">
+      <section id="schools" className="marketing-section relative bg-paper px-6 py-28">
         <Reveal className="mx-auto max-w-2xl text-center">
           <p className="mb-3 text-xs font-semibold uppercase tracking-[0.2em] text-berry-burst">
             First Leap for schools &amp; universities
@@ -87,7 +87,7 @@ export function FLPartners() {
         </Reveal>
       </section>
 
-      <section className="relative bg-paper-dim px-6 py-28">
+      <section className="marketing-section relative bg-paper-dim px-6 py-28">
         <Reveal className="mx-auto max-w-2xl text-center">
           <p className="mb-3 text-xs font-semibold uppercase tracking-[0.2em] text-berry-burst">
             First Leap for organizations &amp; communities

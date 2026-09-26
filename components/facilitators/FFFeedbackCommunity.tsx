@@ -42,7 +42,7 @@ const COMMUNITY_WAYS = [
 export function FFFeedbackCommunity() {
   return (
     <>
-      <section className="relative bg-paper-dim px-6 py-24">
+      <section className="marketing-section relative bg-paper-dim px-6 py-24">
         <Reveal className="mx-auto max-w-2xl text-center">
           <h2 className="font-display text-4xl font-semibold tracking-tight text-ink sm:text-5xl">
             Get feedback that helps you improve.
@@ -89,7 +89,7 @@ export function FFFeedbackCommunity() {
         </Reveal>
       </section>
 
-      <section className="relative bg-paper px-6 py-24">
+      <section className="marketing-section relative bg-paper px-6 py-24">
         <Reveal className="mx-auto max-w-2xl text-center">
           <h2 className="font-display text-4xl font-semibold tracking-tight text-ink sm:text-5xl">
             Join a facilitator community.

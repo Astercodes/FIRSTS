@@ -61,7 +61,7 @@ export function EventsView() {
         </p>
       </div>
 
-      <div className="rounded-3xl border border-ink/10 bg-white p-7">
+      <div className="workspace-card rounded-3xl border border-ink/10 bg-white p-7">
         <p className="mb-4 text-xs font-semibold uppercase tracking-[0.15em] text-ink/45">
           Host an event
         </p>
@@ -136,12 +136,12 @@ export function EventsView() {
 
       <div className="space-y-4">
         {events.length === 0 ? (
-          <div className="rounded-3xl border border-ink/10 bg-white p-10 text-center">
+          <div className="workspace-card rounded-3xl border border-ink/10 bg-white p-10 text-center">
             <p className="text-sm text-ink/50">No events published yet.</p>
           </div>
         ) : (
           events.map((event) => (
-            <div key={event.id} className="rounded-3xl border border-ink/10 bg-white p-7">
+            <div key={event.id} className="workspace-card rounded-3xl border border-ink/10 bg-white p-7">
               <div className="flex flex-wrap items-start justify-between gap-4">
                 <div>
                   <div className="flex flex-wrap items-center gap-2">

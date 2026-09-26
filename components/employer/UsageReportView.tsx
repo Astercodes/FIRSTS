@@ -48,7 +48,7 @@ export function UsageReportView() {
       </div>
 
       <div className="grid gap-6 lg:grid-cols-2">
-        <div className="rounded-3xl border border-ink/10 bg-white p-7">
+        <div className="workspace-card rounded-3xl border border-ink/10 bg-white p-7">
           <h2 className="mb-1 font-display text-lg font-semibold text-ink">Pipeline breakdown</h2>
           <p className="mb-5 text-xs text-ink/45">Where your saved candidates currently sit</p>
           <div className="space-y-3">
@@ -73,7 +73,7 @@ export function UsageReportView() {
           </div>
         </div>
 
-        <div className="rounded-3xl border border-ink/10 bg-white p-7">
+        <div className="workspace-card rounded-3xl border border-ink/10 bg-white p-7">
           <h2 className="mb-1 font-display text-lg font-semibold text-ink">Outcomes this cycle</h2>
           <p className="mb-5 text-xs text-ink/45">Reported back from your own feedback and events</p>
           <dl className="space-y-3 text-sm">
@@ -108,7 +108,7 @@ export function UsageReportView() {
 
 function StatCard({ label, value, color }: { label: string; value: string; color: string }) {
   return (
-    <div className="rounded-3xl border border-ink/10 bg-white p-6">
+    <div className="workspace-card rounded-3xl border border-ink/10 bg-white p-6">
       <p className="font-display text-3xl font-bold" style={{ color }}>
         {value}
       </p>

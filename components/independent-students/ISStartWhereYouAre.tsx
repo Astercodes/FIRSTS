@@ -14,7 +14,7 @@ const SCENARIOS = [
 
 export function ISStartWhereYouAre() {
   return (
-    <section className="relative bg-paper-dim px-6 py-28">
+    <section className="marketing-section relative bg-paper-dim px-6 py-28">
       <Reveal className="mx-auto max-w-2xl text-center">
         <h2 className="font-display text-4xl font-semibold tracking-tight text-ink sm:text-5xl">
           Start where you are.
@@ -29,7 +29,7 @@ export function ISStartWhereYouAre() {
           {SCENARIOS.map((s) => (
             <p
               key={s}
-              className="rounded-2xl border border-ink/10 bg-white px-5 py-3.5 text-sm font-medium text-ink/70"
+              className="design-card rounded-2xl border border-ink/10 bg-white px-5 py-3.5 text-sm font-medium text-ink/70"
             >
               {s}
             </p>
@@ -43,7 +43,7 @@ export function ISStartWhereYouAre() {
 
       <div className="mx-auto mt-10 grid max-w-3xl gap-5 sm:grid-cols-2">
         <Reveal>
-          <div className="flex h-full flex-col rounded-2xl border border-ink/10 bg-white p-6">
+          <div className="design-card flex h-full flex-col rounded-2xl border border-ink/10 bg-white p-6">
             <h3 className="font-display text-base font-semibold text-ink">
               Guided Mode
             </h3>
@@ -60,7 +60,7 @@ export function ISStartWhereYouAre() {
           </div>
         </Reveal>
         <Reveal delay={0.06}>
-          <div className="flex h-full flex-col rounded-2xl border border-ink/10 bg-white p-6">
+          <div className="design-card flex h-full flex-col rounded-2xl border border-ink/10 bg-white p-6">
             <h3 className="font-display text-base font-semibold text-ink">
               Free Explore Mode
             </h3>

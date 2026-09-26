@@ -14,7 +14,7 @@ export function CredentialDetail({ candidate }: { candidate: CandidatePortfolio 
   const summary = credentialSummary(credential);
 
   return (
-    <div className="rounded-3xl border border-ink/10 bg-white p-7">
+    <div className="workspace-card rounded-3xl border border-ink/10 bg-white p-7">
       <div className="flex flex-wrap items-baseline justify-between gap-2">
         <div>
           <p className="text-xs font-semibold uppercase tracking-[0.15em] text-ink/45">

@@ -32,7 +32,7 @@ const ALUMNI_ROLES = [
 
 export function FIFacultyAlumni() {
   return (
-    <section className="relative bg-paper px-6 py-24">
+    <section className="marketing-section relative bg-paper px-6 py-24">
       <Reveal className="mx-auto max-w-2xl text-center">
         <h2 className="font-display text-4xl font-semibold tracking-tight text-ink sm:text-5xl">
           Connect the classroom, and your alumni, to student development.

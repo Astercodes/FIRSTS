@@ -4,14 +4,14 @@ import { Reveal } from "@/components/ui/Reveal";
 
 export function FFFirstTerm() {
   return (
-    <section className="relative bg-paper px-6 py-28">
+    <section className="marketing-section relative bg-paper px-6 py-28">
       <Reveal className="mx-auto max-w-2xl text-center">
         <h2 className="font-display text-4xl font-semibold tracking-tight text-ink sm:text-5xl">
           What your first term could look like.
         </h2>
       </Reveal>
 
-      <Reveal delay={0.1} className="mx-auto mt-10 max-w-2xl rounded-2xl border border-ink/10 bg-white p-7">
+      <Reveal delay={0.1} className="design-card mx-auto mt-10 max-w-2xl rounded-2xl border border-ink/10 bg-white p-7">
         <p className="text-[15px] leading-relaxed text-ink/60">
           Imagine you are especially interested in self-discovery and
           mindset &amp; habits. You apply. You complete facilitator

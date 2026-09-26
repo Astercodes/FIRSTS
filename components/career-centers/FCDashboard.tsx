@@ -17,7 +17,7 @@ const SIGNALS = [
 
 export function FCDashboard() {
   return (
-    <section className="relative bg-paper-dim px-6 py-28">
+    <section className="marketing-section relative bg-paper-dim px-6 py-28">
       <Reveal className="mx-auto max-w-2xl text-center">
         <p className="mb-3 text-xs font-semibold uppercase tracking-[0.2em] text-berry-burst">
           What your career center gets

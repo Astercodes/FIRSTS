@@ -18,7 +18,7 @@ const COHORT_GROUPINGS = [
 
 export function FCTools() {
   return (
-    <section className="relative bg-paper-dim px-6 py-28">
+    <section className="marketing-section relative bg-paper-dim px-6 py-28">
       <Reveal className="mx-auto max-w-2xl text-center">
         <h2 className="font-display text-4xl font-semibold tracking-tight text-ink sm:text-5xl">
           Bring students in without creating another administrative
@@ -28,7 +28,7 @@ export function FCTools() {
 
       <div className="mx-auto mt-12 grid max-w-5xl gap-5 lg:grid-cols-3">
         <Reveal>
-          <div className="flex h-full flex-col rounded-2xl border border-ink/10 bg-white p-6">
+          <div className="design-card flex h-full flex-col rounded-2xl border border-ink/10 bg-white p-6">
             <h3 className="font-display text-lg font-semibold text-ink">
               Roster Sync
             </h3>
@@ -46,7 +46,7 @@ export function FCTools() {
           </div>
         </Reveal>
         <Reveal delay={0.06}>
-          <div className="flex h-full flex-col rounded-2xl border border-ink/10 bg-white p-6">
+          <div className="design-card flex h-full flex-col rounded-2xl border border-ink/10 bg-white p-6">
             <h3 className="font-display text-lg font-semibold text-ink">
               Single Sign-On
             </h3>
@@ -65,7 +65,7 @@ export function FCTools() {
           </div>
         </Reveal>
         <Reveal delay={0.12}>
-          <div className="flex h-full flex-col rounded-2xl border border-ink/10 bg-white p-6">
+          <div className="design-card flex h-full flex-col rounded-2xl border border-ink/10 bg-white p-6">
             <h3 className="font-display text-lg font-semibold text-ink">
               Cohorts
             </h3>

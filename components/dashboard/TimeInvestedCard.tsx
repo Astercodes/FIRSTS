@@ -6,7 +6,7 @@ export function TimeInvestedCard({ data }: { data: TimeInvested }) {
   const maxHrs = Math.max(estimatedHrs, actualHrs, 1);
 
   return (
-    <div className="flex h-full flex-col justify-center rounded-3xl border border-ink/8 bg-white p-7">
+    <div className="workspace-card flex h-full flex-col justify-center rounded-3xl border border-ink/8 bg-white p-7">
       <p className="text-xs font-semibold uppercase tracking-[0.15em] text-ink/45">
         Time invested
       </p>

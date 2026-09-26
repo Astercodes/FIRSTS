@@ -18,7 +18,7 @@ const EXISTING_PROGRAMMING = [
 
 export function FCWorkshops() {
   return (
-    <section className="relative bg-paper-dim px-6 py-28">
+    <section className="marketing-section relative bg-paper-dim px-6 py-28">
       <Reveal className="mx-auto max-w-2xl text-center">
         <h2 className="font-display text-4xl font-semibold tracking-tight text-ink sm:text-5xl">
           Make workshops part of a journey.
@@ -46,7 +46,7 @@ export function FCWorkshops() {
           pathway. For example:
         </p>
         <div className="mt-6 space-y-3">
-          <div className="rounded-2xl border border-ink/10 bg-white px-5 py-4">
+          <div className="design-card rounded-2xl border border-ink/10 bg-white px-5 py-4">
             <p className="text-xs font-semibold uppercase tracking-[0.15em] text-ink/40">
               Before a networking event
             </p>
@@ -54,7 +54,7 @@ export function FCWorkshops() {
               Students complete their First Professional Introduction.
             </p>
           </div>
-          <div className="rounded-2xl border border-ink/10 bg-white px-5 py-4">
+          <div className="design-card rounded-2xl border border-ink/10 bg-white px-5 py-4">
             <p className="text-xs font-semibold uppercase tracking-[0.15em] text-ink/40">
               At the event
             </p>
@@ -62,7 +62,7 @@ export function FCWorkshops() {
               They make their First Professional Connection.
             </p>
           </div>
-          <div className="rounded-2xl border border-ink/10 bg-white px-5 py-4">
+          <div className="design-card rounded-2xl border border-ink/10 bg-white px-5 py-4">
             <p className="text-xs font-semibold uppercase tracking-[0.15em] text-ink/40">
               After the event
             </p>

@@ -25,7 +25,7 @@ export function RequestDemoForm({ initialInterest }: { initialInterest: string }
 
   if (submitted) {
     return (
-      <div className="rounded-3xl border border-ink/10 bg-white p-10 text-center">
+      <div className="design-card rounded-3xl border border-ink/10 bg-white p-10 text-center">
         <span className="mb-5 inline-flex h-12 w-12 items-center justify-center rounded-full bg-citrus-lime/20">
           <svg viewBox="0 0 24 24" fill="none" strokeWidth={2} className="h-6 w-6 text-berry-burst">
             <path d="m5 13 4 4L19 7" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" />
@@ -45,7 +45,7 @@ export function RequestDemoForm({ initialInterest }: { initialInterest: string }
   return (
     <form
       onSubmit={handleSubmit}
-      className="rounded-3xl border border-ink/10 bg-white p-8 sm:p-10"
+      className="design-card rounded-3xl border border-ink/10 bg-white p-8 sm:p-10"
     >
       <div className="grid gap-5 sm:grid-cols-2">
         <label className="block">

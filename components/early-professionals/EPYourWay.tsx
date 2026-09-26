@@ -14,7 +14,7 @@ const LOOKING_FOR = [
 export function EPYourWay() {
   return (
     <>
-      <section className="relative bg-paper px-6 py-28">
+      <section className="marketing-section relative bg-paper px-6 py-28">
         <Reveal className="mx-auto max-w-2xl text-center">
           <h2 className="font-display text-4xl font-semibold tracking-tight text-ink sm:text-5xl">
             Use FIRSTS your way.
@@ -28,7 +28,7 @@ export function EPYourWay() {
 
         <div className="mx-auto mt-10 grid max-w-3xl gap-5 sm:grid-cols-2">
           <Reveal>
-            <div className="h-full rounded-2xl border border-ink/10 bg-white p-6">
+            <div className="design-card h-full rounded-2xl border border-ink/10 bg-white p-6">
               <h3 className="font-display text-base font-semibold text-ink">
                 Use Guided Mode
               </h3>
@@ -39,7 +39,7 @@ export function EPYourWay() {
             </div>
           </Reveal>
           <Reveal delay={0.06}>
-            <div className="h-full rounded-2xl border border-ink/10 bg-white p-6">
+            <div className="design-card h-full rounded-2xl border border-ink/10 bg-white p-6">
               <h3 className="font-display text-base font-semibold text-ink">
                 Use Free Explore Mode
               </h3>
@@ -80,7 +80,7 @@ export function EPYourWay() {
         </Reveal>
       </section>
 
-      <section className="relative bg-paper-dim px-6 py-28">
+      <section className="marketing-section relative bg-paper-dim px-6 py-28">
         <Reveal className="mx-auto max-w-2xl text-center">
           <p className="mb-3 text-xs font-semibold uppercase tracking-[0.2em] text-berry-burst">
             What it can look like
@@ -91,7 +91,7 @@ export function EPYourWay() {
         </Reveal>
 
         <Reveal delay={0.1} className="mx-auto mt-8 max-w-xl">
-          <div className="rounded-3xl border border-ink/10 bg-white p-8 text-[15px] leading-relaxed text-ink/70">
+          <div className="design-card rounded-3xl border border-ink/10 bg-white p-8 text-[15px] leading-relaxed text-ink/70">
             <p>
               Imagine you already have the job. Your resume is no longer
               the biggest problem. Now you&apos;re struggling to manage

@@ -31,7 +31,7 @@ export function TrackTab({
 
       <section className="grid gap-4 sm:grid-cols-3">
         {stats.map((s) => (
-          <div key={s.label} className="rounded-2xl border border-ink/8 bg-white p-5">
+          <div key={s.label} className="workspace-card rounded-2xl border border-ink/8 bg-white p-5">
             <p className="text-xs font-semibold uppercase tracking-wide text-ink/40">{s.label}</p>
             <p className="mt-1.5 font-display text-2xl font-bold text-ink">{s.value}</p>
           </div>
@@ -51,7 +51,7 @@ export function TrackTab({
         <p className="text-[15px] leading-relaxed text-ink/75">{successSignal}</p>
       </section>
 
-      <section className="rounded-3xl border border-ink/8 bg-white p-7 sm:p-8">
+      <section className="workspace-card rounded-3xl border border-ink/8 bg-white p-7 sm:p-8">
         <div className="flex items-start justify-between gap-6">
           <div>
             <p className="text-sm font-semibold text-ink">Share with my advisor</p>
@@ -65,7 +65,7 @@ export function TrackTab({
         </div>
       </section>
 
-      <section className="rounded-3xl border border-ink/8 bg-white p-7 sm:p-8">
+      <section className="workspace-card rounded-3xl border border-ink/8 bg-white p-7 sm:p-8">
         <p className="mb-3 text-xs font-semibold uppercase tracking-[0.15em] text-ink/45">
           Version history
         </p>

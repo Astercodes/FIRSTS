@@ -104,7 +104,7 @@ export function PortfolioDetail({ candidate }: { candidate: CandidatePortfolio }
 
       <CredentialDetail candidate={candidate} />
 
-      <div className="rounded-3xl border border-ink/10 bg-white p-7">
+      <div className="workspace-card rounded-3xl border border-ink/10 bg-white p-7">
         <p className="mb-4 text-xs font-semibold uppercase tracking-[0.15em] text-ink/45">
           Top values
         </p>
@@ -120,7 +120,7 @@ export function PortfolioDetail({ candidate }: { candidate: CandidatePortfolio }
         </div>
       </div>
 
-      <div className="rounded-3xl border border-ink/10 bg-white p-7">
+      <div className="workspace-card rounded-3xl border border-ink/10 bg-white p-7">
         <p className="mb-4 text-xs font-semibold uppercase tracking-[0.15em] text-ink/45">
           STAR story
         </p>
@@ -144,14 +144,14 @@ export function PortfolioDetail({ candidate }: { candidate: CandidatePortfolio }
         </dl>
       </div>
 
-      <div className="rounded-3xl border border-ink/10 bg-white p-7">
+      <div className="workspace-card rounded-3xl border border-ink/10 bg-white p-7">
         <p className="mb-2 text-xs font-semibold uppercase tracking-[0.15em] text-ink/45">
           Stated goal
         </p>
         <p className="text-[15px] leading-relaxed text-ink/75">{candidate.goalHeadline}</p>
       </div>
 
-      <div className="rounded-3xl border border-ink/10 bg-white p-7">
+      <div className="workspace-card rounded-3xl border border-ink/10 bg-white p-7">
         <p className="mb-1 text-xs font-semibold uppercase tracking-[0.15em] text-ink/45">
           Rate this candidate
         </p>
@@ -230,7 +230,7 @@ export function PortfolioDetail({ candidate }: { candidate: CandidatePortfolio }
       </div>
 
       {existingRoleFeedback.length > 0 && (
-        <div className="rounded-3xl border border-ink/10 bg-white p-7">
+        <div className="workspace-card rounded-3xl border border-ink/10 bg-white p-7">
           <p className="mb-1 text-xs font-semibold uppercase tracking-[0.15em] text-ink/45">
             Role-fit feedback received
           </p>

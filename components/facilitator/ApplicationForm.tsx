@@ -113,7 +113,7 @@ export function ApplicationForm() {
         </p>
       </div>
 
-      <form onSubmit={handleSubmit} className="space-y-6 rounded-3xl border border-ink/10 bg-white p-7 sm:p-8">
+      <form onSubmit={handleSubmit} className="workspace-card space-y-6 rounded-3xl border border-ink/10 bg-white p-7 sm:p-8">
         <div className="grid gap-4 sm:grid-cols-2">
           <LabeledInput label="Full name" value={name} onChange={setName} placeholder="Ada Lovelace" required />
           <LabeledInput label="Email" type="email" value={email} onChange={setEmail} placeholder="you@example.com" required />

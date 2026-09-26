@@ -13,7 +13,7 @@ import {
 
 function StatTile({ label, value, sub }: { label: string; value: string; sub?: string }) {
   return (
-    <div className="rounded-2xl border border-ink/8 bg-white p-4">
+    <div className="workspace-card rounded-2xl border border-ink/8 bg-white p-4">
       <p className="text-xs font-semibold uppercase tracking-wide text-ink/40">{label}</p>
       <p className="mt-1.5 font-display text-2xl font-semibold text-ink">{value}</p>
       {sub && <p className="mt-0.5 text-xs text-ink/45">{sub}</p>}
@@ -75,7 +75,7 @@ export function ReportingView() {
         <p className="mt-1 text-xs text-ink/45">Generated {REPORT_GENERATED_ON}</p>
       </div>
 
-      <section className="rounded-3xl border border-ink/10 bg-white p-7 print:break-inside-avoid print:rounded-none print:border-0 print:p-0">
+      <section className="workspace-card rounded-3xl border border-ink/10 bg-white p-7 print:break-inside-avoid print:rounded-none print:border-0 print:p-0">
         <h2 className="mb-1 font-display text-lg font-semibold text-ink">Executive summary</h2>
         <p className="mb-5 text-xs text-ink/45">
           Every figure here is pulled from the same live data behind Segmentation, Workload, Outcomes,
@@ -111,7 +111,7 @@ export function ReportingView() {
         )}
       </section>
 
-      <section className="rounded-3xl border border-ink/10 bg-white p-7 print:break-inside-avoid print:rounded-none print:border-0 print:p-0">
+      <section className="workspace-card rounded-3xl border border-ink/10 bg-white p-7 print:break-inside-avoid print:rounded-none print:border-0 print:p-0">
         <h2 className="mb-1 font-display text-lg font-semibold text-ink">Year-over-year trend</h2>
         <p className="mb-5 text-xs text-ink/45">
           This app keeps this moment&apos;s data, not a historical log. The two prior years below are
@@ -173,7 +173,7 @@ export function ReportingView() {
         <p className="mt-4 text-[11px] text-ink/40">* Modeled, not measured.</p>
       </section>
 
-      <section className="rounded-3xl border border-ink/10 bg-white p-2 print:break-inside-avoid print:rounded-none print:border-0 print:p-0">
+      <section className="workspace-card rounded-3xl border border-ink/10 bg-white p-2 print:break-inside-avoid print:rounded-none print:border-0 print:p-0">
         <div className="px-5 pt-5">
           <h2 className="font-display text-lg font-semibold text-ink">NACE competency breakdown</h2>
           <p className="mt-1 text-xs text-ink/45">
@@ -212,7 +212,7 @@ export function ReportingView() {
         </div>
       </section>
 
-      <section className="rounded-3xl border border-ink/10 bg-white p-2 print:break-inside-avoid print:rounded-none print:border-0 print:p-0">
+      <section className="workspace-card rounded-3xl border border-ink/10 bg-white p-2 print:break-inside-avoid print:rounded-none print:border-0 print:p-0">
         <div className="px-5 pt-5">
           <h2 className="font-display text-lg font-semibold text-ink">Cohort breakdown</h2>
           <p className="mt-1 text-xs text-ink/45">An appendix table, useful for a compliance export.</p>

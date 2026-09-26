@@ -18,7 +18,7 @@ const PILOT_STARTS = [
 
 export function FIPilot() {
   return (
-    <section className="relative bg-paper-dim px-6 py-28">
+    <section className="marketing-section relative bg-paper-dim px-6 py-28">
       <Reveal className="mx-auto max-w-2xl text-center">
         <h2 className="font-display text-4xl font-semibold tracking-tight text-ink sm:text-5xl">
           Start with 100 students if you need to.
@@ -45,7 +45,7 @@ export function FIPilot() {
         </p>
       </Reveal>
 
-      <Reveal delay={0.24} className="mx-auto mt-10 max-w-xl rounded-2xl border border-ink/10 bg-white p-6 text-center">
+      <Reveal delay={0.24} className="design-card mx-auto mt-10 max-w-xl rounded-2xl border border-ink/10 bg-white p-6 text-center">
         <p className="text-sm font-semibold uppercase tracking-[0.2em] text-ink/40">
           What it could look like
         </p>

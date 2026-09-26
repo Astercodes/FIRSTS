@@ -13,7 +13,7 @@ const STATS = [
 
 export function EPStats() {
   return (
-    <section className="relative bg-paper-dim px-6 py-28">
+    <section className="marketing-section relative bg-paper-dim px-6 py-28">
       <Reveal className="mx-auto max-w-2xl text-center">
         <h2 className="font-display text-4xl font-semibold tracking-tight text-ink sm:text-5xl">
           {STAGES.length} stages. Use the ones that meet you where you are.
@@ -23,7 +23,7 @@ export function EPStats() {
       <div className="mx-auto mt-12 grid max-w-5xl gap-5 sm:grid-cols-2 lg:grid-cols-4">
         {STATS.map((s, i) => (
           <Reveal key={s.title} delay={i * 0.08}>
-            <div className="h-full rounded-2xl border border-ink/10 bg-white p-6 text-center">
+            <div className="design-card h-full rounded-2xl border border-ink/10 bg-white p-6 text-center">
               <p className="font-display text-2xl font-bold text-gradient-citrus">
                 {s.value}
               </p>

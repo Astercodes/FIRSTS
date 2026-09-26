@@ -6,7 +6,7 @@ import { Reveal } from "@/components/ui/Reveal";
 export function EPNextSteps() {
   return (
     <>
-      <section className="relative bg-paper-dim px-6 py-28">
+      <section className="marketing-section relative bg-paper-dim px-6 py-28">
         <Reveal className="mx-auto max-w-2xl text-center">
           <p className="mb-3 text-xs font-semibold uppercase tracking-[0.2em] text-berry-burst">
             Still figuring out your direction?
@@ -36,7 +36,7 @@ export function EPNextSteps() {
         </Reveal>
       </section>
 
-      <section className="relative bg-paper px-6 py-28">
+      <section className="marketing-section relative bg-paper px-6 py-28">
         <Reveal className="mx-auto max-w-2xl text-center">
           <p className="mb-3 text-xs font-semibold uppercase tracking-[0.2em] text-berry-burst">
             Thinking about building instead?
@@ -63,7 +63,7 @@ export function EPNextSteps() {
         </Reveal>
       </section>
 
-      <section className="relative bg-paper-dim px-6 py-28">
+      <section className="marketing-section relative bg-paper-dim px-6 py-28">
         <Reveal className="mx-auto max-w-2xl text-center">
           <p className="mb-3 text-xs font-semibold uppercase tracking-[0.2em] text-berry-burst">
             Already know exactly where you&apos;re headed?
@@ -84,7 +84,7 @@ export function EPNextSteps() {
         </Reveal>
 
         <Reveal delay={0.1} className="mx-auto mt-8 max-w-xl">
-          <div className="rounded-3xl border border-dashed border-ink/15 bg-white p-8 text-center">
+          <div className="design-card rounded-3xl border border-dashed border-ink/15 bg-white p-8 text-center">
             <span className="inline-flex rounded-full bg-ink/5 px-3 py-1 text-xs font-semibold uppercase tracking-[0.15em] text-ink/40">
               Coming next
             </span>

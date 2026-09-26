@@ -5,7 +5,7 @@ import { Reveal } from "@/components/ui/Reveal";
 
 export function ISCenters() {
   return (
-    <section className="relative bg-paper px-6 py-28">
+    <section className="marketing-section relative bg-paper px-6 py-28">
       <Reveal className="mx-auto max-w-2xl text-center">
         <h2 className="font-display text-4xl font-semibold tracking-tight text-ink sm:text-5xl">
           Explore more than careers.
@@ -20,7 +20,7 @@ export function ISCenters() {
 
       <div className="mx-auto mt-10 grid max-w-3xl gap-5 sm:grid-cols-2">
         <Reveal>
-          <div className="flex h-full flex-col rounded-2xl border border-ink/10 bg-white p-6">
+          <div className="design-card flex h-full flex-col rounded-2xl border border-ink/10 bg-white p-6">
             <h3 className="font-display text-lg font-semibold text-ink">
               Career Center
             </h3>
@@ -38,7 +38,7 @@ export function ISCenters() {
           </div>
         </Reveal>
         <Reveal delay={0.06}>
-          <div className="flex h-full flex-col rounded-2xl border border-ink/10 bg-white p-6">
+          <div className="design-card flex h-full flex-col rounded-2xl border border-ink/10 bg-white p-6">
             <h3 className="font-display text-lg font-semibold text-ink">
               Business Center
             </h3>

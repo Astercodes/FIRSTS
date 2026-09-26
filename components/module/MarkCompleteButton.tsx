@@ -24,7 +24,7 @@ export function MarkCompleteButton({ moduleId, color }: { moduleId: number; colo
 
   if (isComplete) {
     return (
-      <div className="flex items-center justify-between rounded-2xl border border-ink/8 bg-white px-5 py-4">
+      <div className="workspace-card flex items-center justify-between rounded-2xl border border-ink/8 bg-white px-5 py-4">
         <span className="flex items-center gap-2.5 text-sm font-semibold text-ink">
           <span
             className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full text-xs font-bold text-white"

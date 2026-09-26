@@ -25,7 +25,7 @@ export function ModuleLearnedFeed({ moduleId, color }: { moduleId: number; color
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-60px" }}
       transition={{ duration: 0.4 }}
-      className="rounded-3xl border border-ink/8 bg-white p-7"
+      className="workspace-card rounded-3xl border border-ink/8 bg-white p-7"
     >
       <div className="flex flex-wrap items-baseline justify-between gap-2">
         <div>

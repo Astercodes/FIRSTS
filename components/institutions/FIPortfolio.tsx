@@ -33,7 +33,7 @@ const USES = [
 
 export function FIPortfolio() {
   return (
-    <section className="relative bg-paper px-6 py-28">
+    <section className="marketing-section relative bg-paper px-6 py-28">
       <Reveal className="mx-auto max-w-2xl text-center">
         <h2 className="font-display text-4xl font-semibold tracking-tight text-ink sm:text-5xl">
           Give every student a portable development portfolio.

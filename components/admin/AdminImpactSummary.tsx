@@ -21,7 +21,7 @@ function Stat({ label, value, delay }: { label: string; value: number; delay: nu
       initial={{ opacity: 0, y: 12 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ delay, duration: 0.35, ease: [0.16, 1, 0.3, 1] }}
-      className="rounded-2xl border border-ink/8 bg-white p-5"
+      className="workspace-card rounded-2xl border border-ink/8 bg-white p-5"
     >
       <p className="font-display text-3xl font-bold text-ink">{value.toLocaleString()}</p>
       <p className="mt-1 text-xs font-semibold uppercase tracking-wide text-ink/40">{label}</p>

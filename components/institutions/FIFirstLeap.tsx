@@ -33,7 +33,7 @@ const BUSINESS_STEPS = [
 
 export function FIFirstLeap() {
   return (
-    <section className="relative overflow-hidden bg-mesh-dark px-6 py-28 text-paper">
+    <section className="marketing-section relative overflow-hidden bg-mesh-dark px-6 py-28 text-paper">
       <div className="noise-layer" aria-hidden />
 
       <Reveal className="relative mx-auto max-w-2xl text-center">
@@ -56,7 +56,7 @@ export function FIFirstLeap() {
 
       <div className="relative mx-auto mt-14 grid max-w-4xl gap-6 sm:grid-cols-2">
         <Reveal>
-          <div className="h-full rounded-2xl border border-white/15 bg-white/5 p-6 backdrop-blur">
+          <div className="design-card h-full rounded-2xl border border-white/15 bg-white/5 p-6 backdrop-blur">
             <h3 className="font-display text-lg font-semibold">
               First Leap: Career
             </h3>
@@ -80,7 +80,7 @@ export function FIFirstLeap() {
         </Reveal>
 
         <Reveal delay={0.08}>
-          <div className="h-full rounded-2xl border border-white/15 bg-white/5 p-6 backdrop-blur">
+          <div className="design-card h-full rounded-2xl border border-white/15 bg-white/5 p-6 backdrop-blur">
             <h3 className="font-display text-lg font-semibold">
               First Leap: Business
             </h3>

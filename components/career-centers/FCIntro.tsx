@@ -13,7 +13,7 @@ const SITUATIONS = [
 
 export function FCIntro() {
   return (
-    <section className="relative bg-paper px-6 py-24">
+    <section className="marketing-section relative bg-paper px-6 py-24">
       <Reveal className="mx-auto max-w-2xl text-center">
         <p className="text-[15px] leading-relaxed text-ink/60">
           Career centers are expected to support thousands of students
@@ -28,7 +28,7 @@ export function FCIntro() {
           {SITUATIONS.map((s) => (
             <p
               key={s}
-              className="rounded-2xl border border-ink/10 bg-white px-5 py-3.5 text-sm font-medium text-ink/70"
+              className="design-card rounded-2xl border border-ink/10 bg-white px-5 py-3.5 text-sm font-medium text-ink/70"
             >
               {s}
             </p>

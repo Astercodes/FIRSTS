@@ -27,7 +27,7 @@ export function PortfolioInbox() {
             <Link
               key={c.id}
               href={`/employer/portfolios/${c.id}`}
-              className="group rounded-3xl border border-ink/10 bg-white p-7 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl"
+              className="workspace-card group rounded-3xl border border-ink/10 bg-white p-7 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl"
             >
               <div className="flex items-start gap-4">
                 <span

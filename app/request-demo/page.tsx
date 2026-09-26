@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Nav } from "@/components/landing/Nav";
 import { Footer } from "@/components/landing/Footer";
 import { RequestDemoForm } from "@/components/landing/RequestDemoForm";
+import { EditorialImage } from "@/components/landing/EditorialImage";
 
 export const metadata: Metadata = { title: "Request a demo | FIRSTS" };
 
@@ -25,7 +26,7 @@ export default async function RequestDemoPage({
   return (
     <main>
       <Nav />
-      <section className="relative isolate flex min-h-[45svh] w-full flex-col items-center justify-center overflow-hidden bg-mesh-dark px-6 pb-16 pt-32 text-paper">
+      <section className="marketing-section audience-hero relative isolate min-h-[45svh] w-full overflow-hidden bg-mesh-dark px-6 pb-16 pt-32 text-paper">
         <div
           aria-hidden
           className="pointer-events-none absolute -left-24 top-[-10%] h-[420px] w-[420px] animate-blob-drift rounded-full opacity-50 blur-[100px]"
@@ -51,9 +52,10 @@ export default async function RequestDemoPage({
             what FIRSTS looks like for your students, cohort, or team.
           </p>
         </div>
+        <EditorialImage kind="community" className="audience-art" priority />
       </section>
 
-      <section className="relative bg-paper px-6 py-20">
+      <section className="marketing-section relative bg-paper px-6 py-20">
         <div className="mx-auto max-w-xl">
           <RequestDemoForm initialInterest={initialInterest} />
         </div>

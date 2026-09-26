@@ -45,7 +45,7 @@ export function LearnedPostComposer({
       initial={{ opacity: 0, y: 12, scale: 0.98 }}
       animate={{ opacity: 1, y: 0, scale: 1 }}
       transition={{ duration: 0.35, ease: [0.16, 1, 0.3, 1] }}
-      className="rounded-2xl border border-ink/8 bg-white p-5"
+      className="workspace-card rounded-2xl border border-ink/8 bg-white p-5"
     >
       <motion.p
         initial={{ scale: 0.9 }}

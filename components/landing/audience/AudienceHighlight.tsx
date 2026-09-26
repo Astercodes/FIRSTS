@@ -9,7 +9,7 @@ export function AudienceHighlight({ config }: { config: AudienceConfig }) {
   if (!section) return null;
 
   return (
-    <section className="relative bg-paper px-6 py-24">
+    <section className="marketing-section relative bg-paper px-6 py-24">
       <Reveal className="mx-auto max-w-6xl overflow-hidden rounded-3xl border border-ink/10 p-10 sm:p-14">
         <div
           aria-hidden

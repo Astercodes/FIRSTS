@@ -59,7 +59,7 @@ export function TalentPoolView() {
         </p>
       </div>
 
-      <div className="rounded-3xl border border-ink/10 bg-white p-7">
+      <div className="workspace-card rounded-3xl border border-ink/10 bg-white p-7">
         <div className="grid gap-5 sm:grid-cols-[240px_1fr]">
           <div>
             <label className="mb-1.5 block text-xs font-semibold uppercase tracking-wide text-ink/40">
@@ -120,7 +120,7 @@ export function TalentPoolView() {
       </div>
 
       {alerts.length > 0 && (
-        <div className="rounded-3xl border border-ink/10 bg-white p-7">
+        <div className="workspace-card rounded-3xl border border-ink/10 bg-white p-7">
           <h2 className="mb-1 font-display text-lg font-semibold text-ink">Saved alerts</h2>
           <p className="mb-5 text-xs text-ink/45">
             No push notifications behind this, a live count you can check back on whenever you visit.
@@ -167,7 +167,7 @@ export function TalentPoolView() {
         </div>
       )}
 
-      <div className="rounded-3xl border border-ink/10 bg-white p-7">
+      <div className="workspace-card rounded-3xl border border-ink/10 bg-white p-7">
         <div className="mb-1 flex items-center justify-between">
           <h2 className="font-display text-lg font-semibold text-ink">Candidates you can view directly</h2>
           <span className="text-sm font-semibold text-ink/40">
@@ -205,7 +205,7 @@ export function TalentPoolView() {
         )}
       </div>
 
-      <div className="rounded-3xl border border-ink/10 bg-white p-7">
+      <div className="workspace-card rounded-3xl border border-ink/10 bg-white p-7">
         <div className="mb-1 flex items-center justify-between">
           <h2 className="font-display text-lg font-semibold text-ink">Depth across your sponsored cohorts</h2>
           <span className="text-sm font-semibold text-ink/40">

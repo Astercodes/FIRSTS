@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import type { FirstModule } from "@/lib/dashboardData";
 import { CATEGORY_META } from "@/lib/dashboardData";
 
@@ -8,11 +9,12 @@ export function ContinueCard({ module: m }: { module: FirstModule }) {
 
   return (
     <div
-      className="relative overflow-hidden rounded-3xl p-7 text-paper sm:p-8"
+      className="continue-card relative overflow-hidden rounded-3xl p-7 text-paper sm:p-8"
       style={{
         background: `linear-gradient(120deg, var(--ink), color-mix(in oklab, ${color} 35%, var(--ink)))`,
       }}
     >
+      <div className="continue-art" aria-hidden="true"><Image src="/images/firsts-growth.webp" alt="" fill sizes="180px" className="object-cover" /></div>
       <div
         aria-hidden
         className="pointer-events-none absolute -right-16 -top-16 h-56 w-56 rounded-full opacity-40 blur-3xl"

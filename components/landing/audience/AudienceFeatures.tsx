@@ -5,7 +5,7 @@ import type { AudienceConfig } from "@/lib/audienceContent";
 
 export function AudienceFeatures({ config }: { config: AudienceConfig }) {
   return (
-    <section className="relative bg-paper px-6 py-24">
+    <section className="marketing-section relative bg-paper px-6 py-24">
       <div className="mx-auto max-w-6xl">
         <Reveal className="mb-12 max-w-2xl">
           <p

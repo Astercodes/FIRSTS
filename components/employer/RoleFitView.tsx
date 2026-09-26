@@ -57,7 +57,7 @@ export function RoleFitView() {
         </p>
       </div>
 
-      <div className="rounded-3xl border border-ink/10 bg-white p-7">
+      <div className="workspace-card rounded-3xl border border-ink/10 bg-white p-7">
         <label className="mb-2 block text-xs font-semibold uppercase tracking-wide text-ink/40">
           Role
         </label>
@@ -125,7 +125,7 @@ function CandidateFitRow({ result, roleTitle }: { result: RoleFitResult; roleTit
   }
 
   return (
-    <div className="rounded-3xl border border-ink/10 bg-white p-7">
+    <div className="workspace-card rounded-3xl border border-ink/10 bg-white p-7">
       <div className="flex flex-wrap items-start justify-between gap-4">
         <Link href={`/employer/portfolios/${candidate.id}`} className="flex items-center gap-3">
           <span

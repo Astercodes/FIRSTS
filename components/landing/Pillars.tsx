@@ -39,7 +39,7 @@ const PILLARS = [
 
 export function Pillars() {
   return (
-    <section id="pillars" className="relative bg-paper px-6 py-28">
+    <section id="pillars" className="marketing-section relative bg-paper px-6 py-28">
       <Reveal className="mx-auto mb-16 max-w-2xl text-center">
         <div className="mb-6 flex justify-center">
           <MentorScene className="h-32 sm:h-36" />
@@ -71,14 +71,14 @@ export function Pillars() {
         </p>
       </div>
 
-      <div className="mx-auto mt-8 grid max-w-6xl gap-5 sm:grid-cols-2 lg:grid-cols-5">
+      <div className="mx-auto mt-8 grid max-w-6xl gap-5 sm:grid-cols-2 lg:grid-cols-6">
         {PILLARS.map((p, i) => (
-          <Reveal key={p.title} delay={i * 0.08}>
-            <div className="flex h-full flex-col rounded-3xl border border-ink/10 bg-white p-6">
+          <Reveal key={p.title} delay={i * 0.08} className={i < 2 ? "lg:col-span-3" : "lg:col-span-2"}>
+            <div className="design-card flex h-full flex-col rounded-3xl border border-ink/10 bg-white p-6">
               <span
-                className="mb-4 h-2.5 w-2.5 rounded-full"
-                style={{ background: p.color, boxShadow: `0 0 12px ${p.color}` }}
-              />
+                className="pillar-marker mb-5 flex h-10 w-10 items-center justify-center rounded-xl font-display text-lg text-ink"
+                style={{ background: `color-mix(in oklab, ${p.color} 20%, var(--paper))` }}
+              >0{i + 1}</span>
               <h3 className="font-display text-lg font-semibold text-ink">
                 {p.title}
               </h3>

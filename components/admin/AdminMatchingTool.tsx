@@ -17,7 +17,7 @@ export function AdminMatchingTool({ roster }: { roster: AdminFacilitatorRecord[]
   const inTraining = roster.filter((f) => f.stagesInTraining.includes(stageId) && f.activity === "active");
 
   return (
-    <section className="rounded-3xl border border-ink/8 bg-white p-6">
+    <section className="workspace-card rounded-3xl border border-ink/8 bg-white p-6">
       <p className="mb-1 font-display text-base font-semibold text-ink">Match a request</p>
       <p className="mb-4 text-xs text-ink/45">
         Pick a stage a school or region requested, see who&apos;s available to run it.

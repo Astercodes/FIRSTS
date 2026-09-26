@@ -30,7 +30,7 @@ export function InstitutionSidebar() {
   const institution = advisor?.institution || MOCK_ADVISOR.institution;
 
   return (
-    <aside className="fixed inset-y-0 left-0 z-30 hidden w-64 flex-col bg-ink text-paper lg:flex print:hidden">
+    <aside className="workspace-sidebar fixed inset-y-0 left-0 z-30 hidden w-64 flex-col bg-ink text-paper lg:flex print:hidden">
       <div className="flex items-center gap-2 px-6 py-6">
         <span className="relative flex h-7 w-7 items-center justify-center rounded-full bg-gradient-to-br from-[var(--neon-pink)] via-[var(--sunshine-orange)] to-[var(--lime-zest)]">
           <span className="font-display text-xs font-bold text-ink">F</span>
@@ -55,6 +55,7 @@ export function InstitutionSidebar() {
             <Link
               key={item.href}
               href={item.href}
+              aria-current={active ? "page" : undefined}
               className={`flex items-center gap-3 rounded-xl px-3.5 py-2.5 text-sm font-medium transition-colors ${
                 active
                   ? "bg-white/10 text-paper"

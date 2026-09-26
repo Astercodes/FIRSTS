@@ -73,7 +73,7 @@ export function FeedView() {
       </div>
 
       {filtered.length === 0 ? (
-        <div className="rounded-3xl border border-ink/10 bg-white p-10 text-center">
+        <div className="workspace-card rounded-3xl border border-ink/10 bg-white p-10 text-center">
           <p className="text-sm text-ink/50">
             {tab === "following"
               ? "Nobody here yet. Follow a few people from Discover to fill this in."
@@ -110,7 +110,7 @@ export function FeedView() {
 function ActiveNowBar({ peers }: { peers: ReturnType<typeof communityPeers> }) {
   if (peers.length === 0) return null;
   return (
-    <div className="rounded-3xl border border-ink/8 bg-white p-4">
+    <div className="workspace-card rounded-3xl border border-ink/8 bg-white p-4">
       <p className="mb-3 px-1 text-[11px] font-semibold uppercase tracking-wide text-ink/40">
         Active in the community
       </p>
@@ -194,7 +194,7 @@ function Composer({ onDone }: { onDone: () => void }) {
   }
 
   return (
-    <div className="rounded-3xl border border-ink/10 bg-white p-6">
+    <div className="workspace-card rounded-3xl border border-ink/10 bg-white p-6">
       {recentComplete.length > 0 && (
         <div className="mb-3">
           <p className="mb-1.5 text-xs font-semibold uppercase tracking-wide text-ink/40">
@@ -259,7 +259,7 @@ function PostCard({ post, myHandle, myName }: { post: FeedPost; myHandle: string
   }
 
   return (
-    <div className="relative overflow-hidden rounded-3xl border border-ink/10 bg-white p-6">
+    <div className="workspace-card relative overflow-hidden rounded-3xl border border-ink/10 bg-white p-6">
       <span className="absolute inset-y-0 left-0 w-1" style={{ background: kindColor }} />
       <div className="flex items-center gap-3">
         <Link
