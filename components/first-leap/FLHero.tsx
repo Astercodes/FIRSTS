@@ -1,6 +1,5 @@
 "use client";
 
-import { EditorialStrip } from "@/components/landing/EditorialShot";
 
 import { EditorialImage } from "@/components/landing/EditorialImage";
 import Link from "next/link";
@@ -89,9 +88,8 @@ export function FLHero() {
           </a>
         </motion.div>
 
-        <EditorialStrip compact />
       </div>
-    <EditorialImage kind="growth" className="audience-art" priority />
+    <EditorialImage kind="leap" className="audience-art" priority />
     </section>
   );
 }

@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import { EditorialShot } from "@/components/landing/EditorialShot";
 import { Reveal } from "@/components/ui/Reveal";
 
 export function FCFirstLeap() {
@@ -26,6 +27,7 @@ export function FCFirstLeap() {
           move toward clearer career or business direction.
         </p>
       </Reveal>
+      <Reveal className="contextual-photo-frame"><EditorialShot kind="exposure" /></Reveal>
 
       <div className="relative mx-auto mt-10 grid max-w-3xl gap-5 sm:grid-cols-2">
         <Reveal>

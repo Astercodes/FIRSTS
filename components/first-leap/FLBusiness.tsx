@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import { EditorialShot } from "@/components/landing/EditorialShot";
 import { Reveal } from "@/components/ui/Reveal";
 
 const AREAS = [
@@ -65,6 +66,7 @@ export function FLBusiness() {
           experiences, opportunities, and problems you care about solving.
         </p>
       </Reveal>
+      <Reveal className="contextual-photo-frame"><EditorialShot kind="experiment" /></Reveal>
 
       <Reveal delay={0.1} className="mx-auto mt-6 max-w-2xl text-center">
         <p className="text-xs font-semibold uppercase tracking-[0.15em] text-ink/40">

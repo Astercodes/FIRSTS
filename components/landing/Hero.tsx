@@ -1,6 +1,5 @@
 "use client";
 
-import { EditorialStrip } from "@/components/landing/EditorialShot";
 
 import { EditorialImage } from "@/components/landing/EditorialImage";
 import Link from "next/link";
@@ -146,14 +145,6 @@ export function Hero() {
       </div>
 
       <div className="hero-art"><EditorialImage priority /><div className="hero-art-note"><span className="hero-note-dot" /> A little courage. A new beginning.</div></div>
-      <motion.div
-        initial={{ opacity: 0, y: 30 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.9, delay: 1.2, ease: [0.16, 1, 0.3, 1] as const }}
-        className="hero-photography"
-      >
-        <EditorialStrip />
-      </motion.div>
       <div
         aria-hidden
         className="pointer-events-none absolute inset-x-0 bottom-0 z-[2] h-24 bg-gradient-to-t from-[var(--ink)] to-transparent"

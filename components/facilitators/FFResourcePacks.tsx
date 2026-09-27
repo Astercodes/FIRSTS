@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import { EditorialShot } from "@/components/landing/EditorialShot";
 import { Reveal } from "@/components/ui/Reveal";
 
 const RESOURCES = [
@@ -43,6 +44,7 @@ export function FFResourcePacks() {
           such as:
         </p>
       </Reveal>
+      <Reveal className="contextual-photo-frame"><EditorialShot kind="kit" /></Reveal>
 
       <Reveal delay={0.08} className="mx-auto mt-8 flex max-w-3xl flex-wrap justify-center gap-2.5">
         {RESOURCES.map((r) => (
