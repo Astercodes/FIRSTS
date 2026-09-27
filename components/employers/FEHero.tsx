@@ -1,9 +1,10 @@
 "use client";
 
+import { EditorialStrip } from "@/components/landing/EditorialShot";
+
 import { EditorialImage } from "@/components/landing/EditorialImage";
 import Link from "next/link";
 import { motion, type Variants } from "framer-motion";
-import { MiniPeopleBand } from "@/components/illustrations/Scenes";
 
 const FADE_UP: Variants = {
   hidden: { opacity: 0, y: 28 },
@@ -89,7 +90,7 @@ export function FEHero() {
           </Link>
         </motion.div>
 
-        <MiniPeopleBand className="mt-12" />
+        <EditorialStrip compact />
       </div>
     <EditorialImage kind="community" className="audience-art" priority />
     </section>

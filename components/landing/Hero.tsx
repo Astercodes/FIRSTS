@@ -1,9 +1,10 @@
 "use client";
 
+import { EditorialStrip } from "@/components/landing/EditorialShot";
+
 import { EditorialImage } from "@/components/landing/EditorialImage";
 import Link from "next/link";
 import { motion, type Variants } from "framer-motion";
-import { HeroPeopleBand } from "@/components/illustrations/Scenes";
 
 const FADE_UP: Variants = {
   hidden: { opacity: 0, y: 28 },
@@ -149,9 +150,9 @@ export function Hero() {
         initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.9, delay: 1.2, ease: [0.16, 1, 0.3, 1] as const }}
-        className="hero-people pointer-events-none"
+        className="hero-photography"
       >
-        <HeroPeopleBand />
+        <EditorialStrip />
       </motion.div>
       <div
         aria-hidden

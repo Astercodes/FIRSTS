@@ -1,8 +1,9 @@
 "use client";
 
+import { EditorialShot, type ShotKind } from "@/components/landing/EditorialShot";
+
 import Link from "next/link";
 import { Reveal } from "@/components/ui/Reveal";
-import { Person, type Pose, type SkinTone, type HairStyle } from "@/components/illustrations/People";
 
 const AUDIENCES: {
   tag: string;
@@ -10,9 +11,7 @@ const AUDIENCES: {
   body: string;
   color: string;
   href: string;
-  pose: Pose;
-  skin: SkinTone;
-  hair: HairStyle;
+  photo: ShotKind;
 }[] = [
   {
     tag: "Path A",
@@ -20,9 +19,7 @@ const AUDIENCES: {
     body: "SSO or roster invite, auto-joined to your cohort, your advisor sees your progress, never your raw reflections, unless you share.",
     color: "var(--neon-pink)",
     href: "/for/partner-schools",
-    pose: "wave",
-    skin: "s2",
-    hair: "curly",
+    photo: "community",
   },
   {
     tag: "Path B",
@@ -30,9 +27,7 @@ const AUDIENCES: {
     body: "Students, grads, and career-changers. Sign up in a minute, work through Stage One at your own pace, export a portfolio when you're ready.",
     color: "var(--sunshine-orange)",
     href: "/for/independent-students",
-    pose: "walk",
-    skin: "s4",
-    hair: "long",
+    photo: "reflection",
   },
   {
     tag: "Path C",
@@ -40,9 +35,7 @@ const AUDIENCES: {
     body: "Cohort dashboards, at-risk flags, roster sync, and completion analytics, all without ever seeing a student's private reflection.",
     color: "var(--citrus-lime)",
     href: "/for/career-centers",
-    pose: "point",
-    skin: "s1",
-    hair: "bun",
+    photo: "making",
   },
 ];
 
@@ -71,13 +64,7 @@ export function Audiences() {
                   style={{ background: a.color }}
                   aria-hidden
                 />
-                <Person
-                  pose={a.pose}
-                  skin={a.skin}
-                  hair={a.hair}
-                  outfit={a.color}
-                  className="pointer-events-none absolute -right-2 -top-2 h-24 w-auto opacity-90 transition-transform duration-500 group-hover:-translate-y-1"
-                />
+                <EditorialShot kind={a.photo} className="audience-card-photo" />
                 <span
                   className="mb-6 inline-block rounded-full px-3 py-1 text-xs font-bold uppercase tracking-wider"
                   style={{

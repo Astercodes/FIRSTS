@@ -1,8 +1,9 @@
 "use client";
 
+import { EditorialShot } from "@/components/landing/EditorialShot";
+
 import Link from "next/link";
 import { Reveal } from "@/components/ui/Reveal";
-import { CommunityScene } from "@/components/illustrations/Scenes";
 
 const EXPLORE_ITEMS = [
   "Career Spotlights",
@@ -22,7 +23,7 @@ export function Explore() {
     <section id="explore" className="marketing-section relative bg-paper-dim px-6 py-28">
       <Reveal className="mx-auto max-w-2xl text-center">
         <div className="mb-4 flex justify-center">
-          <CommunityScene className="h-28 sm:h-32" />
+          <EditorialShot kind="making" className="section-photograph" />
         </div>
         <h2 className="font-display text-4xl font-semibold tracking-tight text-ink sm:text-5xl">
           Explore before you decide.
