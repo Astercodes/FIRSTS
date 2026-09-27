@@ -1,9 +1,10 @@
 "use client";
 
+import { EditorialShot } from "@/components/landing/EditorialShot";
+
 import { EditorialImage } from "@/components/landing/EditorialImage";
 import Link from "next/link";
 import { Reveal } from "@/components/ui/Reveal";
-import { CollabScene } from "@/components/illustrations/Scenes";
 
 const QUESTIONS = [
   "Who am I?",
@@ -90,8 +91,7 @@ export function FirstLeap() {
       </div>
 
       <Reveal delay={0.15} className="mx-auto mt-16 flex max-w-2xl flex-col items-center text-center">
-        <EditorialImage kind="community" className="community-editorial" />
-        <CollabScene className="mb-4 h-28 sm:h-32" />
+        <div className="leap-photo-pair"><EditorialImage kind="community" className="community-editorial" /><EditorialShot kind="making" /></div>
         <h3 className="font-display text-2xl font-semibold text-ink">
           You won&apos;t make the leap alone.
         </h3>

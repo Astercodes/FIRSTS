@@ -1,8 +1,9 @@
 "use client";
 
+import { EditorialShot } from "@/components/landing/EditorialShot";
+
 import Link from "next/link";
 import { Reveal } from "@/components/ui/Reveal";
-import { CelebrateScene } from "@/components/illustrations/Scenes";
 
 const COLUMNS = [
   {
@@ -35,7 +36,7 @@ export function Profile() {
 
       <Reveal className="relative mx-auto mb-14 max-w-2xl text-center">
         <div className="mb-4 flex justify-center">
-          <CelebrateScene className="h-32 sm:h-36" />
+          <EditorialShot kind="future" className="section-photograph" />
         </div>
         <h2 className="font-display text-4xl font-semibold leading-tight tracking-tight sm:text-5xl">
           Don&apos;t just complete activities.

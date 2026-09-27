@@ -1,8 +1,9 @@
 "use client";
 
+import { ClosingPhotography } from "@/components/landing/EditorialShot";
+
 import Link from "next/link";
 import { Reveal } from "@/components/ui/Reveal";
-import { ClosingFigures } from "@/components/illustrations/Scenes";
 
 export function CTA() {
   return (
@@ -17,7 +18,7 @@ export function CTA() {
       />
       <div className="noise-layer" aria-hidden />
 
-      <ClosingFigures />
+      <ClosingPhotography />
 
       <Reveal className="relative mx-auto flex max-w-3xl flex-col items-center text-center text-paper">
         <h2 className="font-display text-4xl font-semibold leading-tight tracking-tight sm:text-5xl">

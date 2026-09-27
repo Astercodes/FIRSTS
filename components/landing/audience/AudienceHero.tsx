@@ -1,9 +1,10 @@
 "use client";
 
+import { EditorialStrip } from "@/components/landing/EditorialShot";
+
 import Link from "next/link";
 import { EditorialImage } from "@/components/landing/EditorialImage";
 import { motion, type Variants } from "framer-motion";
-import { MiniPeopleBand } from "@/components/illustrations/Scenes";
 import type { AudienceConfig } from "@/lib/audienceContent";
 
 const FADE_UP: Variants = {
@@ -122,7 +123,7 @@ export function AudienceHero({ config }: { config: AudienceConfig }) {
           ))}
         </motion.div>
 
-        <MiniPeopleBand className="mt-10" />
+        <EditorialStrip compact />
       </div>
       <EditorialImage kind="community" className="audience-art" priority />
     </section>

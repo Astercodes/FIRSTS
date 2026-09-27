@@ -18,6 +18,27 @@ button:not(:disabled), summary { cursor: pointer; }
 }
 section[id] { scroll-margin-top: 100px; }
 .reading-progress { position: fixed; top: 0; left: 0; right: 0; height: 2px; transform-origin: left; background: linear-gradient(90deg, var(--neon-pink), var(--sunshine-orange), var(--lime-zest)); }
+.editorial-shot { position: relative; overflow: hidden; border-radius: 22px; background: var(--paper-dim); aspect-ratio: 3 / 2; }
+.editorial-shot img { transition: transform .8s var(--ease-out); }
+@media (hover: hover) and (prefers-reduced-motion: no-preference) {
+  a:hover .editorial-shot img { transform: scale(1.035); }
+}
+.editorial-strip { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; width: 100%; }
+.editorial-strip .editorial-shot { aspect-ratio: 2 / 1; }
+.editorial-strip-compact { width: min(100%, 340px); margin-top: 36px; gap: 10px; }
+.editorial-strip-compact .editorial-shot { aspect-ratio: 1; border-radius: 16px; }
+.hero-photography { grid-column: 1 / -1; position: relative; z-index: 3; padding-block: 8px 24px; }
+.section-photograph { width: min(520px, 100%); aspect-ratio: 2 / 1; margin: 0 auto 18px; }
+.manifesto-section { display: grid; grid-template-columns: minmax(0, .85fr) minmax(0, 1.15fr); align-items: center; gap: 64px; padding-inline: max(6vw, calc((100vw - 1280px) / 2)); }
+.manifesto-photograph { position: relative; z-index: 1; }
+.manifesto-photograph .section-photograph { aspect-ratio: 4 / 5; margin: 0; }
+.manifesto-section > .relative { min-width: 0; }
+.audience-card-photo { margin: -32px -32px 28px; border-radius: 0; aspect-ratio: 3 / 2; }
+.closing-photography { display: flex; justify-content: center; gap: 18px; position: relative; z-index: 1; margin: 0 auto 40px; max-width: 520px; }
+.closing-photography .editorial-shot { width: 50%; border: 4px solid color-mix(in oklab, var(--paper) 35%, transparent); transform: rotate(-4deg); }
+.closing-photography .editorial-shot + .editorial-shot { transform: rotate(4deg); }
+.leap-photo-pair { width: 100%; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; margin-bottom: 32px; }
+.leap-photo-pair .editorial-image, .leap-photo-pair .editorial-shot { min-height: 0; height: auto; aspect-ratio: 4 / 5; margin: 0; }
 
 .marketing-section { padding-block: clamp(4.5rem, 8vw, 8rem); }
 .marketing-section h2 { line-height: 1.07; letter-spacing: -.045em; }
@@ -139,6 +160,13 @@ section[id] { scroll-margin-top: 100px; }
   .audience-art { min-height: 450px; }
 }
 @media (max-width: 767px) {
+  .manifesto-section { grid-template-columns: minmax(0, 1fr); gap: 32px; padding-inline: 24px; }
+  .manifesto-photograph .section-photograph { width: 100%; aspect-ratio: 3 / 2; }
+  .editorial-strip { gap: 8px; }
+  .editorial-strip .editorial-shot { aspect-ratio: 1; border-radius: 14px; }
+  .closing-photography { gap: 12px; }
+  .leap-photo-pair { gap: 12px; }
+  .leap-photo-pair .editorial-caption { display: none; }
   .home-hero { grid-template-columns: minmax(0, 1fr); padding: 108px 24px 32px; }
   .hero-copy { padding-block: 16px 8px; }
   .hero-title { font-size: clamp(3.25rem, 12vw, 5rem); }
