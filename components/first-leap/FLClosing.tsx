@@ -2,6 +2,7 @@
 
 
 import Link from "next/link";
+import { ClosingSteps } from "@/components/marketing/SectionArt";
 import { Reveal } from "@/components/ui/Reveal";
 
 export function FLClosing() {
@@ -19,6 +20,7 @@ export function FLClosing() {
 
 
       <Reveal className="relative mx-auto flex max-w-2xl flex-col items-center text-center text-paper">
+        <ClosingSteps steps={["Stay curious", "Explore widely", "Choose intentionally"]} />
         <h2 className="font-display text-3xl font-semibold leading-tight tracking-tight sm:text-4xl">
           Your future is too important to choose only from what you already
           know.

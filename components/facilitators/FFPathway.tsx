@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import { SectionArt } from "@/components/marketing/SectionArt";
 import { Reveal } from "@/components/ui/Reveal";
 
 const STEPS = [
@@ -16,8 +17,9 @@ const STEPS = [
 
 export function FFPathway() {
   return (
-    <section id="pathway" className="marketing-section relative bg-paper px-6 py-28">
-      <Reveal className="mx-auto max-w-2xl text-center">
+    <section id="pathway" className="marketing-section story-section relative bg-paper px-6 py-28">
+      <div className="story-intro">
+        <Reveal className="mx-auto max-w-2xl text-center">
         <h2 className="font-display text-4xl font-semibold tracking-tight text-ink sm:text-5xl">
           You will not be thrown into a room and told to figure it out.
         </h2>
@@ -29,6 +31,8 @@ export function FFPathway() {
           may look like:
         </p>
       </Reveal>
+        <SectionArt id="FFPathway" />
+      </div>
 
       <div className="mx-auto mt-10 grid max-w-4xl gap-4 sm:grid-cols-2">
         {STEPS.map((s, i) => (

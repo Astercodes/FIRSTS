@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
+import { Logo } from "@/components/brand/Logo";
 import { useFirstsWithProgress } from "@/lib/progressStore";
 import { CATEGORY_META, MOCK_USER, completionStats } from "@/lib/dashboardData";
 import { PORTFOLIO_PIECES, effectiveAnswers } from "@/lib/portfolioContent";
@@ -589,18 +590,7 @@ function SidebarSection({
 }
 
 function FirstsMark({ className }: { className?: string }) {
-  return (
-    <span
-      className={`inline-flex shrink-0 items-center justify-center rounded-full ${className ?? "h-4 w-4"}`}
-      style={{
-        background:
-          "linear-gradient(135deg, var(--neon-pink), var(--sunshine-orange), var(--lime-zest))",
-      }}
-      aria-hidden
-    >
-      <span className="font-display text-[8px] font-bold text-ink">F</span>
-    </span>
-  );
+  return <span className={`portfolio-brand-mark inline-flex ${className ?? "h-4 w-4"}`} aria-hidden="true"><Logo markOnly /></span>;
 }
 
 function FictionalPersonIcon({ className }: { className?: string }) {

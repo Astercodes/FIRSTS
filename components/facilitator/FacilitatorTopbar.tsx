@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import { Logo } from "@/components/brand/Logo";
 import { useFacilitatorPortal, TIER_META, type FacilitatorTier } from "@/lib/facilitatorStore";
 import { useFacilitatorTraining, computeEarnedTier } from "@/lib/facilitatorTrainingStore";
 
@@ -18,12 +19,7 @@ export function FacilitatorTopbar() {
   return (
     <header className="sticky top-0 z-20 flex items-center justify-between border-b border-ink/8 bg-paper/75 px-6 py-4 backdrop-blur-xl lg:px-10 print:hidden">
       <Link href="/facilitator" className="flex items-center gap-2 lg:hidden">
-        <span className="relative flex h-7 w-7 items-center justify-center rounded-full bg-gradient-to-br from-[var(--neon-pink)] via-[var(--sunshine-orange)] to-[var(--lime-zest)]">
-          <span className="font-display text-xs font-bold text-ink">F</span>
-        </span>
-        <span className="font-display text-lg font-semibold tracking-tight text-ink">
-          FIRSTS
-        </span>
+        <Logo />
       </Link>
 
       <div className="hidden lg:block">

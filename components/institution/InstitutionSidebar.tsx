@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import Link from "next/link";
+import { Logo } from "@/components/brand/Logo";
 import { usePathname } from "next/navigation";
 import { loadAdvisor, ADVISOR_CHANGE_EVENT, MOCK_ADVISOR, type AdvisorProfile } from "@/lib/advisorStore";
 
@@ -32,12 +33,7 @@ export function InstitutionSidebar() {
   return (
     <aside className="workspace-sidebar fixed inset-y-0 left-0 z-30 hidden w-64 flex-col bg-ink text-paper lg:flex print:hidden">
       <div className="flex items-center gap-2 px-6 py-6">
-        <span className="relative flex h-7 w-7 items-center justify-center rounded-full bg-gradient-to-br from-[var(--neon-pink)] via-[var(--sunshine-orange)] to-[var(--lime-zest)]">
-          <span className="font-display text-xs font-bold text-ink">F</span>
-        </span>
-        <span className="font-display text-lg font-semibold tracking-tight">
-          FIRSTS
-        </span>
+        <Logo />
         <span className="ml-auto rounded-full bg-white/10 px-2 py-0.5 text-[10px] font-bold uppercase tracking-wide text-paper/60">
           Institution
         </span>

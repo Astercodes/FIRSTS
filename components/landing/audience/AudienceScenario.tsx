@@ -1,12 +1,14 @@
 "use client";
 
+import { SectionArt } from "@/components/marketing/SectionArt";
 import { Reveal } from "@/components/ui/Reveal";
 import type { AudienceConfig } from "@/lib/audienceContent";
 
 export function AudienceScenario({ config }: { config: AudienceConfig }) {
   return (
-    <section className="marketing-section relative bg-paper-dim px-6 py-24">
-      <div className="mx-auto grid max-w-6xl items-start gap-14 lg:grid-cols-[0.9fr_1.1fr]">
+    <section className="marketing-section story-section relative bg-paper-dim px-6 py-24">
+      <div className="mx-auto max-w-6xl">
+        <div className="story-intro">
         <Reveal>
           <p
             className="mb-3 text-xs font-semibold uppercase tracking-[0.2em]"
@@ -21,9 +23,11 @@ export function AudienceScenario({ config }: { config: AudienceConfig }) {
             {config.scenarioBody}
           </p>
         </Reveal>
+        <SectionArt id="AudienceScenario" />
+      </div>
 
         <Reveal delay={0.12}>
-          <ol className="space-y-5">
+          <ol className="grid gap-5 md:grid-cols-3">
             {config.steps.map((s, i) => (
               <li
                 key={s.title}

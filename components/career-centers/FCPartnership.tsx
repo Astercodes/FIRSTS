@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import { SectionArt } from "@/components/marketing/SectionArt";
 import { Reveal } from "@/components/ui/Reveal";
 
 const STILL_MATTERS = [
@@ -25,8 +26,9 @@ const START_WITH = [
 
 export function FCPartnership() {
   return (
-    <section className="marketing-section relative bg-paper-dim px-6 py-28">
-      <Reveal className="mx-auto max-w-2xl text-center">
+    <section className="marketing-section story-section relative bg-paper-dim px-6 py-28">
+      <div className="story-intro">
+        <Reveal className="mx-auto max-w-2xl text-center">
         <p className="mb-3 text-xs font-semibold uppercase tracking-[0.2em] text-berry-burst">
           Built for partnership, not replacement
         </p>
@@ -34,6 +36,8 @@ export function FCPartnership() {
           FIRSTS should strengthen what your career center already does.
         </h2>
       </Reveal>
+        <SectionArt id="FCPartnership" />
+      </div>
 
       <Reveal delay={0.1} className="mx-auto mt-8 max-w-2xl">
         <div className="space-y-2">

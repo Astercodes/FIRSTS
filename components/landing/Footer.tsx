@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { Logo } from "@/components/brand/Logo";
 
 const COLUMNS: { title: string; links: { label: string; href: string }[] }[] = [
   {
@@ -50,14 +51,7 @@ export function Footer() {
         <div className="grid gap-12 border-b border-ink/10 pb-12 sm:grid-cols-2 lg:grid-cols-[1.2fr_repeat(4,1fr)]">
           <div>
             <div className="flex items-center gap-2">
-              <span className="relative flex h-6 w-6 items-center justify-center rounded-full bg-gradient-to-br from-[var(--neon-pink)] via-[var(--sunshine-orange)] to-[var(--lime-zest)]">
-                <span className="font-display text-[10px] font-bold text-ink">
-                  F
-                </span>
-              </span>
-              <span className="font-display text-sm font-semibold text-ink">
-                FIRSTS
-              </span>
+              <Logo />
             </div>
             <p className="mt-3 max-w-[220px] text-sm text-ink/50">
               One first can begin something bigger.

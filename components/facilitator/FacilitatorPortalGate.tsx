@@ -1,5 +1,6 @@
 "use client";
 
+import { Logo } from "@/components/brand/Logo";
 import { useEffect, type ReactNode } from "react";
 import { useRouter } from "next/navigation";
 import { useFacilitatorPortal } from "@/lib/facilitatorStore";
@@ -20,7 +21,8 @@ export function FacilitatorPortalGate({ children }: { children: ReactNode }) {
 
   if (!ready) {
     return (
-      <div className="flex min-h-[100svh] items-center justify-center bg-paper-dim px-6 text-center">
+      <div className="flex min-h-[100svh] flex-col gap-6 items-center justify-center bg-paper-dim px-6 text-center">
+        <Logo />
         <p className="text-sm text-ink/45">Loading your facilitator portal…</p>
       </div>
     );

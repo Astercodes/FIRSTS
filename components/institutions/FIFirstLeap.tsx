@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import { SectionArt } from "@/components/marketing/SectionArt";
 import { Reveal } from "@/components/ui/Reveal";
 
 const CAREER_STEPS = [
@@ -33,10 +34,11 @@ const BUSINESS_STEPS = [
 
 export function FIFirstLeap() {
   return (
-    <section className="marketing-section relative overflow-hidden bg-mesh-dark px-6 py-28 text-paper">
+    <section className="marketing-section story-section relative overflow-hidden bg-mesh-dark px-6 py-28 text-paper">
       <div className="noise-layer" aria-hidden />
 
-      <Reveal className="relative mx-auto max-w-2xl text-center">
+      <div className="story-intro">
+        <Reveal className="relative mx-auto max-w-2xl text-center">
         <p className="text-xs font-semibold uppercase tracking-[0.3em] text-[var(--lime-zest)]">
           Bring First Leap to your institution
         </p>
@@ -53,6 +55,8 @@ export function FIFirstLeap() {
           Facilitators and Mentors.
         </p>
       </Reveal>
+        <SectionArt id="FIFirstLeap" />
+      </div>
 
       <div className="relative mx-auto mt-14 grid max-w-4xl gap-6 sm:grid-cols-2">
         <Reveal>

@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import Link from "next/link";
+import { Logo } from "@/components/brand/Logo";
 import { loadEmployer, EMPLOYER_CHANGE_EVENT, MOCK_EMPLOYER, type EmployerProfile } from "@/lib/employerStore";
 
 export function EmployerTopbar() {
@@ -26,12 +27,7 @@ export function EmployerTopbar() {
   return (
     <header className="sticky top-0 z-20 flex items-center justify-between border-b border-ink/8 bg-paper/80 px-6 py-4 backdrop-blur-md lg:px-10 print:hidden">
       <Link href="/employer" className="flex items-center gap-2 lg:hidden">
-        <span className="relative flex h-7 w-7 items-center justify-center rounded-full bg-gradient-to-br from-[var(--neon-pink)] via-[var(--sunshine-orange)] to-[var(--lime-zest)]">
-          <span className="font-display text-xs font-bold text-ink">F</span>
-        </span>
-        <span className="font-display text-lg font-semibold tracking-tight text-ink">
-          FIRSTS
-        </span>
+        <Logo />
       </Link>
 
       <div className="hidden lg:block">

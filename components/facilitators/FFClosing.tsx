@@ -2,6 +2,7 @@
 
 
 import Link from "next/link";
+import { ClosingSteps } from "@/components/marketing/SectionArt";
 import { Reveal } from "@/components/ui/Reveal";
 
 const MOMENTS = [
@@ -28,6 +29,7 @@ export function FFClosing() {
 
 
       <Reveal className="relative mx-auto flex max-w-2xl flex-col items-center text-center text-paper">
+        <ClosingSteps steps={["Prepare to lead", "Create the space", "Grow your practice"]} />
         <h2 className="font-display text-3xl font-semibold leading-tight tracking-tight sm:text-4xl">
           Lead a session. Build a practice. Help someone take a FIRST.
         </h2>

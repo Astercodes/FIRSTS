@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import { SectionArt } from "@/components/marketing/SectionArt";
 import { Reveal } from "@/components/ui/Reveal";
 
 const SIGNALS = [
@@ -18,8 +19,9 @@ const SIGNALS = [
 
 export function FIAnalytics() {
   return (
-    <section className="marketing-section relative bg-paper px-6 py-28">
-      <Reveal className="mx-auto max-w-2xl text-center">
+    <section className="marketing-section story-section relative bg-paper px-6 py-28">
+      <div className="story-intro">
+        <Reveal className="mx-auto max-w-2xl text-center">
         <h2 className="font-display text-4xl font-semibold tracking-tight text-ink sm:text-5xl">
           See who is engaging. See where support is needed.
         </h2>
@@ -28,6 +30,8 @@ export function FIAnalytics() {
           signals. Understand:
         </p>
       </Reveal>
+        <SectionArt id="FIAnalytics" />
+      </div>
 
       <Reveal delay={0.08} className="mx-auto mt-8 max-w-2xl space-y-2">
         {SIGNALS.map((s) => (

@@ -1,12 +1,14 @@
 "use client";
 
 import Link from "next/link";
+import { SectionArt } from "@/components/marketing/SectionArt";
 import { Reveal } from "@/components/ui/Reveal";
 
 export function ISFirstLeap() {
   return (
-    <section className="marketing-section relative bg-paper-dim px-6 py-28">
-      <Reveal className="mx-auto max-w-2xl text-center">
+    <section className="marketing-section story-section relative bg-paper-dim px-6 py-28">
+      <div className="story-intro">
+        <Reveal className="mx-auto max-w-2xl text-center">
         <p className="mb-3 text-xs font-semibold uppercase tracking-[0.2em] text-berry-burst">
           Still trying to figure out your direction?
         </p>
@@ -20,6 +22,8 @@ export function ISFirstLeap() {
           to a clearer career or business direction.
         </p>
       </Reveal>
+        <SectionArt id="ISFirstLeap" />
+      </div>
 
       <div className="mx-auto mt-10 grid max-w-3xl gap-5 sm:grid-cols-2">
         <Reveal>

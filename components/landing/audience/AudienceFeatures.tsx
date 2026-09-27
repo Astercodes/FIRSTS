@@ -1,12 +1,14 @@
 "use client";
 
+import { SectionArt } from "@/components/marketing/SectionArt";
 import { Reveal } from "@/components/ui/Reveal";
 import type { AudienceConfig } from "@/lib/audienceContent";
 
 export function AudienceFeatures({ config }: { config: AudienceConfig }) {
   return (
-    <section className="marketing-section relative bg-paper px-6 py-24">
+    <section className="marketing-section story-section relative bg-paper px-6 py-24">
       <div className="mx-auto max-w-6xl">
+        <div className="story-intro">
         <Reveal className="mb-12 max-w-2xl">
           <p
             className="mb-3 text-xs font-semibold uppercase tracking-[0.2em]"
@@ -18,6 +20,8 @@ export function AudienceFeatures({ config }: { config: AudienceConfig }) {
             Built around how you&apos;ll actually use it.
           </h2>
         </Reveal>
+        <SectionArt id="AudienceFeatures" />
+      </div>
 
         <div className="grid gap-5 sm:grid-cols-2">
           {config.features.map((f, i) => (

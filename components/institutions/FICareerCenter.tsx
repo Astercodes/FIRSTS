@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import { SectionArt } from "@/components/marketing/SectionArt";
 import { Reveal } from "@/components/ui/Reveal";
 
 const OFFERINGS = [
@@ -35,8 +36,9 @@ const QUESTIONS = [
 
 export function FICareerCenter() {
   return (
-    <section className="marketing-section relative bg-paper px-6 py-28">
-      <Reveal className="mx-auto max-w-2xl text-center">
+    <section className="marketing-section story-section relative bg-paper px-6 py-28">
+      <div className="story-intro">
+        <Reveal className="mx-auto max-w-2xl text-center">
         <h2 className="font-display text-4xl font-semibold tracking-tight text-ink sm:text-5xl">
           A Career Center that goes beyond job postings.
         </h2>
@@ -46,6 +48,8 @@ export function FICareerCenter() {
           dedicated environment for:
         </p>
       </Reveal>
+        <SectionArt id="FICareerCenter" />
+      </div>
 
       <Reveal delay={0.08} className="mx-auto mt-8 flex max-w-3xl flex-wrap justify-center gap-2.5">
         {OFFERINGS.map((o) => (

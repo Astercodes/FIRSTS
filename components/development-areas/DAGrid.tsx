@@ -1,5 +1,8 @@
 "use client";
 
+import { Fragment } from "react";
+import { SectionArt } from "@/components/marketing/SectionArt";
+import { DevelopmentGlyph } from "./DevelopmentGlyph";
 import Link from "next/link";
 import { Reveal } from "@/components/ui/Reveal";
 import { FIRSTS as ALL_FIRSTS, STAGES } from "@/lib/dashboardData";
@@ -39,7 +42,7 @@ export function DAGrid() {
           const count = ALL_FIRSTS.filter((m) => m.stage === stage.id).length;
           const color = COLORS[i % COLORS.length];
           return (
-            <Reveal key={stage.id} delay={(i % 6) * 0.06}>
+            <Fragment key={stage.id}><Reveal delay={(i % 6) * 0.06}>
               <Link href={stage.href} className="group block h-full">
                 <div className="flex h-full flex-col rounded-2xl border border-ink/10 bg-white p-6 transition-colors group-hover:border-ink/25">
                   <div className="flex items-center justify-between">
@@ -56,6 +59,7 @@ export function DAGrid() {
                       {count} FIRSTS
                     </span>
                   </div>
+                  <DevelopmentGlyph index={i} color={color} />
                   <h3 className="mt-4 font-display text-lg font-semibold leading-snug text-ink">
                     {title}
                   </h3>
@@ -68,6 +72,8 @@ export function DAGrid() {
                 </div>
               </Link>
             </Reveal>
+            {(i === 5 || i === 11) && <div className="development-photo-band sm:col-span-2 lg:col-span-3"><SectionArt id={i === 5 ? "DAThinking" : "DACommunication"} /></div>}
+            </Fragment>
           );
         })}
       </div>

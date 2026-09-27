@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import { SectionArt } from "@/components/marketing/SectionArt";
 import { Reveal } from "@/components/ui/Reveal";
 
 const FEEDBACK_FROM = [
@@ -42,7 +43,8 @@ const COMMUNITY_WAYS = [
 export function FFFeedbackCommunity() {
   return (
     <>
-      <section className="marketing-section relative bg-paper-dim px-6 py-24">
+      <section className="marketing-section story-section relative bg-paper-dim px-6 py-24">
+        <div className="story-intro">
         <Reveal className="mx-auto max-w-2xl text-center">
           <h2 className="font-display text-4xl font-semibold tracking-tight text-ink sm:text-5xl">
             Get feedback that helps you improve.
@@ -52,6 +54,8 @@ export function FFFeedbackCommunity() {
             Development can include feedback from:
           </p>
         </Reveal>
+        <SectionArt id="FFFeedbackCommunity" />
+      </div>
 
         <Reveal delay={0.08} className="mx-auto mt-8 flex max-w-2xl flex-wrap justify-center gap-2.5">
           {FEEDBACK_FROM.map((f) => (
