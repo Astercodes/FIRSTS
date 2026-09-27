@@ -72,7 +72,7 @@ export function DAGrid() {
                 </div>
               </Link>
             </Reveal>
-            {(i === 5 || i === 11) && <div className="development-photo-band sm:col-span-2 lg:col-span-3"><SectionArt id={i === 5 ? "DAThinking" : "DACommunication"} /></div>}
+            {(i === 5 || i === 11) && <div className="development-photo-band sm:col-span-2 lg:col-span-3"><SectionArt wide id={i === 5 ? "DAThinking" : "DACommunication"} /></div>}
             </Fragment>
           );
         })}

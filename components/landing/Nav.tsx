@@ -140,7 +140,7 @@ export function Nav() {
         }`}
       >
         <Link href="/" aria-label="FIRSTS home" className="flex items-center gap-2">
-          <Logo />
+          <Logo tone="light" />
         </Link>
 
         <div className="hidden items-center gap-7 md:flex">
