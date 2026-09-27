@@ -1,7 +1,7 @@
 /** A stepped F: three connected firsts, each opening the next level. */
-export function Logo({ className = "", markOnly = false }: { className?: string; markOnly?: boolean }) {
+export function Logo({ className = "", markOnly = false, tone }: { className?: string; markOnly?: boolean; tone?: "light" | "dark" }) {
   return (
-    <span className={`firsts-logo ${className}`} role="img" aria-label="FIRSTS">
+    <span className={`firsts-logo ${tone ? `firsts-logo-${tone}` : ""} ${className}`} role="img" aria-label="FIRSTS">
       <svg viewBox="0 0 48 48" fill="none" aria-hidden="true" focusable="false">
         <path d="M6 42V22H16V42H6Z" fill="var(--neon-pink, #ff1199)" />
         <path d="M6 22L16 12H34V22H6Z" fill="var(--sunshine-orange, #ff8a00)" />

@@ -3,13 +3,13 @@ import type { CSSProperties } from "react";
 import { Reveal } from "@/components/ui/Reveal";
 import { SECTION_ART } from "@/lib/sectionArt";
 
-export function SectionArt({ id }: { id: keyof typeof SECTION_ART }) {
+export function SectionArt({ id, wide = false }: { id: keyof typeof SECTION_ART; wide?: boolean }) {
   const art = SECTION_ART[id];
   return (
     <Reveal className={`story-art story-art-${art.kind}`}>
       <figure className={`section-art craft-${art.kind}`} style={{ "--craft-accent": art.color } as CSSProperties}>
         {art.kind === "photo" ? (
-          <div className="section-art-photo"><Image src={`/images/stories/${art.image}.webp`} alt={art.alt ?? art.title} fill sizes="(max-width: 767px) 90vw, 560px" className="object-cover" /></div>
+          <div className="section-art-photo"><Image src={`/images/stories/${art.image}.webp`} alt={art.alt ?? art.title} fill quality={95} sizes={wide ? "(max-width: 1279px) 90vw, 1152px" : "(max-width: 767px) 90vw, 560px"} className="object-cover" /></div>
         ) : (
           <div className="craft-composition">
             <div className="craft-heading"><span>{art.title}</span><span aria-hidden="true">↗</span></div>

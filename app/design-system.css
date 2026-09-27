@@ -210,6 +210,10 @@ a:hover .audience-path-mark > :last-child { transform: translate(3px,-3px); }
 
 /* FIRSTS identity and section-level editorial system. Home sections are unchanged. */
 .firsts-logo { display: inline-flex; align-items: center; gap: 8px; flex-shrink: 0; color: inherit; }
+.firsts-logo-light { color: var(--paper); }
+.firsts-logo-dark { color: var(--ink); }
+/* Lift photographic exposure without changing the brand colors or captions. */
+.editorial-image img, .editorial-shot img, .section-art-photo img { filter: brightness(1.08) contrast(1.025); }
 .firsts-logo svg { width: 32px; height: 32px; flex: none; }
 .firsts-wordmark { font-family: var(--font-bricolage), sans-serif; font-size: 20px; line-height: 1; font-weight: 800; letter-spacing: -.06em; }
 .firsts-wordmark-dot { color: var(--sunshine-orange); }

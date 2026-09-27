@@ -51,7 +51,7 @@ export function Footer() {
         <div className="grid gap-12 border-b border-ink/10 pb-12 sm:grid-cols-2 lg:grid-cols-[1.2fr_repeat(4,1fr)]">
           <div>
             <div className="flex items-center gap-2">
-              <Logo />
+              <Logo tone="dark" />
             </div>
             <p className="mt-3 max-w-[220px] text-sm text-ink/50">
               One first can begin something bigger.
