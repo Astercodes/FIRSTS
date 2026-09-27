@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import { SectionArt } from "@/components/marketing/SectionArt";
 import { Reveal } from "@/components/ui/Reveal";
 
 const AREAS = [
@@ -41,7 +42,8 @@ const AREAS = [
 export function FLCareer() {
   return (
     <>
-      <Reveal className="mx-auto max-w-2xl px-6 pb-4 pt-28 text-center">
+      <div className="story-intro">
+        <Reveal className="mx-auto max-w-2xl px-6 pb-4 pt-28 text-center">
         <p className="text-xs font-semibold uppercase tracking-[0.2em] text-berry-burst">
           Two ways to take your First Leap
         </p>
@@ -51,8 +53,10 @@ export function FLCareer() {
           those different journeys.
         </p>
       </Reveal>
+        <SectionArt id="FLCareer" />
+      </div>
 
-      <section id="career" className="marketing-section relative bg-paper px-6 py-20">
+      <section id="career" className="marketing-section story-section relative bg-paper px-6 py-20">
         <Reveal className="mx-auto max-w-2xl text-center">
           <p className="mb-3 text-xs font-semibold uppercase tracking-[0.2em] text-berry-burst">
             First Leap: Career

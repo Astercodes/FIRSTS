@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import { SectionArt } from "@/components/marketing/SectionArt";
 import { Reveal } from "@/components/ui/Reveal";
 
 const AREAS = [
@@ -27,8 +28,9 @@ const AREAS = [
 
 export function ISIntro() {
   return (
-    <section className="marketing-section relative bg-paper px-6 py-24">
-      <Reveal className="mx-auto max-w-2xl text-center">
+    <section className="marketing-section story-section relative bg-paper px-6 py-24">
+      <div className="story-intro">
+        <Reveal className="mx-auto max-w-2xl text-center">
         <p className="text-[15px] leading-relaxed text-ink/60">
           Create your own account, explore all 16 stages, complete guided
           FIRSTS at your own pace, build your portfolio, use the AI Coach,
@@ -38,6 +40,8 @@ export function ISIntro() {
           No invite code. No institutional approval. No waiting.
         </p>
       </Reveal>
+        <SectionArt id="ISIntro" />
+      </div>
 
       <Reveal delay={0.1} className="mx-auto mt-16 max-w-2xl border-t border-ink/10 pt-16 text-center">
         <h2 className="font-display text-3xl font-semibold tracking-tight text-ink sm:text-4xl">

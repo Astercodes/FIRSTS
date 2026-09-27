@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import { Logo } from "@/components/brand/Logo";
 import { usePathname } from "next/navigation";
 
 const NAV = [
@@ -32,12 +33,7 @@ export function Sidebar() {
   return (
     <aside className="workspace-sidebar fixed inset-y-0 left-0 z-30 hidden w-64 flex-col bg-ink text-paper lg:flex print:hidden">
       <div className="flex items-center gap-2 px-6 py-6">
-        <span className="relative flex h-7 w-7 items-center justify-center rounded-full bg-gradient-to-br from-[var(--neon-pink)] via-[var(--sunshine-orange)] to-[var(--lime-zest)]">
-          <span className="font-display text-xs font-bold text-ink">F</span>
-        </span>
-        <span className="font-display text-lg font-semibold tracking-tight">
-          FIRSTS
-        </span>
+        <Logo />
       </div>
 
       <nav className="min-h-0 flex-1 space-y-1 overflow-y-auto px-3 py-1">

@@ -2,6 +2,7 @@
 
 
 import Link from "next/link";
+import { ClosingSteps } from "@/components/marketing/SectionArt";
 import { Reveal } from "@/components/ui/Reveal";
 
 export function ISClosing() {
@@ -19,6 +20,7 @@ export function ISClosing() {
 
 
       <Reveal className="relative mx-auto flex max-w-2xl flex-col items-center text-center text-paper">
+        <ClosingSteps steps={["Choose a first", "Make it yours", "Keep going"]} />
         <h2 className="font-display text-3xl font-semibold leading-tight tracking-tight sm:text-4xl">
           You don&apos;t need permission to begin developing intentionally.
         </h2>

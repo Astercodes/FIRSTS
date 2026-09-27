@@ -1,5 +1,6 @@
 "use client";
 
+import { SectionArt } from "@/components/marketing/SectionArt";
 import { Reveal } from "@/components/ui/Reveal";
 
 const STAGES = [
@@ -96,8 +97,9 @@ const STAGES = [
 
 export function FLStages() {
   return (
-    <section id="what-is-first-leap" className="marketing-section relative bg-paper px-6 py-28">
-      <Reveal className="mx-auto mb-14 max-w-2xl text-center">
+    <section id="what-is-first-leap" className="marketing-section story-section relative bg-paper px-6 py-28">
+      <div className="story-intro">
+        <Reveal className="mx-auto mb-14 max-w-2xl text-center">
         <p className="mb-3 text-xs font-semibold uppercase tracking-[0.2em] text-berry-burst">
           What is First Leap?
         </p>
@@ -108,6 +110,8 @@ export function FLStages() {
           It is designed to help you move through four important stages.
         </p>
       </Reveal>
+        <SectionArt id="FLStages" />
+      </div>
 
       <div className="mx-auto flex max-w-4xl flex-col gap-6">
         {STAGES.map((stage, i) => (

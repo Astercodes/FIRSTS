@@ -2,6 +2,7 @@
 
 
 import Link from "next/link";
+import { ClosingSteps } from "@/components/marketing/SectionArt";
 import { Reveal } from "@/components/ui/Reveal";
 
 const PROBLEMS = [
@@ -27,6 +28,7 @@ export function FEClosing() {
 
 
       <Reveal className="relative mx-auto flex max-w-2xl flex-col items-center text-center text-paper">
+        <ClosingSteps steps={["Share perspective", "Develop potential", "Meet the talent"]} />
         <h2 className="font-display text-3xl font-semibold leading-tight tracking-tight sm:text-4xl">
           Build the workforce before you hire from it.
         </h2>

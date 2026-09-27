@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import { SectionArt } from "@/components/marketing/SectionArt";
 import { Reveal } from "@/components/ui/Reveal";
 
 const STEPS = [
@@ -18,12 +19,15 @@ const STEPS = [
 
 export function FIImplementation() {
   return (
-    <section className="marketing-section relative bg-paper px-6 py-28">
-      <Reveal className="mx-auto max-w-2xl text-center">
+    <section className="marketing-section story-section relative bg-paper px-6 py-28">
+      <div className="story-intro">
+        <Reveal className="mx-auto max-w-2xl text-center">
         <h2 className="font-display text-4xl font-semibold tracking-tight text-ink sm:text-5xl">
           What implementation can look like.
         </h2>
       </Reveal>
+        <SectionArt id="FIImplementation" />
+      </div>
 
       <div className="mx-auto mt-12 max-w-2xl space-y-4">
         {STEPS.map((s, i) => (

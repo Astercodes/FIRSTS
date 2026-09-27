@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import { SectionArt } from "@/components/marketing/SectionArt";
 import { Reveal } from "@/components/ui/Reveal";
 
 const AREAS = [
@@ -15,8 +16,9 @@ const AREAS = [
 
 export function EPApplications() {
   return (
-    <section className="marketing-section relative bg-paper-dim px-6 py-28">
-      <Reveal className="mx-auto max-w-2xl text-center">
+    <section className="marketing-section story-section relative bg-paper-dim px-6 py-28">
+      <div className="story-intro">
+        <Reveal className="mx-auto max-w-2xl text-center">
         <h2 className="font-display text-4xl font-semibold tracking-tight text-ink sm:text-5xl">
           Turn applications into a skill.
         </h2>
@@ -26,6 +28,8 @@ export function EPApplications() {
           determine whether good candidates move forward.
         </p>
       </Reveal>
+        <SectionArt id="EPApplications" />
+      </div>
 
       <div className="mx-auto mt-10 grid max-w-5xl gap-5 sm:grid-cols-2 lg:grid-cols-3">
         {AREAS.map((a, i) => (

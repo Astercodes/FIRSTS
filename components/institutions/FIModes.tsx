@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import { SectionArt } from "@/components/marketing/SectionArt";
 import { Reveal } from "@/components/ui/Reveal";
 
 const GUIDED = [
@@ -25,12 +26,15 @@ const FREE_EXPLORE = [
 
 export function FIModes() {
   return (
-    <section className="marketing-section relative bg-paper-dim px-6 py-28">
-      <Reveal className="mx-auto max-w-2xl text-center">
+    <section className="marketing-section story-section relative bg-paper-dim px-6 py-28">
+      <div className="story-intro">
+        <Reveal className="mx-auto max-w-2xl text-center">
         <h2 className="font-display text-4xl font-semibold tracking-tight text-ink sm:text-5xl">
           Let students develop in sequence, or meet the moment.
         </h2>
       </Reveal>
+        <SectionArt id="FIModes" />
+      </div>
 
       <div className="mx-auto mt-12 grid max-w-4xl gap-8 sm:grid-cols-2">
         <Reveal>

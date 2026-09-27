@@ -2,6 +2,7 @@
 
 
 import Link from "next/link";
+import { ClosingSteps } from "@/components/marketing/SectionArt";
 import { Reveal } from "@/components/ui/Reveal";
 import type { AudienceConfig } from "@/lib/audienceContent";
 
@@ -19,6 +20,7 @@ export function AudienceCTA({ config }: { config: AudienceConfig }) {
 
 
       <Reveal className="relative mx-auto flex max-w-3xl flex-col items-center text-center text-paper">
+        <ClosingSteps steps={["Join your cohort", "Find your first", "Make progress"]} />
         <h2 className="font-display text-4xl font-semibold leading-tight tracking-tight sm:text-5xl">
           {config.ctaHeadline}
         </h2>

@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import { SectionArt } from "@/components/marketing/SectionArt";
 import { Reveal } from "@/components/ui/Reveal";
 
 const USES = [
@@ -18,7 +19,7 @@ const USES = [
 
 export function ISCoach() {
   return (
-    <section className="marketing-section relative overflow-hidden bg-mesh-dark px-6 py-28 text-paper">
+    <section className="marketing-section story-section relative overflow-hidden bg-mesh-dark px-6 py-28 text-paper">
       <div
         aria-hidden
         className="pointer-events-none absolute right-[-10%] top-[15%] h-[380px] w-[380px] animate-blob-drift-slow rounded-full opacity-40 blur-[110px]"
@@ -26,7 +27,8 @@ export function ISCoach() {
       />
       <div className="noise-layer" aria-hidden />
 
-      <Reveal className="relative mx-auto max-w-2xl text-center">
+      <div className="story-intro">
+        <Reveal className="relative mx-auto max-w-2xl text-center">
         <h2 className="font-display text-4xl font-semibold leading-tight tracking-tight sm:text-5xl">
           Meet your AI Coach.
         </h2>
@@ -37,6 +39,8 @@ export function ISCoach() {
           it to:
         </p>
       </Reveal>
+        <SectionArt id="ISCoach" />
+      </div>
 
       <Reveal delay={0.1} className="relative mx-auto mt-8 flex max-w-3xl flex-wrap justify-center gap-2.5">
         {USES.map((u) => (

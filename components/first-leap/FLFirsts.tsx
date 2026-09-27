@@ -1,5 +1,6 @@
 "use client";
 
+import { SectionArt } from "@/components/marketing/SectionArt";
 import { Reveal } from "@/components/ui/Reveal";
 
 const FIRSTS = [
@@ -21,8 +22,9 @@ const FIRSTS = [
 
 export function FLFirsts() {
   return (
-    <section className="marketing-section relative bg-paper-dim px-6 py-28">
-      <Reveal className="mx-auto max-w-2xl text-center">
+    <section className="marketing-section story-section relative bg-paper-dim px-6 py-28">
+      <div className="story-intro">
+        <Reveal className="mx-auto max-w-2xl text-center">
         <h2 className="font-display text-4xl font-semibold tracking-tight text-ink sm:text-5xl">
           Your FIRSTS become part of your journey.
         </h2>
@@ -31,6 +33,8 @@ export function FLFirsts() {
           meaningful firsts. Your:
         </p>
       </Reveal>
+        <SectionArt id="FLFirsts" />
+      </div>
 
       <Reveal delay={0.1} className="mx-auto mt-10 flex max-w-3xl flex-wrap justify-center gap-2.5">
         {FIRSTS.map((f) => (

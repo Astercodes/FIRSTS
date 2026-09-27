@@ -1,12 +1,14 @@
 "use client";
 
 import Link from "next/link";
+import { SectionArt } from "@/components/marketing/SectionArt";
 import { Reveal } from "@/components/ui/Reveal";
 
 export function ISCenters() {
   return (
-    <section className="marketing-section relative bg-paper px-6 py-28">
-      <Reveal className="mx-auto max-w-2xl text-center">
+    <section className="marketing-section story-section relative bg-paper px-6 py-28">
+      <div className="story-intro">
+        <Reveal className="mx-auto max-w-2xl text-center">
         <h2 className="font-display text-4xl font-semibold tracking-tight text-ink sm:text-5xl">
           Explore more than careers.
         </h2>
@@ -17,6 +19,8 @@ export function ISCenters() {
           exploration environments.
         </p>
       </Reveal>
+        <SectionArt id="ISCenters" />
+      </div>
 
       <div className="mx-auto mt-10 grid max-w-3xl gap-5 sm:grid-cols-2">
         <Reveal>

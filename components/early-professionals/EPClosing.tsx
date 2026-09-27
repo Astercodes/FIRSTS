@@ -2,6 +2,7 @@
 
 
 import Link from "next/link";
+import { ClosingSteps } from "@/components/marketing/SectionArt";
 import { Reveal } from "@/components/ui/Reveal";
 
 export function EPClosing() {
@@ -19,6 +20,7 @@ export function EPClosing() {
 
 
       <Reveal className="relative mx-auto flex max-w-2xl flex-col items-center text-center text-paper">
+        <ClosingSteps steps={["Build the person", "Practice the work", "Take the next step"]} />
         <h2 className="font-display text-3xl font-semibold leading-tight tracking-tight sm:text-4xl">
           Start wherever you actually are.
         </h2>

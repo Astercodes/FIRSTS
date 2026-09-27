@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import { SectionArt } from "@/components/marketing/SectionArt";
 import { Reveal } from "@/components/ui/Reveal";
 
 const FACILITATOR_ITEMS = [
@@ -30,7 +31,7 @@ const MENTOR_ITEMS = [
 
 export function FLPeople() {
   return (
-    <section id="people" className="marketing-section relative overflow-hidden bg-mesh-dark px-6 py-28 text-paper">
+    <section id="people" className="marketing-section story-section relative overflow-hidden bg-mesh-dark px-6 py-28 text-paper">
       <div
         aria-hidden
         className="pointer-events-none absolute right-[-10%] top-[15%] h-[380px] w-[380px] animate-blob-drift-slow rounded-full opacity-40 blur-[110px]"
@@ -38,7 +39,8 @@ export function FLPeople() {
       />
       <div className="noise-layer" aria-hidden />
 
-      <Reveal className="relative mx-auto max-w-2xl text-center">
+      <div className="story-intro">
+        <Reveal className="relative mx-auto max-w-2xl text-center">
         <h2 className="font-display text-4xl font-semibold leading-tight tracking-tight sm:text-5xl">
           You won&apos;t do it alone.
         </h2>
@@ -56,6 +58,8 @@ export function FLPeople() {
           with trained First Leap Facilitators and First Leap Mentors.
         </p>
       </Reveal>
+        <SectionArt id="FLPeople" />
+      </div>
 
       <div className="relative mx-auto mt-14 grid max-w-5xl gap-6 lg:grid-cols-2">
         <Reveal>

@@ -1,11 +1,13 @@
 "use client";
 
+import { SectionArt } from "@/components/marketing/SectionArt";
 import { Reveal } from "@/components/ui/Reveal";
 
 export function FEIpfs() {
   return (
-    <section className="marketing-section relative bg-paper px-6 py-28">
-      <Reveal className="mx-auto max-w-2xl text-center">
+    <section className="marketing-section story-section relative bg-paper px-6 py-28">
+      <div className="story-intro">
+        <Reveal className="mx-auto max-w-2xl text-center">
         <h2 className="font-display text-4xl font-semibold tracking-tight text-ink sm:text-5xl">
           From direction to deeper capability.
         </h2>
@@ -25,6 +27,8 @@ export function FEIpfs() {
           deeper: can this person actually perform?
         </p>
       </Reveal>
+        <SectionArt id="FEIpfs" />
+      </div>
 
       <Reveal delay={0.12} className="mx-auto mt-10 max-w-xl rounded-2xl border border-dashed border-ink/15 bg-paper-dim/60 p-6 text-center">
         <span className="inline-flex rounded-full bg-ink/5 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.2em] text-ink/40">

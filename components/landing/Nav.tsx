@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
+import { Logo } from "@/components/brand/Logo";
 import { motion, AnimatePresence, useScroll, useSpring, useReducedMotion } from "framer-motion";
 
 const LINKS = [
@@ -139,13 +140,7 @@ export function Nav() {
         }`}
       >
         <Link href="/" aria-label="FIRSTS home" className="flex items-center gap-2">
-          <span className="relative flex h-7 w-7 items-center justify-center rounded-full bg-gradient-to-br from-[var(--neon-pink)] via-[var(--sunshine-orange)] to-[var(--lime-zest)]">
-            <span className="absolute inset-0 rounded-full bg-gradient-to-br from-[var(--neon-pink)] via-[var(--sunshine-orange)] to-[var(--lime-zest)] blur-md opacity-70" />
-            <span className="relative font-display text-xs font-bold text-ink">F</span>
-          </span>
-          <span className="font-display text-lg font-semibold tracking-tight text-paper">
-            FIRSTS
-          </span>
+          <Logo />
         </Link>
 
         <div className="hidden items-center gap-7 md:flex">

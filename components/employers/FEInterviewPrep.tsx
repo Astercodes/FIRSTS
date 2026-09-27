@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import { SectionArt } from "@/components/marketing/SectionArt";
 import { Reveal } from "@/components/ui/Reveal";
 
 const PRACTICE = [
@@ -18,8 +19,9 @@ const PRACTICE = [
 
 export function FEInterviewPrep() {
   return (
-    <section className="marketing-section relative bg-paper-dim px-6 py-28">
-      <Reveal className="mx-auto max-w-2xl text-center">
+    <section className="marketing-section story-section relative bg-paper-dim px-6 py-28">
+      <div className="story-intro">
+        <Reveal className="mx-auto max-w-2xl text-center">
         <h2 className="font-display text-4xl font-semibold tracking-tight text-ink sm:text-5xl">
           Better-prepared candidates make better conversations.
         </h2>
@@ -31,6 +33,8 @@ export function FEInterviewPrep() {
           Through FIRSTS, participants can practice:
         </p>
       </Reveal>
+        <SectionArt id="FEInterviewPrep" />
+      </div>
 
       <Reveal delay={0.08} className="mx-auto mt-8 flex max-w-3xl flex-wrap justify-center gap-2.5">
         {PRACTICE.map((p) => (

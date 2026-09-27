@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import { Logo } from "@/components/brand/Logo";
 import { usePathname } from "next/navigation";
 import { motion } from "framer-motion";
 
@@ -23,12 +24,7 @@ export function FacilitatorSidebar() {
       <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(180deg,transparent_0%,rgba(11,4,16,0.3)_100%)]" />
 
       <div className="relative flex items-center gap-2.5 px-6 py-6">
-        <span className="relative flex h-8 w-8 items-center justify-center rounded-xl bg-gradient-to-br from-[var(--neon-pink)] via-[var(--sunshine-orange)] to-[var(--lime-zest)] shadow-[0_4px_16px_-4px_rgba(255,17,153,0.6)]">
-          <span className="font-display text-sm font-bold text-ink">F</span>
-        </span>
-        <span className="font-display text-lg font-semibold tracking-tight">
-          FIRSTS
-        </span>
+        <Logo />
         <span className="ml-auto rounded-full bg-white/10 px-2 py-0.5 text-[10px] font-bold uppercase tracking-wide text-paper/60">
           Facilitator
         </span>

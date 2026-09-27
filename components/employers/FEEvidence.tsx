@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import { SectionArt } from "@/components/marketing/SectionArt";
 import { Reveal } from "@/components/ui/Reveal";
 
 const ADJECTIVES = [
@@ -41,8 +42,9 @@ const PORTFOLIO_CONTENTS = [
 
 export function FEEvidence() {
   return (
-    <section className="marketing-section relative bg-paper px-6 py-28">
-      <Reveal className="mx-auto max-w-2xl text-center">
+    <section className="marketing-section story-section relative bg-paper px-6 py-28">
+      <div className="story-intro">
+        <Reveal className="mx-auto max-w-2xl text-center">
         <h2 className="font-display text-4xl font-semibold tracking-tight text-ink sm:text-5xl">
           Evidence behind the resume.
         </h2>
@@ -53,6 +55,8 @@ export function FEEvidence() {
           Candidates often describe themselves as:
         </p>
       </Reveal>
+        <SectionArt id="FEEvidence" />
+      </div>
 
       <Reveal delay={0.06} className="mx-auto mt-6 flex max-w-xl flex-wrap justify-center gap-2.5">
         {ADJECTIVES.map((a) => (

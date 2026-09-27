@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { Logo } from "@/components/brand/Logo";
 import type { Metadata } from "next";
 import { PathCard } from "@/components/onboarding/PathCard";
 import { SchoolIcon, CompassIcon, BriefcaseIcon } from "@/components/onboarding/PathIcons";
@@ -24,12 +25,7 @@ export default function OnboardingSelector() {
 
       <header className="relative z-10 flex items-center justify-between">
         <Link href="/" className="flex items-center gap-2">
-          <span className="relative flex h-7 w-7 items-center justify-center rounded-full bg-gradient-to-br from-[var(--neon-pink)] via-[var(--sunshine-orange)] to-[var(--lime-zest)]">
-            <span className="font-display text-xs font-bold text-ink">F</span>
-          </span>
-          <span className="font-display text-lg font-semibold tracking-tight">
-            FIRSTS
-          </span>
+          <Logo />
         </Link>
         <Link
           href="/"

@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import { SectionArt } from "@/components/marketing/SectionArt";
 import { Reveal } from "@/components/ui/Reveal";
 
 const LOOKING_FOR = [
@@ -14,7 +15,8 @@ const LOOKING_FOR = [
 export function EPYourWay() {
   return (
     <>
-      <section className="marketing-section relative bg-paper px-6 py-28">
+      <section className="marketing-section story-section relative bg-paper px-6 py-28">
+        <div className="story-intro">
         <Reveal className="mx-auto max-w-2xl text-center">
           <h2 className="font-display text-4xl font-semibold tracking-tight text-ink sm:text-5xl">
             Use FIRSTS your way.
@@ -25,6 +27,8 @@ export function EPYourWay() {
             on where you are now.
           </p>
         </Reveal>
+        <SectionArt id="EPYourWay" />
+      </div>
 
         <div className="mx-auto mt-10 grid max-w-3xl gap-5 sm:grid-cols-2">
           <Reveal>

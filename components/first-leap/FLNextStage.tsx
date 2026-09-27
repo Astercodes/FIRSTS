@@ -1,11 +1,13 @@
 "use client";
 
+import { SectionArt } from "@/components/marketing/SectionArt";
 import { Reveal } from "@/components/ui/Reveal";
 
 export function FLNextStage() {
   return (
-    <section className="marketing-section relative bg-paper-dim px-6 py-28">
-      <Reveal className="mx-auto max-w-2xl text-center">
+    <section className="marketing-section story-section relative bg-paper-dim px-6 py-28">
+      <div className="story-intro">
+        <Reveal className="mx-auto max-w-2xl text-center">
         <p className="mb-3 text-xs font-semibold uppercase tracking-[0.2em] text-berry-burst">
           And then?
         </p>
@@ -30,6 +32,8 @@ export function FLNextStage() {
           That is a different stage of development.
         </p>
       </Reveal>
+        <SectionArt id="FLNextStage" />
+      </div>
 
       <Reveal delay={0.1} className="mx-auto mt-10 max-w-xl">
         <div className="design-card rounded-3xl border border-dashed border-ink/15 bg-white p-8 text-center">
