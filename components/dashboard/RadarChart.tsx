@@ -31,8 +31,8 @@ export function RadarChart({ stages }: { stages: StageProgress[] }) {
   const rings = [25, 50, 75, 100];
 
   return (
-    <div className="relative mx-auto" style={{ width: viewSize, height: viewSize }}>
-      <svg viewBox={`0 0 ${viewSize} ${viewSize}`} width={viewSize} height={viewSize}>
+    <div className="relative mx-auto w-full" style={{ maxWidth: viewSize, aspectRatio: "1" }}>
+      <svg viewBox={`0 0 ${viewSize} ${viewSize}`} className="h-auto w-full" width={viewSize} height={viewSize}>
         {rings.map((ring) => {
           const ringPoints = stages
             .map((_, i) => pointFor(i, ring))
@@ -110,8 +110,8 @@ export function RadarChart({ stages }: { stages: StageProgress[] }) {
         <div
           className="pointer-events-none absolute z-10 -translate-x-1/2 -translate-y-full rounded-xl border border-ink/10 bg-ink px-3 py-2 text-paper shadow-lg"
           style={{
-            left: dataPoints[hoverIdx].x,
-            top: dataPoints[hoverIdx].y - 10,
+            left: `${(dataPoints[hoverIdx].x / viewSize) * 100}%`,
+            top: `${((dataPoints[hoverIdx].y - 10) / viewSize) * 100}%`,
           }}
         >
           <p className="text-xs font-semibold leading-snug">{stages[hoverIdx].label}</p>

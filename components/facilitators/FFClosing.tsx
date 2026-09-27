@@ -15,7 +15,7 @@ const MOMENTS = [
 
 export function FFClosing() {
   return (
-    <section id="get-started" className="relative overflow-hidden px-6 py-28">
+    <section id="get-started" className="marketing-section relative overflow-hidden px-6 py-28">
       <div
         aria-hidden
         className="absolute inset-0"

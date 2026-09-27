@@ -7,7 +7,7 @@ import type { AudienceConfig } from "@/lib/audienceContent";
 
 export function AudienceCTA({ config }: { config: AudienceConfig }) {
   return (
-    <section className="relative overflow-hidden px-6 py-28">
+    <section className="marketing-section relative overflow-hidden px-6 py-28">
       <div
         aria-hidden
         className="absolute inset-0"

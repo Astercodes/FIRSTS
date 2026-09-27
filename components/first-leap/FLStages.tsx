@@ -96,7 +96,7 @@ const STAGES = [
 
 export function FLStages() {
   return (
-    <section id="what-is-first-leap" className="relative bg-paper px-6 py-28">
+    <section id="what-is-first-leap" className="marketing-section relative bg-paper px-6 py-28">
       <Reveal className="mx-auto mb-14 max-w-2xl text-center">
         <p className="mb-3 text-xs font-semibold uppercase tracking-[0.2em] text-berry-burst">
           What is First Leap?
@@ -112,7 +112,7 @@ export function FLStages() {
       <div className="mx-auto flex max-w-4xl flex-col gap-6">
         {STAGES.map((stage, i) => (
           <Reveal key={stage.title} delay={i * 0.08}>
-            <div className="rounded-3xl border border-ink/10 bg-white p-8">
+            <div className="design-card rounded-3xl border border-ink/10 bg-white p-8">
               <div className="flex items-center gap-3">
                 <span
                   className="rounded-full px-3 py-1 text-xs font-bold"

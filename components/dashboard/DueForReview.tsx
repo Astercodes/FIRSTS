@@ -5,7 +5,7 @@ export function DueForReview({ modules }: { modules: FirstModule[] }) {
   if (modules.length === 0) return null;
 
   return (
-    <div className="rounded-3xl border border-ink/8 bg-white p-6">
+    <div className="workspace-card rounded-3xl border border-ink/8 bg-white p-6">
       <p className="mb-4 text-xs font-semibold uppercase tracking-[0.15em] text-ink/45">
         Due for review
       </p>

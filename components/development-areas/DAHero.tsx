@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import { EditorialImage } from "@/components/landing/EditorialImage";
 import { motion, type Variants } from "framer-motion";
 import { STAGES } from "@/lib/dashboardData";
 
@@ -17,7 +18,7 @@ export function DAHero() {
   return (
     <section
       id="top"
-      className="relative isolate overflow-hidden bg-mesh-dark px-6 pb-20 pt-32 text-paper"
+      className="marketing-section audience-hero relative isolate overflow-hidden bg-mesh-dark px-6 pb-20 pt-32 text-paper"
     >
       <div
         aria-hidden
@@ -74,6 +75,7 @@ export function DAHero() {
           </Link>
         </motion.div>
       </div>
+      <EditorialImage className="audience-art" priority />
     </section>
   );
 }

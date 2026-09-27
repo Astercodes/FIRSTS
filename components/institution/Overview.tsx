@@ -88,7 +88,7 @@ export function InstitutionOverview() {
       </div>
 
       <div className="grid gap-6 lg:grid-cols-5">
-        <div className="rounded-3xl border border-ink/10 bg-white p-7 lg:col-span-3">
+        <div className="workspace-card rounded-3xl border border-ink/10 bg-white p-7 lg:col-span-3">
           <h2 className="mb-1 font-display text-lg font-semibold text-ink">Engagement trend</h2>
           <p className="mb-5 text-xs text-ink/45">Institution-wide average completion, last 8 weeks</p>
           {trend.length > 0 ? (
@@ -98,14 +98,14 @@ export function InstitutionOverview() {
           )}
         </div>
 
-        <div className="rounded-3xl border border-ink/10 bg-white p-7 lg:col-span-2">
+        <div className="workspace-card rounded-3xl border border-ink/10 bg-white p-7 lg:col-span-2">
           <h2 className="mb-1 font-display text-lg font-semibold text-ink">Engagement status</h2>
           <p className="mb-5 text-xs text-ink/45">Institution-wide, every cohort</p>
           <StatusBar active={totalActive} watch={totalWatch} atRisk={totalAtRisk} />
         </div>
       </div>
 
-      <div className="rounded-3xl border border-ink/10 bg-white p-7">
+      <div className="workspace-card rounded-3xl border border-ink/10 bg-white p-7">
         <div className="mb-1 flex items-center justify-between">
           <h2 className="font-display text-lg font-semibold text-ink">Completion by department</h2>
           <Link href="/institution/departments" className="text-sm font-semibold text-berry-burst">
@@ -129,7 +129,7 @@ export function InstitutionOverview() {
         )}
       </div>
 
-      <div className="rounded-3xl border border-ink/10 bg-white p-7">
+      <div className="workspace-card rounded-3xl border border-ink/10 bg-white p-7">
         <div className="mb-5 flex items-center justify-between">
           <h2 className="font-display text-lg font-semibold text-ink">Staff</h2>
           <Link href="/institution/staff" className="text-sm font-semibold text-berry-burst">
@@ -169,7 +169,7 @@ export function InstitutionOverview() {
 
 function StatCard({ label, value, color }: { label: string; value: string; color: string }) {
   return (
-    <div className="rounded-3xl border border-ink/10 bg-white p-6">
+    <div className="workspace-card rounded-3xl border border-ink/10 bg-white p-6">
       <p className="font-display text-3xl font-bold" style={{ color }}>
         {value}
       </p>

@@ -48,7 +48,7 @@ const AUDIENCES: {
 
 export function Audiences() {
   return (
-    <section className="relative bg-paper px-6 py-28">
+    <section className="marketing-section relative bg-paper px-6 py-28">
       <div className="mx-auto max-w-6xl">
         <Reveal className="mb-14 max-w-2xl">
           <p className="mb-3 text-xs font-semibold uppercase tracking-[0.2em] text-berry-burst">
@@ -64,7 +64,7 @@ export function Audiences() {
             <Reveal key={a.title} delay={i * 0.12}>
               <Link
                 href={a.href}
-                className="group relative block h-full overflow-hidden rounded-3xl border border-ink/10 bg-white p-8 transition-all duration-500 hover:-translate-y-1.5 hover:shadow-2xl"
+                className="design-card group relative block h-full overflow-hidden rounded-3xl border border-ink/10 bg-white p-8 transition-all duration-500 hover:-translate-y-1.5 hover:shadow-2xl"
               >
                 <div
                   className="absolute -right-10 -top-10 h-32 w-32 rounded-full opacity-15 blur-2xl transition-all duration-500 group-hover:scale-150 group-hover:opacity-25"

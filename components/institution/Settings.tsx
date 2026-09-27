@@ -43,7 +43,7 @@ export function Settings() {
         </h1>
       </div>
 
-      <div className="rounded-3xl border border-ink/10 bg-white p-7">
+      <div className="workspace-card rounded-3xl border border-ink/10 bg-white p-7">
         <h2 className="mb-5 font-display text-lg font-semibold text-ink">Institution profile</h2>
         <dl className="grid gap-5 sm:grid-cols-2">
           <SettingRow label="Institution name" value={institution} />
@@ -57,7 +57,7 @@ export function Settings() {
         </dl>
       </div>
 
-      <div className="rounded-3xl border border-ink/10 bg-white p-7">
+      <div className="workspace-card rounded-3xl border border-ink/10 bg-white p-7">
         <h2 className="mb-5 font-display text-lg font-semibold text-ink">Single sign-on</h2>
         <div className="flex items-center justify-between rounded-2xl border border-ink/10 bg-paper-dim p-5">
           <div>
@@ -80,7 +80,7 @@ export function Settings() {
         </div>
       </div>
 
-      <div className="rounded-3xl border border-ink/10 bg-white p-7">
+      <div className="workspace-card rounded-3xl border border-ink/10 bg-white p-7">
         <h2 className="mb-5 font-display text-lg font-semibold text-ink">Plan & seats</h2>
         <dl className="grid gap-5 sm:grid-cols-3">
           <SettingRow label="Plan" value={plan} />

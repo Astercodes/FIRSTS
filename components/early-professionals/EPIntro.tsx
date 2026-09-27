@@ -33,7 +33,7 @@ const AREAS = [
 
 export function EPIntro() {
   return (
-    <section className="relative bg-paper px-6 py-24">
+    <section className="marketing-section relative bg-paper px-6 py-24">
       <Reveal className="mx-auto max-w-2xl text-center">
         <p className="text-[15px] leading-relaxed text-ink/60">
           You may be asking:
@@ -45,7 +45,7 @@ export function EPIntro() {
           {QUESTIONS.map((q) => (
             <div
               key={q}
-              className="rounded-2xl border border-ink/10 bg-white px-5 py-4 text-sm font-semibold text-ink"
+              className="design-card rounded-2xl border border-ink/10 bg-white px-5 py-4 text-sm font-semibold text-ink"
             >
               {q}
             </div>

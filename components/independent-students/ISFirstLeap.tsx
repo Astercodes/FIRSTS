@@ -5,7 +5,7 @@ import { Reveal } from "@/components/ui/Reveal";
 
 export function ISFirstLeap() {
   return (
-    <section className="relative bg-paper-dim px-6 py-28">
+    <section className="marketing-section relative bg-paper-dim px-6 py-28">
       <Reveal className="mx-auto max-w-2xl text-center">
         <p className="mb-3 text-xs font-semibold uppercase tracking-[0.2em] text-berry-burst">
           Still trying to figure out your direction?
@@ -23,7 +23,7 @@ export function ISFirstLeap() {
 
       <div className="mx-auto mt-10 grid max-w-3xl gap-5 sm:grid-cols-2">
         <Reveal>
-          <div className="flex h-full flex-col rounded-2xl border border-ink/10 bg-white p-6">
+          <div className="design-card flex h-full flex-col rounded-2xl border border-ink/10 bg-white p-6">
             <h3 className="font-display text-lg font-semibold text-ink">
               First Leap: Career
             </h3>
@@ -41,7 +41,7 @@ export function ISFirstLeap() {
           </div>
         </Reveal>
         <Reveal delay={0.06}>
-          <div className="flex h-full flex-col rounded-2xl border border-ink/10 bg-white p-6">
+          <div className="design-card flex h-full flex-col rounded-2xl border border-ink/10 bg-white p-6">
             <h3 className="font-display text-lg font-semibold text-ink">
               First Leap: Business
             </h3>

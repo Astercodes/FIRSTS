@@ -1,5 +1,6 @@
 "use client";
 
+import { EditorialImage } from "@/components/landing/EditorialImage";
 import Link from "next/link";
 import { motion, type Variants } from "framer-motion";
 import { MiniPeopleBand } from "@/components/illustrations/Scenes";
@@ -17,7 +18,7 @@ export function ISHero() {
   return (
     <section
       id="top"
-      className="relative isolate overflow-hidden bg-mesh-dark px-6 pb-20 pt-32 text-paper"
+      className="marketing-section audience-hero relative isolate overflow-hidden bg-mesh-dark px-6 pb-20 pt-32 text-paper"
     >
       <div
         aria-hidden
@@ -92,6 +93,7 @@ export function ISHero() {
 
         <MiniPeopleBand className="mt-12" />
       </div>
+    <EditorialImage kind="growth" className="audience-art" priority />
     </section>
   );
 }

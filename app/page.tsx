@@ -1,4 +1,5 @@
 import { Nav } from "@/components/landing/Nav";
+import { ProductShowcase } from "@/components/landing/ProductShowcase";
 import { Hero } from "@/components/landing/Hero";
 import { Manifesto } from "@/components/landing/Manifesto";
 import { Audiences } from "@/components/landing/Audiences";
@@ -15,11 +16,12 @@ export default function Home() {
   return (
     <>
       <Nav />
-      <main>
+      <main className="home-page">
         <Hero />
         <Manifesto />
-        <Audiences />
+        <ProductShowcase />
         <Pillars />
+        <Audiences />
         <DevelopmentAreas />
         <Profile />
         <FirstLeap />

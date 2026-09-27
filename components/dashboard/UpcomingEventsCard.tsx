@@ -31,7 +31,7 @@ export function UpcomingEventsCard() {
   if (relevant.length === 0) return null;
 
   return (
-    <div className="rounded-3xl border border-ink/8 bg-white p-7">
+    <div className="workspace-card rounded-3xl border border-ink/8 bg-white p-7">
       <p className="text-xs font-semibold uppercase tracking-[0.15em] text-ink/45">
         Employer events
       </p>

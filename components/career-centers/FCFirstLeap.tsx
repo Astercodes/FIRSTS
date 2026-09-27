@@ -5,7 +5,7 @@ import { Reveal } from "@/components/ui/Reveal";
 
 export function FCFirstLeap() {
   return (
-    <section className="relative overflow-hidden bg-mesh-dark px-6 py-28 text-paper">
+    <section className="marketing-section relative overflow-hidden bg-mesh-dark px-6 py-28 text-paper">
       <div
         aria-hidden
         className="pointer-events-none absolute -left-24 top-[10%] h-[420px] w-[420px] animate-blob-drift rounded-full opacity-40 blur-[110px]"
@@ -29,7 +29,7 @@ export function FCFirstLeap() {
 
       <div className="relative mx-auto mt-10 grid max-w-3xl gap-5 sm:grid-cols-2">
         <Reveal>
-          <div className="flex h-full flex-col rounded-2xl border border-white/10 bg-white/5 p-6">
+          <div className="design-card flex h-full flex-col rounded-2xl border border-white/10 bg-white/5 p-6">
             <h3 className="font-display text-lg font-semibold">
               First Leap: Career
             </h3>
@@ -47,7 +47,7 @@ export function FCFirstLeap() {
           </div>
         </Reveal>
         <Reveal delay={0.06}>
-          <div className="flex h-full flex-col rounded-2xl border border-white/10 bg-white/5 p-6">
+          <div className="design-card flex h-full flex-col rounded-2xl border border-white/10 bg-white/5 p-6">
             <h3 className="font-display text-lg font-semibold">
               First Leap: Business
             </h3>

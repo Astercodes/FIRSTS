@@ -1,3 +1,4 @@
+import { EditorialImage } from "@/components/landing/EditorialImage";
 import Link from "next/link";
 import type { ReactNode } from "react";
 
@@ -23,7 +24,7 @@ export function AuthShell({
   backLabel?: string;
 }) {
   return (
-    <main className="relative isolate flex min-h-[100svh] flex-col overflow-hidden bg-mesh-dark px-6 py-8 text-paper">
+    <main className="auth-shell relative isolate flex min-h-[100svh] flex-col overflow-hidden bg-mesh-dark px-6 py-8 text-paper">
       <div
         aria-hidden
         className="pointer-events-none absolute left-1/2 top-[-10%] h-[520px] w-[520px] -translate-x-1/2 animate-blob-drift rounded-full opacity-30 blur-[130px]"
@@ -48,7 +49,8 @@ export function AuthShell({
         </Link>
       </header>
 
-      <div className="relative z-10 flex flex-1 items-center justify-center py-12">
+      <div className="auth-layout relative z-10 flex flex-1 items-center justify-center py-12">
+        <EditorialImage className="auth-art" />
         <div
           className={`w-full ${width === "lg" ? "max-w-xl" : "max-w-md"}`}
         >

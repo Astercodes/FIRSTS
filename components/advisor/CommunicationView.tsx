@@ -134,7 +134,7 @@ function BroadcastPanel({
   }
 
   return (
-    <div className="rounded-3xl border border-ink/10 bg-white p-7">
+    <div className="workspace-card rounded-3xl border border-ink/10 bg-white p-7">
       <h2 className="mb-1 font-display text-lg font-semibold text-ink">Broadcast a message</h2>
       <p className="mb-5 text-xs text-ink/45">
         Target a filtered group the same way Segmentation does, or one of your saved custom
@@ -370,7 +370,7 @@ function AnnotationPanel({ tagged }: { tagged: TaggedStudent[] }) {
   }
 
   return (
-    <div className="rounded-3xl border border-ink/10 bg-white p-7">
+    <div className="workspace-card rounded-3xl border border-ink/10 bg-white p-7">
       <h2 className="mb-1 font-display text-lg font-semibold text-ink">Annotate a FIRST</h2>
       <p className="mb-5 text-xs text-ink/45">
         Leave a note tied to a specific student and a specific FIRST, so context travels with the

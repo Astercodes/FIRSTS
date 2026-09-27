@@ -52,7 +52,7 @@ export function FLCareer() {
         </p>
       </Reveal>
 
-      <section id="career" className="relative bg-paper px-6 py-20">
+      <section id="career" className="marketing-section relative bg-paper px-6 py-20">
         <Reveal className="mx-auto max-w-2xl text-center">
           <p className="mb-3 text-xs font-semibold uppercase tracking-[0.2em] text-berry-burst">
             First Leap: Career
@@ -78,7 +78,7 @@ export function FLCareer() {
         <div className="mx-auto mt-8 grid max-w-5xl gap-5 sm:grid-cols-2">
           {AREAS.map((area, i) => (
             <Reveal key={area.title} delay={(i % 4) * 0.06}>
-              <div className="h-full rounded-2xl border border-ink/10 bg-white p-6">
+              <div className="design-card h-full rounded-2xl border border-ink/10 bg-white p-6">
                 <h3 className="font-display text-base font-semibold text-ink">
                   {area.title}
                 </h3>

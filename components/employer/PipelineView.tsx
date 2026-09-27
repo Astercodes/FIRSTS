@@ -33,7 +33,7 @@ export function PipelineView() {
       </div>
 
       {inPipeline.length === 0 ? (
-        <div className="rounded-3xl border border-ink/10 bg-white p-10 text-center">
+        <div className="workspace-card rounded-3xl border border-ink/10 bg-white p-10 text-center">
           <p className="text-sm text-ink/50">
             Nothing saved yet. Open a candidate&apos;s portfolio and add them to your pipeline to get
             started.
@@ -88,7 +88,7 @@ function PipelineCard({
   stage: PipelineStage;
 }) {
   return (
-    <div className="rounded-2xl border border-ink/10 bg-white p-4">
+    <div className="workspace-card rounded-2xl border border-ink/10 bg-white p-4">
       <div className="flex items-start justify-between gap-2">
         <Link href={`/employer/portfolios/${candidateId}`} className="min-w-0">
           <p className="truncate text-sm font-semibold text-ink hover:underline">{name}</p>

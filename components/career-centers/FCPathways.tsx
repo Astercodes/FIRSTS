@@ -19,7 +19,7 @@ const FREE_EXPLORE_EXAMPLES = [
 
 export function FCPathways() {
   return (
-    <section className="relative bg-paper px-6 py-28">
+    <section className="marketing-section relative bg-paper px-6 py-28">
       <Reveal className="mx-auto max-w-2xl text-center">
         <h2 className="font-display text-4xl font-semibold tracking-tight text-ink sm:text-5xl">
           Give different students different pathways.
@@ -43,7 +43,7 @@ export function FCPathways() {
       <div className="mx-auto mt-6 grid max-w-4xl gap-4 sm:grid-cols-2 lg:grid-cols-4">
         {YEARS.map((y, i) => (
           <Reveal key={y.title} delay={i * 0.06}>
-            <div className="h-full rounded-2xl border border-ink/10 bg-white p-5">
+            <div className="design-card h-full rounded-2xl border border-ink/10 bg-white p-5">
               <h3 className="font-display text-sm font-semibold text-ink">
                 {y.title}
               </h3>
@@ -70,7 +70,7 @@ export function FCPathways() {
           {FREE_EXPLORE_EXAMPLES.map((e) => (
             <p
               key={e}
-              className="rounded-2xl border border-ink/10 bg-white px-5 py-3 text-sm text-ink/70"
+              className="design-card rounded-2xl border border-ink/10 bg-white px-5 py-3 text-sm text-ink/70"
             >
               {e}
             </p>

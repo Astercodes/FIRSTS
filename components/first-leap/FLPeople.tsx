@@ -30,7 +30,7 @@ const MENTOR_ITEMS = [
 
 export function FLPeople() {
   return (
-    <section id="people" className="relative overflow-hidden bg-mesh-dark px-6 py-28 text-paper">
+    <section id="people" className="marketing-section relative overflow-hidden bg-mesh-dark px-6 py-28 text-paper">
       <div
         aria-hidden
         className="pointer-events-none absolute right-[-10%] top-[15%] h-[380px] w-[380px] animate-blob-drift-slow rounded-full opacity-40 blur-[110px]"
@@ -59,7 +59,7 @@ export function FLPeople() {
 
       <div className="relative mx-auto mt-14 grid max-w-5xl gap-6 lg:grid-cols-2">
         <Reveal>
-          <div className="h-full rounded-3xl border border-white/10 bg-white/5 p-8">
+          <div className="design-card h-full rounded-3xl border border-white/10 bg-white/5 p-8">
             <h3 className="font-display text-xl font-semibold">
               Meet Your First Leap Facilitators
             </h3>
@@ -93,7 +93,7 @@ export function FLPeople() {
         </Reveal>
 
         <Reveal delay={0.1}>
-          <div className="h-full rounded-3xl border border-white/10 bg-white/5 p-8">
+          <div className="design-card h-full rounded-3xl border border-white/10 bg-white/5 p-8">
             <h3 className="font-display text-xl font-semibold">
               Meet Your First Leap Mentors
             </h3>

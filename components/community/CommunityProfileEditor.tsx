@@ -75,7 +75,7 @@ export function CommunityProfileEditor() {
 
       <ProfileCard profile={previewProfile} isOwn />
 
-      <section className="rounded-3xl border border-ink/10 bg-white p-6 sm:p-8">
+      <section className="workspace-card rounded-3xl border border-ink/10 bg-white p-6 sm:p-8">
         <p className="mb-1 text-xs font-semibold uppercase tracking-[0.15em] text-ink/45">
           Currently working on
         </p>
@@ -91,7 +91,7 @@ export function CommunityProfileEditor() {
         />
       </section>
 
-      <section className="rounded-3xl border border-ink/10 bg-white p-6 sm:p-8">
+      <section className="workspace-card rounded-3xl border border-ink/10 bg-white p-6 sm:p-8">
         <p className="mb-1 text-xs font-semibold uppercase tracking-[0.15em] text-ink/45">
           Your handle
         </p>
@@ -105,7 +105,7 @@ export function CommunityProfileEditor() {
         />
       </section>
 
-      <section className="rounded-3xl border border-ink/10 bg-white p-6 sm:p-8">
+      <section className="workspace-card rounded-3xl border border-ink/10 bg-white p-6 sm:p-8">
         <p className="mb-1 text-xs font-semibold uppercase tracking-[0.15em] text-ink/45">
           Who can see this
         </p>

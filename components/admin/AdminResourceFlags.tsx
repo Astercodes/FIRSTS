@@ -8,7 +8,7 @@ export function AdminResourceFlags({ roster }: { roster: AdminFacilitatorRecord[
   const flagged = roster.filter((f) => f.staleResourceStages.length > 0);
 
   return (
-    <section className="rounded-3xl border border-ink/8 bg-white p-6">
+    <section className="workspace-card rounded-3xl border border-ink/8 bg-white p-6">
       <p className="mb-1 font-display text-base font-semibold text-ink">Outdated materials</p>
       <p className="mb-5 text-xs text-ink/45">
         Facilitators certified on a stage kit before it was last revised.

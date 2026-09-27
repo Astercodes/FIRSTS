@@ -93,7 +93,7 @@ export function DashboardHome() {
           {continueModule && <ContinueCard module={continueModule} />}
         </div>
 
-        <div className="flex flex-col justify-center rounded-3xl border border-ink/8 bg-white p-7">
+        <div className="workspace-card flex flex-col justify-center rounded-3xl border border-ink/8 bg-white p-7">
           <p className="text-xs font-semibold uppercase tracking-[0.15em] text-ink/45">
             All {STAGES.length} stages
           </p>
@@ -122,7 +122,7 @@ export function DashboardHome() {
 
       {isIndependent && <GoalTracker stages={stages} weeklyAvg={weeklyAvg} />}
 
-      <div className="rounded-3xl border border-ink/8 bg-white p-7">
+      <div className="workspace-card rounded-3xl border border-ink/8 bg-white p-7">
         <p className="text-xs font-semibold uppercase tracking-[0.15em] text-ink/45">
           Your blueprint
         </p>
@@ -135,7 +135,7 @@ export function DashboardHome() {
       </div>
 
       <div className="grid gap-6 lg:grid-cols-5">
-        <div className="rounded-3xl border border-ink/8 bg-white p-7 lg:col-span-3">
+        <div className="workspace-card rounded-3xl border border-ink/8 bg-white p-7 lg:col-span-3">
           <div className="flex flex-wrap items-baseline justify-between gap-2">
             <div>
               <p className="text-xs font-semibold uppercase tracking-[0.15em] text-ink/45">
@@ -182,7 +182,7 @@ export function DashboardHome() {
       </div>
 
       <div className="grid gap-6 lg:grid-cols-5">
-        <div className="rounded-3xl border border-ink/8 bg-white p-7 lg:col-span-2">
+        <div className="workspace-card rounded-3xl border border-ink/8 bg-white p-7 lg:col-span-2">
           <p className="text-xs font-semibold uppercase tracking-[0.15em] text-ink/45">
             Your shape
           </p>
@@ -204,7 +204,7 @@ export function DashboardHome() {
           )}
         </div>
 
-        <div className="rounded-3xl border border-ink/8 bg-white p-7 lg:col-span-3">
+        <div className="workspace-card rounded-3xl border border-ink/8 bg-white p-7 lg:col-span-3">
           <p className="text-xs font-semibold uppercase tracking-[0.15em] text-ink/45">
             Category strength
           </p>

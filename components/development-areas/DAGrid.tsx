@@ -32,7 +32,7 @@ const COLORS = [
 
 export function DAGrid() {
   return (
-    <section className="relative bg-paper px-6 py-20">
+    <section className="marketing-section relative bg-paper px-6 py-20">
       <div className="mx-auto grid max-w-6xl gap-5 sm:grid-cols-2 lg:grid-cols-3">
         {STAGES.map((stage, i) => {
           const title = stage.label.split(" · ")[1] ?? stage.label;

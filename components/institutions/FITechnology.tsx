@@ -14,7 +14,7 @@ const CAPABILITIES = [
 
 export function FITechnology() {
   return (
-    <section className="relative bg-paper px-6 py-28">
+    <section className="marketing-section relative bg-paper px-6 py-28">
       <Reveal className="mx-auto max-w-2xl text-center">
         <h2 className="font-display text-4xl font-semibold tracking-tight text-ink sm:text-5xl">
           Fit into your existing technology environment.
@@ -29,7 +29,7 @@ export function FITechnology() {
       <div className="mx-auto mt-10 grid max-w-4xl gap-5 sm:grid-cols-2 lg:grid-cols-3">
         {CAPABILITIES.map((c, i) => (
           <Reveal key={c.title} delay={(i % 3) * 0.08}>
-            <div className="h-full rounded-2xl border border-ink/10 bg-white p-5">
+            <div className="design-card h-full rounded-2xl border border-ink/10 bg-white p-5">
               <h3 className="font-display text-sm font-semibold text-ink">
                 {c.title}
               </h3>

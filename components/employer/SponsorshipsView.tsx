@@ -30,7 +30,7 @@ export function SponsorshipsView() {
         </Link>
       </div>
 
-      <div className="rounded-3xl border border-ink/10 bg-white p-7">
+      <div className="workspace-card rounded-3xl border border-ink/10 bg-white p-7">
         <h2 className="mb-1 font-display text-lg font-semibold text-ink">Average completion by sponsorship</h2>
         <p className="mb-6 text-xs text-ink/45">Every cohort or department you currently sponsor</p>
         <HBarChart
@@ -51,7 +51,7 @@ export function SponsorshipsView() {
         {SPONSORSHIPS.map((s) => {
           const stats = sponsorshipStats(s);
           return (
-            <div key={s.id} className="rounded-3xl border border-ink/10 bg-white p-7">
+            <div key={s.id} className="workspace-card rounded-3xl border border-ink/10 bg-white p-7">
               <div className="flex items-start justify-between">
                 <div>
                   <p className="font-display text-lg font-semibold text-ink">{stats.name}</p>

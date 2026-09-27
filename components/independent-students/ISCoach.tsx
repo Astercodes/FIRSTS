@@ -18,7 +18,7 @@ const USES = [
 
 export function ISCoach() {
   return (
-    <section className="relative overflow-hidden bg-mesh-dark px-6 py-28 text-paper">
+    <section className="marketing-section relative overflow-hidden bg-mesh-dark px-6 py-28 text-paper">
       <div
         aria-hidden
         className="pointer-events-none absolute right-[-10%] top-[15%] h-[380px] w-[380px] animate-blob-drift-slow rounded-full opacity-40 blur-[110px]"

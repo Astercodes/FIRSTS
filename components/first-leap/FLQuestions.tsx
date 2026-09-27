@@ -17,7 +17,7 @@ const QUESTIONS = [
 
 export function FLQuestions() {
   return (
-    <section className="relative bg-paper-dim px-6 py-28">
+    <section className="marketing-section relative bg-paper-dim px-6 py-28">
       <Reveal className="mx-auto max-w-2xl text-center">
         <h2 className="font-display text-4xl font-semibold tracking-tight text-ink sm:text-5xl">
           Before the big leap, there is a First Leap.
@@ -34,7 +34,7 @@ export function FLQuestions() {
           {QUESTIONS.map((q) => (
             <div
               key={q}
-              className="rounded-2xl border border-ink/10 bg-white px-5 py-5 text-center text-sm font-semibold text-ink"
+              className="design-card rounded-2xl border border-ink/10 bg-white px-5 py-5 text-center text-sm font-semibold text-ink"
             >
               {q}
             </div>

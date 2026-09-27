@@ -24,7 +24,7 @@ const ACTIVITY_COLOR: Record<ActivityStatus, string> = {
 
 export function AdminFacilitatorDirectory({ roster }: { roster: AdminFacilitatorRecord[] }) {
   return (
-    <section className="rounded-3xl border border-ink/8 bg-white p-6">
+    <section className="workspace-card rounded-3xl border border-ink/8 bg-white p-6">
       <p className="mb-1 font-display text-base font-semibold text-ink">Facilitator directory</p>
       <p className="mb-5 text-xs text-ink/45">{roster.length} facilitators on record.</p>
 

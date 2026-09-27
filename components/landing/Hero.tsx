@@ -1,5 +1,6 @@
 "use client";
 
+import { EditorialImage } from "@/components/landing/EditorialImage";
 import Link from "next/link";
 import { motion, type Variants } from "framer-motion";
 import { HeroPeopleBand } from "@/components/illustrations/Scenes";
@@ -13,46 +14,30 @@ const FADE_UP: Variants = {
   }),
 };
 
-const FLOAT_CARDS = [
+const MODULE_CARDS = [
   {
     label: "Core Values Audit",
     meta: "First 01 · 30 to 45 min",
     color: "var(--neon-pink)",
-    top: "12%",
-    left: "3%",
-    rotate: -6,
     delay: 0.9,
-    floatDuration: 5.4,
   },
   {
     label: "Industry Insight",
     meta: "First 08 · Live research",
     color: "var(--tropical-mango)",
-    top: "62%",
-    left: "1%",
-    rotate: 4,
     delay: 1.05,
-    floatDuration: 6.1,
   },
   {
     label: "Career SWOT",
     meta: "First 12 · Synthesized",
     color: "var(--lime-zest)",
-    top: "8%",
-    left: "78%",
-    rotate: 5,
     delay: 1.0,
-    floatDuration: 5.8,
   },
   {
     label: "Salary Benchmarking",
     meta: "First 11 · 3 sources cited",
     color: "var(--fuchsia-blast)",
-    top: "66%",
-    left: "76%",
-    rotate: -4,
     delay: 1.15,
-    floatDuration: 6.5,
   },
 ];
 
@@ -60,7 +45,7 @@ export function Hero() {
   return (
     <section
       id="top"
-      className="relative isolate flex min-h-[100svh] w-full flex-col items-center justify-center overflow-hidden bg-mesh-dark px-6 pt-24 pb-16 text-paper"
+      className="marketing-section home-hero relative isolate overflow-hidden bg-ink px-6 text-paper"
     >
       {/* animated blobs */}
       <div
@@ -80,24 +65,17 @@ export function Hero() {
       />
       <div className="noise-layer" aria-hidden />
 
-      {/* floating module cards, desktop only */}
-      <div className="pointer-events-none absolute inset-0 hidden lg:block">
-        {FLOAT_CARDS.map((c) => (
+      {/* Module highlights stay readable at every screen size. */}
+      <div className="hero-module-rail">
+        {MODULE_CARDS.map((c) => (
           <motion.div
             key={c.label}
-            initial={{ opacity: 0, y: 24, rotate: 0 }}
-            animate={{ opacity: 1, y: 0, rotate: c.rotate }}
+            initial={{ opacity: 0, y: 16 }}
+            animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.9, delay: c.delay, ease: [0.16, 1, 0.3, 1] as const }}
-            style={{ top: c.top, left: c.left }}
-            className="absolute w-52"
+            className="hero-module-card"
           >
-            <motion.div
-              animate={{ y: [0, -10, 0] }}
-              transition={{
-                duration: c.floatDuration,
-                repeat: Infinity,
-                ease: "easeInOut",
-              }}
+            <div
               className="glass-dark rounded-2xl p-4 shadow-2xl"
             >
               <span
@@ -108,18 +86,19 @@ export function Hero() {
                 {c.label}
               </p>
               <p className="mt-1 text-xs text-paper/55">{c.meta}</p>
-            </motion.div>
+            </div>
           </motion.div>
         ))}
       </div>
 
-      <div className="relative z-10 flex max-w-4xl flex-col items-center text-center">
+      <div className="hero-copy relative z-10 flex flex-col items-start text-left">
+        <p className="hero-eyebrow"><span /> Your next chapter starts here</p>
         <motion.h1
           initial="hidden"
           animate="show"
           custom={1}
           variants={FADE_UP}
-          className="font-display text-5xl font-semibold leading-[1.05] tracking-tight sm:text-6xl md:text-7xl"
+          className="hero-title font-display font-semibold"
         >
           Every future is built on{" "}
           <span className="text-gradient-citrus">a series of firsts.</span>
@@ -130,7 +109,7 @@ export function Hero() {
           animate="show"
           custom={2}
           variants={FADE_UP}
-          className="mt-6 max-w-xl text-balance text-base text-paper/70"
+          className="mt-7 max-w-xl text-base leading-relaxed text-paper/70"
         >
           Your first discovery. Your first skill. Your first mentor. Your
           first opportunity. FIRSTS helps you intentionally build the
@@ -144,7 +123,7 @@ export function Hero() {
           animate="show"
           custom={3}
           variants={FADE_UP}
-          className="mt-9 flex flex-col items-center gap-4 sm:flex-row"
+          className="mt-9 flex flex-wrap items-center gap-3"
         >
           <Link
             href="/onboarding"
@@ -165,11 +144,12 @@ export function Hero() {
         </motion.div>
       </div>
 
+      <div className="hero-art"><EditorialImage priority /><div className="hero-art-note"><span className="hero-note-dot" /> A little courage. A new beginning.</div></div>
       <motion.div
         initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.9, delay: 1.2, ease: [0.16, 1, 0.3, 1] as const }}
-        className="pointer-events-none absolute inset-x-0 bottom-0 z-[1] hidden justify-center pb-0 sm:flex"
+        className="hero-people pointer-events-none"
       >
         <HeroPeopleBand />
       </motion.div>

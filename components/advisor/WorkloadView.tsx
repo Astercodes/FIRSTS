@@ -87,7 +87,7 @@ export function WorkloadView() {
         <StatCard label="Contacted" value={String(contactedList.length)} color="#1a8f3c" />
       </div>
 
-      <div className="rounded-3xl border border-ink/10 bg-white p-7">
+      <div className="workspace-card rounded-3xl border border-ink/10 bg-white p-7">
         <h2 className="mb-1 font-display text-lg font-semibold text-ink">Outreach queue</h2>
         <p className="mb-5 text-xs text-ink/45">
           Stalled students from your caseload, ranked by risk. Email opens a pre-filled message in
@@ -149,7 +149,7 @@ export function WorkloadView() {
         )}
       </div>
 
-      <div className="rounded-3xl border border-ink/10 bg-white p-2">
+      <div className="workspace-card rounded-3xl border border-ink/10 bg-white p-2">
         <div className="flex flex-wrap items-baseline justify-between gap-2 px-5 pt-5">
           <div>
             <h2 className="font-display text-lg font-semibold text-ink">My students</h2>
@@ -425,7 +425,7 @@ function MeetingPrepPanel({
 
 function StatCard({ label, value, color }: { label: string; value: string; color: string }) {
   return (
-    <div className="rounded-3xl border border-ink/10 bg-white p-6">
+    <div className="workspace-card rounded-3xl border border-ink/10 bg-white p-6">
       <p className="font-display text-3xl font-bold" style={{ color }}>
         {value}
       </p>

@@ -1,5 +1,6 @@
 "use client";
 
+import { EditorialImage } from "@/components/landing/EditorialImage";
 import Link from "next/link";
 import { Reveal } from "@/components/ui/Reveal";
 import { CollabScene } from "@/components/illustrations/Scenes";
@@ -19,7 +20,7 @@ const QUESTIONS = [
 
 export function FirstLeap() {
   return (
-    <section id="first-leap" className="relative bg-paper px-6 py-28">
+    <section id="first-leap" className="marketing-section relative bg-paper px-6 py-28">
       <Reveal className="mx-auto max-w-2xl text-center">
         <p className="mb-3 text-xs font-semibold uppercase tracking-[0.2em] text-berry-burst">
           Not sure where you&apos;re going yet?
@@ -36,7 +37,7 @@ export function FirstLeap() {
       </Reveal>
 
       <Reveal delay={0.1} className="mx-auto mt-10 max-w-3xl">
-        <div className="grid grid-cols-2 gap-x-8 gap-y-3 rounded-3xl border border-ink/10 bg-white p-8 sm:grid-cols-2">
+        <div className="design-card grid grid-cols-2 gap-x-8 gap-y-3 rounded-3xl border border-ink/10 bg-white p-8 sm:grid-cols-2">
           {QUESTIONS.map((q) => (
             <p key={q} className="text-sm font-medium text-ink/70">
               {q}
@@ -53,7 +54,7 @@ export function FirstLeap() {
 
       <div className="mx-auto mt-6 grid max-w-3xl gap-5 sm:grid-cols-2">
         <Reveal>
-          <div className="flex h-full flex-col rounded-3xl border border-ink/10 bg-white p-7">
+          <div className="design-card flex h-full flex-col rounded-3xl border border-ink/10 bg-white p-7">
             <h3 className="font-display text-xl font-semibold text-ink">
               Career
             </h3>
@@ -70,7 +71,7 @@ export function FirstLeap() {
           </div>
         </Reveal>
         <Reveal delay={0.1}>
-          <div className="flex h-full flex-col rounded-3xl border border-ink/10 bg-white p-7">
+          <div className="design-card flex h-full flex-col rounded-3xl border border-ink/10 bg-white p-7">
             <h3 className="font-display text-xl font-semibold text-ink">
               Business
             </h3>
@@ -89,6 +90,7 @@ export function FirstLeap() {
       </div>
 
       <Reveal delay={0.15} className="mx-auto mt-16 flex max-w-2xl flex-col items-center text-center">
+        <EditorialImage kind="community" className="community-editorial" />
         <CollabScene className="mb-4 h-28 sm:h-32" />
         <h3 className="font-display text-2xl font-semibold text-ink">
           You won&apos;t make the leap alone.

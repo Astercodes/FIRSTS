@@ -50,7 +50,7 @@ export function StalledStudentsTable({ students }: { students: StalledStudent[] 
 
   if (students.length === 0) {
     return (
-      <div className="rounded-3xl border border-ink/10 bg-white p-7">
+      <div className="workspace-card rounded-3xl border border-ink/10 bg-white p-7">
         <h2 className="mb-1 font-display text-lg font-semibold text-ink">Stalled students</h2>
         <p className="text-sm text-ink/45">
           No one is flagged right now. Nobody has gone 14+ days inactive or stalled mid-stage.
@@ -60,7 +60,7 @@ export function StalledStudentsTable({ students }: { students: StalledStudent[] 
   }
 
   return (
-    <div className="rounded-3xl border border-ink/10 bg-white p-2">
+    <div className="workspace-card rounded-3xl border border-ink/10 bg-white p-2">
       <div className="flex flex-wrap items-baseline justify-between gap-2 px-5 pt-5">
         <div>
           <h2 className="font-display text-lg font-semibold text-ink">Stalled students</h2>

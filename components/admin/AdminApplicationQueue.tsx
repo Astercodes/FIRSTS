@@ -23,7 +23,7 @@ export function AdminApplicationQueue() {
       </div>
 
       {pending.length === 0 ? (
-        <div className="rounded-3xl border border-ink/8 bg-white p-6 text-center text-sm text-ink/45">
+        <div className="workspace-card rounded-3xl border border-ink/8 bg-white p-6 text-center text-sm text-ink/45">
           Queue is empty.
         </div>
       ) : (
@@ -39,7 +39,7 @@ export function AdminApplicationQueue() {
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0, height: 0 }}
                   transition={{ duration: 0.25, ease: [0.16, 1, 0.3, 1] }}
-                  className="rounded-3xl border border-ink/8 bg-white p-5"
+                  className="workspace-card rounded-3xl border border-ink/8 bg-white p-5"
                 >
                   <div className="flex flex-wrap items-start justify-between gap-3">
                     <div>

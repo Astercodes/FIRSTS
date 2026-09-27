@@ -52,7 +52,7 @@ export function GoalTracker({ stages, weeklyAvg }: { stages: StageProgress[]; we
 
   if (!goal || editing) {
     return (
-      <div className="rounded-3xl border border-ink/8 bg-white p-7">
+      <div className="workspace-card rounded-3xl border border-ink/8 bg-white p-7">
         <p className="text-xs font-semibold uppercase tracking-[0.15em] text-ink/45">
           Your own deadline
         </p>
@@ -133,7 +133,7 @@ export function GoalTracker({ stages, weeklyAvg }: { stages: StageProgress[]; we
 
   if (remaining === 0) {
     return (
-      <div className="rounded-3xl border border-ink/8 bg-white p-7">
+      <div className="workspace-card rounded-3xl border border-ink/8 bg-white p-7">
         <p className="text-xs font-semibold uppercase tracking-[0.15em] text-ink/45">
           Your own deadline
         </p>
@@ -161,7 +161,7 @@ export function GoalTracker({ stages, weeklyAvg }: { stages: StageProgress[]; we
   const maxBar = Math.max(weeklyAvg, Number.isFinite(neededPace) ? neededPace : 0, 1);
 
   return (
-    <div className="rounded-3xl border border-ink/8 bg-white p-7">
+    <div className="workspace-card rounded-3xl border border-ink/8 bg-white p-7">
       <div className="flex items-start justify-between gap-3">
         <div>
           <p className="text-xs font-semibold uppercase tracking-[0.15em] text-ink/45">

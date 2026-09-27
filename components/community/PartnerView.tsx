@@ -67,7 +67,7 @@ export function PartnerView() {
       </div>
 
       {partnerState.requests.length > 0 && (
-        <section className="rounded-3xl border border-ink/10 bg-white p-6 sm:p-7">
+        <section className="workspace-card rounded-3xl border border-ink/10 bg-white p-6 sm:p-7">
           <p className="mb-4 text-xs font-semibold uppercase tracking-[0.15em] text-ink/45">
             Requests
           </p>
@@ -118,7 +118,7 @@ export function PartnerView() {
         </section>
       )}
 
-      <section className="rounded-3xl border border-ink/10 bg-white p-6 sm:p-7">
+      <section className="workspace-card rounded-3xl border border-ink/10 bg-white p-6 sm:p-7">
         <p className="mb-1 text-xs font-semibold uppercase tracking-[0.15em] text-ink/45">
           Suggested for you
         </p>
@@ -219,7 +219,7 @@ function PairedDashboard({
         </p>
       </div>
 
-      <div className="rounded-3xl border border-ink/10 bg-white p-6 sm:p-7">
+      <div className="workspace-card rounded-3xl border border-ink/10 bg-white p-6 sm:p-7">
         <div className="grid grid-cols-2 gap-6">
           <ProgressColumn label={myName.split(" ")[0]} pct={myPct} />
           <ProgressColumn label={partnerName.split(" ")[0]} pct={partnerPct} />
@@ -244,7 +244,7 @@ function PairedDashboard({
         </div>
       </div>
 
-      <div className="rounded-3xl border border-ink/10 bg-white p-6 sm:p-7">
+      <div className="workspace-card rounded-3xl border border-ink/10 bg-white p-6 sm:p-7">
         <p className="mb-4 text-xs font-semibold uppercase tracking-[0.15em] text-ink/45">
           Check-ins
         </p>

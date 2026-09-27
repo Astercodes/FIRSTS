@@ -18,7 +18,7 @@ export function FacilitatorSidebar() {
   const pathname = usePathname();
 
   return (
-    <aside className="fixed inset-y-0 left-0 z-30 hidden w-64 flex-col overflow-hidden text-paper lg:flex print:hidden">
+    <aside className="workspace-sidebar fixed inset-y-0 left-0 z-30 hidden w-64 flex-col overflow-hidden text-paper lg:flex print:hidden">
       <div className="sidebar-glow absolute inset-0" />
       <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(180deg,transparent_0%,rgba(11,4,16,0.3)_100%)]" />
 
@@ -42,6 +42,7 @@ export function FacilitatorSidebar() {
             <Link
               key={item.href}
               href={item.href}
+              aria-current={active ? "page" : undefined}
               className={`relative flex items-center gap-3 rounded-xl px-3.5 py-2.5 text-sm font-medium transition-colors ${
                 active
                   ? "text-white"

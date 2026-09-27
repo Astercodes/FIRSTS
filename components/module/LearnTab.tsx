@@ -8,7 +8,7 @@ export function LearnTab({ content, color, moduleId }: { content: LearnContent; 
 
   return (
     <div className="space-y-6">
-      <section className="rounded-3xl border border-ink/8 bg-white p-7 sm:p-8">
+      <section className="workspace-card rounded-3xl border border-ink/8 bg-white p-7 sm:p-8">
         <p className="text-[17px] leading-relaxed text-ink/75">{content.definition}</p>
       </section>
 
@@ -24,7 +24,7 @@ export function LearnTab({ content, color, moduleId }: { content: LearnContent; 
 
       <section className="grid gap-4 sm:grid-cols-3">
         {content.whenWhoWhere.map((card) => (
-          <div key={card.label} className="rounded-2xl border border-ink/8 bg-white p-5">
+          <div key={card.label} className="workspace-card rounded-2xl border border-ink/8 bg-white p-5">
             <p className="mb-2 text-xs font-semibold uppercase tracking-wide text-ink/40">
               {card.label}
             </p>
@@ -33,7 +33,7 @@ export function LearnTab({ content, color, moduleId }: { content: LearnContent; 
         ))}
       </section>
 
-      <section className="rounded-3xl border border-ink/8 bg-white p-7 sm:p-8">
+      <section className="workspace-card rounded-3xl border border-ink/8 bg-white p-7 sm:p-8">
         <p className="mb-4 text-xs font-semibold uppercase tracking-[0.15em] text-ink/45">
           How it works
         </p>
@@ -52,7 +52,7 @@ export function LearnTab({ content, color, moduleId }: { content: LearnContent; 
         </ol>
       </section>
 
-      <section className="rounded-3xl border border-ink/8 bg-white p-7 sm:p-8">
+      <section className="workspace-card rounded-3xl border border-ink/8 bg-white p-7 sm:p-8">
         <p className="mb-4 text-xs font-semibold uppercase tracking-[0.15em] text-ink/45">
           Tools &amp; resources
         </p>
@@ -78,7 +78,7 @@ export function LearnTab({ content, color, moduleId }: { content: LearnContent; 
         <p className="text-[15px] leading-relaxed text-paper/80">{content.scenario.body}</p>
       </section>
 
-      <section className="rounded-3xl border border-ink/8 bg-white p-7 sm:p-8">
+      <section className="workspace-card rounded-3xl border border-ink/8 bg-white p-7 sm:p-8">
         <p className="mb-4 text-xs font-semibold uppercase tracking-[0.15em] text-ink/45">
           Common pitfalls
         </p>
@@ -103,7 +103,7 @@ export function LearnTab({ content, color, moduleId }: { content: LearnContent; 
       </section>
 
       {tieModules.length > 0 && (
-        <section className="rounded-3xl border border-ink/8 bg-white p-7 sm:p-8">
+        <section className="workspace-card rounded-3xl border border-ink/8 bg-white p-7 sm:p-8">
           <p className="mb-4 text-xs font-semibold uppercase tracking-[0.15em] text-ink/45">
             Milestone tie-in
           </p>

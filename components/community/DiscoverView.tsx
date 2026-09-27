@@ -68,7 +68,7 @@ export function DiscoverView() {
         <PeerGrid peers={suggested} following={following} />
       </Section>
 
-      <section className="rounded-3xl border border-ink/10 bg-white p-6 sm:p-7">
+      <section className="workspace-card rounded-3xl border border-ink/10 bg-white p-6 sm:p-7">
         <p className="mb-4 text-xs font-semibold uppercase tracking-[0.15em] text-ink/45">
           Browse everyone
         </p>
@@ -99,7 +99,7 @@ function Section({ title, subtitle, children }: { title: string; subtitle: strin
       initial={{ opacity: 0, y: 12 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.35, ease: [0.16, 1, 0.3, 1] }}
-      className="rounded-3xl border border-ink/10 bg-white p-6 sm:p-7"
+      className="workspace-card rounded-3xl border border-ink/10 bg-white p-6 sm:p-7"
     >
       <p className="text-xs font-semibold uppercase tracking-[0.15em] text-ink/45">{title}</p>
       <p className="mb-4 mt-0.5 text-sm text-ink/50">{subtitle}</p>

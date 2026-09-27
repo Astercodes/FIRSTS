@@ -42,7 +42,7 @@ export function Departments() {
         </p>
       </div>
 
-      <div className="rounded-3xl border border-ink/10 bg-white p-7">
+      <div className="workspace-card rounded-3xl border border-ink/10 bg-white p-7">
         <h2 className="mb-1 font-display text-lg font-semibold text-ink">Completion by cohort</h2>
         <p className="mb-6 text-xs text-ink/45">Weighted average across all six stages</p>
         {cohorts.length > 0 ? (
@@ -74,7 +74,7 @@ export function Departments() {
               <Link
                 key={c.id}
                 href={`/institution/departments/${c.id}`}
-                className="group rounded-3xl border border-ink/10 bg-white p-7 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl"
+                className="workspace-card group rounded-3xl border border-ink/10 bg-white p-7 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl"
               >
                 <div className="flex items-start justify-between">
                   <div>

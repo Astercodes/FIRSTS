@@ -12,7 +12,7 @@ const EXCHANGES = [
 
 export function FFGroupFacilitation() {
   return (
-    <section className="relative bg-paper px-6 py-28">
+    <section className="marketing-section relative bg-paper px-6 py-28">
       <Reveal className="mx-auto max-w-2xl text-center">
         <h2 className="font-display text-4xl font-semibold tracking-tight text-ink sm:text-5xl">
           Facilitate individuals without making everything individual.
@@ -30,7 +30,7 @@ export function FFGroupFacilitation() {
         {EXCHANGES.map((e) => (
           <p
             key={e}
-            className="rounded-2xl border border-ink/10 bg-white px-5 py-3.5 text-sm text-ink/70"
+            className="design-card rounded-2xl border border-ink/10 bg-white px-5 py-3.5 text-sm text-ink/70"
           >
             {e}
           </p>

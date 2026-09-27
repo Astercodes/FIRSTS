@@ -12,7 +12,7 @@ const MOMENTS = [
 
 export function FFIntro() {
   return (
-    <section className="relative bg-paper-dim px-6 py-24">
+    <section className="marketing-section relative bg-paper-dim px-6 py-24">
       <Reveal className="mx-auto max-w-2xl text-center">
         <p className="text-[15px] leading-relaxed text-ink/60">
           Sometimes people need someone who can:

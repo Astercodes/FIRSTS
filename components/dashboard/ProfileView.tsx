@@ -86,7 +86,7 @@ export function ProfileView() {
         </span>
       </div>
 
-      <section className="rounded-3xl border border-ink/8 bg-white p-6 sm:p-8">
+      <section className="workspace-card rounded-3xl border border-ink/8 bg-white p-6 sm:p-8">
         <div className="flex flex-col items-center gap-5 sm:flex-row">
           <div className="group relative shrink-0">
             <button
@@ -180,7 +180,7 @@ export function ProfileView() {
         </div>
       </section>
 
-      <section className="rounded-3xl border border-ink/8 bg-white p-6 sm:p-8">
+      <section className="workspace-card rounded-3xl border border-ink/8 bg-white p-6 sm:p-8">
         <p className="mb-3 text-xs font-semibold uppercase tracking-[0.15em] text-ink/45">
           About
         </p>
@@ -193,7 +193,7 @@ export function ProfileView() {
         />
       </section>
 
-      <section className="rounded-3xl border border-ink/8 bg-white p-6 sm:p-8">
+      <section className="workspace-card rounded-3xl border border-ink/8 bg-white p-6 sm:p-8">
         <p className="mb-4 text-xs font-semibold uppercase tracking-[0.15em] text-ink/45">
           Contact
         </p>
@@ -205,7 +205,7 @@ export function ProfileView() {
         </div>
       </section>
 
-      <section className="rounded-3xl border border-ink/8 bg-white p-6 sm:p-8">
+      <section className="workspace-card rounded-3xl border border-ink/8 bg-white p-6 sm:p-8">
         <p className="mb-4 text-xs font-semibold uppercase tracking-[0.15em] text-ink/45">
           Your progress
         </p>

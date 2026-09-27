@@ -117,7 +117,7 @@ export function CoachHub() {
         </p>
       </div>
 
-      <div className="rounded-3xl border border-ink/8 bg-white p-6 sm:p-7">
+      <div className="workspace-card rounded-3xl border border-ink/8 bg-white p-6 sm:p-7">
         <div className="mb-5 flex flex-wrap gap-2">
           {MODES.map((m) => {
             const active = m === mode;

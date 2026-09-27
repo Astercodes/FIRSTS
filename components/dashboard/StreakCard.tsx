@@ -1,6 +1,6 @@
 export function StreakCard({ streak }: { streak: number }) {
   return (
-    <div className="flex h-full flex-col justify-center rounded-3xl border border-ink/8 bg-white p-7">
+    <div className="workspace-card flex h-full flex-col justify-center rounded-3xl border border-ink/8 bg-white p-7">
       <p className="text-xs font-semibold uppercase tracking-[0.15em] text-ink/45">
         Habit streak
       </p>

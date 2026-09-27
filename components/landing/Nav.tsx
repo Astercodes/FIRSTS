@@ -2,7 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion, AnimatePresence, useScroll, useSpring, useReducedMotion } from "framer-motion";
 
 const LINKS = [
   { label: "Development Areas", href: "/development-areas" },
@@ -29,7 +29,17 @@ function WhoItsForMenu() {
       if (ref.current && !ref.current.contains(e.target as Node)) setOpen(false);
     }
     document.addEventListener("mousedown", onClick);
-    return () => document.removeEventListener("mousedown", onClick);
+    function onKey(e: KeyboardEvent) {
+      if (e.key === "Escape") {
+        setOpen(false);
+        ref.current?.querySelector("button")?.focus();
+      }
+    }
+    document.addEventListener("keydown", onKey);
+    return () => {
+      document.removeEventListener("mousedown", onClick);
+      document.removeEventListener("keydown", onKey);
+    };
   }, [open]);
 
   return (
@@ -78,7 +88,32 @@ function WhoItsForMenu() {
 }
 
 export function Nav() {
+  const { scrollYProgress } = useScroll();
+  const progress = useSpring(scrollYProgress, { stiffness: 160, damping: 30 });
+  const reduceMotion = useReducedMotion();
   const [scrolled, setScrolled] = useState(false);
+  const [mobileOpen, setMobileOpen] = useState(false);
+  const mobileButton = useRef<HTMLButtonElement>(null);
+  const headerRef = useRef<HTMLElement>(null);
+
+  useEffect(() => {
+    if (!mobileOpen) return;
+    const close = (e: KeyboardEvent) => {
+      if (e.key === "Escape") {
+        setMobileOpen(false);
+        mobileButton.current?.focus();
+      }
+    };
+    const outside = (e: MouseEvent) => {
+      if (!headerRef.current?.contains(e.target as Node)) setMobileOpen(false);
+    };
+    document.addEventListener("keydown", close);
+    document.addEventListener("mousedown", outside);
+    return () => {
+      document.removeEventListener("keydown", close);
+      document.removeEventListener("mousedown", outside);
+    };
+  }, [mobileOpen]);
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 12);
@@ -89,19 +124,21 @@ export function Nav() {
 
   return (
     <motion.header
+      ref={headerRef}
       initial={{ y: -32, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
       className="fixed inset-x-0 top-0 z-50 flex justify-center px-4 pt-4"
     >
+      <motion.div aria-hidden="true" className="reading-progress" style={{ scaleX: reduceMotion ? scrollYProgress : progress }} />
       <nav
         className={`flex w-full max-w-5xl items-center justify-between rounded-full px-5 py-2.5 transition-all duration-500 ${
           scrolled
             ? "glass-dark shadow-[0_8px_30px_-10px_rgba(0,0,0,0.6)]"
-            : "border border-white/0 bg-transparent"
+            : "border border-white/10 bg-ink/85 backdrop-blur-xl"
         }`}
       >
-        <a href="#top" className="flex items-center gap-2">
+        <Link href="/" aria-label="FIRSTS home" className="flex items-center gap-2">
           <span className="relative flex h-7 w-7 items-center justify-center rounded-full bg-gradient-to-br from-[var(--neon-pink)] via-[var(--sunshine-orange)] to-[var(--lime-zest)]">
             <span className="absolute inset-0 rounded-full bg-gradient-to-br from-[var(--neon-pink)] via-[var(--sunshine-orange)] to-[var(--lime-zest)] blur-md opacity-70" />
             <span className="relative font-display text-xs font-bold text-ink">F</span>
@@ -109,7 +146,7 @@ export function Nav() {
           <span className="font-display text-lg font-semibold tracking-tight text-paper">
             FIRSTS
           </span>
-        </a>
+        </Link>
 
         <div className="hidden items-center gap-7 md:flex">
           <WhoItsForMenu />
@@ -125,6 +162,9 @@ export function Nav() {
         </div>
 
         <div className="flex items-center gap-2">
+          <button ref={mobileButton} type="button" aria-label={mobileOpen ? "Close navigation" : "Open navigation"} aria-expanded={mobileOpen} aria-controls="mobile-navigation" onClick={() => setMobileOpen(!mobileOpen)} className="flex h-10 w-10 items-center justify-center rounded-full border border-paper/20 text-paper md:hidden">
+            <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" className="h-5 w-5"><path d={mobileOpen ? "M6 6l12 12M6 18L18 6" : "M4 8h16M4 16h16"} /></svg>
+          </button>
           <Link
             href="/login"
             className="hidden text-sm font-medium text-paper/80 transition-colors hover:text-paper sm:block px-3 py-2"
@@ -140,6 +180,12 @@ export function Nav() {
           </Link>
         </div>
       </nav>
+      {mobileOpen && (
+        <nav id="mobile-navigation" aria-label="Mobile navigation" className="absolute inset-x-4 top-20 max-h-[calc(100svh-100px)] overflow-y-auto rounded-3xl border border-paper/15 bg-ink p-5 text-paper shadow-2xl md:hidden">
+          <p className="mb-3 px-3 text-[10px] uppercase tracking-[.2em] text-paper/45">Find your path</p>
+          {[...AUDIENCE_LINKS, ...LINKS, { label: "Log in", href: "/login" }].map((link) => <Link key={link.href} href={link.href} onClick={() => setMobileOpen(false)} className="block rounded-xl px-3 py-3 text-sm text-paper/80 hover:bg-paper/10 hover:text-paper">{link.label}</Link>)}
+        </nav>
+      )}
     </motion.header>
   );
 }

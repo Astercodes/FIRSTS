@@ -5,10 +5,10 @@ import { Reveal } from "@/components/ui/Reveal";
 
 export function FLGetInvolved() {
   return (
-    <section id="get-involved" className="relative bg-paper px-6 py-28">
+    <section id="get-involved" className="marketing-section relative bg-paper px-6 py-28">
       <div className="mx-auto grid max-w-5xl gap-6 lg:grid-cols-2">
         <Reveal>
-          <div className="flex h-full flex-col rounded-3xl border border-ink/10 bg-white p-8">
+          <div className="design-card flex h-full flex-col rounded-3xl border border-ink/10 bg-white p-8">
             <p className="mb-2 text-xs font-semibold uppercase tracking-[0.2em] text-berry-burst">
               Become a First Leap Mentor
             </p>
@@ -39,7 +39,7 @@ export function FLGetInvolved() {
         </Reveal>
 
         <Reveal delay={0.1}>
-          <div className="flex h-full flex-col rounded-3xl border border-ink/10 bg-white p-8">
+          <div className="design-card flex h-full flex-col rounded-3xl border border-ink/10 bg-white p-8">
             <p className="mb-2 text-xs font-semibold uppercase tracking-[0.2em] text-berry-burst">
               Become a First Leap Facilitator
             </p>

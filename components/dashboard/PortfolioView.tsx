@@ -201,7 +201,7 @@ export function PortfolioView({ publicMode = false }: { publicMode?: boolean }) 
             </div>
           </div>
 
-          <div className="mb-6 flex flex-col items-start justify-between gap-3 rounded-2xl border border-ink/8 bg-white p-5 sm:flex-row sm:items-center print:hidden">
+          <div className="workspace-card mb-6 flex flex-col items-start justify-between gap-3 rounded-2xl border border-ink/8 bg-white p-5 sm:flex-row sm:items-center print:hidden">
             <div className="flex items-center gap-3">
               <Switch checked={!!profile.portfolioPublic} onChange={togglePublic} label="" />
               <div>
@@ -234,7 +234,7 @@ export function PortfolioView({ publicMode = false }: { publicMode?: boolean }) 
       )}
 
       {/* The printable page. Everything inside this panel is exactly what gets exported. */}
-      <div className="portfolio-page relative overflow-hidden rounded-3xl border border-ink/8 bg-white shadow-sm print:rounded-none print:border-0 print:shadow-none">
+      <div className="workspace-card portfolio-page relative overflow-hidden rounded-3xl border border-ink/8 bg-white shadow-sm print:rounded-none print:border-0 print:shadow-none">
         <div
           className="h-2.5 w-full print:h-2"
           style={{

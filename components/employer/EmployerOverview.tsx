@@ -43,13 +43,13 @@ export function EmployerOverview() {
       </div>
 
       <div className="grid gap-6 lg:grid-cols-5">
-        <div className="rounded-3xl border border-ink/10 bg-white p-7 lg:col-span-3">
+        <div className="workspace-card rounded-3xl border border-ink/10 bg-white p-7 lg:col-span-3">
           <h2 className="mb-1 font-display text-lg font-semibold text-ink">Candidate pipeline growth</h2>
           <p className="mb-5 text-xs text-ink/45">Average completion across your sponsored cohorts, last 8 weeks</p>
           <TrendChart values={pipelineTrend} labels={WEEK_LABELS} color="var(--pink-grapefruit)" seriesName="Average completion" />
         </div>
 
-        <div className="rounded-3xl border border-ink/10 bg-white p-7 lg:col-span-2">
+        <div className="workspace-card rounded-3xl border border-ink/10 bg-white p-7 lg:col-span-2">
           <div className="mb-5 flex items-center justify-between">
             <h2 className="font-display text-lg font-semibold text-ink">Recently shared</h2>
             <Link href="/employer/portfolios" className="text-sm font-semibold text-berry-burst">
@@ -80,7 +80,7 @@ export function EmployerOverview() {
         </div>
       </div>
 
-      <div className="rounded-3xl border border-ink/10 bg-white p-7">
+      <div className="workspace-card rounded-3xl border border-ink/10 bg-white p-7">
         <div className="mb-1 flex items-center justify-between">
           <h2 className="font-display text-lg font-semibold text-ink">Reach by sponsorship</h2>
           <Link href="/employer/sponsorships" className="text-sm font-semibold text-berry-burst">
@@ -107,7 +107,7 @@ export function EmployerOverview() {
 
 function StatCard({ label, value, color }: { label: string; value: string; color: string }) {
   return (
-    <div className="rounded-3xl border border-ink/10 bg-white p-6">
+    <div className="workspace-card rounded-3xl border border-ink/10 bg-white p-6">
       <p className="font-display text-3xl font-bold" style={{ color }}>
         {value}
       </p>

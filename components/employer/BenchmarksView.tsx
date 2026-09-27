@@ -27,7 +27,7 @@ export function BenchmarksView() {
         </p>
       </div>
 
-      <div className="rounded-3xl border border-ink/10 bg-white p-7">
+      <div className="workspace-card rounded-3xl border border-ink/10 bg-white p-7">
         <h2 className="mb-1 font-display text-lg font-semibold text-ink">Average completion by school</h2>
         <p className="mb-6 text-xs text-ink/45">Averaged across every cohort you sponsor at that school</p>
         <HBarChart
@@ -78,7 +78,7 @@ export function BenchmarksView() {
       </div>
 
       {selectedBenchmark && (
-        <div className="rounded-3xl border border-ink/10 bg-white p-7">
+        <div className="workspace-card rounded-3xl border border-ink/10 bg-white p-7">
           <h2 className="mb-1 font-display text-lg font-semibold text-ink">
             {selectedBenchmark.institution}, completion trend
           </h2>

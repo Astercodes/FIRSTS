@@ -14,7 +14,7 @@ const WAYS = [
 
 export function FEParticipation() {
   return (
-    <section id="participation" className="relative bg-paper-dim px-6 py-28">
+    <section id="participation" className="marketing-section relative bg-paper-dim px-6 py-28">
       <Reveal className="mx-auto max-w-2xl text-center">
         <h2 className="font-display text-4xl font-semibold tracking-tight text-ink sm:text-5xl">
           What employer participation can look like.
@@ -24,7 +24,7 @@ export function FEParticipation() {
       <div className="mx-auto mt-12 grid max-w-5xl gap-5 sm:grid-cols-2 lg:grid-cols-3">
         {WAYS.map((w, i) => (
           <Reveal key={w.title} delay={(i % 3) * 0.08}>
-            <div className="flex h-full flex-col rounded-2xl border border-ink/10 bg-white p-6">
+            <div className="design-card flex h-full flex-col rounded-2xl border border-ink/10 bg-white p-6">
               <h3 className="font-display text-lg font-semibold text-ink">
                 {w.title}
               </h3>

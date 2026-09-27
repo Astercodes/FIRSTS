@@ -35,7 +35,7 @@ const OUTCOMES = [
 
 export function FLOutcomes() {
   return (
-    <section className="relative bg-paper px-6 py-28">
+    <section className="marketing-section relative bg-paper px-6 py-28">
       <Reveal className="mx-auto max-w-2xl text-center">
         <h2 className="font-display text-4xl font-semibold tracking-tight text-ink sm:text-5xl">
           What will you leave First Leap with?
@@ -50,7 +50,7 @@ export function FLOutcomes() {
       <div className="mx-auto mt-12 grid max-w-5xl gap-5 sm:grid-cols-2 lg:grid-cols-3">
         {OUTCOMES.map((o, i) => (
           <Reveal key={o.title} delay={(i % 6) * 0.06}>
-            <div className="h-full rounded-2xl border border-ink/10 bg-white p-6">
+            <div className="design-card h-full rounded-2xl border border-ink/10 bg-white p-6">
               <h3 className="font-display text-base font-semibold text-ink">
                 {o.title}
               </h3>

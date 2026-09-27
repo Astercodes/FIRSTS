@@ -12,7 +12,7 @@ const QUESTIONS = [
 
 export function FEScenarios() {
   return (
-    <section className="relative bg-paper px-6 py-28">
+    <section className="marketing-section relative bg-paper px-6 py-28">
       <Reveal className="mx-auto max-w-2xl text-center">
         <h2 className="font-display text-4xl font-semibold tracking-tight text-ink sm:text-5xl">
           What it looks like in hiring.
@@ -32,7 +32,7 @@ export function FEScenarios() {
         {QUESTIONS.map((q) => (
           <p
             key={q}
-            className="rounded-2xl border border-ink/10 bg-white px-5 py-3.5 text-sm italic text-ink/70"
+            className="design-card rounded-2xl border border-ink/10 bg-white px-5 py-3.5 text-sm italic text-ink/70"
           >
             &ldquo;{q}&rdquo;
           </p>
@@ -49,7 +49,7 @@ export function FEScenarios() {
         </p>
       </Reveal>
 
-      <Reveal delay={0.24} className="mx-auto mt-16 max-w-2xl rounded-2xl border border-ink/10 bg-white p-7 text-center">
+      <Reveal delay={0.24} className="design-card mx-auto mt-16 max-w-2xl rounded-2xl border border-ink/10 bg-white p-7 text-center">
         <h3 className="font-display text-2xl font-semibold text-ink">
           What it looks like before hiring.
         </h3>

@@ -32,7 +32,7 @@ export function StageToolsPanel({ modules }: { modules: FirstModule[] }) {
   const visible = showAll ? entries : entries.slice(0, PREVIEW);
 
   return (
-    <div className="rounded-3xl border border-ink/8 bg-white p-6 sm:p-7">
+    <div className="workspace-card rounded-3xl border border-ink/8 bg-white p-6 sm:p-7">
       <p className="text-xs font-semibold uppercase tracking-[0.15em] text-ink/45">
         Tools &amp; resources
       </p>

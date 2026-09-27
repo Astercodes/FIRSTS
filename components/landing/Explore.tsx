@@ -19,7 +19,7 @@ const CYCLE = ["Discover", "Try", "Reflect", "Learn", "Develop", "Try Again"];
 
 export function Explore() {
   return (
-    <section id="explore" className="relative bg-paper-dim px-6 py-28">
+    <section id="explore" className="marketing-section relative bg-paper-dim px-6 py-28">
       <Reveal className="mx-auto max-w-2xl text-center">
         <div className="mb-4 flex justify-center">
           <CommunityScene className="h-28 sm:h-32" />
@@ -33,7 +33,7 @@ export function Explore() {
         {EXPLORE_ITEMS.map((item) => (
           <div
             key={item}
-            className="flex items-center justify-center rounded-2xl border border-ink/10 bg-white px-4 py-6 text-center text-sm font-medium text-ink/70"
+            className="design-card flex items-center justify-center rounded-2xl border border-ink/10 bg-white px-4 py-6 text-center text-sm font-medium text-ink/70"
           >
             {item}
           </div>

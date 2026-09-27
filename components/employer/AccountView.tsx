@@ -44,7 +44,7 @@ export function AccountView() {
         </h1>
       </div>
 
-      <section className="rounded-3xl border border-ink/10 bg-white p-7">
+      <section className="workspace-card rounded-3xl border border-ink/10 bg-white p-7">
         <p className="mb-1 text-xs font-semibold uppercase tracking-[0.15em] text-ink/45">
           Team
         </p>
@@ -113,7 +113,7 @@ export function AccountView() {
         </button>
       </section>
 
-      <section className="rounded-3xl border border-ink/10 bg-white p-7">
+      <section className="workspace-card rounded-3xl border border-ink/10 bg-white p-7">
         <p className="mb-1 text-xs font-semibold uppercase tracking-[0.15em] text-ink/45">
           School access
         </p>

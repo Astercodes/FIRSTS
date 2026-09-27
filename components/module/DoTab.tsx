@@ -155,7 +155,7 @@ export function DoTab({ color, moduleId }: { color: string; moduleId: number }) 
 
       <p className="text-xs font-bold uppercase tracking-[0.2em] text-ink/35">Section 1 · Values discovery exercise</p>
 
-      <section className="rounded-3xl border border-ink/8 bg-white p-7 sm:p-8">
+      <section className="workspace-card rounded-3xl border border-ink/8 bg-white p-7 sm:p-8">
         <p className="mb-1 text-sm font-semibold text-ink">Initial value brainstorm</p>
         <p className="mb-4 text-sm text-ink/55">Circle or highlight the words below that resonate with you, then add your own.</p>
         <div className="mb-4 flex flex-wrap gap-2">
@@ -191,7 +191,7 @@ export function DoTab({ color, moduleId }: { color: string; moduleId: number }) 
         </div>
       </section>
 
-      <section className="rounded-3xl border border-ink/8 bg-white p-7 sm:p-8">
+      <section className="workspace-card rounded-3xl border border-ink/8 bg-white p-7 sm:p-8">
         <p className="mb-1 text-sm font-semibold text-ink">Narrow to your top 5 core values</p>
         <p className="mb-4 text-sm text-ink/55">({top5.length}/5)</p>
         <div className="flex flex-wrap gap-2">
@@ -211,7 +211,7 @@ export function DoTab({ color, moduleId }: { color: string; moduleId: number }) 
         </div>
       </section>
 
-      <section className="rounded-3xl border border-ink/8 bg-white p-7 sm:p-8">
+      <section className="workspace-card rounded-3xl border border-ink/8 bg-white p-7 sm:p-8">
         <p className="mb-1 text-sm font-semibold text-ink">Now reduce to your top 3 non-negotiables</p>
         <p className="mb-4 text-sm text-ink/55">({top3.length}/3)</p>
         <div className="flex flex-wrap gap-2">
@@ -238,7 +238,7 @@ export function DoTab({ color, moduleId }: { color: string; moduleId: number }) 
           {top3.map((v) => {
             const f = filters[v] ?? { looksLike: "", violates: "", warningSigns: "", recentDecision: "" };
             return (
-              <section key={v} className="rounded-3xl border border-ink/8 bg-white p-7 sm:p-8">
+              <section key={v} className="workspace-card rounded-3xl border border-ink/8 bg-white p-7 sm:p-8">
                 <p className="mb-4 text-sm font-semibold text-ink">Value: {v}</p>
                 <div className="space-y-3">
                   <label className="block">
@@ -265,7 +265,7 @@ export function DoTab({ color, moduleId }: { color: string; moduleId: number }) 
       )}
 
       <p className="text-xs font-bold uppercase tracking-[0.2em] text-ink/35">Section 3 · Ethical boundaries</p>
-      <section className="rounded-3xl border border-ink/8 bg-white p-7 sm:p-8 space-y-4">
+      <section className="workspace-card rounded-3xl border border-ink/8 bg-white p-7 sm:p-8 space-y-4">
         <label className="block">
           <span className="mb-1 block text-sm font-semibold text-ink">I will never work in an industry that…</span>
           <textarea value={neverIndustry} onChange={(e) => setNeverIndustry(e.target.value)} rows={2} className="w-full resize-none rounded-2xl border border-ink/10 bg-paper-dim px-4 py-2.5 text-sm text-ink outline-none focus:border-ink/25" />
@@ -285,7 +285,7 @@ export function DoTab({ color, moduleId }: { color: string; moduleId: number }) 
       </section>
 
       <p className="text-xs font-bold uppercase tracking-[0.2em] text-ink/35">Section 4 · Values vs. career alignment check</p>
-      <section className="rounded-3xl border border-ink/8 bg-white p-7 sm:p-8 space-y-4">
+      <section className="workspace-card rounded-3xl border border-ink/8 bg-white p-7 sm:p-8 space-y-4">
         <label className="block">
           <span className="mb-1 block text-sm font-semibold text-ink">Career or industry I&apos;m considering</span>
           <input value={alignmentIndustry} onChange={(e) => setAlignmentIndustry(e.target.value)} className="w-full rounded-2xl border border-ink/10 bg-paper-dim px-4 py-2.5 text-sm text-ink outline-none focus:border-ink/25" />
@@ -305,7 +305,7 @@ export function DoTab({ color, moduleId }: { color: string; moduleId: number }) 
       </section>
 
       <p className="text-xs font-bold uppercase tracking-[0.2em] text-ink/35">Section 5 · Conflict awareness</p>
-      <section className="rounded-3xl border border-ink/8 bg-white p-7 sm:p-8 space-y-4">
+      <section className="workspace-card rounded-3xl border border-ink/8 bg-white p-7 sm:p-8 space-y-4">
         <label className="block">
           <span className="mb-1 block text-sm font-semibold text-ink">My top value conflict is</span>
           <input value={conflictPair} onChange={(e) => setConflictPair(e.target.value)} className="w-full rounded-2xl border border-ink/10 bg-paper-dim px-4 py-2.5 text-sm text-ink outline-none focus:border-ink/25" />

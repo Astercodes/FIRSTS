@@ -93,7 +93,7 @@ export function DocumentViewerModal({
                 />
               ) : (
                 <div className="flex h-full flex-col items-center justify-center gap-4 px-8 text-center">
-                  <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-white text-ink/30 shadow-sm">
+                  <div className="workspace-card flex h-14 w-14 items-center justify-center rounded-2xl bg-white text-ink/30 shadow-sm">
                     <FileIcon className="h-7 w-7" />
                   </div>
                   <div>

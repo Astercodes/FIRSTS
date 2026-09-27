@@ -52,7 +52,7 @@ export function ProfileCard({
       initial={{ opacity: 0, y: 16 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.4, ease: [0.16, 1, 0.3, 1] }}
-      className="overflow-hidden rounded-3xl border border-ink/8 bg-white"
+      className="workspace-card overflow-hidden rounded-3xl border border-ink/8 bg-white"
     >
       <div className="relative h-24" style={{ background: BANNER }}>
         <div className="absolute inset-0 opacity-20 [background-image:radial-gradient(circle_at_20%_30%,white,transparent_35%),radial-gradient(circle_at_80%_70%,white,transparent_30%)]" />

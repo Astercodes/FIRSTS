@@ -36,7 +36,7 @@ const SPECIALIZATIONS = [
 
 export function FFCertification() {
   return (
-    <section className="relative bg-paper px-6 py-28">
+    <section className="marketing-section relative bg-paper px-6 py-28">
       <Reveal className="mx-auto max-w-2xl text-center">
         <h2 className="font-display text-4xl font-semibold tracking-tight text-ink sm:text-5xl">
           Build a credential backed by practice.
@@ -50,7 +50,7 @@ export function FFCertification() {
       <div className="mx-auto mt-10 grid max-w-4xl gap-5 sm:grid-cols-3">
         {TIERS.map((t, i) => (
           <Reveal key={t.tier} delay={i * 0.08}>
-            <div className="h-full rounded-2xl border border-ink/10 bg-white p-5">
+            <div className="design-card h-full rounded-2xl border border-ink/10 bg-white p-5">
               <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[var(--fuchsia-blast)]">
                 {t.tier}
               </p>
