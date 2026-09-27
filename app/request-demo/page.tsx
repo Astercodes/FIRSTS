@@ -52,7 +52,7 @@ export default async function RequestDemoPage({
             what FIRSTS looks like for your students, cohort, or team.
           </p>
         </div>
-        <EditorialImage kind="community" className="audience-art" priority />
+        <EditorialImage kind="partnership" className="audience-art" priority />
       </section>
 
       <section className="marketing-section relative bg-paper px-6 py-20">

@@ -1,6 +1,5 @@
 "use client";
 
-import { EditorialShot, type ShotKind } from "@/components/landing/EditorialShot";
 
 import Link from "next/link";
 import { Reveal } from "@/components/ui/Reveal";
@@ -11,7 +10,6 @@ const AUDIENCES: {
   body: string;
   color: string;
   href: string;
-  photo: ShotKind;
 }[] = [
   {
     tag: "Path A",
@@ -19,7 +17,6 @@ const AUDIENCES: {
     body: "SSO or roster invite, auto-joined to your cohort, your advisor sees your progress, never your raw reflections, unless you share.",
     color: "var(--neon-pink)",
     href: "/for/partner-schools",
-    photo: "community",
   },
   {
     tag: "Path B",
@@ -27,7 +24,6 @@ const AUDIENCES: {
     body: "Students, grads, and career-changers. Sign up in a minute, work through Stage One at your own pace, export a portfolio when you're ready.",
     color: "var(--sunshine-orange)",
     href: "/for/independent-students",
-    photo: "reflection",
   },
   {
     tag: "Path C",
@@ -35,7 +31,6 @@ const AUDIENCES: {
     body: "Cohort dashboards, at-risk flags, roster sync, and completion analytics, all without ever seeing a student's private reflection.",
     color: "var(--citrus-lime)",
     href: "/for/career-centers",
-    photo: "making",
   },
 ];
 
@@ -64,7 +59,7 @@ export function Audiences() {
                   style={{ background: a.color }}
                   aria-hidden
                 />
-                <EditorialShot kind={a.photo} className="audience-card-photo" />
+                <div className="audience-path-mark" aria-hidden="true" style={{ color: a.color }}><span>0{i + 1}</span><span>↗</span></div>
                 <span
                   className="mb-6 inline-block rounded-full px-3 py-1 text-xs font-bold uppercase tracking-wider"
                   style={{

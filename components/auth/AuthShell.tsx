@@ -1,4 +1,3 @@
-import { EditorialImage } from "@/components/landing/EditorialImage";
 import Link from "next/link";
 import type { ReactNode } from "react";
 
@@ -50,7 +49,6 @@ export function AuthShell({
       </header>
 
       <div className="auth-layout relative z-10 flex flex-1 items-center justify-center py-12">
-        <EditorialImage className="auth-art" />
         <div
           className={`w-full ${width === "lg" ? "max-w-xl" : "max-w-md"}`}
         >

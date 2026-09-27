@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import { EditorialShot } from "@/components/landing/EditorialShot";
 import { Reveal } from "@/components/ui/Reveal";
 
 const FACULTY_USES = [
@@ -38,6 +39,7 @@ export function FIFacultyAlumni() {
           Connect the classroom, and your alumni, to student development.
         </h2>
       </Reveal>
+      <Reveal className="contextual-photo-frame"><EditorialShot kind="alumni" /></Reveal>
 
       <div className="mx-auto mt-12 grid max-w-4xl gap-10 sm:grid-cols-2">
         <Reveal>

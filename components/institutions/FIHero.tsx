@@ -1,6 +1,5 @@
 "use client";
 
-import { EditorialStrip } from "@/components/landing/EditorialShot";
 
 import { EditorialImage } from "@/components/landing/EditorialImage";
 import Link from "next/link";
@@ -103,9 +102,8 @@ export function FIHero() {
           </Link>
         </motion.div>
 
-        <EditorialStrip compact />
       </div>
-    <EditorialImage kind="community" className="audience-art" priority />
+    <EditorialImage kind="institutions" className="audience-art" priority />
     </section>
   );
 }

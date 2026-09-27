@@ -1,6 +1,5 @@
 "use client";
 
-import { EditorialStrip } from "@/components/landing/EditorialShot";
 
 import Link from "next/link";
 import { EditorialImage } from "@/components/landing/EditorialImage";
@@ -123,9 +122,8 @@ export function AudienceHero({ config }: { config: AudienceConfig }) {
           ))}
         </motion.div>
 
-        <EditorialStrip compact />
       </div>
-      <EditorialImage kind="community" className="audience-art" priority />
+      <EditorialImage kind="school" className="audience-art" priority />
     </section>
   );
 }

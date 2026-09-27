@@ -75,7 +75,7 @@ export function DAHero() {
           </Link>
         </motion.div>
       </div>
-      <EditorialImage className="audience-art" priority />
+      <EditorialImage kind="skills" className="audience-art" priority />
     </section>
   );
 }

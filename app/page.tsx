@@ -1,5 +1,5 @@
 import { Nav } from "@/components/landing/Nav";
-import { ProductShowcase } from "@/components/landing/ProductShowcase";
+import { NextFirstFinder } from "@/components/landing/NextFirstFinder";
 import { Hero } from "@/components/landing/Hero";
 import { Manifesto } from "@/components/landing/Manifesto";
 import { Audiences } from "@/components/landing/Audiences";
@@ -19,7 +19,7 @@ export default function Home() {
       <main className="home-page">
         <Hero />
         <Manifesto />
-        <ProductShowcase />
+        <NextFirstFinder />
         <Pillars />
         <Audiences />
         <DevelopmentAreas />

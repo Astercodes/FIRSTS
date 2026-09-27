@@ -1,6 +1,5 @@
 "use client";
 
-import { EditorialShot } from "@/components/landing/EditorialShot";
 
 import { EditorialImage } from "@/components/landing/EditorialImage";
 import Link from "next/link";
@@ -91,7 +90,7 @@ export function FirstLeap() {
       </div>
 
       <Reveal delay={0.15} className="mx-auto mt-16 flex max-w-2xl flex-col items-center text-center">
-        <div className="leap-photo-pair"><EditorialImage kind="community" className="community-editorial" /><EditorialShot kind="making" /></div>
+        <EditorialImage kind="community" className="community-editorial mentorship-photograph" />
         <h3 className="font-display text-2xl font-semibold text-ink">
           You won&apos;t make the leap alone.
         </h3>

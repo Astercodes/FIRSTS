@@ -36,7 +36,7 @@ export function Profile() {
 
       <Reveal className="relative mx-auto mb-14 max-w-2xl text-center">
         <div className="mb-4 flex justify-center">
-          <EditorialShot kind="future" className="section-photograph" />
+          <EditorialShot kind="evidence" className="section-photograph" />
         </div>
         <h2 className="font-display text-4xl font-semibold leading-tight tracking-tight sm:text-5xl">
           Don&apos;t just complete activities.
