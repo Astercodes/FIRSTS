@@ -123,7 +123,7 @@ export function AudienceHero({ config }: { config: AudienceConfig }) {
         </motion.div>
 
       </div>
-      <EditorialImage kind="school" className="audience-art" priority />
+      <EditorialImage kind={config.imageKind ?? "school"} className="audience-art" priority />
     </section>
   );
 }

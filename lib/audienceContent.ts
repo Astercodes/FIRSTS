@@ -1,4 +1,5 @@
 import { FIRSTS, STAGES } from "@/lib/dashboardData";
+import type { ShotKind } from "@/lib/editorialImages";
 
 export type AudienceCta = { label: string; href: string };
 export type AudienceStep = { title: string; body: string };
@@ -32,6 +33,12 @@ export type AudienceConfig = {
   ctaHeadline: string;
   ctaBody: string;
   partnerSection?: AudiencePartnerSection;
+  /** Defaults to "school" when omitted, matching the original partner-schools page. */
+  imageKind?: ShotKind;
+  /** Defaults to the original partner-schools steps when omitted. */
+  closingSteps?: string[];
+  homeHref?: string;
+  homeLabel?: string;
 };
 
 const TOTAL_FIRSTS = FIRSTS.length;

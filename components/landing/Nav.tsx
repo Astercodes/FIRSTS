@@ -3,6 +3,7 @@
 import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import { Logo } from "@/components/brand/Logo";
+import { ProductSwitcher } from "@/components/landing/ProductSwitcher";
 import { motion, AnimatePresence, useScroll, useSpring, useReducedMotion } from "framer-motion";
 
 const LINKS = [
@@ -139,9 +140,14 @@ export function Nav() {
             : "border border-white/10 bg-ink/85 backdrop-blur-xl"
         }`}
       >
-        <Link href="/" aria-label="FIRSTS home" className="flex items-center gap-2">
-          <Logo tone="light" />
-        </Link>
+        <div className="flex items-center gap-3">
+          <Link href="/" aria-label="FIRSTS home" className="flex items-center gap-2">
+            <Logo tone="light" />
+          </Link>
+          <div className="hidden sm:block">
+            <ProductSwitcher current="career" />
+          </div>
+        </div>
 
         <div className="hidden items-center gap-7 md:flex">
           <WhoItsForMenu />
@@ -177,6 +183,9 @@ export function Nav() {
       </nav>
       {mobileOpen && (
         <nav id="mobile-navigation" aria-label="Mobile navigation" className="absolute inset-x-4 top-20 max-h-[calc(100svh-100px)] overflow-y-auto rounded-3xl border border-paper/15 bg-ink p-5 text-paper shadow-2xl md:hidden">
+          <div className="mb-4 px-3">
+            <ProductSwitcher current="career" />
+          </div>
           <p className="mb-3 px-3 text-[10px] uppercase tracking-[.2em] text-paper/45">Find your path</p>
           {[...AUDIENCE_LINKS, ...LINKS, { label: "Log in", href: "/login" }].map((link) => <Link key={link.href} href={link.href} onClick={() => setMobileOpen(false)} className="block rounded-xl px-3 py-3 text-sm text-paper/80 hover:bg-paper/10 hover:text-paper">{link.label}</Link>)}
         </nav>
